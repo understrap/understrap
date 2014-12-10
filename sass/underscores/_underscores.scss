@@ -49,24 +49,6 @@
 	z-index: 100000; /* Above WP toolbar */
 }
 
-/*--------------------------------------------------------------
-7.0 Alignments
---------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-.aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
-}
 
 /*--------------------------------------------------------------
 8.0 Clearings
@@ -120,6 +102,7 @@
 10.1 Posts and pages
 --------------------------------------------------------------*/
 .sticky {
+    font-size:inherit;
 }
 .hentry {
 	margin: 0 0 1.5em;

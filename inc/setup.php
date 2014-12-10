@@ -54,6 +54,11 @@ function understrap_setup() {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
+    
+    /*
+	 * Adding Thumbnail basic support
+	 */
+    add_theme_support( "post-thumbnails" );
 
 	/*
 	 * Enable support for Post Formats.

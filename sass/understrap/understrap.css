@@ -1,5 +1,9 @@
-/* line 1, /Users/koenemann/Google Drive/Work/understrap/sass/understrap/understrap.scss */
+/* line 1, /Users/holgerkonemann/Documents/Google Drive/Work/understrap_framework/understrap/sass/understrap/understrap.scss */
 body {
   padding-top: 70px; }
+
+/* line 4, /Users/holgerkonemann/Documents/Google Drive/Work/understrap_framework/understrap/sass/understrap/understrap.scss */
+.sticky, .gallery-caption, .bypostauthor {
+  font-size: inherit; }
 
 /*# sourceMappingURL=understrap.css.map */

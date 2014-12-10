@@ -1,1 +1,6 @@
 body { padding-top: 70px; }
+
+// Adding basic Wordpress classes to pass the Wordpress.org tests
+.sticky, .gallery-caption, .bypostauthor {
+font-size:inherit;
+}

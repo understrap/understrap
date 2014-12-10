@@ -30,7 +30,7 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
 - The theme itself uses the style.css in the root directory just to identify the theme in Wordpress. The file is not loaded by the theme and did not include any styles
 - The theme.css file in /css/ subdirectory provides all styles. It is composed by five different SCSS sets and one variables file from /sass/ directory:
 
-                  1./sass/underscores/_underscores.scss (<- Basics for the _s theme)
+                  1./sass/underscores/style.scss (<- Basics for the _s theme)
                   2./sass/bootstrap/bootstrap.scss (<- which imports all Bootstrap SCSS files and mixins from /sass/bootstrap/ directory)
                   3./sass/understrap/understrap.scss (<- Just used minimal styles to combine _s and Bootstrap nicely)
                   4./sass/font-awesome/font-awesome.scss (<-imports all Font Awesome icons and the font itself)
