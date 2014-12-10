@@ -21,8 +21,8 @@ Basic Features
 
 Starter Theme + HTML Framework = Wordpress Theme Framework
 =
-The _s theme is a good starting point to develope a Wordpress theme. But it is "just" a raw starter sheme. Means it outputs all the Wordpress stuff correctly but without any layout or design.
-Why don´t add a well known and supported layout framework to have a solid, clean and responsive foundation? Thats where Bootstrap comes in
+The _s theme is a good starting point to develope a Wordpress theme. But it is "just" a raw starter theme. Means it outputs all the Wordpress stuff correctly but without any layout or design.
+Why don´t add a well known and supported layout framework to have a solid, clean and responsive foundation? Thats where Bootstrap comes in.
 
 Confused by all the CSS and SCSS files?
 =
