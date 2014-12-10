@@ -34,7 +34,8 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
                   2./sass/bootstrap/bootstrap.scss (<- which imports all Bootstrap SCSS files and mixins from /sass/bootstrap/ directory)
                   3./sass/understrap/understrap.scss (<- Just used minimal styles to combine _s and Bootstrap nicely)
                   4./sass/font-awesome/font-awesome.scss (<-imports all Font Awesome icons and the font itself)
-                  -----------------------------------------
+                  --------------- Don´t edit the files above --------------- 
+                  
                   5./sass/theme/theme.scss (<- Thats your part! Here you can add your own style) 
                   and
                   6.sass/theme/_theme_variables.scss (<- here you can define own variables or you could overwrite existing Bootstrap variables easily without touching the original BS code)
