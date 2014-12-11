@@ -89,3 +89,6 @@ function new_excerpt_more( $more ) {
 	return ' <p><a class="read-more btn btn-default" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'understrap') . '</a></p>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+/* Add support for Featured Images per Post */
+add_theme_support( 'post-thumbnails' );
