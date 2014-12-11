@@ -13,6 +13,8 @@
 
 get_header(); ?>
 
+<?php get_template_part('hero'); ?>
+
     <div class="wrapper" id="index-wrapper">
         
 	   <div class="container">
