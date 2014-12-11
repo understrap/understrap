@@ -13,6 +13,8 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
+    <?php echo get_the_post_thumbnail( $post_id, 'large' ); ?> 
+    
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
