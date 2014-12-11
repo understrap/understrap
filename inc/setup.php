@@ -81,3 +81,11 @@ add_action( 'after_setup_theme', 'understrap_setup' );
 /* Removes Adminbar - Comment out if you want see the bar. 
 */
 add_filter('show_admin_bar', '__return_false');
+
+/**
+/* Adding the Read more link to excerpts
+*/
+function new_excerpt_more( $more ) {
+	return ' <p><a class="read-more btn btn-default" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'understrap') . '</a></p>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );

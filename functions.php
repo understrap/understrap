@@ -21,7 +21,7 @@ require get_template_directory() . '/inc/widgets.php';
 /**
  * Enqueue scripts and styles.
  */
-require get_template_directory() . '/inc/scripts.php';
+require get_template_directory() . '/inc/enqueue.php';
 
 /**
  * Implement the Custom Header feature.

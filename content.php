@@ -8,7 +8,7 @@
     
 	<header class="entry-header">
         
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -22,7 +22,7 @@
         
 		<?php
 			/* translators: %s: Name of current post */
-			the_content( sprintf(
+			the_excerpt( sprintf(
 				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'understrap' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
