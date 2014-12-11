@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="wrapper archive-wrapper">
+<div class="wrapper" id="archive-wrapper">
     
     <div class="container">
         

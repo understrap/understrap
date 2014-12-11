@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-    <div class="wrapper index-wrapper">
+    <div class="wrapper" id="index-wrapper">
         
 	   <div class="container">
            

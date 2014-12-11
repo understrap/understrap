@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="wrapper wrapper-footer">
+<div class="wrapper" id="wrapper-footer">
     
     <div class="container">
     
