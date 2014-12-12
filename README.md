@@ -30,10 +30,10 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
 - The theme itself uses the style.css in the root directory just to identify the theme in Wordpress. The file is not loaded by the theme and did not include any styles
 - The theme.css file in /css/ subdirectory provides all styles. It is composed by five different SCSS sets and one variables file from /sass/ directory:
 
-                  1./sass/underscores/style.scss (<- Basics for the _s theme)
-                  2./sass/bootstrap/bootstrap.scss (<- which imports all Bootstrap SCSS files and mixins from /sass/bootstrap/ directory)
+                  1./sass/underscores/understrap_underscores.scss (<- Basics for the _s theme)
+                  2./sass/bootstrap/understrap_bootstrap.scss (<- which imports all Bootstrap SCSS files and mixins from /sass/bootstrap/ directory)
                   3./sass/understrap/understrap.scss (<- Just used minimal styles to combine _s and Bootstrap nicely)
-                  4./sass/font-awesome/font-awesome.scss (<-imports all Font Awesome icons and the font itself)
+                  4./sass/font-awesome/understrap_font-awesome.scss (<-imports all Font Awesome icons and the font itself)
                   --------------- Don´t edit the files above --------------- 
                   
                   5./sass/theme/theme.scss (<- Thats your part! Here you can add your own style) 
@@ -41,6 +41,6 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
                   6.sass/theme/_theme_variables.scss (<- here you can define own variables or you could overwrite existing Bootstrap variables easily without touching the original BS code)
 
 - Don´t edit the first four files/filesets or you aren´t able to update it without overwriting your own work!
-- Your design goes into: /sass/theme directory. Add your styles to the theme.scss file and your variables to the _theme_variables.scss. Or add other scss files into it and @import it
+- Your design goes into: /sass/theme directory. Add your styles to the theme.scss file and your variables to the _theme_variables.scss. Or add other scss files into it and @import it into theme.scss
 
 

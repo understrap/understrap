@@ -1,5 +1,5 @@
 @import "underscores/understrap_underscores"; // the _s starter theme basic styles <- Dont edit this files!
-@import "theme/theme_variables"; // Overwriting Bootstrap variables and for own variables
+@import "theme/theme_variables"; // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
 @import "bootstrap/understrap_bootstrap"; // adding bootstrap <- Dont edit this files!
 @import "understrap/understrap"; // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
 @import "font-awesome/understrap_font-awesome"; // <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
