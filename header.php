@@ -17,6 +17,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+
     
 <div id="page" class="hfeed site">
     
@@ -30,8 +32,8 @@
                         <div class="navbar navbar-inverse navbar-fixed-top">
                             
                              <div class="container">
-                                 
-                                 <div class="col-md-12">
+
+                                <div class="col-md-<?php if ( is_active_sidebar( 'off-canvas' ) ): ?>11<?php else : ?>12<?php endif; ?>">
                                  
                                 <div class="navbar-header">
 
@@ -60,12 +62,44 @@
                                     )
                                 ); ?>
 
-                        </div> <!-- .col-md-12 end -->
+                        </div> <!-- .col-md-11 end -->
+                                 <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
+                        <div class="col-md-1 text-right">
+                            <!-- Off Canvas Toggle -->
+                            <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+                                menu
+                            </a>
+                        </div>
+                                 <?php else : ?>
+
+                                 <?php endif; ?>
                                  
                     </div> <!-- .container -->
                 
             </div><!-- .navbar -->
+
+            <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
+                <div class="navmenu navmenu-inverse navmenu-fixed-left offcanvas">
+                    <!-- Off Canvas Toggle -->
+                    <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+                        menu
+                    </a>
+
+            <!-- Off Canvas Widget itself -->
+
+                <?php dynamic_sidebar( 'off-canvas' ); ?>
+
+                </div>
+            <?php else : ?>
+
+            <?php endif; ?>
             
         </nav><!-- .site-navigation -->
         
     </div><!-- .wrapper-navbar end -->
+
+
+
+
+
+

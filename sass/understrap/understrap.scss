@@ -5,3 +5,7 @@ body { padding-top: 50px; }
 .sticky, .gallery-caption, .bypostauthor {
 font-size:inherit;
 }
+// Workaround for Jasny off canvas nav on right hand side
+.navmenu-fixed-right {
+  left: auto !important;
+}
