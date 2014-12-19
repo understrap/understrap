@@ -1,13 +1,13 @@
-<div class="wrapper" id="hero-wrapper">
-    
-    <div class="container">
-        
-        <div class="jumbotron">
-          <h1>Hello, world!</h1>
-          <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+<?php if ( is_active_sidebar( 'hero' ) ): ?>
+
+    <div class="wrapper" id="hero-wrapper">
+        <div class="owl-carousel">
+
+            <?php dynamic_sidebar( 'hero' ); ?>
+
         </div>
-        
     </div>
-    
-</div>
+
+<?php else : ?>
+
+<?php endif; ?>

@@ -9,5 +9,15 @@ function understrap_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+
+    register_sidebar( array(
+        'name'          => __( 'Hero', 'understrap' ),
+        'id'            => 'hero',
+        'description'   => '',
+        'before_widget' => '<div class="item">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
 }
 add_action( 'widgets_init', 'understrap_widgets_init' );
