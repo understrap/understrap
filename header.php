@@ -30,11 +30,11 @@
         <nav class="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                             
                         <div class="navbar navbar-inverse navbar-fixed-top">
-                            
+
                              <div class="container">
 
-                                <div class="col-md-<?php if ( is_active_sidebar( 'off-canvas' ) ): ?>11<?php else : ?>12<?php endif; ?>">
-                                 
+                                <div class="col-xs-<?php if ( is_active_sidebar( 'off-canvas' ) ): ?>11<?php else : ?>12<?php endif; ?>">
+
                                 <div class="navbar-header">
 
                                     <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
@@ -65,7 +65,7 @@
                         </div> <!-- .col-md-11 or col-md-12 end -->
 
                         <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                        <div class="col-md-1 text-right">
+                        <div class="col-xs-1 text-right">
                             <!-- Off Canvas Toggle -->
                             <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
                                 menu
@@ -78,7 +78,7 @@
             </div><!-- .navbar -->
 
             <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                <div class="navmenu navmenu-inverse navmenu-fixed-left offcanvas">
+                <div class="navmenu navmenu-inverse navmenu-fixed-right offcanvas">
                     <!-- Off Canvas Toggle -->
                     <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
                         menu
