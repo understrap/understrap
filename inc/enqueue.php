@@ -23,7 +23,7 @@ function understrap_scripts() {
     if ( is_active_sidebar( 'off-canvas' ) ) {
         wp_enqueue_style('understrap-off-canvas-style', get_stylesheet_directory_uri() . '/css/jasny-bootstrap.min.css', array(), '310', false);
         wp_enqueue_script('understrap-off-canvas-script', get_template_directory_uri() . '/js/jasny-bootstrap.min.js', array(), '310', true);
-
+    
 }
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
