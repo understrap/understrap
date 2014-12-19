@@ -14,7 +14,7 @@ Basic Features
 - Comes with Bootstrap SASS source files and additonal scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
 - Uses a single and minified CSS file 
 - Font Awesome Icon Font integrated
-- Off-Canvas navigation - By Jasny Bootstrap Plugin (activate it by adding a widget to widget position "Off Canvas")
+- Off-Canvas navigation - By Jasny Bootstrap Plugin (activate it by adding a widget to widget position "Off Canvas" - It works but did not looks good at the moment... )
 - Comes with extra slider script - By owl.carousel
 - Simple RTL file
 - Jetpack ready
