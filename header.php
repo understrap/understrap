@@ -17,8 +17,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-
     
 <div id="page" class="hfeed site">
     
@@ -30,6 +28,13 @@
         <nav class="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                             
                         <div class="navbar navbar-inverse navbar-fixed-top">
+
+                            <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
+                                <!-- Off Canvas Toggle -->
+                                <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+                                    menu
+                                </a>
+                            <?php endif; ?>
 
                              <div class="container">
 
@@ -64,21 +69,14 @@
 
                         </div> <!-- .col-md-11 or col-md-12 end -->
 
-                        <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                        <div class="col-xs-1 text-right">
-                            <!-- Off Canvas Toggle -->
-                            <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-                                menu
-                            </a>
-                        </div>
-                        <?php endif; ?>
+
                                  
                     </div> <!-- .container -->
                 
             </div><!-- .navbar -->
 
             <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                <div class="navmenu navmenu-inverse navmenu-fixed-right offcanvas">
+                <div class="navmenu navmenu-inverse navmenu-fixed-left offcanvas">
                     <!-- Off Canvas Toggle -->
                     <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
                         menu
