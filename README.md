@@ -11,6 +11,8 @@ Changelog
                                    
                 - 0.1 Dec. 10th 2014 - First commit
 
+About
+=
 Basically I like the _s Wordpress Starter Theme from Automattic and the grid Framework Bootstrap. Additionally I´am a huge SASS/COMPASS fan. Why don´t combine all these three things into a solid Wordpress Theme Framework?
 That´s what UnderStrap is (or will be...)
 
