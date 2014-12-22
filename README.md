@@ -56,4 +56,10 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
 - Don´t edit the first four files/filesets or you aren´t able to update it without overwriting your own work!
 - Your design goes into: /sass/theme directory. Add your styles to the theme.scss file and your variables to the _theme_variables.scss. Or add other scss files into it and @import it into theme.scss
 
-
+Installation
+=
+- Download the understrap folder
+- Upload it into your Wordpress installation subfolder here: /wp-content/themes/
+- Login to your Wordpress backend 
+- Go to Appearance -> Themes
+- Activate the UnderStrap theme
