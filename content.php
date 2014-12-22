@@ -21,14 +21,11 @@
     <?php echo get_the_post_thumbnail( $post_id, 'large' ); ?> 
     
 	<div class="entry-content">
-        
-		<?php
-			/* translators: %s: Name of current post */
-			the_excerpt( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'understrap' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
+
+            <?php
+                /* translators: %s: Name of current post */
+                the_excerpt();
+            ?>
 
 		<?php
 			wp_link_pages( array(

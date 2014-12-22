@@ -85,10 +85,21 @@ add_filter('show_admin_bar', '__return_false');
 /**
 /* Adding the Read more link to excerpts
 */
-function new_excerpt_more( $more ) {
+/*function new_excerpt_more( $more ) {
 	return ' <p><a class="read-more btn btn-default" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'understrap') . '</a></p>';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'excerpt_more', 'new_excerpt_more' );*/
+/* Removes the ... from the excerpt read more link */
+function custom_excerpt_more( $more ) {
+	return '';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
-/* Add support for Featured Images per Post */
+/* Adds a custom read more link to all excerpts, manually or automatically generated */
 add_theme_support( 'post-thumbnails' );
+
+function all_excerpts_get_more_link($post_excerpt) {
+
+    return $post_excerpt . ' [...]<p><a class="btn btn-default" href="'. get_permalink($post->ID) . '">' . 'Read More...' . '</a></p>';
+}
+add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');

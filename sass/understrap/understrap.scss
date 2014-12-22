@@ -1,11 +1,30 @@
 // If you use the Bootstrap .navbar-fixed-top class on your navbar you need this
 body { padding-top: 50px; }
 
+// Some basic padding for all wrappers
+.wrapper {padding:$grid-gutter-width 0;}
+#hero-wrapper {padding:0px;}
+
 // Adding basic Wordpress classes to pass the Wordpress.org tests
 .sticky, .gallery-caption, .bypostauthor {
 font-size:inherit;
 }
+<<<<<<< HEAD
 // Workaround for Jasny off canvas nav on right hand side
 .navmenu-fixed-right {
   left: auto !important;
+=======
+
+//Jasny Off-Canvas menu fixed right problems workaround
+ .navmenu-fixed-right {
+  left: auto !important;
+ }
+
+// AdditionL Off-Canvas styling
+.off-canvas-toggle-link{
+  float:left;
+  line-height:30px;
+  padding:10px;
+  color:#fff;
+>>>>>>> testing
 }
