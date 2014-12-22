@@ -22,7 +22,7 @@ Basic Features
 =
 - Combines the _s Wordpress Starter Theme and Bootstrap
 - Comes with Bootstrap SASS source files and additonal scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
-- Uses a single and minified CSS file 
+- Uses a single and minified CSS file for all the basic stuff
 - Font Awesome Icon Font integrated (V 4.2.0): http://fortawesome.github.io/Font-Awesome/
 - Off-Canvas navigation - By Jasny Bootstrap Plugin (V 3.1.3): http://jasny.github.io/bootstrap/
 (activate it by adding a widget to widget position "Off Canvas" - It works but did not looks good at the moment... )
