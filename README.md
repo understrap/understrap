@@ -13,9 +13,10 @@ Basic Features
 - Combines the _s Wordpress Starter Theme and Bootstrap
 - Comes with Bootstrap SASS source files and additonal scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
 - Uses a single and minified CSS file 
-- Font Awesome Icon Font integrated
-- Off-Canvas navigation - By Jasny Bootstrap Plugin (activate it by adding a widget to widget position "Off Canvas" - It works but did not looks good at the moment... )
-- Comes with extra slider script - By owl.carousel
+- Font Awesome Icon Font integrated (V 4.2.0): http://fortawesome.github.io/Font-Awesome/
+- Off-Canvas navigation - By Jasny Bootstrap Plugin (V 3.1.3): http://jasny.github.io/bootstrap/
+(activate it by adding a widget to widget position "Off Canvas" - It works but did not looks good at the moment... )
+- Comes with extra slider script - By owl.carousel (V 2.0.0-beta.2.4): http://www.owlcarousel.owlgraphic.com/
 - Simple RTL file
 - Jetpack ready
 - Child Theme ready (A basic starter Child Theme will be released in the future as a separate Repository)
