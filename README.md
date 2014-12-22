@@ -5,11 +5,11 @@ Live Demo: http://holgerkoenemann.de/understrap/
 
 Changelog
 =
-                - 0.2 Dec. 22th 2014
+                - **0.2 Dec. 22th 2014**
                    - Adding Jasny Off-Canvas nav and Owl.Carousel Slider script
                    - Enqueue scipts and styled dynamically
                                    
-                - 0.1 Dec. 10th 2014 - First commit
+                - **0.1 Dec. 10th 2014 - First commit**
 
 About
 =
