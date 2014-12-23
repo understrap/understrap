@@ -52,3 +52,6 @@ require get_template_directory() . '/inc/jetpack.php';
 * Load custom WordPress nav walker.
 */
 require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
+
+require_once('inc/wp-updates-theme.php');
+new WPUpdatesThemeUpdater_1114( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
