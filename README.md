@@ -8,6 +8,7 @@ Changelog
             - **0.2.6 Dec. 28th 2014**
                     - CLean up
                     
+                    
             - **0.2 Dec. 22th 2014**
                     - Adding Jasny Off-Canvas nav and Owl.Carousel Slider script
                     - Enqueue scipts and styled dynamically
