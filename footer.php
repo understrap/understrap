@@ -39,7 +39,7 @@
         var owl = jQuery('.owl-carousel');
         owl.owlCarousel({
             items:1,
-            loop:true,
+            loop:<?php echo get_theme_mod( 'understrap_theme_slider_loop_setting' );?>,
             autoplay:true,
             autoplayTimeout:<?php echo get_theme_mod( 'understrap_theme_slider_time_setting' );?>,
             animateOut: 'fadeOut',

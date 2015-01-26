@@ -5,6 +5,9 @@ Live Demo: http://holgerkoenemann.de/understrap/
 
 Changelog
 =
+            - **0.2.7 Jan. 26th 2015**
+                               - Adding some basic theme option for the build-in slider script
+
             - **0.2.6 Dec. 28th 2014**
                     - CLean up
                     
