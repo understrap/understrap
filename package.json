@@ -1,0 +1,34 @@
+{
+  "name": "understrap",
+  "version": "0.2.8",
+  "description": "Wordpress Theme framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holger1411/understrap.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "framework",
+    "bootstrap",
+    "underscores"
+  ],
+  "author": "Holger Koenemann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holger1411/understrap/issues"
+  },
+  "homepage": "https://github.com/holger1411/understrap",
+  "dependencies": {
+    "grunt-sass": "^0.17.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
