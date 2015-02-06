@@ -5,6 +5,13 @@ Live Demo: http://holgerkoenemann.de/understrap/
 
 Changelog
 =
+            - **0.2.8 Feb. 6th 2015**
+                   - Adding Grunt and Grunt SASS task
+                   
+
+            - **0.2.7 Jan. 26th 2015**
+                   - Adding some basic theme option for the build-in slider script
+
             - **0.2.6 Dec. 28th 2014**
                     - CLean up
                     

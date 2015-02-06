@@ -18,6 +18,40 @@ function understrap_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'understrap_customize_register' );
 
+function understrap_theme_customize_register( $wp_customize ) {
+
+    $wp_customize->add_section( 'understrap_theme_slider_options', array(
+        'title'          => __( 'Slider Settings', 'understrap' )
+    ) );
+
+    $wp_customize->add_setting( 'understrap_theme_slider_time_setting', array(
+        'default'        => '5000'
+    ) );
+
+    $wp_customize->add_control( 'understrap_theme_slider_time', array(
+        'label'      => __( 'Slider Time (in ms)', 'understrap' ),
+        'section'    => 'understrap_theme_slider_options',
+        'type'       => 'text',
+        'settings'   => 'understrap_theme_slider_time_setting'
+    ) );
+
+    $wp_customize->add_setting( 'understrap_theme_slider_loop_setting', array(
+        'default'        => 'true'
+    ) );
+
+    $wp_customize->add_control( 'understrap_theme_loop', array(
+        'label'      => __( 'Loop Slider Content', 'understrap' ),
+        'section'    => 'understrap_theme_slider_options',
+        'type'     => 'radio',
+        'choices'  => array(
+            'true'  => 'yes',
+            'false' => 'no',
+        ),
+        'settings'   => 'understrap_theme_slider_loop_setting'
+    ) );
+}
+add_action( 'customize_register', 'understrap_theme_customize_register' );
+
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
