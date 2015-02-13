@@ -3,23 +3,34 @@ module.exports = function(grunt) {
     //2. Project configuration.
     grunt.initConfig({
 
-        
         //define what to do with the SASS process
         sass: {                              // Task
-            dist: {                            // Target
+            dev: {                            // Target
                 options: {                       // Target options
-                    style: 'compressed'
+                    style: 'expanded',
+                    sourcemap: 'none'
                 },
                 files: [{
                     src: ['sass/theme.scss'],
                     dest: 'css/theme.css',
                     ext: '.css'
                 }]
+            },
+            dist: {                            // Target
+                options: {                       // Target options
+                    style: 'compressed',
+                    sourcemap: 'none'
+                },
+                files: [{
+                    src: ['sass/theme.scss'],
+                    dest: 'css/theme.min.css',
+                    ext: '.css'
+                }]
             }
         },
         watch: {
               css: {
-                files: 'sass/*',
+                files: ['sass/**/*.scss'],
                 tasks: ['sass']
               }
         }
@@ -29,8 +40,7 @@ module.exports = function(grunt) {
     //1. load task libraries for use
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    
  
     //3. register a named task ( 'process' ) that runs Grunt processes ( 'imagemin', 'concat' )
-    grunt.registerTask( 'process', [ 'sass' ] );
+    grunt.registerTask( 'process', [ 'sass:dev', 'sass:dist' ] );
 };
