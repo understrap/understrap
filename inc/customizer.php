@@ -24,6 +24,17 @@ function understrap_theme_customize_register( $wp_customize ) {
         'title'          => __( 'Slider Settings', 'understrap' )
     ) );
 
+    $wp_customize->add_setting( 'understrap_theme_slider_count_setting', array(
+        'default'        => '1'
+    ) );
+
+    $wp_customize->add_control( 'understrap_theme_slider_count', array(
+        'label'      => __( 'Number of slides displaying at once', 'understrap' ),
+        'section'    => 'understrap_theme_slider_options',
+        'type'       => 'text',
+        'settings'   => 'understrap_theme_slider_count_setting'
+    ) );
+
     $wp_customize->add_setting( 'understrap_theme_slider_time_setting', array(
         'default'        => '5000'
     ) );

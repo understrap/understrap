@@ -38,10 +38,10 @@
     jQuery(document).ready(function() {
         var owl = jQuery('.owl-carousel');
         owl.owlCarousel({
-            items:1,
-            loop:<?php echo get_theme_mod( 'understrap_theme_slider_loop_setting' );?>,
+            items:<?php echo get_theme_mod( 'understrap_theme_slider_count_setting', 1 );?>,
+            loop:<?php echo get_theme_mod( 'understrap_theme_slider_loop_setting', true );?>,
             autoplay:true,
-            autoplayTimeout:<?php echo get_theme_mod( 'understrap_theme_slider_time_setting' );?>,
+            autoplayTimeout:<?php echo get_theme_mod( 'understrap_theme_slider_time_setting', 5000 );?>,
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             nav: false,
