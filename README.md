@@ -5,6 +5,11 @@ Live Demo: http://holgerkoenemann.de/understrap/
 
 Changelog
 =
+            - **0.2.9 Mar. 10th 2015**
+                   - Adding a new theme customizer option. It lets you add a code snippet right before the closing </body> tag.
+                   For example for Google Analytics, Google Tag Mananger, Pingdom etc. Just copy and past your code to the input field and save the setting.
+                   So you don´t have to edit the theme source file´s directly and your theme stay´s updateable
+
             - **0.2.8 Feb. 6th 2015**
                    - Adding Grunt and Grunt SASS task
 

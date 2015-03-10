@@ -14,6 +14,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+<?php echo get_theme_mod( 'understrap_theme_script_code_setting' ); ?>
 </head>
 
 <body <?php body_class(); ?>>
