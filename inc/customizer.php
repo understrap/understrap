@@ -25,7 +25,8 @@ function understrap_theme_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'understrap_theme_slider_count_setting', array(
-        'default'        => '1'
+        'default'        => '1',
+        'sanitize_callback' => 'esc_textarea'
     ) );
 
     $wp_customize->add_control( 'understrap_theme_slider_count', array(
@@ -36,7 +37,8 @@ function understrap_theme_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'understrap_theme_slider_time_setting', array(
-        'default'        => '5000'
+        'default'        => '5000',
+        'sanitize_callback' => 'esc_textarea'
     ) );
 
     $wp_customize->add_control( 'understrap_theme_slider_time', array(
@@ -47,7 +49,8 @@ function understrap_theme_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'understrap_theme_slider_loop_setting', array(
-        'default'        => 'true'
+        'default'        => 'true',
+        'sanitize_callback' => 'esc_textarea'
     ) );
 
     $wp_customize->add_control( 'understrap_theme_loop', array(
@@ -66,7 +69,8 @@ function understrap_theme_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'understrap_theme_script_code_setting', array(
-        'default'        => ''
+        'default'        => '',
+        'sanitize_callback' => 'esc_textarea'
     ) );
 
     $wp_customize->add_control( 'understrap_theme_script_code', array(
@@ -77,6 +81,8 @@ function understrap_theme_customize_register( $wp_customize ) {
     ) );
 }
 add_action( 'customize_register', 'understrap_theme_customize_register' );
+
+
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
