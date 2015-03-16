@@ -17,10 +17,4 @@ function understrap_scripts() {
         wp_enqueue_script( 'understrap-carousel-script', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20024', true );}
     }
 
-    if ( is_active_sidebar( 'off-canvas' ) ) {
-        wp_enqueue_style('understrap-off-canvas-style', get_template_directory_uri() . '/css/jasny-bootstrap.min.css', array(), '310', false);
-        wp_enqueue_script('understrap-off-canvas-script', get_template_directory_uri() . '/js/jasny-bootstrap.min.js', array(), '310', true);
-    
-}
-
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );

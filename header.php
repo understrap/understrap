@@ -77,22 +77,6 @@
                     </div> <!-- .container -->
                 
             </div><!-- .navbar -->
-
-            <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                <div class="navmenu navmenu-inverse navmenu-fixed-left offcanvas">
-                    <!-- Off Canvas Toggle -->
-                    <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-                        menu
-                    </a>
-
-            <!-- Off Canvas Widget itself -->
-
-                <?php dynamic_sidebar( 'off-canvas' ); ?>
-
-                </div>
-            <?php else : ?>
-
-            <?php endif; ?>
             
         </nav><!-- .site-navigation -->
         
