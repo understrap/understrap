@@ -3,7 +3,7 @@ body { padding-top: 50px; }
 
 // Some basic padding for all wrappers
 .wrapper {padding:$grid-gutter-width 0;}
-#hero-wrapper {padding:0px;}
+#wrapper-hero {padding:0px;}
 
 // Adding basic Wordpress classes to pass the Wordpress.org tests
 .sticky, .gallery-caption, .bypostauthor {

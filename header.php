@@ -22,7 +22,7 @@
 <div id="page" class="hfeed site">
     
     <!-- ******************* The Navbar Area ******************* -->
-    <div class="wrapper-fluid wrapper-navbar">
+    <div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 	
         <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'understrap' ); ?></a>
 
