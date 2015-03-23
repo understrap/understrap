@@ -19,8 +19,6 @@
 
 <body <?php body_class(); ?>>
 
-
-    
 <div id="page" class="hfeed site">
     
     <!-- ******************* The Navbar Area ******************* -->
@@ -71,8 +69,6 @@
                                 ); ?>
 
                         </div> <!-- .col-md-11 or col-md-12 end -->
-
-
                                  
                     </div> <!-- .container -->
                 

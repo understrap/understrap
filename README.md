@@ -5,6 +5,9 @@ Live Demo: http://holgerkoenemann.de/understrap/
 
 Changelog
 =
+            - **0.3.0 Mar. 23th 2015**
+                   - Streamlining some code, adding extra "sticky" area (sticky posts above the main content area inside an extra loop). Fixing some child theme issues (now its really child theme ready...really...trust me...)
+
             - **0.2.9 Mar. 10th 2015**
                    - Adding a new theme customizer option. It lets you add a code snippet right before the closing </body> tag.
                    For example for Google Analytics, Google Tag Mananger, Pingdom etc. Just copy and past your code to the input field and save the setting.
@@ -37,11 +40,9 @@ At the moment UnderStrap is in a very early stage. But if you wan´t feel free t
 Basic Features
 =
 - Combines the _s Wordpress Starter Theme and Bootstrap
-- Comes with Bootstrap SASS source files and additonal scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
+- Comes with Bootstrap SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff
 - Font Awesome Icon Font integrated (V 4.2.0): http://fortawesome.github.io/Font-Awesome/
-- Off-Canvas navigation - By Jasny Bootstrap Plugin (V 3.1.3): http://jasny.github.io/bootstrap/
-(activate it by adding a widget to widget position "Off Canvas" - It works but did not looks good at the moment... )
 - Comes with extra slider script - By owl.carousel (V 2.0.0-beta.2.4): http://www.owlcarousel.owlgraphic.com/
 - Simple RTL file
 - Jetpack ready
