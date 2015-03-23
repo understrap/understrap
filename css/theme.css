@@ -7264,7 +7264,7 @@ body {
   padding: 30px 0;
 }
 
-#wrapper-hero {
+.wrapper#wrapper-hero {
   padding: 0px;
 }
 
@@ -7272,19 +7272,8 @@ body {
   font-size: inherit;
 }
 
-.navmenu-fixed-right {
-  left: auto !important;
-}
-
-.navmenu-fixed-right {
-  left: auto !important;
-}
-
-.off-canvas-toggle-link {
-  float: left;
-  line-height: 30px;
-  padding: 10px;
-  color: #fff;
+.wrapper#wrapper-sticky {
+  border-bottom: 1px solid #eeeeee;
 }
 
 /*!

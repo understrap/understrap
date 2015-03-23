@@ -1,7 +1,6 @@
-<div class="wrapper" id="wrapper-featured">
-
+<!-- ******************* The Sticky Area ******************* -->
+<div class="wrapper" id="wrapper-sticky">
     <div class="container">
-
         <div class="col-md-12">
  
              <?php
@@ -27,10 +26,9 @@
                                         get_template_part( 'content', get_post_format() );
                 ?>
             <?php endwhile; wp_reset_query(); ?>
+
         </div>
-
     </div>
-
 </div>
 
 

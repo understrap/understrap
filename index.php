@@ -15,7 +15,6 @@ get_header(); ?>
 
 <?php get_template_part('hero'); ?>
 
-<!-- call to featured part -->
 <?php get_template_part('sticky'); ?>
 
     <div class="wrapper" id="wrapper-index">

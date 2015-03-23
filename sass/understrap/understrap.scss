@@ -2,29 +2,19 @@
 body { padding-top: 50px; }
 
 // Some basic padding for all wrappers
-.wrapper {padding:$grid-gutter-width 0;}
-#wrapper-hero {padding:0px;}
+.wrapper {
+  padding:$grid-gutter-width 0;
+}
+
+// Reset hero wrapper padding to 0
+.wrapper#wrapper-hero {
+  padding:0px;
+}
 
 // Adding basic Wordpress classes to pass the Wordpress.org tests
 .sticky, .gallery-caption, .bypostauthor {
 font-size:inherit;
 }
 
-// Workaround for Jasny off canvas nav on right hand side
-.navmenu-fixed-right {
-  left: auto !important;
-}
-
-
-//Jasny Off-Canvas menu fixed right problems workaround
- .navmenu-fixed-right {
-  left: auto !important;
- }
-
-// AdditionL Off-Canvas styling
-.off-canvas-toggle-link{
-  float:left;
-  line-height:30px;
-  padding:10px;
-  color:#fff;
-}
+// Separate sticky wrapper from main content
+.wrapper#wrapper-sticky {border-bottom:1px solid $gray-lighter;}
