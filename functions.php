@@ -44,6 +44,11 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/custom-comments.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
@@ -52,6 +57,3 @@ require get_template_directory() . '/inc/jetpack.php';
 * Load custom WordPress nav walker.
 */
 require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
-
-require_once('inc/wp-updates-theme.php');
-new WPUpdatesThemeUpdater_1114( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
