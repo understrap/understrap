@@ -3,6 +3,35 @@ UnderStrap Wordpress Theme Framework
 
 Live Demo: http://holgerkoenemann.de/understrap/
 
+Changelog
+=
+            - **0.3.0 Mar. 23th 2015**
+                   - Streamlining some code, adding extra "sticky" area (sticky posts above the main content area inside an extra loop). Fixing some child theme issues (now its really child theme ready...really...trust me...)
+
+            - **0.2.9 Mar. 10th 2015**
+                   - Adding a new theme customizer option. It lets you add a code snippet right before the closing </body> tag.
+                   For example for Google Analytics, Google Tag Mananger, Pingdom etc. Just copy and past your code to the input field and save the setting.
+                   So you don´t have to edit the theme source file´s directly and your theme stay´s updateable
+
+            - **0.2.8 Feb. 6th 2015**
+                   - Adding Grunt and Grunt SASS task
+
+
+            - **0.2.7 Jan. 26th 2015**
+                   - Adding some basic theme option for the build-in slider script
+
+            - **0.2.6 Dec. 28th 2014**
+                    - CLean up
+                    
+                    
+            - **0.2 Dec. 22th 2014**
+                    - Adding Jasny Off-Canvas nav and Owl.Carousel Slider script
+                    - Enqueue scipts and styled dynamically
+                                   
+            - **0.1 Dec. 10th 2014 - First commit**
+
+About
+=
 Basically I like the _s Wordpress Starter Theme from Automattic and the grid Framework Bootstrap. Additionally I´am a huge SASS/COMPASS fan. Why don´t combine all these three things into a solid Wordpress Theme Framework?
 That´s what UnderStrap is (or will be...)
 
@@ -11,11 +40,10 @@ At the moment UnderStrap is in a very early stage. But if you wan´t feel free t
 Basic Features
 =
 - Combines the _s Wordpress Starter Theme and Bootstrap
-- Comes with Bootstrap SASS source files and additonal scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
-- Uses a single and minified CSS file 
-- Font Awesome Icon Font integrated
-- Off-Canvas navigation - By Jasny Bootstrap Plugin (activate it by adding a widget to widget position "Off Canvas" - It works but did not looks good at the moment... )
-- Comes with extra slider script - By owl.carousel
+- Comes with Bootstrap SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
+- Uses a single and minified CSS file for all the basic stuff
+- Font Awesome Icon Font integrated (V 4.2.0): http://fortawesome.github.io/Font-Awesome/
+- Comes with extra slider script - By owl.carousel (V 2.0.0-beta.2.4): http://www.owlcarousel.owlgraphic.com/
 - Simple RTL file
 - Jetpack ready
 - Child Theme ready (A basic starter Child Theme will be released in the future as a separate Repository)
@@ -45,4 +73,10 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
 - Don´t edit the first four files/filesets or you aren´t able to update it without overwriting your own work!
 - Your design goes into: /sass/theme directory. Add your styles to the theme.scss file and your variables to the _theme_variables.scss. Or add other scss files into it and @import it into theme.scss
 
-
+Installation
+=
+- Download the understrap folder
+- Upload it into your Wordpress installation subfolder here: /wp-content/themes/
+- Login to your Wordpress backend 
+- Go to Appearance -> Themes
+- Activate the UnderStrap theme

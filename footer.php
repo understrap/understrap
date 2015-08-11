@@ -32,14 +32,16 @@
 
 <!-- Loads slider script and settings if a widget on pos hero is published -->
 <?php if ( is_active_sidebar( 'hero' ) ): ?>
+
+
 <script>
     jQuery(document).ready(function() {
         var owl = jQuery('.owl-carousel');
         owl.owlCarousel({
-            items:1,
-            loop:true,
+            items:<?php echo get_theme_mod( 'understrap_theme_slider_count_setting', 1 );?>,
+            loop:<?php echo get_theme_mod( 'understrap_theme_slider_loop_setting', true );?>,
             autoplay:true,
-            autoplayTimeout:5000,
+            autoplayTimeout:<?php echo get_theme_mod( 'understrap_theme_slider_time_setting', 5000 );?>,
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             nav: false,

@@ -100,6 +100,6 @@ add_theme_support( 'post-thumbnails' );
 
 function all_excerpts_get_more_link($post_excerpt) {
 
-    return $post_excerpt . ' [...]<p><a class="btn btn-default" href="'. get_permalink($post->ID) . '">' . 'Read More...' . '</a></p>';
+    return $post_excerpt . ' [...]<p><a class="btn btn-default understrap-read-more-link" href="'. get_permalink($post->ID) . '">' . 'Read More...' . '</a></p>';
 }
 add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');

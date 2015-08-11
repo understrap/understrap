@@ -3,13 +3,28 @@ Theme Name: UnderStrap
 Theme URI: http://holgerkoenemann.de/understrap
 Author: Holger Koenemann
 Author URI: http://www.holgerkoenemann.de
-Description: Combination of Automattic´s _s theme and Bootstrap SASS
-Version: 0.1
+Description: Combination of Automattic´s _s theme and Bootstrap SASS. Made as a solid starting point for your next theme project and WordPress website. Including Font Awesome support, build-in widget slider and much more you need for basic websites.
+A developer version (with Grunt/node and SASS sources) is available on github: https://github.com/holger1411/understrap
+Version: 0.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: understrap
+Tags: light, red, white, one-column, responsive-layout, custom-header, custom-menu, featured-images, flexible-header, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+UnderStrap is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resource Licenses:
+Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+and of course
+jQuery: https://jquery.org | (Code licensed under MIT)
+
 */
 
-/*This file is just used to identify the theme in wordpress. The compiles CSS output can be found in /css/theme.css
-The SASS sources for it is here /sass/
+/*This file is just used to identify the theme in WordPress. The compiled CSS output can be found in /css/theme.css
+The SASS sources for it can be found in this folder: /sass/
+
+...and no go out and play!
 */

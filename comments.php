@@ -64,6 +64,12 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'understrap' ); ?></p>
 	<?php endif; ?>
 
-	<?php get_template_part('comment-form'); ?>
+ <?php
+        /* Loads the comment-form.php template
+        /* get_template_part('comment-form');
+        */
+    ?>
+
+    <?php comment_form(); ?>
 
 </div><!-- #comments -->

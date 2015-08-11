@@ -15,7 +15,9 @@ get_header(); ?>
 
 <?php get_template_part('hero'); ?>
 
-    <div class="wrapper" id="index-wrapper">
+<?php get_template_part('sticky'); ?>
+
+    <div class="wrapper" id="wrapper-index">
         
 	   <div class="container">
            
@@ -23,11 +25,10 @@ get_header(); ?>
                
                 <main id="main" class="site-main" role="main">
                     
-                <?php if ( have_posts() ) : ?>
-                    
-                    <?php /* Start the Loop */ ?>
-                    
-                    <?php while ( have_posts() ) : the_post(); ?>
+                   <?php
+                    $the_query = new WP_Query( array( 'post__not_in' => get_option( 'sticky_posts' ) ) );
+                    if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+                    ?>
 
                         <?php
                             /* Include the Post-Format-specific template for the content.

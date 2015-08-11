@@ -14,14 +14,15 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+<?php echo get_theme_mod( 'understrap_theme_script_code_setting' ); ?>
 </head>
 
 <body <?php body_class(); ?>>
-    
+
 <div id="page" class="hfeed site">
     
     <!-- ******************* The Navbar Area ******************* -->
-    <div class="wrapper-fluid wrapper-navbar">
+    <div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 	
         <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'understrap' ); ?></a>
 
@@ -68,28 +69,10 @@
                                 ); ?>
 
                         </div> <!-- .col-md-11 or col-md-12 end -->
-
-
                                  
                     </div> <!-- .container -->
                 
             </div><!-- .navbar -->
-
-            <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                <div class="navmenu navmenu-inverse navmenu-fixed-left offcanvas">
-                    <!-- Off Canvas Toggle -->
-                    <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-                        menu
-                    </a>
-
-            <!-- Off Canvas Widget itself -->
-
-                <?php dynamic_sidebar( 'off-canvas' ); ?>
-
-                </div>
-            <?php else : ?>
-
-            <?php endif; ?>
             
         </nav><!-- .site-navigation -->
         

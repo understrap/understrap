@@ -1,8 +1,37 @@
-@import "underscores/understrap_underscores"; // the _s starter theme basic styles <- Dont edit this files!
-@import "theme/theme_variables"; // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
-@import "bootstrap/understrap_bootstrap"; // adding bootstrap <- Dont edit this files!
-@import "understrap/understrap"; // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
-@import "font-awesome/understrap_font-awesome"; // <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
+/*****************************************************************
+Import all needed 3rd party sass files plus your own style and variables
+1. understrap_underscores.scss
+--------------------------------------
+2. theme/theme_variables.scss // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
+--------------------------------------
+3. bootstrap/understrap_bootstrap.scss // adding bootstrap <- Dont edit this files!
+--------------------------------------
+4. understrap/understrap.scss // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
+--------------------------------------
+5. font-awesome/understrap_font-awesome.scss <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
+--------------------------------------
+
+
+
+          *
+          *
+          *
+       *******
+        *****
+         ***
+          *
+
+
 
 // Any additional imported files //
-@import "theme/theme"; // <-- ADD YOUR STYLES HERE
+6. theme/theme.scss"; // <-- ADD YOUR STYLES HERE
+***************************************************************** */
+
+@import "underscores/understrap_underscores";
+@import "theme/theme_variables";
+@import "bootstrap/understrap_bootstrap";
+@import "understrap/understrap";
+@import "font-awesome/understrap_font-awesome";
+
+// Any additional imported files //
+@import "theme/theme";
