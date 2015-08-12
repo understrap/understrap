@@ -1,3 +1,5 @@
+<?php while (have_posts()) : the_post(); ?>
+   <?php if (!is_sticky()) continue; ?>
 <!-- ******************* The Sticky Area ******************* -->
 <div class="wrapper" id="wrapper-sticky">
     <div class="container">
@@ -18,5 +20,5 @@
         </div>
     </div>
 </div>
-
+<?php endwhile; ?>
 
