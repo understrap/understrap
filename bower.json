@@ -1,0 +1,22 @@
+{
+  "name": "understrap",
+  "version": "0.0.0",
+  "homepage": "https://github.com/holger1411/understrap",
+  "authors": [
+    "Holger Könemann <office@holgerkoenemann.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "fontawesome": "~4.4.0",
+    "_s": "https://github.com/Automattic/_s.git",
+    "OwlCarousel2": "~2.0.0-beta.3"
+  }
+}

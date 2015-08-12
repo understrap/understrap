@@ -1,14 +1,15 @@
 /*****************************************************************
 Import all needed 3rd party sass files plus your own style and variables
-1. understrap_underscores.scss
+
+1. ../bower_components/_s/sass/style  // Adding underscores default styles ake sure you run bower install before! <- Dont edit this files!
 --------------------------------------
 2. theme/theme_variables.scss // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
 --------------------------------------
-3. bootstrap/understrap_bootstrap.scss // adding bootstrap <- Dont edit this files!
+3.../bower_components/bootstrap-sass/assets/stylesheets/bootstrap // adding bootstrap from bower components folder. Make sure you run bower install before! <- Dont edit this files!
 --------------------------------------
 4. understrap/understrap.scss // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
 --------------------------------------
-5. font-awesome/understrap_font-awesome.scss <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
+5. ../bower_components/fontawesome/scss/font-awesome <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
 --------------------------------------
 
 
@@ -27,11 +28,12 @@ Import all needed 3rd party sass files plus your own style and variables
 6. theme/theme.scss"; // <-- ADD YOUR STYLES HERE
 ***************************************************************** */
 
-@import "underscores/understrap_underscores";
-@import "theme/theme_variables";
-@import "bootstrap/understrap_bootstrap";
+@import "../bower_components/_s/sass/style";
+@import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "understrap/understrap";
-@import "font-awesome/understrap_font-awesome";
+@import "../bower_components/fontawesome/scss/font-awesome";
+
 
 // Any additional imported files //
-@import "theme/theme";
+@import "theme/theme";  // <--------- Add your styles into this file

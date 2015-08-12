@@ -5,6 +5,9 @@ Live Demo: http://holgerkoenemann.de/understrap/
 
 Changelog
 =
+            - **0.3.1 AUG. 12th 2015**
+                   - Adding bower dependency manager and replacing GRUNT taskrunner with GULP
+
             - **0.3.0 Mar. 23th 2015**
                    - Streamlining some code, adding extra "sticky" area (sticky posts above the main content area inside an extra loop). Fixing some child theme issues (now its really child theme ready...really...trust me...)
 
