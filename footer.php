@@ -11,16 +11,20 @@
 <div class="wrapper" id="wrapper-footer">
     
     <div class="container">
+
+        <div class="row">
     
-        <footer id="colophon" class="container site-footer" role="contentinfo">
+            <footer id="colophon" class="container site-footer" role="contentinfo">
 
-            <div class="site-info">
-                <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ), 'WordPress' ); ?></a>
-                <span class="sep"> | </span>
-                <?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), 'understrap', '<a href="http://www.holgerkoenemann.de/" rel="designer">holgerkoenemann.de</a>' ); ?>
-            </div><!-- .site-info -->
+                <div class="site-info">
+                    <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ), 'WordPress' ); ?></a>
+                    <span class="sep"> | </span>
+                    <?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), 'understrap', '<a href="http://www.holgerkoenemann.de/" rel="designer">holgerkoenemann.de</a>' ); ?>
+                </div><!-- .site-info -->
 
-        </footer><!-- #colophon -->
+            </footer><!-- #colophon -->
+
+        </div><!-- row end -->
         
     </div><!-- container end -->
     
@@ -32,7 +36,6 @@
 
 <!-- Loads slider script and settings if a widget on pos hero is published -->
 <?php if ( is_active_sidebar( 'hero' ) ): ?>
-
 
 <script>
     jQuery(document).ready(function() {

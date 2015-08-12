@@ -28,36 +28,38 @@
 
         <nav class="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                             
-                        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar navbar-inverse navbar-fixed-top">
 
-                            <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                                <!-- Off Canvas Toggle -->
-                                <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-                                    menu
-                                </a>
-                            <?php endif; ?>
+                <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
+                <!-- Off Canvas Toggle -->
+                    <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+                        menu
+                    </a>
+                <?php endif; ?>
 
-                             <div class="container">
+                <div class="container">
 
-                                <div class="col-xs-<?php if ( is_active_sidebar( 'off-canvas' ) ): ?>11<?php else : ?>12<?php endif; ?>">
+                    <div class="row">
 
-                                <div class="navbar-header">
+                        <div class="col-xs-<?php if ( is_active_sidebar( 'off-canvas' ) ): ?>11<?php else : ?>12<?php endif; ?>">
 
-                                    <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                                      <span class="sr-only">Toggle navigation</span>
+                            <div class="navbar-header">
+
+                                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
                                       <span class="icon-bar"></span>
                                       <span class="icon-bar"></span>
                                       <span class="icon-bar"></span>
-                                    </button>
+                                </button>
 
-                                    <!-- Your site title as branding in the menu -->
-                                    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                                <!-- Your site title as branding in the menu -->
+                                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 
-                                </div>
+                            </div>
 
-                                <!-- The WordPress Menu goes here -->
-                                <?php wp_nav_menu(
+                            <!-- The WordPress Menu goes here -->
+                            <?php wp_nav_menu(
                                     array(
                                         'theme_location' => 'primary',
                                         'container_class' => 'collapse navbar-collapse navbar-responsive-collapse',
@@ -66,11 +68,13 @@
                                         'menu_id' => 'main-menu',
                                         'walker' => new wp_bootstrap_navwalker()
                                     )
-                                ); ?>
+                            ); ?>
 
                         </div> <!-- .col-md-11 or col-md-12 end -->
-                                 
-                    </div> <!-- .container -->
+
+                    </div> <!-- .row end -->
+
+                </div> <!-- .container -->
                 
             </div><!-- .navbar -->
             
