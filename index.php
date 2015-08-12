@@ -15,6 +15,11 @@ get_header(); ?>
 
 <?php get_template_part('hero'); ?>
 
+<?php while (have_posts()) : the_post(); ?>
+   <?php if (!is_sticky()) continue; ?>
+        <?php get_template_part('sticky'); ?>
+<?php endwhile; ?>
+
     <div class="wrapper" id="wrapper-index">
         
 	   <div class="container">
@@ -22,9 +27,10 @@ get_header(); ?>
 	       <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
                
                 <main id="main" class="site-main" role="main">
+                 <?php if ( have_posts() ) : ?>
                     
                 <?php /* Start the Loop */ ?>
-                
+
                 <?php while ( have_posts() ) : the_post(); ?>
 
                         <?php
@@ -35,12 +41,14 @@ get_header(); ?>
                             get_template_part( 'content', get_post_format() );
                         ?>
 
-                    <?php endwhile; ?>
+                <?php endwhile; ?>
                     
-                    <?php understrap_paging_nav(); ?>
+                <?php understrap_paging_nav(); ?>
                     
                 <?php else : ?>
+
                     <?php get_template_part( 'content', 'none' ); ?>
+                    
                 <?php endif; ?>
                     
                 </main><!-- #main -->
