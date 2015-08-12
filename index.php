@@ -23,11 +23,9 @@ get_header(); ?>
                
                 <main id="main" class="site-main" role="main">
                     
-                   <?php
-                   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $the_query = new WP_Query( array( 'post__not_in' => get_option( 'sticky_posts' ) ) );
-                    if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
-                    ?>
+                <?php /* Start the Loop */ ?>
+                
+                <?php while ( have_posts() ) : the_post(); ?>
 
                         <?php
                             /* Include the Post-Format-specific template for the content.
