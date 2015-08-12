@@ -37,19 +37,18 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
+
+// Copy all js files from bower_component assets to themes /js folder. Run this task after bower install or bower update
 gulp.task('copy-assets', function() {
     gulp.src('./bower_components/bootstrap-sass/assets/javascripts/*.js')
        .pipe(gulp.dest('./js'));
-    gulp.src('./bower_components/bootstrap-sass/assets/stylesheets/*.scss')
-       .pipe(gulp.dest('./sass/bootstrap'));
     gulp.src('./bower_components/bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,eof,svg}')
         .pipe(gulp.dest('./fonts'));
-    gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+    gulp.src('./bower_components/fontawesome/fonts/**/*.{ttf,woff,eof,svg}')
         .pipe(gulp.dest('./fonts'));
     gulp.src('./bower_components/jquery/dist/*.js')
         .pipe(gulp.dest('./js'));
     gulp.src('./bower_components/_s/js/*.js')
         .pipe(gulp.dest('./js'));
-    gulp.src('./bower_components/_s/sass/**/*.scss')
-        .pipe(gulp.dest('./sass/underscores'));
+
 });
