@@ -3,6 +3,7 @@
     <div class="container">
         <div class="col-md-12">
  
+                
              <?php
             // Get IDs of sticky posts
             $sticky = get_option('sticky_posts');
