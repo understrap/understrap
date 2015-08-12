@@ -16,3 +16,7 @@
 .idea/watcherTasks.xml
 
 .sass-cache
+
+bower_components
+
+node_modules

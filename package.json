@@ -24,11 +24,8 @@
   },
   "homepage": "https://github.com/holger1411/understrap",
   "dependencies": {
-    "grunt-sass": "^0.17.0"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1"
+    "bower": "^1.4.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
   }
 }
