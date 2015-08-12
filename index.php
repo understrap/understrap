@@ -15,10 +15,7 @@ get_header(); ?>
 
 <?php get_template_part('hero'); ?>
 
-<?php while (have_posts()) : the_post(); ?>
-   <?php if (!is_sticky()) continue; ?>
-        <?php get_template_part('sticky'); ?>
-<?php endwhile; ?>
+    <?php get_template_part('sticky'); ?>
 
     <div class="wrapper" id="wrapper-index">
         

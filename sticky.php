@@ -2,8 +2,6 @@
 <div class="wrapper" id="wrapper-sticky">
     <div class="container">
         <div class="col-md-12">
- 
-                
              <?php
             // Get IDs of sticky posts
             $sticky = get_option('sticky_posts');
@@ -18,6 +16,7 @@
                 // Get only the most recent
                 'posts_per_page' => 1
             ));
+
             while ($most_recent_sticky_post->have_posts()) : $most_recent_sticky_post->the_post(); ?>
                 <?php
                                         /* Include the Post-Format-specific template for the content.
@@ -27,7 +26,6 @@
                                         get_template_part( 'content', get_post_format() );
                 ?>
             <?php endwhile; wp_reset_query(); ?>
-
         </div>
     </div>
 </div>
