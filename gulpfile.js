@@ -24,11 +24,11 @@ gulp.task('watch', function () {
 });
 
 gulp.task('minifycss', ['cleancss'], function(){
-  return gulp.src('./src/css/*.css')
+  return gulp.src('./css/*.css')
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(minifyCSS({keepBreaks:true}))
-    .pipe(gulp.dest('./src/css/'));
+    .pipe(gulp.dest('./css/'));
 }); 
 
 gulp.task('cleancss', function() {
