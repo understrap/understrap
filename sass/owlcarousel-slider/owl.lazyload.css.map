@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAQE,iCAAU,CACP,OAAO,CAAE,CAAC,CCRd,kBAAkB,CAAE,kBAAmB,CACvC,eAAe,CAAE,kBAAmB,CACpC,cAAc,CAAE,kBAAmB,CACnC,aAAa,CAAE,kBAAmB,CAClC,UAAU,CAAE,kBAAmB,CDO9B,2BAAG,CACF,eAAe,CAAE,WAAW",
-"sources": ["owl.lazyload.scss","_mixins.scss"],
-"names": [],
-"file": "owl.lazyload.css"
-}
