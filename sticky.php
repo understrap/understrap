@@ -15,7 +15,7 @@
                 if ( isset($sticky[0]) ) {
                       get_template_part( 'content', get_post_format() );
                 }
-
+                wp_reset_query();
             ?>
         </div>
     </div>
