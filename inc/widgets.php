@@ -19,6 +19,16 @@ function understrap_widgets_init() {
         'before_title'  => '',
         'after_title'   => '',
     ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Static Hero', 'understrap' ),
+        'id'            => 'statichero',
+        'description'   => '',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
 /*
     register_sidebar( array(
         'name'          => __( 'Off Canvas', 'understrap' ),

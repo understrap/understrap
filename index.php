@@ -13,7 +13,11 @@
 
 get_header(); ?>
 
+/* Loads widget slider area */
 <?php get_template_part('hero'); ?>
+
+/* Loads static hero */
+<?php get_template_part('statichero'); ?>
 
 
     <div class="wrapper" id="wrapper-index">
