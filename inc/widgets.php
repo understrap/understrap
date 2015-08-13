@@ -29,7 +29,7 @@ function understrap_widgets_init() {
         'before_title'  => '',
         'after_title'   => '',
     ) );
-/*
+
     register_sidebar( array(
         'name'          => __( 'Off Canvas', 'understrap' ),
         'id'            => 'off-canvas',
@@ -38,6 +38,6 @@ function understrap_widgets_init() {
         'after_widget'  => '</div>',
         'before_title'  => '',
         'after_title'   => '',
-    ) );*/
+    ) );
 }
 add_action( 'widgets_init', 'understrap_widgets_init' );
