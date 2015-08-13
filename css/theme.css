@@ -6794,7 +6794,7 @@ body {
 .wrapper {
   padding: 30px 0; }
 
-.wrapper#wrapper-hero, .wrapper#wrapper-static-hero {
+#wrapper-hero, #wrapper-static-hero {
   padding: 0px !important; }
 
 .sticky, .gallery-caption, .bypostauthor {
