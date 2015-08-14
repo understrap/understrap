@@ -1554,7 +1554,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .fa,.fa-stack{display:inline-block}
 body{padding-top:50px}
 .wrapper{padding:30px 0}
-.wrapper#wrapper-hero{padding:0}
+#wrapper-hero,#wrapper-static-hero{padding:0!important}
 .bypostauthor,.gallery-caption,.sticky{font-size:inherit}
 .wrapper#wrapper-sticky{border-bottom:1px solid #eee}
 /*!

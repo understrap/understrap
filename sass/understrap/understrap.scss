@@ -7,8 +7,8 @@ body { padding-top: 50px; }
 }
 
 // Reset hero wrapper padding to 0
-.wrapper#wrapper-hero {
-  padding:0px;
+#wrapper-hero, #wrapper-static-hero {
+  padding:0px!important;
 }
 
 // Adding basic Wordpress classes to pass the Wordpress.org tests

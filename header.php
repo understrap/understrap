@@ -30,18 +30,11 @@
                             
             <div class="navbar navbar-inverse navbar-fixed-top">
 
-                <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                <!-- Off Canvas Toggle -->
-                    <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-                        menu
-                    </a>
-                <?php endif; ?>
-
                 <div class="container">
 
                     <div class="row">
 
-                        <div class="col-xs-<?php if ( is_active_sidebar( 'off-canvas' ) ): ?>11<?php else : ?>12<?php endif; ?>">
+                        <div class="col-xs-12">
 
                             <div class="navbar-header">
 
