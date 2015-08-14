@@ -30,13 +30,6 @@
                             
             <div class="navbar navbar-inverse navbar-fixed-top">
 
-                <?php if ( is_active_sidebar( 'off-canvas' ) ): ?>
-                <!-- Off Canvas Toggle -->
-                    <a class="off-canvas-toggle-link" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-                        menu
-                    </a>
-                <?php endif; ?>
-
                 <div class="container">
 
                     <div class="row">
