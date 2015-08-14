@@ -6,8 +6,6 @@
  *
  * @package understrap
  */
-?>
-
 
 get_header(); ?>
 
