@@ -41,7 +41,7 @@
 
                     <div class="row">
 
-                        <div class="col-xs-<?php if ( is_active_sidebar( 'off-canvas' ) ): ?>11<?php else : ?>12<?php endif; ?>">
+                        <div class="col-xs-12">
 
                             <div class="navbar-header">
 
