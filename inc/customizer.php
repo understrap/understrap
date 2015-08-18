@@ -70,7 +70,7 @@ function understrap_theme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'understrap_theme_script_code_setting', array(
         'default'        => '',
-        'sanitize_callback' => 'esc_textarea'
+        'sanitize_js_callback' => 'esc_js'
     ) );
 
     $wp_customize->add_control( 'understrap_theme_script_code', array(
