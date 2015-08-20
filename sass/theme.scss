@@ -1,7 +1,7 @@
 /*****************************************************************
 Import all needed 3rd party sass files plus your own style and variables
 
-1. ../bower_components/_s/sass/style  // Adding underscores default styles ake sure you run bower install before! <- Dont edit this files!
+1. ../bower_components/_s/sass/style  // Adding underscores default styles. Don´t needed if you use Bootstrap for styling 
 --------------------------------------
 2. theme/theme_variables.scss // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
 --------------------------------------
@@ -28,8 +28,8 @@ Import all needed 3rd party sass files plus your own style and variables
 6. theme/theme.scss"; // <-- ADD YOUR STYLES HERE
 ***************************************************************** */
 
-@import "../bower_components/_s/sass/style";
-@import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+// @import "../bower_components/_s/sass/style";
+@import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "understrap/understrap";
 @import "../bower_components/fontawesome/scss/font-awesome";
