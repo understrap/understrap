@@ -50,5 +50,4 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest('./js'));
     gulp.src('./bower_components/_s/js/*.js')
         .pipe(gulp.dest('./js'));
-
 });
