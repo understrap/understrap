@@ -1,7 +1,7 @@
 UnderStrap Wordpress Theme Framework
 ===
 
-Live Demo: http://holgerkoenemann.de/understrap/
+Website: http://understrap.com
 
 Changelog
 =
