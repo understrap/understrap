@@ -1,3 +1,9 @@
+// Defining base pathes
+var basePaths = {
+    bower: './bower_components/'
+};
+
+// Defining requirements
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
@@ -40,14 +46,14 @@ gulp.task('cleancss', function() {
 
 // Copy all js files from bower_component assets to themes /js folder. Run this task after bower install or bower update
 gulp.task('copy-assets', function() {
-    gulp.src('./bower_components/bootstrap-sass/assets/javascripts/*.js')
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/*.js')
        .pipe(gulp.dest('./js'));
-    gulp.src('./bower_components/bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,eof,svg}')
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,eof,svg}')
         .pipe(gulp.dest('./fonts'));
-    gulp.src('./bower_components/fontawesome/fonts/**/*.{ttf,woff,eof,svg}')
+    gulp.src(basePaths.bower + 'fontawesome/fonts/**/*.{ttf,woff,eof,svg}')
         .pipe(gulp.dest('./fonts'));
-    gulp.src('./bower_components/jquery/dist/*.js')
+    gulp.src(basePaths.bower + 'jquery/dist/*.js')
         .pipe(gulp.dest('./js'));
-    gulp.src('./bower_components/_s/js/*.js')
+    gulp.src(basePaths.bower + '_s/js/*.js')
         .pipe(gulp.dest('./js'));
 });
