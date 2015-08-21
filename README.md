@@ -42,7 +42,7 @@ At the moment UnderStrap is in a very early stage. But if you wan´t feel free t
 
 Basic Features
 =
-- Combines the _s Wordpress Starter Theme and Bootstrap
+- Combines the _s Wordpress Starter Theme PHP/JS files and Bootstrap´s HTML/CSS/JS
 - Comes with Bootstrap SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff
 - Font Awesome Icon Font integrated (V 4.2.0): http://fortawesome.github.io/Font-Awesome/
@@ -61,19 +61,17 @@ Confused by all the CSS and SCSS files?
 =
 Some basics about the SCSS and CSS files comes with UnderStrap:
 - The theme itself uses the style.css in the root directory just to identify the theme inside of Wordpress. The file is not loaded by the theme and did not include any styles
-- The theme.css file in /css/ subdirectory provides all styles. It is composed by six different SCSS sets and one variables file from /sass/ directory:
+- The theme.css file in /css/ subdirectory provides all styles. It is composed by five different SCSS sets and one variables file from /sass/theme.scss:
 
-                  1./sass/underscores/understrap_underscores.scss (<- Basics for the _s theme)
-                  2./sass/bootstrap/understrap_bootstrap.scss (<- which imports all Bootstrap SCSS files and mixins from /sass/bootstrap/ directory)
-                  3./sass/understrap/understrap.scss (<- Just used minimal styles to combine _s and Bootstrap aand the other assets nicely)
-                  4./sass/font-awesome/understrap_font-awesome.scss (<-imports all Font Awesome icons and the font itself)
-                  --------------- Don´t edit the files above --------------- 
-                  
-                  5./sass/theme/theme.scss (<- Thats your part! Here you can add your own style) 
-                  and
-                  6.sass/theme/_theme_variables.scss (<- here you can define own variables or you could overwrite existing Bootstrap variables easily without touching the original BS code)
+                  - 1 "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+                  - 2 "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";  // <--------- All the Bootstrap stuff - Don´t edit this!
+                  - 3 "understrap/understrap"; // <--------- Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
+                  - 4 "../bower_components/fontawesome/scss/font-awesome"; // <--------- Font Awesome Icon styles
 
-- Don´t edit the first four files/filesets or you aren´t able to update it without overwriting your own work!
+                  // Any additional imported files //
+                  - 5 "theme/theme";  // <--------- Add your styles into this file
+
+- Don´t edit the files no. 2-4 files/filesets or you aren´t able to update it without overwriting your own work!
 - Your design goes into: /sass/theme directory. Add your styles to the theme.scss file and your variables to the _theme_variables.scss. Or add other scss files into it and @import it into theme.scss
 
 Installation
