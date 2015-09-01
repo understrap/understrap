@@ -1395,6 +1395,7 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
+.aligncenter,.alignleft,.alignright,.bypostauthor,.gallery-caption,.screen-reader-text,.sticky,.wp-caption,.wp-caption-text{font-size:inherit}
 .affix{position:fixed}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
@@ -1457,7 +1458,6 @@ td.visible-print,th.visible-print{display:table-cell!important}
 body{padding-top:50px}
 .wrapper{padding:30px 0}
 #wrapper-hero,#wrapper-static-hero{padding:0!important}
-.bypostauthor,.gallery-caption,.sticky{font-size:inherit}
 .wrapper#wrapper-sticky{border-bottom:1px solid #eee}
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome

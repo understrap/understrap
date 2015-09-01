@@ -1,4 +1,4 @@
-UnderStrap Wordpress Theme Framework
+UnderStrap WordPress Theme Framework
 ===
 
 Website: http://understrap.com
@@ -35,14 +35,14 @@ Changelog
 
 About
 =
-Basically I like the _s Wordpress Starter Theme from Automattic and the grid Framework Bootstrap. Additionally I´am a huge SASS fan. Why don´t combine all these three things into a solid Wordpress Theme Framework?
+Basically I like the _s WordPress Starter Theme from Automattic and the grid Framework Bootstrap. Additionally I´am a huge SASS fan. Why don´t combine all these three things into a solid WordPress Theme Framework?
 That´s what UnderStrap is (or will be...)
 
-At the moment UnderStrap is in a very early stage. But if you wan´t feel free to use it for your own Wordpress theme!
+At the moment UnderStrap is in a very early stage. But if you wan´t feel free to use it for your own WordPress theme!
 
 Basic Features
 =
-- Combines the _s Wordpress Starter Theme PHP/JS files and Bootstrap´s HTML/CSS/JS
+- Combines the _s WordPress Starter Theme PHP/JS files and Bootstrap´s HTML/CSS/JS
 - Comes with Bootstrap SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff
 - Font Awesome Icon Font integrated (V 4.2.0): http://fortawesome.github.io/Font-Awesome/
@@ -52,15 +52,15 @@ Basic Features
 - Child Theme ready (A basic starter Child Theme will be released in the future as a separate Repository)
 - Translation ready
 
-Starter Theme + HTML Framework = Wordpress Theme Framework
+Starter Theme + HTML Framework = WordPress Theme Framework
 =
-The _s theme is a good starting point to develope a Wordpress theme. But it is "just" a raw starter theme. Means it outputs all the Wordpress stuff correctly but without any layout or design.
+The _s theme is a good starting point to develope a WordPress theme. But it is "just" a raw starter theme. Means it outputs all the WordPress stuff correctly but without any layout or design.
 Why don´t add a well known and supported layout framework to have a solid, clean and responsive foundation? Thats where Bootstrap comes in.
 
 Confused by all the CSS and SCSS files?
 =
 Some basics about the SCSS and CSS files comes with UnderStrap:
-- The theme itself uses the style.css in the root directory just to identify the theme inside of Wordpress. The file is not loaded by the theme and did not include any styles
+- The theme itself uses the style.css in the root directory just to identify the theme inside of WordPress. The file is not loaded by the theme and did not include any styles
 - The theme.css file in /css/ subdirectory provides all styles. It is composed by five different SCSS sets and one variables file from /sass/theme.scss:
 
                   - 1 "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
@@ -77,7 +77,7 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
 Installation
 =
 - Download the understrap folder
-- Upload it into your Wordpress installation subfolder here: /wp-content/themes/
-- Login to your Wordpress backend 
+- Upload it into your WordPress installation subfolder here: /wp-content/themes/
+- Login to your WordPress backend 
 - Go to Appearance -> Themes
 - Activate the UnderStrap theme
