@@ -5,6 +5,12 @@ Website: http://understrap.com
 
 Changelog
 =
+            - **0.3.4 SEP. 9th 2015**
+                   - Adding basic Woocommerce support
+                   - Cleanup for submitting to wordpress.org
+                   - Removing _s SASS ... no need for basic styling with Bootstrap.
+
+
             - **0.3.1 AUG. 12th 2015**
                    - Adding bower dependency manager and replacing GRUNT taskrunner with GULP
 
