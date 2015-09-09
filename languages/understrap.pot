@@ -1,16 +1,43 @@
 # Copyright (C) 2014 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
+"Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2014-12-03 09:43:15+00:00\n"
+"POT-Creation-Date: 2015-09-01 21:23+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_x;_nx;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -25,7 +52,6 @@ msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
@@ -78,7 +104,6 @@ msgid "Edit"
 msgstr ""
 
 #. translators: %s: Name of current post
-
 #: content.php:22
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
@@ -148,7 +173,6 @@ msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-
 #: inc/template-tags.php:104 inc/template-tags.php:110
 msgid ", "
 msgstr ""
@@ -262,7 +286,6 @@ msgid "Archives: %s"
 msgstr ""
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-
 #: inc/template-tags.php:173
 msgid "%1$s: %2$s"
 msgstr ""
@@ -274,6 +297,7 @@ msgstr ""
 #: search.php:16
 msgid "Search Results for: %s"
 msgstr ""
+
 #. Theme Name of the plugin/theme
 msgid "_s"
 msgstr ""
