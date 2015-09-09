@@ -18,3 +18,11 @@ font-size:inherit;
 
 // Separate sticky wrapper from main content
 .wrapper#wrapper-sticky {border-bottom:1px solid $gray-lighter;}
+
+// Necessary WP classes
+.wp-caption {font-size: inherit;}
+.wp-caption-text {font-size: inherit;}
+.screen-reader-text {font-size: inherit;}
+.alignright {font-size: inherit;}
+.alignleft {font-size: inherit;}
+.aligncenter {font-size: inherit;}

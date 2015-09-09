@@ -2,15 +2,15 @@
 /*****************************************************************
 Import all needed 3rd party sass files plus your own style and variables
 
-1. ../bower_components/_s/sass/style  // Adding underscores default styles. Don´t needed if you use Bootstrap for styling 
+0. ../bower_components/_s/sass/style  // Adding underscores default styles. Don´t needed if you use Bootstrap for styling 
 --------------------------------------
-2. theme/theme_variables.scss // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
+1. theme/theme_variables.scss // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
 --------------------------------------
-3.../bower_components/bootstrap-sass/assets/stylesheets/bootstrap // adding bootstrap from bower components folder. Make sure you run bower install before! <- Dont edit this files!
+2.../bower_components/bootstrap-sass/assets/stylesheets/bootstrap // adding bootstrap from bower components folder. Make sure you run bower install before! <- Dont edit this files!
 --------------------------------------
-4. understrap/understrap.scss // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
+3. understrap/understrap.scss // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
 --------------------------------------
-5. ../bower_components/fontawesome/scss/font-awesome <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
+4. ../bower_components/fontawesome/scss/font-awesome <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
 --------------------------------------
 
 
@@ -6103,6 +6103,24 @@ body {
 
 .wrapper#wrapper-sticky {
   border-bottom: 1px solid #eeeeee; }
+
+.wp-caption {
+  font-size: inherit; }
+
+.wp-caption-text {
+  font-size: inherit; }
+
+.screen-reader-text {
+  font-size: inherit; }
+
+.alignright {
+  font-size: inherit; }
+
+.alignleft {
+  font-size: inherit; }
+
+.aligncenter {
+  font-size: inherit; }
 
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
