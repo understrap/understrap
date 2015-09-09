@@ -1,4 +1,9 @@
 <?php
+/**
+ * understrap enqueue scripts
+ *
+ * @package understrap
+ */
 
 function understrap_scripts() {
     wp_enqueue_style( 'understrap-theme', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), '0.2.8', false );
