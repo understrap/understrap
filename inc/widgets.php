@@ -1,4 +1,10 @@
 <?php
+/**
+ * Declaring widgets
+ *
+ *
+ * @package understrap
+ */
 function understrap_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'understrap' ),
