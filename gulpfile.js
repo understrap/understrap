@@ -48,7 +48,7 @@ gulp.task('cleancss', function() {
 gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/*.js')
        .pipe(gulp.dest('./js'));
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/*.scss')
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
        .pipe(gulp.dest('./sass/bootstrap-sass'));
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,eof,svg}')
         .pipe(gulp.dest('./fonts'));
