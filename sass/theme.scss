@@ -30,9 +30,9 @@ Import all needed 3rd party sass files plus your own style and variables
 
 // @import "../bower_components/_s/sass/style";
 @import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap-sass/bootstrap";
 @import "understrap/understrap";
-@import "../bower_components/fontawesome/scss/font-awesome";
+@import "fontawesome/font-awesome";
 
 
 // Any additional imported files //

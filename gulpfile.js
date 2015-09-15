@@ -44,14 +44,18 @@ gulp.task('cleancss', function() {
 });
 
 
-// Copy all js files from bower_component assets to themes /js folder. Run this task after bower install or bower update
+// Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/*.js')
        .pipe(gulp.dest('./js'));
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/*.scss')
+       .pipe(gulp.dest('./sass/bootstrap-sass'));
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,eof,svg}')
         .pipe(gulp.dest('./fonts'));
     gulp.src(basePaths.bower + 'fontawesome/fonts/**/*.{ttf,woff,eof,svg}')
         .pipe(gulp.dest('./fonts'));
+        gulp.src(basePaths.bower + 'fontawesome/scss/*.scss')
+        .pipe(gulp.dest('./sass/fontawesome'));
     gulp.src(basePaths.bower + 'jquery/dist/*.js')
         .pipe(gulp.dest('./js'));
     gulp.src(basePaths.bower + '_s/js/*.js')
