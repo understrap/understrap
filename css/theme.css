@@ -6122,6 +6122,10 @@ body {
 .aligncenter {
   font-size: inherit; }
 
+.tags-links, .edit-link {
+  float: left;
+  display: block; }
+
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
