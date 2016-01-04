@@ -7,6 +7,12 @@ Website: http://understrap.com
 
 Changelog
 =
+            - **0.3.6 Jan. 4th 2016**
+                   - Cleanup
+                   - Updating dependencies
+                   - Upgrade to Bootstrap 3.3.6 and Font Awesome 4.5.0
+                   
+
             - **0.3.4 SEP. 9th 2015**
                    - Adding basic WooCommerce support
                    - Cleanup for submitting to wordpress.org
@@ -51,9 +57,9 @@ At the moment UnderStrap is in a very early stage. But if you wan´t feel free t
 Basic Features
 =
 - Combines the _s WordPress Starter Theme PHP/JS files and Bootstrap´s HTML/CSS/JS
-- Comes with Bootstrap (3.3.5) SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
+- Comes with Bootstrap (3.3.6) SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff
-- Font Awesome Icon Font integrated (V 4.4.0): http://fortawesome.github.io/Font-Awesome/
+- Font Awesome Icon Font integrated (V 4.5.0): http://fortawesome.github.io/Font-Awesome/
 - Comes with extra slider script - By owl.carousel (V 2.0.0-beta.2.4): http://www.owlcarousel.owlgraphic.com/
 - Simple RTL file
 - Jetpack ready
