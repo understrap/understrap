@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "homepage": "http://understrap.com",
   "authors": [
     "Holger Koenemann <office@holgerkoenemann.de>"
@@ -24,13 +24,13 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "fontawesome": "~4.4.0",
+    "bootstrap-sass": "~3.3.6",
+    "fontawesome": "~4.5.0",
     "_s": "https://github.com/Automattic/_s.git",
     "OwlCarousel2": "~2.0.0-beta.3"
   },
   "_source": "https://github.com/holger1411/understrap.git",
-  "_target": "~0.3.4",
+  "_target": "~0.3.6",
   "_originalSource": "understrap"
 }
 
