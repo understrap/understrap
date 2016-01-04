@@ -5,7 +5,4 @@
         <?php dynamic_sidebar( 'statichero' ); ?>
 
     </div>
-
-<?php else : ?>
-
 <?php endif; ?>

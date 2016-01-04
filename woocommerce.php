@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper" id="woocommerce-wrapper">
     
     <div class="container">
         
