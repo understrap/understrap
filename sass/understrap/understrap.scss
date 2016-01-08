@@ -1,6 +1,3 @@
-// If you use the Bootstrap .navbar-fixed-top class on your navbar you need this
-body { padding-top: 50px; }
-
 // Some basic padding for all wrappers
 .wrapper {
   padding:$grid-gutter-width 0;
@@ -26,3 +23,19 @@ font-size:inherit;
 .alignright {font-size: inherit;}
 .alignleft {font-size: inherit;}
 .aligncenter {font-size: inherit;}
+
+//Post design
+.entry-footer span {padding-right:10px;}
+
+//Limit featured image size to 100%
+img.wp-post-image, article img {
+	max-width: 100%;
+}
+
+// Skip to content link
+a.skip-link{
+z-index: 1000;
+margin-bottom: -20px;
+position: relative;
+display: block;
+}

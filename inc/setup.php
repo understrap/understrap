@@ -79,11 +79,6 @@ endif; // understrap_setup
 add_action( 'after_setup_theme', 'understrap_setup' );
 
 /**
-* Removes Adminbar - Comment out if you want see the bar. 
-*/
-add_filter('show_admin_bar', '__return_false');
-
-/**
 * Adding the Read more link to excerpts
 */
 /*function new_excerpt_more( $more ) {
@@ -101,6 +96,6 @@ add_theme_support( 'post-thumbnails' );
 
 function all_excerpts_get_more_link($post_excerpt) {
 
-    return $post_excerpt . ' [...]<p><a class="btn btn-default understrap-read-more-link" href="'. get_permalink($post->ID) . '">' . 'Read More...' . '</a></p>';
+    return $post_excerpt . ' [...]<p><a class="btn btn-default understrap-read-more-link" href="'. get_permalink($post) . '">' . __('Read More...', 'understrap')  . '</a></p>';
 }
 add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');
