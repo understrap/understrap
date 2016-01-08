@@ -92,7 +92,6 @@ function custom_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
 /* Adds a custom read more link to all excerpts, manually or automatically generated */
-add_theme_support( 'post-thumbnails' );
 
 function all_excerpts_get_more_link($post_excerpt) {
 
