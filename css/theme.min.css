@@ -1394,6 +1394,7 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
 .aligncenter,.alignleft,.alignright,.bypostauthor,.gallery-caption,.screen-reader-text,.sticky,.wp-caption,.wp-caption-text{font-size:inherit}
 .affix{position:fixed}
+.fa-ul>li,a.skip-link{position:relative}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
 table.visible-xs{display:table!important}
@@ -1455,7 +1456,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .wrapper#wrapper-sticky{border-bottom:1px solid #eee}
 .entry-footer span{padding-right:10px}
 article img,img.wp-post-image{max-width:100%}
-a.skip-link{display:none;position:absolute;top:40px;right:0}
+a.skip-link{z-index:1000;margin-bottom:-20px;display:block}
 .fa,.fa-stack{display:inline-block}
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -1471,7 +1472,6 @@ a.skip-link{display:none;position:absolute;top:40px;right:0}
 .fa-fw{width:1.28571em;text-align:center}
 .fa-ul{padding-left:0;margin-left:2.14286em;list-style-type:none}
 .fa.fa-pull-right,.fa.pull-right{margin-left:.3em}
-.fa-ul>li{position:relative}
 .fa-li{position:absolute;left:-2.14286em;width:2.14286em;top:.14286em;text-align:center}
 .fa-li.fa-lg{left:-1.85714em}
 .fa-border{padding:.2em .25em .15em;border:.08em solid #eee;border-radius:.1em}

@@ -34,8 +34,8 @@ img.wp-post-image, article img {
 
 // Skip to content link
 a.skip-link{
-	display:none;
-    position: absolute;
-    top: 40px;
-    right: 0px;
+z-index: 1000;
+margin-bottom: -20px;
+position: relative;
+display: block;
 }

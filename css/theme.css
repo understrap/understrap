@@ -5883,10 +5883,10 @@ img.wp-post-image, article img {
   max-width: 100%; }
 
 a.skip-link {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 0px; }
+  z-index: 1000;
+  margin-bottom: -20px;
+  position: relative;
+  display: block; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
