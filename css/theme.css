@@ -5879,7 +5879,7 @@ button.close {
 .entry-footer span {
   padding-right: 10px; }
 
-img.wp-post-image, article img {
+img.wp-post-image, article img, figure {
   max-width: 100%; }
 
 a.skip-link {

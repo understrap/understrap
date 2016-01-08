@@ -28,7 +28,7 @@ font-size:inherit;
 .entry-footer span {padding-right:10px;}
 
 //Limit featured image size to 100%
-img.wp-post-image, article img {
+img.wp-post-image, article img, figure {
 	max-width: 100%;
 }
 
