@@ -20,7 +20,7 @@
         
 	</header><!-- .entry-header -->
 
-     <?php if ( has_post_thumbnail() ) {the_post_thumbnail();} ?> 
+    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?> 
     
 		<div class="entry-content">
 
