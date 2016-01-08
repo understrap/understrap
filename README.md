@@ -7,6 +7,15 @@ Website: http://understrap.com
 
 Changelog
 =
+            - **0.3.7 Jan. 8th 2016**
+                   - Cleanup for submitting to WordPress.org theme repository:
+                        - Fixing sticky post problem
+                        - Fixing skip-to-content link
+                        - re-activating the admin bar
+                        - adding readme.txt
+                        - Fixing missing translation strings in comments template
+
+
             - **0.3.6 Jan. 4th 2016**
                    - Cleanup
                    - Updating dependencies

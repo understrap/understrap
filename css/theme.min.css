@@ -1455,7 +1455,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 #wrapper-hero,#wrapper-static-hero{padding:0!important}
 .wrapper#wrapper-sticky{border-bottom:1px solid #eee}
 .entry-footer span{padding-right:10px}
-article img,img.wp-post-image{max-width:100%}
+article img,figure,img.wp-post-image{max-width:100%}
 a.skip-link{z-index:1000;margin-bottom:-20px;display:block}
 .fa,.fa-stack{display:inline-block}
 /*!
