@@ -5882,6 +5882,9 @@ body {
 .entry-footer span {
   padding-right: 10px; }
 
+img.wp-post-image {
+  max-width: 100%; }
+
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
