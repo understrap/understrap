@@ -19,7 +19,7 @@ get_header(); ?>
 
     <div class="wrapper" id="wrapper-index">
         
-	   <div class="container">
+	   <div id="content" class="container">
            
 	       <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
                
