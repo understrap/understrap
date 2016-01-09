@@ -105,3 +105,10 @@ Installation
 - Login to your WordPress backend 
 - Go to Appearance -> Themes
 - Activate the UnderStrap theme
+
+How to use the build-in Widget Slider?
+=
+The frontpage slider is widget driven. Simply add more than one widget to widget position.
+- Click on Appearance -> Widgets 
+- Add two or more widgets of any kind to widget area "Hero"
+- Thats it

@@ -5,6 +5,15 @@ Website: http://understrap.com
 
 Changelog
 =
+            - **0.3.7 Jan. 8th 2016**
+                   - Cleanup for submitting to WordPress.org theme repository:
+                        - Fixing sticky post problem
+                        - Fixing skip-to-content link
+                        - re-activating the admin bar
+                        - adding readme.txt
+                        - Fixing missing translation strings in comments template
+
+                        
             - **0.3.6 Jan. 4th 2016**
                    - Cleanup
                    - Updating dependencies
@@ -94,3 +103,10 @@ Installation
 - Login to your WordPress backend 
 - Go to Appearance -> Themes
 - Activate the UnderStrap theme
+
+How to use the build-in Widget Slider?
+=
+The frontpage slider is widget driven. Simply add more than one widget to widget position.
+- Click on Appearance -> Widgets 
+- Add two or more widgets of any kind to widget area "Hero"
+- Thats it
