@@ -35,10 +35,10 @@ gulp.task('minifycss', ['cleancss'], function(){
     .pipe(rename({suffix: '.min'}))
     .pipe(minifyCSS({keepBreaks:true}))
     .pipe(gulp.dest('./css/'));
-}); 
+});
 
 gulp.task('cleancss', function() {
-  return gulp.src('./css/*.min.css', { read: false }) // much faster 
+  return gulp.src('./css/*.min.css', { read: false }) // much faster
     .pipe(ignore('theme.css'))
     .pipe(rimraf());
 });
@@ -48,11 +48,7 @@ gulp.task('cleancss', function() {
 gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/*.js')
        .pipe(gulp.dest('./js'));
-<<<<<<< HEAD
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/*.scss')
-=======
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
->>>>>>> master
        .pipe(gulp.dest('./sass/bootstrap-sass'));
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
