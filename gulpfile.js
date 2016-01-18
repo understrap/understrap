@@ -48,20 +48,23 @@ gulp.task('cleancss', function() {
 gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/*.js')
        .pipe(gulp.dest('./js'));
-<<<<<<< HEAD
+
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/*.scss')
-=======
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
->>>>>>> master
        .pipe(gulp.dest('./sass/bootstrap-sass'));
+
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
+
     gulp.src(basePaths.bower + 'fontawesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
+
         gulp.src(basePaths.bower + 'fontawesome/scss/*.scss')
         .pipe(gulp.dest('./sass/fontawesome'));
+
     gulp.src(basePaths.bower + 'jquery/dist/*.js')
         .pipe(gulp.dest('./js'));
+        
     gulp.src(basePaths.bower + '_s/js/*.js')
         .pipe(gulp.dest('./js'));
 });
