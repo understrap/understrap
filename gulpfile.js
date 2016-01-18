@@ -33,7 +33,7 @@ gulp.task('minifycss', ['cleancss'], function(){
   return gulp.src('./css/*.css')
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
-    .pipe(minifyCSS({keepBreaks:true}))
+    .pipe(minifyCSS({keepBreaks:false}))
     .pipe(gulp.dest('./css/'));
 }); 
 
@@ -46,7 +46,7 @@ gulp.task('cleancss', function() {
 
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 gulp.task('copy-assets', function() {
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/*.js')
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/**/*.js')
        .pipe(gulp.dest('./js'));
 
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
