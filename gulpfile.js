@@ -49,7 +49,6 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/*.js')
        .pipe(gulp.dest('./js'));
 
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/*.scss')
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
        .pipe(gulp.dest('./sass/bootstrap-sass'));
 
@@ -64,7 +63,7 @@ gulp.task('copy-assets', function() {
 
     gulp.src(basePaths.bower + 'jquery/dist/*.js')
         .pipe(gulp.dest('./js'));
-        
+
     gulp.src(basePaths.bower + '_s/js/*.js')
         .pipe(gulp.dest('./js'));
 });
