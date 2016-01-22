@@ -4,5 +4,6 @@
 
         <?php dynamic_sidebar( 'statichero' ); ?>
 
-    </div>
+    </div><!-- #wrapper-static-hero -->
+
 <?php endif; ?>

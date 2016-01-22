@@ -21,7 +21,7 @@
                     ?>
                 </div>
             </div>
-        </div>
+        </div><!-- #wrapper-sticky-->
         
 <?php endwhile; ?>
 
