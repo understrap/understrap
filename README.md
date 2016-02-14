@@ -110,7 +110,7 @@ Installation
 
 How to use the build-in Widget Slider?
 =
-The frontpage slider is widget driven. Simply add more than one widget to widget position.
+The frontpage slider is widget driven. Simply add more than one widget to widget position "Hero".
 - Click on Appearance -> Widgets 
 - Add two or more widgets of any kind to widget area "Hero"
 - Thats it
