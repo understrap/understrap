@@ -4,6 +4,7 @@ UnderStrap WordPress Theme Framework
 ===
 
 Website: http://understrap.com
+Child Theme Project: https://github.com/holger1411/understrap-child
 
 Changelog
 =
