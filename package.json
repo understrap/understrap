@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Wordpress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/holger1411/understrap",
   "dependencies": {
-    "bower": "^1.7.2",
+    "bower": "^1.7.7",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-ignore": "^1.2.1",

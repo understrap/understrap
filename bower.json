@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "homepage": "http://understrap.com",
   "authors": [
     "Holger Koenemann <office@holgerkoenemann.de>"
@@ -30,7 +30,7 @@
     "OwlCarousel2": "~2.0.0-beta.3"
   },
   "_source": "https://github.com/holger1411/understrap.git",
-  "_target": "~0.3.6",
+  "_target": "~0.3.7",
   "_originalSource": "understrap"
 }
 
