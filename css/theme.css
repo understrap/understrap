@@ -5868,13 +5868,13 @@ button.close {
   font-size: inherit; }
 
 .alignright {
-  font-size: inherit; }
+  float: right; }
 
 .alignleft {
-  font-size: inherit; }
+  float: left; }
 
 .aligncenter {
-  font-size: inherit; }
+  margin: 0px auto; }
 
 .entry-footer span {
   padding-right: 10px; }

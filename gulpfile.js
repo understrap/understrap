@@ -16,7 +16,6 @@ var merge2 = require('merge2');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 
-
 // Run: 
 // gulp sass
 // Compiles SCSS files in CSS
@@ -27,7 +26,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
-
 // Run: 
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
@@ -35,7 +33,6 @@ gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/theme.css', ['cssnano']);
 });
-
 
 // Run: 
 // gulp nanocss
@@ -53,7 +50,6 @@ gulp.task('cleancss', function() {
     .pipe(ignore('theme.css'))
     .pipe(rimraf());
 });
-
 
 // Run: 
 // gulp copy-assets. 
