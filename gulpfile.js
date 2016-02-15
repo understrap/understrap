@@ -8,7 +8,7 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
-var minifyCSS = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -33,20 +33,21 @@ gulp.task('sass', function () {
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/theme.css', ['minifycss']);
+    gulp.watch('./css/theme.css', ['cssnano']);
 });
 
 
 // Run: 
-// gulp minifycss
+// gulp nanocss
 // Minifies CSS files
-gulp.task('minifycss', ['cleancss'], function(){
+gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/*.css')
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
-    .pipe(minifyCSS({keepBreaks:false}))
+    .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(gulp.dest('./css/'));
 }); 
+
 gulp.task('cleancss', function() {
   return gulp.src('./css/*.min.css', { read: false }) // much faster 
     .pipe(ignore('theme.css'))
