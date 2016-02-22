@@ -76,6 +76,14 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'fontawesome/scss/*.scss')
         .pipe(gulp.dest('./sass/fontawesome'));
 
+// owl JS files
+    gulp.src(basePaths.bower + 'OwlCarousel2/dist/*.js')
+        .pipe(gulp.dest('./js'));
+
+// Copy all Owl2 SCSS files
+    gulp.src(basePaths.bower + 'OwlCarousel2/dist/assets/*.css')
+       .pipe(gulp.dest('./css'));
+
 // Copy jQuery
     gulp.src(basePaths.bower + 'jquery/dist/*.js')
         .pipe(gulp.dest('./js'));
