@@ -22,7 +22,7 @@
     add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
     function bootstrap3_comment_form( $args ) {
     $args['comment_field'] = '<div class="form-group comment-form-comment">
-    <label for="comment">' . _x( 'Comment', 'noun', 'understrap' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label>
+    <label for="comment">' . _x( 'Comment', 'noun', 'understrap' ) . '</label>
     <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
     </div>';
     return $args;
