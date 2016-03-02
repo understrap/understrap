@@ -13,3 +13,6 @@ REM Will convert readme.html (better formatting options for anyone who downloade
 
 Needs to be checked out and maybe manually corrected BEFORE uploading though:
 Try: http://dillinger.io/
+
+
+NOTE: I just see that it´s included in this release. I guess it was missing before?
