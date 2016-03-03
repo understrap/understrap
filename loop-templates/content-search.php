@@ -8,7 +8,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="content-search-item">
+<article id="post-<?php the_ID(); ?>" <?php post_class('content-search-item'); ?>>
 
 	<header class="entry-header">
 
