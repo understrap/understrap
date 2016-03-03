@@ -23,7 +23,7 @@ get_header(); ?>
            
 	       <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
                
-                <main id="main" class="site-main" role="main">
+                 <main id="main" class="site-main" role="main" tabindex="-1">
                 
                 <?php if ( have_posts() ) : ?>
 

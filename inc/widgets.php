@@ -17,7 +17,7 @@ function understrap_widgets_init() {
 	) );
 
     register_sidebar( array(
-        'name'          => __( 'Hero', 'understrap' ),
+        'name'          => __( 'Sliding Hero', 'understrap' ),
         'id'            => 'hero',
         'description'   => '',
         'before_widget' => '<div class="item">',

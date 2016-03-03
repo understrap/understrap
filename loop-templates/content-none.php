@@ -14,7 +14,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class($classes); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('content-no-results-page not-found'); ?>>
 
 	<header class="page-header">
 

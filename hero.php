@@ -8,7 +8,7 @@
 
             <?php dynamic_sidebar( 'hero' ); ?>
 
-        </div><!-- ,owk-carousel -->
+        </div><!-- .owl-carousel -->
 
     </div><!-- #wrapper-hero -->
 
