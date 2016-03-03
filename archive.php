@@ -13,9 +13,9 @@ get_header(); ?>
     
     <div  id="content" class="container">
         
-	   <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+	    <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
            
-            <main id="main" class="site-main" role="main" tabindex="-1">
+        <main id="main" class="site-main" role="main">
 
                   <?php if ( have_posts() ) : ?>
 
@@ -47,13 +47,13 @@ get_header(); ?>
 
                     <?php endif; ?>
 
-              </main><!-- #main -->
+        </main><!-- #main -->
            
 	    </div><!-- #primary -->
 
         <?php get_sidebar(); ?>
         
-     </div><!-- Container end -->
+    </div><!-- Container end -->
     
 </div><!-- Wrapper end -->
 
