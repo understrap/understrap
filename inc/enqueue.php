@@ -6,7 +6,7 @@
  */
 
 function understrap_scripts() {
-    wp_enqueue_style( 'understrap-theme', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), '0.3.7', false );
+    wp_enqueue_style( 'understrap-theme', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), '0.3.7');
 
     // Unregister the default jQuery
     wp_deregister_script('jquery');  
@@ -27,7 +27,7 @@ function understrap_scripts() {
     }
 
     if ( is_active_sidebar( 'hero' ) ) {
-        wp_enqueue_style( 'understrap-carousel-style', get_template_directory_uri() . '/css/owl.carousel.css', array(), '20024', false );
+        wp_enqueue_style( 'understrap-carousel-style', get_template_directory_uri() . '/css/owl.carousel.css', array(), '20024' );
         wp_enqueue_script( 'understrap-carousel-script', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20024', true );}
     }
 
