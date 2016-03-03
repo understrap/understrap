@@ -6,15 +6,10 @@
  *
  * @package understrap
  */
- 
- $classes = array(
-	'content-no-results-page',
-	'not-found',
-);
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('content-no-results-page not-found'); ?>>
+<article id="post-0" class="post no-results not-found">
 
 	<header class="page-header">
 
