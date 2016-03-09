@@ -9,6 +9,11 @@ Child Theme Project: https://github.com/holger1411/understrap-child
 
 Changelog
 =
+            - **0.3.8 Mar. 9th 2016 Pre-Release**
+                   - Adding footer widget area
+                   - Adjust Bootstrap markup for searchform and search widget
+
+
             - **0.3.7 Jan. 8th 2016**
                    - Cleanup for submitting to WordPress.org theme repository:
                         - Fixing sticky post problem

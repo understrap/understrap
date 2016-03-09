@@ -1,10 +1,19 @@
+Start talking: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/holger1411/understrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
 UnderStrap WordPress Theme Framework
 ===
 
 Website: http://understrap.com
 
+Child Theme Project: https://github.com/holger1411/understrap-child
+
 Changelog
 =
+            - **0.3.8 Mar. 9th 2016 Pre-Release**
+                   - Adding footer widget area
+                   - Adjust Bootstrap markup for searchform and search widget
+
+
             - **0.3.7 Jan. 8th 2016**
                    - Cleanup for submitting to WordPress.org theme repository:
                         - Fixing sticky post problem
@@ -13,7 +22,7 @@ Changelog
                         - adding readme.txt
                         - Fixing missing translation strings in comments template
 
-                        
+
             - **0.3.6 Jan. 4th 2016**
                    - Cleanup
                    - Updating dependencies
@@ -106,7 +115,7 @@ Installation
 
 How to use the build-in Widget Slider?
 =
-The frontpage slider is widget driven. Simply add more than one widget to widget position.
+The frontpage slider is widget driven. Simply add more than one widget to widget position "Hero".
 - Click on Appearance -> Widgets 
 - Add two or more widgets of any kind to widget area "Hero"
 - Thats it
