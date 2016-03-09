@@ -4,7 +4,7 @@
 }
 
 // Reset hero wrapper padding to 0
-#wrapper-hero, #wrapper-static-hero {
+#wrapper-hero {
   padding:0px!important;
 }
 
@@ -15,11 +15,11 @@ font-size:inherit;
 
 // Separate sticky wrapper from main content
 .wrapper#wrapper-sticky {
-	border-bottom:1px solid $gray-lighter;
+	border-bottom:1px solid $gray-light;
 }
 
 // Adding some contrast background color to footer full widget
-#wrapper-footer-full{
+#wrapper-footer-full, #wrapper-static-hero{
 	background-color: $gray-lighter;
 }
 
@@ -64,4 +64,9 @@ z-index: 1000;
 margin-bottom: -20px;
 position: relative;
 display: block;
+}
+
+// Reset Jumbotron default margin
+.jumbotron {
+	margin-bottom:0px;
 }

@@ -5849,16 +5849,16 @@ button.close {
 .wrapper {
   padding: 30px 0; }
 
-#wrapper-hero, #wrapper-static-hero {
+#wrapper-hero {
   padding: 0px !important; }
 
 .sticky, .gallery-caption, .bypostauthor {
   font-size: inherit; }
 
 .wrapper#wrapper-sticky {
-  border-bottom: 1px solid #eeeeee; }
+  border-bottom: 1px solid #777777; }
 
-#wrapper-footer-full {
+#wrapper-footer-full, #wrapper-static-hero {
   background-color: #eeeeee; }
 
 .wp-caption {
@@ -5890,6 +5890,9 @@ a.skip-link {
   margin-bottom: -20px;
   position: relative;
   display: block; }
+
+.jumbotron {
+  margin-bottom: 0px; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome

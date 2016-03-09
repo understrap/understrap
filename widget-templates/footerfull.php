@@ -4,19 +4,7 @@
 
     <div class="wrapper" id="wrapper-footer-full">
 
-        <div class="container">
-
-        	<div class="row">
-
-            	<div class="col-md-12">
-
-            		<?php dynamic_sidebar( 'footerfull' ); ?>
-
-        		</div><!-- .col-md-12 -->
-
-        	</div><!-- .row -->
-
-        </div><!-- .container -->
+		<?php dynamic_sidebar( 'footerfull' ); ?>
 
     </div><!-- #wrapper-footer-full -->
 

@@ -9,31 +9,35 @@ get_header(); ?>
 <div class="wrapper" id="single-wrapper">
     
     <div  id="content" class="container">
+
+        <div class="row">
         
-        <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
-            
-            <main id="main" class="site-main" role="main">
+            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+                
+                <main id="main" class="site-main" role="main">
 
-                <?php while ( have_posts() ) : the_post(); ?>
+                    <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'loop-templates/content', 'single' ); ?>
+                        <?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-                    <?php understrap_post_nav(); ?>
+                        <?php understrap_post_nav(); ?>
 
-                    <?php
-                    // If comments are open or we have at least one comment, load up the comment template
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-                    ?>
-                    
-                <?php endwhile; // end of the loop. ?>
+                        <?php
+                        // If comments are open or we have at least one comment, load up the comment template
+                        if ( comments_open() || get_comments_number() ) :
+                            comments_template();
+                        endif;
+                        ?>
+                        
+                    <?php endwhile; // end of the loop. ?>
 
-            </main><!-- #main -->
-            
-        </div><!-- #primary -->
+                </main><!-- #main -->
+                
+            </div><!-- #primary -->
         
         <?php get_template_part('sidebar'); ?>
+
+        <7div><!-- .row -->
         
     </div><!-- Container end -->
     
