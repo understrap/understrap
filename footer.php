@@ -8,6 +8,8 @@
  */
 ?>
 
+<?php get_template_part('widget-templates/footerfull'); ?>
+
 <div class="wrapper" id="wrapper-footer">
     
     <div class="container">

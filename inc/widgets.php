@@ -17,7 +17,7 @@ function understrap_widgets_init() {
 	) );
 
     register_sidebar( array(
-        'name'          => __( 'Slider Hero', 'understrap' ),
+        'name'          => __( 'Hero Slider', 'understrap' ),
         'id'            => 'hero',
         'description'   => '',
         'before_widget' => '<div class="item">',
@@ -27,8 +27,18 @@ function understrap_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name'          => __( 'Static Hero', 'understrap' ),
+        'name'          => __( 'Hero Static', 'understrap' ),
         'id'            => 'statichero',
+        'description'   => '',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+
+        register_sidebar( array(
+        'name'          => __( 'Footer Full', 'understrap' ),
+        'id'            => 'footerfull',
         'description'   => '',
         'before_widget' => '',
         'after_widget'  => '',

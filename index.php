@@ -13,9 +13,9 @@
 
 get_header(); ?>
 
-    <?php get_template_part('hero'); ?>
+    <?php get_template_part('widget-templates/hero'); ?>
 
-    <?php get_template_part('statichero'); ?>
+    <?php get_template_part('widget-templates/statichero'); ?>
 
     <div class="wrapper" id="wrapper-index">
         
