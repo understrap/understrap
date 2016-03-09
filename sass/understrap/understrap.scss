@@ -18,6 +18,11 @@ font-size:inherit;
 	border-bottom:1px solid $gray-lighter;
 }
 
+// Adding some contrast background color to footer full widget
+#wrapper-footer-full{
+	background-color: $gray-lighter;
+}
+
 // Necessary WP classes
 .wp-caption {
 	font-size: inherit;

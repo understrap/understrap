@@ -5858,6 +5858,9 @@ button.close {
 .wrapper#wrapper-sticky {
   border-bottom: 1px solid #eeeeee; }
 
+#wrapper-footer-full {
+  background-color: #eeeeee; }
+
 .wp-caption {
   font-size: inherit; }
 
