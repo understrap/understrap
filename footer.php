@@ -18,7 +18,7 @@
 
             <div class="col-md-12">
     
-                <footer id="colophon" class="container site-footer" role="contentinfo">
+                <footer id="colophon" class="site-footer" role="contentinfo">
 
                     <div class="site-info">
                         <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ), 'WordPress' ); ?></a>
