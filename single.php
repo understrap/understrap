@@ -37,7 +37,7 @@ get_header(); ?>
         
         <?php get_template_part('sidebar'); ?>
 
-        <7div><!-- .row -->
+        </div><!-- .row -->
         
     </div><!-- Container end -->
     
