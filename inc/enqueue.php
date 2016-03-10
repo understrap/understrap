@@ -6,7 +6,7 @@
  */
 
 function understrap_scripts() {
-    wp_enqueue_style( 'understrap-theme', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), '0.3.7');
+    wp_enqueue_style( 'understrap-theme', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), '0.3.8');
 
     // Unregister the default jQuery
     wp_deregister_script('jquery');  
