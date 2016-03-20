@@ -30,9 +30,11 @@ Import all needed 3rd party sass files plus your own style and variables
 
 // @import "../bower_components/_s/sass/style";
 @import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
-@import "bootstrap-sass/bootstrap";
+@import "../_dev/sass/bootstrap-sass/bootstrap";
 @import "understrap/understrap";
-@import "fontawesome/font-awesome";
+@import "../_dev/sass/fontawesome/font-awesome";
+@import "../_dev/css/owl.carousel.min.css";
+@import "../_dev/css/owl.theme.default.min.css";
 
 
 // Any additional imported files //

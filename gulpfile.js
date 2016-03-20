@@ -54,8 +54,14 @@ gulp.task('cleancss', function() {
 
 // Run: 
 // gulp scripts. 
-// concats and uglify all JS fiels into theme.min.js
-  gulp.src([basePaths.dev + 'js/jquery.min.js', basePaths.dev + 'js/bootstrap.min.js', basePaths.dev + 'js/owl.carousel.min.js', basePaths.dev + 'js/skip-link-focus-fix.js'])
+// Uglifies and concat all JS files into one
+gulp.task('scripts', function() {
+  gulp.src([
+    basePaths.dev + 'js/jquery.min.js', 
+    basePaths.dev + 'js/bootstrap.min.js', 
+    basePaths.dev + 'js/owl.carousel.min.js', 
+    basePaths.dev + 'js/skip-link-focus-fix.js'
+    ])
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'))
@@ -91,8 +97,12 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy all Owl2 SCSS files
+    gulp.src(basePaths.bower + 'OwlCarousel2/src/scss/*.scss')
+       .pipe(gulp.dest(basePaths.dev + '/sass/owl-carousel2'));
+
+// Copy all Owl2 CSS files
     gulp.src(basePaths.bower + 'OwlCarousel2/dist/assets/*.css')
-       .pipe(gulp.dest(basePaths.dev + '/css'));
+        .pipe(gulp.dest(basePaths.dev + '/css'));
 
 // Copy jQuery
     gulp.src(basePaths.bower + 'jquery/dist/*.js')
