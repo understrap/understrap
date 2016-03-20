@@ -95,9 +95,9 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
 - The theme.css file in /css/ subdirectory provides all styles. It is composed by five different SCSS sets and one variables file from /sass/theme.scss:
 
                   - 1 "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
-                  - 2 "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";  // <--------- All the Bootstrap stuff - Don´t edit this!
+                  - 2 "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // <--------- All the Bootstrap stuff - Don´t edit this!
                   - 3 "understrap/understrap"; // <--------- Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
-                  - 4 "../bower_components/fontawesome/scss/font-awesome"; // <--------- Font Awesome Icon styles
+                  - 4 "../src/fontawesome/scss/font-awesome"; // <--------- Font Awesome Icon styles
 
                   // Any additional imported files //
                   - 5 "theme/theme";  // <--------- Add your styles into this file
@@ -112,6 +112,21 @@ Installation
 - Login to your WordPress backend 
 - Go to Appearance -> Themes
 - Activate the UnderStrap theme
+
+Developing with NPM, Bower, Gulp and SASS
+=
+- Make sure you have installed Node.js and Bower on your computer globally
+- Then open your terminal and browse to the location of your UnderStrap copy
+- Run:
+$ npm install
+than:
+$ bower install
+and finally:
+$ gulp copy-assets
+
+To work and compile your SASS files on the fly start:
+$ gulp watch
+
 
 How to use the build-in Widget Slider?
 =

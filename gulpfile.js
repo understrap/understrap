@@ -1,7 +1,7 @@
 // Defining base pathes
 var basePaths = {
     bower: './bower_components/',
-    dev: './_dev/'
+    dev: './src/'
 };
 
 // Defining requirements
