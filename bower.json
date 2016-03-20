@@ -17,7 +17,7 @@
       "_s",
       "sass"
     ],
-  "license": "MIT",
+  "license": "GPL-2.0",
   "ignore": [
     "**/.*",
     "test",

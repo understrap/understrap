@@ -1,6 +1,7 @@
 // Defining base pathes
 var basePaths = {
-    bower: './bower_components/'
+    bower: './bower_components/',
+    dev: './_dev/'
 };
 
 // Defining requirements
@@ -52,17 +53,26 @@ gulp.task('cleancss', function() {
 });
 
 // Run: 
+// gulp scripts. 
+// concats and uglify all JS fiels into theme.min.js
+  gulp.src([basePaths.dev + 'js/jquery.min.js', basePaths.dev + 'js/bootstrap.min.js', basePaths.dev + 'js/owl.carousel.min.js', basePaths.dev + 'js/skip-link-focus-fix.js'])
+    .pipe(concat('theme.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./js/'))
+});
+
+// Run: 
 // gulp copy-assets. 
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
 // Copy all Bootstrap JS files 
 gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/**/*.js')
-       .pipe(gulp.dest('./js'));
+       .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy all Bootstrap SCSS files
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
-       .pipe(gulp.dest('./sass/bootstrap-sass'));
+       .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap-sass'));
 
 // Copy all Bootstrap Fonts
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
@@ -74,21 +84,21 @@ gulp.task('copy-assets', function() {
 
 // Copy all Font Awesome SCSS files
     gulp.src(basePaths.bower + 'fontawesome/scss/*.scss')
-        .pipe(gulp.dest('./sass/fontawesome'));
+        .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
 
 // owl JS files
     gulp.src(basePaths.bower + 'OwlCarousel2/dist/*.js')
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy all Owl2 SCSS files
     gulp.src(basePaths.bower + 'OwlCarousel2/dist/assets/*.css')
-       .pipe(gulp.dest('./css'));
+       .pipe(gulp.dest(basePaths.dev + '/css'));
 
 // Copy jQuery
     gulp.src(basePaths.bower + 'jquery/dist/*.js')
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // _s JS files
     gulp.src(basePaths.bower + '_s/js/*.js')
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest(basePaths.dev + '/js'));
 });
