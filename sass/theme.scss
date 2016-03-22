@@ -33,8 +33,12 @@ Import all needed 3rd party sass files plus your own style and variables
 @import "../src/sass/bootstrap-sass/bootstrap";
 @import "understrap/understrap";
 @import "../src/sass/fontawesome/font-awesome";
-@import "../src/css/owl.carousel.min.css";
-@import "../src/css/owl.theme.default.min.css";
+@import "../src/sass/owl-carousel2/owl.carousel";
+@import "../src/sass/owl-carousel2/owl.animate";
+@import "../src/sass/owl-carousel2/owl.autoheight";
+@import "../src/sass/owl-carousel2/owl.lazyload";
+@import "../src/sass/owl-carousel2/owl.video";
+@import "../src/sass/owl-carousel2/owl.theme.default";
 
 
 // Any additional imported files //

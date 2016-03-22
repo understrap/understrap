@@ -118,14 +118,14 @@ Developing with NPM, Bower, Gulp and SASS
 - Make sure you have installed Node.js and Bower on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
 - Run:
-$ npm install
+                  $ npm install
 than:
-$ bower install
+                  $ bower install
 and finally:
-$ gulp copy-assets
+                  $ gulp copy-assets
 
 To work and compile your SASS files on the fly start:
-$ gulp watch
+                  $ gulp watch
 
 
 How to use the build-in Widget Slider?

@@ -27,7 +27,7 @@
     "bootstrap-sass": "~3.3.6",
     "fontawesome": "~4.5.0",
     "_s": "https://github.com/Automattic/_s.git",
-    "OwlCarousel2": "~2.0.0-beta.3"
+    "OwlCarousel2": "https://github.com/smashingboxes/OwlCarousel2.git"
   },
   "_source": "https://github.com/holger1411/understrap.git",
   "_target": "~0.3.8",
