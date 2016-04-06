@@ -57,7 +57,7 @@ gulp.task('cleancss', function() {
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
   gulp.src([
-    basePaths.dev + 'js/bootstrap3/bootstrap.min.js',  //<--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
+    basePaths.dev + 'js/bootstrap4/bootstrap.min.js',  //<--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
     basePaths.dev + 'js/owl.carousel.min.js', 
     basePaths.dev + 'js/skip-link-focus-fix.js'
     ])
