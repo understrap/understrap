@@ -3,9 +3,9 @@ Start talking: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://git
 UnderStrap WordPress Theme Framework
 ===
 
-Website: http://understrap.com
+Website: [http://understrap.com](http://understrap.com)
 
-Child Theme Project: https://github.com/holger1411/understrap-child
+Child Theme Project: [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
 
 Changelog
 =
@@ -75,8 +75,8 @@ Basic Features
 - Combines the _s WordPress Starter Theme PHP/JS files and Bootstrap´s HTML/CSS/JS
 - Comes with Bootstrap (3.3.6) SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff
-- Font Awesome Icon Font integrated (V 4.5.0): http://fortawesome.github.io/Font-Awesome/
-- Comes with extra slider script - By owl.carousel (V 2.0.0-beta.2.4): http://www.owlcarousel.owlgraphic.com/
+- Font Awesome Icon Font integrated (V 4.5.0): [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
+- Comes with extra slider script - By owl.carousel (V 2.0.0-beta.2.4): [http://www.owlcarousel.owlgraphic.com/](http://www.owlcarousel.owlgraphic.com/)
 - Simple RTL file
 - Jetpack ready
 - WooCommerce support
@@ -113,20 +113,28 @@ Installation
 - Go to Appearance -> Themes
 - Activate the UnderStrap theme
 
-Developing with NPM, Bower, Gulp and SASS
+Developing with NPM, Bower, Gulp and SASS and [Browser Sync][1]
 =
-- Make sure you have installed Node.js and Bower on your computer globally
+### Installing dependencies
+- Make sure you have installed Node.js, Bower and Browser-Sync on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
-- Run:
-                  $ npm install
-than:
-                  $ bower install
-and finally:
-                  $ gulp copy-assets
+- Run: `$ npm install` then: `$ bower install` and finally: `$ gulp copy-assets`
 
+### Running
 To work and compile your SASS files on the fly start:
-                  $ gulp watch
 
+- `$ gulp watch`
+
+Or, to run with Browser-Sync:
+
+- First change the browser-sync options to reflect your environment in the file `gulpfile.js` in the beginning of the file:
+```javascript
+var browserSyncOptions = {
+    proxy: "localhost/theme_test/", // <----- CHANGE HERE
+    notify: false
+};
+```
+- then run: `$ gulp watch-bs`
 
 How to use the build-in Widget Slider?
 =
@@ -134,3 +142,5 @@ The frontpage slider is widget driven. Simply add more than one widget to widget
 - Click on Appearance -> Widgets 
 - Add two or more widgets of any kind to widget area "Hero"
 - Thats it
+
+[1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
