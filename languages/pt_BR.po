@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"PO-Revision-Date: Thu Apr 14 2016 20:51:18 GMT-0300 (E. South America "
+"PO-Revision-Date: Thu Apr 14 2016 20:58:56 GMT-0300 (E. South America "
 "Standard Time)\n"
 "Last-Translator: Diego Versiani <diegoversiani@gmail.com>\n"
 "Language-Team: \n"
@@ -44,48 +44,68 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 "X-Loco-Target-Locale: pt_BR"
 
-#: ../footer.php:22
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org/"
+#: ../inc/widgets.php:20
+msgid "Hero Slider"
+msgstr "Hero Slides"
 
-#: ../footer.php:22
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Orgulhosamente desenvolvido com %s"
+#: ../inc/widgets.php:30
+msgid "Hero Static"
+msgstr "Hero Est&aacute;tico"
 
-#: ../footer.php:24
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Tema: %1$s por %2$s."
+#: ../inc/widgets.php:40
+msgid "Footer Full"
+msgstr "Rodap&eacute;"
 
-#: ../404.php:30
-msgid "Most Used Categories"
-msgstr "Categorias Mais Usadas"
+#: ../searchform.php:9 ../searchform.php:13
+msgid "Search"
+msgstr "Pesquisar"
 
-#. translators: %1$s: smiley
-#: ../404.php:47
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Tente procurando nos artigos mensais. %1$s"
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Pesquisando &hellip;"
 
-#: ../search.php:20
+#: ../search.php:23
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Resultado da pesquisa por: %s"
 
-#: ../404.php:18
+#: ../footer.php:24
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: ../footer.php:24
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Orgulhosamente desenvolvido com %s"
+
+#: ../footer.php:26
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
+
+#: ../404.php:22
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 "Ops! A p&aacute;gina que voc&ecirc; procura n&atilde;o p&ocirc;de ser "
 "encontada."
 
-#: ../404.php:22
+#: ../404.php:27
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 "Parece que a p&aacute;gina que voc&ecirc; procura n&atilde;o existe ou foi "
 "removida.<br><br> Tente os links abaixo ou use a pesquisa."
+
+#: ../404.php:37
+msgid "Most Used Categories"
+msgstr "Categorias Mais Usadas"
+
+#. translators: %1$s: smiley
+#: ../404.php:57
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente procurando nos artigos mensais. %1$s"
 
 #: ../comments.php:28
 #, php-format
@@ -95,19 +115,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Um coment&aacute;rio"
 msgstr[1] "%1$s coment&aacute;rios"
 
-#: ../comments.php:35 ../comments.php:52
+#: ../comments.php:35 ../comments.php:56
 msgid "Comment navigation"
 msgstr "Navegação de comentários"
 
-#: ../comments.php:36 ../comments.php:53
+#: ../comments.php:37 ../comments.php:58
 msgid "&larr; Older Comments"
 msgstr "&larr; Mais Antigos"
 
-#: ../comments.php:37 ../comments.php:54
+#: ../comments.php:40 ../comments.php:61
 msgid "Newer Comments &rarr;"
 msgstr "Mais Novos"
 
-#: ../comments.php:64
+#: ../comments.php:72
 msgid "Comments are closed."
 msgstr "Os comentários estão fechados."
 
@@ -143,7 +163,7 @@ msgstr "Seu Coment&aacute;rio"
 msgid "Send comment."
 msgstr "Comentar"
 
-#: ../header.php:27
+#: ../header.php:31
 msgid "Skip to content"
 msgstr "Ir para o conte&uacute;do"
 
@@ -367,14 +387,6 @@ msgstr "Leia mais..."
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
-#: ../inc/widgets.php:20
-msgid "Hero"
-msgstr "Slides"
-
-#: ../inc/widgets.php:30
-msgid "Static Hero"
-msgstr "Slide Est&aacute;tico"
-
 #: ../inc/custom-comments.php:14
 msgid "Email"
 msgstr "E-mail"
@@ -389,16 +401,16 @@ msgstr "Comentário"
 msgid "Pages:"
 msgstr "P&aacute;ginas"
 
-#: ../loop-templates/content-none.php:15
+#: ../loop-templates/content-none.php:16
 msgid "Nothing Found"
 msgstr "Nada encontrado."
 
-#: ../loop-templates/content-none.php:23
+#: ../loop-templates/content-none.php:24
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece aqui</a>."
 
-#: ../loop-templates/content-none.php:27
+#: ../loop-templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -406,7 +418,7 @@ msgstr ""
 "Desculpe, mas nada foi encontrado para sua pesquisa. Por favor, tente "
 "novamente com outras palavras."
 
-#: ../loop-templates/content-none.php:32
+#: ../loop-templates/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."

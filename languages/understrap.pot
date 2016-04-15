@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"POT-Revision-Date: Thu Apr 14 2016 20:34:10 GMT-0300 (E. South America "
+"POT-Revision-Date: Thu Apr 14 2016 20:59:27 GMT-0300 (E. South America "
 "Standard Time)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -46,43 +46,51 @@ msgstr ""
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc"
 
-#: ../search.php:20
+#: ../search.php:23
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: ../footer.php:22
+#: ../footer.php:24
 msgid "http://wordpress.org/"
-msgstr ""
-
-#: ../footer.php:22
-#, php-format
-msgid "Proudly powered by %s"
 msgstr ""
 
 #: ../footer.php:24
 #, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: ../footer.php:26
+#, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: ../404.php:18
+#: ../404.php:22
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: ../404.php:22
+#: ../404.php:27
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: ../404.php:30
+#: ../404.php:37
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: ../404.php:47
+#: ../404.php:57
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: ../searchform.php:9 ../searchform.php:13
+msgid "Search"
+msgstr ""
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
 msgstr ""
 
 #: ../comments.php:28
@@ -93,19 +101,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../comments.php:35 ../comments.php:52
+#: ../comments.php:35 ../comments.php:56
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:36 ../comments.php:53
+#: ../comments.php:37 ../comments.php:58
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: ../comments.php:37 ../comments.php:54
+#: ../comments.php:40 ../comments.php:61
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: ../comments.php:64
+#: ../comments.php:72
 msgid "Comments are closed."
 msgstr ""
 
@@ -141,7 +149,7 @@ msgstr ""
 msgid "Send comment."
 msgstr ""
 
-#: ../header.php:27
+#: ../header.php:31
 msgid "Skip to content"
 msgstr ""
 
@@ -366,11 +374,15 @@ msgid "Sidebar"
 msgstr ""
 
 #: ../inc/widgets.php:20
-msgid "Hero"
+msgid "Hero Slider"
 msgstr ""
 
 #: ../inc/widgets.php:30
-msgid "Static Hero"
+msgid "Hero Static"
+msgstr ""
+
+#: ../inc/widgets.php:40
+msgid "Footer Full"
 msgstr ""
 
 #: ../inc/custom-comments.php:14
@@ -387,22 +399,22 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: ../loop-templates/content-none.php:15
+#: ../loop-templates/content-none.php:16
 msgid "Nothing Found"
 msgstr ""
 
-#: ../loop-templates/content-none.php:23
+#: ../loop-templates/content-none.php:24
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: ../loop-templates/content-none.php:27
+#: ../loop-templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: ../loop-templates/content-none.php:32
+#: ../loop-templates/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
