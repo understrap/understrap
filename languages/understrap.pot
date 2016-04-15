@@ -5,8 +5,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"POT-Revision-Date: Thu Apr 14 2016 20:59:27 GMT-0300 (E. South America "
-"Standard Time)\n"
+"POT-Revision-Date: Fri Apr 15 2016 08:16:08 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -46,9 +45,62 @@ msgstr ""
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc"
 
-#: ../search.php:23
+#: ../content-single.php:29 ../content.php:33 ../content-page.php:25 ../loop-
+#: templates/content-single.php:29 ../loop-templates/content.php:33 ../loop-
+#: templates/content-page.php:25
+msgid "Pages:"
+msgstr ""
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr ""
+
+#: ../content-none.php:15 ../loop-templates/content-none.php:16
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:23 ../loop-templates/content-none.php:24
 #, php-format
-msgid "Search Results for: %s"
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:27 ../loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:32 ../loop-templates/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../comments.php:28 ../releases/1458664806/comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:35 ../comments.php:56 ../releases/1458664806/comments.php:35 ..
+#: /releases/1458664806/comments.php:56
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:37 ../comments.php:58 ../releases/1458664806/comments.php:37 ..
+#: /releases/1458664806/comments.php:58
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:40 ../comments.php:61 ../releases/1458664806/comments.php:40 ..
+#: /releases/1458664806/comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:72 ../releases/1458664806/comments.php:72
+msgid "Comments are closed."
 msgstr ""
 
 #: ../footer.php:24
@@ -65,56 +117,18 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: ../404.php:22
-msgid "Oops! That page can&rsquo;t be found."
+#: ../header.php:31
+msgid "Skip to content"
 msgstr ""
 
-#: ../404.php:27
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: ../404.php:37
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: ../404.php:57
+#: ../search.php:23
 #, php-format
-msgid "Try looking in the monthly archives. %1$s"
+msgid "Search Results for: %s"
 msgstr ""
 
-#: ../searchform.php:9 ../searchform.php:13
-msgid "Search"
-msgstr ""
-
-#: ../searchform.php:11
-msgid "Search &hellip;"
-msgstr ""
-
-#: ../comments.php:28
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../comments.php:35 ../comments.php:56
-msgid "Comment navigation"
-msgstr ""
-
-#: ../comments.php:37 ../comments.php:58
-msgid "&larr; Older Comments"
-msgstr ""
-
-#: ../comments.php:40 ../comments.php:61
-msgid "Newer Comments &rarr;"
-msgstr ""
-
-#: ../comments.php:72
-msgid "Comments are closed."
+#: ../content-page.php:34 ../inc/template-tags.php:122 ../loop-templates/content-
+#: page.php:34
+msgid "Edit"
 msgstr ""
 
 #: ../comment-form.php:5
@@ -149,12 +163,77 @@ msgstr ""
 msgid "Send comment."
 msgstr ""
 
-#: ../header.php:31
-msgid "Skip to content"
+#: ../404.php:22
+msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#. Name of the template
-msgid "Full Width Page"
+#: ../404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: ../404.php:37
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: ../404.php:57
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: ../searchform.php:9 ../searchform.php:13
+msgid "Search"
+msgstr ""
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../inc/widgets.php:10
+msgid "Sidebar"
+msgstr ""
+
+#: ../inc/widgets.php:20
+msgid "Hero Slider"
+msgstr ""
+
+#: ../inc/widgets.php:30
+msgid "Hero Static"
+msgstr ""
+
+#: ../inc/widgets.php:40
+msgid "Footer Full"
+msgstr ""
+
+#: ../inc/customizer.php:24
+msgid "Slider Settings"
+msgstr ""
+
+#: ../inc/customizer.php:33
+msgid "Number of slides displaying at once"
+msgstr ""
+
+#: ../inc/customizer.php:45
+msgid "Slider Time (in ms)"
+msgstr ""
+
+#: ../inc/customizer.php:57
+msgid "Loop Slider Content"
+msgstr ""
+
+#: ../inc/customizer.php:68
+msgid "Add scripts"
+msgstr ""
+
+#: ../inc/customizer.php:77
+msgid "Add custom JS code here"
+msgstr ""
+
+#: ../inc/extras.php:60
+#, php-format
+msgid "Page %s"
 msgstr ""
 
 #: ../inc/template-tags.php:21
@@ -221,10 +300,6 @@ msgstr ""
 #: ../inc/template-tags.php:118
 #, php-format
 msgid "% Comments"
-msgstr ""
-
-#: ../inc/template-tags.php:122 ../loop-templates/content-page.php:34
-msgid "Edit"
 msgstr ""
 
 #: ../inc/template-tags.php:139
@@ -332,57 +407,12 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: ../inc/customizer.php:24
-msgid "Slider Settings"
-msgstr ""
-
-#: ../inc/customizer.php:33
-msgid "Number of slides displaying at once"
-msgstr ""
-
-#: ../inc/customizer.php:45
-msgid "Slider Time (in ms)"
-msgstr ""
-
-#: ../inc/customizer.php:57
-msgid "Loop Slider Content"
-msgstr ""
-
-#: ../inc/customizer.php:68
-msgid "Add scripts"
-msgstr ""
-
-#: ../inc/customizer.php:77
-msgid "Add custom JS code here"
-msgstr ""
-
-#: ../inc/extras.php:60
-#, php-format
-msgid "Page %s"
-msgstr ""
-
 #: ../inc/setup.php:48
 msgid "Primary Menu"
 msgstr ""
 
 #: ../inc/setup.php:98
 msgid "Read More..."
-msgstr ""
-
-#: ../inc/widgets.php:10
-msgid "Sidebar"
-msgstr ""
-
-#: ../inc/widgets.php:20
-msgid "Hero Slider"
-msgstr ""
-
-#: ../inc/widgets.php:30
-msgid "Hero Static"
-msgstr ""
-
-#: ../inc/widgets.php:40
-msgid "Footer Full"
 msgstr ""
 
 #: ../inc/custom-comments.php:14
@@ -392,32 +422,6 @@ msgstr ""
 #: ../inc/custom-comments.php:25
 msgctxt "noun"
 msgid "Comment"
-msgstr ""
-
-#: ../loop-templates/content.php:33 ../loop-templates/content-single.php:29 ..
-#: loop-templates/content-page.php:25
-msgid "Pages:"
-msgstr ""
-
-#: ../loop-templates/content-none.php:16
-msgid "Nothing Found"
-msgstr ""
-
-#: ../loop-templates/content-none.php:24
-#, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: ../loop-templates/content-none.php:28
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: ../loop-templates/content-none.php:33
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
 msgstr ""
 
 #. Name of the theme
