@@ -3,22 +3,23 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"PO-Revision-Date: Fri Apr 15 2016 08:23:16 GMT+0200 (CEST)\n"
+"PO-Revision-Date: 2016-04-15 17:28+0200\n"
 "Last-Translator: holger <office@holgerkoenemann.de>\n"
 "Language-Team: \n"
-"Language: German\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco - https://localise.biz/\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;"
+"_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;"
+"_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;"
+"esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;"
+"comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
+"X-Loco-Target-Locale: de_DE\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
 "X-Poedit-SearchPath-2: index.php\n"
@@ -41,7 +42,6 @@ msgstr ""
 "X-Poedit-SearchPath-19: functions.php\n"
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc\n"
-"X-Loco-Target-Locale: de_DE"
 
 #. Name of the template
 msgid "Full Width Page"
@@ -174,12 +174,12 @@ msgstr "http://understrap.com"
 msgid ""
 "Combination of Automattic´s _s theme and Bootstrap SASS. Made as a solid "
 "starting point for your next theme project and WordPress website. Including "
-"Font Awesome support, build-in widget slider and much more you need for "
-"basic websites."
+"Font Awesome support, build-in widget slider and much more you need for basic "
+"websites."
 msgstr ""
 "Kombination aus Automatics _s WordPress Starter Theme und dem CSS Grid "
-"Framework Bootstrap. Entwickelt als solider Ausgangspunkt für eigene "
-"WordPress Themes. Beinhaltet Font Awesome- , WooCommerce- & Jetpack Support. "
+"Framework Bootstrap. Entwickelt als solider Ausgangspunkt für eigene WordPress "
+"Themes. Beinhaltet Font Awesome- , WooCommerce- & Jetpack Support. "
 
 #. Author of the theme
 msgid "Holger Koenemann"
@@ -190,7 +190,7 @@ msgid "http://www.holgerkoenemann.de"
 msgstr "http://www.holgerkoenemann.de"
 
 #: ../content-single.php:29 ../content.php:33 ../content-page.php:25 ../loop-
-#: templates/content-single.php:29 ../loop-templates/content.php:33 ../loop-
+#: templates/content-single.php:29 ../loop-templates/content.php:33
 #: templates/content-page.php:25
 msgid "Pages:"
 msgstr "Seiten:"
@@ -203,8 +203,8 @@ msgstr "Nichts gefunden"
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Bereit deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Fang hier "
-"an</a>."
+"Bereit deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Fang hier an</"
+"a>."
 
 #: ../content-none.php:27 ../loop-templates/content-none.php:28
 msgid ""
@@ -216,8 +216,8 @@ msgstr ""
 
 #: ../content-none.php:32 ../loop-templates/content-none.php:33
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr ""
 "Es scheint das wir nicht herausfinden konnten wonach du gesucht hast. Suchen "
 "könnte helfen!"
@@ -248,7 +248,7 @@ msgstr "http://wordpress.org/"
 #: ../footer.php:24
 #, php-format
 msgid "Proudly powered by %s"
-msgstr "Proudly powered by %s"
+msgstr "Stolz präsentiert von %s"
 
 #: ../footer.php:26
 #, php-format
@@ -267,7 +267,7 @@ msgstr "Suchergebnis für: %s"
 #: ../content-page.php:34 ../inc/template-tags.php:122 ../loop-templates/content-
 #: page.php:34
 msgid "Edit"
-msgstr "Editieren"
+msgstr "Bearbeiten"
 
 #: ../comment-form.php:5
 msgid "Write Comment."
@@ -310,8 +310,8 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Es scheint das hier nichts gefunden wurde. Versuch doch einen der Links "
-"unten oder die Suchfunktion."
+"Es scheint, dass hier nichts gefunden wurde. Versuch doch einen der Links unten "
+"oder die Suchfunktion."
 
 #: ../404.php:37
 msgid "Most Used Categories"
@@ -328,7 +328,7 @@ msgstr "Sidebar"
 
 #: ../inc/customizer.php:24
 msgid "Slider Settings"
-msgstr "Silber Einstellungen"
+msgstr "Slider Einstellungen"
 
 #: ../inc/customizer.php:33
 msgid "Number of slides displaying at once"
@@ -378,7 +378,7 @@ msgstr ", "
 #: ../inc/template-tags.php:106
 #, php-format
 msgid "Posted in %1$s"
-msgstr "Geposted in %1$s"
+msgstr "Veröffentlicht in %1$s"
 
 #: ../inc/template-tags.php:112
 #, php-format
