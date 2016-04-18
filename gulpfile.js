@@ -4,6 +4,20 @@ var basePaths = {
     dev: './src/'
 };
 
+// browser-sync watched files
+// automatically reloads the page when files changed
+var browserSyncWatchFiles = [
+    './css/*.min.css',
+    './js/*.min.js',
+    './*.php'
+];
+// browser-sync options
+// see: https://www.browsersync.io/docs/options/
+var browserSyncOptions = {
+    proxy: "localhost/theme_test/",
+    notify: false
+};
+
 // Defining requirements
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
@@ -16,6 +30,7 @@ var uglify = require('gulp-uglify');
 var merge2 = require('merge2');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
+var browserSync = require('browser-sync').create();
 
 // Run: 
 // gulp sass
@@ -43,7 +58,8 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./css/'))
+    .pipe(browserSync.stream());
 }); 
 
 gulp.task('cleancss', function() {
@@ -51,6 +67,18 @@ gulp.task('cleancss', function() {
     .pipe(ignore('theme.css'))
     .pipe(rimraf());
 });
+
+// Run: 
+// gulp browser-sync
+// Starts browser-sync task for starting the server.
+gulp.task('browser-sync', function() {
+    browserSync.init(browserSyncWatchFiles, browserSyncOptions);
+});
+
+// Run: 
+// gulp watch-bs
+// Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
+gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 
 // Run: 
 // gulp scripts. 
@@ -63,7 +91,7 @@ gulp.task('scripts', function() {
     ])
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'))
+    .pipe(gulp.dest('./js/'));
 });
 
 // Run: 
