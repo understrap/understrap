@@ -1,45 +1,11 @@
-/*****************************************************************
-Import all needed 3rd party sass files plus your own style and variables
-
-0. ../bower_components/_s/sass/style  // Adding underscores default styles. Don´t needed if you use Bootstrap for styling 
---------------------------------------
-1. theme/theme_variables.scss // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
---------------------------------------
-2.../bower_components/bootstrap-sass/assets/stylesheets/bootstrap // adding bootstrap from bower components folder. Make sure you run bower install before! <- Dont edit this files!
---------------------------------------
-3. understrap/understrap.scss // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
---------------------------------------
-4. ../bower_components/fontawesome/scss/font-awesome <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
---------------------------------------
-
-
-
-          *
-          *
-          *
-       *******
-        *****
-         ***
-          *
-
-
-
-// Any additional imported files //
-6. theme/theme.scss"; // <-- ADD YOUR STYLES HERE
-***************************************************************** */
-
-// @import "../bower_components/_s/sass/style";
 @import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
-@import "../src/sass/bootstrap3/bootstrap";// <--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
-@import "understrap/understrap";
-@import "../src/sass/fontawesome/font-awesome";
-@import "../src/sass/owl-carousel2/owl.carousel";
-@import "../src/sass/owl-carousel2/owl.animate";
-@import "../src/sass/owl-carousel2/owl.autoheight";
-@import "../src/sass/owl-carousel2/owl.lazyload";
-@import "../src/sass/owl-carousel2/owl.video";
-@import "../src/sass/owl-carousel2/owl.theme.default";
+@import "assets/bootstrap3";// <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
+@import "understrap/understrap";// <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+
+//Optional files - If you don´t use the corresponding scripts/fonts comment em out
+@import "assets/font-awesome"; // <------- Font Awesome Icon font
+@import "assets/owl-carousel2"; // <------- Owl Carousel2 slider styles
 
 
 // Any additional imported files //
-@import "theme/theme";  // <--------- Add your styles into this file
+@import "theme/theme";  // <--------- Thats where you can add your own design. Thats your part!
