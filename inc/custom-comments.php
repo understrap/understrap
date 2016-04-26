@@ -25,6 +25,6 @@
     <label for="comment">' . _x( 'Comment', 'noun', 'understrap' ) . ( ' <span class="required">*</span>' ) . '</label>
     <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
     </div>';
-    $args['class_submit'] = 'btn btn-default'; // since WP 4.1
+    $args['class_submit'] = 'btn btn-secondary'; // since WP 4.1
     return $args;
     }
