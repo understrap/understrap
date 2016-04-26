@@ -1,22 +1,25 @@
-# Copyright (C) 2014 Automattic
-# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2015-10-14 12:23+0200\n"
-"PO-Revision-Date: 2015-10-14 12:26+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2015-09-01 21:23+0200\n"
+"PO-Revision-Date: 2016-04-15 17:28+0200\n"
+"Last-Translator: holger <office@holgerkoenemann.de>\n"
 "Language-Team: \n"
 "Language: de\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_x;_nx;_e\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;"
+"_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;"
+"_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;"
+"esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;"
+"comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Loco-Target-Locale: de_DE\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
 "X-Poedit-SearchPath-2: index.php\n"
@@ -40,93 +43,170 @@ msgstr ""
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc\n"
 
-#: 404.php:18
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ooooops! Die Seite wurde nicht gefunden."
+#. Name of the template
+msgid "Full Width Page"
+msgstr "Volle Breite"
 
-#: 404.php:22
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Es scheint das hier nichts gefunden wurde. Versuch doch einen der Links "
-"unten oder die Suchfunktion."
-
-#: 404.php:30
-msgid "Most Used Categories"
-msgstr "Am häufigsten genutzte Kategorie"
-
-#: 404.php:47
+#: ../comments.php:28 ../releases/1458664806/comments.php:28
 #, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Versuch im monatlichen Archiv zu schauen. %1$s"
-
-#: comment-form.php:5
-msgid "Write Comment."
-msgstr "Kommentar schreiben"
-
-#: comment-form.php:5
-msgid "*Mandatory"
-msgstr "*Pflichtfeld"
-
-#: comment-form.php:13 inc/custom-comments.php:12
-msgid "Name"
-msgstr "Name"
-
-#: comment-form.php:19
-msgid "E-Mail"
-msgstr "E-Mail"
-
-#: comment-form.php:19
-msgid "Not public."
-msgstr "Nicht öffentlich"
-
-#: comment-form.php:24 inc/custom-comments.php:16
-msgid "Website"
-msgstr "Webseite"
-
-#: comment-form.php:29
-msgid "Your Comment"
-msgstr "Dein Kommentar"
-
-#: comment-form.php:36
-msgid "Send comment."
-msgstr "Kommentar senden"
-
-#: comments.php:28
-#, php-format
+msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgstr "Ein Kommentar für  &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Ein Kommentar zu &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Kommentare zu &ldquo;%2$s&rdquo;"
 
-#: comments.php:35 comments.php:52
-msgid "Comment navigation"
-msgstr "Kommentar Navigation"
+#: ../searchform.php:9 ../searchform.php:13
+msgid "Search"
+msgstr "Suche"
 
-#: comments.php:36 comments.php:53
-msgid "&larr; Older Comments"
-msgstr "&larr; Ältere Kommentare"
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Suche &hellip;"
 
-#: comments.php:37 comments.php:54
-msgid "Newer Comments &rarr;"
-msgstr "Neuere Kommentare &rarr;"
+#: ../inc/widgets.php:20
+msgid "Hero Slider"
+msgstr "Hero (Slider)"
 
-#: comments.php:64
-msgid "Comments are closed."
-msgstr "Kommentare sind geschlossen"
+#: ../inc/widgets.php:30
+msgid "Hero Static"
+msgstr "Hero (statisch)"
 
-#: content-none.php:13
+#: ../inc/widgets.php:40
+msgid "Footer Full"
+msgstr "Footer (volle Breite)"
+
+#: ../inc/template-tags.php:55
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+
+#: ../inc/template-tags.php:56
+msgctxt "Next post link"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:82
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Veröffentlicht am %s"
+
+#: ../inc/template-tags.php:87
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "von %s"
+
+#: ../inc/template-tags.php:145
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: ../inc/template-tags.php:147
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: ../inc/template-tags.php:149
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "F j, Y"
+
+#: ../inc/template-tags.php:151
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "Nebensächlich"
+
+#: ../inc/template-tags.php:153
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "Gallerien"
+
+#: ../inc/template-tags.php:155
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "Bilder"
+
+#: ../inc/template-tags.php:157
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "Videos"
+
+#: ../inc/template-tags.php:159
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "Zitate"
+
+#: ../inc/template-tags.php:161
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "Link"
+
+#: ../inc/template-tags.php:163
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "Status"
+
+#: ../inc/template-tags.php:165
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "Audio"
+
+#: ../inc/template-tags.php:167
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "Chats"
+
+#: ../inc/custom-comments.php:25
+msgctxt "noun"
+msgid "Comment"
+msgstr "Kommentar"
+
+#. Name of the theme
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Theme URI of the theme
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap SASS. Made as a solid "
+"starting point for your next theme project and WordPress website. Including "
+"Font Awesome support, build-in widget slider and much more you need for basic "
+"websites."
+msgstr ""
+"Kombination aus Automatics _s WordPress Starter Theme und dem CSS Grid "
+"Framework Bootstrap. Entwickelt als solider Ausgangspunkt für eigene WordPress "
+"Themes. Beinhaltet Font Awesome- , WooCommerce- & Jetpack Support. "
+
+#. Author of the theme
+msgid "Holger Koenemann"
+msgstr "Holger Koenemann"
+
+#. Author URI of the theme
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"
+
+#: ../content-single.php:29 ../content.php:33 ../content-page.php:25 ../loop-
+#: templates/content-single.php:29 ../loop-templates/content.php:33
+#: templates/content-page.php:25
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: ../content-none.php:15 ../loop-templates/content-none.php:16
 msgid "Nothing Found"
 msgstr "Nichts gefunden"
 
-#: content-none.php:19
+#: ../content-none.php:23 ../loop-templates/content-none.php:24
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Bereit deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Fang hier "
-"an</a>."
+"Bereit deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Fang hier an</"
+"a>."
 
-#: content-none.php:23
+#: ../content-none.php:27 ../loop-templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -134,340 +214,242 @@ msgstr ""
 "Entschuldigung, leider wurde nichts zu deinem Suchbegriff gefunden. Versuch "
 "etwas anderes aus!"
 
-#: content-none.php:28
+#: ../content-none.php:32 ../loop-templates/content-none.php:33
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr ""
 "Es scheint das wir nicht herausfinden konnten wonach du gesucht hast. Suchen "
 "könnte helfen!"
 
-#: content-page.php:20 content-single.php:22 content.php:31
-msgid "Pages:"
-msgstr "Seiten:"
+#: ../comments.php:35 ../comments.php:56 ../releases/1458664806/comments.php:35 ..
+#: releases/1458664806/comments.php:56
+msgid "Comment navigation"
+msgstr "Kommentar Navigation"
 
-#: content-page.php:27 inc/template-tags.php:122
-msgid "Edit"
-msgstr "Editieren"
+#: ../comments.php:37 ../comments.php:58 ../releases/1458664806/comments.php:37 ..
+#: releases/1458664806/comments.php:58
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
 
-#: footer.php:22
+#: ../comments.php:40 ../comments.php:61 ../releases/1458664806/comments.php:40 ..
+#: releases/1458664806/comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: ../comments.php:72 ../releases/1458664806/comments.php:72
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen"
+
+#: ../footer.php:24
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:22
+#: ../footer.php:24
 #, php-format
 msgid "Proudly powered by %s"
-msgstr "Proudly powered by %s"
+msgstr "Stolz präsentiert von %s"
 
-#: footer.php:24
+#: ../footer.php:26
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr "Theme: %1$s von %2$s."
 
-#: header.php:27
+#: ../header.php:31
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: inc/custom-comments.php:14
-msgid "Email"
-msgstr "E-Mail"
-
-#: inc/custom-comments.php:25
-msgid "Comment"
-msgstr "Kommentar"
-
-#: inc/customizer.php:24
-msgid "Slider Settings"
-msgstr "Silber Einstellungen"
-
-#: inc/customizer.php:33
-msgid "Number of slides displaying at once"
-msgstr "Anzahl der Slides die auf einmal angezeigt werden"
-
-#: inc/customizer.php:45
-msgid "Slider Time (in ms)"
-msgstr "Slider Zeit (in ms)"
-
-#: inc/customizer.php:57
-msgid "Loop Slider Content"
-msgstr "Slider Inhalt wiederholen?"
-
-#: inc/customizer.php:68
-msgid "Add scripts"
-msgstr "Script Code hinzufügen"
-
-#: inc/customizer.php:77
-msgid "Add custom JS code here"
-msgstr "Hier eigenen JavaScript Code einfügen"
-
-#: inc/extras.php:60
-#, php-format
-msgid "Page %s"
-msgstr "Seite %s"
-
-#: inc/setup.php:48
-msgid "Primary Menu"
-msgstr "Hauptmenü"
-
-#: inc/setup.php:104
-msgid "Read More..."
-msgstr "Weiterlesen..."
-
-#: inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr "Beitrag´s Navigation"
-
-#: inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Beiträge"
-
-#: inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Neuere Beiträge <span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:52
-msgid "Post navigation"
-msgstr "Beitrag´s Navigation"
-
-#: inc/template-tags.php:55
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-
-#: inc/template-tags.php:56
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:82
-#, php-format
-msgid "Posted on %s"
-msgstr "Geposted am %1$s"
-
-#: inc/template-tags.php:87
-#, php-format
-msgid "by %s"
-msgstr "von %s"
-
-#: inc/template-tags.php:104 inc/template-tags.php:110
-msgid ", "
-msgstr ", "
-
-#: inc/template-tags.php:106
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Geposted in %1$s"
-
-#: inc/template-tags.php:112
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Getagt mit: %1$s"
-
-#: inc/template-tags.php:118
-msgid "Leave a comment"
-msgstr "Hinterlasse ein Kommentar"
-
-#: inc/template-tags.php:118
-msgid "1 Comment"
-msgstr "1 Kommentar"
-
-#: inc/template-tags.php:118
-msgid "% Comments"
-msgstr "% Kommentare"
-
-#: inc/template-tags.php:139
-#, php-format
-msgid "Category: %s"
-msgstr "Kategorie: %s"
-
-#: inc/template-tags.php:141
-#, php-format
-msgid "Tag: %s"
-msgstr "Tag: %s"
-
-#: inc/template-tags.php:143
-#, php-format
-msgid "Author: %s"
-msgstr "Autor: %s"
-
-#: inc/template-tags.php:145
-#, php-format
-msgid "Year: %s"
-msgstr "Jahr: %s"
-
-#: inc/template-tags.php:145
-msgid "Y"
-msgstr "Y"
-
-#: inc/template-tags.php:147
-#, php-format
-msgid "Month: %s"
-msgstr "Monat: %s"
-
-#: inc/template-tags.php:147
-msgid "F Y"
-msgstr "F Y"
-
-#: inc/template-tags.php:149
-#, php-format
-msgid "Day: %s"
-msgstr "Tag: %s"
-
-#: inc/template-tags.php:149
-msgid "F j, Y"
-msgstr "F j, Y"
-
-#: inc/template-tags.php:151
-msgid "Asides"
-msgstr "Asides"
-
-#: inc/template-tags.php:153
-msgid "Galleries"
-msgstr "Galerien"
-
-#: inc/template-tags.php:155
-msgid "Images"
-msgstr "Bilder"
-
-#: inc/template-tags.php:157
-msgid "Videos"
-msgstr "Videos"
-
-#: inc/template-tags.php:159
-msgid "Quotes"
-msgstr "Zitate"
-
-#: inc/template-tags.php:161
-msgid "Links"
-msgstr "Links"
-
-#: inc/template-tags.php:163
-msgid "Statuses"
-msgstr "Statuse"
-
-#: inc/template-tags.php:165
-msgid "Audio"
-msgstr "Audio"
-
-#: inc/template-tags.php:167
-msgid "Chats"
-msgstr "Chats"
-
-#: inc/template-tags.php:169
-#, php-format
-msgid "Archives: %s"
-msgstr "Archive: %s"
-
-#: inc/template-tags.php:173
-#, php-format
-msgid "%1$s: %2$s"
-msgstr "%1$s: %2$s"
-
-#: inc/template-tags.php:175
-msgid "Archives"
-msgstr "Archive"
-
-#: inc/widgets.php:10
-msgid "Sidebar"
-msgstr "Sidebar"
-
-#: inc/widgets.php:20
-msgid "Hero"
-msgstr "Hero"
-
-#: inc/widgets.php:30
-msgid "Static Hero"
-msgstr "Static Hero"
-
-#: search.php:20
+#: ../search.php:23
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Suchergebnis für: %s"
 
-#~ msgctxt "comments title"
-#~ msgid "One thought on &ldquo;%2$s&rdquo;"
-#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-#~ msgstr[0] "Ein Kommentar für &ldquo;%2$s&rdquo;"
-#~ msgstr[1] "%1$s Kommentare für &ldquo;%2$s&rdquo;"
+#: ../content-page.php:34 ../inc/template-tags.php:122 ../loop-templates/content-
+#: page.php:34
+msgid "Edit"
+msgstr "Bearbeiten"
 
-#~ msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-#~ msgstr "Weiterlesen %s <span class=\"meta-nav\">&rarr;</span>"
+#: ../comment-form.php:5
+msgid "Write Comment."
+msgstr "Kommentar schreiben"
 
-#~ msgctxt "Previous post link"
-#~ msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-#~ msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+#: ../comment-form.php:5
+msgid "*Mandatory"
+msgstr "*Pflichtfeld"
 
-#~ msgctxt "Next post link"
-#~ msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-#~ msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+#: ../comment-form.php:13 ../inc/custom-comments.php:12
+msgid "Name"
+msgstr "Name"
 
-#~ msgctxt "post date"
-#~ msgid "Posted on %s"
-#~ msgstr "Gepustet am %s"
+#: ../comment-form.php:19
+msgid "E-Mail"
+msgstr "E-Mail"
 
-#~ msgctxt "post author"
-#~ msgid "by %s"
-#~ msgstr "von %s"
+#: ../comment-form.php:19
+msgid "Not public."
+msgstr "Nicht öffentlich"
 
-#~ msgctxt "yearly archives date format"
-#~ msgid "Y"
-#~ msgstr "Y"
+#: ../comment-form.php:24 ../inc/custom-comments.php:16
+msgid "Website"
+msgstr "Webseite"
 
-#~ msgctxt "monthly archives date format"
-#~ msgid "F Y"
-#~ msgstr "F Y"
+#: ../comment-form.php:29
+msgid "Your Comment"
+msgstr "Dein Kommentar"
 
-#~ msgctxt "daily archives date format"
-#~ msgid "F j, Y"
-#~ msgstr "F j, Y"
+#: ../comment-form.php:36
+msgid "Send comment."
+msgstr "Kommentar senden"
 
-#~ msgctxt "post format archive title"
-#~ msgid "Asides"
-#~ msgstr "Asides"
+#: ../404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ooooops! Die Seite wurde nicht gefunden."
 
-#~ msgctxt "post format archive title"
-#~ msgid "Galleries"
-#~ msgstr "Gallerien"
+#: ../404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Es scheint, dass hier nichts gefunden wurde. Versuch doch einen der Links unten "
+"oder die Suchfunktion."
 
-#~ msgctxt "post format archive title"
-#~ msgid "Images"
-#~ msgstr "Bilder"
+#: ../404.php:37
+msgid "Most Used Categories"
+msgstr "Am häufigsten genutzte Kategorie"
 
-#~ msgctxt "post format archive title"
-#~ msgid "Videos"
-#~ msgstr "Videos"
+#: ../404.php:57
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Versuch im monatlichen Archiv zu schauen. %1$s"
 
-#~ msgctxt "post format archive title"
-#~ msgid "Quotes"
-#~ msgstr "Zitate"
+#: ../inc/widgets.php:10
+msgid "Sidebar"
+msgstr "Sidebar"
 
-#~ msgctxt "post format archive title"
-#~ msgid "Links"
-#~ msgstr "Links"
+#: ../inc/customizer.php:24
+msgid "Slider Settings"
+msgstr "Slider Einstellungen"
 
-#~ msgctxt "post format archive title"
-#~ msgid "Statuses"
-#~ msgstr "Status"
+#: ../inc/customizer.php:33
+msgid "Number of slides displaying at once"
+msgstr "Anzahl der Slides die auf einmal angezeigt werden"
 
-#~ msgctxt "post format archive title"
-#~ msgid "Audio"
-#~ msgstr "Audio"
+#: ../inc/customizer.php:45
+msgid "Slider Time (in ms)"
+msgstr "Slider Zeit (in ms)"
 
-#~ msgctxt "post format archive title"
-#~ msgid "Chats"
-#~ msgstr "Chats"
+#: ../inc/customizer.php:57
+msgid "Loop Slider Content"
+msgstr "Slider Inhalt wiederholen?"
 
-#~ msgid "_s"
-#~ msgstr "_s"
+#: ../inc/customizer.php:68
+msgid "Add scripts"
+msgstr "Script Code hinzufügen"
 
-#~ msgid "http://underscores.me/"
-#~ msgstr "http://underscores.me/"
+#: ../inc/customizer.php:77
+msgid "Add custom JS code here"
+msgstr "Hier eigenen JavaScript Code einfügen"
 
-#~ msgid ""
-#~ "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, "
-#~ "if you like. I'm a theme meant for hacking so don't use me as a "
-#~ "<em>Parent Theme</em>. Instead try turning me into the next, most "
-#~ "awesome, WordPress theme out there. That's what I'm here for."
-#~ msgstr ""
-#~ "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, "
-#~ "if you like. I'm a theme meant for hacking so don't use me as a "
-#~ "<em>Parent Theme</em>. Instead try turning me into the next, most "
-#~ "awesome, WordPress theme out there. That's what I'm here for."
+#: ../inc/extras.php:60
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: ../inc/template-tags.php:21
+msgid "Posts navigation"
+msgstr "Beitrag´s Navigation"
+
+#: ../inc/template-tags.php:25
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Beiträge"
+
+#: ../inc/template-tags.php:29
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Beiträge <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:52
+msgid "Post navigation"
+msgstr "Beitrag´s Navigation"
+
+#: ../inc/template-tags.php:104 ../inc/template-tags.php:110
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:106
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Veröffentlicht in %1$s"
+
+#: ../inc/template-tags.php:112
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Getagt mit: %1$s"
+
+#: ../inc/template-tags.php:118
+msgid "Leave a comment"
+msgstr "Hinterlasse ein Kommentar"
+
+#: ../inc/template-tags.php:118
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: ../inc/template-tags.php:118
+#, php-format
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: ../inc/template-tags.php:139
+#, php-format
+msgid "Category: %s"
+msgstr "Kategorie: %s"
+
+#: ../inc/template-tags.php:141
+#, php-format
+msgid "Tag: %s"
+msgstr "Tag: %s"
+
+#: ../inc/template-tags.php:143
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: ../inc/template-tags.php:145
+#, php-format
+msgid "Year: %s"
+msgstr "Jahr: %s"
+
+#: ../inc/template-tags.php:147
+#, php-format
+msgid "Month: %s"
+msgstr "Monat: %s"
+
+#: ../inc/template-tags.php:149
+#, php-format
+msgid "Day: %s"
+msgstr "Tag: %s"
+
+#: ../inc/template-tags.php:169
+#, php-format
+msgid "Archives: %s"
+msgstr "Archive: %s"
+
+#: ../inc/template-tags.php:173
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: ../inc/template-tags.php:175
+msgid "Archives"
+msgstr "Archive"
+
+#: ../inc/setup.php:48
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+#: ../inc/setup.php:98
+msgid "Read More..."
+msgstr "Weiterlesen..."
+
+#: ../inc/custom-comments.php:14
+msgid "Email"
+msgstr "E-Mail"
