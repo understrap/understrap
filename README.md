@@ -76,8 +76,8 @@ Changelog
 
 About
 =
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these three into a solid WordPress Theme Framework?
-That’s what UnderStrap is (or will be...)
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
+That’s what UnderStrap is (or will be…)
 
 At the moment, UnderStrap is in a very early stage. But if you wan’t, feel free to use it for your own WordPress theme!
 
@@ -86,22 +86,22 @@ Basic Features
 - Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
 - Comes with Bootstrap (v3.3.6) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff.
-- Font Awesome integration (v4.5.0): [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
-- Comes with extra slider script by Owl Carousel (v2.0.0-beta.2.4): [http://www.owlcarousel.owlgraphic.com/](http://www.owlcarousel.owlgraphic.com/)
-- Simple RTL file
-- Jetpack ready
-- WooCommerce support
-- Child Theme ready [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
-- Translation ready
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.5.0)
+- Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.0.0-beta.2.4)
+- Simple RTL file.
+- Jetpack ready.
+- WooCommerce support.
+- [Child Theme](https://github.com/holger1411/understrap-child) ready.
+- Translation ready.
 
 Starter theme + HTML framework = WordPress theme framework
 =
 The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
 Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
 
-Confused by all the CSS and SCSS files?
+Confused by all the CSS and Sass files?
 =
-Some basics about the SCSS and CSS files that come with UnderStrap:
+Some basics about the Sass and CSS files that come with UnderStrap:
 - The theme itself uses the `/style.css`file just to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
 - The `/css/theme.css` file provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
 
