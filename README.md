@@ -93,12 +93,12 @@ At the moment, UnderStrap is in a very early stage. But if you wan’t, feel fre
 - [Child Theme](https://github.com/holger1411/understrap-child) ready.
 - Translation ready.
 
-## Starter theme + HTML framework = WordPress theme framework
+## Starter Theme + HTML Framework = WordPress Theme Framework
 
 The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
 Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
 
-## Confused by all the CSS and Sass files?
+## Confused by All the CSS and Sass Files?
 
 Some basics about the Sass and CSS files that come with UnderStrap:
 - The theme itself uses the `/style.css`file just to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
@@ -123,9 +123,9 @@ Some basics about the Sass and CSS files that come with UnderStrap:
 - Go to Appearance → Themes
 - Activate the UnderStrap theme
 
-## Developing with NPM, Bower, Gulp and SASS and [Browser Sync][1]
+## Developing With NPM, Bower, Gulp and SASS and [Browser Sync][1]
 
-### Installing dependencies
+### Installing Dependencies
 - Make sure you have installed Node.js, Bower, and Browser-Sync on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
 - Run: `$ npm install` then: `$ bower install` and finally: `$ gulp copy-assets`
@@ -146,7 +146,7 @@ var browserSyncOptions = {
 ```
 - then run: `$ gulp watch-bs`
 
-## How to use the build-in widget slider
+## How to Use the Build-In Widget Slider
 
 The front-page slider is widget driven. Simply add more than one widget to widget position “Hero”.
 - Click on Appearance → Widgets.
