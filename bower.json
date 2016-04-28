@@ -31,6 +31,6 @@
     "bootstrap": "v4.0.0-alpha.2"
   },
   "_source": "https://github.com/holger1411/understrap.git",
-  "_target": "~0.3.8",
+  "_target": "~0.4.0",
   "_originalSource": "understrap"
 }
