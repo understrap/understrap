@@ -1,13 +1,7 @@
 /**
- * Owl Carousel v2.1.1
- * Copyright 2013-2016 David Deutsch
- * Licensed under MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
- */
-/**
  * Owl carousel
- * @version 2.1.0
+ * @version 2.0.0
  * @author Bartosz Wojciechowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  * @todo Lazy Load Icon
  * @todo prevent animationend bubling
@@ -845,13 +839,8 @@
 		if (!this.settings.freeDrag) {
 			// check closest item
 			$.each(coordinates, $.proxy(function(index, value) {
-				// on a left pull, check on current index
-				if (direction === 'left' && coordinate > value - pull && coordinate < value + pull) {
+				if (coordinate > value - pull && coordinate < value + pull) {
 					position = index;
-				// on a right pull, check on previous index
-				// to do so, subtract width from value and set position = index + 1
-				} else if (direction === 'right' && coordinate > value - width - pull && coordinate < value - width + pull) {
-					position = index + 1;
 				} else if (this.op(coordinate, '<', value)
 					&& this.op(coordinate, '>', coordinates[index + 1] || value - width)) {
 					position = direction === 'left' ? index + 1 : index;
@@ -993,7 +982,7 @@
 		var n = this._items.length,
 			m = relative ? 0 : this._clones.length;
 
-		if (!this.isNumeric(position) || n < 1) {
+		if (!$.isNumeric(position) || n < 1) {
 			position = undefined;
 		} else if (position < 0 || position >= n + m) {
 			position = ((position - m / 2) % n + n) % n + m / 2;
@@ -1126,9 +1115,7 @@
 	 * @returns {Number|Array.<Number>} - The coordinate of the item in pixel or all coordinates.
 	 */
 	Owl.prototype.coordinates = function(position) {
-		var multiplier = 1,
-			newPosition = position - 1,
-			coordinate;
+		var coordinate = null;
 
 		if (position === undefined) {
 			return $.map(this._coordinates, $.proxy(function(coordinate, index) {
@@ -1137,18 +1124,11 @@
 		}
 
 		if (this.settings.center) {
-			if (this.settings.rtl) {
-				multiplier = -1;
-				newPosition = position + 1;
-			}
-
 			coordinate = this._coordinates[position];
-			coordinate += (this.width() - coordinate + (this._coordinates[newPosition] || 0)) / 2 * multiplier;
+			coordinate += (this.width() - coordinate + (this._coordinates[position - 1] || 0)) / 2 * (this.settings.rtl ? -1 : 1);
 		} else {
-			coordinate = this._coordinates[newPosition] || 0;
+			coordinate = this._coordinates[position - 1] || 0;
 		}
-
-		coordinate = Math.ceil(coordinate);
 
 		return coordinate;
 	};
@@ -1162,10 +1142,6 @@
 	 * @returns {Number} - The time in milliseconds for the translation.
 	 */
 	Owl.prototype.duration = function(from, to, factor) {
-		if (factor === 0) {
-			return 0;
-		}
-
 		return Math.min(Math.max(Math.abs(to - from), 1), 6) * Math.abs((factor || this.settings.smartSpeed));
 	};
 
@@ -1298,7 +1274,7 @@
 			this._mergers.push(item.find('[data-merge]').andSelf('[data-merge]').attr('data-merge') * 1 || 1);
 		}, this));
 
-		this.reset(this.isNumeric(this.settings.startPosition) ? this.settings.startPosition : 0);
+		this.reset($.isNumeric(this.settings.startPosition) ? this.settings.startPosition : 0);
 
 		this.invalidate('items');
 	};
@@ -1619,16 +1595,6 @@
 	};
 
 	/**
-	 * Determines if the input is a Number or something that can be coerced to a Number
-	 * @protected
-	 * @param {Number|String|Object|Array|Boolean|RegExp|Function|Symbol} - The input to be tested
-	 * @returns {Boolean} - An indication if the input is a Number or can be coerced to a Number
-	 */
-	Owl.prototype.isNumeric = function(number) {
-		return !isNaN(parseFloat(number));
-	};
-
-	/**
 	 * Gets the difference of two vectors.
 	 * @todo #261
 	 * @protected
@@ -1689,9 +1655,8 @@
 
 /**
  * AutoRefresh Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Artus Kolanowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -1801,9 +1766,8 @@
 
 /**
  * Lazy Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Bartosz Wojciechowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -1835,7 +1799,7 @@
 		 * @type {Object}
 		 */
 		this._handlers = {
-			'initialized.owl.carousel change.owl.carousel resized.owl.carousel': $.proxy(function(e) {
+			'initialized.owl.carousel change.owl.carousel': $.proxy(function(e) {
 				if (!e.namespace) {
 					return;
 				}
@@ -1848,7 +1812,7 @@
 					var settings = this._core.settings,
 						n = (settings.center && Math.ceil(settings.items / 2) || settings.items),
 						i = ((settings.center && n * -1) || 0),
-						position = (e.property && e.property.value !== undefined ? e.property.value : this._core.current()) + i,
+						position = ((e.property && e.property.value) || this._core.current()) + i,
 						clones = this._core.clones().length,
 						load = $.proxy(function(i, v) { this.load(v) }, this);
 
@@ -1866,7 +1830,7 @@
 
 		// register event handler
 		this._core.$element.on(this._handlers);
-	};
+	}
 
 	/**
 	 * Default options.
@@ -1874,7 +1838,7 @@
 	 */
 	Lazy.Defaults = {
 		lazyLoad: false
-	};
+	}
 
 	/**
 	 * Loads all resources of an item at the specified position.
@@ -1914,7 +1878,7 @@
 		}, this));
 
 		this._loaded.push($item.get(0));
-	};
+	}
 
 	/**
 	 * Destroys the plugin.
@@ -1937,9 +1901,8 @@
 
 /**
  * AutoHeight Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Bartosz Wojciechowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -2003,7 +1966,7 @@
 	AutoHeight.prototype.update = function() {
 		var start = this._core._current,
 			end = start + this._core.settings.items,
-			visible = this._core.$stage.children().toArray().slice(start, end),
+			visible = this._core.$stage.children().toArray().slice(start, end);
 			heights = [],
 			maxheight = 0;
 
@@ -2035,9 +1998,8 @@
 
 /**
  * Video Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Bartosz Wojciechowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -2132,48 +2094,25 @@
 	};
 
 	/**
-	 * Gets the video ID and the type (YouTube/Vimeo/vzaar only).
+	 * Gets the video ID and the type (YouTube/Vimeo only).
 	 * @protected
 	 * @param {jQuery} target - The target containing the video data.
 	 * @param {jQuery} item - The item containing the video.
 	 */
 	Video.prototype.fetch = function(target, item) {
-			var type = (function() {
-					if (target.attr('data-vimeo-id')) {
-						return 'vimeo';
-					} else if (target.attr('data-vzaar-id')) {
-						return 'vzaar'
-					} else {
-						return 'youtube';
-					}
-				})(),
-				id = target.attr('data-vimeo-id') || target.attr('data-youtube-id') || target.attr('data-vzaar-id'),
-				width = target.attr('data-width') || this._core.settings.videoWidth,
-				height = target.attr('data-height') || this._core.settings.videoHeight,
-				url = target.attr('href');
+		var type = target.attr('data-vimeo-id') ? 'vimeo' : 'youtube',
+			id = target.attr('data-vimeo-id') || target.attr('data-youtube-id'),
+			width = target.attr('data-width') || this._core.settings.videoWidth,
+			height = target.attr('data-height') || this._core.settings.videoHeight,
+			url = target.attr('href');
 
 		if (url) {
-
-			/*
-					Parses the id's out of the following urls (and probably more):
-					https://www.youtube.com/watch?v=:id
-					https://youtu.be/:id
-					https://vimeo.com/:id
-					https://vimeo.com/channels/:channel/:id
-					https://vimeo.com/groups/:group/videos/:id
-					https://app.vzaar.com/videos/:id
-
-					Visual example: https://regexper.com/#(http%3A%7Chttps%3A%7C)%5C%2F%5C%2F(player.%7Cwww.%7Capp.)%3F(vimeo%5C.com%7Cyoutu(be%5C.com%7C%5C.be%7Cbe%5C.googleapis%5C.com)%7Cvzaar%5C.com)%5C%2F(video%5C%2F%7Cvideos%5C%2F%7Cembed%5C%2F%7Cchannels%5C%2F.%2B%5C%2F%7Cgroups%5C%2F.%2B%5C%2F%7Cwatch%5C%3Fv%3D%7Cv%5C%2F)%3F(%5BA-Za-z0-9._%25-%5D*)(%5C%26%5CS%2B)%3F
-			*/
-
-			id = url.match(/(http:|https:|)\/\/(player.|www.|app.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com)|vzaar\.com)\/(video\/|videos\/|embed\/|channels\/.+\/|groups\/.+\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/);
+			id = url.match(/(http:|https:|)\/\/(player.|www.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com))\/(video\/|embed\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/);
 
 			if (id[3].indexOf('youtu') > -1) {
 				type = 'youtube';
 			} else if (id[3].indexOf('vimeo') > -1) {
 				type = 'vimeo';
-			} else if (id[3].indexOf('vzaar') > -1) {
-				type = 'vzaar';
 			} else {
 				throw new Error('Video URL not supported.');
 			}
@@ -2238,27 +2177,16 @@
 		}
 
 		if (video.type === 'youtube') {
-			path = "//img.youtube.com/vi/" + video.id + "/hqdefault.jpg";
+			path = "http://img.youtube.com/vi/" + video.id + "/hqdefault.jpg";
 			create(path);
 		} else if (video.type === 'vimeo') {
 			$.ajax({
 				type: 'GET',
-				url: '//vimeo.com/api/v2/video/' + video.id + '.json',
+				url: 'http://vimeo.com/api/v2/video/' + video.id + '.json',
 				jsonp: 'callback',
 				dataType: 'jsonp',
 				success: function(data) {
 					path = data[0].thumbnail_large;
-					create(path);
-				}
-			});
-		} else if (video.type === 'vzaar') {
-			$.ajax({
-				type: 'GET',
-				url: '//vzaar.com/api/videos/' + video.id + '.json',
-				jsonp: 'callback',
-				dataType: 'jsonp',
-				success: function(data) {
-					path = data.framegrab_url;
 					create(path);
 				}
 			});
@@ -2303,16 +2231,12 @@
 		this._core.reset(item.index());
 
 		if (video.type === 'youtube') {
-			html = '<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/' +
+			html = '<iframe width="' + width + '" height="' + height + '" src="http://www.youtube.com/embed/' +
 				video.id + '?autoplay=1&v=' + video.id + '" frameborder="0" allowfullscreen></iframe>';
 		} else if (video.type === 'vimeo') {
-			html = '<iframe src="//player.vimeo.com/video/' + video.id +
+			html = '<iframe src="http://player.vimeo.com/video/' + video.id +
 				'?autoplay=1" width="' + width + '" height="' + height +
 				'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-		} else if (video.type === 'vzaar') {
-			html = '<iframe frameborder="0"' + 'height="' + height + '"' + 'width="' + width +
-				'" allowfullscreen mozallowfullscreen webkitAllowFullScreen ' +
-				'src="//view.vzaar.com/' + video.id + '/player?autoplay=true"></iframe>';
 		}
 
 		$('<div class="owl-video-frame">' + html + '</div>').insertAfter(item.find('.owl-video'));
@@ -2355,9 +2279,8 @@
 
 /**
  * Animate Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Bartosz Wojciechowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -2477,10 +2400,9 @@
 
 /**
  * Autoplay Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Bartosz Wojciechowski
  * @author Artus Kolanowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -2499,10 +2421,10 @@
 		this._core = carousel;
 
 		/**
-		 * The autoplay timeout.
-		 * @type {Timeout}
+		 * The autoplay interval.
+		 * @type {Number}
 		 */
-		this._timeout = null;
+		this._interval = null;
 
 		/**
 		 * Indicates whenever the autoplay is paused.
@@ -2522,11 +2444,6 @@
 						this.play();
 					} else {
 						this.stop();
-					}
-				} else if (e.namespace && e.property.name === 'position') {
-					//console.log('play?', e);
-					if (this._core.settings.autoplay) {
-						this._setAutoPlayInterval();
 					}
 				}
 			}, this),
@@ -2552,16 +2469,6 @@
 			}, this),
 			'mouseleave.owl.autoplay': $.proxy(function() {
 				if (this._core.settings.autoplayHoverPause && this._core.is('rotating')) {
-					this.play();
-				}
-			}, this),
-			'touchstart.owl.core': $.proxy(function() {
-				if (this._core.settings.autoplayHoverPause && this._core.is('rotating')) {
-					this.pause();
-				}
-			}, this),
-			'touchend.owl.core': $.proxy(function() {
-				if (this._core.settings.autoplayHoverPause) {
 					this.play();
 				}
 			}, this)
@@ -2600,34 +2507,12 @@
 
 		this._core.enter('rotating');
 
-		this._setAutoPlayInterval();
-	};
-
-	/**
-	 * Gets a new timeout
-	 * @private
-	 * @param {Number} [timeout] - The interval before the next animation starts.
-	 * @param {Number} [speed] - The animation speed for the animations.
-	 * @return {Timeout}
-	 */
-	Autoplay.prototype._getNextTimeout = function(timeout, speed) {
-		if ( this._timeout ) {
-			window.clearTimeout(this._timeout);
-		}
-		return window.setTimeout($.proxy(function() {
+		this._interval = window.setInterval($.proxy(function() {
 			if (this._paused || this._core.is('busy') || this._core.is('interacting') || document.hidden) {
 				return;
 			}
 			this._core.next(speed || this._core.settings.autoplaySpeed);
 		}, this), timeout || this._core.settings.autoplayTimeout);
-	};
-
-	/**
-	 * Sets autoplay in motion.
-	 * @private
-	 */
-	Autoplay.prototype._setAutoPlayInterval = function() {
-		this._timeout = this._getNextTimeout();
 	};
 
 	/**
@@ -2639,7 +2524,7 @@
 			return;
 		}
 
-		window.clearTimeout(this._timeout);
+		window.clearInterval(this._interval);
 		this._core.leave('rotating');
 	};
 
@@ -2677,9 +2562,8 @@
 
 /**
  * Navigation Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Artus Kolanowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -2752,7 +2636,7 @@
 			'prepared.owl.carousel': $.proxy(function(e) {
 				if (e.namespace && this._core.settings.dotsData) {
 					this._templates.push('<div class="' + this._core.settings.dotClass + '">' +
-						$(e.content).find('[data-dot]').addBack('[data-dot]').attr('data-dot') + '</div>');
+						$(e.content).find('[data-dot]').andSelf('[data-dot]').attr('data-dot') + '</div>');
 				}
 			}, this),
 			'added.owl.carousel': $.proxy(function(e) {
@@ -3046,7 +2930,7 @@
 	Navigation.prototype.to = function(position, speed, standard) {
 		var length;
 
-		if (!standard && this._pages.length) {
+		if (!standard) {
 			length = this._pages.length;
 			$.proxy(this._overrides.to, this._core)(this._pages[((position % length) + length) % length].start, speed);
 		} else {
@@ -3060,9 +2944,8 @@
 
 /**
  * Hash Plugin
- * @version 2.1.0
+ * @version 2.0.0
  * @author Artus Kolanowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {
@@ -3107,7 +2990,7 @@
 			}, this),
 			'prepared.owl.carousel': $.proxy(function(e) {
 				if (e.namespace) {
-					var hash = $(e.content).find('[data-hash]').addBack('[data-hash]').attr('data-hash');
+					var hash = $(e.content).find('[data-hash]').andSelf('[data-hash]').attr('data-hash');
 
 					if (!hash) {
 						return;
@@ -3184,10 +3067,9 @@
 /**
  * Support Plugin
  *
- * @version 2.1.0
+ * @version 2.0.0
  * @author Vivid Planet Software GmbH
  * @author Artus Kolanowski
- * @author David Deutsch
  * @license The MIT License (MIT)
  */
 ;(function($, window, document, undefined) {

@@ -5,7 +5,7 @@
 		margin-top: 10px;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
-
+		
 		[class*='owl-'] {
 			color: $nav-color;
 			font-size: $nav-font-size;
@@ -14,7 +14,7 @@
 			background: $nav-background;
 			display: inline-block;
 			cursor: pointer;
-			border-radius: 3px;
+			@include rounded($nav-rounded);
 
 			&:hover {
 				background: $nav-background-hover;
@@ -32,11 +32,10 @@
 	.owl-nav.disabled + .owl-dots {
 		margin-top: 10px;
 	}
-
 	.owl-dots {
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
-
+		
 		.owl-dot {
 			display: inline-block;
 			zoom: 1;
@@ -49,8 +48,8 @@
 				background: $dot-background;
 				display: block;
 				-webkit-backface-visibility: visible;
-				transition: opacity 200ms ease;
-				border-radius: 30px;
+				@include transition(opacity, 200ms, ease);
+				@include rounded($dot-rounded);
 			}
 
 			&.active,
