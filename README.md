@@ -9,14 +9,14 @@ Child Theme Project: [https://github.com/holger1411/understrap-child](https://gi
 
 Changelog
 =
-            - **0.4.0 Apr. 15th 2016 Pre-Release**
+            - **0.4.0 Apr. 29th 2016 **
+                   - Switching from Bootstrap 3 to Bootstrap 4
                    - Adding BrowserSync to gulpfile (again thx to @dvlopes)
                    - Preparing the navbar markup so that the current version will work with Bootstrap 3 AND 4
                    - Adding "gulp scripts" command - This uglifies and minifies all JS files (except jQuery...) into one single JS file called theme.min.js
                    - Updating Gulpfile - now "gulp copy-assets" command copies all files from dependency folders into mid-layer folder called "/src"
                    - Load jQuery again as extra script instead of concat it into on single file. After some problems with WooCommerce and other plugins
                    - Checking WordPress 4.5 compatibility
-                   - Adding Bootstrap 4 Alpha as optional asset
                    - Updating language template
                    - Adding Brazilian Portuguese (pt-BR) translation (thx to @dvlopes).
 
