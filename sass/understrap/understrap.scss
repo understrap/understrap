@@ -73,11 +73,11 @@ right: 0px;
 
 //Bootstrap3 to Bootstrap4 "translation" 
 .menu-item {float:left; width:auto; display:inline;}
-ul.nav.navbar-nav a {
-	display: block;
-    padding-top:    .425rem;
-    padding-bottom: .425rem;
-}
+//ul.nav.navbar-nav a {
+//	display: block;
+//    padding-top:    .425rem;
+//    padding-bottom: .425rem;
+//}
 
 // Navbar toggle
 //
@@ -122,11 +122,36 @@ ul.nav.navbar-nav a {
 		border-bottom:1px solid #fff;
 	}
   .dropdown-menu {
-    background-color: $navbar-dark-color;
+    background-color: $gray-dark;
   }
 }
 
 .navbar #main-menu {
 	float:left;
+}
+
+.navbar-nav {
+  .nav-item {
+    float: left;
+  }
+
+  .nav-link {
+    display: block;
+    padding-top:    .425rem;
+    padding-bottom: .425rem;
+
+    + .nav-link {
+      margin-left: 0rem;
+    }
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 0rem;
+  }
+}
+
+.nav-link {
+  margin-left:.425rem;
+  margin-right:.425rem;
 }
 
