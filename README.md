@@ -151,6 +151,6 @@ var browserSyncOptions = {
 The front-page slider is widget driven. Simply add more than one widget to widget position “Hero”.
 - Click on Appearance → Widgets.
 - Add two, or more, widgets of any kind to widget area “Hero”.
-- That‘s it.
+- That’s it.
 
 [1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
