@@ -1,14 +1,13 @@
 Start talking: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/holger1411/understrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
-UnderStrap WordPress Theme Framework
-===
+# UnderStrap WordPress Theme Framework
 
 Website: [http://understrap.com](http://understrap.com)
 
 Child Theme Project: [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
 
-Changelog
-=
+## Changelog
+
             - **0.4.0 Apr. 29th 2016 **
                    - Switching from Bootstrap 3 to Bootstrap 4
                    - Adding BrowserSync to gulpfile (again thx to @dvlopes)
@@ -38,7 +37,7 @@ Changelog
                    - Cleanup
                    - Updating dependencies
                    - Upgrade to Bootstrap 3.3.6 and Font Awesome 4.5.0
-                   
+
 
             - **0.3.4 SEP. 9th 2015**
                    - Adding basic WooCommerce support
@@ -66,44 +65,44 @@ Changelog
 
             - **0.2.6 Dec. 28th 2014**
                     - CLean up
-                    
-                    
+
+
             - **0.2 Dec. 22th 2014**
                     - Adding Jasny Off-Canvas nav and Owl.Carousel Slider script
                     - Enqueue scipts and styled dynamically
-                                   
+
             - **0.1 Dec. 10th 2014 - First commit**
 
-About
-=
-Basically I like the _s WordPress Starter Theme from Automattic and the grid Framework Bootstrap. Additionally I´am a huge SASS fan. Why don´t combine all these three things into a solid WordPress Theme Framework?
-That´s what UnderStrap is (or will be...)
+## About
 
-At the moment UnderStrap is in a very early stage. But if you wan´t feel free to use it for your own WordPress theme!
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
+That’s what UnderStrap is (or will be…)
 
-Basic Features
-=
-- Combines the _s WordPress Starter Theme PHP/JS files and Bootstrap´s HTML/CSS/JS
-- Comes with Bootstrap (3.3.6) SASS source files and additional scss files. Nicely sorted and ready to add your own variables/customize the Bootstrap variables.
-- Uses a single and minified CSS file for all the basic stuff
-- Font Awesome Icon Font integrated (V 4.5.0): [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
-- Comes with extra slider script - By owl.carousel (V 2.0.0-beta.2.4): [http://www.owlcarousel.owlgraphic.com/](http://www.owlcarousel.owlgraphic.com/)
-- Simple RTL file
-- Jetpack ready
-- WooCommerce support
-- Child Theme ready (A basic starter Child Theme will be released in the future as a separate Repository)
-- Translation ready
+At the moment, UnderStrap is in a very early stage. But if you wan’t, feel free to use it for your own WordPress theme!
 
-Starter Theme + HTML Framework = WordPress Theme Framework
-=
-The _s theme is a good starting point to develope a WordPress theme. But it is "just" a raw starter theme. Means it outputs all the WordPress stuff correctly but without any layout or design.
-Why don´t add a well known and supported layout framework to have a solid, clean and responsive foundation? Thats where Bootstrap comes in.
+## Basic Features
 
-Confused by all the CSS and SCSS files?
-=
-Some basics about the SCSS and CSS files comes with UnderStrap:
-- The theme itself uses the style.css in the root directory just to identify the theme inside of WordPress. The file is not loaded by the theme and did not include any styles
-- The theme.css file in /css/ subdirectory provides all styles. It is composed by five different SCSS sets and one variables file from /sass/theme.scss:
+- Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
+- Comes with Bootstrap (v3.3.6) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
+- Uses a single and minified CSS file for all the basic stuff.
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.5.0)
+- Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.0.0-beta.2.4)
+- Simple RTL file.
+- Jetpack ready.
+- WooCommerce support.
+- [Child Theme](https://github.com/holger1411/understrap-child) ready.
+- Translation ready.
+
+## Starter Theme + HTML Framework = WordPress Theme Framework
+
+The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
+Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
+
+## Confused by All the CSS and Sass Files?
+
+Some basics about the Sass and CSS files that come with UnderStrap:
+- The theme itself uses the `/style.css`file just to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
+- The `/css/theme.css` file provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
 
                   - 1 "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
                   - 2 "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // <--------- All the Bootstrap stuff - Don´t edit this!
@@ -113,32 +112,32 @@ Some basics about the SCSS and CSS files comes with UnderStrap:
                   // Any additional imported files //
                   - 5 "theme/theme";  // <--------- Add your styles into this file
 
-- Don´t edit the files no. 2-4 files/filesets or you aren´t able to update it without overwriting your own work!
-- Your design goes into: /sass/theme directory. Add your styles to the theme.scss file and your variables to the _theme_variables.scss. Or add other scss files into it and @import it into theme.scss
+- Don’t edit the files no. 2-4 files/filesets or you won’t be able to update it without overwriting your own work!
+- Your design goes into: `/sass/theme`. Add your styles to the `/sass/theme/_theme.scss` file and your variables to the `/sass/theme/_theme_variables.scss`. Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
-Installation
-=
+## Installation
+
 - Download the understrap folder
-- Upload it into your WordPress installation subfolder here: /wp-content/themes/
-- Login to your WordPress backend 
-- Go to Appearance -> Themes
+- Upload it into your WordPress installation subfolder here: `/wp-content/themes/`
+- Login to your WordPress backend
+- Go to Appearance → Themes
 - Activate the UnderStrap theme
 
-Developing with NPM, Bower, Gulp and SASS and [Browser Sync][1]
-=
-### Installing dependencies
-- Make sure you have installed Node.js, Bower and Browser-Sync on your computer globally
+## Developing With NPM, Bower, Gulp and SASS and [Browser Sync][1]
+
+### Installing Dependencies
+- Make sure you have installed Node.js, Bower, and Browser-Sync on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
 - Run: `$ npm install` then: `$ bower install` and finally: `$ gulp copy-assets`
 
 ### Running
-To work and compile your SASS files on the fly start:
+To work and compile your Sass files on the fly start:
 
 - `$ gulp watch`
 
 Or, to run with Browser-Sync:
 
-- First change the browser-sync options to reflect your environment in the file `gulpfile.js` in the beginning of the file:
+- First change the browser-sync options to reflect your environment in the file `/gulpfile.js` in the beginning of the file:
 ```javascript
 var browserSyncOptions = {
     proxy: "localhost/theme_test/", // <----- CHANGE HERE
@@ -147,11 +146,11 @@ var browserSyncOptions = {
 ```
 - then run: `$ gulp watch-bs`
 
-How to use the build-in Widget Slider?
-=
-The frontpage slider is widget driven. Simply add more than one widget to widget position "Hero".
-- Click on Appearance -> Widgets 
-- Add two or more widgets of any kind to widget area "Hero"
-- Thats it
+## How to Use the Build-In Widget Slider
+
+The front-page slider is widget driven. Simply add more than one widget to widget position “Hero”.
+- Click on Appearance → Widgets.
+- Add two, or more, widgets of any kind to widget area “Hero”.
+- That’s it.
 
 [1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
