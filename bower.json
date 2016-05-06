@@ -28,7 +28,8 @@
     "fontawesome": "~4.5.0",
     "_s": "https://github.com/Automattic/_s.git",
     "OwlCarousel2": "https://github.com/smashingboxes/OwlCarousel2.git",
-    "bootstrap": "v4.0.0-alpha.2"
+    "bootstrap": "v4.0.0-alpha.2",
+    "tether": "~1.3.1"
   },
   "_source": "https://github.com/holger1411/understrap.git",
   "_target": "~0.4.2",

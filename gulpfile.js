@@ -86,20 +86,11 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 gulp.task('scripts', function() {
   gulp.src([
     basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
+    basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
     // Start - All BS4 stuff
     basePaths.dev + 'js/bootstrap4/bootstrap.js', 
-    //basePaths.dev + 'js/bootstrap4/umd/util.js', 
-    //basePaths.dev + 'js/bootstrap4/umd/alert.js',  
-    //basePaths.dev + 'js/bootstrap4/umd/button.js', 
-    //basePaths.dev + 'js/bootstrap4/umd/carousel.js',
-    //basePaths.dev + 'js/bootstrap4/umd/collapse.js',
-    //basePaths.dev + 'js/bootstrap4/umd/dropdown.js',  
-    //basePaths.dev + 'js/bootstrap4/umd/modal.js', 
-    //basePaths.dev + 'js/bootstrap4/umd/scrollspy.js',   
-    //basePaths.dev + 'js/bootstrap4/umd/tab.js', 
-    //basePaths.dev + 'js/bootstrap4/umd/tooltip.js',
-    //basePaths.dev + 'js/bootstrap4/umd/popover.js', 
+
     // End - All BS4 stuff
 
     basePaths.dev + 'js/skip-link-focus-fix.js'
