@@ -65,7 +65,7 @@ function understrap_theme_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_section( 'understrap_theme_script_options', array(
-        'title'          => __( 'Add scripts', 'understrap' )
+        'title'          => __( 'Add custom code snippet', 'understrap' )
     ) );
 
     $wp_customize->add_setting( 'understrap_theme_script_code_setting', array(
@@ -74,7 +74,7 @@ function understrap_theme_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( 'understrap_theme_script_code', array(
-        'label'      => __( 'Add custom JS code here', 'understrap' ),
+        'label'      => __( 'Add custom header code here. Like <script>yourcode</script> or <style>yourstyle</style> tags.', 'understrap' ),
         'section'    => 'understrap_theme_script_options',
         'type'       => 'textarea',
         'settings'   => 'understrap_theme_script_code_setting'
