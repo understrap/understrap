@@ -155,3 +155,30 @@ right: 0px;
   margin-right:.425rem;
 }
 
+// Fixing BS dropdown in a dropdown
+.dropdown-menu .dropdown-menu {
+  position:relative;
+  display:block;
+  border: none;
+  box-shadow: none;
+  margin-left:10px;
+  width:140px;
+  li {
+    list-style: square;
+    padding-left: 0px;
+
+    a {
+
+    }
+
+  }
+
+}
+
+ .dropdown-menu .menu-item {
+    width:100%;
+    a:hover {
+      background-color:$brand-primary;
+    }
+  }
+
