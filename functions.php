@@ -17,6 +17,10 @@ require get_template_directory() . '/inc/setup.php';
  */
 require get_template_directory() . '/inc/widgets.php';
 
+/**
+* Load functions to secure your WP install.
+*/
+require get_template_directory() . '/inc/security.php';
 
 /**
  * Enqueue scripts and styles.
@@ -57,6 +61,12 @@ require get_template_directory() . '/inc/jetpack.php';
 * Load custom WordPress nav walker.
 */
 require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
+
+/**
+* Load custom WordPress pagination.
+*/
+require get_template_directory() . '/inc/bootstrap-wp-pagination.php';
+
 
 /**
 * Load WooCommerce functions.
