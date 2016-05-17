@@ -117,7 +117,8 @@ Some basics about the Sass and CSS files that come with UnderStrap:
 
 ## Installation
 
-- Download the understrap folder
+- Download the understrap folder from GitHub or from understrap.com
+- IMPORTANT: If you download it from GitHub make sure you rename the "understrap-master.zip" file just to "understrap.zip" or you might have problems using child themes !!
 - Upload it into your WordPress installation subfolder here: `/wp-content/themes/`
 - Login to your WordPress backend
 - Go to Appearance → Themes
