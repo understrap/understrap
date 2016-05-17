@@ -31,7 +31,6 @@ function understrap_slider(){
     	"items"=>get_theme_mod( 'understrap_theme_slider_count_setting', 1 )
     	);
 
-
     wp_enqueue_script("understrap-slider-script", get_stylesheet_directory_uri() . '/js/slider_settings.js', array(), '0.4.3');
     wp_localize_script( "understrap-slider-script", "understrap_slider_variables", $data );
     }
