@@ -1,5 +1,3 @@
-
-
 <?php
 //Based on Jeff Hays code and his article here: http://robido.com/wordpress/wordpress-gallery-filter-to-modify-the-html-output-of-the-default-gallery-shortcode-and-style/ 
 // Custom filter function to modify default gallery shortcode output
