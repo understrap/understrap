@@ -64,21 +64,6 @@ function understrap_theme_customize_register( $wp_customize ) {
         'settings'   => 'understrap_theme_slider_loop_setting'
     ) );
 
-    $wp_customize->add_section( 'understrap_theme_script_options', array(
-        'title'          => __( 'Add custom code snippet', 'understrap' )
-    ) );
-
-    $wp_customize->add_setting( 'understrap_theme_script_code_setting', array(
-        'default'        => '',
-        'sanitize_js_callback' => 'esc_js'
-    ) );
-
-    $wp_customize->add_control( 'understrap_theme_script_code', array(
-        'label'      => __( 'Add custom header code here. Like <script>yourcode</script> or <style>yourstyle</style> tags.', 'understrap' ),
-        'section'    => 'understrap_theme_script_options',
-        'type'       => 'textarea',
-        'settings'   => 'understrap_theme_script_code_setting'
-    ) );
 }
 add_action( 'customize_register', 'understrap_theme_customize_register' );
 
