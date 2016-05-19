@@ -54,8 +54,9 @@ font-size:inherit;
 }
 
 //Limit featured image size to 100%
-img.wp-post-image, article img, figure {
+img.wp-post-image, article img, figure, img {
 	max-width: 100%;
+  height: auto;
 }
 
 // Skip to content link
@@ -95,8 +96,8 @@ right: 0px;
   border: 1px solid transparent;
 
 
-  // We remove the `outline` here, but later compensate by attaching `:hover`
-  // styles to `:focus`.
+// We remove the `outline` here, but later compensate by attaching `:hover`
+// styles to `:focus`.
   &:focus {
     outline: 0;
   }
@@ -166,13 +167,7 @@ right: 0px;
   li {
     list-style: square;
     padding-left: 0px;
-
-    a {
-
-    }
-
   }
-
 }
 
  .dropdown-menu .menu-item {
@@ -181,4 +176,3 @@ right: 0px;
       background-color:$brand-primary;
     }
   }
-
