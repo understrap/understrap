@@ -1,5 +1,13 @@
 Start talking: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/holger1411/understrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
+## About
+
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
+That’s what UnderStrap is. 
+You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
+
+At the moment, UnderStrap is in a very early stage. But if you wan’t, feel free to use it for your own WordPress theme!
+
 # UnderStrap WordPress Theme Framework
 
 Website: [http://understrap.com](http://understrap.com)
@@ -73,12 +81,6 @@ Child Theme Project: [https://github.com/holger1411/understrap-child](https://gi
 
             - **0.1 Dec. 10th 2014 - First commit**
 
-## About
-
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
-That’s what UnderStrap is (or will be…)
-
-At the moment, UnderStrap is in a very early stage. But if you wan’t, feel free to use it for your own WordPress theme!
 
 ## Basic Features
 
