@@ -4595,8 +4595,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 .entry-footer span {
   padding-right: 10px; }
 
-img.wp-post-image, article img, figure {
-  max-width: 100%; }
+img.wp-post-image, article img, figure, img {
+  max-width: 100%;
+  height: auto; }
 
 a.skip-link {
   z-index: 1000;
