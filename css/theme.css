@@ -4631,6 +4631,9 @@ a.skip-link {
   .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px; }
 
+.navbar .collapsing, .navbar .collapse.in {
+  width: 100%; }
+
 .navbar-dark .navbar-toggle {
   border: 1px solid #fff; }
 
@@ -4691,7 +4694,7 @@ a.skip-link {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

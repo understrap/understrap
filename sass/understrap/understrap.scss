@@ -112,7 +112,12 @@ right: 0px;
   .icon-bar + .icon-bar {
     margin-top: 4px;
   }
+}
 
+.navbar {
+  .collapsing, .collapse.in {
+    width:100%;
+  }
 }
 
 .navbar-dark {
