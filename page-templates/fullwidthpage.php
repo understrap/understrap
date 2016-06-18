@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper" id="full-width-page-wrapper">
     
     <div  id="content" class="container">
         
