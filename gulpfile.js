@@ -106,19 +106,7 @@ gulp.task('scripts', function() {
 
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
-// Copy all Bootstrap JS files 
 gulp.task('copy-assets', function() {
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/**/*.js')
-       .pipe(gulp.dest(basePaths.dev + '/js/bootstrap3'));
-
-// Copy all Bootstrap SCSS files
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
-       .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap3'));
-
-// Copy all Bootstrap Fonts
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('./fonts'));
-////////////////// End Bootstrap 3 Assets /////////////////////////
 
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
