@@ -22,11 +22,13 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 ## Changelog
 
             - **0.4.4 Jun. 18th 2016 **
-                   - Adding an empty.php page template. Comes just with header, footer and a content area without markup. Good for build up landingpages. An empty canvas for your Bootstrap markup.
-                   - Bower update
+                   - Adding the new empty.php page template. Comes just with header, footer and a content area without markup. Good for build up landingpages. An empty canvas for your Bootstrap markup.
+                   - Update bower.json dependencies to latest versions
+                   - Update package.json dependencies to latest versions
                    - Adding Theter script as dependency for BS4 tooltip component
                    - Resorting gulpfile.js
-
+                   - Removing BS3 completely as dependency
+                   - Smaller bugfixes and code improvements
 
 
             - **0.4.0 Apr. 29th 2016 **
@@ -39,6 +41,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
                    - Checking WordPress 4.5 compatibility
                    - Updating language template
                    - Adding Brazilian Portuguese (pt-BR) translation (thx to @dvlopes).
+
 
             - **0.3.8 Mar. 9th 2016 **
                    - Adding footer widget area
