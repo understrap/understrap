@@ -26,7 +26,7 @@ function understrap_theme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'understrap_theme_slider_count_setting', array(
         'default'        => '1',
-        'sanitize_callback' => 'esc_textarea'
+        'sanitize_callback' => 'absint'
     ) );
 
     $wp_customize->add_control( 'understrap_theme_slider_count', array(
@@ -38,7 +38,7 @@ function understrap_theme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'understrap_theme_slider_time_setting', array(
         'default'        => '5000',
-        'sanitize_callback' => 'esc_textarea'
+        'sanitize_callback' => 'absint'
     ) );
 
     $wp_customize->add_control( 'understrap_theme_slider_time', array(

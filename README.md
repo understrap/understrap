@@ -21,6 +21,15 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
 
+            - ** Prerelease 0.4.5 Jun. 18th 2016 **
+                  - Adding right sanitizing function for customizer
+                  - Fixing some escaping problems
+                  - Removing "add script" customizer function 
+                  - Calling all sidebars with "get_sidebar"
+                  - Load hero area on index.php conditionally
+                  - Remove unused code, files and dependencies
+                  - Adding credits for WP Bootstrap Navwalker by Edward McIntyre
+
             - **0.4.4 Jun. 18th 2016 **
                    - Adding the new empty.php page template. Comes just with header, footer and a content area without markup. Good for build up landingpages. An empty canvas for your Bootstrap markup.
                    - Update bower.json dependencies to latest versions
@@ -173,3 +182,12 @@ The front-page slider is widget driven. Simply add more than one widget to widge
 - That’s it.
 
 [1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
+
+Licenses & Credits
+=
+- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+- Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
+- Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+and of course
+- jQuery: https://jquery.org | (Code licensed under MIT)
+- WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL

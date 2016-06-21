@@ -13,9 +13,17 @@
 
 get_header(); ?>
 
-    <?php get_template_part('widget-templates/hero'); ?>
+    <?php
+    if ( is_front_page() && is_home() ) {
 
-    <?php get_template_part('widget-templates/statichero'); ?>
+        get_sidebar('hero'); 
+
+        get_sidebar('statichero');
+        
+    } else {
+    // Do nothing...or?
+    }
+    ?>
 
     <div class="wrapper" id="wrapper-index">
         
@@ -43,7 +51,7 @@ get_header(); ?>
 
                         <?php endwhile; ?>
                         
-                        <?php understrap_paging_nav(); ?>
+                        <?php the_posts_navigation(); ?>
                         
                     <?php else : ?>
 

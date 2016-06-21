@@ -20,7 +20,7 @@ get_header(); ?>
 
                         <?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-                        <?php understrap_post_nav(); ?>
+                        <?php the_post_navigation(); ?>
 
                         <?php
                         // If comments are open or we have at least one comment, load up the comment template
@@ -35,7 +35,7 @@ get_header(); ?>
                 
             </div><!-- #primary -->
         
-        <?php get_template_part('sidebar'); ?>
+        <?php get_sidebar('sidebar'); ?>
 
         </div><!-- .row -->
         
