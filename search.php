@@ -38,7 +38,7 @@ get_header(); ?>
 
                     <?php endwhile; ?>
 
-                    <?php understrap_paging_nav(); ?>
+                    <?php the_posts_navigation(); ?>
 
                 <?php else : ?>
 
