@@ -4595,7 +4595,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 .entry-footer span {
   padding-right: 10px; }
 
-img.wp-post-image, article img, figure, img {
+img.wp-post-image, article img, figure, img, #secondary img {
   max-width: 100%;
   height: auto; }
 
@@ -4694,7 +4694,7 @@ a.skip-link {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

@@ -54,7 +54,7 @@ font-size:inherit;
 }
 
 //Limit featured image size to 100%
-img.wp-post-image, article img, figure, img {
+img.wp-post-image, article img, figure, img, #secondary img {
 	max-width: 100%;
   height: auto;
 }
