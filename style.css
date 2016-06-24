@@ -3,8 +3,10 @@ Theme Name: UnderStrap
 Theme URI: http://understrap.com
 Author: Holger Koenemann
 Author URI: http://www.holgerkoenemann.de
-Description: Combination of Automattic´s _s theme and Bootstrap SASS. Made as a solid starting point for your next theme project and WordPress website. Including Font Awesome support, build-in widget slider and much more you need for basic websites.
-A developer version (with Gulp/node and SASS sources) is available on github: https://github.com/holger1411/understrap
+Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as parent theme. It is up to you.
+Including Font Awesome support, build-in widget slider and much more you need for basic websites.
+A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/holger1411/understrap
+A child theme is available on Github, too: https://github.com/holger1411/understrap-child;
 Version: 0.4.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,10 +22,11 @@ Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/mast
 Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
 and of course
 jQuery: https://jquery.org | (Code licensed under MIT)
-
+WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 */
 
-/*This file is just used to identify the theme in WordPress. The compiled CSS output can be found in /css/theme.css
+/*
+This file is just used to identify the theme in WordPress. The compiled CSS output can be found in /css/theme.css
 The SASS sources for it can be found in this folder: /sass/
 
 ...and no go out and play!

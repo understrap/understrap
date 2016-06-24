@@ -1,3 +1,4 @@
+
 ## About
 
 I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
@@ -19,7 +20,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
 
-            - ** Prerelease 0.4.5 Jun. 18th 2016 **
+            - ** Pre-Release 0.4.5 Jun. 20th 2016 **
                   - Adding right sanitizing function for customizer
                   - Fixing some escaping problems
                   - Removing "add script" customizer function 
@@ -108,9 +109,9 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 ## Basic Features
 
 - Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
-- Comes with Bootstrap (v3.3.6) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
+- Comes with Bootstrap (v4) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff.
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.5.0)
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.6.0)
 - Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.0.0-beta.2.4)
 - Simple RTL file.
 - Jetpack ready.
@@ -149,7 +150,7 @@ Some basics about the Sass and CSS files that come with UnderStrap:
 - Go to Appearance → Themes
 - Activate the UnderStrap theme
 
-## Developing With NPM, Bower, Gulp and SASS and [Browser Sync][1]
+## Developing With npm, Bower, Gulp and SASS and [Browser Sync][1]
 
 ### Installing Dependencies
 - Make sure you have installed Node.js, Bower, and Browser-Sync on your computer globally
@@ -188,4 +189,3 @@ Licenses & Credits
 - Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
 and of course
 - jQuery: https://jquery.org | (Code licensed under MIT)
-- WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
