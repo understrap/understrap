@@ -27,7 +27,6 @@ function bootstrap_wp_gallery( $output, $attr ) {
 		'captiontag' => 'div',
 		'columns'    => 3,
 		'size'       => 'thumbnail',
-		'include'    => '',
 		'exclude'    => ''
 	), $attr ) );
 

@@ -7,14 +7,14 @@ Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a so
 Including Font Awesome support, build-in widget slider and much more you need for basic websites.
 A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/holger1411/understrap
 A child theme is available on Github, too: https://github.com/holger1411/understrap-child;
-Version: 0.4.4
+Version: 0.4.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: understrap
-Tags: light, red, white, one-column, responsive-layout, custom-header, custom-menu, featured-images, flexible-header, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-UnderStrap is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+UnderStrap is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 
 Resource Licenses:
 Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
