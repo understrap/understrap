@@ -21,7 +21,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
 
-            - ** Pre-Release 0.4.5 Jun. 20th 2016 **
+            - **0.4.5 Jun. 20th 2016 **
                   - Adding right sanitizing function for customizer
                   - Fixing some escaping problems
                   - Removing "add script" customizer function 
