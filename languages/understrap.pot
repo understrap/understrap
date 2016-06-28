@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"POT-Revision-Date: Fri Apr 15 2016 08:16:08 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Tue Jun 28 2016 09:43:47 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -45,38 +45,7 @@ msgstr ""
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc"
 
-#: ../content-single.php:29 ../content.php:33 ../content-page.php:25 ../loop-
-#: templates/content-single.php:29 ../loop-templates/content.php:33 ../loop-
-#: templates/content-page.php:25
-msgid "Pages:"
-msgstr ""
-
-#. Name of the template
-msgid "Full Width Page"
-msgstr ""
-
-#: ../content-none.php:15 ../loop-templates/content-none.php:16
-msgid "Nothing Found"
-msgstr ""
-
-#: ../content-none.php:23 ../loop-templates/content-none.php:24
-#, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: ../content-none.php:27 ../loop-templates/content-none.php:28
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: ../content-none.php:32 ../loop-templates/content-none.php:33
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-
-#: ../comments.php:28 ../releases/1458664806/comments.php:28
+#: ../comments.php:28
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -84,22 +53,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../comments.php:35 ../comments.php:56 ../releases/1458664806/comments.php:35 ..
-#: /releases/1458664806/comments.php:56
+#: ../comments.php:35 ../comments.php:56
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:37 ../comments.php:58 ../releases/1458664806/comments.php:37 ..
-#: /releases/1458664806/comments.php:58
+#: ../comments.php:37 ../comments.php:58
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: ../comments.php:40 ../comments.php:61 ../releases/1458664806/comments.php:40 ..
-#: /releases/1458664806/comments.php:61
+#: ../comments.php:40 ../comments.php:61
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: ../comments.php:72 ../releases/1458664806/comments.php:72
+#: ../comments.php:72
 msgid "Comments are closed."
 msgstr ""
 
@@ -117,50 +83,13 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: ../header.php:31
+#: ../header.php:30
 msgid "Skip to content"
 msgstr ""
 
 #: ../search.php:23
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
-
-#: ../content-page.php:34 ../inc/template-tags.php:122 ../loop-templates/content-
-#: page.php:34
-msgid "Edit"
-msgstr ""
-
-#: ../comment-form.php:5
-msgid "Write Comment."
-msgstr ""
-
-#: ../comment-form.php:5
-msgid "*Mandatory"
-msgstr ""
-
-#: ../comment-form.php:13 ../inc/custom-comments.php:12
-msgid "Name"
-msgstr ""
-
-#: ../comment-form.php:19
-msgid "E-Mail"
-msgstr ""
-
-#: ../comment-form.php:19
-msgid "Not public."
-msgstr ""
-
-#: ../comment-form.php:24 ../inc/custom-comments.php:16
-msgid "Website"
-msgstr ""
-
-#: ../comment-form.php:29
-msgid "Your Comment"
-msgstr ""
-
-#: ../comment-form.php:36
-msgid "Send comment."
 msgstr ""
 
 #: ../404.php:22
@@ -189,6 +118,14 @@ msgstr ""
 
 #: ../searchform.php:11
 msgid "Search &hellip;"
+msgstr ""
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr ""
+
+#. Name of the template
+msgid "Empty Page Template"
 msgstr ""
 
 #: ../inc/widgets.php:10
@@ -223,188 +160,55 @@ msgstr ""
 msgid "Loop Slider Content"
 msgstr ""
 
-#: ../inc/customizer.php:68
-msgid "Add scripts"
-msgstr ""
-
-#: ../inc/customizer.php:77
-msgid "Add custom JS code here"
-msgstr ""
-
-#: ../inc/extras.php:60
+#: ../inc/template-tags.php:18
 #, php-format
-msgid "Page %s"
-msgstr ""
-
-#: ../inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr ""
-
-#: ../inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgid " Edited %4$s"
 msgstr ""
 
 #: ../inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: ../inc/template-tags.php:52
-msgid "Post navigation"
-msgstr ""
-
-#: ../inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr ""
-
-#: ../inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: ../inc/template-tags.php:82
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: ../inc/template-tags.php:87
+#: ../inc/template-tags.php:34
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:104 ../inc/template-tags.php:110
+#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
 msgid ", "
 msgstr ""
 
-#: ../inc/template-tags.php:106
+#: ../inc/template-tags.php:53
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: ../inc/template-tags.php:112
+#: ../inc/template-tags.php:59
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#: ../inc/template-tags.php:118
+#: ../inc/template-tags.php:65
 msgid "Leave a comment"
 msgstr ""
 
-#: ../inc/template-tags.php:118
+#: ../inc/template-tags.php:65
 msgid "1 Comment"
 msgstr ""
 
-#: ../inc/template-tags.php:118
+#: ../inc/template-tags.php:65
 #, php-format
 msgid "% Comments"
 msgstr ""
 
-#: ../inc/template-tags.php:139
+#. translators: %s: Name of current post
+#: ../inc/template-tags.php:72
 #, php-format
-msgid "Category: %s"
-msgstr ""
-
-#: ../inc/template-tags.php:141
-#, php-format
-msgid "Tag: %s"
-msgstr ""
-
-#: ../inc/template-tags.php:143
-#, php-format
-msgid "Author: %s"
-msgstr ""
-
-#: ../inc/template-tags.php:145
-#, php-format
-msgid "Year: %s"
-msgstr ""
-
-#: ../inc/template-tags.php:145
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: ../inc/template-tags.php:147
-#, php-format
-msgid "Month: %s"
-msgstr ""
-
-#: ../inc/template-tags.php:147
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: ../inc/template-tags.php:149
-#, php-format
-msgid "Day: %s"
-msgstr ""
-
-#: ../inc/template-tags.php:149
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: ../inc/template-tags.php:151
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr ""
-
-#: ../inc/template-tags.php:153
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr ""
-
-#: ../inc/template-tags.php:155
-msgctxt "post format archive title"
-msgid "Images"
-msgstr ""
-
-#: ../inc/template-tags.php:157
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr ""
-
-#: ../inc/template-tags.php:159
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr ""
-
-#: ../inc/template-tags.php:161
-msgctxt "post format archive title"
-msgid "Links"
-msgstr ""
-
-#: ../inc/template-tags.php:163
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr ""
-
-#: ../inc/template-tags.php:165
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr ""
-
-#: ../inc/template-tags.php:167
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr ""
-
-#: ../inc/template-tags.php:169
-#, php-format
-msgid "Archives: %s"
-msgstr ""
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: ../inc/template-tags.php:173
-#, php-format
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: ../inc/template-tags.php:175
-msgid "Archives"
+msgid "Edit %s"
 msgstr ""
 
 #: ../inc/setup.php:48
@@ -415,13 +219,51 @@ msgstr ""
 msgid "Read More..."
 msgstr ""
 
+#: ../inc/custom-comments.php:12
+msgid "Name"
+msgstr ""
+
 #: ../inc/custom-comments.php:14
 msgid "Email"
+msgstr ""
+
+#: ../inc/custom-comments.php:16
+msgid "Website"
 msgstr ""
 
 #: ../inc/custom-comments.php:25
 msgctxt "noun"
 msgid "Comment"
+msgstr ""
+
+#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
+#: /loop-templates/content-page.php:25
+msgid "Pages:"
+msgstr ""
+
+#: ../loop-templates/content-none.php:16
+msgid "Nothing Found"
+msgstr ""
+
+#: ../loop-templates/content-none.php:24
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../loop-templates/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../loop-templates/content-page.php:34
+msgid "Edit"
 msgstr ""
 
 #. Name of the theme
@@ -434,10 +276,9 @@ msgstr ""
 
 #. Description of the theme
 msgid ""
-"Combination of Automattic´s _s theme and Bootstrap SASS. Made as a solid "
-"starting point for your next theme project and WordPress website. Including "
-"Font Awesome support, build-in widget slider and much more you need for "
-"basic websites."
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as parent theme. It is up to you."
 msgstr ""
 
 #. Author of the theme
