@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"PO-Revision-Date: Tue Jun 28 2016 09:47:07 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Mon Jul 04 2016 09:14:23 GMT+0200 (CEST)\n"
 "Last-Translator: holger <office@holgerkoenemann.de>\n"
 "Language-Team: \n"
 "Language: German\n"
@@ -43,30 +43,17 @@ msgstr ""
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc"
 
-#. Name of the template
-msgid "Empty Page Template"
-msgstr "Leeres Seiten- Template"
+#: ../author.php:27
+msgid "About:"
+msgstr "Über:"
 
-#: ../inc/template-tags.php:18
-#, php-format
-msgid " Edited %4$s"
-msgstr "Bearbeitet:  %4$s"
+#: ../author.php:34
+msgid "Profile"
+msgstr "Profil"
 
-#. translators: %s: Name of current post
-#: ../inc/template-tags.php:72
-#, php-format
-msgid "Edit %s"
-msgstr "Bearbeite %s"
-
-#. Description of the theme
-msgid ""
-"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
-"starting point for your next theme project and WordPress website. Use it as "
-"starter theme or as parent theme. It is up to you."
-msgstr ""
-"Kombination von Automattic´s _s Starter Theme und Bootstrap 4. Entwickelt "
-"als solider Startpunkt für die eigenen Theme Entwicklung. UnderStrap kann "
-"als Starter Theme oder als Theme Framework genutzt werden."
+#: ../author.php:38
+msgid "Posts by"
+msgstr "Beiträge von"
 
 #: ../comments.php:28
 #, php-format
@@ -91,6 +78,10 @@ msgstr "Neuere Kommentare &rarr;"
 #: ../comments.php:72
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen"
+
+#: ../author.php:32 ../inc/custom-comments.php:16
+msgid "Website"
+msgstr "Webseite"
 
 #: ../footer.php:24
 msgid "http://wordpress.org/"
@@ -148,6 +139,10 @@ msgstr "Suche &hellip;"
 msgid "Full Width Page"
 msgstr "Volle Breite"
 
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "Leeres Seiten- Template"
+
 #: ../inc/widgets.php:10
 msgid "Sidebar"
 msgstr "Sidebar"
@@ -179,6 +174,11 @@ msgstr "Slider Zeit (in ms)"
 #: ../inc/customizer.php:57
 msgid "Loop Slider Content"
 msgstr "Slider Inhalt wiederholen?"
+
+#: ../inc/template-tags.php:18
+#, php-format
+msgid " Edited %4$s"
+msgstr "Bearbeitet:  %4$s"
 
 #: ../inc/template-tags.php:29
 #, php-format
@@ -219,6 +219,12 @@ msgstr "1 Kommentar"
 msgid "% Comments"
 msgstr "% Kommentare"
 
+#. translators: %s: Name of current post
+#: ../inc/template-tags.php:72
+#, php-format
+msgid "Edit %s"
+msgstr "Bearbeite %s"
+
 #: ../inc/setup.php:48
 msgid "Primary Menu"
 msgstr "Hauptmenü"
@@ -234,10 +240,6 @@ msgstr "Name"
 #: ../inc/custom-comments.php:14
 msgid "Email"
 msgstr "E-Mail"
-
-#: ../inc/custom-comments.php:16
-msgid "Website"
-msgstr "Webseite"
 
 #: ../inc/custom-comments.php:25
 msgctxt "noun"
@@ -287,6 +289,16 @@ msgstr "UnderStrap"
 #. Theme URI of the theme
 msgid "http://understrap.com"
 msgstr "http://understrap.com"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as parent theme. It is up to you."
+msgstr ""
+"Kombination von Automattic´s _s Starter Theme und Bootstrap 4. Entwickelt "
+"als solider Startpunkt für die eigenen Theme Entwicklung. UnderStrap kann "
+"als Starter Theme oder als Theme Framework genutzt werden."
 
 #. Author of the theme
 msgid "Holger Koenemann"

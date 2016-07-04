@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"POT-Revision-Date: Tue Jun 28 2016 09:43:47 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -67,6 +67,22 @@ msgstr ""
 
 #: ../comments.php:72
 msgid "Comments are closed."
+msgstr ""
+
+#: ../author.php:27
+msgid "About:"
+msgstr ""
+
+#: ../author.php:32 ../inc/custom-comments.php:16
+msgid "Website"
+msgstr ""
+
+#: ../author.php:34
+msgid "Profile"
+msgstr ""
+
+#: ../author.php:38
+msgid "Posts by"
 msgstr ""
 
 #: ../footer.php:24
@@ -225,10 +241,6 @@ msgstr ""
 
 #: ../inc/custom-comments.php:14
 msgid "Email"
-msgstr ""
-
-#: ../inc/custom-comments.php:16
-msgid "Website"
 msgstr ""
 
 #: ../inc/custom-comments.php:25
