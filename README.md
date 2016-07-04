@@ -20,6 +20,9 @@ UnderStrap is released under the terms of the GPL version 2 or (at your option) 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
+            - **Pre-Release 0.4.6 **
+                  - Adding author.php template with author infos
+                  - Correct language file + german translation
 
             - **0.4.5 Jun. 20th 2016 **
                   - Adding right sanitizing function for customizer
