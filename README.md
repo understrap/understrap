@@ -1,4 +1,4 @@
-Start talking: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/holger1411/understrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understrap.svg?maxAge=2592000?style=flat-square)](https://gitter.im/holger1411/understrap)
 
 ## About
 
