@@ -14,7 +14,7 @@ get_header(); ?>
 
         <div class="row">
         
-    	    <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
                
                     <main id="main" class="site-main" role="main">
                         
@@ -26,13 +26,20 @@ get_header(); ?>
 
                             <h1><?php esc_html_e( 'About:', 'understrap' ); ?> <?php echo $curauth->nickname; ?></h1>
 
-                            <?php echo get_avatar($curauth->ID); ?>
+                            <?php if ( ! empty( $curauth->ID ) ) : ?>
+                                <?php echo get_avatar($curauth->ID); ?>
+                            <?php endif; ?>
 
                             <dl>
+                                <?php if ( ! empty( $curauth->user_url ) ) : ?>
                                 <dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
                                 <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
+                                <?php endif; ?>
+
+                                <?php if ( ! empty( $curauth->user_description ) ) : ?>
                                 <dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
                                 <dd><?php echo $curauth->user_description; ?></dd>
+                                <?php endif; ?>
                             </dl>
                         
                             <h2><?php esc_html_e( 'Posts by', 'understrap' ); ?> <?php echo $curauth->nickname; ?>:</h2>
@@ -64,7 +71,7 @@ get_header(); ?>
                     </ul>
                 </main><!-- #main -->
                
-    	    </div><!-- #primary -->
+            </div><!-- #primary -->
 
         <?php get_sidebar(); ?>
 
