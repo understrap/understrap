@@ -4584,16 +4584,12 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-size: inherit; }
 
 .alignright {
-  float: right; }
+  float: right;
+  padding-left: 10px; }
 
 .alignleft {
-  float: left; }
-
-img.alignleft {
+  float: left;
   padding-right: 10px; }
-
-img.alignright {
-  padding-left: 10px; }
 
 .aligncenter {
   margin: 0px auto; }

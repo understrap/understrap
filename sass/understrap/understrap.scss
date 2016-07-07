@@ -38,18 +38,12 @@ font-size:inherit;
 
 .alignright {
 	float: right;
+  padding-left:10px;
 }
 
 .alignleft {
 	float: left;
-}
-
-img.alignleft{
   padding-right:10px;
-}
-
-img.alignright{
-  padding-left:10px;
 }
 
 .aligncenter {
