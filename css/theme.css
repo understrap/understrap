@@ -4589,6 +4589,12 @@ a.bg-danger:focus, a.bg-danger:hover {
 .alignleft {
   float: left; }
 
+img.alignleft {
+  padding-right: 10px; }
+
+img.alignright {
+  padding-left: 10px; }
+
 .aligncenter {
   margin: 0px auto; }
 
@@ -4694,7 +4700,7 @@ a.skip-link {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
