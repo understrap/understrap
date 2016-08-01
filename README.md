@@ -21,6 +21,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
             - **Pre-Release 0.4.6 **
+                  - Update to Bootstrap 4 Alpha 3
                   - Adding basic padding to aligned content images
                   - Adding author.php template with author infos
                   - Correct language file + german translation
