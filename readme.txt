@@ -20,7 +20,13 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
 
-            - ** Pre-Release 0.4.5 Jun. 20th 2016 **
+            - ** 0.4.6 Aug. 1st 2016 **
+                  - Update to Bootstrap 4 Alpha 3
+                  - Adding basic padding to aligned content images
+                  - Adding author.php template with author infos
+                  - Correct language file + german translation
+
+            - ** 0.4.5 Jun. 20th 2016 **
                   - Adding right sanitizing function for customizer
                   - Fixing some escaping problems
                   - Removing "add script" customizer function 
