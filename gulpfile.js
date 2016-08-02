@@ -60,7 +60,7 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'))
     .pipe(browserSync.stream());
 }); 
