@@ -32,6 +32,7 @@ var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 
 // Run: 
 // gulp sass
@@ -62,7 +63,7 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'))
-    .pipe(browserSync.stream());
+    .pipe(reload({stream: true}));
 }); 
 
 gulp.task('cleancss', function() {
