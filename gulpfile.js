@@ -30,8 +30,53 @@ var uglify = require('gulp-uglify');
 var merge2 = require('merge2');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
+var clone = require('gulp-clone');
+var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+
+
+// Run: 
+// gulp sass + cssnano + rename
+// Prepare the min.css for production (with 2 pipes to be sure that "child-theme.css" == "child-theme.min.css")
+gulp.task('scss-for-prod', function() {
+    var source =  gulp.src('./sass/*.scss')
+        .pipe(plumber())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sass());
+
+    var pipe1 = source.pipe(clone())
+        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe(gulp.dest('./css'));
+
+    var pipe2 = source.pipe(clone())
+        .pipe(cssnano())
+        .pipe(rename({suffix: '.min'})) 
+        .pipe(gulp.dest('./css'));
+
+    return merge(pipe1, pipe2);
+});
+
+
+// Run: 
+// gulp sourcemaps + sass + reload(browserSync)
+// Prepare the child-theme.css for the developpment environment
+gulp.task('scss-for-dev', function() {
+    gulp.src('./sass/*.scss')
+        .pipe(plumber())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sass())
+        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe(gulp.dest('./css'))
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('watch-scss', ['browser-sync'], function () {
+    gulp.watch('./sass/**/*.scss', ['scss-for-dev']);
+});
+
+
+
 
 // Run: 
 // gulp sass
