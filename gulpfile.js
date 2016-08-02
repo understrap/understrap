@@ -30,6 +30,7 @@ var uglify = require('gulp-uglify');
 var merge2 = require('merge2');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 
 // Run: 
@@ -55,9 +56,11 @@ gulp.task('watch', function () {
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/*.css')
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./css/'))
     .pipe(browserSync.stream());
 }); 
