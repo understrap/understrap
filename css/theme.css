@@ -4771,7 +4771,8 @@ a.skip-link {
     margin-top: 4px; }
 
 .navbar .collapsing, .navbar .collapse.in {
-  width: 100%; }
+  width: 100%;
+  float: left; }
 
 .navbar-dark .navbar-toggle {
   border: 1px solid #fff; }
