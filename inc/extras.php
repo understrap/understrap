@@ -24,3 +24,16 @@ function understrap_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'understrap_body_classes' );
+
+// Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
+
+add_filter( 'body_class', 'adjust_body_class' );
+function adjust_body_class( $classes ) {
+ 
+    foreach ( $classes as $key => $value ) {
+        if ( $value == 'tag' ) unset( $classes[ $key ] );
+    }
+ 
+    return $classes;
+ 
+}
