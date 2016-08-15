@@ -20,8 +20,10 @@ UnderStrap is released under the terms of the GPL version 2 or (at your option) 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
-            - ** Pre Release 0.4.7 **
+            - ** 0.4.7 Aug. 15the 2016 **
+                  - Fixing problem with tag page
                   - Fixing Navbar "hopping"
+                  - Global bugfixing and streamlining performance issues
 
             - ** 0.4.6 Aug. 1st 2016 **
                   - Update to Bootstrap 4 Alpha 3
