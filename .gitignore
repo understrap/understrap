@@ -1,27 +1,10 @@
-.brackets.json
-
-.idea
-
-.idea/.name
-
-.idea/compiler.xml
-
-.idea/copyright/profiles_settings.xml
-
-.idea/encodings.xml
-
-*.xml
-
-*.iml
-
-.idea/watcherTasks.xml
-
-.idea/watcherTasks.xml
-
-.sass-cache
 
 bower_components
 
 node_modules
 
 understrap.zip
+
+src
+
+dist

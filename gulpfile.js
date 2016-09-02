@@ -77,8 +77,6 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 });
 
 
-
-
 // Run: 
 // gulp sass
 // Compiles SCSS files in CSS
@@ -217,4 +215,10 @@ gulp.task('copy-assets', function() {
 // Copy Tether CSS files
     gulp.src(basePaths.bower + 'tether/dist/css/*.css')
         .pipe(gulp.dest(basePaths.dev + '/css'));
+});
+
+// Run // gulp dist // Copies the files to the dist folder for distributon 
+gulp.task('dist', function() { 
+    gulp.src(['!sass','!bower_components', '!node_modules','!src','!dist','!bower.json', '!gulpfile.js', '!package.json', '*']) 
+    .pipe(gulp.dest('dist/')) 
 });
