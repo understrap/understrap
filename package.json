@@ -4,6 +4,8 @@
   "description": "Wordpress Theme framework",
   "main": "index.js",
   "scripts": {
+    "install": "bower install && gulp copy-assets",
+    "start": "gulp watch-bs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
