@@ -24,21 +24,25 @@
   },
   "homepage": "https://github.com/holger1411/understrap",
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
     "bower": "^1.7.9",
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
+    "gulp-clone": "^1.0.0",
     "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-ignore": "^2.0.1",
+    "gulp-merge": "^0.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.0",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.6",
-    "gulp-clone": "^1.0.0",
-    "gulp-merge": "^0.1.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-sourcemaps": "^1.6.0",
     "merge2": "^1.0.2",
-    "browser-sync": "^2.13.0"
+    "owl.carousel": "^2.1.4",
+    "undescores-for-npm": "^1.0.0"
   }
 }

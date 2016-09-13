@@ -24,11 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "~4.6.3",
-    "_s": "https://github.com/Automattic/_s.git",
-    "OwlCarousel2": "2.1.6",
-    "bootstrap": "v4.0.0-alpha.3",
-    "tether": "~1.3.2"
   },
   "_source": "https://github.com/holger1411/understrap.git",
   "_target": "~0.4.7",
