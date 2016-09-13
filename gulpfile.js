@@ -1,6 +1,7 @@
 // Defining base pathes
 var basePaths = {
     bower: './bower_components/',
+    node: './node_modules/',
     dev: './src/'
 };
 
@@ -181,11 +182,11 @@ gulp.task('copy-assets', function() {
 ////////////////// End Bootstrap 4 Assets /////////////////////////
 
 // Copy all Font Awesome Fonts
-    gulp.src(basePaths.bower + 'fontawesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+    gulp.src(basePaths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
 
 // Copy all Font Awesome SCSS files
-    gulp.src(basePaths.bower + 'fontawesome/scss/*.scss')
+    gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
         .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
 
 // owl JS files
