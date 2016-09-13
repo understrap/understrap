@@ -173,11 +173,11 @@ gulp.task('copy-assets', function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all Bootstrap JS files 
-    gulp.src(basePaths.bower + 'bootstrap/dist/js/**/*.js')
+    gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
 
 // Copy all Bootstrap SCSS files
-    gulp.src(basePaths.bower + 'bootstrap/scss/**/*.scss')
+    gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
        .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
 ////////////////// End Bootstrap 4 Assets /////////////////////////
 
@@ -190,31 +190,31 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
 
 // owl JS files
-    gulp.src(basePaths.bower + 'OwlCarousel2/dist/*.js')
+    gulp.src(basePaths.node + 'owl.carousel/dist/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy all Owl2 SCSS files
-    gulp.src(basePaths.bower + 'OwlCarousel2/src/scss/*.scss')
+    gulp.src(basePaths.node + 'owl.carousel/src/scss/*.scss')
        .pipe(gulp.dest(basePaths.dev + '/sass/owl-carousel2'));
 
 // Copy all Owl2 CSS files
-    gulp.src(basePaths.bower + 'OwlCarousel2/dist/assets/*.css')
+    gulp.src(basePaths.node + 'owl.carousel/dist/assets/*.css')
         .pipe(gulp.dest(basePaths.dev + '/css'));
 
 // Copy jQuery
-    gulp.src(basePaths.bower + 'jquery/dist/*.js')
+    gulp.src(basePaths.node + 'jquery/dist/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // _s JS files
-    gulp.src(basePaths.bower + '_s/js/*.js')
+    gulp.src(basePaths.node + 'underscores-for-npm/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy Tether JS files
-    gulp.src(basePaths.bower + 'tether/dist/js/*.js')
+    gulp.src(basePaths.node + 'tether/dist/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy Tether CSS files
-    gulp.src(basePaths.bower + 'tether/dist/css/*.css')
+    gulp.src(basePaths.node + 'tether/dist/css/*.css')
         .pipe(gulp.dest(basePaths.dev + '/css'));
 });
 
