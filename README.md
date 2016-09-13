@@ -20,6 +20,11 @@ UnderStrap is released under the terms of the GPL version 2 or (at your option) 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
+            - ** 0.4.8 Pre-Release **
+                  - Removing Bower and replace the dependency managment copletely with npm
+                  - Update to Bootstrap 4 Alpha 4
+
+
             - ** 0.4.7 Aug. 15the 2016 **
                   - Fixing problem with tag page
                   - Fixing Navbar "hopping"
@@ -122,8 +127,8 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 - Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
 - Comes with Bootstrap (v4) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff.
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.6.0)
-- Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.0.0-beta.2.4)
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.6.3)
+- Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.1.4)
 - Simple RTL file.
 - Jetpack ready.
 - WooCommerce support.
@@ -161,12 +166,12 @@ Some basics about the Sass and CSS files that come with UnderStrap:
 - Go to Appearance → Themes
 - Activate the UnderStrap theme
 
-## Developing With npm, Bower, Gulp and SASS and [Browser Sync][1]
+## Developing With npm, Gulp and SASS and [Browser Sync][1]
 
 ### Installing Dependencies
-- Make sure you have installed Node.js, Bower, and Browser-Sync on your computer globally
+- Make sure you have installed Node.js and Browser-Sync* (* optional, if you wanna use it) on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
-- Run: `$ npm install` then: `$ bower install` and finally: `$ gulp copy-assets`
+- Run: `$ npm install` and then: `$ gulp copy-assets`
 
 ### Running
 To work and compile your Sass files on the fly start:
