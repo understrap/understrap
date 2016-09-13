@@ -165,10 +165,8 @@ gulp.task('scripts', function() {
 // gulp copy-assets. 
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
-
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task('copy-assets', function() {
-
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all Bootstrap JS files 
@@ -217,7 +215,9 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest(basePaths.dev + '/css'));
 });
 
-// Run // gulp dist // Copies the files to the dist folder for distributon 
+// Run 
+// gulp dist 
+// Copies the files to the /dist folder for distributon 
 gulp.task('dist', function() { 
     gulp.src(['!sass','!bower_components', '!node_modules','!src','!dist','!bower.json', '!gulpfile.js', '!package.json', '*']) 
     .pipe(gulp.dest('dist/')) 
