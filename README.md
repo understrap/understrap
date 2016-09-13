@@ -21,9 +21,8 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
             - ** 0.4.8 Pre-Release **
-                  - Removing Bower and replace the dependency managment copletely with npm
+                  - Removing Bower and replace the dependency managment with npm
                   - Update to Bootstrap 4 Alpha 4
-
 
             - ** 0.4.7 Aug. 15the 2016 **
                   - Fixing problem with tag page
@@ -144,7 +143,7 @@ Why not add a well known and supported layout framework to have a solid, clean a
 
 Some basics about the Sass and CSS files that come with UnderStrap:
 - The theme itself uses the `/style.css`file just to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
-- The `/css/theme.css` file provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
+- The `/css/theme.css` and it´s minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
 
                   - 1 "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
                   - 2 "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // <--------- All the Bootstrap stuff - Don´t edit this!
