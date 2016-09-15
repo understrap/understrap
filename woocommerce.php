@@ -21,7 +21,16 @@ get_header(); ?>
             <main id="main" class="site-main" role="main">
 
                 <!-- The WooCommerce loop -->
-                <?php woocommerce_content(); ?>
+
+                    <?php
+                        if (is_singular('product')) {
+                            woocommerce_content();
+                        } else {
+                            //For ANY product archive.
+                            //Product taxonomy, product search or /shop landing page etc.
+                            woocommerce_get_template('archive-product.php');
+                        }
+                    ?>
 
             </main><!-- #main -->
            
