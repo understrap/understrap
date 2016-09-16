@@ -74,6 +74,9 @@ function understrap_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	
+	// Set up the Wordpress Theme logo feature.
+	add_theme_support('custom-logo');
 }
 endif; // understrap_setup
 add_action( 'after_setup_theme', 'understrap_setup' );
