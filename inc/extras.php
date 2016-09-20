@@ -37,3 +37,12 @@ function adjust_body_class( $classes ) {
     return $classes;
  
 }
+
+// Filter custom logo with correct classes
+add_filter('get_custom_logo','change_logo_class');
+function change_logo_class($html)
+{
+	$html = str_replace('class="custom-logo"', 'class="img-responsive"', $html);
+	$html = str_replace('class="custom-logo-link"', 'class="navbar-brand" custom-logo-link', $html);
+	return $html;
+}
