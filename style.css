@@ -7,7 +7,7 @@ Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a so
 That downloads everything and move it in place so that you can recompile your CSS and JS files;
 A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/holger1411/understrap
 A child theme is available on Github, too: https://github.com/holger1411/understrap-child;
-Version: 0.4.7
+Version: 0.4.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: understrap
@@ -29,7 +29,7 @@ WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstr
 This file is just used to identify the theme in WordPress.
 The compiled CSS output can be found in /css/theme.css
 The SASS sources for it can be found in /sass/
-The dependencies can be found in /src/ after "gulp copy-assets" terminal command
+The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
 
 ...and now go out and play!
 */

@@ -20,20 +20,26 @@ UnderStrap is released under the terms of the GPL version 2 or (at your option) 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
-            - ** 0.4.8 Pre-Release **
+            - ** 0.4.8 Oct. 10th 2016 **
                   - Removing Bower and replace the dependency managment with npm
                   - Update to Bootstrap 4 Alpha 4
+                  - Optimizing WooCommerce loop -  Thx @typeplus
+                  - Updating all dependencies
+                  - Add WP Theme logo feature - Thx @jessijean
 
-            - ** 0.4.7 Aug. 15the 2016 **
+
+            - ** 0.4.7 Aug. 15th 2016 **
                   - Fixing problem with tag page
                   - Fixing Navbar "hopping"
                   - Global bugfixing and streamlining performance issues
+
 
             - ** 0.4.6 Aug. 1st 2016 **
                   - Update to Bootstrap 4 Alpha 3
                   - Adding basic padding to aligned content images
                   - Adding author.php template with author infos
                   - Correct language file + german translation
+
 
             - ** 0.4.5 Jun. 20th 2016 **
                   - Adding right sanitizing function for customizer
@@ -43,6 +49,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
                   - Load hero area on index.php conditionally
                   - Remove unused code, files and dependencies
                   - Adding credits for WP Bootstrap Navwalker by Edward McIntyre
+
 
             - ** 0.4.4 Jun. 18th 2016 **
                    - Adding the new empty.php page template. Comes just with header, footer and a content area without markup. Good for build up landingpages. An empty canvas for your Bootstrap markup.
