@@ -7,7 +7,7 @@ I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into
 That’s what UnderStrap is. 
 You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
 
-At the moment, UnderStrap is in a very early stage. But if you wan’t, feel free to use it for your own WordPress theme!
+At the moment, UnderStrap is in a very early stage. But if you want, feel free to use it for your own WordPress theme!
 
 # UnderStrap WordPress Theme Framework
 
