@@ -145,7 +145,6 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 - Uses a single and minified CSS file for all the basic stuff.
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.6.3)
 - Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.1.4)
-- Simple RTL file.
 - Jetpack ready.
 - WooCommerce support.
 - [Child Theme](https://github.com/holger1411/understrap-child) ready.
