@@ -16,14 +16,14 @@ function understrap_scripts() {
 
 	// menu - vertical page association
 	if ( is_page_template( 'page-templates/vertical-one-page.php' ) || is_home() || is_single() ) {
-		wp_enqueue_script('vertical-one-page', get_template_directory_uri() . '/js/vertical-one-page.js', array('jquery'), '0.4.8', true);
+		wp_enqueue_script( 'vertical-one-page', get_template_directory_uri() . '/js/vertical-one-page.js', array( 'jquery' ), '0.4.8', true );
 		$page_for_posts = strtolower( get_the_title( get_option( 'page_for_posts' ) ) );
 		$home_url       = home_url();
 		$is_single      = is_single();
 		$vars           = array(
-			'pageForPosts'          => $page_for_posts,
-			'homeUrl'               => $home_url,
-			'isSingle'              => $is_single
+			'pageForPosts' => $page_for_posts,
+			'homeUrl'      => $home_url,
+			'isSingle'     => $is_single
 		);
 		wp_localize_script( 'vertical-one-page', 'vars', $vars );
 	}

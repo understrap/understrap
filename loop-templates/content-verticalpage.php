@@ -8,7 +8,7 @@
 
 <?php global $post ?>
 
-<article id="<?php echo strtolower($post->post_title); ?>" <?php post_class(); ?>>
+<article id="<?php echo strtolower( $post->post_title ); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header">
 
@@ -16,17 +16,17 @@
 
 	</header><!-- .entry-header -->
 
-     <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?> 
-    
+	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+
 	<div class="entry-content">
 
 		<?php the_content(); ?>
 
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			) );
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'after'  => '</div>',
+		) );
 		?>
 
 	</div><!-- .entry-content -->

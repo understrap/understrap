@@ -14,12 +14,12 @@ get_header(); ?>
  * Exclude the posts page from being shown in this layout.
  * Order pages by their order number.
  */
-$exclude = get_option('page_for_posts');
-$args = array(
-	'post_type' => 'page',
-	'post__not_in' => array($exclude),
-	'orderby' => 'menu_order',
-	'order' => 'ASC'
+$exclude = get_option( 'page_for_posts' );
+$args    = array(
+	'post_type'    => 'page',
+	'post__not_in' => array( $exclude ),
+	'orderby'      => 'menu_order',
+	'order'        => 'ASC'
 );
 
 $qry = new WP_Query( $args );
