@@ -3,7 +3,7 @@ Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understr
 ## About
 
 I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
-That’s what UnderStrap is. 
+That’s what UnderStrap is.
 You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
 
 At the moment, UnderStrap is in a very early stage. But if you want, feel free to use it for your own WordPress theme!
@@ -53,7 +53,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
             - ** 0.4.5 Jun. 20th 2016 **
                   - Adding right sanitizing function for customizer
                   - Fixing some escaping problems
-                  - Removing "add script" customizer function 
+                  - Removing "add script" customizer function
                   - Calling all sidebars with "get_sidebar"
                   - Load hero area on index.php conditionally
                   - Remove unused code, files and dependencies
@@ -149,6 +149,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 - WooCommerce support.
 - [Child Theme](https://github.com/holger1411/understrap-child) ready.
 - Translation ready.
+- Multiple Page Templates
 
 ## Starter Theme + HTML Framework = WordPress Theme Framework
 
@@ -210,6 +211,34 @@ The front-page slider is widget driven. Simply add more than one widget to widge
 - Click on Appearance → Widgets.
 - Add two, or more, widgets of any kind to widget area “Hero”.
 - That’s it.
+
+## Page Templates
+
+### Blank Template
+
+The `blank.php` template is useful when working with various page builders and can be used as a starting blank canvas.
+
+### Empty Template
+
+The `empty.php` template displays a header and a footer only. A good starting point for landing pages.
+
+### Full Width Template
+
+The `fullwidthpage.php` template has full width layout without a sidebar.
+
+### Vertical One Page Template
+
+The `vertical-one-page.php` template displays all pages (except the one showing the posts) in a single vertical layout with a sliding navigation.
+Additionally enables the user to control the order of each page by using the order page attribute field.
+
+#### One Page Template How to
+
+ 1. Assuming that you have the following pages: Home, About and Contact
+ 2. Go to Appearance → Menus and add one **custom link** for each page
+ 3. On the URL field type a hash `#` and the name of the page in **lower case** so for example the link for Home becomes `#home`
+ 4. Edit the Home page and set as template the **Vertical One Page** (you only need to do this for the first page)
+ 5. Set the order of each page using the **Order** field from **Page Attributes** so for example if you want to display Home,
+ Contact, About set the Home page to 1, the Contact to 2 and About to 3
 
 [1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
 
