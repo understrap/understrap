@@ -21,6 +21,11 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
 
+            - ** Pre Release 0.5.0 **
+                  - Adding Greek language - Thx @stef-k
+                  - Adding vertical-one-page template for landingpages - Thx @stef-k
+                  
+
             - ** 0.4.9 Oct. 25th 2016 **
                   - Updating to Bootstrap 4 Alpha 5
                   - Using the correct BS4 markup for navbar - Thx @tedgeving
