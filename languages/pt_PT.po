@@ -1,0 +1,311 @@
+# Loco Gettext template
+msgid ""
+msgstr ""
+"Project-Id-Version: understrap\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
+"POT-Creation-Date: 2016-10-27 11:09+0100\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"PO-Revision-Date: 2016-10-27 12:01+0100\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Last-Translator: \n"
+"Language: pt_PT\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc\n"
+
+#: ../comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Uma ideia sobre &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s ideias sobre &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:35 ../comments.php:56
+msgid "Comment navigation"
+msgstr "Navegação Respostas"
+
+#: ../comments.php:37 ../comments.php:58
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentários mais antigos"
+
+#: ../comments.php:40 ../comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "Comentários mais recentes &rarr;"
+
+#: ../comments.php:72
+msgid "Comments are closed."
+msgstr "Comentários estão fechados."
+
+#: ../author.php:27
+msgid "About:"
+msgstr "Sobre:"
+
+#: ../author.php:32 ../inc/custom-comments.php:16
+msgid "Website"
+msgstr "Website"
+
+#: ../author.php:34
+msgid "Profile"
+msgstr "Perfil"
+
+#: ../author.php:38
+msgid "Posts by"
+msgstr "Post por"
+
+#: ../footer.php:24
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: ../footer.php:24
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Orgulhosamente criado com %s"
+
+#: ../footer.php:26
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
+
+#: ../header.php:30
+msgid "Skip to content"
+msgstr "Saltar para o conteúdo"
+
+#: ../search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Procurar resultados para: %s"
+
+#: ../404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ops! Essa página não foi encontrada."
+
+#: ../404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que nada foi encontrado neste local. Talvez tente um dos links abaixo "
+"ou uma pesquisa!"
+
+#: ../404.php:37
+msgid "Most Used Categories"
+msgstr "Categorias mais utilizadas"
+
+#. translators: %1$s: smiley
+#: ../404.php:57
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente procurar nos arquivos mensais. %1$s"
+
+#: ../searchform.php:9 ../searchform.php:13
+msgid "Search"
+msgstr "Pesquisar"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Pesquisar &hellip;"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "Página largura completa"
+
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "Template página vazia"
+
+#: ../inc/widgets.php:10
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: ../inc/widgets.php:20
+msgid "Hero Slider"
+msgstr "Hero Slider"
+
+#: ../inc/widgets.php:30
+msgid "Hero Static"
+msgstr "Hero Static"
+
+#: ../inc/widgets.php:40
+msgid "Footer Full"
+msgstr "Rodapé completo"
+
+#: ../inc/customizer.php:24
+msgid "Slider Settings"
+msgstr "Definições do Slider"
+
+#: ../inc/customizer.php:33
+msgid "Number of slides displaying at once"
+msgstr "Número de slides mostrados de cada vez"
+
+#: ../inc/customizer.php:45
+msgid "Slider Time (in ms)"
+msgstr "Tempo (ms) por slide"
+
+#: ../inc/customizer.php:57
+msgid "Loop Slider Content"
+msgstr "Iterar conteúdo do Slider"
+
+#: ../inc/template-tags.php:18
+#, php-format
+msgid " Edited %4$s"
+msgstr " Editado %4$s"
+
+#: ../inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Colocado em %s"
+
+#: ../inc/template-tags.php:34
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "por %s"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:53
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Colocado em %1$s"
+
+#: ../inc/template-tags.php:59
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiquetas %1$s"
+
+#: ../inc/template-tags.php:65
+msgid "Leave a comment"
+msgstr "Comentar"
+
+#: ../inc/template-tags.php:65
+msgid "1 Comment"
+msgstr "1 Comentário"
+
+#: ../inc/template-tags.php:65
+#, php-format
+msgid "% Comments"
+msgstr "% Comentários"
+
+#. translators: %s: Name of current post
+#: ../inc/template-tags.php:72
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: ../inc/setup.php:48
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: ../inc/setup.php:98
+msgid "Read More..."
+msgstr "Continuar a ler..."
+
+#: ../inc/custom-comments.php:12
+msgid "Name"
+msgstr "Nome"
+
+#: ../inc/custom-comments.php:14
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/custom-comments.php:25
+msgctxt "noun"
+msgid "Comment"
+msgstr "Comentário"
+
+#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
+#: /loop-templates/content-page.php:25
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: ../loop-templates/content-none.php:16
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: ../loop-templates/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto para publicar o primeiro post? <a href=\"%1$s\">Começar aqui</a>."
+
+#: ../loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Lamentamos, nada corresponde aos termos de pesquisa. Por favor, tentar "
+"novamente com algumas palavras-chave diferentes."
+
+#: ../loop-templates/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que não conseguimos encontrar o que procura. Talvez pesquisar ajude."
+
+#: ../loop-templates/content-page.php:34
+msgid "Edit"
+msgstr "Editar"
+
+#. Name of the theme
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Theme URI of the theme
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as parent theme. It is up to you."
+msgstr ""
+"Combinação do tema _s da Automattic com Bootstrap 4. Feito como um sólido "
+"ponto de partida para o tema do seu próximo website WordPress. Usar como "
+"tema de arranque ou como tema base, cabe a si definir."
+
+#. Author of the theme
+msgid "Holger Koenemann"
+msgstr "Holger Koenemann"
+
+#. Author URI of the theme
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"
