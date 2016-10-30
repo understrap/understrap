@@ -1,7 +1,7 @@
 <?php
 /* Inspired by Simon Bradburys cleanup.php fromb4st theme https://github.com/SimonPadbury/b4st */
 /*
-Removes the generator tag with WP version numbers. Hackes will use this to find weak and old WP installs
+Removes the generator tag with WP version numbers. Hackers will use this to find weak and old WP installs
 */
 function no_generator()  { 
     return ''; 
