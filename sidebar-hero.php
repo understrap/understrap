@@ -1,15 +1,15 @@
 <?php if ( is_active_sidebar( 'hero' ) ): ?>
 
-    <!-- ******************* The Hero Widget Area ******************* -->
+  <!-- ******************* The Hero Widget Area ******************* -->
 
-    <div class="wrapper" id="wrapper-hero">
+  <div class="wrapper" id="wrapper-hero">
 
-        <div class="owl-carousel">
+    <div class="owl-carousel">
 
-            <?php dynamic_sidebar( 'hero' ); ?>
+      <?php dynamic_sidebar( 'hero' ); ?>
 
-        </div><!-- .owl-carousel -->
+    </div><!-- .owl-carousel -->
 
-    </div><!-- #wrapper-hero -->
+  </div><!-- #wrapper-hero -->
 
 <?php endif; ?>

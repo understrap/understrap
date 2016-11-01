@@ -10,40 +10,41 @@
  * @package understrap
  */
 
-get_header(); ?>
+ get_header();
+?>
 
 <div class="wrapper" id="woocommerce-wrapper">
-    
-    <div class="container">
-        
-	   <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
-	   
-            <main id="main" class="site-main" role="main">
 
-                <!-- The WooCommerce loop -->
+  <div class="container">
 
-                    <?php
-                        if (is_singular('product')) {
+    <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
 
-                            woocommerce_content();
+      <main id="main" class="site-main" role="main">
 
-                        } else {
+        <!-- The WooCommerce loop -->
 
-                            //For ANY product archive.
-                            //Product taxonomy, product search or /shop landing page etc.
-                            woocommerce_get_template('archive-product.php');
-                            
-                        }
-                    ?>
+        <?php
+          if (is_singular('product')) {
 
-            </main><!-- #main -->
-           
-	    </div><!-- #primary -->
-        
-        <?php get_sidebar(); ?>
-        
-    </div><!-- Container end -->
-    
+            woocommerce_content();
+
+          } else {
+
+            //For ANY product archive.
+            //Product taxonomy, product search or /shop landing page etc.
+            woocommerce_get_template('archive-product.php');
+
+          }
+        ?>
+
+      </main><!-- #main -->
+
+    </div><!-- #primary -->
+
+    <?php get_sidebar(); ?>
+
+  </div><!-- Container end -->
+
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

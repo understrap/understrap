@@ -1,11 +1,11 @@
 <?php if ( is_active_sidebar( 'statichero' ) ): ?>
 
-    <!-- ******************* The Hero Widget Area ******************* -->
-    
-    <div class="wrapper" id="wrapper-static-hero">
+  <!-- ******************* The Hero Widget Area ******************* -->
 
-        <?php dynamic_sidebar( 'statichero' ); ?>
+  <div class="wrapper" id="wrapper-static-hero">
 
-    </div><!-- #wrapper-static-hero -->
+    <?php dynamic_sidebar( 'statichero' ); ?>
+
+  </div><!-- #wrapper-static-hero -->
 
 <?php endif; ?>

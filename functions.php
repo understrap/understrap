@@ -62,7 +62,6 @@ require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 */
 require get_template_directory() . '/inc/bootstrap-wp-gallery.php';
 
-
 /**
 * Load WooCommerce functions.
 */

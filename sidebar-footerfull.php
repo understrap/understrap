@@ -1,11 +1,11 @@
 <?php if ( is_active_sidebar( 'footerfull' ) ): ?>
 
-    <!-- ******************* The Hero Widget Area ******************* -->
+  <!-- ******************* The Hero Widget Area ******************* -->
 
-    <div class="wrapper" id="wrapper-footer-full">
+  <div class="wrapper" id="wrapper-footer-full">
 
-		<?php dynamic_sidebar( 'footerfull' ); ?>
+    <?php dynamic_sidebar( 'footerfull' ); ?>
 
-    </div><!-- #wrapper-footer-full -->
+  </div><!-- #wrapper-footer-full -->
 
 <?php endif; ?>
