@@ -8,7 +8,7 @@
 
 <?php global $post ?>
 
-<article id="<?php echo strtolower( $post->post_title ); ?>" <?php post_class(); ?>>
+<article <?php post_class(); ?> id="<?php echo strtolower( $post->post_title ); ?>">
 
   <header class="entry-header">
 

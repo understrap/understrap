@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 
-  <div id="page" class="hfeed site">
+  <div class="hfeed site" id="page">
 
     <!-- ******************* The Navbar Area ******************* -->
     <div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
@@ -37,11 +37,11 @@
           <div class="navbar-header">
 
             <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target=".exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
+            <button class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target=".exCollapsingNavbar" type="button" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
 
             <!-- Your site title as branding in the menu -->
             <?php if (!has_custom_logo()) { ?>
-              <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+              <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                 <?php bloginfo( 'name' ); ?>
               </a>
             <?php } else { the_custom_logo(); } ?><!-- end custom logo -->

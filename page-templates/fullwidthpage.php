@@ -12,11 +12,11 @@
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-  <div  id="content" class="container">
+  <div class="container" id="content">
 
-    <div id="primary" class="col-md-12 content-area">
+    <div class="col-md-12 content-area" id="primary">
 
-      <main id="main" class="site-main" role="main">
+      <main class="site-main" id="main" role="main">
 
         <?php while ( have_posts() ) : the_post(); ?>
 

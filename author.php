@@ -11,13 +11,13 @@
 
 <div class="wrapper" id="author-wrapper">
 
-  <div  id="content" class="container">
+  <div class="container" id="content">
 
     <div class="row">
 
-      <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+      <div class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 
-        <main id="main" class="site-main" role="main">
+        <main class="site-main" id="main" role="main">
 
           <header class="page-header author-header">
 
@@ -53,7 +53,7 @@
             <?php if ( have_posts() ) : ?>
               <?php while ( have_posts() ) : the_post(); ?>
               <li>
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
+                <a rel="bookmark" href="<?php the_permalink() ?>" title="Permanent Link: <?php the_title(); ?>">
                 <?php the_title(); ?></a>,
                 <?php the_time('d M Y'); ?> in <?php the_category('&');?>
               </li>

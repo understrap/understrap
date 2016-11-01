@@ -6,7 +6,7 @@
  *
  * @package understrap
  */
- 
+
  $the_theme = wp_get_theme();
 ?>
 
@@ -20,12 +20,12 @@
 
           <div class="col-md-12">
 
-            <footer id="colophon" class="site-footer" role="contentinfo">
+            <footer class="site-footer" id="colophon" role="contentinfo">
 
               <div class="site-info">
                 <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ), 'WordPress' ); ?></a>
                 <span class="sep"> | </span>
-                <?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ), '<a href="http://understrap.com/" rel="designer">understrap.com</a>' ); ?>
+                <?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ), '<a rel="designer" href="http://understrap.com/">understrap.com</a>' ); ?>
                 (<?php printf( __( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
               </div><!-- .site-info -->
 

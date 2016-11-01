@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div class="comments-area" id="comments">
 
   <?php // You can start editing here -- including this comment! ?>
 
@@ -31,7 +31,7 @@ if ( post_password_required() ) {
     </h2>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-      <nav id="comment-nav-above" class="comment-navigation" role="navigation">
+      <nav class="comment-navigation" id="comment-nav-above" role="navigation">
         <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'understrap' ); ?></h1>
         <?php if ( get_previous_comments_link() ) { ?>
           <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) ); ?></div>
@@ -51,7 +51,7 @@ if ( post_password_required() ) {
     </ol><!-- .comment-list -->
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-      <nav id="comment-nav-below" class="comment-navigation" role="navigation">
+      <nav class="comment-navigation" id="comment-nav-below" role="navigation">
         <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'understrap' ); ?></h1>
         <?php if ( get_previous_comments_link() ) { ?>
           <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) );?></div>

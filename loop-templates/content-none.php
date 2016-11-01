@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-0" class="post no-results not-found">
+<article class="post no-results not-found" id="post-0">
 
   <header class="page-header">
 
