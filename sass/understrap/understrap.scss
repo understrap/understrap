@@ -50,8 +50,8 @@ img,
 
 // Skip to content link
 a.skip-link {
-  z-index: 1000;
   position: fixed;
+  z-index: 1000;
   top: 0px;
   right: 0px;
 }
@@ -62,8 +62,8 @@ a.skip-link {
 // Bootstrap3 to Bootstrap4 "translation"
 .menu-item {
   float: left;
-  width: auto;
   display: inline;
+  width: auto;
 }
 
 /* Navbar toggle
@@ -98,8 +98,8 @@ a.skip-link {
 .navbar {
   .collapsing,
   .collapse.in {
-    width: 100%;
     float: left;
+    width: 100%;
   }
 }
 
@@ -126,21 +126,21 @@ a.skip-link {
 }
 
 .nav-link {
-  margin-left: .425rem;
   margin-right: .425rem;
+  margin-left: .425rem;
 }
 
 // Fixing BS dropdown in a dropdown
 .dropdown-menu .dropdown-menu {
   position: relative;
   display: block;
+  width: 140px;
+  margin-left: 10px;
   border: none;
   box-shadow: none;
-  margin-left: 10px;
-  width: 140px;
   li {
-    list-style: square;
     padding-left: 0px;
+    list-style: square;
   }
 }
 
