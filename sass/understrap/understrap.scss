@@ -67,10 +67,10 @@ a.skip-link {
 }
 
 /* Navbar toggle
-  Custom button for toggling the `.navbar-collapse`, powered by the collapse
-  JavaScript plugin.
-  Navbar vertical align
-*/
+ * Custom button for toggling the `.navbar-collapse`, powered by the collapse
+ * JavaScript plugin.
+ * Navbar vertical align
+ */
 .navbar-toggle {
   position: relative;
   float: right;
@@ -80,7 +80,9 @@ a.skip-link {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
 
-  /* We remove the `outline` here, but later compensate by attaching `:hover` styles to `:focus`. */
+  /*
+   * We remove the `outline` here, but later compensate by attaching `:hover` styles to `:focus`.
+   */
   &:focus { outline: 0; }
 
   // Bars
