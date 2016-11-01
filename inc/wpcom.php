@@ -12,18 +12,20 @@
  *
  * @global array $themecolors
  */
-function understrap_wpcom_setup() {
-	global $themecolors;
+if ( ! function_exists ( 'understrap_wpcom_setup' ) ) {
+	function understrap_wpcom_setup() {
+		global $themecolors;
 
-	// Set theme colors for third party services.
-	if ( ! isset( $themecolors ) ) {
-		$themecolors = array(
-			'bg'     => '',
-			'border' => '',
-			'text'   => '',
-			'link'   => '',
-			'url'    => '',
-		);
+		// Set theme colors for third party services.
+		if ( ! isset( $themecolors ) ) {
+			$themecolors = array(
+				'bg'     => '',
+				'border' => '',
+				'text'   => '',
+				'link'   => '',
+				'url'    => '',
+			);
+		}
 	}
 }
 add_action( 'after_setup_theme', 'understrap_wpcom_setup' );
