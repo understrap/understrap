@@ -4907,13 +4907,16 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 #wrapper-hero {
   padding: 0px !important; }
 
-.sticky, .gallery-caption, .bypostauthor {
+.sticky,
+.gallery-caption,
+.bypostauthor {
   font-size: inherit; }
 
 .wrapper#wrapper-sticky {
   border-bottom: 1px solid #818a91; }
 
-#wrapper-footer-full, #wrapper-static-hero {
+#wrapper-footer-full,
+#wrapper-static-hero {
   background-color: #eceeef; }
 
 .wp-caption {
@@ -4939,13 +4942,17 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .entry-footer span {
   padding-right: 10px; }
 
-img.wp-post-image, article img, figure, img, #secondary img {
+img.wp-post-image,
+article img,
+figure,
+img,
+#secondary img {
   max-width: 100%;
   height: auto; }
 
 a.skip-link {
-  z-index: 1000;
   position: fixed;
+  z-index: 1000;
   top: 0px;
   right: 0px; }
 
@@ -4954,9 +4961,14 @@ a.skip-link {
 
 .menu-item {
   float: left;
-  width: auto;
-  display: inline; }
+  display: inline;
+  width: auto; }
 
+/* Navbar toggle
+ * Custom button for toggling the `.navbar-collapse`, powered by the collapse
+ * JavaScript plugin.
+ * Navbar vertical align
+ */
 .navbar-toggle {
   position: relative;
   float: right;
@@ -4964,7 +4976,10 @@ a.skip-link {
   padding: 9px 10px;
   background-color: transparent;
   background-image: none;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  /*
+   * We remove the `outline` here, but later compensate by attaching `:hover` styles to `:focus`.
+   */ }
   .navbar-toggle:focus {
     outline: 0; }
   .navbar-toggle .icon-bar {
@@ -4975,9 +4990,10 @@ a.skip-link {
   .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px; }
 
-.navbar .collapsing, .navbar .collapse.in {
-  width: 100%;
-  float: left; }
+.navbar .collapsing,
+.navbar .collapse.in {
+  float: left;
+  width: 100%; }
 
 .navbar-dark .navbar-toggle {
   border: 1px solid #fff; }
@@ -5005,19 +5021,19 @@ a.skip-link {
   margin-left: 0rem; }
 
 .nav-link {
-  margin-left: .425rem;
-  margin-right: .425rem; }
+  margin-right: .425rem;
+  margin-left: .425rem; }
 
 .dropdown-menu .dropdown-menu {
   position: relative;
   display: block;
-  border: none;
-  box-shadow: none;
+  width: 140px;
   margin-left: 10px;
-  width: 140px; }
+  border: none;
+  box-shadow: none; }
   .dropdown-menu .dropdown-menu li {
-    list-style: square;
-    padding-left: 0px; }
+    padding-left: 0px;
+    list-style: square; }
 
 .dropdown-menu .menu-item {
   width: 100%; }
