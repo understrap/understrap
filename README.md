@@ -22,6 +22,8 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 ## Changelog
 
             - ** Pre Release 0.5.0 **
+                  - Update Owl Carousel to 2.2.0
+                  - Update Font Awesome to 4.7.0
                   - Greek language file added - Thx @stef-k
                   - Portugese language file added - Thx @jfig
                   - Adding vertical-one-page template for landingpages - Thx @stef-k
