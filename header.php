@@ -37,7 +37,7 @@
           <div class="navbar-header">
 
             <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-            <button class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target=".exCollapsingNavbar" type="button" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
+            <button class="navbar-toggler hidden-sm-up" type="button"  role="button" data-toggle="collapse" data-target=".exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"></button>
 
             <!-- Your site title as branding in the menu -->
             <?php if (!has_custom_logo()) { ?>
