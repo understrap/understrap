@@ -22,7 +22,8 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 ## Changelog
 
             - ** Pre Release 0.5.0 **
-                  - Adding Greek language - Thx @stef-k
+                  - Greek language file added - Thx @stef-k
+                  - Portugese language file added - Thx @jfig
                   - Adding vertical-one-page template for landingpages - Thx @stef-k
                   - Align code to @mdo ´s coding standards here: http://codeguide.co/ - Thx @maxdmyers
                   - Making all theme functions pluggable to allow child themes to overwrite ´em
