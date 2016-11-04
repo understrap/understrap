@@ -5039,7 +5039,10 @@ a.skip-link {
   .dropdown-menu .menu-item a:hover {
     background-color: #895cd1; }
 
-button {
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
   cursor: pointer; }
 
 /*!

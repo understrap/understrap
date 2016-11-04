@@ -148,6 +148,9 @@ a.skip-link {
   a:hover { background-color: $brand-primary; }
 }
 
-button {
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
   cursor: pointer;
 }
