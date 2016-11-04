@@ -134,7 +134,6 @@ a.skip-link {
 .dropdown-menu .dropdown-menu {
   position: relative;
   display: block;
-  width: 140px;
   margin-left: 10px;
   border: none;
   box-shadow: none;
@@ -147,4 +146,8 @@ a.skip-link {
 .dropdown-menu .menu-item {
   width: 100%;
   a:hover { background-color: $brand-primary; }
+}
+
+button {
+  cursor: pointer;
 }

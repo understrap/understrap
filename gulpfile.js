@@ -15,7 +15,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "localhost/theme_test/",
+    proxy: "localhost/wordpress/",
     notify: false
 };
 
@@ -38,7 +38,7 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
 
-// Run: 
+// Run:
 // gulp sass + cssnano + rename
 // Prepare the min.css for production (with 2 pipes to be sure that "child-theme.css" == "child-theme.min.css")
 gulp.task('scss-for-prod', function() {
@@ -53,14 +53,14 @@ gulp.task('scss-for-prod', function() {
 
     var pipe2 = source.pipe(clone())
         .pipe(cssnano())
-        .pipe(rename({suffix: '.min'})) 
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./css'));
 
     return merge(pipe1, pipe2);
 });
 
 
-// Run: 
+// Run:
 // gulp sourcemaps + sass + reload(browserSync)
 // Prepare the child-theme.css for the developpment environment
 gulp.task('scss-for-dev', function() {
@@ -78,7 +78,7 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 });
 
 
-// Run: 
+// Run:
 // gulp sass
 // Compiles SCSS files in CSS
 gulp.task('sass', function () {
@@ -88,7 +88,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
-// Run: 
+// Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
@@ -96,7 +96,7 @@ gulp.task('watch', function () {
     gulp.watch('./css/theme.css', ['cssnano']);
 });
 
-// Run: 
+// Run:
 // gulp nanocss
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
@@ -108,28 +108,28 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'))
     .pipe(reload({stream: true}));
-}); 
+});
 
 gulp.task('cleancss', function() {
-  return gulp.src('./css/*.min.css', { read: false }) // much faster 
+  return gulp.src('./css/*.min.css', { read: false }) // much faster
     .pipe(ignore('theme.css'))
     .pipe(rimraf());
 });
 
-// Run: 
+// Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
     browserSync.init(browserSyncWatchFiles, browserSyncOptions);
 });
 
-// Run: 
+// Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
 gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
   gulp.src([
@@ -137,7 +137,7 @@ gulp.task('scripts', function() {
     basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
     // Start - All BS4 stuff
-    basePaths.dev + 'js/bootstrap4/bootstrap.js', 
+    basePaths.dev + 'js/bootstrap4/bootstrap.js',
 
     // End - All BS4 stuff
 
@@ -152,7 +152,7 @@ gulp.task('scripts', function() {
     basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
     // Start - All BS4 stuff
-    basePaths.dev + 'js/bootstrap4/bootstrap.js', 
+    basePaths.dev + 'js/bootstrap4/bootstrap.js',
 
     // End - All BS4 stuff
 
@@ -162,15 +162,15 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./js/'));
 });
 
-// Run: 
-// gulp copy-assets. 
+// Run:
+// gulp copy-assets.
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task('copy-assets', function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
-// Copy all Bootstrap JS files 
+// Copy all Bootstrap JS files
     gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
 
@@ -216,10 +216,10 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest(basePaths.dev + '/css'));
 });
 
-// Run 
-// gulp dist 
-// Copies the files to the /dist folder for distributon 
-gulp.task('dist', function() { 
-    gulp.src(['**/*','!sass','!bower_components', '!node_modules','!src','!dist','!bower.json', '!gulpfile.js', '!package.json', '*']) 
-    .pipe(gulp.dest('dist/')) 
+// Run
+// gulp dist
+// Copies the files to the /dist folder for distributon
+gulp.task('dist', function() {
+    gulp.src(['**/*','!sass','!bower_components', '!node_modules','!src','!dist','!bower.json', '!gulpfile.js', '!package.json', '*'])
+    .pipe(gulp.dest('dist/'))
 });
