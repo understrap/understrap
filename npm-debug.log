@@ -1,0 +1,100 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData underscores-for-npm
+20 silly mapToRegistry name underscores-for-npm
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/underscores-for-npm
+24 verbose request uri https://registry.npmjs.org/underscores-for-npm
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 21:05:55
+27 verbose request using bearer token for auth
+28 verbose request id 98d656a9a6f584e8
+29 http request GET https://registry.npmjs.org/underscores-for-npm
+30 http 404 https://registry.npmjs.org/underscores-for-npm
+31 verbose headers { 'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=0',
+31 verbose headers   'content-length': '2',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   date: 'Mon, 07 Nov 2016 20:05:56 GMT',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'x-served-by': 'cache-fra1250-FRA',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1478549155.320647,VS0,VE751',
+31 verbose headers   vary: 'Accept-Encoding' }
+32 silly get cb [ 404,
+32 silly get   { 'content-type': 'application/json',
+32 silly get     'cache-control': 'max-age=0',
+32 silly get     'content-length': '2',
+32 silly get     'accept-ranges': 'bytes',
+32 silly get     date: 'Mon, 07 Nov 2016 20:05:56 GMT',
+32 silly get     via: '1.1 varnish',
+32 silly get     connection: 'keep-alive',
+32 silly get     'x-served-by': 'cache-fra1250-FRA',
+32 silly get     'x-cache': 'MISS',
+32 silly get     'x-cache-hits': '0',
+32 silly get     'x-timer': 'S1478549155.320647,VS0,VE751',
+32 silly get     vary: 'Accept-Encoding' } ]
+33 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/underscores-for-npm
+33 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+33 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+33 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+33 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+33 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+33 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+33 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+33 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+33 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+33 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+33 silly fetchPackageMetaData  error for underscores-for-npm@^1.0.0 { [Error: Registry returned 404 for GET on https://registry.npmjs.org/underscores-for-npm] pkgid: 'underscores-for-npm', statusCode: 404, code: 'E404' }
+34 silly rollbackFailedOptional Starting
+35 silly rollbackFailedOptional Finishing
+36 silly runTopLevelLifecycles Starting
+37 silly runTopLevelLifecycles Finishing
+38 silly install printInstalled
+39 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/underscores-for-npm
+39 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+39 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+39 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+39 verbose stack     at emitOne (events.js:82:20)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+40 verbose statusCode 404
+41 verbose pkgid underscores-for-npm
+42 verbose cwd /Users/holgerkonemann/Google Drive/at_work/understrap_framework/understrap
+43 error Darwin 16.0.0
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+45 error node v4.2.2
+46 error npm  v3.5.2
+47 error code E404
+48 error 404 Registry returned 404 for GET on https://registry.npmjs.org/underscores-for-npm
+49 error 404
+50 error 404 'underscores-for-npm' is not in the npm registry.
+51 error 404 You should bug the author to publish it (or use the name yourself!)
+52 error 404 It was specified as a dependency of 'understrap'
+53 error 404 Note that you can also install from a
+54 error 404 tarball, folder, http url, or git url.
+55 verbose exit [ 1, true ]
