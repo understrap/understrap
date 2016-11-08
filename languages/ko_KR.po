@@ -1,0 +1,303 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: understrap\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
+"POT-Creation-Date: 2015-09-01 21:23+0200\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"PO-Revision-Date: 2016-11-06 15:16+0000\n"
+"Last-Translator: idpokute <mike.sayhi@gmail.com>\n"
+"Language-Team: Korean\n"
+"Language: ko-KR\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc"
+
+#: ../comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%2$s 의 댓글"
+msgstr[1] ""
+
+#: ../comments.php:35 ../comments.php:56
+msgid "Comment navigation"
+msgstr "댓글 네비게이션"
+
+#: ../author.php:27
+msgid "About:"
+msgstr "About:"
+
+#: ../footer.php:24
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org"
+
+#: ../footer.php:24
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#: ../footer.php:26
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "테마: %1$s by %2$s."
+
+#: ../header.php:30
+msgid "Skip to content"
+msgstr "본문가기"
+
+#: ../search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s 검색결과"
+
+#: ../404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "검색 결과가 없습니다. 아래의 링크 중의 하나, 혹은 검색을 이용해주세요."
+
+#: ../404.php:37
+msgid "Most Used Categories"
+msgstr "자주 사용된 카테고리"
+
+#. translators: %1$s: smiley
+#: ../404.php:57
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "월별 아카이브를 "
+
+#: ../inc/widgets.php:10
+msgid "Sidebar"
+msgstr "사이드바"
+
+#: ../inc/widgets.php:20
+msgid "Hero Slider"
+msgstr "Hero 슬라이더"
+
+#: ../inc/widgets.php:30
+msgid "Hero Static"
+msgstr "Hero Static"
+
+#: ../inc/widgets.php:40
+msgid "Footer Full"
+msgstr "풋터 Full"
+
+#: ../inc/customizer.php:24
+msgid "Slider Settings"
+msgstr "슬라이더 설정"
+
+#: ../inc/customizer.php:33
+msgid "Number of slides displaying at once"
+msgstr "한번에 보여줄 슬라이드 갯수"
+
+#: ../inc/customizer.php:45
+msgid "Slider Time (in ms)"
+msgstr "슬라이더 타임 (밀리세컨드)"
+
+#: ../inc/customizer.php:57
+msgid "Loop Slider Content"
+msgstr "슬라이드 반복"
+
+#: ../inc/template-tags.php:18
+#, php-format
+msgid " Edited %4$s"
+msgstr " %4$s 수정됨"
+
+#: ../inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "작성일 %s"
+
+#: ../inc/template-tags.php:34
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "by %s"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
+msgid ", "
+msgstr ","
+
+#: ../inc/template-tags.php:53
+#, php-format
+msgid "Posted in %1$s"
+msgstr "%1$s 에 게재"
+
+#: ../inc/template-tags.php:59
+#, php-format
+msgid "Tagged %1$s"
+msgstr "태그된 %1$s"
+
+#: ../loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "죄송합니다만 일치하는 검색 Term이 없습니다. 다른 키워드를 사용해서 다시 시도해주세요."
+
+#: ../loop-templates/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "원하시는 것을 찾을 수가 없습니다. 검색이 도움이 될 수도 있습니다."
+
+#. Name of the theme
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Theme URI of the theme
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as parent theme. It is up to you."
+msgstr ""
+"Automattic 사의 _s 테마와 부트스트랩 4의 결합. 당신의 다음 테마 제작과 워드프레스 사이트 제작의 시작점을 위해 "
+"제작되었습니다. 스타터 테마나 부모 테마로 사용하세요."
+
+#. Author of the theme
+msgid "Holger Koenemann"
+msgstr "Holger Koenemann"
+
+#. Author URI of the theme
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"
+
+#: ../comments.php:37 ../comments.php:58
+msgid "&larr; Older Comments"
+msgstr "<이전 댓글"
+
+#: ../comments.php:40 ../comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "신규 댓글>"
+
+#: ../comments.php:72
+msgid "Comments are closed."
+msgstr "댓글 기능이 꺼져있습니다."
+
+#: ../author.php:32 ../inc/custom-comments.php:16
+msgid "Website"
+msgstr "웹사이트"
+
+#: ../author.php:34
+msgid "Profile"
+msgstr "프로필"
+
+#: ../author.php:38
+msgid "Posts by"
+msgstr "작성자 :"
+
+#: ../404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "페이지를 찾을 수 없습니다."
+
+#: ../searchform.php:9 ../searchform.php:13
+msgid "Search"
+msgstr "검색"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "검색 ..."
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "너비 페이지"
+
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "빈 페이지 템플릿"
+
+#: ../inc/template-tags.php:65
+msgid "Leave a comment"
+msgstr "댓글 남기기"
+
+#: ../inc/template-tags.php:65
+msgid "1 Comment"
+msgstr "1 댓글"
+
+#: ../inc/template-tags.php:65
+#, php-format
+msgid "% Comments"
+msgstr "% 댓글"
+
+#. translators: %s: Name of current post
+#: ../inc/template-tags.php:72
+#, php-format
+msgid "Edit %s"
+msgstr "%s 수정 "
+
+#: ../inc/setup.php:48
+msgid "Primary Menu"
+msgstr "주 메뉴"
+
+#: ../inc/setup.php:98
+msgid "Read More..."
+msgstr "더보기..."
+
+#: ../inc/custom-comments.php:12
+msgid "Name"
+msgstr "이름"
+
+#: ../inc/custom-comments.php:14
+msgid "Email"
+msgstr "이메일"
+
+#: ../inc/custom-comments.php:25
+msgctxt "noun"
+msgid "Comment"
+msgstr "댓글"
+
+#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
+#: loop-templates/content-page.php:25
+msgid "Pages:"
+msgstr "페이지:"
+
+#: ../loop-templates/content-none.php:16
+msgid "Nothing Found"
+msgstr "찾을수가 없습니다"
+
+#: ../loop-templates/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "첫 포스트를 등록할 준비가 되었나요? <a href=\"%1$s\">작성하기</a>"
+
+#: ../loop-templates/content-page.php:34
+msgid "Edit"
+msgstr "수정"
