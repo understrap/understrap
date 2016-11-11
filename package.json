@@ -25,7 +25,7 @@
   "homepage": "https://github.com/holger1411/understrap",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
-    "font-awesome": "^4.6.3",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-ignore": "^2.0.1",
