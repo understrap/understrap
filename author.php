@@ -7,15 +7,24 @@
  * @package understrap
  */
  get_header();
+
+  $container = get_theme_mod('understrap_container_type');
+  $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 ?>
 
 <div class="wrapper" id="author-wrapper">
 
-  <div class="container" id="content">
+  <div class="row">
+      <?php if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ): ?>
+        <?php get_sidebar( 'left' ); ?>
+      <?php endif; ?>
 
-    <div class="row">
+      <?php if ( 'right' === $sidebar_pos || 'left' === $sidebar_pos ): ?>
+      <div class="<?php if ( is_active_sidebar( 'right-sidebar' ) || is_active_sidebar( 'left-sidebar' )) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 
-      <div class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
+      <?php elseif ( is_active_sidebar( 'right-sidebar' ) && is_active_sidebar( 'left-sidebar' ) ): ?>
+        <div class="<?php if ( 'both' === $sidebar_pos ) : ?>col-md-6<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
+      <?php endif; ?>
 
         <main class="site-main" id="main" role="main">
 
@@ -75,7 +84,9 @@
 
       </div><!-- #primary -->
 
-      <?php get_sidebar(); ?>
+      <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ): ?>
+        <?php get_sidebar( 'right' ); ?>
+      <?php endif; ?>
 
     </div> <!-- .row -->
 
