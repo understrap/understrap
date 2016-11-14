@@ -5027,7 +5027,8 @@ a.skip-link {
 .post-navigation,
 .paged-navigation {
   padding-top: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3em;
   border-top: 1px solid #373a3c; }
 
 .nav-previous a,
