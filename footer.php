@@ -14,7 +14,7 @@
 
     <div class="wrapper" id="wrapper-footer">
 
-      <div class="container">
+      <div class="<?php echo $container?>" id="content">
 
         <div class="row">
 

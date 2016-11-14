@@ -7,6 +7,7 @@
  * @package understrap
  */
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -32,7 +33,7 @@
 
       <nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 
-        <div class="container">
+        <div class="<?php echo $container?>" id="content">
 
           <div class="navbar-header">
 

@@ -10,13 +10,22 @@
  get_header();
 ?>
 
+<?php
+$container = get_theme_mod('understrap_container_type');
+$sidebar_pos = get_theme_mod('understrap_sidebar_position');
+?>
+
+<?php get_template_part( 'global-templates/variables', 'none' ); ?>
+
+
 <div class="wrapper" id="archive-wrapper">
 
-  <div class="container" id="content">
+  <div class="<?php echo $container?>" id="content">
 
     <div class="row">
 
-      <div class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
+      <!-- Do the left sidebar check -->
+      <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
         <main class="site-main" id="main" role="main">
 
@@ -54,7 +63,12 @@
 
       </div><!-- #primary -->
 
-      <?php get_sidebar(); ?>
+      <!-- Do the right sidebar check -->
+      <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ): ?>
+      
+        <?php get_sidebar( 'right' ); ?>
+      
+      <?php endif; ?>
 
     </div> <!-- .row -->
 

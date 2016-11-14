@@ -8,6 +8,7 @@
  */
 
  get_header();
+ $container = get_theme_mod('understrap_container_type');
 ?>
 
 <?php
@@ -28,7 +29,7 @@
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-  <div class="container" id="content">
+  <div class="<?php echo $container?>" id="content">
 
     <div class="col-md-12 content-area" id="primary">
 
