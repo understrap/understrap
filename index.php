@@ -60,7 +60,7 @@
 
             <?php endwhile; ?>
 
-            <?php the_posts_navigation(); ?>
+            <?php understrap_numeric_posts_nav(); ?>
 
           <?php else : ?>
 

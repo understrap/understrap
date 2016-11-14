@@ -5024,13 +5024,15 @@ a.skip-link {
   margin-right: .425rem;
   margin-left: .425rem; }
 
-.post-navigation {
+.post-navigation,
+.paged-navigation {
   padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px solid #373a3c; }
 
 .nav-previous a,
-.nav-next a {
+.nav-next a,
+.paged-navigation a {
   text-decoration: none;
   color: #373a3c; }
 
