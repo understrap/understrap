@@ -121,3 +121,36 @@ function understrap_category_transient_flusher() {
 }
 add_action( 'edit_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post',     'understrap_category_transient_flusher' );
+
+
+/**
+ * Display navigation to next/previous post when applicable.
+ */
+if ( ! function_exists( 'understrap_post_nav' ) ) :
+
+	function understrap_post_nav() {
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+		?>
+		<nav class="navigation post-navigation">
+			<h1 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h1>
+			<div class="nav-links">
+				<?php
+
+					if ( get_previous_post_link() ) {
+						previous_post_link( '<span class="nav-previous float-xs-left btn btn-sm btn-secondary">%link</span>', _x( '<span class="fa fa-backward"></span>&nbsp;%title', 'Previous post link', 'understrap' ) );
+					}
+					if ( get_next_post_link() ) {
+						next_post_link( '<span class="nav-next float-xs-right btn btn-sm btn-secondary">%link</span>',     _x( '%title&nbsp;<span class="fa fa-forward"></span>', 'Next post link', 'understrap' ) );
+					}
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+		<?php
+	}
+endif;

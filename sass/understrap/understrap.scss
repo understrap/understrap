@@ -130,6 +130,18 @@ a.skip-link {
   margin-left: .425rem;
 }
 
+.post-navigation {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid $gray-dark;
+}
+
+.nav-previous a,
+.nav-next a {
+  text-decoration: none;
+  color: $gray-dark;
+}
+
 // Fixing BS dropdown in a dropdown
 .dropdown-menu .dropdown-menu {
   position: relative;
