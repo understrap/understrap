@@ -24,7 +24,7 @@ $container = get_theme_mod('understrap_container_type');
 
         <div class="<?php if ( is_active_sidebar( 'left-sidebar' ) ||  is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-4<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 
-          <main class="site-main" id="main" role="main">
+          <main class="site-main" id="main">
 
             <?php while ( have_posts() ) : the_post(); ?>
 

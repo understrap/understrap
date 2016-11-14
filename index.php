@@ -42,7 +42,7 @@
         <div class="<?php if ( 'both' === $sidebar_pos ) : ?>col-md-6<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
       <?php endif; ?>
 
-        <main class="site-main" id="main" role="main">
+        <main class="site-main" id="main">
 
           <?php if ( have_posts() ) : ?>
 
