@@ -27,13 +27,13 @@
         <div class="<?php if ( 'both' === $sidebar_pos ) : ?>col-md-6<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
       <?php endif; ?>
 
-        <main class="site-main" id="main" role="main">
+        <main class="site-main" id="main">
 
           <?php while ( have_posts() ) : the_post(); ?>
 
             <?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-            <?php the_post_navigation(); ?>
+            <?php understrap_post_nav(); ?>
 
             <?php
               // If comments are open or we have at least one comment, load up the comment template

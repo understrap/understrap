@@ -32,7 +32,7 @@
 
     <div class="col-md-12 content-area" id="primary">
 
-      <main class="site-main" id="main" role="main">
+      <main class="site-main" id="main">
 
         <?php if ( have_posts() ): while ( $qry->have_posts() ): $qry->the_post() ?>
           <div class="page">
