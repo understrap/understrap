@@ -13,6 +13,10 @@
 
   get_header();
 
+  $container = get_theme_mod('understrap_container_type');
+
+  $sidebar_pos = get_theme_mod('understrap_sidebar_position');
+
   if ( is_front_page() && is_home() ) {
     get_sidebar('hero');
 
@@ -22,18 +26,13 @@
   }
 ?>
 
-<?php
-$container = get_theme_mod('understrap_container_type');
-$sidebar_pos = get_theme_mod('understrap_sidebar_position');
-?>
-
 <div class="wrapper" id="wrapper-index">
 
   <div class="<?php echo $container?>" id="content">
 
     <div class="row">
 
-      <!-- Do the left sidebar check -->
+      <!-- Do the left sidebar check and opens the primary div -->
       <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
         <main class="site-main" id="main" role="main">
