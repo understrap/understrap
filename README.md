@@ -97,6 +97,10 @@ The front-page slider is widget driven. Simply add more than one widget to widge
 - Add two, or more, widgets of any kind to widget area “Hero”.
 - That’s it.
 
+## RTL styles?
+Just add a new file to the themes root folder called rtl.css. Add all alignments to this file according to this description:
+https://codex.wordpress.org/Right_to_Left_Language_Support
+
 ## Page Templates
 
 ### Blank Template
