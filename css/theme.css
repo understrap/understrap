@@ -5027,7 +5027,6 @@ a.skip-link {
 .dropdown-menu .dropdown-menu {
   position: relative;
   display: block;
-  width: 140px;
   margin-left: 10px;
   border: none;
   box-shadow: none; }
@@ -5039,6 +5038,12 @@ a.skip-link {
   width: 100%; }
   .dropdown-menu .menu-item a:hover {
     background-color: #895cd1; }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
