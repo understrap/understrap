@@ -48,6 +48,16 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
+			'name'          => __( 'Page Hero Slider', 'understrap' ),
+			'id'            => 'pageheroslider',
+			'description'   => 'Hero slider area for pages. Place two or more widgets here and they will slide!',
+			'before_widget' => '<div class="item">',
+			'after_widget'  => '</div>',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+
+		register_sidebar( array(
 			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
 			'description'   => 'Widget area below main content and above footer',

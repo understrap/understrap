@@ -43,7 +43,7 @@ if ( is_active_sidebar( 'hero' ) ):
 
 	if ( ! function_exists ( 'understrap_slider' ) ) {
 		function understrap_slider() {
-			if ( is_front_page() ) {
+			if ( is_front_page() || is_page_template( 'page-templates/page-with-hero-slider.php' ) ) {
 				$data = array(
 					"timeout" => intval( get_theme_mod( 'understrap_theme_slider_time_setting', 5000 ) ),
 					"items"   => intval( get_theme_mod( 'understrap_theme_slider_count_setting', 1 ) )
