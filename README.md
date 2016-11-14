@@ -20,7 +20,7 @@ UnderStrap is released under the terms of the GPL version 2 or (at your option) 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
-See [a relative link](CHNAGELOG.md)
+See [changelog](CHANGELOG.md)
 
 
 ## Basic Features
