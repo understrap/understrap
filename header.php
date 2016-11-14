@@ -53,6 +53,7 @@
             array(
               'theme_location' => 'primary',
               'container_class' => 'collapse navbar-toggleable-xs exCollapsingNavbar',
+              'container_id' => 'exCollapsingNavbar',
               'menu_class' => 'nav navbar-nav',
               'fallback_cb' => '',
               'menu_id' => 'main-menu',
