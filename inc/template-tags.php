@@ -151,6 +151,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 				?>
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
+		<div class="clearfix"></div>
 		<?php
 	}
 endif;
@@ -235,7 +236,7 @@ function understrap_numeric_posts_nav() {
 		</span>
 	<?php
 	}
-	echo '</div>' . "\n";
+	echo '</div><div class="clearfix"></div>' . "\n";
 
 }
 endif;
