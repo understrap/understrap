@@ -10,7 +10,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		register_sidebar( array(
 			'name'          => __( 'Right Sidebar', 'understrap' ),
 			'id'            => 'right-sidebar',
-			'description'   => 'Right sidebar widget area',
+			'description'   => 'Right sidebar widget area.',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -20,7 +20,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		register_sidebar( array(
 			'name'          => __( 'Left Sidebar', 'understrap' ),
 			'id'            => 'left-sidebar',
-			'description'   => 'Left sidebar widget area',
+			'description'   => 'Left sidebar widget area.',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -40,7 +40,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		register_sidebar( array(
 			'name'          => __( 'Hero Static', 'understrap' ),
 			'id'            => 'statichero',
-			'description'   => 'Static Hero widget. no slider functionallity',
+			'description'   => 'Static Hero widget. No slider functionallity.',
 			'before_widget' => '',
 			'after_widget'  => '',
 			'before_title'  => '',
@@ -60,7 +60,17 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		register_sidebar( array(
 			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
-			'description'   => 'Widget area below main content and above footer',
+			'description'   => 'Widget area below main content and above footer.',
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( '404 Page Widgets', 'understrap' ),
+			'id'            => '404',
+			'description'   => 'Widgets to be displayed below the search form on 404 pages.',
 			'before_widget' => '',
 			'after_widget'  => '',
 			'before_title'  => '',

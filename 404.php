@@ -5,16 +5,27 @@
  */
 
  get_header();
+
+  $container = get_theme_mod('understrap_container_type');
+  $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 ?>
 <div class="wrapper" id="404-wrapper">
 
-  <div class="container" id="content">
+  <div class="<?php echo $container?>" id="content">
 
     <div class="row">
+      <?php if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ): ?>
+        <?php get_sidebar( 'left' ); ?>
+      <?php endif; ?>
 
-      <div class="content-area" id="primary">
+      <?php if ( 'right' === $sidebar_pos || 'left' === $sidebar_pos ): ?>
+      <div class="<?php if ( is_active_sidebar( 'right-sidebar' ) || is_active_sidebar( 'left-sidebar' )) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 
-        <main class="site-main" id="main" role="main">
+      <?php elseif ( is_active_sidebar( 'right-sidebar' ) && is_active_sidebar( 'left-sidebar' ) ): ?>
+        <div class="<?php if ( 'both' === $sidebar_pos ) : ?>col-md-6<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
+      <?php endif; ?>
+
+        <main class="site-main" id="main">
 
           <section class="error-404 not-found">
 
@@ -30,37 +41,7 @@
 
               <?php get_search_form(); ?>
 
-              <?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-              <?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-
-                <div class="widget widget_categories">
-
-                  <h2 class="widget-title"><?php _e( 'Most Used Categories', 'understrap' ); ?></h2>
-
-                  <ul>
-                    <?php
-                      wp_list_categories( array(
-                        'orderby'    => 'count',
-                        'order'      => 'DESC',
-                        'show_count' => 1,
-                        'title_li'   => '',
-                        'number'     => 10,
-                      ) );
-                    ?>
-                  </ul>
-
-                </div><!-- .widget -->
-
-              <?php endif; ?>
-
-              <?php
-                /* translators: %1$s: smiley */
-                $archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
-                the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-              ?>
-
-              <?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+              <?php get_sidebar( '404' ); ?>
 
             </div><!-- .page-content -->
 
@@ -69,6 +50,10 @@
         </main><!-- #main -->
 
       </div><!-- #primary -->
+
+      <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ): ?>
+        <?php get_sidebar( 'right' ); ?>
+      <?php endif; ?>
 
     </div> <!-- .row -->
 
