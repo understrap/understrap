@@ -16,7 +16,7 @@
 
 <div class="wrapper" id="archive-wrapper">
 
-  <div class="<?php echo $container?>" id="content">
+  <div class="<?php echo $container?>" id="content" tabindex="-1">
 
     <div class="row">
       <?php if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ): ?>

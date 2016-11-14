@@ -22,7 +22,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
   <div class="hfeed site" id="page">
 
     <!-- ******************* The Navbar Area ******************* -->
