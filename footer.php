@@ -7,14 +7,15 @@
  * @package understrap
  */
 
- $the_theme = wp_get_theme();
+$the_theme = wp_get_theme();
+$container = get_theme_mod('understrap_container_type');
 ?>
 
     <?php get_sidebar('footerfull'); ?>
 
     <div class="wrapper" id="wrapper-footer">
 
-      <div class="<?php echo $container?>" id="content">
+      <div class="<?php echo $container; ?>" id="content">
 
         <div class="row">
 
