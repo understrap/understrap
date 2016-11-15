@@ -94,7 +94,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'container'       => __( 'Fixed width container', 'understrap' ),
 						'container-fluid' => __( 'Full width container', 'understrap' ),
 					),
-					'priotiry'    => '10',
+					'priority'    => '10',
 				)
 			) );
 
@@ -119,7 +119,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'both'  => __( 'Left & Right sidebars', 'understrap' ),
 						'none'  => __( 'No sidebar', 'understrap' ),
 					),
-					'priotiry'    => '20',
+					'priority'    => '20',
 				)
 			) );
 
