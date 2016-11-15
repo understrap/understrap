@@ -38,7 +38,7 @@ $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 
             //For ANY product archive.
             //Product taxonomy, product search or /shop landing page etc.
-            woocommerce_get_template('archive-product.php');
+              wc_get_template('archive-product.php');
 
           }
         ?>
