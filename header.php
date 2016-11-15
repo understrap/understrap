@@ -8,6 +8,8 @@
  */
 ?>
 
+<?php $container = get_theme_mod('understrap_container_type'); ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -33,7 +35,7 @@
 
       <nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 
-        <div class="<?php echo $container?>" id="content">
+        <div class="<?php echo $container; ?>" id="content">
 
           <div class="navbar-header">
 
