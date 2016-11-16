@@ -43,5 +43,6 @@
     "browser-sync": "^2.17.5",
     "owl.carousel": "^2.2.0",
     "undescores-for-npm": "^1.0.0"
-  }
+  },
+  "devDependencies": {}
 }

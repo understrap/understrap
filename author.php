@@ -59,7 +59,7 @@
               <li>
                 <a rel="bookmark" href="<?php the_permalink() ?>" title="Permanent Link: <?php the_title(); ?>">
                 <?php the_title(); ?></a>,
-                <?php the_time('d M Y'); ?> in <?php the_category('&');?>
+                <?php understrap_posted_on(); ?> <?php esc_html_e( 'in', 'understrap' ); ?> <?php the_category('&');?>
               </li>
               <?php endwhile; ?>
 
