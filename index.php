@@ -28,14 +28,14 @@
 
 <div class="wrapper" id="wrapper-index">
 
-  <div class="<?php echo $container?>" id="content">
+  <div class="<?php echo $container?>" id="content" tabindex="-1">
 
     <div class="row">
 
       <!-- Do the left sidebar check and opens the primary div -->
       <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-        <main class="site-main" id="main" role="main">
+        <main class="site-main" id="main">
 
           <?php if ( have_posts() ) : ?>
 

@@ -14,14 +14,14 @@
 
 <div class="wrapper" id="author-wrapper">
 
-  <div class="<?php echo $container?>" id="content">
+  <div class="<?php echo $container?>" id="content" tabindex="-1">
 
     <div class="row">
 
       <!-- Do the left sidebar check -->
       <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-        <main class="site-main" id="main" role="main">
+        <main class="site-main" id="main">
 
           <header class="page-header author-header">
 
