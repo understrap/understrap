@@ -123,6 +123,29 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			) );
 
+		// How to display posts index page (home.php)
+		$wp_customize->add_setting( 'understrap_posts_index_style', array(
+			'default'    => 'default',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_posts_index_style', array(
+					'label'       => __( 'Posts Index Style', 'understrap' ),
+					'description' => __( "Choose how to display latest posts", 'understrap' ),
+					'section'     => 'understrap_theme_layout_options',
+					'settings'    => 'understrap_posts_index_style',
+					'type'        => 'select',
+					'choices'     => array(
+						'default'       => __( 'Default', 'understrap' ),
+						'masonry' => __( 'Masonry', 'understrap' ),
+					),
+					'priority'    => '30',
+				)
+			) );
 	}
 }
 add_action( 'customize_register', 'understrap_theme_customize_register' );
