@@ -16,7 +16,15 @@ if ( ! function_exists ( 'understrap_scripts' ) ) {
 		}
 
 		// menu - vertical page association
-		if ( is_page_template( 'page-templates/vertical-one-page.php' ) || is_home() || is_single() ) {
+		// do not load on WooCommerce pages
+		// do not load if we are in WooCommerce pages
+		$loadit = true;
+		if ( class_exists( 'WooCommerce' ) ) {
+			if (is_woocommerce()) {
+				$loadit = false;
+			}
+		}
+		if ( is_page_template( ('page-templates/vertical-one-page.php' ) || is_home() || is_single()) && $loadit ) {
 			wp_enqueue_script( 'vertical-one-page', get_template_directory_uri() . '/js/vertical-one-page.js', array( 'jquery' ), '0.4.9', true );
 			$page_for_posts = strtolower( get_the_title( get_option( 'page_for_posts' ) ) );
 			$home_url       = home_url();
