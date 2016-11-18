@@ -7,6 +7,7 @@
                   - Adding vertical-one-page template for landingpages - Thx @stef-k
                   - Align code to @mdo ´s coding standards here: http://codeguide.co/ - Thx @maxdmyers
                   - Making all theme functions pluggable to allow child themes to overwrite ´em
+                  - French language file added - Thx @tchama
                   
 
             - ** 0.4.9 Oct. 25th 2016 **
