@@ -66,3 +66,8 @@ require get_template_directory() . '/inc/bootstrap-wp-gallery.php';
 * Load WooCommerce functions.
 */
 require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Load a utilities library.
+ */
+require get_template_directory() . '/inc/utilities.php';
