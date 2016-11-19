@@ -41,7 +41,7 @@ $qry = new WP_Query( $args );
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-	<div class="<?php echo $container ?>" id="content">
+	<div class="<?php echo esc_html( $container ); ?>" id="content">
 
 		<div class="col-md-12 content-area" id="primary">
 

@@ -28,7 +28,7 @@
 
 <div class="wrapper" id="wrapper-index">
 
-  <div class="<?php echo $container?>" id="content" tabindex="-1">
+  <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
     <div class="row">
 

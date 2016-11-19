@@ -21,7 +21,7 @@ $posts_style = get_theme_mod( 'understrap_posts_index_style' );
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo $container ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
 
