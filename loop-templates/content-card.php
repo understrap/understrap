@@ -1,13 +1,16 @@
 <?php
 /**
+ * Card patrial template responsible to show individual posts in home.php page.
+ *
  * @package understrap
  */
+
 ?>
 <div class="card">
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 		<header class="entry-header">
-			<?php if ( has_post_thumbnail() ): ?>
+			<?php if ( has_post_thumbnail() ) : ?>
 				<?php
 				$alt = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true );
 				?>

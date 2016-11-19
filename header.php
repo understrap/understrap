@@ -35,7 +35,7 @@
 
       <nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 
-        <div class="<?php echo $container; ?>" id="content">
+        <div class="container-fluid" id="content">
 
           <div class="navbar-header">
 

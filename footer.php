@@ -15,7 +15,7 @@ $container = get_theme_mod('understrap_container_type');
 
     <div class="wrapper" id="wrapper-footer">
 
-      <div class="<?php echo $container; ?>" id="content">
+      <div class="<?php echo esc_html( $container ); ?>" id="content">
 
         <div class="row">
 
