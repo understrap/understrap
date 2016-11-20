@@ -27,9 +27,8 @@ $posts_style = get_theme_mod( 'understrap_posts_index_style' );
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
-			<?php if ( 'masonry' === $posts_style ): ?>
+			<?php if ( 'masonry' === $posts_style ) : ?>
 			<div class="card-columns"><?php endif; ?>
-
 				<main class="site-main" id="main">
 
 					<?php if ( have_posts() ) : ?>
@@ -39,10 +38,14 @@ $posts_style = get_theme_mod( 'understrap_posts_index_style' );
 						<?php while ( have_posts() ) : the_post(); ?>
 
 							<?php
-							if ( 'masonry' === $posts_style ):
-								get_template_part( 'loop-templates/content-card' );
-							else:
-								/* Include the Post-Format-specific template for the content.
+							if ( 'masonry' === $posts_style ) :
+								get_template_part( 'loop-templates/content', 'card' );
+							elseif ( 'grid' === $posts_style ) :
+
+								get_template_part( 'loop-templates/content', 'grid' );
+							else :
+								/*
+								 * Include the Post-Format-specific template for the content.
 								 * If you want to override this in a child theme, then include a file
 								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								 */
@@ -59,13 +62,13 @@ $posts_style = get_theme_mod( 'understrap_posts_index_style' );
 						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 					<?php endif; ?>
-			<?php if ( 'masonry' === $posts_style ): ?></div><?php endif; ?>
+			<?php if ( 'masonry' === $posts_style ) : ?></div><?php endif; ?>
 			</main><!-- #main -->
 
 		</div><!-- #primary -->
 
 		<!-- Do the right sidebar check -->
-		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ): ?>
+		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
 			<?php get_sidebar( 'right' ); ?>
 

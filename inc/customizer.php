@@ -142,6 +142,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'choices'     => array(
 						'default'       => __( 'Default', 'understrap' ),
 						'masonry' => __( 'Masonry', 'understrap' ),
+						'grid' => __( 'Grid', 'understrap' ),
 					),
 					'priority'    => '30',
 				)
