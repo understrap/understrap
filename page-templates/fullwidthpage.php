@@ -15,28 +15,32 @@
 
   <div class="<?php echo esc_html( $container ); ?>" id="content">
 
-    <div class="col-md-12 content-area" id="primary">
+    <div class="row">
 
-      <main class="site-main" id="main" role="main">
+      <div class="col-md-12 content-area" id="primary">
 
-        <?php while ( have_posts() ) : the_post(); ?>
+        <main class="site-main" id="main" role="main">
 
-          <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php
-            // If comments are open or we have at least one comment, load up the comment template
-            if ( comments_open() || get_comments_number() ) :
+            <?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-              comments_template();
+            <?php
+              // If comments are open or we have at least one comment, load up the comment template
+              if ( comments_open() || get_comments_number() ) :
 
-            endif;
-          ?>
+                comments_template();
 
-        <?php endwhile; // end of the loop. ?>
+              endif;
+            ?>
 
-      </main><!-- #main -->
+          <?php endwhile; // end of the loop. ?>
 
-    </div><!-- #primary -->
+        </main><!-- #main -->
+
+      </div><!-- #primary -->
+
+    </div><!-- .row end -->
 
   </div><!-- Container end -->
 
