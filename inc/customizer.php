@@ -78,7 +78,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting( 'understrap_container_type', array(
 			'default'    => 'container',
 			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
+			'capability' => 'edit_theme_options'
 		) );
 
 		$wp_customize->add_control(
