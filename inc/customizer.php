@@ -29,7 +29,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 	/**
 	 * Register individual settings through customizer's API.
 	 *
-	 * @param object $wp_customize Customizer reference.
+	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
 	function understrap_theme_customize_register( $wp_customize ) {
 
@@ -122,7 +122,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'understrap_sidebar_position', array(
 					'label'       => __( 'Sidebar Positioning', 'understrap' ),
 					'description' => __( "Set sidebar's position. Can either be: right, left, both or none",
-						'understrap' ),
+					'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_sidebar_position',
 					'type'        => 'select',
@@ -172,40 +172,39 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			return 'grid' == get_theme_mod( 'understrap_posts_index_style' );
 		}
 
-		if ( is_grid_enabled() ) {
-			// How many columns to use each grid post.
-			$wp_customize->add_setting( 'understrap_grid_post_columns', array(
-				'default'    => '6',
-				'type'       => 'theme_mod',
-				'capability' => 'edit_theme_options',
-				'transport'  => 'refresh',
+		// How many columns to use each grid post.
+		$wp_customize->add_setting( 'understrap_grid_post_columns', array(
+			'default'    => '6',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_grid_post_columns', array(
+					'label'       => __( 'Grid Post Columns', 'understrap' ),
+					'description' => __( 'Choose how many columns to use in grid posts', 'understrap' ),
+					'section'     => 'understrap_theme_layout_options',
+					'settings'    => 'understrap_grid_post_columns',
+					'type'        => 'select',
+					'choices'     => array(
+						'6' => '6',
+						'4' => '4',
+						'3' => '3',
+						'2' => '2',
+						'1' => '1',
+					),
+					'default'     => 6,
+					'priority'    => '30',
+					'transport'   => 'refresh',
+				)
 			) );
 
-			$wp_customize->add_control(
-				new WP_Customize_Control(
-					$wp_customize,
-					'understrap_grid_post_columns', array(
-						'label'       => __( 'Grid Post Columns', 'understrap' ),
-						'description' => __( 'Choose how many columns to use in grid posts', 'understrap' ),
-						'section'     => 'understrap_theme_layout_options',
-						'settings'    => 'understrap_grid_post_columns',
-						'type'        => 'select',
-						'choices'     => array(
-							'6' => '6',
-							'4' => '4',
-							'3' => '3',
-							'2' => '2',
-							'1' => '1',
-						),
-						'default'     => 6,
-						'priority'    => '30',
-						'transport'   => 'refresh',
-					)
-				) );
-
-		}
 		// hook to auto-hide/show depending the understrap_posts_index_style option.
 		$wp_customize->get_control( 'understrap_grid_post_columns' )->active_callback = 'is_grid_enabled';
+
 	}
 } // endif function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
