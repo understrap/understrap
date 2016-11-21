@@ -2,15 +2,17 @@
 /**
  * Add WooCommerce support
  *
- *
  * @package understrap
  */
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 if ( ! function_exists( 'woocommerce_support' ) ) {
+	/**
+	 * Declares WooCommerce theme support.
+	 */
 	function woocommerce_support() {
 		add_theme_support( 'woocommerce' );
-		// hook in and customizer form fields
+		// hook in and customizer form fields.
 		add_filter( 'woocommerce_form_field_args', 'wc_form_field_args', 10, 3 );
 	}
 }
@@ -19,16 +21,15 @@ if ( ! function_exists( 'woocommerce_support' ) ) {
  * Filter hook function monkey patching form classes
  * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
  *
- * @param      $args
- * @param      $key
- * @param null $value
+ * @param string $args Form attributes.
+ * @param string $key Not in use.
+ * @param null   $value Not in use.
  *
  * @return mixed
  */
 function wc_form_field_args( $args, $key, $value = null ) {
 
-// Start field type switch case
-
+	// Start field type switch case.
 	switch ( $args['type'] ) {
 
 		/* Targets all select input type elements, except the country and state select input types */
@@ -74,7 +75,7 @@ function wc_form_field_args( $args, $key, $value = null ) {
 		case 'email' :
 		case 'tel' :
 		case 'number' :
-			$args['class'][] = 'form-group';
+			$args['class'][]     = 'form-group';
 			$args['input_class'] = array( 'form-control', 'input-lg' );
 			$args['label_class'] = array( 'control-label' );
 			break;
@@ -99,7 +100,7 @@ function wc_form_field_args( $args, $key, $value = null ) {
 			$args['input_class'] = array( 'form-control', 'input-lg' );
 			$args['label_class'] = array( 'control-label' );
 			break;
-	}
+	} // end switch ($args).
 
 	return $args;
 }

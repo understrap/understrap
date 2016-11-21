@@ -2,10 +2,13 @@
 /**
  * Declaring widgets
  *
- *
  * @package understrap
  */
+
 if ( ! function_exists( 'understrap_widgets_init' ) ) {
+	/**
+	 * Initializes themes widgets.
+	 */
 	function understrap_widgets_init() {
 		register_sidebar( array(
 			'name'          => __( 'Right Sidebar', 'understrap' ),
@@ -58,5 +61,5 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		) );
 
 	}
-}
+} // endif function_exists( 'understrap_widgets_init' ).
 add_action( 'widgets_init', 'understrap_widgets_init' );
