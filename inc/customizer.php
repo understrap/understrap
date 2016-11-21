@@ -78,6 +78,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting( 'understrap_container_type', array(
 			'default'    => 'container',
 			'type'       => 'theme_mod',
+			'sanitize_callback' => 'esc_textarea',
 			'capability' => 'edit_theme_options'
 		) );
 
@@ -101,6 +102,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting( 'understrap_sidebar_position', array(
 			'default'    => 'right',
 			'type'       => 'theme_mod',
+			'sanitize_callback' => 'esc_textarea',
 			'capability' => 'edit_theme_options',
 		) );
 
@@ -127,6 +129,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting( 'understrap_posts_index_style', array(
 			'default'    => 'default',
 			'type'       => 'theme_mod',
+			'sanitize_callback' => 'esc_textarea',
 			'capability' => 'edit_theme_options',
 		) );
 
