@@ -145,10 +145,55 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'choices'     => array(
 						'default'       => __( 'Default', 'understrap' ),
 						'masonry' => __( 'Masonry', 'understrap' ),
+						'grid' => __( 'Grid', 'understrap' ),
 					),
 					'priority'    => '30',
 				)
 			) );
+
+		// Columns setup for grid posts.
+		/**
+		 * Function and callback to check when grid is enabled.
+		 * @return bool
+		 */
+		function is_grid_enabled ()
+		{
+			return 'grid' == get_theme_mod( 'understrap_posts_index_style' );
+		}
+		if ( is_grid_enabled() ) {
+			// How many columns to use each grid post
+			$wp_customize->add_setting( 'understrap_grid_post_columns', array(
+				'default'    => '6',
+				'type'       => 'theme_mod',
+				'capability' => 'edit_theme_options',
+				'transport' => 'refresh',
+			) );
+
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+					$wp_customize,
+					'understrap_grid_post_columns', array(
+						'label'       => __( 'Grid Post Columns', 'understrap' ),
+						'description' => __( "Choose how many columns to use in grid posts", 'understrap' ),
+						'section'     => 'understrap_theme_layout_options',
+						'settings'    => 'understrap_grid_post_columns',
+						'type'        => 'select',
+						'choices'     => array(
+							'6'       => '6',
+							'4' =>       '4',
+							'3' =>       '3',
+							'2' =>       '2',
+							'1' =>       '1',
+						),
+						'default'     =>  6,
+						'priority'    => '30',
+						'transport'   => 'refresh',
+					)
+				) );
+
+		}
+		// hook to auto-hide/show depending the understrap_posts_index_style option
+		$wp_customize->get_control( 'understrap_grid_post_columns' )->active_callback = 'is_grid_enabled';
 	}
 }
 add_action( 'customize_register', 'understrap_theme_customize_register' );
