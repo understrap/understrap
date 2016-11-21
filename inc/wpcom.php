@@ -7,12 +7,12 @@
  * @package understrap
  */
 
-/**
- * Adds support for wp.com-specific theme functions.
- *
- * @global array $themecolors
- */
-if ( ! function_exists ( 'understrap_wpcom_setup' ) ) {
+if ( ! function_exists( 'understrap_wpcom_setup' ) ) {
+	/**
+	 * Adds support for wp.com-specific theme functions.
+	 *
+	 * @global array $themecolors Array with theme's colors.
+	 */
 	function understrap_wpcom_setup() {
 		global $themecolors;
 

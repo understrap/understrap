@@ -60,7 +60,7 @@
               'menu_class' => 'nav navbar-nav',
               'fallback_cb' => '',
               'menu_id' => 'main-menu',
-              'walker' => new wp_bootstrap_navwalker()
+              'walker' => new WP_Bootstrap_Navwalker()
             )
           ); ?>
 

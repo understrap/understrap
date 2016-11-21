@@ -1,129 +1,146 @@
 <?php
-//Based on Jeff Hays code and his article here: http://robido.com/wordpress/wordpress-gallery-filter-to-modify-the-html-output-of-the-default-gallery-shortcode-and-style/
-// Custom filter function to modify default gallery shortcode output
-function bootstrap_wp_gallery( $output, $attr ) {
+/**
+ * Based on Roots Sage Gallery: https://github.com/roots/sage/blob/5b9786b8ceecfe717db55666efe5bcf0c9e1801c/lib/gallery.php
+ *
+ * @package understrap
+ */
 
+// Remove built in shortcode.
+remove_shortcode( 'gallery', 'gallery_shortcode' );
 
-  // Initialize
-  global $post, $wp_locale;
+/**
+ * Replaces gallery with custom shortcode.
+ *
+ * @param mixed $attr Shortcode parameters.
+ *
+ * @return mixed|string|void
+ */
+function shortcode_gallery( $attr ) {
+	$post = get_post();
+	static $instance = 0;
+	$instance ++;
+	if ( ! empty( $attr['ids'] ) ) {
+		if ( empty( $attr['orderby'] ) ) {
+			$attr['orderby'] = 'post__in';
+		}
+		$attr['include'] = $attr['ids'];
+	}
+	$output = apply_filters( 'post_gallery', '', $attr );
+	if ( $output != '' ) {
+		return $output;
+	}
+	if ( isset( $attr['orderby'] ) ) {
+		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
+		if ( ! $attr['orderby'] ) {
+			unset( $attr['orderby'] );
+		}
+	}
+	extract( shortcode_atts( [
+		'order'      => 'ASC',
+		'orderby'    => 'menu_order ID',
+		'id'         => $post->ID,
+		'itemtag'    => '',
+		'icontag'    => '',
+		'captiontag' => '',
+		'columns'    => 3,
+		'size'       => 'thumbnail',
+		'include'    => '',
+		'exclude'    => '',
+		'link'       => '',
+	], $attr ) );
+	$id      = intval( $id );
+	$columns = ( 12 % $columns == 0 ) ? $columns : 3;
+	$grid    = sprintf( 'col-sm-%1$s col-lg-%1$s', 12 / $columns );
+	if ( $order === 'RAND' ) {
+		$orderby = 'none';
+	}
+	if ( ! empty( $include ) ) {
+		$_attachments = get_posts( [
+			'include'        => $include,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $order,
+			'orderby'        => $orderby
+		] );
+		$attachments  = [];
+		foreach ( $_attachments as $key => $val ) {
+			$attachments[ $val->ID ] = $_attachments[ $key ];
+		}
+	} elseif ( ! empty( $exclude ) ) {
+		$attachments = get_children( [
+			'post_parent'    => $id,
+			'exclude'        => $exclude,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $order,
+			'orderby'        => $orderby
+		] );
+	} else {
+		$attachments = get_children( [
+			'post_parent'    => $id,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => $order,
+			'orderby'        => $orderby
+		] );
+	}
+	if ( empty( $attachments ) ) {
+		return '';
+	}
+	if ( is_feed() ) {
+		$output = "\n";
+		foreach ( $attachments as $att_id => $attachment ) {
+			$output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
+		}
 
-  // Gallery instance counter
-  static $instance = 0;
-  $instance++;
+		return $output;
+	}
+	$unique = ( get_query_var( 'page' ) ) ? $instance . '-p' . get_query_var( 'page' ) : $instance;
+	$output = '<div class="gallery gallery-' . $id . '-' . $unique . '">';
+	$i      = 0;
+	foreach ( $attachments as $id => $attachment ) {
+		switch ( $link ) {
+			case 'file':
+				$image = wp_get_attachment_link( $id, $size, false, false );
+				break;
+			case 'none':
+				$image = wp_get_attachment_image( $id, $size, false, [ 'class' => 'thumbnail img-thumbnail' ] );
+				break;
+			default:
+				$image = wp_get_attachment_link( $id, $size, true, false );
+				break;
+		}
+		$output .= ( $i % $columns == 0 ) ? '<div class="row gallery-row">' : '';
+		$output .= '<div class="' . $grid . '">' . $image;
+		if ( trim( $attachment->post_excerpt ) ) {
+			$output .= '<div class="caption hidden">' . wptexturize( $attachment->post_excerpt ) . '</div>';
+		}
+		$output .= '</div>';
+		$i ++;
+		$output .= ( $i % $columns == 0 ) ? '</div>' : '';
+	}
+	$output .= ( $i % $columns != 0 ) ? '</div>' : '';
+	$output .= '</div>';
 
-  // Validate the author's orderby attribute
-  if ( isset( $attr['orderby'] ) ) {
-    $attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-    if ( ! $attr['orderby'] ) unset( $attr['orderby'] );
-  }
-
-  // Get attributes from shortcode
-  extract( shortcode_atts( array(
-    'order'      => 'ASC',
-    'orderby'    => 'menu_order ID',
-    'id'         => $post->ID,
-    'itemtag'    => 'div',
-    'icontag'    => 'div',
-    'captiontag' => 'div',
-    'columns'    => 3,
-    'size'       => 'thumbnail',
-    'exclude'    => ''
-  ), $attr ) );
-
-  // Initialize
-  $id = intval( $id );
-  $attachments = array();
-  if ( $order == 'RAND' ) $orderby = 'none';
-
-
-  if ( ! empty( $include ) ) {
-
-    // Include attribute is present
-    $include = preg_replace( '/[^0-9,]+/', '', $include );
-    $_attachments = get_posts( array( 'include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
-
-    // Setup attachments array
-    foreach ( $_attachments as $key => $val ) {
-      $attachments[ $val->ID ] = $_attachments[ $key ];
-    }
-
-  } else if ( ! empty( $exclude ) ) {
-
-    // Exclude attribute is present
-    $exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
-
-    // Setup attachments array
-    $attachments = get_children( array( 'post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
-  } else {
-    // Setup attachments array
-    $attachments = get_children( array( 'post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby ) );
-  }
-
-  if ( empty( $attachments ) ) return '';
-
-  // Filter gallery differently for feeds
-  if ( is_feed() ) {
-    $output = "\n";
-    foreach ( $attachments as $att_id => $attachment ) $output .= wp_get_attachment_link( $att_id, $size, true ) . "\n";
-    return $output;
-  }
-
-  // Filter tags and attributes
-  $itemtag = tag_escape( $itemtag );
-  $captiontag = tag_escape( $captiontag );
-  $columns = intval( $columns );
-  $itemwidth = $columns > 0 ? floor( 12 / $columns ) : 100;
-  $float = is_rtl() ? 'right' : 'left';
-  $selector = "gallery-{$instance}";
-
- // Filter gallery CSS
-  $output = apply_filters( 'gallery_style', "
-
-    <div class='gallery galleryid-{$id} row'  id='$selector'>"
-  );
-
-  // Iterate through the attachments in this gallery instance
-  $i = 0;
-  foreach ( $attachments as $id => $attachment ) {
-
-    // Attachment link
-    $link = isset( $attr['link'] ) && 'file' == $attr['link'] ? wp_get_attachment_link( $id, $size, false, false ) : wp_get_attachment_link( $id, $size, true, false );
-
-    // Start itemtag
-    $output .= "<{$itemtag} class='gallery-item col-md-{$itemwidth}'>";
-
-    // icontag
-    $output .= "
-    <{$icontag} class='gallery-icon'>
-      $link
-    </{$icontag}>";
-
-    if ( $captiontag && trim( $attachment->post_excerpt ) ) {
-
-      // captiontag
-      $output .= "
-      <{$captiontag} class='gallery-caption'>
-        " . wptexturize($attachment->post_excerpt) . "
-      </{$captiontag}>";
-
-    }
-
-    // End itemtag
-    $output .= "</{$itemtag}>";
-
-    // Line breaks by columns set
-    if($columns > 0 && ++$i % $columns == 0) $output .= '<br style="clear: both">';
-
-  }
-
-  // End gallery output
-  $output .= "
-    <br style='clear: both;'>
-  </div>\n";
-
-  return $output;
-
+	return $output;
 }
 
-// Apply filter to default gallery shortcode
-add_filter( 'post_gallery', 'bootstrap_wp_gallery', 10, 2 );
+add_shortcode( 'gallery', 'shortcode_gallery' );
+
+/**
+ * Add class="thumbnail img-thumbnail" to attachment items
+ *
+ * @param string $html Markup.
+ *
+ * @return mixed
+ */
+function attachment_link_class( $html ) {
+	$html = str_replace( '<a', '<a class="thumbnail img-thumbnail"', $html );
+
+	return $html;
+}
+
+add_filter( 'wp_get_attachment_link', 'attachment_link_class', 10, 1 );

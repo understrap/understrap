@@ -1,6 +1,6 @@
 <?php
 /**
- * understrap Theme Customizer
+ * Understrap Theme Customizer
  *
  * @package understrap
  */
@@ -11,6 +11,11 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 if ( ! function_exists( 'understrap_customize_register' ) ) {
+	/**
+	 * Register basic customizer support.
+	 *
+	 * @param object $wp_customize Customizer reference.
+	 */
 	function understrap_customize_register( $wp_customize ) {
 		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -21,39 +26,44 @@ if ( ! function_exists( 'understrap_customize_register' ) ) {
 add_action( 'customize_register', 'understrap_customize_register' );
 
 if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
+	/**
+	 * Register individual settings through customizer's API.
+	 *
+	 * @param WP_Customize_Manager $wp_customize Customizer reference.
+	 */
 	function understrap_theme_customize_register( $wp_customize ) {
 
 		$wp_customize->add_section( 'understrap_theme_slider_options', array(
-			'title' => __( 'Slider Settings', 'understrap' )
+			'title' => __( 'Slider Settings', 'understrap' ),
 		) );
 
 		$wp_customize->add_setting( 'understrap_theme_slider_count_setting', array(
 			'default'           => '1',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
 		) );
 
 		$wp_customize->add_control( 'understrap_theme_slider_count', array(
 			'label'    => __( 'Number of slides displaying at once', 'understrap' ),
 			'section'  => 'understrap_theme_slider_options',
 			'type'     => 'text',
-			'settings' => 'understrap_theme_slider_count_setting'
+			'settings' => 'understrap_theme_slider_count_setting',
 		) );
 
 		$wp_customize->add_setting( 'understrap_theme_slider_time_setting', array(
 			'default'           => '5000',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
 		) );
 
 		$wp_customize->add_control( 'understrap_theme_slider_time', array(
 			'label'    => __( 'Slider Time (in ms)', 'understrap' ),
 			'section'  => 'understrap_theme_slider_options',
 			'type'     => 'text',
-			'settings' => 'understrap_theme_slider_time_setting'
+			'settings' => 'understrap_theme_slider_time_setting',
 		) );
 
 		$wp_customize->add_setting( 'understrap_theme_slider_loop_setting', array(
 			'default'           => 'true',
-			'sanitize_callback' => 'esc_textarea'
+			'sanitize_callback' => 'esc_textarea',
 		) );
 
 		$wp_customize->add_control( 'understrap_theme_loop', array(
@@ -64,10 +74,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'true'  => 'yes',
 				'false' => 'no',
 			),
-			'settings' => 'understrap_theme_slider_loop_setting'
+			'settings' => 'understrap_theme_slider_loop_setting',
 		) );
 
-		// Theme layout settings
+		// Theme layout settings.
 		$wp_customize->add_section( 'understrap_theme_layout_options', array(
 			'title'       => __( 'Theme Layout Settings', 'understrap' ),
 			'capability'  => 'edit_theme_options',
@@ -76,10 +86,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		) );
 
 		$wp_customize->add_setting( 'understrap_container_type', array(
-			'default'    => 'container',
-			'type'       => 'theme_mod',
+			'default'           => 'container',
+			'type'              => 'theme_mod',
 			'sanitize_callback' => 'esc_textarea',
-			'capability' => 'edit_theme_options'
+			'capability'        => 'edit_theme_options',
 		) );
 
 		$wp_customize->add_control(
@@ -100,10 +110,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			) );
 
 		$wp_customize->add_setting( 'understrap_sidebar_position', array(
-			'default'    => 'right',
-			'type'       => 'theme_mod',
+			'default'           => 'right',
+			'type'              => 'theme_mod',
 			'sanitize_callback' => 'esc_textarea',
-			'capability' => 'edit_theme_options',
+			'capability'        => 'edit_theme_options',
 		) );
 
 		$wp_customize->add_control(
@@ -111,7 +121,8 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_sidebar_position', array(
 					'label'       => __( 'Sidebar Positioning', 'understrap' ),
-					'description' => __( "Set sidebar's position. Can either be: right, left, both or none", 'understrap' ),
+					'description' => __( "Set sidebar's position. Can either be: right, left, both or none",
+					'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_sidebar_position',
 					'type'        => 'select',
@@ -125,12 +136,12 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			) );
 
-		// How to display posts index page (home.php)
+		// How to display posts index page (home.php).
 		$wp_customize->add_setting( 'understrap_posts_index_style', array(
-			'default'    => 'default',
-			'type'       => 'theme_mod',
+			'default'           => 'default',
+			'type'              => 'theme_mod',
 			'sanitize_callback' => 'esc_textarea',
-			'capability' => 'edit_theme_options',
+			'capability'        => 'edit_theme_options',
 		) );
 
 		$wp_customize->add_control(
@@ -138,14 +149,14 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_posts_index_style', array(
 					'label'       => __( 'Posts Index Style', 'understrap' ),
-					'description' => __( "Choose how to display latest posts", 'understrap' ),
+					'description' => __( 'Choose how to display latest posts', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_posts_index_style',
 					'type'        => 'select',
 					'choices'     => array(
-						'default'       => __( 'Default', 'understrap' ),
+						'default' => __( 'Default', 'understrap' ),
 						'masonry' => __( 'Masonry', 'understrap' ),
-						'grid' => __( 'Grid', 'understrap' ),
+						'grid'    => __( 'Grid', 'understrap' ),
 					),
 					'priority'    => '30',
 				)
@@ -154,48 +165,48 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		// Columns setup for grid posts.
 		/**
 		 * Function and callback to check when grid is enabled.
+		 *
 		 * @return bool
 		 */
-		function is_grid_enabled ()
-		{
+		function is_grid_enabled() {
 			return 'grid' == get_theme_mod( 'understrap_posts_index_style' );
 		}
-		if ( is_grid_enabled() ) {
-			// How many columns to use each grid post
-			$wp_customize->add_setting( 'understrap_grid_post_columns', array(
-				'default'    => '6',
-				'type'       => 'theme_mod',
-				'capability' => 'edit_theme_options',
-				'transport' => 'refresh',
+
+		// How many columns to use each grid post.
+		$wp_customize->add_setting( 'understrap_grid_post_columns', array(
+			'default'    => '6',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_grid_post_columns', array(
+					'label'       => __( 'Grid Post Columns', 'understrap' ),
+					'description' => __( 'Choose how many columns to use in grid posts', 'understrap' ),
+					'section'     => 'understrap_theme_layout_options',
+					'settings'    => 'understrap_grid_post_columns',
+					'type'        => 'select',
+					'choices'     => array(
+						'6' => '6',
+						'4' => '4',
+						'3' => '3',
+						'2' => '2',
+						'1' => '1',
+					),
+					'default'     => 6,
+					'priority'    => '30',
+					'transport'   => 'refresh',
+				)
 			) );
 
-			$wp_customize->add_control(
-				new WP_Customize_Control(
-					$wp_customize,
-					'understrap_grid_post_columns', array(
-						'label'       => __( 'Grid Post Columns', 'understrap' ),
-						'description' => __( "Choose how many columns to use in grid posts", 'understrap' ),
-						'section'     => 'understrap_theme_layout_options',
-						'settings'    => 'understrap_grid_post_columns',
-						'type'        => 'select',
-						'choices'     => array(
-							'6'       => '6',
-							'4' =>       '4',
-							'3' =>       '3',
-							'2' =>       '2',
-							'1' =>       '1',
-						),
-						'default'     =>  6,
-						'priority'    => '30',
-						'transport'   => 'refresh',
-					)
-				) );
-
-		}
-		// hook to auto-hide/show depending the understrap_posts_index_style option
+		// hook to auto-hide/show depending the understrap_posts_index_style option.
 		$wp_customize->get_control( 'understrap_grid_post_columns' )->active_callback = 'is_grid_enabled';
+
 	}
-}
+} // endif function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
 
 
@@ -203,8 +214,12 @@ add_action( 'customize_register', 'understrap_theme_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
+	/**
+	 * Setup JS integration for live previewing.
+	 */
 	function understrap_customize_preview_js() {
-		wp_enqueue_script( 'understrap_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+		wp_enqueue_script( 'understrap_customizer', get_template_directory_uri() . '/js/customizer.js',
+			array( 'customize-preview' ), '20130508', true );
 	}
 }
 add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
