@@ -12,14 +12,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <?php
+
 /*
  * Exclude the posts page from being shown in this layout.
  * Order pages by their order number.
  */
 $exclude = array();
-// exclude blog page
-array_push($exclude, get_option( 'page_for_posts' ) );
-// exclude WooCommerce pages
+// exclude blog page.
+array_push( $exclude, get_option( 'page_for_posts' ) );
+// exclude WooCommerce pages.
 array_push( $exclude, get_option( 'woocommerce_cart_page_id' ) );
 array_push( $exclude, get_option( 'woocommerce_shop_page_id' ) );
 array_push( $exclude, get_option( 'woocommerce_checkout_page_id' ) );
@@ -31,9 +32,9 @@ array_push( $exclude, get_option( 'woocommerce_view_order_page_id' ) );
 array_push( $exclude, get_option( 'woocommerce_terms_page_id' ) );
 $args = array(
 	'post_type'    => 'page',
-	'post__not_in' =>  $exclude,
+	'post__not_in' => $exclude,
 	'orderby'      => 'menu_order',
-	'order'        => 'ASC'
+	'order'        => 'ASC',
 );
 
 $qry = new WP_Query( $args );
@@ -47,13 +48,16 @@ $qry = new WP_Query( $args );
 
 			<main class="site-main" id="main" role="main">
 
-				<?php if ( have_posts() ): while ( $qry->have_posts() ): $qry->the_post() ?>
+				<?php if ( have_posts() ) : while ( $qry->have_posts() ) : $qry->the_post() ?>
 					<div class="page">
 						<?php get_template_part( 'loop-templates/content', 'verticalpage' ); ?>
 					</div>
 
-					<?php wp_reset_postdata(); //reset custom query?>
-				<?php endwhile; endif; ?>
+					<?php wp_reset_postdata(); // reset custom query. ?>
+					<?php
+				endwhile;
+				endif;
+				?>
 
 			</main><!-- #main -->
 
