@@ -4,6 +4,7 @@
  *
  * @package understrap
  */
+
 $col = get_theme_mod( 'understrap_grid_post_columns' );
 ?>
 <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">

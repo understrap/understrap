@@ -1,9 +1,8 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * Blank content partial template.
  *
  * @package understrap
  */
-?>
 
-  <?php the_content(); ?>
+the_content();
