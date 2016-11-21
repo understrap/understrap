@@ -5,7 +5,6 @@
  * @package understrap
  */
 $col = get_theme_mod( 'understrap_grid_post_columns' );
-error_log($col);
 ?>
 <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 	<div class="col-md-<?php echo esc_html( $col ); ?> col-xs-12">
