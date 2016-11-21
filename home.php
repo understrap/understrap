@@ -11,15 +11,22 @@
  */
 
 get_header();
+
+
+  $container = get_theme_mod('understrap_container_type');
+  $sidebar_pos = get_theme_mod('understrap_sidebar_position');
+  $posts_style = get_theme_mod( 'understrap_posts_index_style' );
+
+  if ( is_front_page() && is_home() ) {
+    get_sidebar('hero');
+
+    get_sidebar('statichero');
+  } else {
+    // Do nothing...or?
+  }
 ?>
 
-<?php
-$container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
-$posts_style = get_theme_mod( 'understrap_posts_index_style' );
-?>
-
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper" id="wrapper-home">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
