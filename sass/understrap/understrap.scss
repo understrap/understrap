@@ -137,13 +137,6 @@ a.skip-link {
   border-top: 1px solid $gray-dark;
 }
 
-.nav-previous a,
-.nav-next a,
-.paged-navigation a {
-  text-decoration: none;
-  color: $gray-dark;
-}
-
 // Fixing BS dropdown in a dropdown
 .dropdown-menu .dropdown-menu {
   position: relative;
