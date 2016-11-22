@@ -12,18 +12,15 @@
 
 get_header();
 
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+$posts_style = get_theme_mod( 'understrap_posts_index_style' );
 
-  $container = get_theme_mod('understrap_container_type');
-  $sidebar_pos = get_theme_mod('understrap_sidebar_position');
-  $posts_style = get_theme_mod( 'understrap_posts_index_style' );
+if ( is_front_page() && is_home() ) {
+	get_sidebar( 'hero' );
 
-  if ( is_front_page() && is_home() ) {
-    get_sidebar('hero');
-
-    get_sidebar('statichero');
-  } else {
-    // Do nothing...or?
-  }
+	get_sidebar( 'statichero' );
+}
 ?>
 
 <div class="wrapper" id="wrapper-home">
@@ -69,7 +66,7 @@ get_header();
 						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 					<?php endif; ?>
-			<?php if ( 'masonry' === $posts_style ) : ?></div><?php endif; ?>
+				<?php if ( 'masonry' === $posts_style ) : ?></div><?php endif; ?>
 			</main><!-- #main -->
 
 		</div><!-- #primary -->

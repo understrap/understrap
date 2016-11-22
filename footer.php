@@ -8,41 +8,44 @@
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod('understrap_container_type');
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-    <?php get_sidebar('footerfull'); ?>
+<?php get_sidebar( 'footerfull' ); ?>
 
-    <div class="wrapper" id="wrapper-footer">
+<div class="wrapper" id="wrapper-footer">
 
-      <div class="<?php echo esc_html( $container ); ?>" id="content">
+	<div class="<?php echo esc_html( $container ); ?>" id="content">
 
-        <div class="row">
+		<div class="row">
 
-          <div class="col-md-12">
+			<div class="col-md-12">
 
-            <footer class="site-footer" id="colophon" role="contentinfo">
+				<footer class="site-footer" id="colophon" role="contentinfo">
 
-              <div class="site-info">
-                <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ), 'WordPress' ); ?></a>
-                <span class="sep"> | </span>
-                <?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ), '<a href="http://understrap.com/">understrap.com</a>' ); ?>
-                (<?php printf( __( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
-              </div><!-- .site-info -->
+					<div class="site-info">
+						<a href="<?php echo esc_url( __( 'http://wordpress.org/',
+						'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ),
+						'WordPress' ); ?></a>
+						<span class="sep"> | </span>
+						<?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),
+						'<a href="http://understrap.com/">understrap.com</a>' ); ?>
+						(<?php printf( __( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
+					</div><!-- .site-info -->
 
-            </footer><!-- #colophon -->
+				</footer><!-- #colophon -->
 
-          </div><!--col end -->
+			</div><!--col end -->
 
-        </div><!-- row end -->
+		</div><!-- row end -->
 
-      </div><!-- container end -->
+	</div><!-- container end -->
 
-    </div><!-- wrapper end -->
+</div><!-- wrapper end -->
 
-  </div><!-- #page -->
+</div><!-- #page -->
 
-  <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
 

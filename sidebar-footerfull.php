@@ -1,11 +1,20 @@
-<?php if ( is_active_sidebar( 'footerfull' ) ): ?>
+<?php
+/**
+ * Sidebar setup for footer full.
+ *
+ * @package understrap
+ */
 
-  <!-- ******************* The Hero Widget Area ******************* -->
+?>
 
-  <div class="wrapper" id="wrapper-footer-full">
+<?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
 
-    <?php dynamic_sidebar( 'footerfull' ); ?>
+	<!-- ******************* The Hero Widget Area ******************* -->
 
-  </div><!-- #wrapper-footer-full -->
+	<div class="wrapper" id="wrapper-footer-full">
+
+		<?php dynamic_sidebar( 'footerfull' ); ?>
+
+	</div><!-- #wrapper-footer-full -->
 
 <?php endif; ?>

@@ -1,15 +1,24 @@
-<?php if ( is_active_sidebar( 'hero' ) ): ?>
+<?php
+/**
+ * Sidebar - hero setup.
+ *
+ * @package understrap
+ */
 
-  <!-- ******************* The Hero Widget Area ******************* -->
+?>
 
-  <div class="wrapper" id="wrapper-hero">
+<?php if ( is_active_sidebar( 'hero' ) ) : ?>
 
-    <div class="owl-carousel">
+	<!-- ******************* The Hero Widget Area ******************* -->
 
-      <?php dynamic_sidebar( 'hero' ); ?>
+	<div class="wrapper" id="wrapper-hero">
 
-    </div><!-- .owl-carousel -->
+		<div class="owl-carousel">
 
-  </div><!-- #wrapper-hero -->
+			<?php dynamic_sidebar( 'hero' ); ?>
+
+		</div><!-- .owl-carousel -->
+
+	</div><!-- #wrapper-hero -->
 
 <?php endif; ?>
