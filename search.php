@@ -45,7 +45,8 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php endwhile; ?>
 
-					<?php the_posts_navigation(); ?>
+					<!-- the pagination component -->
+					<?php require get_template_directory() . '/global-templates/pagination.php';understrap_pagination();?>
 
 				<?php else : ?>
 
