@@ -130,14 +130,16 @@ a.skip-link {
   margin-left: .425rem;
 }
 
-.post-navigation {
+.post-navigation,
+.paged-navigation {
   padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px solid $gray-dark;
 }
 
 .nav-previous a,
-.nav-next a {
+.nav-next a,
+.paged-navigation a {
   text-decoration: none;
   color: $gray-dark;
 }
