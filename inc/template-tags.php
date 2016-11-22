@@ -181,45 +181,45 @@ function understrap_numeric_posts_nav() {
 		$links[] = $paged + 2;
 		$links[] = $paged + 1;
 	}
-	echo '<div class="nav-links paged-navigation">' . "\n";
+	echo '<nav aria-label="Page navigation"><ul class="pagination">' . "\n";
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() ) {
 		//printf( '<button class="nav-previous btn btn-ghost btn-raised"><span class="fa fa-backward"></span> %s</button>' . "\n", get_previous_posts_link() );
 	?>
-		<span class="nav-previous btn btn-sm btn-secondary">
+		<li class="page-item">
 	<?php previous_posts_link( '<span class="fa fa-backward"></span> '.  __('Newer posts', 'understrap' )); ?>
-		</span>
+		</li>
 	<?php
 	}
 	/**	Link to first page, plus ellipses if necessary */
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? 'active' : '';
-		printf( '<span class="btn btn-sm btn-secondary pagenumbers %s"><a href="%s">%s</a></span>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+		printf( '<li class="page-item"><a class="page-link" href="%s">%s</a></span>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 		if ( ! in_array( 2, $links ) )
-			echo '<span class="btn btn-sm btn-secondary">...</span>';
+			echo '<li class="page-item">...</li>';
 	}
 	/**	Link to current page, plus 2 pages in either direction if necessary */
 	sort( $links );
 	foreach ( (array) $links as $link ) {
 		$class = $paged == $link ? 'active' : '';
-		printf( '<span class="btn btn-sm btn-secondary pagenumbers %s"><a href="%s">%s</a></span>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+		printf( '<li class="page-item" %s"><a  class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
 	}
 	/**	Link to last page, plus ellipses if necessary */
 	if ( ! in_array( $max, $links ) ) {
 		if ( ! in_array( $max - 1, $links ) )
-			echo '<span class="btn btn-sm btn-secondary">...</span>' . "\n";
+			echo '<li class="page-item">...</li>' . "\n";
 		$class = $paged == $max ? ' active' : '';
-		printf( '<span class="btn btn-sm btn-secondary pagenumbers %s"><a href="%s">%s</a></span>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+		printf( '<li class="page-item %s"><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
 	}
 	/**	Next Post Link */
 	if ( get_next_posts_link() ) {
 		//printf( '<button class="nav-next btn btn-ghost btn-raised pull-right">%s  <span class="fa fa-forward"></span></button>' . "\n", get_next_posts_link() );
 	?>
-		<span class="nav-next btn btn-sm btn-secondary float-xs-right">
+		<li class="page-item">
 	<?php	next_posts_link( __('Older posts', 'understrap' ) . ' <span class="fa fa-forward"></span>'); ?>
-		</span>
+		</li>
 	<?php
 	}
-	echo '</div>' . "\n";
+	echo '</ul></nav>' . "\n";
 }
 endif;
