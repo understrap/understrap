@@ -52,9 +52,6 @@ if ( is_front_page() && is_home() ) {
 
 					<?php endwhile; ?>
 
-					<!-- the pagination component -->
-					<?php require get_template_directory() . '/global-templates/pagination.php';understrap_pagination();?>
-
 				<?php else : ?>
 
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
@@ -62,6 +59,9 @@ if ( is_front_page() && is_home() ) {
 				<?php endif; ?>
 
 			</main><!-- #main -->
+
+			<!-- The pagination component -->
+			<?php understrap_pagination(); ?>
 
 		</div><!-- #primary -->
 

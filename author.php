@@ -70,9 +70,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 							</li>
 						<?php endwhile; ?>
 
-					<!-- the pagination component -->
-					<?php require get_template_directory() . '/global-templates/pagination.php';understrap_pagination();?>
-
 					<?php else : ?>
 
 						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
@@ -84,6 +81,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 				</ul>
 
 			</main><!-- #main -->
+
+			<!-- The pagination component -->
+			<?php understrap_pagination(); ?>
 
 		</div><!-- #primary -->
 

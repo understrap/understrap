@@ -33,6 +33,11 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/pagination.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';

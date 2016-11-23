@@ -132,9 +132,9 @@ a.skip-link {
 
 .post-navigation,
 .paged-navigation {
-  padding-top: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid $gray-dark;
+  padding: ($grid-gutter-width-base/2) 0;
+  margin: $grid-gutter-width-base 0;
+  border-top: 1px solid $gray-lighter;
 }
 
 // Fixing BS dropdown in a dropdown

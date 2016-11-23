@@ -69,6 +69,8 @@ if ( is_front_page() && is_home() ) {
 				<?php if ( 'masonry' === $posts_style ) : ?></div><?php endif; ?>
 			</main><!-- #main -->
 
+			<?php understrap_pagination(); ?>
+
 		</div><!-- #primary -->
 
 		<!-- Do the right sidebar check -->
@@ -79,9 +81,7 @@ if ( is_front_page() && is_home() ) {
 		<?php endif; ?>
 
 	</div><!-- .row -->
-	<?php require get_template_directory() . '/global-templates/pagination.php';
-	understrap_pagination();
-	?>
+
 </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
