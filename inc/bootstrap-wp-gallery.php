@@ -116,7 +116,7 @@ function shortcode_gallery( $attr ) {
 		$output .= ( $i % $columns == 0 ) ? '<div class="row gallery-row">' : '';
 		$output .= '<div class="' . $grid . '">' . $image;
 		if ( trim( $attachment->post_excerpt ) ) {
-			$output .= '<div class="caption hidden">' . wptexturize( $attachment->post_excerpt ) . '</div>';
+			$output .= '<div class="caption hidden-xs-up">' . wptexturize( $attachment->post_excerpt ) . '</div>';
 		}
 		$output .= '</div>';
 		$i ++;
