@@ -5,9 +5,15 @@
                   - Greek language file added - Thx @stef-k
                   - Portugese language file added - Thx @jfig
                   - Adding vertical-one-page template for landingpages - Thx @stef-k
-                  - Align code to @mdo ´s coding standards here: http://codeguide.co/ - Thx @maxdmyers
                   - Making all theme functions pluggable to allow child themes to overwrite ´em
                   - French language file added - Thx @tchama
+                  - Adding article pagination and page nav BS4 markup  - Thx @stef-k & @Thomas-A-Reinert
+                  - Adding dynamic sidebar function - Thx @stef-k
+                  - Korean language file added
+                  - Basic WooCommerce templates added
+                  - Fixing "Gulp dist" Task
+                  - Adding masonry layout option to optimizer - Thx @stef-k
+                  - Adding fluid/fixed conatiner option to optimizer
                   
 
             - ** 0.4.9 Oct. 25th 2016 **
