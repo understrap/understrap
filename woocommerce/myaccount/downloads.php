@@ -56,7 +56,7 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 								if ( is_numeric( $download['downloads_remaining'] ) ) {
 									echo esc_html( $download['downloads_remaining'] );
 								} else {
-									_e( '&infin;', 'woocommerce' );
+									_e( '&infin;', 'understrap' );
 								}
 							?>
 
@@ -64,7 +64,7 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 							<?php if ( ! empty( $download['access_expires'] ) ) : ?>
 								<time datetime="<?php echo date( 'Y-m-d', strtotime( $download['access_expires'] ) ); ?>" title="<?php echo esc_attr( strtotime( $download['access_expires'] ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $download['access_expires'] ) ); ?></time>
 							<?php else : ?>
-								<?php _e( 'Never', 'woocommerce' ); ?>
+								<?php _e( 'Never', 'understrap' ); ?>
 							<?php endif; ?>
 
 						<?php elseif ( 'download-actions' === $column_id ) : ?>
@@ -72,7 +72,7 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 								$actions = array(
 									'download'  => array(
 										'url'  => $download['download_url'],
-										'name' => __( 'Download', 'woocommerce' )
+										'name' => __( 'Download', 'understrap' )
 									)
 								);
 
@@ -95,9 +95,9 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 <?php else : ?>
 	<div class="woocommerce-Message woocommerce-Message--info woocommerce-info">
 		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Go Shop', 'woocommerce' ) ?>
+			<?php esc_html_e( 'Go Shop', 'understrap' ) ?>
 		</a>
-		<?php esc_html_e( 'No downloads available yet.', 'woocommerce' ); ?>
+		<?php esc_html_e( 'No downloads available yet.', 'understrap' ); ?>
 	</div>
 <?php endif; ?>
 

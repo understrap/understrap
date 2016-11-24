@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 							'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
 							esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
-							__( 'Remove this item', 'woocommerce' ),
+							__( 'Remove this item', 'understrap' ),
 							esc_attr( $product_id ),
 							esc_attr( $_product->get_sku() )
 						), $cart_item_key );
@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php else : ?>
 
-		<li class="empty"><?php _e( 'No products in the cart.', 'woocommerce' ); ?></li>
+		<li class="empty"><?php _e( 'No products in the cart.', 'understrap' ); ?></li>
 
 	<?php endif; ?>
 
@@ -77,13 +77,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( ! WC()->cart->is_empty() ) : ?>
 
-	<p class="total"><strong><?php _e( 'Subtotal', 'woocommerce' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
+	<p class="total"><strong><?php _e( 'Subtotal', 'understrap' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
 
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
 	<p class="buttons">
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-outline-primary"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
-		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-primary"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-outline-primary"><?php _e( 'View Cart', 'understrap' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-primary"><?php _e( 'Checkout', 'understrap' ); ?></a>
 	</p>
 
 <?php endif; ?>
