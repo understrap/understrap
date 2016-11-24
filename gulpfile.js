@@ -203,8 +203,12 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.node + 'jquery/dist/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
+// _s SCSS files
+    gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
+        .pipe(gulp.dest(basePaths.dev + '/sass/underscores'));
+
 // _s JS files
-    gulp.src(basePaths.node + 'underscores-for-npm/js/*.js')
+    gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy Tether JS files
