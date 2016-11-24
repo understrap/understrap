@@ -31,8 +31,11 @@ if ( is_front_page() && is_home() ) {
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+
 			<?php if ( 'masonry' === $posts_style ) : ?>
+
 			<div class="card-columns"><?php endif; ?>
+			
 				<main class="site-main" id="main">
 
 					<?php if ( have_posts() ) : ?>
