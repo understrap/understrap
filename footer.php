@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-12">
 
-				<footer class="site-footer" id="colophon" role="contentinfo">
+				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
 						<a href="<?php echo esc_url( __( 'http://wordpress.org/',

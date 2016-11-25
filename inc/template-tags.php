@@ -141,7 +141,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 		<div class="row">
 			<div class="col-md-12">
 				<nav class="navigation post-navigation">
-					<h1 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h1>
+					<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
 					<div class="nav-links">
 						<?php
 
