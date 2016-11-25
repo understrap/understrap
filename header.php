@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope"
 		     itemtype="http://schema.org/SiteNavigationElement">
 
-			<div class="<?php echo esc_html( $container ); ?>" id="content">
+			<div class="<?php echo esc_html( $container ); ?>" >
 
 				<div class="navbar-header">
 
