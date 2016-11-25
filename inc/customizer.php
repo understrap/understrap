@@ -178,6 +178,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			'type'       => 'theme_mod',
 			'capability' => 'edit_theme_options',
 			'transport'  => 'refresh',
+			'sanitize_callback' => 'absint',
 		) );
 
 		$wp_customize->add_control(
