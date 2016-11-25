@@ -62,8 +62,6 @@ if ( is_front_page() && is_home() ) {
 
 						<?php endwhile; ?>
 
-						<?php the_posts_navigation(); ?>
-
 					<?php else : ?>
 
 						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
