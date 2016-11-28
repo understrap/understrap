@@ -186,18 +186,18 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_grid_post_columns', array(
 					'label'       => __( 'Grid Post Columns', 'understrap' ),
-					'description' => __( 'Choose how many columns to use in grid posts', 'understrap' ),
+					'description' => __( 'Choose how many columns to use', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_grid_post_columns',
 					'type'        => 'select',
-					'choices'     => array(
-						'6' => '6',
-						'4' => '4',
-						'3' => '3',
-						'2' => '2',
-						'1' => '1',
+					'choices' => array(
+					'6' => '2',
+					'4' => '3',
+					'3' => '4',
+					'2' => '6',
+					'12' => '1',
 					),
-					'default'     => 6,
+					'default'     => 2,
 					'priority'    => '30',
 					'transport'   => 'refresh',
 				)
