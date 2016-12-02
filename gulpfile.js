@@ -94,6 +94,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/theme.css', ['cssnano']);
+    gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts'])
 });
 
 // Run:
