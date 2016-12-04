@@ -122,7 +122,6 @@ function understrap_category_transient_flusher() {
 add_action( 'edit_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post',     'understrap_category_transient_flusher' );
 
-
 /**
  * Display navigation to next/previous post when applicable.
  */
@@ -146,12 +145,10 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 						<?php
 
 							if ( get_previous_post_link() ) {
-								previous_post_link( '<button class="nav-previous float-xs-left btn btn-sm btn-secondary">%link</button>', _x( '<i class="fa fa-angle-left" aria-hidden="true"></i>
-&nbsp;%title', 'Previous post link', 'understrap' ) );
+								previous_post_link( '<span class="nav-previous float-xs-left">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
 							}
 							if ( get_next_post_link() ) {
-								next_post_link( '<button class="nav-next float-xs-right btn btn-sm btn-secondary">%link</button>',     _x( '%title&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
-</span>', 'Next post link', 'understrap' ) );
+								next_post_link( '<span class="nav-next float-xs-right">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
 							}
 						?>
 					</div><!-- .nav-links -->
