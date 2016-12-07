@@ -161,3 +161,10 @@ button,
 [type="submit"] {
   cursor: pointer;
 }
+
+// Clearing after gallery
+.gallery:after {
+ content: "";
+ display: table;
+ clear: both;
+}

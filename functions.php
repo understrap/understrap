@@ -63,11 +63,6 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 
 /**
- * Load custom WordPress gallery.
-require get_template_directory() . '/inc/bootstrap-wp-gallery.php';
- */
-
-/**
  * Load WooCommerce functions.
  */
 require get_template_directory() . '/inc/woocommerce.php';
