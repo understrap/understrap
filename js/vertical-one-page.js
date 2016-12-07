@@ -12,7 +12,7 @@
 
 	$( document ).ready(function() {
 		// smoothly scroll to an ID
-		$( 'a[href*="#"]:not([href="#"])' ).click( function ( e ) {
+		$( '#main-menu li a' ).click( function ( e ) {
 			var target;
 			// if not on root URL
 			if ( currentPage === blogPage || vars.isSingle ) {
