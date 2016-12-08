@@ -33,6 +33,7 @@ See [changelog](CHANGELOG.md)
 - Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.1.4)
 - Jetpack ready.
 - WooCommerce support.
+- Contact Form 7 support.
 - [Child Theme](https://github.com/holger1411/understrap-child) ready.
 - Translation ready.
 - Multiple Page Templates
