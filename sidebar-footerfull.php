@@ -9,7 +9,7 @@
 
 <?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
 
-	<!-- ******************* The Hero Widget Area ******************* -->
+	<!-- ******************* The Footer Full-width Widget Area ******************* -->
 
 	<div class="wrapper" id="wrapper-footer-full">
 
