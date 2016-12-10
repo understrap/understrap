@@ -12,7 +12,7 @@
 
 	<header class="page-header">
 
-		<h2 class="page-title"><?php _e( 'Nothing Found', 'understrap' ); ?></h2>
+		<h1 class="page-title"><?php _e( 'Nothing Found', 'understrap' ); ?></h1>
 
 	</header><!-- .page-header -->
 
