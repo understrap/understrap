@@ -15,9 +15,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<?php get_template_part( 'global-templates/variables', 'none' ); ?>
-
-
 <div class="wrapper" id="archive-wrapper">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
