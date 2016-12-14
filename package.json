@@ -32,7 +32,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.10",
     "gulp-clone": "^1.0.0",
