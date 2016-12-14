@@ -127,7 +127,7 @@ gulp.task('browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano', 'scripts'], function () { });
 
 // Run:
 // gulp scripts.
