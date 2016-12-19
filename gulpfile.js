@@ -101,7 +101,7 @@ gulp.task('watch', function () {
 // gulp nanocss
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
-  return gulp.src('./css/*.css')
+  return gulp.src('./css/theme.css')
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
@@ -227,4 +227,14 @@ gulp.task('copy-assets', function() {
 gulp.task('dist', function() {
     gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**', '*'])
     .pipe(gulp.dest('dist/'))
+});
+
+gulp.task('build', function(callback) {
+  runSequence('cleancss',
+              'copy-assets',
+              'sass', 
+              'scripts',
+              'cssnano',
+              'dist',
+              callback);
 });

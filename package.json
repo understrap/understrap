@@ -4,8 +4,9 @@
   "description": "Wordpress Theme framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "gulp copy-assets"
   },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/holger1411/understrap.git"
@@ -22,30 +23,28 @@
   "bugs": {
     "url": "https://github.com/holger1411/understrap/issues"
   },
-  "homepage": "https://github.com/holger1411/understrap",
+  "homepage": "https://understrap.com",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
+    "browser-sync": "^2.18.1",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
+    "gulp-clone": "^1.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
     "gulp-ignore": "^2.0.2",
+    "gulp-merge": "^0.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
     "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.10",
-    "gulp-clone": "^1.0.0",
-    "gulp-merge": "^0.1.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-sourcemaps": "^2.2.0",
     "merge2": "^1.0.2",
-    "browser-sync": "^2.18.1",
     "owl.carousel": "^2.2.0",
+    "run-sequence": "^1.2.2",
     "undescores-for-npm": "^1.0.0"
   },
-  "devDependencies": {},
-  "scripts": {
-    "postinstall": "gulp copy-assets"
-  }
+  "devDependencies": {}
 }
