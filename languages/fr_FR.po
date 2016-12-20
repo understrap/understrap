@@ -5,7 +5,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-11-18 14:37+0100\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"PO-Revision-Date: 2016-11-18 15:09+0100\n"
+"PO-Revision-Date: 2016-12-20 18:10+0100\n"
 "Language-Team: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,7 @@ msgstr "Propulsé par %s"
 #: ../footer.php:26
 #, php-format
 msgid "Theme: %1$s by %2$s."
-msgstr "Theme: %1$s par %2$s."
+msgstr "Thème: %1$s par %2$s."
 
 #: ../header.php:30
 msgid "Skip to content"
@@ -143,7 +143,7 @@ msgstr "Page pleine largeur"
 
 #. Name of the template
 msgid "Empty Page Template"
-msgstr "Le modèle de page est vide"
+msgstr "Modèle de page vide"
 
 #: ../inc/widgets.php:10
 msgid "Sidebar"
@@ -151,15 +151,15 @@ msgstr "Sidebar"
 
 #: ../inc/widgets.php:20
 msgid "Hero Slider"
-msgstr "Hero Slider"
+msgstr "Héro dynamique"
 
 #: ../inc/widgets.php:30
 msgid "Hero Static"
-msgstr "Hero Static"
+msgstr "Héro statique"
 
 #: ../inc/widgets.php:40
 msgid "Footer Full"
-msgstr "Footer Full"
+msgstr "Pied pleine page"
 
 #: ../inc/customizer.php:24
 msgid "Slider Settings"
@@ -180,7 +180,7 @@ msgstr "Boucle sur le contenu du Slider"
 #: ../inc/template-tags.php:18
 #, php-format
 msgid " Edited %4$s"
-msgstr ", modifié le %4$s"
+msgstr " modifié le %4$s"
 
 #: ../inc/template-tags.php:29
 #, php-format
@@ -270,7 +270,7 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Désolé, mais rien ne correspond à votre recherche. Veuillez réessayez avec "
+"Désolé, rien ne correspond à votre recherche. Veuillez réessayez avec "
 "d'autres termes."
 
 #: ../loop-templates/content-none.php:33
