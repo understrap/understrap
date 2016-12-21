@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-12-20 18:30+0100\n"
-"PO-Revision-Date: 2016-12-20 19:37+0100\n"
+"PO-Revision-Date: 2016-12-21 11:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -228,10 +228,11 @@ msgstr "par %s"
 msgid ", "
 msgstr ","
 
+# dans une catégorie 
 #: inc/template-tags.php:53
 #, php-format
 msgid "Posted in %1$s"
-msgstr "Publié il y a %1$s"
+msgstr "Publié dans %1$s"
 
 #: inc/template-tags.php:59
 #, php-format
