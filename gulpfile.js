@@ -5,6 +5,7 @@ var basePaths = {
     dev: './src/'
 };
 
+
 // browser-sync watched files
 // automatically reloads the page when files changed
 var browserSyncWatchFiles = [
@@ -12,12 +13,15 @@ var browserSyncWatchFiles = [
     './js/*.min.js',
     './**/*.php'
 ];
+
+
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
     proxy: "localhost/wordpress/",
     notify: false
 };
+
 
 // Defining requirements
 var gulp = require('gulp');
@@ -88,6 +92,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
+
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
@@ -96,6 +101,7 @@ gulp.task('watch', function () {
     gulp.watch('./css/theme.css', ['cssnano']);
     gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts'])
 });
+
 
 // Run:
 // gulp nanocss
@@ -117,6 +123,7 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
+
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
@@ -124,10 +131,12 @@ gulp.task('browser-sync', function() {
     browserSync.init(browserSyncWatchFiles, browserSyncOptions);
 });
 
+
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
 gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano', 'scripts'], function () { });
+
 
 // Run:
 // gulp scripts.
@@ -162,6 +171,7 @@ gulp.task('scripts', function() {
     .pipe(concat('theme.js'))
     .pipe(gulp.dest('./js/'));
 });
+
 
 // Run:
 // gulp copy-assets.
@@ -220,6 +230,7 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.node + 'tether/dist/css/*.css')
         .pipe(gulp.dest(basePaths.dev + '/css'));
 });
+
 
 // Run
 // gulp dist
