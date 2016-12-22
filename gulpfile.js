@@ -228,13 +228,3 @@ gulp.task('dist', function() {
     gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**', '*'])
     .pipe(gulp.dest('dist/'))
 });
-
-gulp.task('build', function(callback) {
-  runSequence('cleancss',
-              'copy-assets',
-              'sass', 
-              'scripts',
-              'cssnano',
-              'dist',
-              callback);
-});

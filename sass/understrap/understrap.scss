@@ -168,3 +168,8 @@ button,
  display: table;
  clear: both;
 }
+
+// Clearing after widget
+aside.widget{
+  clear:both;
+}
