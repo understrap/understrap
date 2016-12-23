@@ -47,7 +47,3 @@ if ( $is_woocommerce ) {
 		echo $html;
 	}
 }
-
-
-
-
