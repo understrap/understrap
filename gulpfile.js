@@ -159,7 +159,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./js/'));
 
   gulp.src(scripts)
-    .pipe(concat('ctheme.js'))
+    .pipe(concat('theme.js'))
     .pipe(gulp.dest('./js/'));
 });
 
