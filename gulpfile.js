@@ -65,7 +65,7 @@ gulp.task('scss-for-prod', function() {
 
 // Run:
 // gulp sourcemaps + sass + reload(browserSync)
-// Prepare the child-theme.css for the developpment environment
+// Prepare the child-theme.css for the development environment
 gulp.task('scss-for-dev', function() {
     gulp.src('./sass/*.scss')
         .pipe(plumber())
@@ -102,7 +102,7 @@ gulp.task('watch', function () {
 
 
 // Run:
-// gulp nanocss
+// gulp cssnano
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/theme.css')
