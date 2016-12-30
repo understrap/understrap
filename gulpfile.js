@@ -39,7 +39,6 @@ var clone = require('gulp-clone');
 var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
 
 
 // Run:
@@ -66,7 +65,7 @@ gulp.task('scss-for-prod', function() {
 
 // Run:
 // gulp sourcemaps + sass + reload(browserSync)
-// Prepare the child-theme.css for the developpment environment
+// Prepare the child-theme.css for the development environment
 gulp.task('scss-for-dev', function() {
     gulp.src('./sass/*.scss')
         .pipe(plumber())
@@ -74,7 +73,6 @@ gulp.task('scss-for-dev', function() {
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe(gulp.dest('./css'))
-        .pipe(reload({stream: true}));
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
@@ -104,7 +102,7 @@ gulp.task('watch', function () {
 
 
 // Run:
-// gulp nanocss
+// gulp cssnano
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/theme.css')
@@ -114,7 +112,6 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'))
-    .pipe(reload({stream: true}));
 });
 
 gulp.task('cleancss', function() {
