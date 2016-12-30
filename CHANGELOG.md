@@ -20,7 +20,7 @@
                 - Updating hamburger icon behavior
 
 
-            - ** Release 0.5.0 **
+            - ** Release 0.5.0 Nov. 24th 2016 **
                   - Update Owl Carousel to 2.2.0
                   - Update Font Awesome to 4.7.0
                   - Greek language file added - Thx @stef-k
