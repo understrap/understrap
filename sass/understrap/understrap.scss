@@ -152,7 +152,14 @@ a.skip-link {
 
 .dropdown-menu .menu-item {
   width: 100%;
-  a:hover { background-color: $brand-primary; }
+  a.nav-link{
+    margin:0px;
+    padding:$nav-link-padding;
+
+  }
+  a.nav-link:hover { 
+    background-color: $brand-primary; 
+  }
 }
 
 button,

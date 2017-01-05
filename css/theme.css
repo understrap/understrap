@@ -6010,7 +6010,10 @@ a.skip-link {
 
 .dropdown-menu .menu-item {
   width: 100%; }
-  .dropdown-menu .menu-item a:hover {
+  .dropdown-menu .menu-item a.nav-link {
+    margin: 0px;
+    padding: 0.5em 1em; }
+  .dropdown-menu .menu-item a.nav-link:hover {
     background-color: #895cd1; }
 
 button,
