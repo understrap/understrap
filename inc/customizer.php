@@ -32,50 +32,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 	 */
 	function understrap_theme_customize_register( $wp_customize ) {
 
-		$wp_customize->add_section( 'understrap_theme_slider_options', array(
-			'title' => __( 'Slider Settings', 'understrap' ),
-		) );
-
-		$wp_customize->add_setting( 'understrap_theme_slider_count_setting', array(
-			'default'           => '1',
-			'sanitize_callback' => 'absint',
-		) );
-
-		$wp_customize->add_control( 'understrap_theme_slider_count', array(
-			'label'    => __( 'Number of slides displaying at once', 'understrap' ),
-			'section'  => 'understrap_theme_slider_options',
-			'type'     => 'text',
-			'settings' => 'understrap_theme_slider_count_setting',
-		) );
-
-		$wp_customize->add_setting( 'understrap_theme_slider_time_setting', array(
-			'default'           => '5000',
-			'sanitize_callback' => 'absint',
-		) );
-
-		$wp_customize->add_control( 'understrap_theme_slider_time', array(
-			'label'    => __( 'Slider Time (in ms)', 'understrap' ),
-			'section'  => 'understrap_theme_slider_options',
-			'type'     => 'text',
-			'settings' => 'understrap_theme_slider_time_setting',
-		) );
-
-		$wp_customize->add_setting( 'understrap_theme_slider_loop_setting', array(
-			'default'           => 'true',
-			'sanitize_callback' => 'esc_textarea',
-		) );
-
-		$wp_customize->add_control( 'understrap_theme_loop', array(
-			'label'    => __( 'Loop Slider Content', 'understrap' ),
-			'section'  => 'understrap_theme_slider_options',
-			'type'     => 'radio',
-			'choices'  => array(
-				'true'  => 'yes',
-				'false' => 'no',
-			),
-			'settings' => 'understrap_theme_slider_loop_setting',
-		) );
-
 		// Theme layout settings.
 		$wp_customize->add_section( 'understrap_theme_layout_options', array(
 			'title'       => __( 'Theme Layout Settings', 'understrap' ),
