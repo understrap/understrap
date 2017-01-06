@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope"
+		<nav class="navbar navbar-inverse bg-inverse site-navigation" itemscope="itemscope"
 		     itemtype="http://schema.org/SiteNavigationElement">
 
 			<div class="<?php echo esc_html( $container ); ?>" >
@@ -42,9 +42,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="navbar-header">
 
 					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse"
-					        data-target=".exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false"
-					        aria-label="Toggle navigation"></button>
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					    <span class="navbar-toggler-icon"></span>
+					  </button>
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
@@ -62,8 +62,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-toggleable-xs exCollapsingNavbar',
-						'container_id'    => 'exCollapsingNavbar',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarNav',
 						'menu_class'      => 'nav navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
