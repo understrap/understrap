@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="navbar-header">
 
 					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler navbar-toggleable-md" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					    <span class="navbar-toggler-icon"></span>
 					  </button>
 
