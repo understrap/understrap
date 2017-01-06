@@ -34,17 +34,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-inverse bg-inverse site-navigation" itemscope="itemscope"
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse site-navigation" itemscope="itemscope"
 		     itemtype="http://schema.org/SiteNavigationElement">
 
 			<div class="<?php echo esc_html( $container ); ?>" >
 
-				<div class="navbar-header">
 
 					<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-					<button class="navbar-toggler navbar-toggleable-md" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					    <span class="navbar-toggler-icon"></span>
-					  </button>
+				  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
@@ -56,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 } ?><!-- end custom logo -->
 
-				</div>
+
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
