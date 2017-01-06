@@ -6825,6 +6825,24 @@ a.skip-link {
 .bg-inverse .dropdown-menu {
   background-color: #292b2c; }
 
+.dropdown-menu .dropdown-menu {
+  position: relative;
+  display: block;
+  margin-left: 10px;
+  border: none;
+  box-shadow: none; }
+  .dropdown-menu .dropdown-menu li {
+    padding-left: 0px;
+    list-style: square; }
+
+.dropdown-menu .menu-item {
+  width: 100%; }
+  .dropdown-menu .menu-item a.nav-link {
+    margin: 0px;
+    padding: 0.5em 1em; }
+  .dropdown-menu .menu-item a.nav-link:hover {
+    background-color: #895cd1; }
+
 button,
 [type="button"],
 [type="reset"],
