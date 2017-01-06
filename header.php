@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+		<nav class="navbar navbar-toggleable-md navbar-light">
 
 			<div class="<?php echo esc_html( $container ); ?>">
 
