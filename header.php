@@ -33,9 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-
-			<div class="<?php echo esc_html( $container ); ?>" >
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
 
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     				<span class="navbar-toggler-icon"></span>
@@ -52,8 +50,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
-
-
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
@@ -67,7 +63,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-			</div> <!-- .container -->
 
 		</nav><!-- .site-navigation -->
 
