@@ -35,7 +35,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 
-				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="<?php echo esc_html( $container ); ?>">
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     				<span class="navbar-toggler-icon"></span>
  				 </button>
 
@@ -63,6 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
+			</div><!-- .container -->
 
 		</nav><!-- .site-navigation -->
 
