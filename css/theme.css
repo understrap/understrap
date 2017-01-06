@@ -6825,6 +6825,9 @@ a.skip-link {
 .bg-inverse .dropdown-menu {
   background-color: #292b2c; }
 
+.navbar-toggleable-md .navbar-nav .dropdown-menu {
+  float: left; }
+
 .dropdown-menu .dropdown-menu {
   position: relative;
   display: block;
