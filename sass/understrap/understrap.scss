@@ -81,6 +81,31 @@ background-color:$brand-success;
 background-color:$brand-inverse;
 }
 
+// Fixing BS dropdown in a dropdown
+.dropdown-menu .dropdown-menu {
+  position: relative;
+  display: block;
+  margin-left: 10px;
+  border: none;
+  box-shadow: none;
+  li {
+    padding-left: 0px;
+    list-style: square;
+  }
+}
+
+.dropdown-menu .menu-item {
+  width: 100%;
+  a.nav-link{
+    margin:0px;
+    padding:$nav-link-padding;
+
+  }
+  a.nav-link:hover { 
+    background-color: $brand-primary; 
+  }
+}
+
 button,
 [type="button"],
 [type="reset"],
