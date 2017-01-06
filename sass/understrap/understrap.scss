@@ -1,5 +1,6 @@
 // Some basic padding for all wrappers
-.wrapper { padding: $grid-gutter-width-base 0; }
+.wrapper { 
+  padding: $grid-gutter-width-base 0; }
 
 // Reset hero wrapper padding to 0
 #wrapper-hero { padding: 0px !important; }
@@ -7,7 +8,9 @@
 // Adding basic Wordpress classes to pass the Wordpress.org tests
 .sticky,
 .gallery-caption,
-.bypostauthor { font-size: inherit; }
+.bypostauthor { 
+  font-size: inherit; 
+}
 
 // Separate sticky wrapper from main content
 .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-light; }
@@ -177,6 +180,4 @@ button,
 }
 
 // Clearing after widget
-aside.widget{
-  clear:both;
-}
+aside.widget{clear:both;}
