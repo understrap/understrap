@@ -69,6 +69,18 @@ a.skip-link {
   width: auto;
 }
 
+.bg-primary .dropdown-menu {
+background-color:$brand-primary;
+}
+
+.bg-success .dropdown-menu {
+background-color:$brand-success;
+}
+
+.bg-inverse .dropdown-menu {
+background-color:$brand-inverse;
+}
+
 // Fixing BS dropdown in a dropdown
 .dropdown-menu .dropdown-menu {
   position: relative;

@@ -6816,6 +6816,15 @@ a.skip-link {
   display: inline;
   width: auto; }
 
+.bg-primary .dropdown-menu {
+  background-color: #895cd1; }
+
+.bg-success .dropdown-menu {
+  background-color: #5cb85c; }
+
+.bg-inverse .dropdown-menu {
+  background-color: #292b2c; }
+
 .dropdown-menu .dropdown-menu {
   position: relative;
   display: block;
