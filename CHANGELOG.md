@@ -1,9 +1,12 @@
 
             - ** Release 0.5.2 Jan. 7th 2017 **
                 - Updating to Bootstrap 4 Alpha 6
-                - fixing german translation issues
+                - Fixing german translation issues
                 - Cleanup navbar code
                 - Cleanup underStrap Sass file
+                - Fixing browsersync issues
+                - Removing one page vertical template
+                - Update dependencies
 
 
             - ** Release 0.5.1 Dec. 29th 2016 **
