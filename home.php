@@ -15,13 +15,11 @@ get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 $posts_style = get_theme_mod( 'understrap_posts_index_style' );
-
-if ( is_front_page() && is_home() ) {
-	get_sidebar( 'hero' );
-
-	get_sidebar( 'statichero' );
-}
 ?>
+
+<?php if ( is_front_page() && is_home() ) : ?>
+	<?php get_template_part( 'global-templates/hero', 'none' ); ?>
+<?php endif; ?>
 
 <div class="wrapper" id="wrapper-home">
 
