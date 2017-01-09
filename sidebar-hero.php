@@ -17,4 +17,5 @@
 
 		</div><!-- .owl-carousel -->
 
+		</div><!-- closing owl carousel -->
 <?php endif; ?>
