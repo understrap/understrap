@@ -14,6 +14,8 @@
 
 		<?php dynamic_sidebar( 'statichero' ); ?>
 
+		</div><!-- closing owl carousel -->
+
 	</div><!-- #wrapper-static-hero -->
 
 <?php endif; ?>
