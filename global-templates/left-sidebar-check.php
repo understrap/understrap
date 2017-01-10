@@ -45,5 +45,7 @@ if ( $is_woocommerce ) {
 			$html .= 'col-md-12 content-area" id="primary">';
 		}
 		echo $html;
+	} else {
+	    echo '<div class="col-md-12 content-area" id="primary">';
 	}
 }
