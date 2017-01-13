@@ -69,6 +69,11 @@ if ( ! function_exists( 'understrap_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		/*
+		 * Adding support for Widget edit icons in customizer
+		 */
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		/*
 		 * Enable support for Post Formats.
 		 * See http://codex.wordpress.org/Post_Formats
 		 */

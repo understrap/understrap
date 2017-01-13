@@ -5,6 +5,7 @@ var basePaths = {
     dev: './src/'
 };
 
+
 // browser-sync watched files
 // automatically reloads the page when files changed
 var browserSyncWatchFiles = [
@@ -12,12 +13,15 @@ var browserSyncWatchFiles = [
     './js/*.min.js',
     './**/*.php'
 ];
+
+
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
     proxy: "localhost/wordpress/",
     notify: false
 };
+
 
 // Defining requirements
 var gulp = require('gulp');
@@ -35,7 +39,6 @@ var clone = require('gulp-clone');
 var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
 
 
 // Run:
@@ -62,7 +65,7 @@ gulp.task('scss-for-prod', function() {
 
 // Run:
 // gulp sourcemaps + sass + reload(browserSync)
-// Prepare the child-theme.css for the developpment environment
+// Prepare the child-theme.css for the development environment
 gulp.task('scss-for-dev', function() {
     gulp.src('./sass/*.scss')
         .pipe(plumber())
@@ -70,7 +73,6 @@ gulp.task('scss-for-dev', function() {
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe(gulp.dest('./css'))
-        .pipe(reload({stream: true}));
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
@@ -88,6 +90,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
+
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
@@ -97,8 +100,9 @@ gulp.task('watch', function () {
     gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts'])
 });
 
+
 // Run:
-// gulp nanocss
+// gulp cssnano
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/theme.css')
@@ -108,7 +112,6 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'))
-    .pipe(reload({stream: true}));
 });
 
 gulp.task('cleancss', function() {
@@ -117,6 +120,7 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
+
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
@@ -124,44 +128,38 @@ gulp.task('browser-sync', function() {
     browserSync.init(browserSyncWatchFiles, browserSyncOptions);
 });
 
+
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
 gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano', 'scripts'], function () { });
 
-// Run:
-// gulp scripts.
+
+// Run: 
+// gulp scripts. 
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
-  gulp.src([
-    basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
-    basePaths.dev + 'js/tether.js', // Must be loaded before BS4
+    var scripts = [
+        basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
+        basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
-    // Start - All BS4 stuff
-    basePaths.dev + 'js/bootstrap4/bootstrap.js',
+        // Start - All BS4 stuff
+        basePaths.dev + 'js/bootstrap4/bootstrap.js',
 
-    // End - All BS4 stuff
+        // End - All BS4 stuff
 
-    basePaths.dev + 'js/skip-link-focus-fix.js'
-    ])
+        basePaths.dev + 'js/skip-link-focus-fix.js'
+    ];
+  gulp.src(scripts)
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 
-  gulp.src([
-    basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
-    basePaths.dev + 'js/tether.js', // Must be loaded before BS4
-
-    // Start - All BS4 stuff
-    basePaths.dev + 'js/bootstrap4/bootstrap.js',
-
-    // End - All BS4 stuff
-
-    basePaths.dev + 'js/skip-link-focus-fix.js'
-    ])
+  gulp.src(scripts)
     .pipe(concat('theme.js'))
     .pipe(gulp.dest('./js/'));
 });
+
 
 // Run:
 // gulp copy-assets.
@@ -221,20 +219,11 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest(basePaths.dev + '/css'));
 });
 
+
 // Run
 // gulp dist
 // Copies the files to the /dist folder for distributon
 gulp.task('dist', function() {
     gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**', '*'])
     .pipe(gulp.dest('dist/'))
-});
-
-gulp.task('build', function(callback) {
-  runSequence('cleancss',
-              'copy-assets',
-              'sass', 
-              'scripts',
-              'cssnano',
-              'dist',
-              callback);
 });

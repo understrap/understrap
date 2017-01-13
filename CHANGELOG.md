@@ -1,5 +1,36 @@
 
-            - ** Pre Release 0.5.0 **
+            - ** Release 0.5.2 Jan. 7th 2017 **
+                - Updating to Bootstrap 4 Alpha 6
+                - Fixing german translation issues
+                - Cleanup navbar code
+                - Cleanup underStrap Sass file
+                - Fixing browsersync issues
+                - Removing one page vertical template
+                - Update dependencies
+
+
+            - ** Release 0.5.1 Dec. 29th 2016 **
+                - Adding spanish translation
+                - Translation updates for: Greek, German, French
+                - Updating language bas file
+                - Streamlining Gulp tasks
+                - Adding WooCommerce templates
+                - Adding Contact Form 7 support
+                - Fixing W3C validator issues
+                - Adding BS4 pagination
+                - Adding BS4 article nav
+                - Include /JS folder to watcher task
+                - Some SEO improvements (especially h1 for article titles on single item pages, etc.)
+                - Adding italian language
+                - General bug fixing
+                - Fixing live preview for customizer
+                - Font Awesome update
+                - Udating all npm dependencies
+                - ARIA roles update
+                - Updating hamburger icon behavior
+
+
+            - ** Release 0.5.0 Nov. 24th 2016 **
                   - Update Owl Carousel to 2.2.0
                   - Update Font Awesome to 4.7.0
                   - Greek language file added - Thx @stef-k

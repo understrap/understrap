@@ -5,8 +5,6 @@
  * @package understrap
  */
 
-
-
 if ( ! function_exists( 'understrap_scripts' ) ) {
 	/**
 	 * Load theme's JavaScript sources.
@@ -20,30 +18,6 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-
-		// menu - vertical page association
-		// do not load on WooCommerce pages
-		// do not load if we are in WooCommerce pages.
-		$loadit = true;
-		if ( class_exists( 'WooCommerce' ) ) {
-			if ( is_woocommerce() ) {
-				$loadit = false;
-			}
-		}
-		if ( ( is_page_template ( 'page-templates/vertical-one-page.php' ) || is_home() || is_single() ) && $loadit ) {
-			wp_enqueue_script( 'vertical-one-page', get_template_directory_uri() . '/js/vertical-one-page.js',
-			array( 'jquery' ), true );
-			$page_for_posts = strtolower( get_the_title( get_option( 'page_for_posts' ) ) );
-			$home_url       = home_url();
-			$is_single      = is_single();
-			$vars           = array(
-				'pageForPosts' => $page_for_posts,
-				'homeUrl'      => $home_url,
-				'isSingle'     => $is_single,
-			);
-			wp_localize_script( 'vertical-one-page', 'vars', $vars );
-		}
-		// menu - vertical page association end.
 	}
 } // endif function_exists( 'understrap_scripts' ).
 

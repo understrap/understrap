@@ -1,5 +1,6 @@
 // Some basic padding for all wrappers
-.wrapper { padding: $grid-gutter-width-base 0; }
+.wrapper { 
+  padding: $grid-gutter-width-base 0; }
 
 // Reset hero wrapper padding to 0
 #wrapper-hero { padding: 0px !important; }
@@ -7,7 +8,9 @@
 // Adding basic Wordpress classes to pass the Wordpress.org tests
 .sticky,
 .gallery-caption,
-.bypostauthor { font-size: inherit; }
+.bypostauthor { 
+  font-size: inherit; 
+}
 
 // Separate sticky wrapper from main content
 .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-light; }
@@ -66,78 +69,23 @@ a.skip-link {
   width: auto;
 }
 
-/* Navbar toggle
- * Custom button for toggling the `.navbar-collapse`, powered by the collapse
- * JavaScript plugin.
- * Navbar vertical align
- */
-.navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: $navbar-padding-x;
-  padding: 9px 10px;
-  background-color: transparent;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
-
-  /*
-   * We remove the `outline` here, but later compensate by attaching `:hover` styles to `:focus`.
-   */
-  &:focus { outline: 0; }
-
-  // Bars
-  .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-  }
-  .icon-bar + .icon-bar { margin-top: 4px; }
+.bg-primary .dropdown-menu {
+background-color:$brand-primary;
 }
 
-.navbar {
-  .collapsing,
-  .collapse.in {
-    float: left;
-    width: 100%;
-  }
+.bg-success .dropdown-menu {
+background-color:$brand-success;
 }
 
-.navbar-dark {
-  .navbar-toggle { border: 1px solid #fff; }
-  .icon-bar { border-bottom: 1px solid #fff; }
-  .dropdown-menu { background-color: $gray-dark; }
-}
-
-.navbar #main-menu { float:left; }
-
-.navbar-nav {
-  .nav-item { float: left; }
-
-  .nav-link {
-    display: block;
-    padding-top: .425rem;
-    padding-bottom: .425rem;
-
-    + .nav-link { margin-left: 0rem; }
-  }
-
-  .nav-item + .nav-item { margin-left: 0rem; }
-}
-
-.nav-link {
-  margin-right: .425rem;
-  margin-left: .425rem;
-}
-
-.post-navigation,
-.paged-navigation {
-  padding: ($grid-gutter-width-base/2) 0;
-  margin: $grid-gutter-width-base 0;
-  border-top: 1px solid $gray-lighter;
+.bg-inverse .dropdown-menu {
+background-color:$brand-inverse;
 }
 
 // Fixing BS dropdown in a dropdown
+.navbar-toggleable-md .navbar-nav .dropdown-menu {
+  float:left;
+}
+
 .dropdown-menu .dropdown-menu {
   position: relative;
   display: block;
@@ -152,7 +100,14 @@ a.skip-link {
 
 .dropdown-menu .menu-item {
   width: 100%;
-  a:hover { background-color: $brand-primary; }
+  a.nav-link{
+    margin:0px;
+    padding:$nav-link-padding;
+
+  }
+  a.nav-link:hover { 
+    background-color: $brand-primary; 
+  }
 }
 
 button,
@@ -168,3 +123,6 @@ button,
  display: table;
  clear: both;
 }
+
+// Clearing after widget
+aside.widget{clear:both;}
