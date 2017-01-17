@@ -39,6 +39,7 @@ var clone = require('gulp-clone');
 var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var del = require('del');
 
 
 // Run:
@@ -160,13 +161,16 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./js/'));
 });
 
+gulp.task('clean-source', function () {
+  return del(['src/**/*',]);
+});
 
 // Run:
 // gulp copy-assets.
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
-gulp.task('copy-assets', function() {
+gulp.task('copy-assets', ['clean-source'], function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all Bootstrap JS files

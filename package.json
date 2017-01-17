@@ -6,7 +6,6 @@
   "scripts": {
     "postinstall": "gulp copy-assets"
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/holger1411/understrap.git"
@@ -27,6 +26,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-clone": "^1.0.0",
