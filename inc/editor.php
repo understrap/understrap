@@ -7,16 +7,6 @@
  */
 
 
-// Remove h1 from block formats dropdown
-add_filter('tiny_mce_before_init', 'understrap_tiny_mce_remove_h1_format' );
-
-function understrap_tiny_mce_remove_h1_format($init) {
-
-	$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Pre=pre';
-	return $init;
-}
-
-
 // Add TinyMCE style formats
 add_filter( 'mce_buttons_2', 'understrap_tiny_mce_style_formats' );
 

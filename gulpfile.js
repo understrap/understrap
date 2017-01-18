@@ -161,6 +161,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./js/'));
 });
 
+// Deleting any file inside the /src folder
 gulp.task('clean-source', function () {
   return del(['src/**/*',]);
 });
