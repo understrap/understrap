@@ -35,7 +35,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-toggleable-md  navbar-inverse bg-inverse">
 
-			<div class="<?php echo esc_html( $container ); ?>">
+		<?php if ( 'container' == $container ) : ?>
+			<div class="container">
+		<?php endif; ?>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     				<span class="navbar-toggler-icon"></span>
@@ -64,8 +66,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-
+			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
+			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 
