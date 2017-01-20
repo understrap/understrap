@@ -23,7 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php get_sidebar( 'left' ); ?>
 
 				<div
-					class="<?php if ( is_active_sidebar( 'left-sidebar' ) || is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-4<?php else : ?>col-md-12<?php endif; ?> content-area"
+					class="<?php
+						if ( is_active_sidebar( 'left-sidebar' ) xor is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-8<?php
+						elseif ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-4<?php
+						else : ?>col-md-12<?php
+						endif; ?> content-area"
 					id="primary">
 
 					<main class="site-main" id="main" role="main">
@@ -44,7 +48,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</main><!-- #main -->
 
 				</div><!-- #primary -->
+
 				<?php get_sidebar( 'right' ); ?>
+				
 			</div><!-- .row -->
 
 		</div><!-- Container end -->
