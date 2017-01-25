@@ -71,7 +71,7 @@
                   - Updating to Bootstrap 4 Alpha 5
                   - Using the correct BS4 markup for navbar - Thx @tedgeving
                   - Inject theme name and version into the footer dynamically - Thx @maxdmyers
-                  - Adding a blank template for building up a landingpage via WP editor or als blank canvas for Visual Compoeser etc. - Thx @omarusman
+                  - Adding a blank template for building up a landingpage via WP editor or as blank canvas for Visual Compoeser etc. - Thx @omarusman
                   - Fixing problem with empty folders after "gulp dist" - Thx @alwizo
                   - Fixed custom logo function typo - Thx @willgorham
 
