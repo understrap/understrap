@@ -146,7 +146,6 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano', 'scripts'], function 
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
-        basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
         basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
         // Start - All BS4 stuff
@@ -197,21 +196,6 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // Copy all Font Awesome SCSS files
     gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
         .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
-
-
-// owl JS files
-    gulp.src(basePaths.node + 'owl.carousel/dist/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js'));
-
-
-// Copy all Owl2 SCSS files
-    gulp.src(basePaths.node + 'owl.carousel/src/scss/*.scss')
-       .pipe(gulp.dest(basePaths.dev + '/sass/owl-carousel2'));
-
-// Copy all Owl2 CSS files
-    gulp.src(basePaths.node + 'owl.carousel/dist/assets/*.css')
-        .pipe(gulp.dest(basePaths.dev + '/css'));
-
 
 // Copy jQuery
     gulp.src(basePaths.node + 'jquery/dist/*.js')
