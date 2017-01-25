@@ -1,4 +1,24 @@
 
+            - ** Release 0.5.4 Jan. 25th 2017 **
+               - Fixing problems with dynamic sidebars (footerfull and statichero) - Thx @NayeemNipun
+               - Removes Owl Carousel slider and replace it with the BS4 carousel
+               - Fixing "both sidebars" problem - Thx @ZXCVLuke
+               - SEO improvements - Thx @raisonon
+               - CSS cleanup
+               - Updating dependencies
+
+
+            - ** Release 0.5.3 Jan. 12th 2017 **
+               - Updating dependencies
+               - Adding BS4 styles to editor style formats - Thx @ZXCVLuke
+               - Adding theme css to editor
+               - Dynamize the full footer and static hero widget area.
+               - Custom header preparations
+               - adding customizer edit icon support
+               - Fixing "no sidebar" problem
+               - Update Custom Logo Tags - Thx @jessijean
+
+
             - ** Release 0.5.2 Jan. 7th 2017 **
                 - Updating to Bootstrap 4 Alpha 6
                 - Fixing german translation issues
