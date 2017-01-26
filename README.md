@@ -1,4 +1,7 @@
+Travis build: [![Build Status](https://travis-ci.org/carl-alberto/understrap.svg?branch=master)](https://travis-ci.org/carl-alberto/understrap)
+
 Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understrap.svg?maxAge=2592000?style=flat-square)](https://gitter.im/holger1411/understrap)
+
 
 ## Official Docs Page: [Open Docs](https://understrap.github.io/)
 ## About
@@ -72,7 +75,7 @@ Some basics about the Sass and CSS files that come with UnderStrap:
 
 ### npm install
 - Open your terminal
-- Change to the directory where you want to add UnderStrap 
+- Change to the directory where you want to add UnderStrap
 - Type `npm install understrap`
 
 ### WordPress.org install
