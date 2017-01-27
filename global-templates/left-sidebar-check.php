@@ -1,4 +1,13 @@
 <?php
+/**
+ * Left sidebar check.
+ *
+ * @package understrap
+ */
+
+?>
+
+<?php
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 // On WooCommerce pages there is no need for sidebars as they leave
 // too little space for WooCommerce itself. We check if WooCommerce
