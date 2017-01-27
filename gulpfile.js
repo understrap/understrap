@@ -223,8 +223,25 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // Run
 // gulp dist
 // Copies the files to the /dist folder for distributon
-gulp.task('dist', function() {
-    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**', '*'])
+gulp.task('dist', ['clean-dist'], function() {
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!sass','!sass/**','!readme.txt','!readme.md','!package.json','!gulpfile.js','!CHANGELOG.md','!.travis.yml','!jshintignore', '!codesniffer.ruleset.xml', '*'])
     .pipe(gulp.dest('dist/'))
 });
 
+// Deleting any file inside the /src folder
+gulp.task('clean-dist', function () {
+  return del(['dist/**/*',]);
+});
+
+// Run
+// gulp dist-product
+// Copies the files to the /dist folder for distributon
+gulp.task('dist-product', ['clean-dist-product'], function() {
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**', '*'])
+    .pipe(gulp.dest('dist-product/'))
+});
+
+// Deleting any file inside the /src folder
+gulp.task('clean-dist-product', function () {
+  return del(['dist-product/**/*',]);
+});
