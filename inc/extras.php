@@ -44,7 +44,7 @@ if ( ! function_exists( 'adjust_body_class' ) ) {
 	function adjust_body_class( $classes ) {
 
 		foreach ( $classes as $key => $value ) {
-			if ( 'tag' == $value) {
+			if ( 'tag' == $value ) {
 				unset( $classes[ $key ] );
 			}
 		}
@@ -66,10 +66,10 @@ if ( ! function_exists( 'change_logo_class' ) ) {
 	 * @return mixed
 	 */
 	function change_logo_class( $html ) {
-		
+
 		$html = str_replace( 'class="custom-logo"', 'class="img-responsive"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
-		$html = str_replace('alt=""', 'title="Home" alt="logo"' , $html );
+		$html = str_replace( 'alt=""', 'title="Home" alt="logo"' , $html );
 
 		return $html;
 	}

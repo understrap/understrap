@@ -1,22 +1,19 @@
 <?php
-
 /**
  * Understrap modify editor
  *
  * @package understrap
  */
 
-
 /**
  * Registers an editor stylesheet for the theme.
  */
 function wpdocs_theme_add_editor_styles() {
-    add_editor_style( 'css/custom-editor-style.css' );
+  add_editor_style( 'css/custom-editor-style.css' );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
-
-// Add TinyMCE style formats
+// Add TinyMCE style formats.
 add_filter( 'mce_buttons_2', 'understrap_tiny_mce_style_formats' );
 
 function understrap_tiny_mce_style_formats( $styles ) {
