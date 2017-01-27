@@ -17,14 +17,14 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
 get_header( 'shop' ); ?>
 
 	<?php
 		/**
-		 * woocommerce_before_main_content hook.
+		 * Woocommerce_before_main_content hook.
 		 *
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
 		 * @hooked woocommerce_breadcrumb - 20
@@ -40,7 +40,7 @@ get_header( 'shop' ); ?>
 
 		<?php
 			/**
-			 * woocommerce_archive_description hook.
+			 * Woocommerce_archive_description hook.
 			 *
 			 * @hooked woocommerce_taxonomy_archive_description - 10
 			 * @hooked woocommerce_product_archive_description - 10
@@ -52,7 +52,7 @@ get_header( 'shop' ); ?>
 
 			<?php
 				/**
-				 * woocommerce_before_shop_loop hook.
+				 * Woocommerce_before_shop_loop hook.
 				 *
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
@@ -74,7 +74,7 @@ get_header( 'shop' ); ?>
 
 			<?php
 				/**
-				 * woocommerce_after_shop_loop hook.
+				 * Woocommerce_after_shop_loop hook.
 				 *
 				 * @hooked woocommerce_pagination - 10
 				 */
@@ -89,7 +89,7 @@ get_header( 'shop' ); ?>
 
 	<?php
 		/**
-		 * woocommerce_after_main_content hook.
+		 * Woocommerce_after_main_content hook.
 		 *
 		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 		 */
@@ -98,7 +98,7 @@ get_header( 'shop' ); ?>
 
 	<?php
 		/**
-		 * woocommerce_sidebar hook.
+		 * Woocommerce_sidebar hook.
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */

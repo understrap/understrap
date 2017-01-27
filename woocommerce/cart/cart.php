@@ -17,7 +17,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
 wc_print_notices();
@@ -33,10 +33,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<tr>
 			<th class="product-remove">&nbsp;</th>
 			<th class="product-thumbnail">&nbsp;</th>
-			<th class="product-name"><?php _e( 'Product', 'understrap' ); ?></th>
-			<th class="product-price"><?php _e( 'Price', 'understrap' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'understrap' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'understrap' ); ?></th>
+			<th class="product-name"><?php esc_html_e( 'Product', 'understrap' ); ?></th>
+			<th class="product-price"><?php esc_html_e( 'Price', 'understrap' ); ?></th>
+			<th class="product-quantity"><?php esc_html_e( 'Quantity', 'understrap' ); ?></th>
+			<th class="product-subtotal"><?php esc_html_e( 'Total', 'understrap' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -84,10 +84,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
 							}
 
-							// Meta data
+							// Meta data.
 							echo WC()->cart->get_item_data( $cart_item );
 
-							// Backorder notification
+							// Backorder notification.
 							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
 								echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>';
 							}
