@@ -4,6 +4,7 @@
  *
  * @package understrap
  */
+
 ?>
 
 <?php if ( is_active_sidebar('hero') or is_active_sidebar('statichero')) : ?>
