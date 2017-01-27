@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-above">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'understrap' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
 					'understrap' ) ); ?></div>
@@ -56,7 +56,7 @@ if ( get_next_comments_link() ) { ?>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-below">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'understrap' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
 					'understrap' ) ); ?></div>
@@ -75,7 +75,7 @@ if ( get_next_comments_link() ) { ?>
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'understrap' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'understrap' ); ?></p>
 
 	<?php endif; ?>
 
