@@ -44,7 +44,7 @@ if ( ! function_exists( 'adjust_body_class' ) ) {
 	function adjust_body_class( $classes ) {
 
 		foreach ( $classes as $key => $value ) {
-			if ( $value == 'tag' ) {
+			if ( 'tag' == $value) {
 				unset( $classes[ $key ] );
 			}
 		}
