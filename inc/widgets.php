@@ -4,6 +4,7 @@
  *
  * @package understrap
  */
+
 /**
  * Count number of widgets in a sidebar
  * Used to add classes to widget areas so widgets can be displayed one, two, three or four per row

@@ -3,6 +3,7 @@
  * Check and setup theme's default settings
  *
  * @package understrap
+ *
  */
 function setup_theme_default_settings() {
 
