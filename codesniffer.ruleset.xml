@@ -13,12 +13,6 @@
 		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
 	</rule>
 
-	<rule ref="WordPress.XSS.EscapeOutput">
-    <properties>
-        <property name="customAutoEscapedFunctions" value="$html" type="array" />
-    </properties>
-</rule>
-
 	<!-- Include sniffs for PHP cross-version compatibility. -->
 	<config name="testVersion" value="5.2-99.0"/>
 	<rule ref="PHPCompatibility"/>
