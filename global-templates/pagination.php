@@ -46,8 +46,9 @@ function understrap_pagination() {
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? ' class="active page-item"' : ' class="page-item"';
 
-		printf( '<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
-		$class, // WPCS: XSS OK.
+		printf( // WPCS: XSS OK.
+			'<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
+		$class, 
 		esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		/**    Previous Post Link */
@@ -66,8 +67,9 @@ function understrap_pagination() {
 	sort( $links );
 	foreach ( (array) $links as $link ) {
 		$class = $paged == $link ? ' class="active page-item"' : ' class="page-item"';
-		printf( '<li %s><a href="%s" class="page-link">%s</a></li>' . "\n", 
-			$class, // WPCS: XSS OK.
+		printf( // WPCS: XSS OK.
+			'<li %s><a href="%s" class="page-link">%s</a></li>' . "\n", 
+			$class, 
 			esc_url( get_pagenum_link( $link ) ), $link );
 	}
 
