@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="site-info">
 						<a href="<?php echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
 						<span class="sep"> | </span>
-						<?php printf( // WPCS: XSS ok. 
+						<?php printf( // WPCS: XSS ok.
 							esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),
 						'<a href="http://understrap.com/">understrap.com</a>' ); ?>
 						(<?php printf( // WPCS: XSS ok.

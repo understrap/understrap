@@ -15,7 +15,7 @@
 
 	<rule ref="WordPress.XSS.EscapeOutput">
     <properties>
-        <property name="customAutoEscapedFunctions" value="html" type="array" />
+        <property name="customAutoEscapedFunctions" value="$html" type="array" />
     </properties>
 </rule>
 
