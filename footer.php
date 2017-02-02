@@ -24,11 +24,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-						<a href="<?php echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
+						<a href="<?php echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
 						<span class="sep"> | </span>
-						<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( esc_html__( 'Name' ) ),
+						<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), esc_html__( $the_theme->get(  'Name' ) ),
 						'<a href="http://understrap.com/">understrap.com</a>' ); ?>
-						(<?php printf( esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( esc_html__( 'Version' ) ) ); ?>)
+						(<?php printf( esc_html__( 'Version: %1$s', 'understrap' ), esc_html__( $the_theme->get(  'Version' ) ) ); ?>)
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
