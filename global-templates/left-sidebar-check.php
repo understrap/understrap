@@ -45,7 +45,7 @@ if ( $is_woocommerce ) {
 		} else {
 			$html .= 'col-md-12 content-area" id="primary">';
 		}
-		echo $html;
+		_e( $html );
 	} elseif ( is_active_sidebar( 'right-sidebar' ) && is_active_sidebar( 'left-sidebar' ) ) {
 		$html = '<div class="';
 		if ( 'both' === $sidebar_pos ) {
@@ -53,7 +53,7 @@ if ( $is_woocommerce ) {
 		} else {
 			$html .= 'col-md-12 content-area" id="primary">';
 		}
-		echo $html;
+		_e( $html );
 	} else {
 	    echo '<div class="col-md-12 content-area" id="primary">';
 	}
