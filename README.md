@@ -29,13 +29,11 @@ See [changelog](CHANGELOG.md)
 - Comes with Bootstrap (v4) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff.
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.7.0)
-- Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.1.4)
 - Jetpack ready.
 - WooCommerce support.
 - Contact Form 7 support.
 - [Child Theme](https://github.com/holger1411/understrap-child) ready.
 - Translation ready.
-- Multiple Page Templates
 
 ## Starter Theme + HTML Framework = WordPress Theme Framework
 
@@ -150,12 +148,10 @@ Licenses & Credits
 =
 - Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
 - Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-- Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
 and of course
 - jQuery: https://jquery.org | (Code licensed under MIT)
 - WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 - Bootstrap Gallery Script based on Roots Sage Gallery: https://github.com/roots/sage/blob/5b9786b8ceecfe717db55666efe5bcf0c9e1801c/lib/gallery.php
-
 
 
 [![Analytics](https://ga-beacon.appspot.com/UA-139292-31/chromeskel_a/readme)](https://github.com/igrigorik/ga-beacon)
