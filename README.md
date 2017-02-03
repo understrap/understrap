@@ -1,7 +1,7 @@
 Travis build: [![Build Status](https://travis-ci.org/holger1411/understrap.svg?branch=master)](https://travis-ci.org/holger1411/understrap) | Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understrap.svg?maxAge=2592000?style=flat-square)](https://gitter.im/holger1411/understrap)
 
-### [Official Demo](https://understrap.com/understrap)
-### [Official Docs Page](https://understrap.github.io/)
+### See: [Official Demo](https://understrap.com/understrap)
+### Read: [Official Docs Page](https://understrap.github.io/)
 ## About
 
 I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
