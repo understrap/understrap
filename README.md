@@ -1,20 +1,18 @@
 Travis build: [![Build Status](https://travis-ci.org/holger1411/understrap.svg?branch=master)](https://travis-ci.org/holger1411/understrap) | Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understrap.svg?maxAge=2592000?style=flat-square)](https://gitter.im/holger1411/understrap)
 
-### See: [Official Demo](https://understrap.com/understrap)
-### Read: [Official Docs Page](https://understrap.github.io/)
-## About
-
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
-That’s what UnderStrap is.
-You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
-
-At the moment, UnderStrap is in a very early stage. But if you want, feel free to use it for your own WordPress theme!
+#### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
 
 # UnderStrap WordPress Theme Framework
 
 Website: [https://understrap.com](https://understrap.com)
 
 Child Theme Project: [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
+
+## About
+
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
+That’s what UnderStrap is.
+You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
 
 ## License
 UnderStrap is released under the terms of the GPL version 2 or (at your option) any later version.
