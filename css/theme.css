@@ -6863,6 +6863,9 @@ aside.widget {
 #wrapper-hero .carousel-inner .textwidget {
   width: 100%; }
 
+h1.navbar-brand a {
+  color: inherit; }
+
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

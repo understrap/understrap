@@ -131,3 +131,8 @@ aside.widget{clear:both;}
 #wrapper-hero .carousel-inner .textwidget {
 width:100%;
 }
+
+// Adjusting brand link if h1 is used
+h1.navbar-brand a {
+  color:inherit;
+}
