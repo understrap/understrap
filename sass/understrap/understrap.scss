@@ -133,6 +133,11 @@ width:100%;
 }
 
 // Adjusting brand link if h1 is used
-h1.navbar-brand a {
+h1.navbar-brand {
+  a {
   color:inherit;
+  }
+  a:hover {
+    text-decoration:none;
+  }
 }
