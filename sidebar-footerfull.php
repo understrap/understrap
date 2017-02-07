@@ -15,7 +15,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 	<div class="wrapper" id="wrapper-footer-full">
 
-		<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+		<div class="<?php echo esc_html( $container ); ?>" id="footer-full-content" tabindex="-1">
 
 			<div class="row">
 
