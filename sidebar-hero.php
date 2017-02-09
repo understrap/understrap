@@ -35,7 +35,7 @@
 			  
 			</a>
 
-		</div><!-- .owl-carousel -->
+		</div><!-- .carousel -->
 
 <?php endif; ?>
 
