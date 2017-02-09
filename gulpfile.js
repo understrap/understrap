@@ -110,7 +110,7 @@ gulp.task('watch', function () {
 // Run:
 // gulp cssnano
 // Minifies CSS files
-gulp.task('cssnano', ['cleancss'], function(){
+gulp.task('cssnano', function(){
   return gulp.src('./css/theme.css')
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber())
