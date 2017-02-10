@@ -1,5 +1,5 @@
             
-            - ** Release 0.5.5 Feb. 9th 2017 **
+            - ** Release 0.5.6 (skipping 0.5.5) Feb. 9th 2017 **
                - Adding automated tests - thx @carl-alberto 
                - Remove custom Bootstrap gellery completely
                - Fixing typos - thx to @catgofire
