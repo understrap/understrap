@@ -11,7 +11,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<div class="wrapper search-wrapper">
+<div class="wrapper" id="search-wrapper">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
