@@ -15,11 +15,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<?php get_sidebar( 'left' ); ?>
 <?php endif; ?>
 
-<?php
-
-if ( $is_woocommerce ) {
-	echo '<div class="col-md-12 content-area" id="primary">';
-} else {
+<?php {
 	$html = '';
 	if ( 'right' === $sidebar_pos || 'left' === $sidebar_pos ) {
 		$html = '<div class="';
