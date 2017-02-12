@@ -13,48 +13,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
+	<div class="<?php echo esc_html( $container ); ?>" id="content">
 
-	<div class="wrapper" id="page-wrapper">
+		<div class="row">
 
-		<div class="<?php echo esc_html( $container ); ?>" id="content">
+			<?php get_sidebar( 'left' ); ?>
 
-			<div class="row">
+			<div
+				class="<?php
+					if ( is_active_sidebar( 'left-sidebar' ) xor is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-8<?php
+					elseif ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-4<?php
+					else : ?>col-md-12<?php
+					endif; ?> content-area"
+				id="primary">
 
-				<?php get_sidebar( 'left' ); ?>
+				<main class="site-main" id="main" role="main">
 
-				<div
-					class="<?php
-						if ( is_active_sidebar( 'left-sidebar' ) xor is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-8<?php
-						elseif ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-4<?php
-						else : ?>col-md-12<?php
-						endif; ?> content-area"
-					id="primary">
+					<?php while ( have_posts() ) : the_post(); ?>
 
-					<main class="site-main" id="main" role="main">
+						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-						<?php while ( have_posts() ) : the_post(); ?>
+						<?php
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+						?>
 
-							<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+					<?php endwhile; // end of the loop. ?>
 
-							<?php
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-							?>
+				</main><!-- #main -->
 
-						<?php endwhile; // end of the loop. ?>
+			</div><!-- #primary -->
 
-					</main><!-- #main -->
+			<?php get_sidebar( 'right' ); ?>
+			
+		</div><!-- .row -->
 
-				</div><!-- #primary -->
+	</div><!-- Container end -->
 
-				<?php get_sidebar( 'right' ); ?>
-				
-			</div><!-- .row -->
+</div><!-- Wrapper end -->
 
-		</div><!-- Container end -->
-
-	</div><!-- Wrapper end -->
-
-	<?php get_footer(); ?>
+<?php get_footer(); ?>
