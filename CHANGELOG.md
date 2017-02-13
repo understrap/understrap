@@ -1,4 +1,12 @@
             
+            - ** Release 0.5.7  Feb. 13th 2017 **
+               - Fixing WooCommerce base layout by reverting custom woocommerce integration and switch back to default integration
+               - Adding /js/ folder to watcher task excluding theme.js and theme.min.js
+               - Removing duplicate DIV from "both-sidebars" page template - Thx @evandiamond 
+               - Fixing sidebar check
+               - Remove customizer from theme.min.js
+               
+
             - ** Release 0.5.6 (skipping 0.5.5) Feb. 9th 2017 **
                - Adding automated tests - thx @carl-alberto 
                - Remove custom Bootstrap gellery completely
