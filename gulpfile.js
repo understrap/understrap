@@ -170,14 +170,6 @@ gulp.task('build-styles',function(callback) {
 
 
 // Run:
-// gulp clear-js
-// Removes all top level JS files in the static/js directory
-gulp.task('clear-js', function () {
-    return del(gulpFileSettings.basePaths.dev + 'js/*.js');
-});
-
-
-// Run:
 // gulp build-scripts
 // Uglifies and concat all JS files into one
 // Comment out any packages you aren't using to not pull them into your minified JS
