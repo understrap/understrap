@@ -1,0 +1,21 @@
+//SCSS files to help you along the way
+@import "vendor/bootstrap/scss/bootstrap"; // <-------- Loads in Bootstrap sass to be used or overwrittenm in theme sass files
+@import "theme/helpers/fonts"; // <--------- Add your custom fonts into this file.
+@import "theme/helpers/variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+@import "theme/helpers/understrap"; // <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+@import "theme/helpers/contact-form7"; // <-------- Loads Bootstrap 4 support for Contact Form 7
+@import "theme/helpers/mixins"; // <-------- Loads some default helpful mixins; Add your own mixins here as well!
+@import "theme/helpers/placeholders"; // <-------- Loads some default helpful placeholder; Add your own placeholders here as well!
+
+//Add your theme scss files below
+
+//Main components scss
+@import "theme/components/common";
+@import "theme/components/header";
+@import "theme/components/footer";
+
+//Pages scss
+@import "theme/pages/home";
+
+//Modules scss
+@import "theme/modules/hero";
