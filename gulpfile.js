@@ -188,9 +188,9 @@ gulp.task('minify-scripts', function() {
         gulpFileSettings.basePaths.dev + 'js/vendor/tether/dist/*.js', // Must be loaded before BS4
         gulpFileSettings.basePaths.dev + 'js/vendor/bootstrap/dist/*.js', // All BS4 stuff
         gulpFileSettings.basePaths.dev + 'js/vendor/underscores-for-npm/js/*.js', // Underscores JS
+        '!' + gulpFileSettings.basePaths.dev + 'js/vendor/underscores-for-npm/js/customizer.js', // Remove Customizer from Underscores JS
         gulpFileSettings.basePaths.dev + 'js/vendor/fitvids/dist/*.js', // FitVids JS
         gulpFileSettings.basePaths.dev + 'js/vendor/lightgallery/dist/js/*.js', // FitVids JS
-        '!' + gulpFileSettings.basePaths.dev + 'js/vendor/underscores-for-npm/js/customizer.js', // Underscores JS
         gulpFileSettings.basePaths.dev + 'js/theme/**/*.js', // Custom theme JS
     ];
 
