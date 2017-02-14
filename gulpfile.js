@@ -16,17 +16,17 @@ var del = require('del');
 // Custom Settings used within this gulpfile
 var gulpFileSettings = {
     basePaths: {
-        node: './node_modules/',
-        dev: './static/'
+        node: 'node_modules/',
+        dev: 'static/'
     },
     browserSync: {
         watch: [
-            './static/dist/css/*.min.css',
-            './static/dist/js/*.min.js',
-            './**/*.php'
+            'static/dist/css/*.min.css',
+            'static/dist/js/*.min.js',
+            '**/*.php'
         ],
         options: {
-            proxy: 'latife.dev',
+            proxy: 'localhost',
             notify: false
         }
     }
