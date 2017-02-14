@@ -60,12 +60,14 @@ gulp.task('clear-dist', function () {
 // Run:
 // gulp copy-js.
 // Copy all needed dependency js files
+// Comment out any packages you aren't using to not pull them into your vendor files for JS
 gulp.task('copy-js', function () {
     var scripts = [
         gulpFileSettings.basePaths.node + 'bootstrap/dist/js/bootstrap.js',
         gulpFileSettings.basePaths.node + 'owl.carousel/dist/owl.carousel.js',
         gulpFileSettings.basePaths.node + 'jquery/dist/jquery.js',
         gulpFileSettings.basePaths.node + 'underscores-for-npm/js/*.js',
+        gulpFileSettings.basePaths.node + 'tether/dist/js/tether.js',
         gulpFileSettings.basePaths.node + 'fitvids/dist/fitvids.js',
         gulpFileSettings.basePaths.node + 'lightgallery/dist/js/lightgallery.js',
     ];
@@ -78,12 +80,14 @@ gulp.task('copy-js', function () {
 // Run:
 // gulp copy-sass
 // Copy all needed dependency sass files
+// Comment out any packages you aren't using to not pull them into your vendor files for SASS
 gulp.task('copy-sass', function () {
     var sass = [
         gulpFileSettings.basePaths.node + 'bootstrap/scss/**/*.scss',
         gulpFileSettings.basePaths.node + 'font-awesome/scss/*.scss',
         gulpFileSettings.basePaths.node + 'owl.carousel/src/scss/*.scss',
         gulpFileSettings.basePaths.node + 'underscores-for-npm/sass/**/*.scss',
+        gulpFileSettings.basePaths.node + 'tether/src/css/*.sass',
         gulpFileSettings.basePaths.node + 'lightgallery/src/sass/*.scss',
     ];
 
@@ -144,6 +148,7 @@ gulp.task('sass', function () {
 // Run:
 // gulp minify-styles
 // Minifies the resulting CSS file
+// Comment out any packages you aren't using to not pull them into your minified CSS
 gulp.task('minify-styles', function() {
     return gulp.src(gulpFileSettings.basePaths.dev + 'css/theme.css')
         .pipe(plumber())
@@ -175,10 +180,12 @@ gulp.task('clear-js', function () {
 // Run:
 // gulp build-scripts
 // Uglifies and concat all JS files into one
+// Comment out any packages you aren't using to not pull them into your minified JS
 gulp.task('minify-scripts', function() {
     var scripts = [
         gulpFileSettings.basePaths.dev + 'js/vendor/jquery/dist/*.js', // Must be loaded before BS4
         gulpFileSettings.basePaths.dev + 'js/vendor/owl.carousel/dist/*.js', // Must be loaded before BS4
+        gulpFileSettings.basePaths.dev + 'js/vendor/tether/dist/*.js', // Must be loaded before BS4
         gulpFileSettings.basePaths.dev + 'js/vendor/bootstrap/dist/*.js', // All BS4 stuff
         gulpFileSettings.basePaths.dev + 'js/vendor/underscores-for-npm/js/*.js', // Underscores JS
         gulpFileSettings.basePaths.dev + 'js/vendor/fitvids/dist/*.js', // FitVids JS
