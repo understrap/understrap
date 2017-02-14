@@ -1,0 +1,64 @@
+// Mixins
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin shadow-btn($bg: null) {
+  @include button($bg: $bg, $radius: 2px);
+  @include vendor-prefix(box-shadow, 0px 1px 2px 1px #888888);
+  font-size: 1.2rem;
+  margin-right: $margin-lg;
+}
+
+@mixin vertical-center() {
+  position: relative;
+  top: 50%;
+  
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center() {
+  position: relative;
+  left: 50%;
+  
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin horizontal-vertical-center() {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin border-top-bottom($color: $grey, $padding: 0) {
+  padding: $padding;
+
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+}
