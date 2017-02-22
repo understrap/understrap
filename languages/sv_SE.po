@@ -1,0 +1,397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: understrap\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
+"POT-Creation-Date: 2016-11-23 20:21+0200\n"
+"PO-Revision-Date: 2017-02-20 13:19+0000\n"
+"Last-Translator: Filip Wessman <filip@effektid.com>\n"
+"Language-Team: Swedish (Swedish)\n"
+"Language: sv-SE\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: sv_SE\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc\n"
+"X-Loco-Parser: loco_parse_po"
+
+#: ../comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "En tanke kring &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s tankar kring &ldquo;%2$s&rdquo;"
+msgstr[2] "&ldquo;%2$s&rdquo;: %1$s комментариев"
+
+#: ../comments.php:35 ../comments.php:56
+msgid "Comment navigation"
+msgstr "Kommentars navigering"
+
+#: ../comments.php:37 ../comments.php:58
+msgid "&larr; Older Comments"
+msgstr "&larr; Äldre kommentarer"
+
+#: ../comments.php:40 ../comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "Nyare kommentarer &rarr;"
+
+#: ../comments.php:72
+msgid "Comments are closed."
+msgstr "Kommentarsfältet är avstängt."
+
+#: ../author.php:27
+msgid "About:"
+msgstr "Om:"
+
+#: ../author.php:32 ../inc/custom-comments.php:16
+msgid "Website"
+msgstr "Website"
+
+#: ../author.php:34
+msgid "Profile"
+msgstr "Profil"
+
+#: ../author.php:38
+msgid "Posts by"
+msgstr "Inlägg av "
+
+#: ../footer.php:24
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: ../footer.php:24
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Drivs av %s"
+
+#: ../footer.php:26
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "tema av: %1$s by %2$s."
+
+#: ../header.php:30
+msgid "Skip to content"
+msgstr "Hoppa till innehållet"
+
+#: ../search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Sök resultat för: %s"
+
+#: ../404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Sidan verkar inte finnas."
+
+#: ../404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Här verkar det inte finnas något. Du kan prova någon an länkarna "
+"nedan eller söka efter det?"
+
+#: ../404.php:37
+msgid "Most Used Categories"
+msgstr "Most Used Categories"
+
+#. translators: %1$s: smiley
+#: ../404.php:57
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Try looking in the monthly archives. %1$s"
+
+#: ../searchform.php:9 ../searchform.php:13
+msgid "Search"
+msgstr "Sök"
+
+#: ../searchform.php:11
+msgid "Search &hellip;"
+msgstr "Sök &hellip;"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "Full Width Page"
+
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "Empty Page Template"
+
+#: ../inc/widgets.php:10
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: ../inc/widgets.php:20
+msgid "Hero Slider"
+msgstr "Hero Slider"
+
+#: ../inc/widgets.php:30
+msgid "Hero Static"
+msgstr "Hero Static"
+
+#: ../inc/widgets.php:40
+msgid "Footer Full"
+msgstr "Sidfot"
+
+#: ../inc/customizer.php:24
+msgid "Slider Settings"
+msgstr "Slider Inställningar"
+
+#: ../inc/customizer.php:33
+msgid "Number of slides displaying at once"
+msgstr "Antal slides som visas samtidigt"
+
+#: ../inc/customizer.php:45
+msgid "Slider Time (in ms)"
+msgstr "Slider tid (i ms)"
+
+#: ../inc/customizer.php:57
+msgid "Loop Slider Content"
+msgstr "Loop Slider Innehåll"
+
+#: ../inc/template-tags.php:18
+#, php-format
+msgid " Edited %4$s"
+msgstr " Redigerat %4$s"
+
+#: ../inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publicerat den %s"
+
+#: ../inc/template-tags.php:34
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "av %s"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:53
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publicerat i %1$s"
+
+#: ../inc/template-tags.php:59
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Taggad %1$s"
+
+#: ../inc/template-tags.php:65
+msgid "Leave a comment"
+msgstr "Kommentera"
+
+#: ../inc/template-tags.php:65
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: ../inc/template-tags.php:65
+#, php-format
+msgid "% Comments"
+msgstr "% Kommentarer"
+
+#. translators: %s: Name of current post
+#: ../inc/template-tags.php:72
+#, php-format
+msgid "Edit %s"
+msgstr "Ändra %s"
+
+#: ../inc/setup.php:48
+msgid "Primary Menu"
+msgstr "Huvud meny"
+
+#: ../inc/setup.php:98
+msgid "Read More..."
+msgstr "Läs mer"
+
+#: ../inc/custom-comments.php:12
+msgid "Name"
+msgstr "Namn"
+
+#: ../inc/custom-comments.php:14
+msgid "Email"
+msgstr "E-post"
+
+#: ../inc/custom-comments.php:25
+msgctxt "noun"
+msgid "Comment"
+msgstr "Kommentarer"
+
+#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 .. 
+#: loop-templates/content-page.php:25
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: ../loop-templates/content-none.php:16
+msgid "Nothing Found"
+msgstr "Inget hittades"
+
+#: ../loop-templates/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Redo att skriv ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
+
+#: ../loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Tyvärr fick din sökning inga träffar. Du kan prova igen med nya nyckelord."
+
+#: ../loop-templates/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Vi verkar inte hitta det du söker, Det kanske hjälper att söka."
+
+#: ../loop-templates/content-page.php:34
+msgid "Edit"
+msgstr "Ändra"
+
+#: ../woocommerce/myaccount/form-edit-address.php
+msgid "Save Address"
+msgstr "Spara adress"
+
+#: ../woocommerce/myaccount/my-orders.php
+msgid "%s for %s item"
+msgstr "%s för %s vara"
+
+#: ../woocommerce/myaccount/my-orders.php
+msgid "Pay"
+msgstr "Betala"
+
+#: ../woocommerce/myaccount/my-orders.php
+msgid "View"
+msgstr "Visa"
+
+#: ../woocommerce/myaccount/my-orders.php
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Login"
+msgstr "Login"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Password"
+msgstr "Lösenord"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Username or email address"
+msgstr "Användarnamn eller E-post adress"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Lost your password?"
+msgstr "Glömt ditt lösenord?"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Username"
+msgstr "Användarnamn"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Email address"
+msgstr "E-post adress"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Register"
+msgstr "Registrera"
+
+#: ../woocommerce/myaccount/form-login.php
+msgid "Remember me"
+msgstr "Kom ihåg mig"
+
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "First name"
+msgstr "Förnamn"
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "Last name"
+msgstr "Efternamn"
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "Email adress"
+msgstr "E-post adress"
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr "Nuvarande lösenord (lämna tomt för att inte ändra)"
+
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "New Password (leave blank to leave unchanged)"
+msgstr "Nytt lösenord (lämna tomt för att inte ändra)"
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "Confirm New Password"
+msgstr "Bekräfta nytt lösenord"
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "Password Change"
+msgstr "Byt lösenord"
+
+#: ../woocommerce/myaccount/form-edit-account.php
+msgid "Save changes"
+msgstr "Spara ändringar"
+
+#. Name of the theme
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Theme URI of the theme
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as parent theme. It is up to you."
+msgstr ""
+"En kombination av Automattic´s _s tema och Bootstrap 4. Gjort som en bas för "
+"ditt nästa tema eller Wordpress webbplats. Använd det som en grund eller som "
+"ett förälder tema. Det är upp till dig."
+
+#. Author of the theme
+msgid "Holger Koenemann"
+msgstr "Holger Koenemann"
+
+#. Author URI of the theme
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"
