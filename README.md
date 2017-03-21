@@ -128,20 +128,6 @@ The `empty.php` template displays a header and a footer only. A good starting po
 
 The `fullwidthpage.php` template has full width layout without a sidebar.
 
-### Vertical One Page Template
-
-The `vertical-one-page.php` template displays all pages (except the one showing the posts) in a single vertical layout with a sliding navigation.
-Additionally enables the user to control the order of each page by using the order page attribute field.
-
-#### One Page Template How to
-
- 1. Assuming that you have the following pages: Home, About and Contact
- 2. Go to Appearance → Menus and add one **custom link** for each page
- 3. On the URL field type a hash `#` and the name of the page in **lower case** so for example the link for Home becomes `#home`
- 4. Edit the Home page and set as template the **Vertical One Page** (you only need to do this for the first page)
- 5. Set the order of each page using the **Order** field from **Page Attributes** so for example if you want to display Home,
- Contact, About set the Home page to 1, the Contact to 2 and About to 3
-
 [1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
 
 Licenses & Credits
