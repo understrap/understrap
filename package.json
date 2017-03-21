@@ -6,11 +6,9 @@
   "scripts": {
     "postinstall": "gulp copy-assets"
   },
-
-  "engines" : { 
-  "npm" : ">=2.1.8" 
+  "engines": {
+    "npm": ">=2.1.8"
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/holger1411/understrap.git"
@@ -38,6 +36,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-ignore": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
     "gulp-merge": "^0.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",

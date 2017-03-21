@@ -33,6 +33,7 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var merge2 = require('merge2');
+var imagemin = require('gulp-imagemin');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 var clone = require('gulp-clone');
@@ -102,7 +103,19 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/theme.css', ['cssnano']);
-    gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts'])
+    gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
+
+    //Inside the watch task.
+    gulp.watch('./img', ['imagemin'])
+});
+
+// Run:
+// gulp imagemin
+// Running image optimizing task
+gulp.task('imagemin', function(){
+    gulp.src('img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('img'))
 });
 
 

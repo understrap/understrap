@@ -7,7 +7,7 @@
 
 ?>
 
-<?php if ( is_active_sidebar( 'hero' ) or is_active_sidebar( 'statichero' ) ) : ?>
+<?php if ( is_active_sidebar( 'hero' ) || is_active_sidebar( 'statichero' ) ) : ?>
 
 	<div class="wrapper" id="wrapper-hero">
 	
