@@ -106,14 +106,14 @@ gulp.task('watch', function () {
     gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
 
     //Inside the watch task.
-    gulp.watch('./img', ['imagemin'])
+    gulp.watch('./img/**', ['imagemin'])
 });
 
 // Run:
 // gulp imagemin
 // Running image optimizing task
 gulp.task('imagemin', function(){
-    gulp.src('img/*')
+    gulp.src('img/**')
     .pipe(imagemin())
     .pipe(gulp.dest('img'))
 });
