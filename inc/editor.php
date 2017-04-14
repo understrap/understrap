@@ -54,6 +54,12 @@ function understrap_tiny_mce_before_init( $settings ) {
           'inline' => 'cite'
       )
   );
+  
+    if ( isset( $settings['style_formats'] ) ) {
+      $orig_style_formats = json_decode($settings['style_formats'],true);
+      $style_formats = array_merge($orig_style_formats,$style_formats);
+    }
+
     $settings['style_formats'] = json_encode( $style_formats );
     return $settings;
 }

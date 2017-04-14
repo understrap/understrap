@@ -33,6 +33,7 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var merge2 = require('merge2');
+var imagemin = require('gulp-imagemin');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 var clone = require('gulp-clone');
@@ -44,7 +45,7 @@ var del = require('del');
 
 // Run:
 // gulp sass + cssnano + rename
-// Prepare the min.css for production (with 2 pipes to be sure that "child-theme.css" == "child-theme.min.css")
+// Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
 gulp.task('scss-for-prod', function() {
     var source =  gulp.src('./sass/*.scss')
         .pipe(plumber())
@@ -55,7 +56,7 @@ gulp.task('scss-for-prod', function() {
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
-        .pipe(gulp.dest('./css'));
+
 
     var pipe2 = source.pipe(clone())
         .pipe(cssnano())
@@ -92,7 +93,6 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
-        .pipe(gulp.dest('./css'));
     return stream;
 });
 
@@ -103,14 +103,26 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/theme.css', ['cssnano']);
-    gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts'])
+    gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
+
+    //Inside the watch task.
+    gulp.watch('./img/**', ['imagemin'])
+});
+
+// Run:
+// gulp imagemin
+// Running image optimizing task
+gulp.task('imagemin', function(){
+    gulp.src('img/**')
+    .pipe(imagemin())
+    .pipe(gulp.dest('img'))
 });
 
 
 // Run:
 // gulp cssnano
 // Minifies CSS files
-gulp.task('cssnano', ['cleancss'], function(){
+gulp.task('cssnano', function(){
   return gulp.src('./css/theme.css')
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber())
@@ -224,7 +236,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // gulp dist
 // Copies the files to the /dist folder for distributon
 gulp.task('dist', ['clean-dist'], function() {
-    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!sass','!sass/**','!readme.txt','!readme.md','!package.json','!gulpfile.js','!CHANGELOG.md','!.travis.yml','!jshintignore', '!codesniffer.ruleset.xml', '*'])
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!dist-product','!dist-product/**','!sass','!sass/**','!readme.txt','!readme.md','!package.json','!gulpfile.js','!CHANGELOG.md','!.travis.yml','!jshintignore', '!codesniffer.ruleset.xml', '*'])
     .pipe(gulp.dest('dist/'))
 });
 
@@ -237,7 +249,7 @@ gulp.task('clean-dist', function () {
 // gulp dist-product
 // Copies the files to the /dist folder for distributon
 gulp.task('dist-product', ['clean-dist-product'], function() {
-    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**', '*'])
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!dist-product','!dist-product/**', '*'])
     .pipe(gulp.dest('dist-product/'))
 });
 
