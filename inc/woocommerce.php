@@ -11,6 +11,14 @@ if ( ! function_exists( 'woocommerce_support' ) ) {
 	 */
 	function woocommerce_support() {
 		add_theme_support( 'woocommerce' );
+		
+		// Add New Woocommerce 3.0.0 Product Gallery support
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+
+		// Gallery slider needs Flexslider - https://woocommerce.com/flexslider/
+		//add_theme_support( 'wc-product-gallery-slider' );
+
 		// hook in and customizer form fields.
 		add_filter( 'woocommerce_form_field_args', 'wc_form_field_args', 10, 3 );
 	}
