@@ -34,6 +34,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		}
 		echo $html; // WPCS: XSS OK.
 	} else {
-		echo '<div class="col-md-12 content-area" id="primary">';
+	    echo '<div class="col-md-12 content-area" id="primary">';
 	}
 }
