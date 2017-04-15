@@ -1,44 +1,74 @@
 <?php
 /**
- * Sidebar - hero setup.
+ * The template for displaying search results pages.
  *
  * @package understrap
  */
 
+get_header();
+
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<?php if ( is_active_sidebar( 'hero' ) ) : ?>
+<div class="wrapper" id="search-wrapper">
 
-	<!-- ******************* The Hero Widget Area ******************* -->
+	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+		<div class="row">
 
-			<div class="carousel-inner" role="listbox">
+			<!-- Do the left sidebar check and opens the primary div -->
+			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-			<?php dynamic_sidebar( 'hero' ); ?>
+			<main class="site-main" id="main">
 
-			</div>
+				<?php if ( have_posts() ) : ?>
 
-			 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+					<header class="page-header">
+						/* translators:*/
+							<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'understrap' ),
+								'<span>' . get_search_query() . '</span>' ); ?></h1>
 
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					</header><!-- .page-header -->
 
-			    <span class="sr-only">Previous</span>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-			 </a>
+						<?php
+						/**
+						 * Run the loop for the search to output the results.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-search.php and that will be used instead.
+						 */
+						get_template_part( 'loop-templates/content', 'search' );
+						?>
 
-			 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+					<?php endwhile; ?>
 
-			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<?php else : ?>
 
-			    <span class="sr-only">Next</span>
+					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-			</a>
+				<?php endif; ?>
 
-		</div><!-- .carousel -->
+			</main><!-- #main -->
 
-<?php endif; ?>
+			<!-- The pagination component -->
+			<?php understrap_pagination(); ?>
 
-<script>
-jQuery( ".carousel-item" ).first().addClass( "active" );
-</script>
+		</div><!-- #primary -->
+
+		<!-- Do the right sidebar check -->
+		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+
+			<?php get_sidebar( 'right' ); ?>
+
+		<?php endif; ?>
+
+	</div><!-- .row -->
+
+</div><!-- Container end -->
+
+</div><!-- Wrapper end -->
+
+<?php get_footer(); ?>
