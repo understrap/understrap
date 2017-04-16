@@ -31,11 +31,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<span class="sep"> | </span>
 					
 							<?php printf( // WPCS: XSS ok.
-								/* translators:*/
+							/* translators:*/
 								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ), '<a href="http://understrap.com/">understrap.com</a>' ); ?>
 				
 							(<?php printf( // WPCS: XSS ok.
-								/* translators:*/
+							/* translators:*/
 								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
 					</div><!-- .site-info -->
 
