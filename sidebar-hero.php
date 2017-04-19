@@ -37,8 +37,8 @@
 
 		</div><!-- .carousel -->
 
-<?php endif; ?>
-
 <script>
 jQuery( ".carousel-item" ).first().addClass( "active" );
 </script>
+
+<?php endif; ?>
