@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.5.7",
+  "version": "0.6.0",
   "description": "Wordpress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   "homepage": "https://understrap.com",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
@@ -36,18 +36,20 @@
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-ignore": "^2.0.2",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-imagemin": "^3.2.0",
     "gulp-merge": "^0.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.0.1",
+    "gulp-sourcemaps": "2.4.1",
+    "gulp-uglify": "^2.1.2",
     "gulp-watch": "^4.3.11",
     "merge2": "^1.0.3",
     "run-sequence": "^1.2.2",
+    "gulp-clean-css": "^3.0.4",
     "undescores-for-npm": "^1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }
