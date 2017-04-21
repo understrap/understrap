@@ -1,8 +1,8 @@
 <?php
 /**
- * My Addresses
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/my-address.php.
+ * Edit address form
+ * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-edit-address.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -13,67 +13,45 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.6.0
+ * @version 3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
 
-$customer_id = get_current_user_id();
+$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'understrap' ) : __( 'Shipping address', 'understrap' );
 
-if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
-	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' => __( 'Billing address', 'woocommerce' ),
-		'shipping' => __( 'Shipping address', 'woocommerce' ),
-	), $customer_id );
-} else {
-	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' => __( 'Billing address', 'woocommerce' ),
-	), $customer_id );
-}
+do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
-$oldcol = 6;
-$col    =6;
-?>
+<?php if ( ! $load_address ) : ?>
+	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
+<?php else : ?>
 
-<p>
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
-</p>
+	<form method="post">
 
-<?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '<div class="row col-12 u-columns woocommerce-Addresses col2-set addresses">'; ?>
+		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h3>
 
-<?php foreach ( $get_addresses as $name => $title ) : ?>
+		<div class="woocommerce-address-fields">
+			<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
 
-	<div class="row col-6 u-column woocommerce-Address">
-		<header class="woocommerce-Address-title title">
-			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
-		</header>
-		<address>
-			<?php
-				$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
-					'first_name'  => get_user_meta( $customer_id, $name . '_first_name', true ),
-					'last_name'   => get_user_meta( $customer_id, $name . '_last_name', true ),
-					'company'     => get_user_meta( $customer_id, $name . '_company', true ),
-					'address_1'   => get_user_meta( $customer_id, $name . '_address_1', true ),
-					'address_2'   => get_user_meta( $customer_id, $name . '_address_2', true ),
-					'city'        => get_user_meta( $customer_id, $name . '_city', true ),
-					'state'       => get_user_meta( $customer_id, $name . '_state', true ),
-					'postcode'    => get_user_meta( $customer_id, $name . '_postcode', true ),
-					'country'     => get_user_meta( $customer_id, $name . '_country', true ),
-				), $customer_id, $name );
+			<div class="woocommerce-address-fields__field-wrapper">
+				<?php foreach ( $address as $key => $field ) : ?>
+					<?php woocommerce_form_field( $key, $field, ! empty( $_POST[ $key ] ) ? wc_clean( $_POST[ $key ] ) : $field['value'] ); ?>
+				<?php endforeach; ?>
+			</div>
 
-				$formatted_address = WC()->countries->get_formatted_address( $address );
+			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 
-				if ( ! $formatted_address )
-					_e( 'You have not set up this type of address yet.', 'woocommerce' );
-				else
-					echo $formatted_address;
-			?>
-		</address>
-	</div>
+			<p>
+				<input type="submit" class="btn btn-outline-primary" name="save_address" value="<?php esc_attr_e( 'Save address', 'understrap' ); ?>" />
+				<?php wp_nonce_field( 'woocommerce-edit_address' ); ?>
+				<input type="hidden" name="action" value="edit_address" />
+			</p>
+		</div>
 
-<?php endforeach; ?>
+	</form>
 
-<?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '</div>'; ?>
+<?php endif; ?>
+
+<?php do_action( 'woocommerce_after_edit_account_address_form' ); ?>
