@@ -59,7 +59,7 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 										</a>
 										<?php break;
 									case 'download-remaining' :
-										echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : __( '&infin;', 'woocommerce' );
+										echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : __( '&infin;', 'understrap' );
 										break;
 									case 'download-expires' : ?>
 										<?php if ( ! empty( $download['access_expires'] ) ) : ?>
