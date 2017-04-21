@@ -49,7 +49,12 @@ var cleanCSS = require('gulp-clean-css');
 // Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
 gulp.task('scss-for-prod', function() {
     var source =  gulp.src('./sass/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass());
 
@@ -73,7 +78,12 @@ gulp.task('scss-for-prod', function() {
 // Prepare the child-theme.css for the development environment
 gulp.task('scss-for-dev', function() {
     gulp.src('./sass/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
@@ -90,7 +100,12 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 // Compiles SCSS files in CSS
 gulp.task('sass', function () {
     var stream = gulp.src('./sass/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sass())
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
@@ -126,7 +141,12 @@ gulp.task('imagemin', function(){
 gulp.task('cssnano', function(){
   return gulp.src('./css/theme.css')
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(plumber())
+    .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
@@ -136,7 +156,12 @@ gulp.task('cssnano', function(){
 gulp.task('minify-css', function() {
   return gulp.src('./css/theme.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(plumber())
+    .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./css/'));
 });
