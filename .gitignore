@@ -1,3 +1,4 @@
+.sass-cache
 
 bower_components
 
@@ -5,6 +6,8 @@ node_modules
 
 understrap.zip
 
-src
-
 dist
+
+dist-product
+
+npm-debug.log

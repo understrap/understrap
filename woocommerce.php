@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying all woocommerce pages.
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -10,40 +10,41 @@
  * @package understrap
  */
 
-get_header(); ?>
+get_header();
+
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+
+?>
 
 <div class="wrapper" id="woocommerce-wrapper">
-    
-    <div class="container">
-        
-	   <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
-	   
-            <main id="main" class="site-main" role="main">
 
-                <!-- The WooCommerce loop -->
+	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-                    <?php
-                        if (is_singular('product')) {
+		<div class="row">
 
-                            woocommerce_content();
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-                        } else {
+			<main class="site-main" id="main">
 
-                            //For ANY product archive.
-                            //Product taxonomy, product search or /shop landing page etc.
-                            woocommerce_get_template('archive-product.php');
-                            
-                        }
-                    ?>
+				<?php woocommerce_content(); ?>
 
-            </main><!-- #main -->
-           
-	    </div><!-- #primary -->
-        
-        <?php get_sidebar(); ?>
-        
-    </div><!-- Container end -->
-    
+			</main><!-- #main -->
+
+		</div><!-- #primary -->
+
+		<!-- Do the right sidebar check -->
+		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+
+			<?php get_sidebar( 'right' ); ?>
+
+		<?php endif; ?>
+
+	</div><!-- .row -->
+
+</div><!-- Container end -->
+
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
