@@ -126,3 +126,18 @@ button,
 
 // Clearing after widget
 aside.widget{clear:both;}
+
+// Makes widgets in hero slider 100% width
+#wrapper-hero .carousel-inner .textwidget {
+width:100%;
+}
+
+// Adjusting brand link if h1 is used
+h1.navbar-brand {
+  a {
+  color:inherit;
+  }
+  a:hover {
+    text-decoration:none;
+  }
+}

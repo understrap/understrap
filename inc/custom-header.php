@@ -1,4 +1,10 @@
-<?php 
+<?php
+/**
+ * Custom header setup.
+ *
+ * @package understrap
+ */
+
 function understrap_custom_header_setup() {
 
 	/**
@@ -22,7 +28,7 @@ function understrap_custom_header_setup() {
 		'default-image'      => get_parent_theme_file_uri( '/img/header.jpg' ),
 		'width'              => 2000,
 		'height'             => 1200,
-		'flex-height'        => true
+		'flex-height'        => true,
 	) ) );
 
 	register_default_headers( array(

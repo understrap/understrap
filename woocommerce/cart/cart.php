@@ -1,7 +1,7 @@
 <?php
 /**
  * Cart Page
- *
+ * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
  * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.3.8
+ * @version 3.0.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,45 +24,44 @@ wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<?php do_action( 'woocommerce_before_cart_table' ); ?>
-
-<table class="shop_table shop_table_responsive cart table-hover table-striped" cellspacing="0">
-	<thead>
-		<tr>
-			<th class="product-remove">&nbsp;</th>
-			<th class="product-thumbnail">&nbsp;</th>
-			<th class="product-name"><?php _e( 'Product', 'understrap' ); ?></th>
-			<th class="product-price"><?php _e( 'Price', 'understrap' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'understrap' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'understrap' ); ?></th>
-		</tr>
-	</thead>
+	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+		<thead>
+			<tr>
+				<th class="product-remove">&nbsp;</th>
+				<th class="product-thumbnail">&nbsp;</th>
+				<th class="product-name"><?php _e( 'Product', 'understrap' ); ?></th>
+				<th class="product-price"><?php _e( 'Price', 'understrap' ); ?></th>
+				<th class="product-quantity"><?php _e( 'Quantity', 'understrap' ); ?></th>
+				<th class="product-subtotal"><?php _e( 'Total', 'understrap' ); ?></th>
+			</tr>
+		</thead>
 	<tbody>
-		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
+			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
-		<?php
-		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-			$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-			$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+			<?php
+			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+				$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+				$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 
-			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
-				$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
-				?>
-				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+					?>
+					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-					<td class="product-remove">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
-								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
-								__( 'Remove this item', 'understrap' ),
-								esc_attr( $product_id ),
-								esc_attr( $_product->get_sku() )
-							), $cart_item_key );
-						?>
-					</td>
+						<td class="product-remove">
+							<?php
+								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+									'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+									esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+									__( 'Remove this item', 'understrap' ),
+									esc_attr( $product_id ),
+									esc_attr( $_product->get_sku() )
+								), $cart_item_key );
+							?>
+						</td>
 
 					<td class="product-thumbnail">
 						<?php
@@ -117,29 +116,28 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</td>
 
-					<td class="product-subtotal" data-title="<?php _e( 'Total', 'understrap' ); ?>">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
-						?>
-					</td>
-				</tr>
-				<?php
+					<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'understrap' ); ?>">
+							<?php
+								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
+							?>
+						</td>
+					</tr>
+					<?php
+				}
 			}
-		}
+			?>
 
-		do_action( 'woocommerce_cart_contents' );
-		?>
+			<?php do_action( 'woocommerce_cart_contents' ); ?>
+			
 		<tr>
 			<td colspan="6" class="actions">
 
-				<?php if ( wc_coupons_enabled() ) { ?>
-					<div class="coupon">
-
-						<label for="coupon_code"><?php _e( 'Coupon:', 'understrap' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'understrap' ); ?>" /> <input type="submit" class=" btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'understrap' ); ?>" />
-
-						<?php do_action( 'woocommerce_cart_coupon' ); ?>
-					</div>
-				<?php } ?>
+					<?php if ( wc_coupons_enabled() ) { ?>
+						<div class="coupon">
+							<label for="coupon_code"><?php _e( 'Coupon:', 'understrap' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'understrap' ); ?>" /> <input type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'understrap' ); ?>" />
+							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+						</div>
+					<?php } ?>
 
 				<input type="submit" class="btn btn-outline-primary"  name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'understrap' ); ?>" />
 

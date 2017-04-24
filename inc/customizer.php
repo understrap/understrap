@@ -76,7 +76,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_sidebar_position', array(
 					'label'       => __( 'Sidebar Positioning', 'understrap' ),
-					'description' => __( "Set sidebar's position. Can either be: right, left, both or none",
+					'description' => __( "Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
 					'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_sidebar_position',
@@ -90,81 +90,9 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'priority'    => '20',
 				)
 			) );
-
-		// How to display posts index page (home.php).
-		$wp_customize->add_setting( 'understrap_posts_index_style', array(
-			'default'           => 'default',
-			'type'              => 'theme_mod',
-			'sanitize_callback' => 'esc_textarea',
-			'capability'        => 'edit_theme_options',
-		) );
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'understrap_posts_index_style', array(
-					'label'       => __( 'Posts Index Style', 'understrap' ),
-					'description' => __( 'Choose how to display latest posts', 'understrap' ),
-					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_posts_index_style',
-					'type'        => 'select',
-					'choices'     => array(
-						'default' => __( 'Default', 'understrap' ),
-						'masonry' => __( 'Masonry', 'understrap' ),
-						'grid'    => __( 'Grid', 'understrap' ),
-					),
-					'priority'    => '30',
-				)
-			) );
-
-		// Columns setup for grid posts.
-		/**
-		 * Function and callback to check when grid is enabled.
-		 *
-		 * @return bool
-		 */
-		function is_grid_enabled() {
-			return 'grid' == get_theme_mod( 'understrap_posts_index_style' );
-		}
-
-		// How many columns to use each grid post.
-		$wp_customize->add_setting( 'understrap_grid_post_columns', array(
-			'default'    => '6',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
-			'sanitize_callback' => 'absint',
-		) );
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'understrap_grid_post_columns', array(
-					'label'       => __( 'Grid Post Columns', 'understrap' ),
-					'description' => __( 'Choose how many columns to use', 'understrap' ),
-					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_grid_post_columns',
-					'type'        => 'select',
-					'choices' => array(
-					'6' => '2',
-					'4' => '3',
-					'3' => '4',
-					'2' => '6',
-					'12' => '1',
-					),
-					'default'     => 2,
-					'priority'    => '30',
-					'transport'   => 'refresh',
-				)
-			) );
-
-		// hook to auto-hide/show depending the understrap_posts_index_style option.
-		$wp_customize->get_control( 'understrap_grid_post_columns' )->active_callback = 'is_grid_enabled';
-
 	}
 } // endif function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
-
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

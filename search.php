@@ -11,7 +11,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<div class="wrapper search-wrapper">
+<div class="wrapper" id="search-wrapper">
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
@@ -25,9 +25,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
-
-						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'understrap' ),
-						'<span>' . get_search_query() . '</span>' ); ?></h1>
+						/* translators:*/
+							<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'understrap' ),
+								'<span>' . get_search_query() . '</span>' ); ?></h1>
 
 					</header><!-- .page-header -->
 

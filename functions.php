@@ -68,6 +68,6 @@ require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 require get_template_directory() . '/inc/woocommerce.php';
 
 /**
- * Load a utilities library.
+ * Load Editor functions.
  */
-require get_template_directory() . '/inc/utilities.php';
+require get_template_directory() . '/inc/editor.php';

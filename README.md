@@ -1,19 +1,18 @@
-Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understrap.svg?maxAge=2592000?style=flat-square)](https://gitter.im/holger1411/understrap)
+Travis build: [![Build Status](https://travis-ci.org/holger1411/understrap.svg?branch=master)](https://travis-ci.org/holger1411/understrap) | Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understrap.svg?maxAge=2592000?style=flat-square)](https://gitter.im/holger1411/understrap)
 
-## Official Docs Page: [Open Docs](https://understrap.github.io/)
-## About
-
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
-That’s what UnderStrap is.
-You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
-
-At the moment, UnderStrap is in a very early stage. But if you want, feel free to use it for your own WordPress theme!
+#### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
 
 # UnderStrap WordPress Theme Framework
 
 Website: [https://understrap.com](https://understrap.com)
 
 Child Theme Project: [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
+
+## About
+
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
+That’s what UnderStrap is.
+You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
 
 ## License
 UnderStrap is released under the terms of the GPL version 2 or (at your option) any later version.
@@ -30,13 +29,11 @@ See [changelog](CHANGELOG.md)
 - Comes with Bootstrap (v4) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single and minified CSS file for all the basic stuff.
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.7.0)
-- Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.1.4)
 - Jetpack ready.
 - WooCommerce support.
 - Contact Form 7 support.
 - [Child Theme](https://github.com/holger1411/understrap-child) ready.
 - Translation ready.
-- Multiple Page Templates
 
 ## Starter Theme + HTML Framework = WordPress Theme Framework
 
@@ -47,7 +44,7 @@ Why not add a well known and supported layout framework to have a solid, clean a
 
 Some basics about the Sass and CSS files that come with UnderStrap:
 - The theme itself uses the `/style.css`file just to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
-- The `/css/theme.css` and it´s minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
+- The `/css/theme.css` and its minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
 
                   - 1 "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
                   - 2 "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // <--------- All the Bootstrap stuff - Don´t edit this!
@@ -72,7 +69,7 @@ Some basics about the Sass and CSS files that come with UnderStrap:
 
 ### npm install
 - Open your terminal
-- Change to the directory where you want to add UnderStrap 
+- Change to the directory where you want to add UnderStrap
 - Type `npm install understrap`
 
 ### WordPress.org install
@@ -131,32 +128,16 @@ The `empty.php` template displays a header and a footer only. A good starting po
 
 The `fullwidthpage.php` template has full width layout without a sidebar.
 
-### Vertical One Page Template
-
-The `vertical-one-page.php` template displays all pages (except the one showing the posts) in a single vertical layout with a sliding navigation.
-Additionally enables the user to control the order of each page by using the order page attribute field.
-
-#### One Page Template How to
-
- 1. Assuming that you have the following pages: Home, About and Contact
- 2. Go to Appearance → Menus and add one **custom link** for each page
- 3. On the URL field type a hash `#` and the name of the page in **lower case** so for example the link for Home becomes `#home`
- 4. Edit the Home page and set as template the **Vertical One Page** (you only need to do this for the first page)
- 5. Set the order of each page using the **Order** field from **Page Attributes** so for example if you want to display Home,
- Contact, About set the Home page to 1, the Contact to 2 and About to 3
-
 [1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
 
 Licenses & Credits
 =
 - Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
 - Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-- Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
 and of course
 - jQuery: https://jquery.org | (Code licensed under MIT)
 - WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 - Bootstrap Gallery Script based on Roots Sage Gallery: https://github.com/roots/sage/blob/5b9786b8ceecfe717db55666efe5bcf0c9e1801c/lib/gallery.php
-
 
 
 [![Analytics](https://ga-beacon.appspot.com/UA-139292-31/chromeskel_a/readme)](https://github.com/igrigorik/ga-beacon)

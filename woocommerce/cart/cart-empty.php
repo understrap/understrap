@@ -17,7 +17,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
 wc_print_notices();
@@ -25,7 +25,7 @@ wc_print_notices();
 ?>
 
 <p class="cart-empty">
-	<?php _e( 'Your cart is currently empty.', 'understrap' ) ?>
+	<?php esc_html_e( 'Your cart is currently empty.', 'understrap' ) ?>
 </p>
 
 <?php do_action( 'woocommerce_cart_is_empty' ); ?>

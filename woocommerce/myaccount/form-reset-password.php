@@ -1,7 +1,7 @@
 <?php
 /**
  * Lost password reset form.
- *
+ * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-reset-password.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.6.0
+ * @version 3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -30,7 +30,7 @@ wc_print_notices(); ?>
 		<label for="password_1"><?php _e( 'New password', 'understrap' ); ?> <span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_1" id="password_1" />
 	</p>
-	<p class="woocommerce-FormRow woocommerce-FormRow--last form-row form-row-last">
+	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 		<label for="password_2"><?php _e( 'Re-enter new password', 'understrap' ); ?> <span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_2" id="password_2" />
 	</p>
@@ -42,7 +42,7 @@ wc_print_notices(); ?>
 
 	<?php do_action( 'woocommerce_resetpassword_form' ); ?>
 
-	<p class="woocommerce-FormRow form-row">
+	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
 		<input type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'understrap' ); ?>" />
 	</p>

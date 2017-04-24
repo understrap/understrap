@@ -1,3 +1,60 @@
+            
+            - ** Release 0.6.0 (skipping 0.5.8 and 0.5.9 ) Apr. 21th 2017 **
+               - Adding WooCommerce 3.0.0 support - Big thx @typeplus
+               - Add npm-debug.log to .gitignore file - thx @OussamaElgoumri
+               - Adding swedish translation files
+               - Fixing problems if both forms (login and register) are present
+               - Adding image optimization task to gulpfile - thx @VesterDe
+               - Removing old and unused BS4 Alpha 5 variables
+               - Include call to jQuery into if block - hx @wingertjp
+               - phpcs fixes - thx @typeplus
+               - Fixing col-1 problem on my account WooCommerce page
+               - Updating Font Awesome imports
+
+
+            - ** Release 0.5.7  Feb. 13th 2017 **
+               - Fixing WooCommerce base layout by reverting custom woocommerce integration and switch back to default integration
+               - Adding /js/ folder to watcher task excluding theme.js and theme.min.js
+               - Removing duplicate DIV from "both-sidebars" page template - Thx @evandiamond 
+               - Fixing sidebar check
+               - Remove customizer from theme.min.js
+               
+
+            - ** Release 0.5.6 (skipping 0.5.5) Feb. 9th 2017 **
+               - Adding automated tests - thx @carl-alberto 
+               - Remove custom Bootstrap gellery completely
+               - Fixing typos - thx to @catgofire
+               - Checking for WP coding standards
+               - Adding a "dist-product" gulp task
+               - Adding  WooCommerce form-checkout.php - thx @stef-k 
+               - Fixing bug #240 - thx @arpage 
+               - Adding AJAX classes to add-to-cart buttons - thx @typeplus 
+               - Updating Jetpack integration
+               - Fixing "missing" h1 on frontpage problem
+               - Updating inc/template-tags.php from _s
+               - Fixing W3C validator issues
+               - Removing cleancss gulp task from cssnano task sequence due to performance issues
+
+
+            - ** Release 0.5.4 Jan. 25th 2017 **
+               - Fixing problems with dynamic sidebars (footerfull and statichero) - Thx @NayeemNipun
+               - Removes Owl Carousel slider and replace it with the BS4 carousel
+               - Fixing "both sidebars" problem - Thx @ZXCVLuke
+               - SEO improvements - Thx @raisonon
+               - CSS cleanup
+               - Updating dependencies
+
+
+            - ** Release 0.5.3 Jan. 12th 2017 **
+               - Updating dependencies
+               - Adding BS4 styles to editor style formats - Thx @ZXCVLuke
+               - Adding theme css to editor
+               - Dynamize the full footer and static hero widget area.
+               - Custom header preparations
+               - adding customizer edit icon support
+               - Fixing "no sidebar" problem
+               - Update Custom Logo Tags - Thx @jessijean
+
 
             - ** Release 0.5.2 Jan. 7th 2017 **
                 - Updating to Bootstrap 4 Alpha 6
@@ -51,7 +108,7 @@
                   - Updating to Bootstrap 4 Alpha 5
                   - Using the correct BS4 markup for navbar - Thx @tedgeving
                   - Inject theme name and version into the footer dynamically - Thx @maxdmyers
-                  - Adding a blank template for building up a landingpage via WP editor or als blank canvas for Visual Compoeser etc. - Thx @omarusman
+                  - Adding a blank template for building up a landingpage via WP editor or as blank canvas for Visual Compoeser etc. - Thx @omarusman
                   - Fixing problem with empty folders after "gulp dist" - Thx @alwizo
                   - Fixed custom logo function typo - Thx @willgorham
 

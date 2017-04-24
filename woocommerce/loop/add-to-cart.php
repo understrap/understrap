@@ -1,7 +1,7 @@
 <?php
 /**
  * Loop Add to Cart
- *
+ * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
  * This template can be overridden by copying it to yourtheme/woocommerce/loop/add-to-cart.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -13,7 +13,7 @@
  * @see        https://docs.woocommerce.com/document/template-structure/
  * @author        WooThemes
  * @package    WooCommerce/Templates
- * @version     2.5.0
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -23,13 +23,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 echo apply_filters( 'woocommerce_loop_add_to_cart_link',
-	sprintf( '<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="btn btn-outline-primary btn-block">%s</a>',
+	sprintf( '<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="add_to_cart_button ajax_add_to_cart btn btn-outline-primary btn-block">%s</a>',
 		esc_url( $product->add_to_cart_url() ),
 		esc_attr( isset( $quantity ) ? $quantity : 1 ),
 		esc_attr( $product->id ),
 		esc_attr( $product->get_sku() ),
-		// TODO: load add to cart button class from customizer?
-//		esc_attr( isset( $class ) ? $class : 'button' ),
 		esc_html( $product->add_to_cart_text() )
 	),
 	$product );

@@ -5,8 +5,6 @@
  * @package understrap
  */
 
-// Comments form.
-
 /**
  * Custom Pagination with numbers
  * Credits to http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
@@ -86,7 +84,7 @@ function understrap_pagination() {
 
 		$class = $paged == $max ? ' class="active "' : ' class="page-item"';
 		printf( '<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true"><i class="fa fa-step-forward" aria-hidden="true"></i></span><span class="sr-only">%s</span></a></li>' . "\n",
-		$class . '', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html($max ) );
+		$class . '', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html( $max ) );
 	}
 
 	echo '</ul></nav>' . "\n";

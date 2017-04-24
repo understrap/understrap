@@ -21,14 +21,14 @@ get_header();
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.',
+							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
 							'understrap' ); ?></h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-							<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
 							'understrap' ); ?></p>
 
 							<?php get_search_form(); ?>
@@ -39,7 +39,7 @@ get_header();
 
 								<div class="widget widget_categories">
 
-									<h2 class="widget-title"><?php _e( 'Most Used Categories', 'understrap' ); ?></h2>
+									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
 
 									<ul>
 										<?php
