@@ -88,7 +88,7 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
-gulp.task('sass', function () {
+gulp.task('sass', ['minify-css'], function () {
     var stream = gulp.src('./sass/*.scss')
         .pipe(plumber())
         .pipe(sass())
