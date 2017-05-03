@@ -1,4 +1,17 @@
             
+            - ** Release 0.6.0 (skipping 0.5.8 and 0.5.9 ) Apr. 21th 2017 **
+               - Adding WooCommerce 3.0.0 support - Big thx @typeplus
+               - Add npm-debug.log to .gitignore file - thx @OussamaElgoumri
+               - Adding swedish translation files
+               - Fixing problems if both forms (login and register) are present
+               - Adding image optimization task to gulpfile - thx @VesterDe
+               - Removing old and unused BS4 Alpha 5 variables
+               - Include call to jQuery into if block - hx @wingertjp
+               - phpcs fixes - thx @typeplus
+               - Fixing col-1 problem on my account WooCommerce page
+               - Updating Font Awesome imports
+
+
             - ** Release 0.5.7  Feb. 13th 2017 **
                - Fixing WooCommerce base layout by reverting custom woocommerce integration and switch back to default integration
                - Adding /js/ folder to watcher task excluding theme.js and theme.min.js
