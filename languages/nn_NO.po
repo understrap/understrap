@@ -19,7 +19,7 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
 "Last-Translator: \n"
-"Language: nb_NO\n"
+"Language: nn_NO\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
 "X-Poedit-SearchPath-2: index.php\n"
@@ -50,19 +50,19 @@ msgstr "Søkeresultater for: %s"
 
 #: header.php:34
 msgid "Skip to content"
-msgstr "Hopp til innhold"
+msgstr "Hopp til innhald"
 
 #: 404.php:24
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Uffda! Den siden ble ikke funnet."
+msgstr "Uffda! Den siden blei ikkje funne."
 
 #: 404.php:31
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Det ser ikke ut til at det finnes noe her. Kanskje prøv en av koblingene "
-"nedenfor eller et søk?"
+"Det ser ikkje ut til at det finst noko her. Kanskje prøv ein av koblingene "
+"nedenfor eller eit søk?"
 
 #: 404.php:42
 msgid "Most Used Categories"
@@ -72,7 +72,7 @@ msgstr "Mest brukte kategorier"
 #: 404.php:62
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Prøv å se i de månedlige arkivene. %1$s"
+msgstr "Prøv å sjå i dei månedlige arkivene. %1$s"
 
 #: author.php:34
 msgid "About:"
@@ -80,7 +80,7 @@ msgstr "Om:"
 
 #: author.php:42 inc/custom-comments.php:30
 msgid "Website"
-msgstr "Nettsted"
+msgstr "Nettstad"
 
 #: author.php:49
 msgid "Profile"
@@ -158,7 +158,7 @@ msgstr "Redigere"
 
 #: loop-templates/content-none.php:15
 msgid "Nothing Found"
-msgstr "Ingenting funnet"
+msgstr "Ingenting funne"
 
 #: loop-templates/content-none.php:23
 #, php-format
@@ -174,14 +174,14 @@ msgid ""
 "different keywords."
 msgstr ""
 "Beklager, men ingenting samsvarer med søkeordene dine. Vennligst prøv igjen "
-"med noen andre søkeord."
+"med nokre andre søkeord."
 
 #: loop-templates/content-none.php:34
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Det virker som om vi ikke finner det du leter etter. Kanskje søk kan hjelpe."
+"Det virker som om vi ikkje finner det du leter etter. Kanskje søk kan hjelpe."
 
 #. Name of the template
 msgid "Blank Page Template"
@@ -189,7 +189,7 @@ msgstr "Blank sidemal"
 
 #. Name of the template
 msgid "Left and Right Sidebar Layout"
-msgstr "Venstre og høyre sidekolonne-oppsett"
+msgstr "Venstre og høgre sidekolonne-oppsett"
 
 #. Name of the template
 msgid "Empty Page Template"
@@ -205,7 +205,7 @@ msgstr "Venstre sidekolonne-oppsett"
 
 #. Name of the template
 msgid "Vertical One Page"
-msgstr "Vertikal en side"
+msgstr "Vertikal ein side"
 
 #: inc/template-tags.php:18
 #, php-format
@@ -241,7 +241,7 @@ msgstr "Tagget %1$s"
 
 #: inc/template-tags.php:65
 msgid "Leave a comment"
-msgstr "Legg igjen en kommentar"
+msgstr "Legg igjen ein kommentar"
 
 #: inc/template-tags.php:65
 msgid "1 Comment"
@@ -277,11 +277,11 @@ msgstr "Hovedmeny"
 
 #: inc/setup.php:122
 msgid "Read More..."
-msgstr "Les mer..."
+msgstr "Les meir..."
 
 #: inc/widgets.php:14
 msgid "Right Sidebar"
-msgstr "Høyre sidekolonne"
+msgstr "Høgre sidekolonne"
 
 #: inc/widgets.php:24
 msgid "Left Sidebar"
@@ -326,7 +326,7 @@ msgstr "Innskyvingstid (i ms)"
 
 #: inc/customizer.php:69
 msgid "Loop Slider Content"
-msgstr "Sløyfe innskyvingsinnhold"
+msgstr "Sløyfe innskyvingsinnhald"
 
 #: inc/customizer.php:81
 msgid "Theme Layout Settings"
@@ -359,7 +359,7 @@ msgstr "Sidekolonne-posisjonering"
 #: inc/customizer.php:123
 msgid "Set sidebar's position. Can either be: right, left, both or none"
 msgstr ""
-"Sett sidekolonnens posisjon. Kan enten være: høyre, venstre, begge eller "
+"Sett sidekolonnens posisjon. Kan enten vere: høgre, venstre, begge eller "
 "ingen"
 
 #: inc/customizer.php:129
@@ -372,7 +372,7 @@ msgstr "Venstre sidekolonne"
 
 #: inc/customizer.php:131
 msgid "Left & Right sidebars"
-msgstr "Venstre og høyre sidekolonner"
+msgstr "Venstre og høgre sidekolonner"
 
 #: inc/customizer.php:132
 msgid "No sidebar"
@@ -384,7 +384,7 @@ msgstr "Innlegg indeks-stil"
 
 #: inc/customizer.php:151
 msgid "Choose how to display latest posts"
-msgstr "Velg hvordan du viser de nyeste innleggene"
+msgstr "Velg korleis du viser dei nyeste innleggene"
 
 #: inc/customizer.php:156
 msgid "Default"
@@ -416,7 +416,7 @@ msgstr "Fjern dette elementet"
 
 #: woocommerce/cart/mini-cart.php:72
 msgid "No products in the cart."
-msgstr "Ingen produkter i handlekurven."
+msgstr "Ingen produkter i handlekorgen."
 
 #: woocommerce/cart/mini-cart.php:80
 msgid "Subtotal"
@@ -424,7 +424,7 @@ msgstr "Delsum"
 
 #: woocommerce/cart/mini-cart.php:85
 msgid "View Cart"
-msgstr "Se handlekurv"
+msgstr "Se handlekorg"
 
 #: woocommerce/cart/mini-cart.php:86
 msgid "Checkout"
@@ -482,13 +482,13 @@ msgid ""
 "Please contact us if you require assistance or wish to make alternate "
 "arrangements."
 msgstr ""
-"Beklager, det ser ut til at det ikke finnes noen tilgjengelige "
+"Beklager, det ser ut til at det ikkje finst nokre tilgjengelige "
 "betalingsmåter. Ta kontakt med oss dersom du trenger hjelp."
 
 #: woocommerce/checkout/payment.php:35
 msgid "Please fill in your details above to see available payment methods."
 msgstr ""
-"Vennligst fyll ut informasjonen ovenfor for å se tilgjengelige "
+"Vennligst fyll ut informasjonen ovenfor for å sjå tilgjengelige "
 "betalingsmåter."
 
 #: woocommerce/checkout/payment.php:42
@@ -498,10 +498,10 @@ msgid ""
 "order. You may be charged more than the amount stated above if you fail to "
 "do so."
 msgstr ""
-"Siden nettleseren din ikke støtter JavaScript, eller det er deaktivert, må "
-"du sørge for at du klikker på <em>Oppdater totalsummer</em>-knappen før du "
-"legger inn bestillingen. Du kan bli belastet mer enn beløpet angitt ovenfor "
-"hvis du ikke gjør det."
+"Siden nettleseren din ikkje støtter JavaScript, eller det er deaktivert, må "
+"du sørge for at du klikkjer på <em>Oppdater totalsummer</em>-knappen før du "
+"legger inn bestillingen. Du kan bli belastet meir enn beløpet angitt ovenfor "
+"hvis du ikkje gjer det."
 
 #: woocommerce/checkout/payment.php:43
 msgid "Update totals"
@@ -521,13 +521,13 @@ msgid ""
 "location. Please contact us if you require assistance or wish to make "
 "alternate arrangements."
 msgstr ""
-"Beklager, det ser ut til at det ikke finnes noen tilgjengelige "
+"Beklager, det ser ut til at det ikkje finst nokre tilgjengelige "
 "betalingsmåter for din plassering. Ta kontakt med oss dersom du trenger "
 "hjelp."
 
 #: woocommerce/checkout/form-coupon.php:28
 msgid "Have a coupon?"
-msgstr "Har du en kupong?"
+msgstr "Har du ein kupong?"
 
 #: woocommerce/checkout/form-coupon.php:28
 msgid "Click here to enter your code"
@@ -536,7 +536,7 @@ msgstr "Klikk her for å skrive inn koden din"
 #: woocommerce/global/form-login.php:35
 #: woocommerce/myaccount/form-lost-password.php:30
 msgid "Username or email"
-msgstr "Brukernavn eller e-post"
+msgstr "Brukernamn eller e-post"
 
 #: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:48
 #: woocommerce/myaccount/form-login.php:98
@@ -566,8 +566,8 @@ msgid ""
 "Lost your password? Please enter your username or email address. You will "
 "receive a link to create a new password via email."
 msgstr ""
-"Mistet passordet ditt? Vennligst skriv inn brukernavnet eller e-postadressen "
-"din. Du vil motta en lenke for å opprette et nytt passord via e-post."
+"Mistet passordet ditt? Vennligst skriv inn brukernamnet eller e-postadressen "
+"din. Du vil motta ein lenke for å opprette eit nytt passord via e-post."
 
 #: woocommerce/myaccount/form-lost-password.php:40
 msgid "Reset Password"
@@ -575,7 +575,7 @@ msgstr "Tilbakestille passord"
 
 #: woocommerce/myaccount/form-login.php:44
 msgid "Username or email address"
-msgstr "Brukernavn eller e-post"
+msgstr "Brukernamn eller e-post"
 
 #: woocommerce/myaccount/form-login.php:75
 #: woocommerce/myaccount/form-login.php:112
@@ -584,7 +584,7 @@ msgstr "Registrere"
 
 #: woocommerce/myaccount/form-login.php:84
 msgid "Username"
-msgstr "Brukernavn"
+msgstr "Brukernamn"
 
 #: woocommerce/myaccount/form-login.php:91
 #: woocommerce/myaccount/form-edit-account.php:40
@@ -597,11 +597,11 @@ msgstr "Anti-spam"
 
 #: woocommerce/myaccount/form-edit-account.php:30
 msgid "First name"
-msgstr "Fornavn"
+msgstr "Fornamn"
 
 #: woocommerce/myaccount/form-edit-account.php:34
 msgid "Last name"
-msgstr "Etternavn"
+msgstr "Etternamn"
 
 #: woocommerce/myaccount/form-edit-account.php:45
 msgid "Password Change"
@@ -609,11 +609,11 @@ msgstr "Passord-endring"
 
 #: woocommerce/myaccount/form-edit-account.php:48
 msgid "Current Password (leave blank to leave unchanged)"
-msgstr "Nåværende passord (la være tomt for å ikke endre)"
+msgstr "Nåverende passord (la vere tomt for å ikkje endre)"
 
 #: woocommerce/myaccount/form-edit-account.php:52
 msgid "New Password (leave blank to leave unchanged)"
-msgstr "Nytt passord (la være tomt for å ikke endre)"
+msgstr "Nytt passord (la vere tomt for å ikkje endre)"
 
 #: woocommerce/myaccount/form-edit-account.php:56
 msgid "Confirm New Password"
@@ -673,7 +673,7 @@ msgstr "Neste"
 
 #: woocommerce/myaccount/orders.php:119 woocommerce/myaccount/downloads.php:98
 msgid "Go Shop"
-msgstr "Gå til butikken"
+msgstr "Gå til butikkjen"
 
 #: woocommerce/myaccount/orders.php:121
 msgid "No order has been made yet."
@@ -693,7 +693,7 @@ msgstr "Lagre adresse"
 
 #: woocommerce/myaccount/form-reset-password.php:27
 msgid "Enter a new password below."
-msgstr "Skriv inn et nytt passord nedenfor."
+msgstr "Skriv inn eit nytt passord nedenfor."
 
 #: woocommerce/myaccount/form-reset-password.php:30
 msgid "New password"
@@ -770,14 +770,14 @@ msgid ""
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
 "copy-assets\" inside the extracted /understrap folder."
 msgstr ""
-"Kombinasjon av Automattic's _s tema og Bootstrap 4. Laget som et solid "
-"utgangspunkt for ditt neste tema-prosjekt og WordPress-nettsted. Bruk det "
-"som utgangspunkt eller som et overordnet tema. Det er opp til deg. Inkludert "
-"Font Awesome-støtte, innebygget widget for skyvekontroll og mye mer du "
-"trenger for grunnleggende nettsteder. VIKTIG: Alle utvikleravhengigheter er "
-"ikke buntet sammen med denne installasjonsfilen. Bare last ned .zip-filen, "
-"pakk den ut og kjør \"npm install\" og \"gulp copy-assets\" inne i utpakket /"
-"understrap-mappe."
+"Kombinasjon av Automattic's _s tema og Bootstrap 4. Laget som eit solid "
+"utgangspunkt for ditt neste tema-prosjekt og WordPress-nettstad. Bruk det "
+"som utgangspunkt eller som eit overordnet tema. Det er opp til deg. "
+"Inkludert Font Awesome-støtte, innebygget widget for skyvekontroll og mye "
+"meir du trenger for grunnleggende nettstader. VIKTIG: Alle "
+"utvikleravhengigheter er ikkje buntet sammen med denne installasjonsfilen. "
+"Bare last ned .zip-filen, pakk den ut og kjør \"npm install\" og \"gulp copy-"
+"assets\" inne i utpakket /understrap-mappe."
 
 #. Theme URI of the theme
 msgid "http://understrap.com"
