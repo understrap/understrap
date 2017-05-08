@@ -10,7 +10,7 @@ if ( ! function_exists( 'woocommerce_support' ) ) {
 	 * Declares WooCommerce theme support.
 	 */
 	function woocommerce_support() {
-		add_theme_support( 'understrap' );
+		add_theme_support( 'woocommerce' );
 		
 		// Add New Woocommerce 3.0.0 Product Gallery support
 		add_theme_support( 'wc-product-gallery-lightbox' );
