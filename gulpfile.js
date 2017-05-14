@@ -114,7 +114,7 @@ gulp.task('watch', function () {
 // gulp imagemin
 // Running image optimizing task
 gulp.task('imagemin', function(){
-    gulp.src('img/**')
+    gulp.src('img/src/**')
     .pipe(imagemin())
     .pipe(gulp.dest('img'))
 });
