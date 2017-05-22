@@ -53,7 +53,7 @@ function understrap_pagination() {
 
 		/**    Previous Post Link */
 		if ( get_previous_posts_link() ) {
-			printf( '<li class="page-item"><span class="page-link">%1$s</span></li> ' . "\n",
+			printf( '<li class="page-item page-item-direction page-item-prev"><span class="page-link">%1$s</span></li> ' . "\n",
 			get_previous_posts_link( '<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>' ) );
 		}
 
@@ -72,7 +72,7 @@ function understrap_pagination() {
 
 	// Next Post Link.
 	if ( get_next_posts_link() ) {
-		printf( '<li class="page-item"><span class="page-link">%s</span></li>' . "\n",
+		printf( '<li class="page-item page-item-direction page-item-next"><span class="page-link">%s</span></li>' . "\n",
 			get_next_posts_link( '<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>' ) );
 	}
 
