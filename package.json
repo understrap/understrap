@@ -48,9 +48,7 @@
     "gulp-watch": "^4.3.11",
     "merge2": "^1.0.3",
     "run-sequence": "^1.2.2",
-
+    "gulp-sequence": "^0.4.6",
     "undescores-for-npm": "^1.0.0"
-  },
-  "devDependencies": {
   }
 }
