@@ -42,7 +42,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
-var gulpSequence = require('gulp-sequence')
+var gulpSequence = require('gulp-sequence');
 
 
 // Run:
@@ -155,6 +155,7 @@ gulp.task('cssnano', function(){
 
 gulp.task('minify-css', function() {
   return gulp.src('./css/theme.css')
+  .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(cleanCSS({compatibility: '*'}))
     .pipe(plumber({
             errorHandler: function (err) {
@@ -163,6 +164,7 @@ gulp.task('minify-css', function() {
             }
         }))
     .pipe(rename({suffix: '.min'}))
+     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'));
 });
 
@@ -186,7 +188,7 @@ gulp.task('browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'minify-css', 'scripts'], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 
 
 // Run: 
