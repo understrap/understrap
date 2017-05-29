@@ -11,6 +11,7 @@
                - Fixing imagemin task
                - Specify correct post templates for jetpack infinite scroll - Thx @typeplus
                - Streamline 404.php and aligning with other page templates
+               - Adding gulp-sequence
 
 
             - ** Release 0.6.0 (skipping 0.5.8 and 0.5.9 ) Apr. 21th 2017 **
