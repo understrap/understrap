@@ -1,10 +1,10 @@
-            
+
             - ** Release 0.6.1 May 18th 2017 **
                - Replacing some older BS3 markup - Thx @typeplus and @Kostas Vrouvas
                - Add basic error handling for `gulp-plumber` - thx @L422Y
                - Correcting woo commerce customer login markup
                - Replacing cssnano with minify-css
-               - Fix deprecated product accessor for EooCommerce 3.0 - Thx @willgorham
+               - Fix deprecated product accessor for WooCommerce 3.0 - Thx @willgorham
                - Declare woocommerce support - Thx @typeplus
                - Adding norwegian translation files - Thx @joakimhellum
                - Adding info for GitHub updater plugin
