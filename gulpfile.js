@@ -62,7 +62,7 @@ gulp.task('scss-for-prod', function() {
     var pipe1 = source.pipe(clone())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe(gulp.dest('./css'))
-        .pipe(rename('custom-editor-style.css'))
+        .pipe(rename('custom-editor-style.css'));
 
 
     var pipe2 = source.pipe(clone())
@@ -88,7 +88,7 @@ gulp.task('scss-for-dev', function() {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
@@ -109,7 +109,7 @@ gulp.task('sass', function () {
         }))
         .pipe(sass())
         .pipe(gulp.dest('./css'))
-        .pipe(rename('custom-editor-style.css'))
+        .pipe(rename('custom-editor-style.css'));
     return stream;
 });
 
@@ -122,7 +122,7 @@ gulp.task('watch', function () {
     gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
 
     //Inside the watch task.
-    gulp.watch('./img/**', ['imagemin'])
+    gulp.watch('./img/**', ['imagemin']);
 });
 
 // Run:
@@ -131,7 +131,7 @@ gulp.task('watch', function () {
 gulp.task('imagemin', function(){
     gulp.src('img/src/**')
     .pipe(imagemin())
-    .pipe(gulp.dest('img'))
+    .pipe(gulp.dest('img'));
 });
 
 
@@ -150,7 +150,7 @@ gulp.task('cssnano', function(){
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./css/'))
+    .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('minify-css', function() {
@@ -174,8 +174,10 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', gulpSequence('sass', 'minify-css'))
- 
+gulp.task('styles', function(callback) {
+    gulpSequence('sass', 'minify-css')(callback);
+});
+
 
 // Run:
 // gulp browser-sync
@@ -191,8 +193,8 @@ gulp.task('browser-sync', function() {
 gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
@@ -231,7 +233,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // Copy all Bootstrap JS files
     var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
-  
+
 
 // Copy all Bootstrap SCSS files
     gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
@@ -275,7 +277,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // Copies the files to the /dist folder for distributon as simple theme
 gulp.task('dist', ['clean-dist'], function() {
     gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!dist-product','!dist-product/**','!sass','!sass/**','!readme.txt','!readme.md','!package.json','!gulpfile.js','!CHANGELOG.md','!.travis.yml','!jshintignore', '!codesniffer.ruleset.xml', '*'])
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist/'));
 });
 
 // Deleting any file inside the /src folder
@@ -288,7 +290,7 @@ gulp.task('clean-dist', function () {
 // Copies the files to the /dist-prod folder for distributon as theme with all assets
 gulp.task('dist-product', ['clean-dist-product'], function() {
     gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!dist','!dist/**','!dist-product','!dist-product/**', '*'])
-    .pipe(gulp.dest('dist-product/'))
+    .pipe(gulp.dest('dist-product/'));
 });
 
 // Deleting any file inside the /src folder
