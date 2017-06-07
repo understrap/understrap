@@ -174,7 +174,7 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', gulpSequence('sass', 'minify-css'))
+gulp.task('styles', function(callback){ gulpSequence('sass', 'minify-css')(callback) });
  
 
 // Run:
