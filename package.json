@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Wordpress Theme framework",
   "main": "index.js",
   "scripts": {
