@@ -64,9 +64,9 @@ class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 		} else if ( strcasecmp( $item->title, 'divider' ) == 0 && $depth === 1 ) {
 			$output .= $indent . '<li class="divider" role="presentation">';
 		} else if ( strcasecmp( $item->attr_title, 'dropdown-header' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li class="dropdown-header" role="presentation">' . esc_attr( $item->title );
+			$output .= $indent . '<li class="dropdown-header" role="presentation">' . esc_html( $item->title );
 		} else if ( strcasecmp( $item->attr_title, 'disabled' ) == 0 ) {
-			$output .= $indent . '<li class="disabled" role="presentation"><a href="#">' . esc_attr( $item->title ) . '</a>';
+			$output .= $indent . '<li class="disabled" role="presentation"><a href="#">' . esc_html( $item->title ) . '</a>';
 		} else {
 			$class_names = $value = '';
 			$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
