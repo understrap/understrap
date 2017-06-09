@@ -15,7 +15,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -41,7 +41,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 						<?php if ( ! empty( $curauth->user_url ) ) : ?>
 							<dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
 							<dd>
-								<a href="<?php echo esc_html( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
+								<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 							</dd>
 						<?php endif; ?>
 
