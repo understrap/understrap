@@ -42,6 +42,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
+var gulpSequence = require('gulp-sequence');
 
 
 // Run:
@@ -98,7 +99,7 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
-gulp.task('sass', ['minify-css'], function () {
+gulp.task('sass', function () {
     var stream = gulp.src('./sass/*.scss')
         .pipe(plumber({
             errorHandler: function (err) {
@@ -117,8 +118,7 @@ gulp.task('sass', ['minify-css'], function () {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/theme.css', ['minify-css']);
+    gulp.watch('./sass/**/*.scss', ['styles']);
     gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
 
     //Inside the watch task.
@@ -155,7 +155,8 @@ gulp.task('cssnano', function(){
 
 gulp.task('minify-css', function() {
   return gulp.src('./css/theme.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(cleanCSS({compatibility: '*'}))
     .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err);
@@ -163,6 +164,7 @@ gulp.task('minify-css', function() {
             }
         }))
     .pipe(rename({suffix: '.min'}))
+     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'));
 });
 
@@ -172,6 +174,8 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
+gulp.task('styles', function(callback){ gulpSequence('sass', 'minify-css')(callback) });
+ 
 
 // Run:
 // gulp browser-sync
@@ -184,7 +188,7 @@ gulp.task('browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'minify-css', 'scripts'], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 
 
 // Run: 

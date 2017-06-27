@@ -1,4 +1,19 @@
-            
+
+            - ** Release 0.6.1 May 18th 2017 **
+               - Replacing some older BS3 markup - Thx @typeplus and @Kostas Vrouvas
+               - Add basic error handling for `gulp-plumber` - thx @L422Y
+               - Correcting woo commerce customer login markup
+               - Replacing cssnano with minify-css
+               - Fix deprecated product accessor for WooCommerce 3.0 - Thx @willgorham
+               - Declare woocommerce support - Thx @typeplus
+               - Adding norwegian translation files - Thx @joakimhellum
+               - Adding info for GitHub updater plugin
+               - Fixing imagemin task
+               - Specify correct post templates for jetpack infinite scroll - Thx @typeplus
+               - Streamline 404.php and aligning with other page templates
+               - Adding gulp-sequence
+
+
             - ** Release 0.6.0 (skipping 0.5.8 and 0.5.9 ) Apr. 21th 2017 **
                - Adding WooCommerce 3.0.0 support - Big thx @typeplus
                - Add npm-debug.log to .gitignore file - thx @OussamaElgoumri

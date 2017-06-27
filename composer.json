@@ -1,0 +1,10 @@
+{
+    "name": "holger1411/understrap",
+    "description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
+    "type": "library",
+    "license": "GPL-2.0",
+    "minimum-stability": "stable",
+    "require": {},
+    "keywords": ["wordpress","theme","bootstrap"],
+    "homepage": "https://github.com/holger1411/understrap"
+}
