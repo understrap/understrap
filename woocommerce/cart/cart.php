@@ -1,7 +1,7 @@
 <?php
 /**
  * Cart Page
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ *
  * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -13,11 +13,11 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.0.3
+ * @version 3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
 
 wc_print_notices();
@@ -38,7 +38,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<th class="product-subtotal"><?php _e( 'Total', 'understrap' ); ?></th>
 			</tr>
 		</thead>
-	<tbody>
+		<tbody>
 			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 			<?php
@@ -63,60 +63,60 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
-					<td class="product-thumbnail">
-						<?php
-							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+						<td class="product-thumbnail">
+							<?php
+								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
-							if ( ! $product_permalink ) {
-								echo $thumbnail;
-							} else {
-								printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
-							}
-						?>
-					</td>
+								if ( ! $product_permalink ) {
+									echo $thumbnail;
+								} else {
+									printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
+								}
+							?>
+						</td>
 
-					<td class="product-name" data-title="<?php _e( 'Product', 'understrap' ); ?>">
-						<?php
-							if ( ! $product_permalink ) {
-								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
-							} else {
-								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
-							}
+						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'understrap' ); ?>">
+							<?php
+								if ( ! $product_permalink ) {
+									echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
+								} else {
+									echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
+								}
 
-							// Meta data
-							echo WC()->cart->get_item_data( $cart_item );
+								// Meta data
+								echo WC()->cart->get_item_data( $cart_item );
 
-							// Backorder notification
-							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-								echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>';
-							}
-						?>
-					</td>
+								// Backorder notification
+								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+									echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
+								}
+							?>
+						</td>
 
-					<td class="product-price" data-title="<?php _e( 'Price', 'understrap' ); ?>">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
-						?>
-					</td>
+						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'understrap' ); ?>">
+							<?php
+								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+							?>
+						</td>
 
-					<td class="product-quantity" data-title="<?php _e( 'Quantity', 'understrap' ); ?>">
-						<?php
-							if ( $_product->is_sold_individually() ) {
-								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
-							} else {
-								$product_quantity = woocommerce_quantity_input( array(
-									'input_name'  => "cart[{$cart_item_key}][qty]",
-									'input_value' => $cart_item['quantity'],
-									'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
-									'min_value'   => '0'
-								), $_product, false );
-							}
+						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'understrap' ); ?>">
+							<?php
+								if ( $_product->is_sold_individually() ) {
+									$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
+								} else {
+									$product_quantity = woocommerce_quantity_input( array(
+										'input_name'  => "cart[{$cart_item_key}][qty]",
+										'input_value' => $cart_item['quantity'],
+										'max_value'   => $_product->get_max_purchase_quantity(),
+										'min_value'   => '0',
+									), $_product, false );
+								}
 
-							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
-						?>
-					</td>
+								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
+							?>
+						</td>
 
-					<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'understrap' ); ?>">
+						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'understrap' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 							?>
@@ -128,9 +128,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 			?>
 
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
-			
-		<tr>
-			<td colspan="6" class="actions">
+
+			<tr>
+				<td colspan="6" class="actions">
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
@@ -141,24 +141,28 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 				<input type="submit" class="btn btn-outline-primary"  name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'understrap' ); ?>" />
 
-				<?php do_action( 'woocommerce_cart_actions' ); ?>
+					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
-				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
-			</td>
-		</tr>
+					<?php wp_nonce_field( 'woocommerce-cart' ); ?>
+				</td>
+			</tr>
 
-		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
-	</tbody>
-</table>
-
-<?php do_action( 'woocommerce_after_cart_table' ); ?>
-
+			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
+		</tbody>
+	</table>
+	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
 <div class="cart-collaterals">
-
-	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
-
+	<?php
+		/**
+		 * woocommerce_cart_collaterals hook.
+		 *
+		 * @hooked woocommerce_cross_sell_display
+		 * @hooked woocommerce_cart_totals - 10
+		 */
+	 	do_action( 'woocommerce_cart_collaterals' );
+	?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
