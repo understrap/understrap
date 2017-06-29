@@ -88,7 +88,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 								// Backorder notification
 								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-									echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
+									echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>';
 								}
 							?>
 						</td>
