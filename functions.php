@@ -1,6 +1,6 @@
 <?php
 /**
- * understrap functions and definitions
+ * Understrap functions and definitions
  *
  * @package understrap
  */
@@ -18,8 +18,8 @@ require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/widgets.php';
 
 /**
-* Load functions to secure your WP install.
-*/
+ * Load functions to secure your WP install.
+ */
 require get_template_directory() . '/inc/security.php';
 
 /**
@@ -31,6 +31,11 @@ require get_template_directory() . '/inc/enqueue.php';
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/pagination.php';
 
 /**
  * Custom functions that act independently of the theme templates.
@@ -53,17 +58,16 @@ require get_template_directory() . '/inc/custom-comments.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
-* Load custom WordPress nav walker.
-*/
+ * Load custom WordPress nav walker.
+ */
 require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 
 /**
-* Load custom WordPress gallery.
-*/
-require get_template_directory() . '/inc/bootstrap-wp-gallery.php';
-
+ * Load WooCommerce functions.
+ */
+require get_template_directory() . '/inc/woocommerce.php';
 
 /**
-* Load WooCommerce functions.
-*/
-require get_template_directory() . '/inc/woocommerce.php';
+ * Load Editor functions.
+ */
+require get_template_directory() . '/inc/editor.php';

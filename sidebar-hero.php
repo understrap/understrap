@@ -1,15 +1,44 @@
-<?php if ( is_active_sidebar( 'hero' ) ): ?>
+<?php
+/**
+ * Sidebar - hero setup.
+ *
+ * @package understrap
+ */
 
-    <!-- ******************* The Hero Widget Area ******************* -->
+?>
 
-    <div class="wrapper" id="wrapper-hero">
+<?php if ( is_active_sidebar( 'hero' ) ) : ?>
 
-        <div class="owl-carousel">
+	<!-- ******************* The Hero Widget Area ******************* -->
 
-            <?php dynamic_sidebar( 'hero' ); ?>
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
-        </div><!-- .owl-carousel -->
+			<div class="carousel-inner" role="listbox">
 
-    </div><!-- #wrapper-hero -->
+			<?php dynamic_sidebar( 'hero' ); ?>
+
+			</div>
+
+			 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+			    
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    
+			    <span class="sr-only">Previous</span>
+			 
+			 </a>
+			 
+			 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+			    
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    
+			    <span class="sr-only">Next</span>
+			  
+			</a>
+
+		</div><!-- .carousel -->
+
+<script>
+jQuery( ".carousel-item" ).first().addClass( "active" );
+</script>
 
 <?php endif; ?>

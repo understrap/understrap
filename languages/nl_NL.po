@@ -1,0 +1,279 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: understrap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-23 08:05+0000\n"
+"PO-Revision-Date: 2016-11-23 20:11+0000\n"
+"Last-Translator: Sander\n"
+"Language-Team: Dutch (Netherlands)\n"
+"Language: nl-NL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz\n"
+"X-Loco-Source-Locale: en-NL\n"
+"X-Loco-Project-Id: 19218\n"
+"X-Loco-Api-Version: 1.0.15 20161122-1"
+
+#: ../comments.php:28 loco:58356fd352e1a1670d8b4567
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Een reactie op &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:35 ../comments.php:56 loco:58356fd352e1a1670d8b4569
+msgid "Comment navigation"
+msgstr "Reactienavigatie"
+
+#: ../comments.php:37 ../comments.php:58 loco:58356fd352e1a1670d8b456a
+msgid "&larr; Older Comments"
+msgstr "&larr; Oudere reacties"
+
+#: ../comments.php:40 ../comments.php:61 loco:58356fd352e1a1670d8b456b
+msgid "Newer Comments &rarr;"
+msgstr "Nieuwere reacties &rarr;"
+
+#: ../comments.php:72 loco:58356fd352e1a1670d8b456c
+msgid "Comments are closed."
+msgstr "Reacties zijn gesloten."
+
+#: ../author.php:27 loco:58356fd352e1a1670d8b456d
+msgid "About:"
+msgstr "Over:"
+
+#: ../author.php:32 ../inc/custom-comments.php:16 loco:58356fd352e1a1670d8b456e
+msgid "Website"
+msgstr "Website"
+
+#: ../author.php:34 loco:58356fd352e1a1670d8b456f
+msgid "Profile"
+msgstr "Profiel"
+
+#: ../author.php:38 loco:58356fd352e1a1670d8b4570
+msgid "Posts by"
+msgstr "Berichten van"
+
+#: ../footer.php:24 loco:58356fd352e1a1670d8b4571
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: ../footer.php:24 loco:58356fd352e1a1670d8b4572
+msgid "Proudly powered by %s"
+msgstr "Met trots ondersteund door %s"
+
+#: ../footer.php:26 loco:58356fd352e1a1670d8b4573
+msgid "Theme: %1$s by %2$s."
+msgstr "Thema: %1$s van %2$s."
+
+#: ../header.php:30 loco:58356fd352e1a1670d8b4574
+msgid "Skip to content"
+msgstr "Ga naar inhoud"
+
+#: ../search.php:23 loco:58356fd352e1a1670d8b4575
+msgid "Search Results for: %s"
+msgstr "Zoekresultaten voor: %s"
+
+#: ../404.php:22 loco:58356fd352e1a1670d8b4576
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oeps! Deze pagina kan niet worden gevonden."
+
+#: ../404.php:27 loco:58356fd352e1a1670d8b4577
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Het lijkt erop dat er niets gevonden is op deze locatie. Probeer anders "
+"&#233;&#233;n van de onderstaande links of een zoekopdracht? "
+
+#: ../404.php:37 loco:58356fd352e1a1670d8b4578
+msgid "Most Used Categories"
+msgstr "Meestgebruikte categorie&#235;n"
+
+#. translators: %1$s: smiley
+#: ../404.php:57 loco:58356fd352e1a1670d8b4579
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Wellicht kun je kijken in de maandelijkse archieven. %1$s"
+
+#: ../searchform.php:9 ../searchform.php:13 loco:58356fd352e1a1670d8b457a
+msgid "Search"
+msgstr "Zoek"
+
+#: ../searchform.php:11 loco:58356fd352e1a1670d8b457b
+msgid "Search &hellip;"
+msgstr "Zoek &hellip;"
+
+#. Name of the template
+#: loco:58356fd352e1a1670d8b457c
+msgid "Full Width Page"
+msgstr "Volledige breedte"
+
+#. Name of the template
+#: loco:58356fd352e1a1670d8b457d
+msgid "Empty Page Template"
+msgstr "Leeg paginasjabloon"
+
+#: ../inc/widgets.php:10 loco:58356fd352e1a1670d8b457e
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: ../inc/widgets.php:20 loco:58356fd352e1a1670d8b457f
+msgid "Hero Slider"
+msgstr "Hero Slider"
+
+#: ../inc/widgets.php:30 loco:58356fd352e1a1670d8b4580
+msgid "Hero Static"
+msgstr "Hero Static"
+
+#: ../inc/widgets.php:40 loco:58356fd352e1a1670d8b4581
+msgid "Footer Full"
+msgstr "Footer (volledige breedte)"
+
+#: ../inc/customizer.php:24 loco:58356fd352e1a1670d8b4582
+msgid "Slider Settings"
+msgstr "Sliderinstellingen"
+
+#: ../inc/customizer.php:33 loco:58356fd352e1a1670d8b4583
+msgid "Number of slides displaying at once"
+msgstr "Aantal gelijktijdig vertoonde slides"
+
+#: ../inc/customizer.php:45 loco:58356fd352e1a1670d8b4584
+msgid "Slider Time (in ms)"
+msgstr "Slidertijd (in ms)"
+
+#: ../inc/customizer.php:57 loco:58356fd352e1a1670d8b4585
+msgid "Loop Slider Content"
+msgstr "Sliderinhoud herhalen"
+
+#: ../inc/template-tags.php:18 loco:58356fd352e1a1670d8b4586
+msgid " Edited %4$s"
+msgstr " Bewerkt op %4$s"
+
+#: ../inc/template-tags.php:29 loco:58356fd352e1a1670d8b4587
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Geplaatst op %s"
+
+#: ../inc/template-tags.php:34 loco:58356fd352e1a1670d8b4588
+msgctxt "post author"
+msgid "by %s"
+msgstr "door %s"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
+#: loco:58356fd352e1a1670d8b4589
+msgid ", "
+msgstr ", "
+
+#: ../inc/template-tags.php:53 loco:58356fd352e1a1670d8b458a
+msgid "Posted in %1$s"
+msgstr "Geplaatst in %1$s"
+
+#: ../inc/template-tags.php:59 loco:58356fd352e1a1670d8b458b
+msgid "Tagged %1$s"
+msgstr "%1$s getagd"
+
+#: ../inc/template-tags.php:65 loco:58356fd352e1a1670d8b458c
+msgid "Leave a comment"
+msgstr "Plaats een reactie"
+
+#: ../inc/template-tags.php:65 loco:58356fd352e1a1670d8b458d
+msgid "1 Comment"
+msgstr "1 Reactie"
+
+#: ../inc/template-tags.php:65 loco:58356fd352e1a1670d8b458e
+msgid "% Comments"
+msgstr "% Reacties"
+
+#. translators: %s: Name of current post
+#: ../inc/template-tags.php:72 loco:58356fd352e1a1670d8b458f
+msgid "Edit %s"
+msgstr "Bewerk %s"
+
+#: ../inc/setup.php:48 loco:58356fd352e1a1670d8b4590
+msgid "Primary Menu"
+msgstr "Hoofdmenu"
+
+#: ../inc/setup.php:98 loco:58356fd352e1a1670d8b4591
+msgid "Read More..."
+msgstr "Lees verder..."
+
+#: ../inc/custom-comments.php:12 loco:58356fd352e1a1670d8b4592
+msgid "Name"
+msgstr "Naam"
+
+#: ../inc/custom-comments.php:14 loco:58356fd352e1a1670d8b4593
+msgid "Email"
+msgstr "Email"
+
+#: ../inc/custom-comments.php:25 loco:58356fd352e1a1670d8b4594
+msgctxt "noun"
+msgid "Comment"
+msgstr "Reactie"
+
+#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
+#: loop-templates/content-page.php:25 loco:58356fd352e1a1670d8b4595
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: ../loop-templates/content-none.php:16 loco:58356fd352e1a1670d8b4596
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: ../loop-templates/content-none.php:24 loco:58356fd352e1a1670d8b4597
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Klaar om je eerste bericht te plaatsen? <a href=\"%1$s\">Begin hier</a>."
+
+#: ../loop-templates/content-none.php:28 loco:58356fd352e1a1670d8b4598
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Helaas, er waren geen overeenkomsten met jouw zoekopdracht. Probeer het "
+"opnieuw met enkele andere zoekwoorden."
+
+#: ../loop-templates/content-none.php:33 loco:58356fd352e1a1670d8b4599
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Het lijkt erop dat wij niet kunnen vinden wat jij zoekt. Wellicht dat de "
+"zoekfunctie kan helpen."
+
+#: ../loop-templates/content-page.php:34 loco:58356fd352e1a1670d8b459a
+msgid "Edit"
+msgstr "Bewerk"
+
+#. Name of the theme
+#: loco:58356fd352e1a1670d8b459b
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Theme URI of the theme
+#: loco:58356fd352e1a1670d8b459c
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. Description of the theme
+#: loco:58356fd352e1a1670d8b459d
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as parent theme. It is up to you."
+msgstr ""
+"Een combinatie van het _s thema van Automattic en Bootstrap 4. Ontwikkeld "
+"als startpunt voor het maken van jouw volgende thema en WordPress website. "
+"Gebruik het als starter thema of parent thema. De keuze is aan jou."
+
+#. Author of the theme
+#: loco:58356fd352e1a1670d8b459e
+msgid "Holger Koenemann"
+msgstr "Holger Koenemann"
+
+#. Author URI of the theme
+#: loco:58356fd352e1a1670d8b459f
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"

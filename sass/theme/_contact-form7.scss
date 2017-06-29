@@ -1,0 +1,73 @@
+/*
+* Use existing Bootstrap 4 classes and
+* variables to extend - override CF7 style
+*
+* Useful CF7 classes:
+* .wpcf7 the wrapper element
+* .wpcf7-form
+* .wpcf7-form-control
+* .wpcf7-text
+* .wpcf7-email
+* .wpcf7-textarea
+* .wpcf7-submit
+*/
+
+// keep a max width in case it is just the form and nothing else
+// we do not want a form spanning whole page
+.wpcf7 {
+  max-width: 600px;
+  margin: 0 auto !important;
+
+  // all inputs except radios and checkboxes inherit from form-control
+  input[type=text],
+  input[type=search],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=range],
+  input[type=date],
+  input[type=month],
+  input[type=week],
+  input[type=time],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=color],
+  input[type=email],
+  input[type=file],
+  input[type=submit],
+  select,
+  textarea {
+    @extend .form-control;
+  }
+
+  // submit button, inherit .btn and .btn-outline-primary classes.
+  input[type=submit] {
+    @extend .btn;
+    @extend .btn-outline-primary;
+  }
+
+  .wpcf7-form {
+
+    // set paragraphs to behave like divs with class .form-group
+    p {
+      @extend .form-group;
+    }
+
+    // let labels be 100%
+    label {
+      width: 100%;
+    }
+  }
+
+  // not valid tip for each control
+  .wpcf7-not-valid-tip {
+    color: $brand-danger !important;
+  }
+
+  // validation errors ourput bottom of form
+  .wpcf7-validation-errors {
+    @extend .form-control;
+    color: $brand-danger !important;
+    border: 1px solid $gray-lighter !important;
+  }
+}

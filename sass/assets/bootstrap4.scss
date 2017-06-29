@@ -1,13 +1,14 @@
 /*!
- * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 // Core variables and mixins
-@import "../../src/sass/bootstrap4/custom";
 @import "../../src/sass/bootstrap4/variables";
 @import "../../src/sass/bootstrap4/mixins";
+@import "../../src/sass/bootstrap4/custom";
 
 // Reset and dependencies
 @import "../../src/sass/bootstrap4/normalize";
@@ -24,7 +25,7 @@
 @import "../../src/sass/bootstrap4/buttons";
 
 // Components
-@import "../../src/sass/bootstrap4/animation";
+@import "../../src/sass/bootstrap4/transitions";
 @import "../../src/sass/bootstrap4/dropdown";
 @import "../../src/sass/bootstrap4/button-group";
 @import "../../src/sass/bootstrap4/input-group";
@@ -34,7 +35,7 @@
 @import "../../src/sass/bootstrap4/card";
 @import "../../src/sass/bootstrap4/breadcrumb";
 @import "../../src/sass/bootstrap4/pagination";
-@import "../../src/sass/bootstrap4/tags";
+@import "../../src/sass/bootstrap4/badge";
 @import "../../src/sass/bootstrap4/jumbotron";
 @import "../../src/sass/bootstrap4/alert";
 @import "../../src/sass/bootstrap4/progress";
@@ -51,3 +52,4 @@
 
 // Utility classes
 @import "../../src/sass/bootstrap4/utilities";
+

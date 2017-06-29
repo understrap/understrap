@@ -1,11 +1,30 @@
-<?php if ( is_active_sidebar( 'footerfull' ) ): ?>
+<?php
+/**
+ * Sidebar setup for footer full.
+ *
+ * @package understrap
+ */
 
-    <!-- ******************* The Hero Widget Area ******************* -->
+$container   = get_theme_mod( 'understrap_container_type' );
 
-    <div class="wrapper" id="wrapper-footer-full">
+?>
 
-		<?php dynamic_sidebar( 'footerfull' ); ?>
+<?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
 
-    </div><!-- #wrapper-footer-full -->
+	<!-- ******************* The Footer Full-width Widget Area ******************* -->
+
+	<div class="wrapper" id="wrapper-footer-full">
+
+		<div class="<?php echo esc_attr( $container ); ?>" id="footer-full-content" tabindex="-1">
+
+			<div class="row">
+
+				<?php dynamic_sidebar( 'footerfull' ); ?>
+
+			</div>
+
+		</div>
+
+	</div><!-- #wrapper-footer-full -->
 
 <?php endif; ?>
