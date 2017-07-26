@@ -24,7 +24,7 @@ if ( ! function_exists( 'slbd_count_widgets' ) ) {
 			$widget_count = count( $sidebars_widgets_count[ $sidebar_id ] );
 			$widget_classes = 'widget-count-' . count( $sidebars_widgets_count[ $sidebar_id ] );
 			if ( $widget_count % 4 == 0 || $widget_count > 6 ) :
-				// Four widgets er row if there are exactly four or more than six
+				// Four widgets per row if there are exactly four or more than six
 				$widget_classes .= ' col-md-3';
 			elseif ( 6 == $widget_count ) :
 				// If two widgets are published
