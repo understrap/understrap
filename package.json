@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Wordpress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -52,6 +52,5 @@
     "undescores-for-npm": "^1.0.0",
     "jquery": "3.0.0",
     "popper.js": "1.11.0"
-
   }
 }
