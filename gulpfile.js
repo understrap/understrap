@@ -196,10 +196,9 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
-        basePaths.dev + 'js/popper.min.js', // Must be loaded before BS4
 
         // Start - All BS4 stuff
-        basePaths.dev + 'js/bootstrap4/bootstrap.min.js',
+        basePaths.dev + 'js/bootstrap4/bootstrap.js',
 
         // End - All BS4 stuff
 
@@ -207,6 +206,7 @@ gulp.task('scripts', function() {
     ];
   gulp.src(scripts)
     .pipe(concat('theme.min.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 
   gulp.src(scripts)
