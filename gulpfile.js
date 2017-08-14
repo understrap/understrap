@@ -196,7 +196,6 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
-        basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
         // Start - All BS4 stuff
         basePaths.dev + 'js/bootstrap4/bootstrap.js',
@@ -260,12 +259,8 @@ gulp.task('copy-assets', ['clean-source'], function() {
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy Tether JS files
-    gulp.src(basePaths.node + 'tether/dist/js/*.js')
+    gulp.src(basePaths.node + 'popper.js/dist/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
-
-// Copy Tether CSS files
-    gulp.src(basePaths.node + 'tether/dist/css/*.css')
-        .pipe(gulp.dest(basePaths.dev + '/css'));
     return stream;
 });
 

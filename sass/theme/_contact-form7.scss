@@ -61,13 +61,13 @@
 
   // not valid tip for each control
   .wpcf7-not-valid-tip {
-    color: $brand-danger !important;
+    color: theme-color("danger");
   }
 
   // validation errors ourput bottom of form
   .wpcf7-validation-errors {
     @extend .form-control;
-    color: $brand-danger !important;
-    border: 1px solid $gray-lighter !important;
+    color: theme-color("danger");
+    border: 1px solid $gray-200;
   }
 }

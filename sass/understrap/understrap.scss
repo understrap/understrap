@@ -1,6 +1,6 @@
 // Some basic padding for all wrappers
 .wrapper { 
-  padding: $grid-gutter-width-base 0; }
+  padding: $grid-gutter-width 0; }
 
 // Reset hero wrapper padding to 0
 #wrapper-hero { padding: 0px !important; }
@@ -13,11 +13,11 @@
 }
 
 // Separate sticky wrapper from main content
-.wrapper#wrapper-sticky { border-bottom: 1px solid $gray-light; }
+.wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
 
 // Adding some contrast background color to footer full widget
 #wrapper-footer-full,
-#wrapper-static-hero { background-color: $gray-lighter; }
+#wrapper-static-hero { background-color: $gray-200; }
 
 // Necessary WP classes
 .wp-caption { font-size: inherit; }
@@ -72,15 +72,15 @@ a.skip-link {
 }
 
 .bg-primary .dropdown-menu {
-background-color:$brand-primary;
+background-color:theme-color("primary");
 }
 
 .bg-success .dropdown-menu {
-background-color:$brand-success;
+background-color:theme-color("success");
 }
 
 .bg-inverse .dropdown-menu {
-background-color:$brand-inverse;
+background-color:$navbar-dark-color;
 }
 
 // Fixing BS dropdown in a dropdown
@@ -103,12 +103,10 @@ background-color:$brand-inverse;
 .dropdown-menu .menu-item {
   width: 100%;
   a.nav-link{
-    margin:0px;
-    padding:$nav-link-padding;
 
   }
   a.nav-link:hover { 
-    background-color: $brand-primary; 
+    background-color: theme-color("primary"); 
   }
 }
 

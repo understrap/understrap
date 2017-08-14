@@ -50,7 +50,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- wrapper end -->
 
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 
 </body>
