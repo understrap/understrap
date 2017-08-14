@@ -63,13 +63,13 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 							<?php endif; ?>
 
 							<?php
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s',
-							'understrap' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-							?>
 
-							<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+							/* translators: %1$s: smiley */
+							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
+							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+
+							the_widget( 'WP_Widget_Tag_Cloud' );
+							?>
 
 						</div><!-- .page-content -->
 
