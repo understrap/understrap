@@ -1,69 +1,96 @@
-# Travis CI (MIT License) configuration file for the Underscores WordPress theme.
+# Travis CI configuration file.
 # @link https://travis-ci.org/
 
 # For use with the UnderStrap WordPress theme
 # @link https://github.com/holger1411/understrap
+
+# Declare project language and PHP versions to test against.
+# @link http://about.travis-ci.org/docs/user/languages/php/
+language: php
+
+# Declare versions of PHP to use. Use one decimal max.
+php:
+    - "7.0"
+    - "5.6"
+    - "5.5"
+    - "5.4"
+    - "5.3"
+    # Current $required_php_version for WordPress: 5.2.4
+    - "5.2"
 
 # Ditch sudo and use containers.
 # @link http://docs.travis-ci.com/user/migrating-from-legacy/#Why-migrate-to-container-based-infrastructure%3F
 # @link http://docs.travis-ci.com/user/workers/container-based-infrastructure/#Routing-your-build-to-container-based-infrastructure
 sudo: false
 
-# Declare project language.
-# @link http://about.travis-ci.org/docs/user/languages/php/
-language: php
-
-# Declare versions of PHP to use. Use one decimal max.
-# @link http://docs.travis-ci.com/user/build-configuration/
-matrix:
-    fast_finish: true
-
-    include:
-        # Current $required_php_version for WordPress: 5.2.4
-        # aliased to 5.2.17
-        - php: '5.2'
-        # aliased to a recent 5.6.x version
-        - php: '5.6'
-          env: SNIFF=1
-        # aliased to a recent 7.0.x version
-        - php: '7.0'
-          env: SNIFF=1
-        # aliased to a recent 7.1.x version
-        - php: '7.1'
-        # aliased to a recent hhvm version
-        - php: 'hhvm'
-
-    allow_failures:
-        - php: 'hhvm'
-
-# Use this to prepare the system to install prerequisites or dependencies.
-# e.g. sudo apt-get update.
-# Failures in this section will result in build status 'errored'.
-# before_install:
+# Declare which versions of WordPress to test against.
+# Also declare whether or not to test in Multisite.
+env:
+    # Trunk (current version in development is 4.7)
+    # @link https://github.com/WordPress/WordPress
+    - WP_VERSION=master WP_MULTISITE=0
 
 # Use this to prepare your build for testing.
 # e.g. copy database configurations, environment variables, etc.
 # Failures in this section will result in build status 'errored'.
 before_script:
-    - export PHPCS_DIR=/tmp/phpcs
-    - export SNIFFS_DIR=/tmp/sniffs
+    # Set up WordPress installation.
+    - export WP_DEVELOP_DIR=/tmp/wordpress/
+    - mkdir -p $WP_DEVELOP_DIR
+    # Use the Git mirror of WordPress.
+    - git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ $WP_DEVELOP_DIR
+    # Set up Twenty Seventeen theme information.
+    - theme_slug=$(basename $(pwd))
+    - theme_dir=$WP_DEVELOP_DIR/src/wp-content/themes/$theme_slug
+    - cd ..
+    - mv $theme_slug $theme_dir
+    # Set up WordPress configuration.
+    - cd $WP_DEVELOP_DIR
+    - echo $WP_DEVELOP_DIR
+    - cp wp-tests-config-sample.php wp-tests-config.php
+    - sed -i "s/youremptytestdbnamehere/wordpress_test/" wp-tests-config.php
+    - sed -i "s/yourusernamehere/root/" wp-tests-config.php
+    - sed -i "s/yourpasswordhere//" wp-tests-config.php
+    # Create WordPress database.
+    - mysql -e 'CREATE DATABASE wordpress_test;' -uroot
     # Install CodeSniffer for WordPress Coding Standards checks.
-    - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/squizlabs/PHP_CodeSniffer.git $PHPCS_DIR; fi
+    - mkdir php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/master.tar.gz | tar xz --strip-components=1 -C php-codesniffer
     # Install WordPress Coding Standards.
-    - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git $SNIFFS_DIR; fi
-    # Install PHP Compatibility sniffs.
-    - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/wimg/PHPCompatibility.git $SNIFFS_DIR/PHPCompatibility; fi
-    # Set install path for PHPCS sniffs.
+    - mkdir wordpress-coding-standards && curl -L https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/master.tar.gz | tar xz --strip-components=1 -C wordpress-coding-standards
+    # Hop into CodeSniffer directory.
+    - cd php-codesniffer
+    # Set install path for WordPress Coding Standards
     # @link https://github.com/squizlabs/PHP_CodeSniffer/blob/4237c2fc98cc838730b76ee9cee316f99286a2a7/CodeSniffer.php#L1941
-    - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/scripts/phpcs --config-set installed_paths $SNIFFS_DIR; fi
+    - scripts/phpcs --config-set installed_paths ../wordpress-coding-standards
+    # Hop into themes directory.
+    - cd $theme_dir
     # After CodeSniffer install you should refresh your path.
-    - if [[ "$SNIFF" == "1" ]]; then phpenv rehash; fi
+    - phpenv rehash
+    # Install JSCS: JavaScript Code Style checker
+    # @link http://jscs.info/
+    - npm install -g jscs
+    # Install JSHint, a JavaScript Code Quality Tool
+    # @link http://jshint.com/docs/
+    - npm install -g jshint
+    - wget https://develop.svn.wordpress.org/trunk/.jshintrc
 
 # Run test script commands.
 # Default is specific to project language.
 # All commands must exit with code 0 on success. Anything else is considered failure.
 script:
-    # Search for PHP syntax errors.
-    - find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l
-    # Run WordPress Coding Standards checking
-    - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php --ignore=*/woocommerce/*,*/inc/*; fi
+    # Search theme for PHP syntax errors.
+    - find . \( -name '*.php' \) -exec php -lf {} \;
+    # Run the theme through JSHint
+    - jshint .
+    # Run the theme through JavaScript Code Style checker
+    - jscs .
+    # WordPress Coding Standards
+    # @link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
+    # @link http://pear.php.net/package/PHP_CodeSniffer/
+    # -p flag: Show progress of the run.
+    # -s flag: Show sniff codes in all reports.
+    # -v flag: Print verbose output.
+    # -n flag: Do not print warnings (shortcut for --warning-severity=0)
+    # --standard: Use WordPress as the standard.
+    # --extensions: Only sniff PHP files.
+    - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
