@@ -1,3 +1,16 @@
+            - ** Release 0.6.3 August 14th 2017 **
+                - Update to Bootstrap 4 Beta
+                - Fixing wrong escaping - Thx @ramiy
+                - Adding composer.json - Thx @selfagency
+                - WooCommerce 3.1 compatibility update - Thx @typeplus
+                - WooCommerce Bootstrap buttons - Thx @yeszao
+                - theme-settings.php update - Thx @oralunal
+                - Update responsive meta tags for Bootstrap 4 - Thx @chuckreynolds
+
+
+            - ** Release 0.6.2 June 7th 2017 **
+               - Hot fix release
+
 
             - ** Release 0.6.1 May 18th 2017 **
                - Replacing some older BS3 markup - Thx @typeplus and @Kostas Vrouvas
