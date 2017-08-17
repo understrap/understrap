@@ -64,80 +64,55 @@ a.skip-link {
 // Reset Jumbotron default margin
 .jumbotron { margin-bottom: 0px; }
 
-// Bootstrap3 to Bootstrap4 "translation"
-.menu-item {
-  float: left;
-  display: inline;
-  width: auto;
-}
-
-.bg-primary .dropdown-menu {
-background-color:theme-color("primary");
-}
-
-.bg-success .dropdown-menu {
-background-color:theme-color("success");
-}
-
-.bg-inverse .dropdown-menu {
-background-color:$navbar-dark-color;
-}
-
-// Fixing BS dropdown in a dropdown
-.navbar-toggleable-md .navbar-nav .dropdown-menu {
-  float:left;
-}
-
-.dropdown-menu .dropdown-menu {
-  position: relative;
+// Dropdown translation
+.navbar-dark .navbar-nav .dropdown-menu .nav-link{
   display: block;
-  margin-left: 10px;
-  border: none;
-  box-shadow: none;
-  li {
-    padding-left: 0px;
-    list-style: square;
+  width: 100%; // For `<button>`s
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  clear: both;
+  font-weight: $font-weight-normal;
+  color: $dropdown-link-color !important;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background: none; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  @include hover-focus {
+    color: $dropdown-link-hover-color !important;
+    text-decoration: none;
+    background-color: $dropdown-link-hover-bg;
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color !important;
+    text-decoration: none;
+    background-color: $dropdown-link-active-bg;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $dropdown-link-disabled-color !important;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
   }
 }
 
-.dropdown-menu .menu-item {
-  width: 100%;
-  a.nav-link{
+.navbar-light .navbar-brand a {
+     color: $navbar-light-active-color;
 
-  }
-  a.nav-link:hover { 
-    background-color: theme-color("primary"); 
-  }
+    @include hover-focus {
+      color: $navbar-light-active-color;
+    }
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  cursor: pointer;
-}
+.navbar-dark .navbar-brand a {
+    color: $navbar-dark-active-color;
 
-// Clearing after gallery
-.gallery:after {
- content: "";
- display: table;
- clear: both;
-}
-
-// Clearing after widget
-aside.widget{clear:both;}
-
-// Makes widgets in hero slider 100% width
-#wrapper-hero .carousel-inner .textwidget {
-width:100%;
-}
-
-// Adjusting brand link if h1 is used
-h1.navbar-brand {
-  a {
-  color:inherit;
-  }
-  a:hover {
-    text-decoration:none;
-  }
+    @include hover-focus {
+      color: $navbar-dark-active-color;
+    }
 }

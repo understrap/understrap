@@ -6743,60 +6743,38 @@ a.skip-link {
 .jumbotron {
   margin-bottom: 0px; }
 
-.menu-item {
-  float: left;
-  display: inline;
-  width: auto; }
-
-.bg-primary .dropdown-menu {
-  background-color: #007bff; }
-
-.bg-success .dropdown-menu {
-  background-color: #28a745; }
-
-.bg-inverse .dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.5); }
-
-.navbar-toggleable-md .navbar-nav .dropdown-menu {
-  float: left; }
-
-.dropdown-menu .dropdown-menu {
-  position: relative;
+.navbar-dark .navbar-nav .dropdown-menu .nav-link {
   display: block;
-  margin-left: 10px;
-  border: none;
-  box-shadow: none; }
-  .dropdown-menu .dropdown-menu li {
-    padding-left: 0px;
-    list-style: square; }
-
-.dropdown-menu .menu-item {
-  width: 100%; }
-  .dropdown-menu .menu-item a.nav-link:hover {
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: normal;
+  color: #212529 !important;
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0; }
+  .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus, .navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
+    color: #16181b !important;
+    text-decoration: none;
+    background-color: #f8f9fa; }
+  .navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {
+    color: #fff !important;
+    text-decoration: none;
     background-color: #007bff; }
+  .navbar-dark .navbar-nav .dropdown-menu .nav-link.disabled, .navbar-dark .navbar-nav .dropdown-menu .nav-link:disabled {
+    color: #868e96 !important;
+    background-color: transparent; }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  cursor: pointer; }
+.navbar-light .navbar-brand a {
+  color: rgba(0, 0, 0, 0.9); }
+  .navbar-light .navbar-brand a:focus, .navbar-light .navbar-brand a:hover {
+    color: rgba(0, 0, 0, 0.9); }
 
-.gallery:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-aside.widget {
-  clear: both; }
-
-#wrapper-hero .carousel-inner .textwidget {
-  width: 100%; }
-
-h1.navbar-brand a {
-  color: inherit; }
-
-h1.navbar-brand a:hover {
-  text-decoration: none; }
+.navbar-dark .navbar-brand a {
+  color: white; }
+  .navbar-dark .navbar-brand a:focus, .navbar-dark .navbar-brand a:hover {
+    color: white; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
