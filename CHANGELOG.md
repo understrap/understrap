@@ -1,3 +1,5 @@
+            - ** Release 0.6.4 August 17h 2017 **
+              - Hot fix release - Rebuild new Bootstrap 4 Beta navbar markup into UnderStrap
 
             - ** Release 0.6.3 August 14h 2017 **
                - Update to Bootstrap 4 Beta
