@@ -1,4 +1,4 @@
-// Defining base pathes
+// Defining base paths
 var basePaths = {
     js: './js/',
     node: './node_modules/',
@@ -270,7 +270,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 
 // Run
 // gulp dist
-// Copies the files to the /dist folder for distributon as simple theme
+// Copies the files to the /dist folder for distribution as simple theme
 gulp.task('dist', ['clean-dist'], function() {
     gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!dist-product','!dist-product/**','!sass','!sass/**','!readme.txt','!readme.md','!package.json','!gulpfile.js','!CHANGELOG.md','!.travis.yml','!jshintignore', '!codesniffer.ruleset.xml', '*'])
     .pipe(gulp.dest('dist/'))
@@ -283,7 +283,7 @@ gulp.task('clean-dist', function () {
 
 // Run
 // gulp dist-product
-// Copies the files to the /dist-prod folder for distributon as theme with all assets
+// Copies the files to the /dist-prod folder for distribution as theme with all assets
 gulp.task('dist-product', ['clean-dist-product'], function() {
     gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!dist','!dist/**','!dist-product','!dist-product/**', '*'])
     .pipe(gulp.dest('dist-product/'))
