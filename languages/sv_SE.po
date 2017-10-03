@@ -252,7 +252,7 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentarer"
 
-#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 .. 
+#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
 #: loop-templates/content-page.php:25
 msgid "Pages:"
 msgstr "Sidor:"
@@ -385,7 +385,7 @@ msgid ""
 "starter theme or as parent theme. It is up to you."
 msgstr ""
 "En kombination av Automattic´s _s tema och Bootstrap 4. Gjort som en bas för "
-"ditt nästa tema eller Wordpress webbplats. Använd det som en grund eller som "
+"ditt nästa tema eller WordPress webbplats. Använd det som en grund eller som "
 "ett förälder tema. Det är upp till dig."
 
 #. Author of the theme
