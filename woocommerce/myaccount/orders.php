@@ -1,7 +1,7 @@
 <?php
 /**
  * Orders
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ *
  * Shows orders on the account page.
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/orders.php.
@@ -15,7 +15,7 @@
  * @see 	https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.1.0
+ * @version 3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 <?php if ( $has_orders ) : ?>
 
-	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table table-hover table-striped">
+	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
 		<thead>
 			<tr>
 				<?php foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) : ?>
@@ -65,34 +65,13 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
-									$actions = array(
-										'pay'    => array(
-											'url'  => $order->get_checkout_payment_url(),
-											'name' => __( 'Pay', 'woocommerce' )
-										),
-										'view'   => array(
-											'url'  => $order->get_view_order_url(),
-											'name' => __( 'View', 'woocommerce' )
-										),
-										'cancel' => array(
-											'url'  => $order->get_cancel_order_url( wc_get_page_permalink( 'myaccount' ) ),
-											'name' => __( 'Cancel', 'woocommerce' )
-										)
-									);
-
-									if ( ! $order->needs_payment() ) {
-										unset( $actions['pay'] );
+								$actions = wc_get_account_orders_actions( $order );
+								
+								if ( ! empty( $actions ) ) {
+									foreach ( $actions as $key => $action ) {
+										echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 									}
-
-									if ( ! in_array( $order->get_status(), apply_filters( 'woocommerce_valid_order_statuses_for_cancel', array( 'pending', 'failed' ), $order ) ) ) {
-										unset( $actions['cancel'] );
-									}
-
-									if ( $actions = apply_filters( 'woocommerce_my_account_my_orders_actions', $actions, $order ) ) {
-										foreach ( $actions as $key => $action ) {
-											echo '<a href="' . esc_url( $action['url'] ) . '" class="btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
-										}
-									}
+								}
 								?>
 							<?php endif; ?>
 						</td>
