@@ -1,3 +1,16 @@
+            - ** Release 0.6.6 October 23h 2017 **
+              - Update to Bootstrap 4 Beta 2
+              - Moving hamburger icon to the right by default
+              - Fixing issue #392 
+              - Gramma and typo fixes
+              - Making inc/security.php hookable
+              - Variable product ajax_add_to_cart fix
+              - Update Woocommerce 3.2.1 compatibility
+              
+
+            - ** Release 0.6.5 August 17h 2017 **
+              - Hot fix release
+
             - ** Release 0.6.4.1 August 17h 2017 **
               - Hot fix release - Rebuild new Bootstrap 4 Beta navbar markup into UnderStrap
 
