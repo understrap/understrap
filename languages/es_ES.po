@@ -297,7 +297,7 @@ msgid ""
 "or as parent theme. It is up to you."
 msgstr ""
 "Una combinacion de tema _s  (Automattic) y de Bootstrap 4. Realizado solidamente "
-"Punto de partida para tus proyectos hechos en Wordpress. Utilizar Empezar como "
+"Punto de partida para tus proyectos hechos en WordPress. Utilizar Empezar como "
 "padre tema de tus temas, es tu decisión."
 
 #. Author of the theme

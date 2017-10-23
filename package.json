@@ -1,7 +1,7 @@
 {
   "name": "understrap",
   "version": "0.6.6",
-  "description": "Wordpress Theme framework",
+  "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
     "postinstall": "gulp copy-assets"

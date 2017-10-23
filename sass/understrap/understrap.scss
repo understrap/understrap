@@ -1,15 +1,15 @@
 // Some basic padding for all wrappers
-.wrapper { 
+.wrapper {
   padding: $grid-gutter-width 0; }
 
 // Reset hero wrapper padding to 0
 #wrapper-hero { padding: 0px !important; }
 
-// Adding basic Wordpress classes to pass the Wordpress.org tests
+// Adding basic WordPress classes to pass the WordPress.org tests
 .sticky,
 .gallery-caption,
-.bypostauthor { 
-  font-size: inherit; 
+.bypostauthor {
+  font-size: inherit;
 }
 
 // Separate sticky wrapper from main content
