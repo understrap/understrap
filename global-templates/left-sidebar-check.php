@@ -15,7 +15,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<?php get_sidebar( 'left' ); ?>
 <?php endif; ?>
 
-<?php {
+<?php 
 	$html = '';
 	if ( 'right' === $sidebar_pos || 'left' === $sidebar_pos ) {
 		$html = '<div class="';
@@ -36,4 +36,4 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	} else {
 	    echo '<div class="col-md-12 content-area" id="primary">';
 	}
-}
+
