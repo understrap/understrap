@@ -228,6 +228,10 @@ gulp.task('copy-assets', ['clean-source'], function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all Bootstrap JS files
+
+    var stream = gulp.src(basePaths.node + 'bootstrap/dist/umd/popper.min.js')
+       .pipe(gulp.dest(basePaths + '/js'));
+
     var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
   
