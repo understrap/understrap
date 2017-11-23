@@ -11,6 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if (! class_exists ( 'WP_Bootstrap_Navwalker' )) :
+
 /**
  * Class WP_Bootstrap_Navwalker
  * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
@@ -210,3 +212,5 @@ class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 		}
 	}
 }
+
+endif; /* End if class exists */
