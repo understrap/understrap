@@ -1,3 +1,14 @@
+            - ** Release 0.6.7 November 24th 2017 **
+              - Workaround for jQuery inconsistency problem between Bootstrap Beta 2 and WordPress in noConflict mode
+              - Adding jQuery slim 3.2.1
+              - Update page.php - thx @Vishal-Deshpande
+              - Fixing colormap problem with beta 2
+              - Making navwalker function pluggable  - Thx @bruceconlon
+              - Adding WordPress title attribute - Thx @JDVirtual and @Thomas-A-Reinert 
+              - Fixing comments in _theme_variable.scss - thx @ianwyllie
+              - Adding spaces the separate "posted on" and "edited" timestamps  - Thx @bruceconlon
+              
+
             - ** Release 0.6.6 October 23h 2017 **
               - Update to Bootstrap 4 Beta 2
               - Moving hamburger icon to the right by default
