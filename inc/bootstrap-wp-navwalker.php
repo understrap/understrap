@@ -101,7 +101,7 @@ class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			$id          = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 			$output .= $indent . '<li' . $id . $value . $class_names . '>';
 			$atts           = array();
-			$atts['title']  = ! empty( $item->title ) ? $item->title : '';
+			if ( empty( $item->attr_title ) ) { $atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : ''; } else { $atts['title'] = $item->attr_title; }
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
 			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
 			// If item has_children add atts to a.
