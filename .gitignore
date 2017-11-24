@@ -12,4 +12,6 @@ dist-product
 
 npm-debug.log
 
-/vendor/
+vendor/
+
+src/

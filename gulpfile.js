@@ -240,7 +240,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 
 // Copy all Font Awesome Fonts
     gulp.src(basePaths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('./fonts'));
+        .pipe(gulp.dest('./fonts/vendor'));
 
 // Copy all Font Awesome SCSS files
     gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
@@ -248,7 +248,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 
 // Copy jQuery
     gulp.src(basePaths.node + 'jquery/dist/*.js')
-        .pipe(gulp.dest(basePaths.js));
+        .pipe(gulp.dest(basePaths.js + '/vendor'));
 
 // _s SCSS files
     gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
@@ -260,14 +260,14 @@ gulp.task('copy-assets', ['clean-source'], function() {
 
 // _s JS files into /js
     gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
-        .pipe(gulp.dest(basePaths.js));
+        .pipe(gulp.dest(basePaths.js + '/vendor'));
 
 // Copy Popper JS files
     gulp.src(basePaths.node + 'popper.js/dist/umd/popper.min.js')
-        .pipe(gulp.dest(basePaths.js));
+        .pipe(gulp.dest(basePaths.js + '/vendor'));
         
     gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
-        .pipe(gulp.dest(basePaths.js));
+        .pipe(gulp.dest(basePaths.js + '/vendor'));
     return stream;
 });
 
