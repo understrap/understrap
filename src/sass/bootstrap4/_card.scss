@@ -194,12 +194,10 @@
         &:first-child {
           @include border-right-radius(0);
 
-          .card-img-top,
-          .card-header {
+          .card-img-top {
             border-top-right-radius: 0;
           }
-          .card-img-bottom,
-          .card-footer {
+          .card-img-bottom {
             border-bottom-right-radius: 0;
           }
         }
@@ -207,12 +205,10 @@
         &:last-child {
           @include border-left-radius(0);
 
-          .card-img-top,
-          .card-header {
+          .card-img-top {
             border-top-left-radius: 0;
           }
-          .card-img-bottom,
-          .card-footer {
+          .card-img-bottom {
             border-bottom-left-radius: 0;
           }
         }
@@ -220,24 +216,20 @@
         &:only-child {
           @include border-radius($card-border-radius);
 
-          .card-img-top,
-          .card-header {
+          .card-img-top {
             @include border-top-radius($card-border-radius);
           }
-          .card-img-bottom,
-          .card-footer {
+          .card-img-bottom {
             @include border-bottom-radius($card-border-radius);
           }
         }
 
         &:not(:first-child):not(:last-child):not(:only-child) {
-          @include border-radius(0);
+          border-radius: 0;
 
           .card-img-top,
-          .card-img-bottom,
-          .card-header,
-          .card-footer {
-            @include border-radius(0);
+          .card-img-bottom {
+            border-radius: 0;
           }
         }
       }

@@ -15,12 +15,12 @@
     color: $input-focus-color;
     background-color: $input-focus-bg;
     border-color: $input-focus-border-color;
-    outline: 0;
+    outline: none;
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
-      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+      box-shadow: $input-box-shadow, $input-btn-focus-box-shadow;
     } @else {
-      box-shadow: $input-focus-box-shadow;
+      box-shadow: $input-btn-focus-box-shadow;
     }
   }
 }
@@ -46,7 +46,7 @@
     font-size: .875rem;
     line-height: 1;
     color: #fff;
-    background-color: rgba($color, .8);
+    background-color: rgba($color,.8);
     border-radius: .2rem;
   }
 
@@ -57,8 +57,7 @@
       border-color: $color;
 
       &:focus {
-        border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        box-shadow: 0 0 0 .2rem rgba($color,.25);
       }
 
       ~ .#{$state}-feedback,
@@ -84,15 +83,10 @@
     .was-validated &:#{$state},
     &.is-#{$state} {
       ~ .custom-control-indicator {
-        background-color: rgba($color, .4);
+        background-color: rgba($color, .25);
       }
       ~ .custom-control-description {
         color: $color;
-      }
-      &:focus {
-        ~ .custom-control-indicator {
-          box-shadow: 0 0 0 1px $body-bg, 0 0 0 $input-focus-width rgba($color, .25);
-        }
       }
     }
   }
@@ -107,9 +101,7 @@
         &::before { border-color: inherit; }
       }
       &:focus {
-        ~ .custom-file-control {
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
-        }
+        box-shadow: 0 0 0 .2rem rgba($color,.25);
       }
     }
   }

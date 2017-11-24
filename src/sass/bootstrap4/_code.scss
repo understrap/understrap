@@ -42,6 +42,8 @@ kbd {
 // Blocks of code
 pre {
   display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
   font-size: $code-font-size;
   color: $pre-color;
 
@@ -51,7 +53,7 @@ pre {
     font-size: inherit;
     color: inherit;
     background-color: transparent;
-    @include border-radius(0);
+    border-radius: 0;
   }
 }
 
