@@ -9,8 +9,8 @@
  * Count number of widgets in a sidebar
  * Used to add classes to widget areas so widgets can be displayed one, two, three or four per row
  */
-if ( ! function_exists( 'slbd_count_widgets' ) ) {
-	function slbd_count_widgets( $sidebar_id ) {
+if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
+	function understrap_slbd_count_widgets( $sidebar_id ) {
 		// If loading from front page, consult $_wp_sidebars_widgets rather than options
 		// to see if wp_convert_widget_settings() has made manipulations in memory.
 		global $_wp_sidebars_widgets;
