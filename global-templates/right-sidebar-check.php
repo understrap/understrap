@@ -4,12 +4,12 @@
  *
  * @package understrap
  */
+?>
 
+<?php $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' ); ?>
 
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
-if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : 
+  <?php get_sidebar( 'right' ); ?>
 
-  get_sidebar( 'right' ); 
-
-endif;
+<?php endif; ?>
