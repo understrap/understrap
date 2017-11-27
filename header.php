@@ -70,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
-						'walker'          => new WP_Bootstrap_Navwalker(),
+						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 			<?php if ( 'container' == $container ) : ?>
