@@ -57,13 +57,13 @@
   $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
   @if ($yiq >= 150) {
-    @return $yiq-text-dark;
+    @return #111;
   } @else {
-    @return $yiq-text-light;
+    @return #fff;
   }
 }
 
-// Retrieve color Sass maps
+// Retreive color Sass maps
 @function color($key: "blue") {
   @return map-get($colors, $key);
 }
