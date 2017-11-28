@@ -247,15 +247,15 @@ gulp.task('copy-assets', ['clean-source'], function() {
         .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
 
 // _s SCSS files
-    gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
+    gulp.src(basePaths.node + 'undescores-for-npm/sass/media/*.scss')
         .pipe(gulp.dest(basePaths.dev + '/sass/underscores'));
 
 // _s JS files into /src/js
-    gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
+    gulp.src(basePaths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // _s JS files into /js
-    gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
+    gulp.src(basePaths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
         .pipe(gulp.dest(basePaths.js));
 
 // Copy Popper JS files
