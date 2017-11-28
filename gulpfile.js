@@ -229,12 +229,12 @@ gulp.task('copy-assets', ['clean-source'], function() {
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all JS files
 
-    var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
-       .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
+    //var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
+    //   .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
   
 // Copy all Bootstrap SCSS files
-    gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
-       .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
+    //gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
+    //   .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
 
 ////////////////// End Bootstrap 4 Assets /////////////////////////
 
@@ -245,10 +245,6 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // Copy all Font Awesome SCSS files
     gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
         .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
-
-// Copy jQuery
-    gulp.src(basePaths.node + 'jquery/dist/*.js')
-        .pipe(gulp.dest(basePaths.js));
 
 // _s SCSS files
     gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')

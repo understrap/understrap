@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -47,7 +47,6 @@
     "gulp-sourcemaps": "2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
-    "jquery": "3.2.1",
     "merge2": "^1.2.0",
     "popper.js": "^1.12.6",
     "run-sequence": "^2.2.0",
