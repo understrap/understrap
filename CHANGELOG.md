@@ -1,3 +1,18 @@
+            - ** Release 0.6.9 November 28th 2017 **
+              - Basic guideline adjustments
+              - Update prefixes
+              - Remove automatically db updates by theme
+              - Rename and streamline functions
+              - Changing WooCommerce text domain to "understrap"
+              - Disable theme-settings.php call
+              - Remove jQuery 3.2.1 slim and switch back to WP core jQuery version
+              - Update Bootstrap 4 Beta 2 to commit which fixes jQuery conflict
+
+
+            - ** Release 0.6.8 November 27th 2017 **
+              - Theme check updates
+              - Bugfix release            
+
             - ** Release 0.6.7 November 24th 2017 **
               - Workaround for jQuery inconsistency problem between Bootstrap Beta 2 and WordPress in noConflict mode
               - Adding jQuery slim 3.2.1
