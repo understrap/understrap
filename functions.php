@@ -6,6 +6,11 @@
  */
 
 /**
+ * Initialize theme default settings
+ */
+require get_template_directory() . '/inc/theme-settings.php';
+
+/**
  * Theme setup and custom theme supports.
  */
 require get_template_directory() . '/inc/setup.php';
@@ -16,11 +21,6 @@ require get_template_directory() . '/inc/setup.php';
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 require get_template_directory() . '/inc/widgets.php';
-
-/**
- * Load functions to secure your WP install. 
- */
-// require get_template_directory() . '/inc/security.php';
 
 /**
  * Enqueue scripts and styles.
