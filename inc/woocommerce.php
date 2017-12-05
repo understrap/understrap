@@ -20,7 +20,7 @@ if ( ! function_exists( 'woocommerce_support' ) ) {
 		//add_theme_support( 'wc-product-gallery-slider' );
 
 		// hook in and customizer form fields.
-		add_filter( 'understrap_woocommerce_form_field_args', 'wc_form_field_args', 10, 3 );
+		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
 	}
 }
 /**
