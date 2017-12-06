@@ -16,7 +16,8 @@ Website: [http://understrap.com](http://understrap.com)
 Child Theme Project: [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
 
 ## License
-UnderStrap is released under the terms of the GPL version 2 or (at your option) any later version.
+UnderStrap WordPress Theme, Copyright 2013-2017 Holger Koenemann
+UnderStrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 

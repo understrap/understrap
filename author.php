@@ -63,7 +63,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 						<?php while ( have_posts() ) : the_post(); ?>
 							<li>
 								<a rel="bookmark" href="<?php the_permalink() ?>"
-								   title="Permanent Link: <?php the_title(); ?>">
+								   title="<?php esc_html_e( 'Permanent Link:', 'understrap' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
 								<?php understrap_posted_on(); ?> <?php esc_html_e( 'in',
 								'understrap' ); ?> <?php the_category( '&' ); ?>
