@@ -31,7 +31,7 @@
 			    
 			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 			    
-			    <span class="sr-only"><?php esc_html_e( 'Next', 'understrap' ); ?></span></span>
+			    <span class="sr-only"><?php esc_html_e( 'Next', 'understrap' ); ?></span>
 			  
 			</a>
 
