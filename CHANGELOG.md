@@ -1,3 +1,15 @@
+            - ** Release 0.6.11 December 11th 2017 ** 
+              - Fixing WooCommerce functions
+              - Fixing sanitizing, escaping and prefix´s issues
+              - Fixing customizer settings
+              - Removing duplicate code
+              - Resort theme-settings.php
+              - Cleaning functions.php
+              - Changing licensing infos        
+
+            - ** Release 0.6.10 December 4th 2017 **
+              - Hotfix release
+
             - ** Release 0.6.9 November 28th 2017 **
               - Basic guideline adjustments
               - Update prefixes
