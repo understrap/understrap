@@ -1,3 +1,7 @@
+
+            - ** Release 0.6.12 December 14th 2017 **
+              - Hotfix release
+
             - ** Release 0.6.11 December 11th 2017 ** 
               - Fixing WooCommerce functions
               - Fixing sanitizing, escaping and prefix´s issues
