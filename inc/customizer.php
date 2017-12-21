@@ -57,7 +57,8 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting( 'understrap_container_type', array(
 			'default'           => 'container',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+			//'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+			'sanitize_callback' => 'sanitize_text_field',
 			'capability'        => 'edit_theme_options',
 		) );
 
