@@ -64,7 +64,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'container_type', array(
+				'understrap_container_type', array(
 					'label'       => __( 'Container Width', 'understrap' ),
 					'description' => __( "Choose between Bootstrap's container and container-fluid", 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
