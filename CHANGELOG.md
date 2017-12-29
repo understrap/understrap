@@ -1,3 +1,8 @@
+            - ** Release 0.7.0 December 29th 2017 **
+              - Update to Bootstrap 4 Beta 3
+              - Create rigth-sidebar-check.php - Thx @Vishal-Deshpande
+              - Fixing container type customizer setting - Thx @0dp
+              - Fixing comments.php - Thx @Vishal-Deshpande
 
             - ** Release 0.6.12 December 14th 2017 **
               - Hotfix release
