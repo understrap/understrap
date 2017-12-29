@@ -229,12 +229,13 @@ gulp.task('copy-assets', function() {
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all JS files
 
-    //var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
-    //   .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
+    var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
   
 // Copy all Bootstrap SCSS files
-    //gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
-    //   .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
+    gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
+        .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
+    return stream;
 
 ////////////////// End Bootstrap 4 Assets /////////////////////////
 
