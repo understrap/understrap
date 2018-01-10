@@ -43,6 +43,11 @@
 // Post design
 .entry-footer span { padding-right: 10px; }
 
+//Woocommerce product gallery slider width fix
+figure.woocommerce-product-gallery__wrapper { 
+  max-width: inherit !important; 
+}
+
 // Limit featured image size to 100%
 img.wp-post-image,
 article img,
