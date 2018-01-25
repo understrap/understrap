@@ -247,6 +247,11 @@ gulp.task('copy-assets', function() {
     return stream;
 });
 
+// Deleting the files distributed by the copy-assets task
+gulp.task('clean-vendor-assets', function () {
+  return del([paths.dev+'/js/bootstrap4/**', paths.dev+'/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eof,svg}', paths.dev+'/sass/fontawesome/**', paths.dev+'/sass/underscores/**', paths.dev+'/js/skip-link-focus-fix.js', paths.js+'/**/skip-link-focus-fix.js', paths.js+'/**/popper.min.js', paths.js+'/**/popper.js', (paths.vendor!=''?(paths.js+paths.vendor+'/**'):'')]);
+});
+
 // Run
 // gulp dist
 // Copies the files to the /dist folder for distribution as simple theme
