@@ -16,6 +16,7 @@
     "bower": "./bower_components/",
     "dev": "./src",
     "dist": "./dist",
-    "distprod": "./dist-product"
+    "distprod": "./dist-product",
+    "vendor": ""
   }
 }

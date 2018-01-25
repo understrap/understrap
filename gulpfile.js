@@ -18,6 +18,7 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
 var gulpSequence = require('gulp-sequence');
+var replace = require('gulp-replace');
 
 // Configuration file to keep your code DRY
 var cfg = require('./gulpconfig.json');
@@ -251,6 +252,9 @@ gulp.task('copy-assets', function() {
 // Copies the files to the /dist folder for distribution as simple theme
 gulp.task('dist', ['clean-dist'], function() {
   return gulp.src(['**/*', '!'+paths.bower, '!'+paths.bower+'**', '!'+paths.node, '!'+paths.node+'**', '!'+paths.dev, '!'+paths.dev+'/**', '!'+paths.dist, '!'+paths.dist+'/**', '!'+paths.distprod, '!'+paths.distprod+'/**', '!'+paths.sass, '!'+paths.sass+'/**', '!readme.txt', '!readme.md', '!package.json', '!gulpfile.js', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'])
+    .pipe(replace('/js/jquery.slim.min.js', '/js'+paths.vendor+'/jquery.slim.min.js'))
+    .pipe(replace('/js/popper.min.js', '/js'+paths.vendor+'/popper.min.js'))
+    .pipe(replace('/js/skip-link-focus-fix.js', '/js'+paths.vendor+'/skip-link-focus-fix.js'))
     .pipe(gulp.dest(paths.dist));
 });
 
