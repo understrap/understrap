@@ -30,6 +30,7 @@
     "bootstrap": "4.0.0",
     "browser-sync": "^2.22.0",
     "del": "^3.0.0",
+    "eslint": "^4.16.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.1",
@@ -52,5 +53,8 @@
     "popper.js": "^1.13.0",
     "run-sequence": "^2.2.1",
     "undescores-for-npm": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
   }
 }
