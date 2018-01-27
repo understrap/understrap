@@ -1,1 +1,5 @@
 js/**.min.js
+src/**/*.js
+js/core.js
+js/popper.js
+js/theme.js
