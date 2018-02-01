@@ -23,7 +23,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-				<header class="page-header author-header">
+				<header class="page-header author-header" itemprop="author" itemscope itemtype="http://schema.org/Person">
 
 					<?php
 					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
@@ -40,13 +40,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<?php if ( ! empty( $curauth->user_url ) ) : ?>
 							<dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
 							<dd>
-								<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
+								<a href="<?php echo esc_url( $curauth->user_url ); ?>" rel="me author" itemprop="url"><?php echo esc_html( $curauth->user_url ); ?></a>
 							</dd>
 						<?php endif; ?>
 
 						<?php if ( ! empty( $curauth->user_description ) ) : ?>
 							<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
-							<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
+							<dd itemprop="description"><?php echo esc_html( $curauth->user_description ); ?></dd>
 						<?php endif; ?>
 					</dl>
 
