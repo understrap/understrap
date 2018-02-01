@@ -11,7 +11,7 @@
 
 	<header class="entry-header">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+		<?php the_title( sprintf( '<h2 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ),
 		'</a></h2>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -26,7 +26,7 @@
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+	<div class="entry-content" itemprop="description articleBody">
 
 		<?php
 		the_excerpt();
