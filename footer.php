@@ -21,9 +21,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-12">
 
-				<footer class="site-footer" id="colophon">
+				<footer class="site-footer" id="colophon" role="contentinfo">
 
-					<div class="site-info">
+					<div class="site-info" id="site-publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+
+						<meta itemprop="name" content="<?php echo get_bloginfo( 'name', 'display' ); ?>" />
+						<meta itemprop="url" content="<?php echo home_url( '/' ); ?>" />
+							<?php
+							if ( has_custom_logo() ) {
+								$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
+							?>
+								<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+									<meta itemprop="url" content="<?php echo current( $image ); ?>" />
+									<meta itemprop="width" content="<?php echo next( $image ); ?>" />
+									<meta itemprop="height" content="<?php echo next( $image ); ?>" />
+								</div>
+							<?php } ?>
+
+							<?php echo get_bloginfo( 'name', 'display' ); ?> <?php echo copyright(); ?>
+							<span class="sep"> | </span>
 
 							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
 							/* translators:*/
