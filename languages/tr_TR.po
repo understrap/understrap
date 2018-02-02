@@ -1,0 +1,792 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: understrap\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
+"POT-Creation-Date: 2016-12-20 05:10+0000\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"PO-Revision-Date: 2018-01-31 20:08+0300\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Last-Translator: Tanju Yıldız <ben@tanjuyildiz.com>\n"
+"Language: tr_TR\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc\n"
+
+#: search.php:29
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Arama sonuçları: %s"
+
+#: header.php:34
+msgid "Skip to content"
+msgstr "İçeriğe geç"
+
+#: 404.php:24
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Amanın! O sayfa bulunamadı."
+
+#: 404.php:31
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "Burada bir şey bulamadık. Bir de aramayı denemek ister misiniz?"
+
+#: 404.php:42
+msgid "Most Used Categories"
+msgstr "En Çok Kullanılan Kategoriler"
+
+#. translators: %1$s: smiley
+#: 404.php:62
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Aylık arşivlere aramayı deneyin. %1$s"
+
+#: author.php:34
+msgid "About:"
+msgstr "Hakkında:"
+
+#: author.php:42 inc/custom-comments.php:30
+msgid "Website"
+msgstr "Web sitesi"
+
+#: author.php:49
+msgid "Profile"
+msgstr "Profil"
+
+#: author.php:54
+msgid "Posts by"
+msgstr "Yazıları"
+
+#: author.php:68
+msgid "in"
+msgstr "kategorisindeki"
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; için bir yorum;"
+msgstr[1] "&ldquo;%2$s&rdquo; için %1$s yorum;"
+
+#: comments.php:36 comments.php:59
+msgid "Comment navigation"
+msgstr "Yorum dolaşımı"
+
+#: comments.php:38 comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; Eski Yorumlar"
+
+#: comments.php:42 comments.php:65
+msgid "Newer Comments &rarr;"
+msgstr "Yeni Yorumlar &rarr;"
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "Yorumlar kapatıldı."
+
+#: footer.php:27
+msgid "http://wordpress.org/"
+msgstr "http://tr.wordpress.org/"
+
+#: footer.php:28
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "%s ile güçlendirilmiştir"
+
+#: footer.php:31
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %2$s tarafından %1$s."
+
+#: footer.php:33
+#, php-format
+msgid "Version: %1$s"
+msgstr "Sürüm: %1$s"
+
+#: searchform.php:10 searchform.php:16
+msgid "Search"
+msgstr "Ara"
+
+#: searchform.php:13
+msgid "Search &hellip;"
+msgstr "Ara &hellip;"
+
+#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
+#: loop-templates/content.php:37 loop-templates/content-single.php:31
+#: loop-templates/content-verticalpage.php:28
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: loop-templates/content-page.php:34
+#: loop-templates/content-verticalpage.php:37
+msgid "Edit"
+msgstr "Düzenle"
+
+#: loop-templates/content-none.php:15
+msgid "Nothing Found"
+msgstr "Bulunamadı"
+
+#: loop-templates/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"İlk yazınızı yayınlamaya hazır mısınız? <a href=\\”%1$s\\”>Buradan başlayın</"
+"a>."
+
+#: loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Üzgünüz fakat aradığınız kriterler ile örtüşen sonuç bulunamadı. Lütfen "
+"başka kriterler ile tekrar deneyin."
+
+#: loop-templates/content-none.php:34
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Aradığınız sayfa bulunamadı. Belki arama kutusu aradığınızı bulma konusunda "
+"yardımcı olabilir."
+
+#. Name of the template
+msgid "Blank Page Template"
+msgstr "Boş Sayfa Şablonu"
+
+#. Name of the template
+msgid "Left and Right Sidebar Layout"
+msgstr "Sol ve Sağ Kenar Çubuğu Düzeni"
+
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "Boş Sayfa Şablonu"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "Tam Genişlikli Sayfa"
+
+#. Name of the template
+msgid "Left Sidebar Layout"
+msgstr "Sol Kenar Çubuğu Düzeni"
+
+#. Name of the template
+msgid "Vertical One Page"
+msgstr "Dikey Tek Sayfa"
+
+#: inc/template-tags.php:18
+#, php-format
+msgid " Edited %4$s"
+msgstr " Düzenlendi %4$s"
+
+#: inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Yayın tarihi %s"
+
+#: inc/template-tags.php:34
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "%s tarafından"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:51 inc/template-tags.php:57
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:53
+#, php-format
+msgid "Posted in %1$s"
+msgstr "%1$s Yazıları"
+
+#: inc/template-tags.php:59
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiketler %1$s"
+
+#: inc/template-tags.php:65
+msgid "Leave a comment"
+msgstr "Yorum yapın"
+
+#: inc/template-tags.php:65
+msgid "1 Comment"
+msgstr "1 Yorum"
+
+#: inc/template-tags.php:65
+msgid "% Comments"
+msgstr "% Yorum"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:72
+#, php-format
+msgid "Edit %s"
+msgstr "Düzenle: %s"
+
+#: inc/template-tags.php:143
+msgid "Post navigation"
+msgstr "Yazı dolaşımı"
+
+#: inc/template-tags.php:148
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=“fa fa-angle-left”></i>&nbsp;%title"
+
+#: inc/template-tags.php:151
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=“fa fa-angle-right”></i>"
+
+#: inc/setup.php:51
+msgid "Primary Menu"
+msgstr "Birincil Menü"
+
+#: inc/setup.php:122
+msgid "Read More..."
+msgstr "Daha fazlasını oku…"
+
+#: inc/widgets.php:14
+msgid "Right Sidebar"
+msgstr "Sağ Kenar Çubuğu"
+
+#: inc/widgets.php:24
+msgid "Left Sidebar"
+msgstr "Sol Kenar Çubuğu"
+
+#: inc/widgets.php:34
+msgid "Hero Slider"
+msgstr "Manşet Slider"
+
+#: inc/widgets.php:44
+msgid "Hero Static"
+msgstr "Sabit Manşet"
+
+#: inc/widgets.php:54
+msgid "Footer Full"
+msgstr "Tam Alt Bölüm"
+
+#: inc/custom-comments.php:24
+msgid "Name"
+msgstr "İsim"
+
+#: inc/custom-comments.php:27
+msgid "Email"
+msgstr "E-posta"
+
+#: inc/custom-comments.php:49
+msgctxt "noun"
+msgid "Comment"
+msgstr "Yorum"
+
+#: inc/customizer.php:36
+msgid "Slider Settings"
+msgstr "Slider Ayarları"
+
+#: inc/customizer.php:45
+msgid "Number of slides displaying at once"
+msgstr "Bir kerede gösterilen slayt sayısı"
+
+#: inc/customizer.php:57
+msgid "Slider Time (in ms)"
+msgstr "Geçiş Süresi (milisaniye)"
+
+#: inc/customizer.php:69
+msgid "Loop Slider Content"
+msgstr "Slider İçeriğini Döndür"
+
+#: inc/customizer.php:81
+msgid "Theme Layout Settings"
+msgstr "Tema Düzen Ayarları"
+
+#: inc/customizer.php:83
+msgid "Container width and sidebar defaults"
+msgstr "Kapsayıcı genişliği ve kenar çubuğu varsayılanları"
+
+#: inc/customizer.php:98
+msgid "Container Width"
+msgstr "Kapsayıcı Genişliği"
+
+#: inc/customizer.php:99
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "Bootstrap’ın “container” ve “container-fluid” arasından seçim yapın"
+
+#: inc/customizer.php:104
+msgid "Fixed width container"
+msgstr "Sabit genişlikli kapsayıcı"
+
+#: inc/customizer.php:105
+msgid "Full width container"
+msgstr "Tam genişlikli kapsayıcı"
+
+#: inc/customizer.php:122
+msgid "Sidebar Positioning"
+msgstr "Kenar Çubuğu Konumlandırması"
+
+#: inc/customizer.php:123
+msgid "Set sidebar's position. Can either be: right, left, both or none"
+msgstr ""
+"Kenar çubuğunun konumunu ayarlayın. Sağa, sola, her ikisi ya da hiçbiri "
+"olabilir"
+
+#: inc/customizer.php:129
+msgid "Right sidebar"
+msgstr "Sağ kenar çubuğu"
+
+#: inc/customizer.php:130
+msgid "Left sidebar"
+msgstr "Sol kenar çubuğu"
+
+#: inc/customizer.php:131
+msgid "Left & Right sidebars"
+msgstr "Sol & Sağ kenar çubukları"
+
+#: inc/customizer.php:132
+msgid "No sidebar"
+msgstr "Kenar çubuğu yok"
+
+#: inc/customizer.php:150
+msgid "Posts Index Style"
+msgstr "Yazı Listeleme Stili"
+
+#: inc/customizer.php:151
+msgid "Choose how to display latest posts"
+msgstr "Son yazıların nasıl gösterileceğini seçiniz"
+
+#: inc/customizer.php:156
+msgid "Default"
+msgstr "Varsayılan"
+
+#: inc/customizer.php:157
+msgid "Masonry"
+msgstr "Masonry"
+
+#: inc/customizer.php:158
+msgid "Grid"
+msgstr "Izgara"
+
+#: inc/customizer.php:187
+msgid "Grid Post Columns"
+msgstr "Izgara Sütunları"
+
+#: inc/customizer.php:188
+msgid "Choose how many columns to use"
+msgstr "Kaç sütun kullanacağınızı seçin"
+
+#: woocommerce/cart/proceed-to-checkout-button.php:27
+msgid "Proceed to Checkout"
+msgstr "Ödeme sayfasına git"
+
+#: woocommerce/cart/mini-cart.php:49 woocommerce/cart/cart.php:60
+msgid "Remove this item"
+msgstr "Bu ürünü çıkar"
+
+#: woocommerce/cart/mini-cart.php:72
+msgid "No products in the cart."
+msgstr "Sepetinizde ürün bulunmuyor."
+
+#: woocommerce/cart/mini-cart.php:80
+msgid "Subtotal"
+msgstr "Ara Toplam"
+
+#: woocommerce/cart/mini-cart.php:85
+msgid "View Cart"
+msgstr "Sepeti Görüntüle"
+
+#: woocommerce/cart/mini-cart.php:86
+msgid "Checkout"
+msgstr "Ödeme"
+
+#: woocommerce/cart/cart-empty.php:28
+msgid "Your cart is currently empty."
+msgstr "Sepetiniz şu anda boş."
+
+#: woocommerce/cart/cart-empty.php:36
+msgid "Return To Shop"
+msgstr "Mağazaya geri dön"
+
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:79
+#: woocommerce/checkout/form-pay.php:29
+msgid "Product"
+msgstr "Ürün"
+
+#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:97
+msgid "Price"
+msgstr "Fiyat"
+
+#: woocommerce/cart/cart.php:38 woocommerce/cart/cart.php:103
+msgid "Quantity"
+msgstr "Miktar"
+
+#: woocommerce/cart/cart.php:39 woocommerce/cart/cart.php:120
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Total"
+msgstr "Toplam"
+
+#: woocommerce/cart/cart.php:92
+msgid "Available on backorder"
+msgstr "Stokta kalmasa da sipariş verilebilir"
+
+#: woocommerce/cart/cart.php:138
+msgid "Coupon:"
+msgstr "Kupon:"
+
+#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:36
+msgid "Coupon code"
+msgstr "Kupon kodu"
+
+#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:40
+msgid "Apply Coupon"
+msgstr "Kupon kullan"
+
+#: woocommerce/cart/cart.php:144
+msgid "Update Cart"
+msgstr "Sepeti güncelle"
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Maalesef, bulunduğunuz konum için herhangi bir ödeme yöntemi "
+"bulunmamaktadır. Yardıma ihtiyaç duyuyor veya alternatif düzenlemeler yapmak "
+"istiyorsanız lütfen bizimle irtibata geçin."
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+"Mevcut ödeme yöntemlerini görmek için yukarıdaki bilgilerinizi doldurunuz."
+
+#: woocommerce/checkout/payment.php:42
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+"Web tarayıcınız JavaScripti desteklemiyor yada tarayıcınızın bu özelliği "
+"kapalı. Lütfen, sipariş vermeden önce <em> Toplamları Güncelle </em> "
+"butonuna tıklayın. Bunu yapmazsanız yukarıda görülen sipariş toplamından "
+"farklı bir ücret ödemeniz söz konusu olabilir."
+
+#: woocommerce/checkout/payment.php:43
+msgid "Update totals"
+msgstr "Toplamları güncelle"
+
+#: woocommerce/checkout/form-pay.php:30
+msgid "Qty"
+msgstr "Miktar"
+
+#: woocommerce/checkout/form-pay.php:31
+msgid "Totals"
+msgstr "Toplamlar"
+
+#: woocommerce/checkout/form-pay.php:79
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Maalesef, bulunduğunuz konum için herhangi bir ödeme yöntemi "
+"bulunmamaktadır. Yardıma ihtiyaç duyuyor veya alternatif anlaşmalar yapmak "
+"istiyorsanız lütfen bizimle irtibata geçin."
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Have a coupon?"
+msgstr "Kuponunuz var mı?"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Click here to enter your code"
+msgstr "Kupon kodunuzu girmek için buraya tıklayın"
+
+#: woocommerce/global/form-login.php:35
+#: woocommerce/myaccount/form-lost-password.php:30
+msgid "Username or email"
+msgstr "Kullanıcı adı veya e-posta"
+
+#: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:48
+#: woocommerce/myaccount/form-login.php:98
+msgid "Password"
+msgstr "Şifre"
+
+#: woocommerce/global/form-login.php:48 woocommerce/myaccount/form-login.php:37
+#: woocommerce/myaccount/form-login.php:56
+msgid "Login"
+msgstr "Giriş Yap"
+
+#: woocommerce/global/form-login.php:51 woocommerce/myaccount/form-login.php:58
+msgid "Remember me"
+msgstr "Beni hatırla"
+
+#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:62
+msgid "Lost your password?"
+msgstr "Şifrenizi mi unuttunuz?"
+
+#: woocommerce/global/quantity-input.php:24
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "Miktar"
+
+#: woocommerce/myaccount/form-lost-password.php:27
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"Şifrenizi mi unuttunuz? Lütfen kullanıcı adınızı veya e-posta adresinizi "
+"girin. Yeni bir şifre oluşturmanız için e-posta adresinize bir bağlantı "
+"gönderilecektir."
+
+#: woocommerce/myaccount/form-lost-password.php:40
+msgid "Reset Password"
+msgstr "Şifre Sıfırlama"
+
+#: woocommerce/myaccount/form-login.php:44
+msgid "Username or email address"
+msgstr "Kullanıcı adı veya e-posta adresi"
+
+#: woocommerce/myaccount/form-login.php:75
+#: woocommerce/myaccount/form-login.php:112
+msgid "Register"
+msgstr "Üye Ol"
+
+#: woocommerce/myaccount/form-login.php:84
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+#: woocommerce/myaccount/form-login.php:91
+#: woocommerce/myaccount/form-edit-account.php:40
+msgid "Email address"
+msgstr "E-posta adresi"
+
+#: woocommerce/myaccount/form-login.php:105
+msgid "Anti-spam"
+msgstr "Anti-spam"
+
+#: woocommerce/myaccount/form-edit-account.php:30
+msgid "First name"
+msgstr "Ad"
+
+#: woocommerce/myaccount/form-edit-account.php:34
+msgid "Last name"
+msgstr "Soyad"
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid "Password Change"
+msgstr "Şifre Değiştirme"
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr "Mevcut şifre (değişmeden bırakmak için boş bırakın)"
+
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "New Password (leave blank to leave unchanged)"
+msgstr "Yeni şifre (değişmeden bırakmak için boş bırakın)"
+
+#: woocommerce/myaccount/form-edit-account.php:56
+msgid "Confirm New Password"
+msgstr "Yeni Şifreyi Onayla"
+
+#: woocommerce/myaccount/form-edit-account.php:66
+msgid "Save changes"
+msgstr "Değişiklikleri kaydet"
+
+#: woocommerce/myaccount/my-orders.php:13
+msgid "Order"
+msgstr "Sipariş"
+
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Date"
+msgstr "Tarih"
+
+#: woocommerce/myaccount/my-orders.php:15
+msgid "Status"
+msgstr "Durum"
+
+#: woocommerce/myaccount/my-orders.php:30
+msgid "Recent Orders"
+msgstr "Güncel Siparişler"
+
+#: woocommerce/myaccount/my-orders.php:55 woocommerce/myaccount/orders.php:51
+msgctxt "hash before order number"
+msgid "#"
+msgstr "#"
+
+#: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:61
+#, php-format
+msgid "%s for %s item"
+msgid_plural "%s for %s items"
+msgstr[0] "%s için %s öge"
+msgstr[1] "%s için %s öge"
+
+#: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:68
+msgid "Pay"
+msgstr "Öde"
+
+#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:72
+msgid "View"
+msgstr "Görüntüle"
+
+#: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:76
+msgid "Cancel"
+msgstr "Vazgeç"
+
+#: woocommerce/myaccount/orders.php:107
+msgid "Previous"
+msgstr "Önceki"
+
+#: woocommerce/myaccount/orders.php:111
+msgid "Next"
+msgstr "İleri"
+
+#: woocommerce/myaccount/orders.php:119 woocommerce/myaccount/downloads.php:98
+msgid "Go Shop"
+msgstr "Haydi Alışverişe"
+
+#: woocommerce/myaccount/orders.php:121
+msgid "No order has been made yet."
+msgstr "Henüz bir sipariş verilmedi."
+
+#: woocommerce/myaccount/form-edit-address.php:23
+msgid "Billing Address"
+msgstr "Fatura Adresi"
+
+#: woocommerce/myaccount/form-edit-address.php:23
+msgid "Shipping Address"
+msgstr "Gönderim Adresi"
+
+#: woocommerce/myaccount/form-edit-address.php:46
+msgid "Save Address"
+msgstr "Adresi Kaydet"
+
+#: woocommerce/myaccount/form-reset-password.php:27
+msgid "Enter a new password below."
+msgstr "Aşağıya yeni bir şifre girin."
+
+#: woocommerce/myaccount/form-reset-password.php:30
+msgid "New password"
+msgstr "Yeni şifre"
+
+#: woocommerce/myaccount/form-reset-password.php:34
+msgid "Re-enter new password"
+msgstr "Yeni şifrenizi tekrar giriniz"
+
+#: woocommerce/myaccount/form-reset-password.php:47
+msgid "Save"
+msgstr "Kaydet"
+
+#: woocommerce/myaccount/downloads.php:59
+msgid "&infin;"
+msgstr "&infin;"
+
+#: woocommerce/myaccount/downloads.php:67
+msgid "Never"
+msgstr "Asla"
+
+#: woocommerce/myaccount/downloads.php:75
+msgid "Download"
+msgstr "İndirme"
+
+#: woocommerce/myaccount/downloads.php:100
+msgid "No downloads available yet."
+msgstr "Henüz indirilecek bir öğe yok."
+
+#: woocommerce/single-product/review-rating.php:28
+#, php-format
+msgid "Rated %d out of 5"
+msgstr "5 üzerinden %d oy aldı"
+
+#: woocommerce/single-product/review-rating.php:29
+msgid "out of 5"
+msgstr "5 üzerinden"
+
+#: woocommerce/single-product/rating.php:36
+#, php-format
+msgid "Rated %s out of 5"
+msgstr "5 üzerinden %s oy aldı"
+
+#: woocommerce/single-product/rating.php:38
+#, php-format
+msgid "out of %s5%s"
+msgstr "5 üzerinden %s %s"
+
+#: woocommerce/single-product/rating.php:39
+#, php-format
+msgid "based on %s customer rating"
+msgid_plural "based on %s customer ratings"
+msgstr[0] "%s müşteri yorumu dayalı"
+msgstr[1] "%s müşteri yorumu dayalı"
+
+#: woocommerce/single-product/rating.php:42
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] "%s müşteri yorumu"
+msgstr[1] "%s müşteri yorumu"
+
+#. Name of the theme
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as a parent theme. It is up to you. Including Font Awesome "
+"support, built-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
+msgstr ""
+"Automattic’in _s teması ve Bootstrap 4’ün birleşimi. Bir sonraki tema "
+"projeniz ve WordPress web siteniz için sağlam başlangıç noktası olarak "
+"hazırlandı. Başlangıç teması veya ana tema olarak kullanın. Karar senin. "
+"Basit web siteleri için ihtiyaç duyacağınız Font Awesome desteği, yerleşik "
+"bileşen, slider ve daha fazlasını içerir. ÖNEMLİ: Bu kurulum dosyası, "
+"geliştirici bağımlılıklarının tamamını içermez. .zip dosyasını indirin, "
+"klasöre çıkartın ve klasör içerisinde “npm install” ve “gulp copy-assets” "
+"komutlarını çalıştırın."
+
+#. Theme URI of the theme
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. Author of the theme
+msgid "Holger Koenemann"
+msgstr "Holger Koenemann"
+
+#. Author URI of the theme
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"
