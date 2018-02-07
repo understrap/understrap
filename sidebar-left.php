@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package understrap
+ * @package befluid
  */
 
 if ( ! is_active_sidebar( 'left-sidebar' ) ) {
@@ -10,7 +10,7 @@ if ( ! is_active_sidebar( 'left-sidebar' ) ) {
 }
 
 // when both sidebars turned on reduce col size to 3 from 4.
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+$sidebar_pos = get_theme_mod( 'befluid_sidebar_position' );
 ?>
 
 <?php if ( 'both' === $sidebar_pos ) : ?>

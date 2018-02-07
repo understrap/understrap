@@ -1,7 +1,7 @@
 <?php
 /**
  * Loop Add to Cart
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ * Updated for Befluid to maintain Woocommerce 3.0.3 compatability.
  * This template can be overridden by copying it to yourtheme/woocommerce/loop/add-to-cart.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you

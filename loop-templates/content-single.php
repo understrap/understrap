@@ -2,7 +2,7 @@
 /**
  * Single post partial template.
  *
- * @package understrap
+ * @package befluid
  */
 
 ?>
@@ -14,7 +14,7 @@
 
 		<div class="entry-meta">
 
-			<?php understrap_posted_on(); ?>
+			<?php befluid_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 
@@ -28,7 +28,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'befluid' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -37,7 +37,7 @@
 
 	<footer class="entry-footer">
 
-		<?php understrap_entry_footer(); ?>
+		<?php befluid_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

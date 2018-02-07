@@ -1,5 +1,5 @@
 {
-  "name": "understrap",
+  "name": "befluid",
   "version": "0.8.0",
   "description": "WordPress Theme framework",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holger1411/understrap.git"
+    "url": "https://github.com/holger1411/befluid.git"
   },
   "keywords": [
     "wordpress",
@@ -23,9 +23,9 @@
   "author": "Holger Koenemann",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/holger1411/understrap/issues"
+    "url": "https://github.com/holger1411/befluid/issues"
   },
-  "homepage": "https://understrap.com",
+  "homepage": "https://befluid.com",
   "dependencies": {
     "bootstrap": "4.0.0",
     "browser-sync": "^2.22.0",

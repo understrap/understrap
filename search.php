@@ -2,12 +2,12 @@
 /**
  * The template for displaying search results pages.
  *
- * @package understrap
+ * @package befluid
  */
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'befluid_container_type' );
 
 ?>
 
@@ -28,7 +28,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						
 							<h1 class="page-title"><?php printf(
 							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'understrap' ),
+							 esc_html__( 'Search Results for: %s', 'befluid' ),
 								'<span>' . get_search_query() . '</span>' ); ?></h1>
 
 					</header><!-- .page-header -->
@@ -56,7 +56,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php befluid_pagination(); ?>
 
 		</div><!-- #primary -->
 
