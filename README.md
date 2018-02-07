@@ -1,4 +1,4 @@
-# Be Fluid WordPress Theme
+# BeFluid WordPress Theme
 
 Website: [#](coming soon)
 
@@ -6,8 +6,8 @@ Website: [#](coming soon)
 
 
 ## License
-Be Fluid WordPress Theme, Copyright 2018 Andrew Torres
-Be Fluid is distributed under the terms of the GNU GPL version 2
+BeFluid WordPress Theme, Copyright 2018 Andrew Torres
+BeFluid is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
