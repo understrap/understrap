@@ -1,8 +1,8 @@
 <?php
 /**
- * Understrap functions and definitions
+ * Befluid functions and definitions
  *
- * @package understrap
+ * @package befluid
  */
 
 /**
@@ -14,7 +14,10 @@ require get_template_directory() . '/inc/theme-settings.php';
  * Theme setup and custom theme supports.
  */
 require get_template_directory() . '/inc/setup.php';
-
+/**
+ * Register widget area.
+ */
+require get_template_directory() . '/inc/unset_default_widgets.php';
 /**
  * Register widget area.
  */
@@ -58,7 +61,13 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load custom WordPress nav walker.
  */
-require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
+ require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
+
+ /**
+ * Load custom WordPress widget nav walker.
+ *
+ *require get_template_directory() . '/inc/bootstrap-wp-widgetnavwalker.php';
+*/
 
 /**
  * Load WooCommerce functions.

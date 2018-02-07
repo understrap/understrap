@@ -2,13 +2,13 @@
 /**
  * Left sidebar check.
  *
- * @package understrap
+ * @package befluid
  */
 
 ?>
 
 <?php
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+$sidebar_pos = get_theme_mod( 'befluid_sidebar_position' );
 ?>
 
 <?php if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>

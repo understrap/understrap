@@ -2,7 +2,7 @@
 /**
  * Pagination layout.
  *
- * @package understrap
+ * @package befluid
  */
 
 /**
@@ -10,8 +10,8 @@
  * Credits to http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
  */
 
-if ( ! function_exists( 'understrap_pagination' ) ) :
-function understrap_pagination() {
+if ( ! function_exists( 'befluid_pagination' ) ) :
+function befluid_pagination() {
 	if ( is_singular() ) {
 		return;
 	}

@@ -1,7 +1,7 @@
 {
-  "name": "understrap",
+  "name": "befluid",
   "version": "0.8.0",
-  "homepage": "http://understrap.com",
+  "homepage": "http://befluid.com",
   "authors": [
     "Holger Koenemann <office@holgerkoenemann.de>"
   ],
@@ -25,7 +25,7 @@
   ],
   "dependencies": {
   },
-  "_source": "https://github.com/holger1411/understrap.git",
+  "_source": "https://github.com/holger1411/befluid.git",
   "_target": "~0.8.0",
-  "_originalSource": "understrap"
+  "_originalSource": "befluid"
 }

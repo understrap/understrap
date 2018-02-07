@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if (! class_exists ( 'befluid_WP_Bootstrap_Navwalker' )) :
+if (! class_exists ( 'befluid_nav_widget' )) :
 
 /**
  * Class WP_Bootstrap_Navwalker
@@ -23,7 +23,7 @@ if (! class_exists ( 'befluid_WP_Bootstrap_Navwalker' )) :
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
-class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+class befluid_nav_widget extends Walker_Nav_Menu {
 	/**
 	 * The starting level of the menu.
 	 *
@@ -36,8 +36,11 @@ class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul class=\" dropdown-menu\" role=\"menu\">\n";
+		$output .= "";
 	}
+  public function end_lvl( &$output, $depth = 0, $args = array() ){
+    $output .= '';
+  }
 
 	/**
 	 * Open element.
@@ -72,16 +75,16 @@ class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 		} else {
 			$class_names = $value = '';
 			$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
-			$classes[]   = 'nav-item menu-item-' . $item->ID;
+			$classes[]   = 'list-group-item list-group-item-action nav-item menu-item-' . $item->ID;
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 			/*
 			if ( $args->has_children )
 			  $class_names .= ' dropdown';
 			*/
 			if ( $args->has_children && $depth === 0 ) {
-				$class_names .= ' dropdown';
+				$class_names .= ' ';
 			} elseif ( $args->has_children && $depth > 0 ) {
-				$class_names .= ' dropdown-submenu';
+				$class_names .= ' ';
 			}
 			if ( in_array( 'current-menu-item', $classes ) ) {
 				$class_names .= ' active';
@@ -99,7 +102,8 @@ class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 			$id          = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 			$id          = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-			$output .= $indent . '<li' . $id . $value . $class_names . '>';
+			//$output .= $indent . '<li' . $id . $value . $class_names . '>';
+      $output .= '';
 			$atts           = array();
 			if ( empty( $item->attr_title ) ) { $atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : ''; } else { $atts['title'] = $item->attr_title; }
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
@@ -108,11 +112,10 @@ class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 			if ( $args->has_children && $depth === 0 ) {
 				$atts['href']        = '#';
-				$atts['data-toggle'] = 'dropdown';
-				$atts['class']       = 'nav-link dropdown-toggle';
+				$atts['class']       = 'disabled';
 			} else {
 				$atts['href']  = ! empty( $item->url ) ? $item->url : '';
-				$atts['class'] = 'nav-link';
+				$atts['class'] = '';
 			}
 			$atts       = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 			$attributes = '';
@@ -125,9 +128,9 @@ class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			$item_output = $args->before;
 			// Font Awesome icons
 			if ( ! empty( $icon ) ) {
-				$item_output .= '<a' . $attributes . '><span class="fa ' . esc_attr( $icon ) . '"></span>&nbsp;';
+				$item_output .= '<a ' . $id . $value . $class_names . $attributes . '><span class="fa ' . esc_attr( $icon ) . '"></span>&nbsp;';
 			} else {
-				$item_output .= '<a' . $attributes . '>';
+				$item_output .= '<a '. $id . $value . $class_names . $attributes . '>';
 			}
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title,
 					$item->ID ) . $args->link_after;
@@ -136,6 +139,16 @@ class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 	}
+  public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+    if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+        $t = '';
+        $n = '';
+    } else {
+        $t = "\t";
+        $n = "\n";
+    }
+    $output .= "</a></li>{$n}";
+}
 
 	/**
 	 * Traverse elements to create list from elements.
@@ -214,3 +227,13 @@ class befluid_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 }
 
 endif; /* End if class exists */
+
+add_filter('widget_nav_menu_args', 'my_args'); //for menus in widgets
+   function my_args($args) { //$args is only argument needed to add custom walker
+      return array_merge( $args, array(
+         'walker' => new befluid_nav_widget(),
+         'items_wrap'=>'<div id="%1$s" class="%2$s">%3$s</div>',
+         'menu_class'=>'list-group',
+      ) );
+   }
+?>

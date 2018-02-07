@@ -1,30 +1,30 @@
 <?php
 /**
- * Understrap modify editor
+ * Befluid modify editor
  *
- * @package understrap
+ * @package befluid
  */
 
 /**
  * Registers an editor stylesheet for the theme.
  */
-function understrap_wpdocs_theme_add_editor_styles() {
+function befluid_wpdocs_theme_add_editor_styles() {
   add_editor_style( 'css/custom-editor-style.css' );
 }
-add_action( 'admin_init', 'understrap_wpdocs_theme_add_editor_styles' );
+add_action( 'admin_init', 'befluid_wpdocs_theme_add_editor_styles' );
 
 // Add TinyMCE style formats.
-add_filter( 'mce_buttons_2', 'understrap_tiny_mce_style_formats' );
+add_filter( 'mce_buttons_2', 'befluid_tiny_mce_style_formats' );
 
-function understrap_tiny_mce_style_formats( $styles ) {
+function befluid_tiny_mce_style_formats( $styles ) {
 
     array_unshift( $styles, 'styleselect' );
     return $styles;
 }
 
-add_filter( 'tiny_mce_before_init', 'understrap_tiny_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'befluid_tiny_mce_before_init' );
 
-function understrap_tiny_mce_before_init( $settings ) {
+function befluid_tiny_mce_before_init( $settings ) {
 
   $style_formats = array(
       array(

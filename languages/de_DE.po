@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: befluid\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2017-01-06 07:53+0000\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -406,7 +406,7 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install file."
 " Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"assets\" inside the extracted /befluid folder."
 msgstr ""
 
 #: search.php:29
@@ -764,8 +764,8 @@ msgid "UnderStrap"
 msgstr "UnderStrap"
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://befluid.com"
+msgstr "http://befluid.com"
 
 #. Author of the theme
 msgid "Holger Koenemann"

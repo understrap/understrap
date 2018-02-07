@@ -1,7 +1,7 @@
 # Loco Gettext template
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: befluid\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-11-18 14:37+0100\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
@@ -287,8 +287,8 @@ msgid "UnderStrap"
 msgstr "UnderStrap"
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://befluid.com"
+msgstr "http://befluid.com"
 
 #. Description of the theme
 msgid ""

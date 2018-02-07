@@ -4,10 +4,10 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package understrap
+ * @package befluid
  */
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'befluid_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
-		'understrap' ); ?></a>
+		'befluid' ); ?></a>
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
@@ -70,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
-						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+						'walker'          => new befluid_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 			<?php if ( 'container' == $container ) : ?>
