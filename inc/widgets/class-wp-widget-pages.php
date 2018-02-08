@@ -71,6 +71,7 @@ class BS_Widget_Pages extends WP_Widget {
 		 * @param array $args     An array of arguments to retrieve the pages list.
 		 * @param array $instance Array of settings for the current widget.
 		 */
+		 $walker = new BS_Walker_Page();
 		$out = bs_list_pages(
 			apply_filters(
 				'widget_pages_args', array(
@@ -78,6 +79,7 @@ class BS_Widget_Pages extends WP_Widget {
 					'echo'        => 0,
 					'sort_column' => $sortby,
 					'exclude'     => $exclude,
+					'walker'			=>$walker,
 				), $instance
 			)
 		);
@@ -88,9 +90,9 @@ class BS_Widget_Pages extends WP_Widget {
 				echo $args['before_title'] . $title . $args['after_title'];
 			}
 		?>
-		<ul>
+		<div class="list-group list-group-flush">
 			<?php echo $out; ?>
-		</ul>
+		</div>
 		<?php
 			echo $args['after_widget'];
 		}

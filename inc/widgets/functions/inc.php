@@ -6,5 +6,4 @@ require get_template_directory() . '/inc/widgets/functions/class-walker-category
 require get_template_directory() . '/inc/widgets/functions/pages.php';
 require get_template_directory() . '/inc/widgets/functions/class-walker-page.php';
 
-
- ?>
+ 

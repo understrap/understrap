@@ -31,7 +31,7 @@ function bs_list_pages( $args = '' ) {
 		'link_before'  => '',
 		'link_after'   => '',
 		'item_spacing' => 'preserve',
-		'walker'       => '',
+		'walker'       => 'BS_Walker_Page',
 	);
 
 	$r = wp_parse_args( $args, $defaults );
