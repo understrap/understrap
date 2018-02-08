@@ -14,7 +14,7 @@
  *
  * @see Walker
  */
-class BS_Walker_Page extends Walker {
+class Walker_Page extends Walker {
 
 	/**
 	 * What the class handles.
@@ -116,7 +116,7 @@ class BS_Walker_Page extends Walker {
 			$indent = '';
 		}
 
-		$css_class = array( 'list-group-item', 'page_item', 'page-item-' . $page->ID );
+		$css_class = array( 'page_item', 'page-item-' . $page->ID );
 
 		if ( isset( $args['pages_with_children'][ $page->ID ] ) ) {
 			$css_class[] = 'page_item_has_children';
@@ -189,7 +189,7 @@ class BS_Walker_Page extends Walker {
 		}
 
 		$output .= $indent . sprintf(
-			'<li class="%s">+<a%s>%s%s%s</a>',
+			'<li class="%s"><a%s>%s%s%s</a>',
 			$css_classes,
 			$attributes,
 			$args['link_before'],
