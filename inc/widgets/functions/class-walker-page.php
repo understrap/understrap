@@ -14,7 +14,7 @@
  *
  * @see Walker
  */
-class Walker_Page extends Walker {
+class BS_Walker_Page extends Walker {
 
 	/**
 	 * What the class handles.
