@@ -109,7 +109,7 @@ class BS_Widget_Categories extends WP_Widget {
 <?php
 		} else {
 ?>
-		<ul>
+
 <?php
 		$cat_args['title_li'] = '';
 
@@ -124,7 +124,7 @@ class BS_Widget_Categories extends WP_Widget {
 		 */
 		bs_list_categories( apply_filters( 'widget_categories_args', $cat_args, $instance ) );
 ?>
-		</ul>
+		
 <?php
 		}
 

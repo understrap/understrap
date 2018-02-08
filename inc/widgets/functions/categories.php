@@ -1,4 +1,5 @@
 <?php
+
 /* Category list */
 function bs_list_categories( $args = '' ) {
  $defaults = array(
@@ -119,7 +120,7 @@ function bs_list_categories( $args = '' ) {
    } else {
      $depth = -1; // Flat.
    }
-   $output .= walk_category_tree( $categories, $depth, $r );
+   $output .= bs_walk_category_tree( $categories, $depth, $r );
  }
 
  if ( $r['title_li'] && 'list' == $r['style'] && ( ! empty( $categories ) || ! $r['hide_title_if_empty'] ) ) {
@@ -142,4 +143,24 @@ function bs_list_categories( $args = '' ) {
    return $html;
  }
 }
+
+/**
+ * Retrieve HTML list content for category list.
+ *
+ * @uses Walker_Category to create HTML list content.
+ * @since 2.1.0
+ * @see Walker_Category::walk() for parameters and return description.
+ * @return string
+ */
+function bs_walk_category_tree() {
+	$args = func_get_args();
+	// the user's options are the third parameter
+	if ( empty( $args[2]['walker'] ) || ! ( $args[2]['walker'] instanceof Walker ) ) {
+		$walker = new BS_Walker_Category;
+	} else {
+		$walker = $args[2]['walker'];
+	}
+	return call_user_func_array( array( $walker, 'walk' ), $args );
+}
+
 ?>
