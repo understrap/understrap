@@ -123,3 +123,6 @@ if ( ! function_exists( 'befluid_all_excerpts_get_more_link' ) ) {
 	}
 }
 add_filter( 'wp_trim_excerpt', 'befluid_all_excerpts_get_more_link' );
+
+// Widgets
+add_action( 'init', 'bs_widgets_init', 1 );

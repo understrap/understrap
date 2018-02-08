@@ -21,6 +21,16 @@ require get_template_directory() . '/inc/unset_default_widgets.php';
 /**
  * Register widget area.
  */
+require get_template_directory() . '/inc/widgets/functions/inc.php';
+
+/**
+ * Register widget area.
+ */
+require get_template_directory() . '/inc/bootstrap_widgets.php';
+
+/**
+ * Register widget area.
+ */
 require get_template_directory() . '/inc/widgets.php';
 
 /**
@@ -62,12 +72,6 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load custom WordPress nav walker.
  */
  require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
-
- /**
- * Load custom WordPress widget nav walker.
- *
- *require get_template_directory() . '/inc/bootstrap-wp-widgetnavwalker.php';
-*/
 
 /**
  * Load WooCommerce functions.

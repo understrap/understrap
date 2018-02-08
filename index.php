@@ -36,7 +36,7 @@ $container   = get_theme_mod( 'befluid_container_type' );
 					<?php /* Start the Loop */ ?>
 
 					<?php while ( have_posts() ) : the_post(); ?>
-						<div class="card my-4">
+						<div class="card mb-3">
 							<?php
 
 							/*
