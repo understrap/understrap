@@ -94,7 +94,7 @@ class BS_Widget_RSS extends WP_Widget {
 		if ( $title ) {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
-		wp_widget_rss_output( $rss, $instance );
+		bs_wp_widget_rss_output( $rss, $instance );
 		echo $args['after_widget'];
 
 		if ( ! is_wp_error( $rss ) ) {

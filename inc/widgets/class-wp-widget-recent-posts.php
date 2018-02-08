@@ -88,20 +88,22 @@ class BS_Widget_Recent_Posts extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 		?>
-		<ul class="list-group list-group-flush">
+		<div class="list-group list-group-flush">
 			<?php foreach ( $r->posts as $recent_post ) : ?>
 				<?php
 				$post_title = get_the_title( $recent_post->ID );
 				$title      = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)' );
 				?>
-				<li class="list-group-item">
-					<a href="<?php the_permalink( $recent_post->ID ); ?>"><?php echo $title; ?></a>
+				<a class="list-group-item list-group-item-action flex-column align-items-start" href="<?php the_permalink( $recent_post->ID ); ?>">
+					<div class="w-100">
+					<h6 class="mb-1"><?php echo $title; ?></h6>
 					<?php if ( $show_date ) : ?>
-						<span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
+						<small><?php echo get_the_date( '', $recent_post->ID ); ?></small>
 					<?php endif; ?>
-				</li>
+					</div>
+					</a>
 			<?php endforeach; ?>
-		</ul>
+		</div>
 		<?php
 		echo $args['after_widget'];
 	}
