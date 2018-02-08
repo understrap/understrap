@@ -71,7 +71,7 @@ class BS_Widget_Pages extends WP_Widget {
 		 * @param array $args     An array of arguments to retrieve the pages list.
 		 * @param array $instance Array of settings for the current widget.
 		 */
-		$out = wp_list_pages(
+		$out = bs_list_pages(
 			apply_filters(
 				'widget_pages_args', array(
 					'title_li'    => '',
