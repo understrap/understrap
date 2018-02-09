@@ -49,7 +49,7 @@
 
 	</div><!-- .entry-content -->
 
-	<footer class="card-footer entry-footer">
+	<footer class="card-footer small entry-footer">
 
 		<?php befluid_entry_footer(); ?>
 
