@@ -23,20 +23,21 @@ $container = get_theme_mod( 'befluid_container_type' );
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+					<div class="site-info text-center">
 
 							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','befluid' ) ); ?>"><?php printf(
 							/* translators:*/
 							esc_html__( 'Proudly powered by %s', 'befluid' ),'WordPress' ); ?></a>
 								<span class="sep"> | </span>
+							<a href="http://leanoperation.github.io/BeFluid/">
+								<?php printf( // WPCS: XSS ok.
+								/* translators:*/
+									esc_html__( 'Theme: %1$s by %2$s.', 'befluid' ), $the_theme->get( 'Name' ),  'Andrew Torres' ); ?>
 
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'befluid' ), $the_theme->get( 'Name' ),  'Andrew Torres' ); ?> 
-
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'befluid' ), $the_theme->get( 'Version' ) ); ?>)
+								(<?php printf( // WPCS: XSS ok.
+								/* translators:*/
+									esc_html__( 'Version: %1$s', 'befluid' ), $the_theme->get( 'Version' ) ); ?>)
+							</a>
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
