@@ -110,14 +110,14 @@ class BS_Widget_Recent_Comments extends WP_Widget {
 			$output .= $args['before_title'] . $title . $args['after_title'];
 		}
 
-		$output .= '<ul id="recentcomments">';
+		$output .= '<ul id="recentcomments" class="list-group list-group-flush">';
 		if ( is_array( $comments ) && $comments ) {
 			// Prime cache for associated posts. (Prime post term cache if we need it for permalinks.)
 			$post_ids = array_unique( wp_list_pluck( $comments, 'comment_post_ID' ) );
 			_prime_post_caches( $post_ids, strpos( get_option( 'permalink_structure' ), '%category%' ), false );
 
 			foreach ( (array) $comments as $comment ) {
-				$output .= '<li class="recentcomments">';
+				$output .= '<li class="recentcomments list-group-item">';
 				/* translators: comments widget: 1: comment author, 2: post link */
 				$output .= sprintf(
 					_x( '%1$s on %2$s', 'widgets' ),
