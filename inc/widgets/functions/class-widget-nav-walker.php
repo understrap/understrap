@@ -233,7 +233,7 @@ add_filter('widget_nav_menu_args', 'my_args'); //for menus in widgets
       return array_merge( $args, array(
          'walker' => new My_Custom_Walker(),
          'items_wrap'=>'<div id="%1$s" class="%2$s">%3$s</div>',
-         'menu_class'=>'list-group',
+         'menu_class'=>'list-group list-group-flush',
       ) );
    }
 ?>

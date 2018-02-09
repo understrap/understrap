@@ -66,7 +66,7 @@ class BS_Widget_Tag_Cloud extends WP_Widget {
 		 * @param array $args     Args used for the tag cloud widget.
 		 * @param array $instance Array of settings for the current widget.
 		 */
-		$tag_cloud = wp_tag_cloud(
+		$tag_cloud = bs_wp_tag_cloud(
 			apply_filters(
 				'widget_tag_cloud_args', array(
 					'taxonomy'   => $current_taxonomy,
@@ -88,7 +88,7 @@ class BS_Widget_Tag_Cloud extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
-		echo '<div class="tagcloud">';
+		echo '<div class="tagcloud card-body">';
 
 		echo $tag_cloud;
 
