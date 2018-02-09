@@ -108,7 +108,7 @@ class BS_Walker_Category extends Walker {
 			return;
 		}
 
-		$link = '<a class="list-group-item list-group-item-action" href="' . esc_url( get_term_link( $category ) ) . '" ';
+		$link = '<a class="list-group-item list-group-item-action justify-content-between d-flex align-items-center" href="' . esc_url( get_term_link( $category ) ) . '" ';
 		if ( $args['use_desc_for_title'] && ! empty( $category->description ) ) {
 			/**
 			 * Filters the category description for display.
@@ -208,7 +208,7 @@ class BS_Walker_Category extends Walker {
 			 */
 			$css_classes = implode( ' ', apply_filters( 'category_css_class', $css_classes, $category, $depth, $args ) );
 
-			$output .= 'class="list-group-item list-group-item-action ' . $css_classes . '"';
+			$output .= 'class="list-group-item list-group-item-action justify-content-between d-flex align-items-center' . $css_classes . '"';
 			$output .= ">$link\n";
 		} elseif ( isset( $args['separator'] ) ) {
 			$output .= "\t$link" . $args['separator'] . "\n";

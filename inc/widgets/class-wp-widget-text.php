@@ -320,7 +320,7 @@ class BS_Widget_Text extends WP_Widget {
 		$text = preg_replace_callback( '#<(video|iframe|object|embed)\s[^>]*>#i', array( $this, 'inject_video_max_width_style' ), $text );
 
 		?>
-			<div class="textwidget"><?php echo $text; ?></div>
+			<div class="textwidget card-body"><?php echo $text; ?></div>
 		<?php
 		echo $args['after_widget'];
 	}

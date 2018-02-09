@@ -41,9 +41,9 @@ function bs_get_archives_link( $url, $text, $format = 'html', $before = '', $aft
 	} elseif ( 'option' == $format ) {
 		$link_html = "\t<option value='$url'>$before $text $after</option>\n";
 	} elseif ( 'html' == $format ) {
-		$link_html = "\t<li class=\"list-group-item\">$before<a href='$url'>$text</a>$after</li>\n";
+		$link_html = "\t<li class=\"list-group-item list-group-item-action justify-content-between d-flex align-items-center\">$before<a href='$url'>$text</a>$after</li>\n";
 	} else { // custom
-		$link_html = "\t$before<a class=\"list-group-item list-group-item-action\" href='$url'>$text</a>$after\n";
+		$link_html = "\t$before<a class=\"list-group-item list-group-item-action list-group-item list-group-item-action justify-content-between d-flex align-items-center\" href='$url'>$text</a>$after\n";
 	}
 
 	/**
