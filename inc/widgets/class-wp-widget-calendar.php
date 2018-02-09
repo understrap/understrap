@@ -59,11 +59,11 @@ class BS_Widget_Calendar extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 		if ( 0 === self::$instance ) {
-			echo '<div id="calendar_wrap" class="calendar_wrap">';
+			echo '<div id="calendar_wrap" class="calendar_wrap card-body">';
 		} else {
 			echo '<div class="calendar_wrap">';
 		}
-		get_calendar();
+		bs_get_calendar();
 		echo '</div>';
 		echo $args['after_widget'];
 
