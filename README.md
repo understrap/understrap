@@ -1,6 +1,6 @@
 # BeFluid WordPress Theme
 
-Website: [#](coming soon)
+Website: [https://leanoperation.github.io/BeFluid/](leanoperation.github.io/BeFluid/)
 
 ## About
 
