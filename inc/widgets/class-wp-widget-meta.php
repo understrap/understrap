@@ -53,11 +53,11 @@ class BS_Widget_Meta extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 			?>
-			<ul>
-			<?php wp_register(); ?>
-			<li><?php wp_loginout(); ?></li>
-			<li><a href="<?php echo esc_url( get_bloginfo( 'rss2_url' ) ); ?>"><?php _e( 'Entries <abbr title="Really Simple Syndication">RSS</abbr>' ); ?></a></li>
-			<li><a href="<?php echo esc_url( get_bloginfo( 'comments_rss2_url' ) ); ?>"><?php _e( 'Comments <abbr title="Really Simple Syndication">RSS</abbr>' ); ?></a></li>
+			<div class="list-group list-group-flush">
+			<?php bs_wp_register('','',true ); ?>
+			<?php bs_wp_loginout(); ?>
+			<a class="list-group-item list-group-item-action" href="<?php echo esc_url( get_bloginfo( 'rss2_url' ) ); ?>"><?php _e( 'Entries <abbr title="Really Simple Syndication">RSS</abbr>' ); ?></a>
+			<a class="list-group-item list-group-item-action" href="<?php echo esc_url( get_bloginfo( 'comments_rss2_url' ) ); ?>"><?php _e( 'Comments <abbr title="Really Simple Syndication">RSS</abbr>' ); ?></a>
 			<?php
 			/**
 			 * Filters the "Powered by WordPress" text in the Meta widget.
@@ -70,7 +70,7 @@ class BS_Widget_Meta extends WP_Widget {
 			 */
 			echo apply_filters(
 				'widget_meta_poweredby', sprintf(
-					'<li><a href="%s" title="%s">%s</a></li>',
+					'<a class="list-group-item list-group-item-action" href="%s" title="%s">%s</a>',
 					esc_url( __( 'https://wordpress.org/' ) ),
 					esc_attr__( 'Powered by WordPress, state-of-the-art semantic personal publishing platform.' ),
 					_x( 'WordPress.org', 'meta widget link text' )
@@ -79,7 +79,6 @@ class BS_Widget_Meta extends WP_Widget {
 
 			wp_meta();
 			?>
-			</ul>
 			<?php
 
 			echo $args['after_widget'];
