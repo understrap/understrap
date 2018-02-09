@@ -53,7 +53,7 @@ function befluid_comment($comment, $args, $depth) {
         <?php comment_text(); ?>
 			</div>
 
-        <div class="reply card-footer"><?php
+        <div class="reply card-footer small"><?php
                 comment_reply_link(
                     array_merge(
                         $args,

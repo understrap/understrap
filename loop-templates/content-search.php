@@ -31,7 +31,7 @@
 
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer card-footer">
+	<footer class="entry-footer card-footer small">
 
 		<?php befluid_entry_footer(); ?>
 
