@@ -23,7 +23,7 @@ $container   = get_theme_mod( 'befluid_container_type' );
 
 			<main class="site-main" id="main">
 
-				<header class="page-header author-header">
+				<header class="page-header author-header clearfix mb-3">
 
 					<?php
 					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
@@ -33,7 +33,8 @@ $container   = get_theme_mod( 'befluid_container_type' );
 					<h1><?php esc_html_e( 'About:', 'befluid' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
 
 					<?php if ( ! empty( $curauth->ID ) ) : ?>
-						<?php echo get_avatar( $curauth->ID ); ?>
+<?php// echo get_avatar( $id_or_email, $size, $default, $alt, $args ); ?>
+						<?php echo get_avatar( $curauth->ID,'','','',array('class'=>'rounded-circle float-left mr-3') ); ?>
 					<?php endif; ?>
 
 					<dl>
@@ -55,12 +56,12 @@ $container   = get_theme_mod( 'befluid_container_type' );
 
 				</header><!-- .page-header -->
 
-				<ul>
+				<ul class="list-group">
 
 					<!-- The Loop -->
 					<?php if ( have_posts() ) : ?>
 						<?php while ( have_posts() ) : the_post(); ?>
-							<li>
+							<li class="list-group-item">
 								<a rel="bookmark" href="<?php the_permalink() ?>"
 								   title="<?php esc_html_e( 'Permanent Link:', 'befluid' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
