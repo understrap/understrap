@@ -21,9 +21,9 @@ $container   = get_theme_mod( 'befluid_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
+					<div class="card card-primary mb-3">
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
-
+					</div>
 						<?php befluid_post_nav(); ?>
 
 					<?php

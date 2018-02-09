@@ -8,14 +8,14 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<header class="card-header entry-header">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+		<?php the_title( sprintf( '<h2 class="card-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 		'</a></h2>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 
-			<div class="entry-meta">
+			<div class="entry-meta card-subtitle">
 
 				<?php befluid_posted_on(); ?>
 
@@ -25,13 +25,13 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
+	<div class="entry-summary card-body clearfix">
 
 		<?php the_excerpt(); ?>
 
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer card-footer">
 
 		<?php befluid_entry_footer(); ?>
 

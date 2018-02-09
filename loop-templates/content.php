@@ -36,7 +36,7 @@
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="card-body entry-content">
+	<div class="card-body entry-content clearfix">
 		<?php
 		the_excerpt();
 		?>
