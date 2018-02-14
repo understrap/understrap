@@ -7067,6 +7067,9 @@ a.text-dark:hover, a.text-dark:focus {
 .entry-footer span {
   padding-right: 10px; }
 
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important; }
+
 img.wp-post-image,
 article img,
 figure,
