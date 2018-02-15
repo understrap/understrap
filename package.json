@@ -51,6 +51,7 @@
     "merge2": "^1.2.1",
     "popper.js": "^1.13.0",
     "run-sequence": "^2.2.1",
-    "undescores-for-npm": "^1.0.0"
+    "undescores-for-npm": "^1.0.0",
+    "gulp-autoprefixer": "^4.1.0"
   }
 }
