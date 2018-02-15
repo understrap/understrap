@@ -2,10 +2,10 @@
 /**
  * Custom header setup.
  *
- * @package understrap
+ * @package befluid
  */
 
-function understrap_custom_header_setup() {
+function befluid_custom_header_setup() {
 
 	/**
 	 * Filter UnderStrap custom-header support arguments.
@@ -24,7 +24,7 @@ function understrap_custom_header_setup() {
 	 *     @type string $flex-height     		Flex support for height of header.
 	 * }
 	 */
-	add_theme_support( 'custom-header', apply_filters( 'understrap_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'befluid_custom_header_args', array(
 		'default-image'      => get_parent_theme_file_uri( '/img/header.jpg' ),
 		'width'              => 2000,
 		'height'             => 1200,
@@ -35,8 +35,8 @@ function understrap_custom_header_setup() {
 		'default-image' => array(
 			'url'           => '%s/img/header.jpg',
 			'thumbnail_url' => '%s/img/header.jpg',
-			'description'   => __( 'Default Header Image', 'understrap' ),
+			'description'   => __( 'Default Header Image', 'befluid' ),
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'understrap_custom_header_setup' );
+add_action( 'after_setup_theme', 'befluid_custom_header_setup' );

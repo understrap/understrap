@@ -4,14 +4,14 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package understrap
+ * @package befluid
  */
 
 get_header();
 ?>
 
 <?php
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'befluid_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
@@ -36,7 +36,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-
+						<div class="card mb-3">
 						<?php
 
 						/*
@@ -46,7 +46,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						 */
 						get_template_part( 'loop-templates/content', get_post_format() );
 						?>
-
+					</div>
 					<?php endwhile; ?>
 
 				<?php else : ?>
@@ -58,7 +58,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php befluid_pagination(); ?>
 
 		</div><!-- #primary -->
 

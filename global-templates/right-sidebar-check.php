@@ -2,11 +2,11 @@
 /**
  * Right sidebar check.
  *
- * @package understrap
+ * @package befluid
  */
 ?>
 
-<?php $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' ); ?>
+<?php $sidebar_pos = get_theme_mod( 'befluid_sidebar_position' ); ?>
 
 <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 

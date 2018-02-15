@@ -2,10 +2,10 @@
 /**
  * Sidebar setup for footer full.
  *
- * @package understrap
+ * @package befluid
  */
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'befluid_container_type' );
 
 ?>
 

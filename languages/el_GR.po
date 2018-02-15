@@ -1,7 +1,7 @@
 # Loco Gettext template
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: befluid\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-12-20 18:54+0200\n"
 "PO-Revision-Date: 2016-12-20 19:47+0200\n"
@@ -773,7 +773,7 @@ msgid ""
 "support, built-in widget slider and much more you need for basic websites. "
 "IMPORTANT: All developer dependencies are not bundled with this install "
 "file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"copy-assets\" inside the extracted /befluid folder."
 msgstr ""
 "Συνδυασμός του θέματος _s της Automatic και του Bootstrap 4. Δημιουργήθηκε "
 "ώς βοήθημα για το επόμενο WordPress θέμα σας. Χρησιμοποιήστε το ως αρχικό ή "
@@ -782,11 +782,11 @@ msgstr ""
 "εξαρτήσεις που απαιτούνται για την κατασκευή, δεν συμπεριλαμβάνονται σε αυτό "
 "το αρχείο. Θα πρέπει εφόσον εγκαταστήσετε αυτό το αρχείο, να τρέξετε \"npm "
 "install\" και \"gulp copy-assets\" μέσα από τον φάκελο της εγκατάστασης του "
-"understrap."
+"befluid."
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+msgid "http://befluid.com"
+msgstr "http://befluid.com"
 
 #. Author of the theme
 msgid "Holger Koenemann"

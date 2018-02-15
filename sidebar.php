@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package understrap
+ * @package befluid
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

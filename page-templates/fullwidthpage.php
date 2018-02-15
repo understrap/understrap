@@ -4,11 +4,11 @@
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
- * @package understrap
+ * @package befluid
  */
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'befluid_container_type' );
 ?>
 
 <div class="wrapper" id="full-width-page-wrapper">

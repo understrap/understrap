@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // load container setting
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'befluid_container_type' );
 
 // if we use container-fluid add some margin
 if ( 'container-fluid' === $container ) {

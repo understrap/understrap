@@ -2,7 +2,7 @@
 /**
  * Pagination layout.
  *
- * @package understrap
+ * @package befluid
  */
 
 /**
@@ -10,8 +10,8 @@
  * Credits to http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
  */
 
-if ( ! function_exists( 'understrap_pagination' ) ) :
-function understrap_pagination() {
+if ( ! function_exists( 'befluid_pagination' ) ) :
+function befluid_pagination() {
 	if ( is_singular() ) {
 		return;
 	}
@@ -42,7 +42,7 @@ function understrap_pagination() {
 		$links[] = $paged + 1;
 	}
 
-	echo '<nav aria-label="Page navigation"><ul class="pagination ">' . "\n";
+	echo '<nav aria-label="Page navigation"><ul class="pagination justify-content-center">' . "\n";
 
 	/**    Link to first page, plus ellipses if necessary */
 	if ( ! in_array( 1, $links ) ) {

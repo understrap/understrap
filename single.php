@@ -2,11 +2,11 @@
 /**
  * The template for displaying all single posts.
  *
- * @package understrap
+ * @package befluid
  */
 
 get_header();
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'befluid_container_type' );
 ?>
 
 <div class="wrapper" id="single-wrapper">
@@ -21,10 +21,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
+					<div class="card card-primary mb-3">
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
-
-						<?php understrap_post_nav(); ?>
+					</div>
+						<?php befluid_post_nav(); ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
