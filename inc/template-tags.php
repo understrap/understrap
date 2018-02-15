@@ -108,3 +108,37 @@ function befluid_category_transient_flusher() {
 }
 add_action( 'edit_category', 'befluid_category_transient_flusher' );
 add_action( 'save_post',     'befluid_category_transient_flusher' );
+
+function befluid_breadcrumb() {
+
+	if (!is_home()) {
+		echo '<nav aria-label="breadcrumb"><ol class="breadcrumb mt-3 mb-0">';
+		echo '<li class="breadcrumb-item"><a href="';
+		echo get_option('home');
+		echo '">';
+		echo 'Home';
+		echo "</a></li>";
+		if (is_category() || is_single()) {
+			echo '<li class="breadcrumb-item">';
+			the_category(' </li><li class="breadcrumb-item"> ');
+			if (is_single()) {
+				echo "</li><li class=\"breadcrumb-item\">";
+				the_title();
+				echo '</li>';
+			}
+		} elseif (is_page()) {
+			echo '<li class="breadcrumb-item active">';
+			echo the_title();
+			echo '</li>';
+		}
+		elseif (is_tag()) {single_tag_title();}
+		elseif (is_day()) {echo"<li class=\"breadcrumb-item active\">Archive for "; the_time('F jS, Y'); echo'</li>';}
+		elseif (is_month()) {echo"<li class=\"breadcrumb-item active\">Archive for "; the_time('F, Y'); echo'</li>';}
+		elseif (is_year()) {echo"<li class=\"breadcrumb-item active\">Archive for "; the_time('Y'); echo'</li>';}
+		elseif (is_author()) {echo"<li class=\"breadcrumb-item active\">Author Archive"; echo'</li>';}
+		elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li class=\"breadcrumb-item active\">Blog Archives"; echo'</li>';}
+		elseif (is_search()) {echo"<li class=\"breadcrumb-item active\">Search Results"; echo'</li>';}
+		echo '</ol>';
+	}
+
+}
