@@ -101,16 +101,25 @@ gulp.task('watch', function () {
     gulp.watch([paths.dev + '/js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
 
     //Inside the watch task.
-    gulp.watch('./img/**', ['imagemin'])
+    gulp.watch(paths.imgsrc + '/**', ['imagemin-watch']);
+});
+
+/**
+ * Ensures the 'imagemin' task is complete before reloading browsers
+ * @verbose
+ */
+gulp.task('imagemin-watch', ['imagemin'], function(done) {
+  browserSync.reload();
+  done();
 });
 
 // Run:
 // gulp imagemin
 // Running image optimizing task
 gulp.task('imagemin', function(){
-    gulp.src('img/src/**')
+    gulp.src(paths.imgsrc + '/**')
     .pipe(imagemin())
-    .pipe(gulp.dest('img'))
+    .pipe(gulp.dest(paths.img))
 });
 
 
