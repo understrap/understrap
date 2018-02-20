@@ -96,7 +96,7 @@ To work and compile your Sass files on the fly start:
 Or, to run with Browser-Sync:
 
 - First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
-```json
+```javascript
 {
     "browserSyncOptions" : {
         "proxy": "localhost/theme_test/", // <----- CHANGE HERE
