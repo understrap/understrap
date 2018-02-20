@@ -256,7 +256,7 @@ gulp.task('clean-vendor-assets', function () {
 // gulp dist
 // Copies the files to the /dist folder for distribution as simple theme
 gulp.task('dist', ['clean-dist'], function() {
-  return gulp.src(['**/*', '!'+paths.bower, '!'+paths.bower+'**', '!'+paths.node, '!'+paths.node+'**', '!'+paths.dev, '!'+paths.dev+'/**', '!'+paths.dist, '!'+paths.dist+'/**', '!'+paths.distprod, '!'+paths.distprod+'/**', '!'+paths.sass, '!'+paths.sass+'/**', '!readme.txt', '!readme.md', '!package.json', '!gulpfile.js', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'])
+  return gulp.src(['**/*', '!'+paths.bower, '!'+paths.bower+'/**', '!'+paths.node, '!'+paths.node+'/**', '!'+paths.dev, '!'+paths.dev+'/**', '!'+paths.dist, '!'+paths.dist+'/**', '!'+paths.distprod, '!'+paths.distprod+'/**', '!'+paths.sass, '!'+paths.sass+'/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'], {'buffer': false})
   .pipe(replace('/js/jquery.slim.min.js', '/js'+paths.vendor+'/jquery.slim.min.js', {'skipBinary': true}))
   .pipe(replace('/js/popper.min.js', '/js'+paths.vendor+'/popper.min.js', {'skipBinary': true}))
   .pipe(replace('/js/skip-link-focus-fix.js', '/js'+paths.vendor+'/skip-link-focus-fix.js', {'skipBinary': true}))
