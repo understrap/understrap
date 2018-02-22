@@ -19,6 +19,7 @@ var del = require('del');
 var cleanCSS = require('gulp-clean-css');
 var gulpSequence = require('gulp-sequence');
 var replace = require('gulp-replace');
+var autoprefixer = require('gulp-autoprefixer')
 
 // Configuration file to keep your code DRY
 var cfg = require('./gulpconfig.json');
@@ -87,6 +88,7 @@ gulp.task('sass', function () {
             }
         }))
         .pipe(sass())
+        .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest(paths.css))
         .pipe(rename('custom-editor-style.css'))
     return stream;
