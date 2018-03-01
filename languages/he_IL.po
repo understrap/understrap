@@ -1,0 +1,714 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UnderStrap\n"
+"POT-Creation-Date: 2018-02-08 16:42+0200\n"
+"PO-Revision-Date: 2018-02-11 17:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:29
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "לא ניתן למצוא את הדף."
+
+#: 404.php:36
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"לא נמצא שום עסק במיקום זה , נסה את אחד הקישורים או נסה חיפוש חוזר. האם רשמת "
+"נכון את שם העסק?"
+
+#: 404.php:47
+msgid "Most Used Categories"
+msgstr "קטגוריות פופולרייות"
+
+#. translators: %1$s: smiley
+#: 404.php:68
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "נסה להסתכל בארכיון החודשי.%1$s"
+
+#: author.php:33
+msgid "About:"
+msgstr "אודות:"
+
+#: author.php:41 inc/custom-comments.php:30
+msgid "Website"
+msgstr "אתר"
+
+#: author.php:48
+msgid "Profile"
+msgstr "פרופיל"
+
+#: author.php:53
+msgid "Posts by"
+msgstr "נכתב ע\"י"
+
+#: author.php:65
+msgid "Permanent Link:"
+msgstr "קישור קבוע:"
+
+#: author.php:67
+msgid "in"
+msgstr "ב"
+
+#. translators: %s: post title
+#: comments.php:34
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "מחשבה אחת על &ldquo;%s&rdquo;"
+
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "מחשבה אחת על &ldquo;%2$s&rdquo;"
+msgstr[1] "מחשבות על &ldquo;%2$s&rdquo;"
+
+#: comments.php:59 comments.php:89
+msgid "Comment navigation"
+msgstr "ניווט תגובות"
+
+#: comments.php:62 comments.php:92
+msgid "&larr; Older Comments"
+msgstr "&larr;  תגובות קודמות"
+
+#: comments.php:66 comments.php:96
+msgid "Newer Comments &rarr;"
+msgstr "תגובות חדשות יותר &rarr;"
+
+#: comments.php:111
+msgid "Comments are closed."
+msgstr "תגובות סגורות."
+
+#: footer.php:28
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#. translators:
+#: footer.php:30
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "בנוי על %s"
+
+#. translators:
+#: footer.php:35
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "ערכת עיצוב: %1$s מבוסס  %2$s."
+
+#. Theme URI of the plugin/theme
+#: footer.php:35
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. translators:
+#: footer.php:39
+#, php-format
+msgid "Version: %1$s"
+msgstr "גירסה:% 1"
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "דלג לתוכן"
+
+#: inc/custom-comments.php:24
+msgid "Name"
+msgstr "שם"
+
+#: inc/custom-comments.php:27
+msgid "Email"
+msgstr "אי-מייל"
+
+#: inc/custom-comments.php:49
+msgctxt "noun"
+msgid "Comment"
+msgstr "תגובה"
+
+#: inc/custom-header.php:38
+msgid "Default Header Image"
+msgstr "תמונת כותרת כללית"
+
+#: inc/customizer.php:37
+msgid "Theme Layout Settings"
+msgstr "הגדרות מערך"
+
+#: inc/customizer.php:39
+msgid "Container width and sidebar defaults"
+msgstr "ברירות מחדל, רוחב ותיבה, מיכל"
+
+#: inc/customizer.php:68
+msgid "Container Width"
+msgstr "רוחב המיכל"
+
+#: inc/customizer.php:69
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "בחר בין מיכל למיכל מלא של בוטסטראפ"
+
+#: inc/customizer.php:74
+msgid "Fixed width container"
+msgstr "קונטיינר רוחב קבוע"
+
+#: inc/customizer.php:75
+msgid "Full width container"
+msgstr "קונטיינר רוחב מלא"
+
+#: inc/customizer.php:92
+msgid "Sidebar Positioning"
+msgstr "מיקום סרגל צדדי"
+
+#: inc/customizer.php:93
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+"הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם "
+"או אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
+
+#: inc/customizer.php:100
+msgid "Right sidebar"
+msgstr "סרגל צדדי ימני"
+
+#: inc/customizer.php:101
+msgid "Left sidebar"
+msgstr "סרגל צדדי שמאלי"
+
+#: inc/customizer.php:102
+msgid "Left & Right sidebars"
+msgstr "סרגלים צידיים שמאלה וימינה"
+
+#: inc/customizer.php:103
+msgid "No sidebar"
+msgstr "ללא סרגל צדדי"
+
+#: inc/extras.php:93
+msgid "Post navigation"
+msgstr "ניווט בפרסומים"
+
+#: inc/extras.php:98
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/extras.php:101
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+"Read More&nbsp;<i class=\\\"dashicons dashicons-arrow-right-alt\\\"></i>"
+
+#: inc/setup.php:44
+msgid "Primary Menu"
+msgstr "תפריט ראשי"
+
+#: inc/setup.php:121
+msgid "Read More..."
+msgstr "קרא עוד..."
+
+#: inc/template-tags.php:26
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "פורסם בתאריך : %s"
+
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "ע\"י %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:45 inc/template-tags.php:50
+msgid ", "
+msgstr ","
+
+#: inc/template-tags.php:47
+#, php-format
+msgid "Posted in %1$s"
+msgstr "פורסם ב:  %1$s"
+
+#: inc/template-tags.php:52
+#, php-format
+msgid "Tagged %1$s"
+msgstr "תויג %1$s"
+
+#: inc/template-tags.php:57
+msgid "Leave a comment"
+msgstr "השאר תגובה"
+
+#: inc/template-tags.php:57
+msgid "1 Comment"
+msgstr "תגובה 1"
+
+#: inc/template-tags.php:57
+msgid "% Comments"
+msgstr "% תגובות"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:63
+#, php-format
+msgid "Edit %s"
+msgstr "עריכה %"
+
+#: inc/widgets.php:53
+msgid "Right Sidebar"
+msgstr "סרגל צדדי ימני"
+
+#: inc/widgets.php:63
+msgid "Left Sidebar"
+msgstr "סרגל צדדי שמאלי"
+
+#: inc/widgets.php:73
+msgid "Hero Slider"
+msgstr "סליידר"
+
+#: inc/widgets.php:83
+msgid "Hero Static"
+msgstr "סטטי"
+
+#: inc/widgets.php:93
+msgid "Footer Full"
+msgstr "כותרת תחתונה"
+
+#: loop-templates/content-none.php:16
+msgid "Nothing Found"
+msgstr "לא נמצא כלום"
+
+#: loop-templates/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "מוכן לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">נא להתחיל כאן</a>."
+
+#: loop-templates/content-none.php:33
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "סליחה, אבל לא מצאנו את מה שחיפשתם. נסו שוב עם מילות חיפוש אחרות."
+
+#: loop-templates/content-none.php:38
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "נראה שאנחנו לא מוצאים את מה שחיפשת. אולי חיפוש יכול לעזור."
+
+#: loop-templates/content-page.php:25 loop-templates/content-single.php:31
+#: loop-templates/content.php:37
+msgid "Pages:"
+msgstr "עמודים:"
+
+#: loop-templates/content-page.php:34 woocommerce/myaccount/my-address.php:52
+msgid "Edit"
+msgstr "עריכה"
+
+#. translators:
+#: search.php:31
+#, php-format
+msgid "Search Results for: %s"
+msgstr "תוצאות חיפוש ל: %s"
+
+#: searchform.php:10 searchform.php:16
+msgid "Search"
+msgstr "חיפוש"
+
+#: searchform.php:13
+msgid "Search &hellip;"
+msgstr "חפש &hellip;"
+
+#: sidebar-hero.php:26 woocommerce/myaccount/orders.php:89
+msgid "Previous"
+msgstr "הקודם"
+
+#: sidebar-hero.php:34 woocommerce/myaccount/orders.php:93
+msgid "Next"
+msgstr "הבא"
+
+#: woocommerce/cart/cart-empty.php:33
+msgid "Return To Shop"
+msgstr "חזרה לחנות"
+
+#: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:78
+#: woocommerce/checkout/form-pay.php:29
+msgid "Product"
+msgstr "מוצר"
+
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:96
+msgid "Price"
+msgstr "מחיר"
+
+#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:102
+#: woocommerce/global/quantity-input.php:32
+msgid "Quantity"
+msgstr "כמות"
+
+#: woocommerce/cart/cart.php:38 woocommerce/cart/cart.php:119
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Total"
+msgstr "סה\"כ לתשלום"
+
+#: woocommerce/cart/cart.php:59 woocommerce/cart/mini-cart.php:47
+msgid "Remove this item"
+msgstr "הסר"
+
+#: woocommerce/cart/cart.php:91
+msgid "Available on backorder"
+msgstr "זמין להזמנה מוקדמת"
+
+#: woocommerce/cart/cart.php:137
+msgid "Coupon:"
+msgstr "קופון:"
+
+#: woocommerce/cart/cart.php:137 woocommerce/checkout/form-coupon.php:36
+msgid "Coupon code"
+msgstr "קוד קופון"
+
+#: woocommerce/cart/cart.php:137
+msgid "Apply coupon"
+msgstr "ממש קופון"
+
+#: woocommerce/cart/cart.php:142
+msgid "Update Cart"
+msgstr "עדכן עגלת קניות"
+
+#: woocommerce/cart/mini-cart.php:72
+msgid "Subtotal"
+msgstr "סה\"כ"
+
+#: woocommerce/cart/mini-cart.php:80
+msgid "No products in the cart."
+msgstr "אין מוצרים בעגלה."
+
+#: woocommerce/cart/proceed-to-checkout-button.php:27
+msgid "Proceed to Checkout"
+msgstr "המשך לתשלום"
+
+#: woocommerce/checkout/form-checkout.php:29
+msgid "You must be logged in to checkout."
+msgstr "אתה חייב להיות מחובר כדי לבצע צ'ק אאוט."
+
+#: woocommerce/checkout/form-checkout.php:55
+msgid "Your order"
+msgstr "ההזמנה שלך"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Have a coupon?"
+msgstr "יש לך קופון?"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Click here to enter your code"
+msgstr "*(לא נאפשר כפל הנחת קופון עם נקודות בונוס, הודעה תתקבל)"
+
+#: woocommerce/checkout/form-coupon.php:40
+msgid "Apply Coupon"
+msgstr "החל קופון"
+
+#: woocommerce/checkout/form-pay.php:30
+msgid "Qty"
+msgstr "כמות"
+
+#: woocommerce/checkout/form-pay.php:31
+msgid "Totals"
+msgstr "סה\"כ"
+
+#: woocommerce/checkout/form-pay.php:79
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"מצטערים, אין אפשרויות תשלום הזמינות עבור המיקום שלך. צרו עימנו קשר כדי לבצע "
+"תשלום באמצעים חלופיים."
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"אין אפשרויות תשלום הזמינות עבור המדינה שלך. צרו קשר בכדי לבצע תשלום באמצעים "
+"חלופיים."
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr "אנא הכניסו פרטים לעיל על מנת לקבל את אמצעי התשלום הזמינים."
+
+#: woocommerce/checkout/payment.php:42
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+"מאחר שהדפדפן שלך אינו תומך בJavaScript או שהאופציה מנוטרלת,יש להקפיד ללחוץ "
+"על לחצן <em>עדכון סכומים</em> לפני ביצוע ההזמנה. ייתכן והחיוב יהיה יותר "
+"מהסכום האמור לעיל, אם לא יבוצע \"עדכון פרטים\"."
+
+#: woocommerce/checkout/payment.php:43
+msgid "Update totals"
+msgstr "למידע נוסף"
+
+#: woocommerce/global/form-login.php:35
+#: woocommerce/myaccount/form-lost-password.php:30
+msgid "Username or email"
+msgstr "שם משתמש או כתובת דוא\"ל"
+
+#: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:48
+#: woocommerce/myaccount/form-login.php:98
+msgid "Password"
+msgstr "סיסמה"
+
+#: woocommerce/global/form-login.php:48 woocommerce/myaccount/form-login.php:37
+#: woocommerce/myaccount/form-login.php:56
+msgid "Login"
+msgstr "התחבר"
+
+#: woocommerce/global/form-login.php:51 woocommerce/myaccount/form-login.php:58
+msgid "Remember me"
+msgstr "זכור אותי"
+
+#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:62
+msgid "Lost your password?"
+msgstr "שכחת  את הסיסמה?"
+
+#: woocommerce/global/quantity-input.php:33
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "כמות"
+
+#: woocommerce/myaccount/downloads.php:41
+msgid "Go Shop"
+msgstr "בחר מפגשים"
+
+#: woocommerce/myaccount/downloads.php:43
+msgid "No downloads available yet."
+msgstr "אין עדיין הורדות זמינות."
+
+#: woocommerce/myaccount/form-edit-account.php:30
+msgid "First name"
+msgstr "שם פרטי"
+
+#: woocommerce/myaccount/form-edit-account.php:34
+msgid "Last name"
+msgstr "שם משפחה"
+
+#: woocommerce/myaccount/form-edit-account.php:40
+#: woocommerce/myaccount/form-login.php:91
+msgid "Email address"
+msgstr "כתובת מייל"
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid "Password Change"
+msgstr "שינוי סיסמא"
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr "סיסמא נוכחית (השאר ריק אם אין ברצונך לשנות)"
+
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "New Password (leave blank to leave unchanged)"
+msgstr "סיסמא חדשה (מלא רק אם ברצונך לשנות)"
+
+#: woocommerce/myaccount/form-edit-account.php:56
+msgid "Confirm New Password"
+msgstr "אמת סיסמא חדשה"
+
+#: woocommerce/myaccount/form-edit-account.php:66
+msgid "Save changes"
+msgstr "שמור שינויים"
+
+#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/my-address.php:28
+#: woocommerce/myaccount/my-address.php:33
+msgid "Billing address"
+msgstr "כתובת חיוב"
+
+#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/my-address.php:29
+msgid "Shipping address"
+msgstr "כתובת למשלוח"
+
+#: woocommerce/myaccount/form-edit-address.php:52
+msgid "Save address"
+msgstr "שמור כתובת"
+
+#: woocommerce/myaccount/form-login.php:44
+msgid "Username or email address"
+msgstr "שם משתמש או כתובת דוא\"ל"
+
+#: woocommerce/myaccount/form-login.php:75
+#: woocommerce/myaccount/form-login.php:108
+msgid "Register"
+msgstr "הרשמה"
+
+#: woocommerce/myaccount/form-login.php:84
+msgid "Username"
+msgstr "סיסמא"
+
+#: woocommerce/myaccount/form-lost-password.php:27
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr "הזן שם משתמש או דוא\"ל. אימייל עם קישור לאיפוס סיסמה ישלח אליך מיד."
+
+#: woocommerce/myaccount/form-lost-password.php:40
+msgid "Reset Password"
+msgstr "לאפס סיסמה"
+
+#: woocommerce/myaccount/form-reset-password.php:27
+msgid "Enter a new password below."
+msgstr "הזן סיסמה חדשה למטה."
+
+#: woocommerce/myaccount/form-reset-password.php:30
+msgid "New password"
+msgstr "סיסמה חדשה (10 תווים לפחות)"
+
+#: woocommerce/myaccount/form-reset-password.php:34
+msgid "Re-enter new password"
+msgstr "חזרו על הסיסמה החדשה"
+
+#: woocommerce/myaccount/form-reset-password.php:47
+msgid "Save"
+msgstr "שמור"
+
+#: woocommerce/myaccount/my-address.php:42
+msgid "The following addresses will be used on the checkout page by default."
+msgstr "הכתובות הבאות ישמשו בתהליך הרכישה באופן אוטומטי"
+
+#: woocommerce/myaccount/my-address.php:71
+msgid "You have not set up this type of address yet."
+msgstr "לא הגדרת את סוג הכתובת הזאת עדיין."
+
+#: woocommerce/myaccount/my-orders.php:13
+msgid "Order"
+msgstr "סדר"
+
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Date"
+msgstr "תאריך"
+
+#: woocommerce/myaccount/my-orders.php:15
+msgid "Status"
+msgstr "סטטוס"
+
+#: woocommerce/myaccount/my-orders.php:30
+msgid "Recent Orders"
+msgstr "הזמנות אחרונות"
+
+#: woocommerce/myaccount/my-orders.php:55 woocommerce/myaccount/orders.php:51
+msgctxt "hash before order number"
+msgid "#"
+msgstr "#"
+
+#: woocommerce/myaccount/my-orders.php:65
+#, php-format
+msgid "%s for %s item"
+msgid_plural "%s for %s items"
+msgstr[0] "%s %s עבור \"%s\""
+msgstr[1] ""
+
+#: woocommerce/myaccount/my-orders.php:72
+msgid "Pay"
+msgstr "שלם"
+
+#: woocommerce/myaccount/my-orders.php:76
+msgid "View"
+msgstr "צפה"
+
+#: woocommerce/myaccount/my-orders.php:80
+msgid "Cancel"
+msgstr "בטל"
+
+#. translators: 1: formatted order total 2: total order items
+#: woocommerce/myaccount/orders.php:63
+#, php-format
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] "%1$s עבור %2$s"
+msgstr[1] ""
+
+#: woocommerce/myaccount/orders.php:101
+msgid "Go shop"
+msgstr "המשיכו לקנות"
+
+#: woocommerce/myaccount/orders.php:103
+msgid "No order has been made yet."
+msgstr "עדין לא בוצעו הזמנות."
+
+#: woocommerce/product-searchform.php:27
+msgid "Search products&hellip;"
+msgstr "חפש מוצרים&hellip;"
+
+#: woocommerce/product-searchform.php:30
+msgctxt "submit button"
+msgid "Search"
+msgstr "חיפוש"
+
+#: woocommerce/single-product/rating.php:37
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] "דירוג אורח"
+msgstr[1] "דירוג אורח"
+
+#. Theme Name of the plugin/theme
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Description of the plugin/theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as a parent theme. It is up to you. Including Font Awesome "
+"support, built-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Holger Koenemann"
+msgstr "Holger Koenmann"
+
+#. Author URI of the plugin/theme
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"
+
+#. Template Name of the plugin/theme
+msgid "Blank Page Template"
+msgstr "עמוד ריק"
+
+#. Template Name of the plugin/theme
+msgid "Left and Right Sidebar Layout"
+msgstr "סרגל צדדי ימני"
+
+#. Template Name of the plugin/theme
+msgid "Empty Page Template"
+msgstr "תבנית דף ריק"
+
+#. Template Name of the plugin/theme
+msgid "Full Width Page"
+msgstr "רוחב מלא"
+
+#. Template Name of the plugin/theme
+msgid "Left Sidebar Layout"
+msgstr "פריסת סרגל הצד"
+
+#. Template Name of the plugin/theme
+msgid "Right Sidebar Layout"
+msgstr "סרגל צדדי ימני"
