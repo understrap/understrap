@@ -103,16 +103,25 @@ gulp.task('watch', function () {
     gulp.watch([paths.dev + '/js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
 
     //Inside the watch task.
-    gulp.watch('./img/**', ['imagemin'])
+    gulp.watch(paths.imgsrc + '/**', ['imagemin-watch']);
+});
+
+/**
+ * Ensures the 'imagemin' task is complete before reloading browsers
+ * @verbose
+ */
+gulp.task('imagemin-watch', ['imagemin'], function(done) {
+  browserSync.reload();
+  done();
 });
 
 // Run:
 // gulp imagemin
 // Running image optimizing task
 gulp.task('imagemin', function(){
-    gulp.src('img/src/**')
+    gulp.src(paths.imgsrc + '/**')
     .pipe(imagemin())
-    .pipe(gulp.dest('img'))
+    .pipe(gulp.dest(paths.img))
 });
 
 
@@ -258,10 +267,10 @@ gulp.task('clean-vendor-assets', function () {
 // gulp dist
 // Copies the files to the /dist folder for distribution as simple theme
 gulp.task('dist', ['clean-dist'], function() {
-  return gulp.src(['**/*', '!'+paths.bower, '!'+paths.bower+'**', '!'+paths.node, '!'+paths.node+'**', '!'+paths.dev, '!'+paths.dev+'/**', '!'+paths.dist, '!'+paths.dist+'/**', '!'+paths.distprod, '!'+paths.distprod+'/**', '!'+paths.sass, '!'+paths.sass+'/**', '!readme.txt', '!readme.md', '!package.json', '!gulpfile.js', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'])
-    .pipe(replace('/js/jquery.slim.min.js', '/js'+paths.vendor+'/jquery.slim.min.js'))
-    .pipe(replace('/js/popper.min.js', '/js'+paths.vendor+'/popper.min.js'))
-    .pipe(replace('/js/skip-link-focus-fix.js', '/js'+paths.vendor+'/skip-link-focus-fix.js'))
+  return gulp.src(['**/*', '!'+paths.bower, '!'+paths.bower+'/**', '!'+paths.node, '!'+paths.node+'/**', '!'+paths.dev, '!'+paths.dev+'/**', '!'+paths.dist, '!'+paths.dist+'/**', '!'+paths.distprod, '!'+paths.distprod+'/**', '!'+paths.sass, '!'+paths.sass+'/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'], {'buffer': false})
+  .pipe(replace('/js/jquery.slim.min.js', '/js'+paths.vendor+'/jquery.slim.min.js', {'skipBinary': true}))
+  .pipe(replace('/js/popper.min.js', '/js'+paths.vendor+'/popper.min.js', {'skipBinary': true}))
+  .pipe(replace('/js/skip-link-focus-fix.js', '/js'+paths.vendor+'/skip-link-focus-fix.js', {'skipBinary': true}))
     .pipe(gulp.dest(paths.dist));
 });
 
