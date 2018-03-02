@@ -60,7 +60,7 @@
 		} );
 	} );
 
-	wp.customize( 'primary_hover_color', function( value ) {
+	wp.customize( 'primary_hover_color', function( value ) { 
 		value.bind( function( to ) {
 			$( 'a' ).css( {
 				'color': to

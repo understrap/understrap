@@ -184,12 +184,12 @@ if ( ! function_exists( 'understrap_theme_customize_css' ) ) {
 
 			if (!empty( get_theme_mod('primary_color') ) ) {
 				echo "a { color: " . get_theme_mod('primary_color') . "; }\r\n";
-				echo "*[class*='primary'] { background-color: " . get_theme_mod('primary_color') . "; border-color: " . get_theme_mod('primary_color') . "; }\r\n";
+				echo "*[class*='primary'] { background-color: " . get_theme_mod('primary_color') . " !important; border-color: " . get_theme_mod('primary_color') . " !important; }\r\n";
 			}
 
 			if (!empty( get_theme_mod('primary_hover_color') ) ) {
 				echo "a:hover { color: " . get_theme_mod('primary_hover_color') . "; }\r\n";
-				echo "*[class*='primary']:hover { background-color: " . get_theme_mod('primary_hover_color') . ";  border-color: " . get_theme_mod('primary_hover_color') . "; }\r\n";
+				echo "*[class*='primary']:hover { background-color: " . get_theme_mod('primary_hover_color') . " !important;  border-color: " . get_theme_mod('primary_hover_color') . " !important; }\r\n";
 			}
 
 		echo "</style>\r\n";
