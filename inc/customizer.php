@@ -32,6 +32,54 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 	 */
 	function understrap_theme_customize_register( $wp_customize ) {
 
+		// Theme text colors
+		$wp_customize->add_setting( 'text_color', array(
+			'default'		=> '',
+			'type'			=> 'theme_mod',
+			'transport'		=> 'postMessage',
+			'capability'	=> 'edit_theme_options',
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
+				'label'   => __( 'Text Color', 'understrap' ),
+				'section' => 'colors',
+				'settings'   => 'text_color',
+				)
+			) );
+
+		$wp_customize->add_setting( 'primary_color', array(
+			'default'		=> '',
+			'type'			=> 'theme_mod',
+			'transport'		=> 'postMessage',
+			'capability'	=> 'edit_theme_options',
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
+				'label'   => __( 'Primary Color', 'understrap' ),
+				'description'	=> 'Set up Bootstraps "Primary" color which affects links, buttons etc.',
+				'section' => 'colors',
+				'settings'   => 'primary_color',
+				)
+			) );
+
+		$wp_customize->add_setting( 'primary_hover_color', array(
+			'default'		=> '',
+			'type'			=> 'theme_mod',
+			'transport'		=> 'postMessage',
+			'capability'	=> 'edit_theme_options',
+		) );
+		
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control( $wp_customize, 'primary_hover_color', array(
+				'label'   => __( 'Primary Hover Color', 'understrap' ),
+				'section' => 'colors',
+				'settings'   => 'primary_hover_color',
+				)
+			) );
+
+
 		// Theme layout settings.
 		$wp_customize->add_section( 'understrap_theme_layout_options', array(
 			'title'       => __( 'Theme Layout Settings', 'understrap' ),
@@ -122,3 +170,30 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	}
 }
 add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
+
+/**
+ * Read Customizer Settings and output them in embedded CSS.
+ */
+if ( ! function_exists( 'understrap_theme_customize_css' ) ) {
+	function understrap_theme_customize_css() {
+		echo "<style type=\"text/css\">\r\n";
+
+			if (!empty( get_theme_mod('text_color') ) ) {
+				echo "body { color: " . get_theme_mod('text_color') . "; }\r\n";
+			}
+
+			if (!empty( get_theme_mod('primary_color') ) ) {
+				echo "a { color: " . get_theme_mod('primary_color') . "; }\r\n";
+				echo "*[class*='primary'] { background-color: " . get_theme_mod('primary_color') . " !important; border-color: " . get_theme_mod('primary_color') . " !important; }\r\n";
+			}
+
+			if (!empty( get_theme_mod('primary_hover_color') ) ) {
+				echo "a:hover { color: " . get_theme_mod('primary_hover_color') . "; }\r\n";
+				echo "*[class*='primary']:hover { background-color: " . get_theme_mod('primary_hover_color') . " !important;  border-color: " . get_theme_mod('primary_hover_color') . " !important; }\r\n";
+			}
+
+		echo "</style>\r\n";
+	}
+}
+
+add_action( 'wp_head', 'understrap_theme_customize_css');
