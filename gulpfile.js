@@ -225,12 +225,11 @@ gulp.task('copy-assets', function() {
 // Copy all Bootstrap SCSS files
     gulp.src(paths.node + 'bootstrap/scss/**/*.scss')
         .pipe(gulp.dest(paths.dev + '/sass/bootstrap4'));
-    return stream;
 
 ////////////////// End Bootstrap 4 Assets /////////////////////////
 
 // Copy all Font Awesome Fonts
-    var stream = gulp.src(paths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+    gulp.src(paths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
 
 // Copy all Font Awesome SCSS files
