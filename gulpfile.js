@@ -119,7 +119,6 @@ gulp.task( 'imagemin', function() {
     .pipe( gulp.dest( paths.img ) );
 });
 
-
 // Run:
 // gulp cssnano
 // Minifies CSS files
@@ -159,11 +158,10 @@ gulp.task( 'cleancss', function() {
     .pipe( rimraf() );
 });
 
-gulp.task( 'styles', function( callback ) { 
+gulp.task( 'styles', function( callback ) {
     gulpSequence( 'sass', 'minifycss' )( callback );
 } );
  
-
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
@@ -192,7 +190,7 @@ gulp.task( 'scripts', function() {
   gulp.src( scripts )
     .pipe( concat( 'theme.min.js' ) )
     .pipe( uglify() )
-    .pipe( gulp.dest( paths.js) );
+    .pipe( gulp.dest( paths.js ) );
 
   gulp.src( scripts )
     .pipe( concat( 'theme.js' ) )
@@ -259,15 +257,15 @@ gulp.task( 'clean-vendor-assets', function() {
 // gulp dist
 // Copies the files to the /dist folder for distribution as simple theme
 gulp.task( 'dist', ['clean-dist'], function() {
-  return gulp.src( ['**/*', '!'+ paths.bower, '!'+ paths.bower +'/**', '!'+ paths.node, '!'+ paths.node + '/**', '!' + paths.dev, '!' + paths.dev +'/**', '!'+ paths.dist, '!'+ paths.dist +'/**', '!'+ paths.distprod, '!'+ paths.distprod +'/**', '!'+ paths.sass, '!'+ paths.sass +'/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'], { 'buffer': false } )
-  .pipe( replace( '/js/jquery.slim.min.js', '/js'+ paths.vendor +'/jquery.slim.min.js', { 'skipBinary': true } ) )
-  .pipe( replace( '/js/popper.min.js', '/js'+ paths.vendor +'/popper.min.js', { 'skipBinary': true } ) )
-  .pipe( replace( '/js/skip-link-focus-fix.js', '/js'+ paths.vendor +'/skip-link-focus-fix.js', { 'skipBinary': true } ) )
+  return gulp.src( ['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'], { 'buffer': false } )
+  .pipe( replace( '/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', { 'skipBinary': true } ) )
+  .pipe( replace( '/js/popper.min.js', '/js' + paths.vendor + '/popper.min.js', { 'skipBinary': true } ) )
+  .pipe( replace( '/js/skip-link-focus-fix.js', '/js' + paths.vendor + '/skip-link-focus-fix.js', { 'skipBinary': true } ) )
     .pipe(gulp.dest( paths.dist ) );
 });
 
 // Deleting any file inside the /dist folder
-gulp.task( 'clean-dist', function () {
+gulp.task( 'clean-dist', function() {
   return del( [paths.dist + '/**'] );
 });
 
@@ -275,11 +273,11 @@ gulp.task( 'clean-dist', function () {
 // gulp dist-product
 // Copies the files to the /dist-prod folder for distribution as theme with all assets
 gulp.task( 'dist-product', ['clean-dist-product'], function() {
-  return gulp.src( ['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node +'/**', '!' + paths.dist, '!' + paths.dist +'/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '*'] )
+  return gulp.src( ['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dist, '!' + paths.dist +'/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '*'] )
     .pipe( gulp.dest( paths.distprod ) );
 } );
 
 // Deleting any file inside the /dist-product folder
-gulp.task( 'clean-dist-product', function () {
+gulp.task( 'clean-dist-product', function() {
   return del( [paths.distprod + '/**'] );
 } );
