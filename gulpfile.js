@@ -161,7 +161,7 @@ gulp.task( 'cleancss', function() {
 gulp.task( 'styles', function( callback ) {
     gulpSequence( 'sass', 'minifycss' )( callback );
 } );
- 
+
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
@@ -172,7 +172,8 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { } );
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { 
+} );
 
 // Run: 
 // gulp scripts. 
@@ -250,7 +251,7 @@ gulp.task( 'copy-assets', function() {
 
 // Deleting the files distributed by the copy-assets task
 gulp.task( 'clean-vendor-assets', function() {
-  return del( [paths.dev + '/js/bootstrap4/**', paths.dev + '/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eot,svg}', paths.dev + '/sass/fontawesome/**', paths.dev + '/sass/underscores/**', paths.dev + '/js/skip-link-focus-fix.js', paths.js + '/**/skip-link-focus-fix.js', paths.js + '/**/popper.min.js', paths.js + '/**/popper.js', ( paths.vendor!==''?( paths.js + paths.vendor + '/**' ):'' )]);
+  return del( [paths.dev + '/js/bootstrap4/**', paths.dev + '/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eot,svg}', paths.dev + '/sass/fontawesome/**', paths.dev + '/sass/underscores/**', paths.dev + '/js/skip-link-focus-fix.js', paths.js + '/**/skip-link-focus-fix.js', paths.js + '/**/popper.min.js', paths.js + '/**/popper.js', ( paths.vendor !== ''?( paths.js + paths.vendor + '/**' ):'' )] );
 });
 
 // Run
@@ -261,7 +262,7 @@ gulp.task( 'dist', ['clean-dist'], function() {
   .pipe( replace( '/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', { 'skipBinary': true } ) )
   .pipe( replace( '/js/popper.min.js', '/js' + paths.vendor + '/popper.min.js', { 'skipBinary': true } ) )
   .pipe( replace( '/js/skip-link-focus-fix.js', '/js' + paths.vendor + '/skip-link-focus-fix.js', { 'skipBinary': true } ) )
-    .pipe(gulp.dest( paths.dist ) );
+    .pipe( gulp.dest( paths.dist ) );
 });
 
 // Deleting any file inside the /dist folder
