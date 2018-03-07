@@ -29,7 +29,7 @@ var paths = cfg.paths;
 // gulp sass + cssnano + rename
 // Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
 gulp.task( 'scss-for-prod', function() {
-    var source =  gulp.src(paths.sass + '/*.scss')
+    var source =  gulp.src( paths.sass + '/*.scss' )
         .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err);
@@ -206,7 +206,7 @@ gulp.task( 'scripts', function() {
 
 // Deleting any file inside the /src folder
 gulp.task( 'clean-source', function () {
-  return del(['src/**/*',,]);
+  return del(['src/**/*',]);
 });
 
 // Run:
@@ -275,7 +275,7 @@ gulp.task( 'dist', ['clean-dist'], function() {
 
 // Deleting any file inside the /dist folder
 gulp.task( 'clean-dist', function () {
-  return del([paths.dist + '/**',,]);
+  return del([paths.dist + '/**',]);
 });
 
 // Run
@@ -288,5 +288,5 @@ gulp.task( 'dist-product', ['clean-dist-product'], function() {
 
 // Deleting any file inside the /dist-product folder
 gulp.task( 'clean-dist-product', function () {
-  return del([paths.distprod + '/**',,]);
+  return del([paths.distprod + '/**',]);
 });
