@@ -89,8 +89,8 @@ class understrap_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			// remove Font Awesome icon from classes array and save the icon
 			// we will add the icon back in via a <span> below so it aligns with
 			// the menu item
-			if ( in_array( 'fa', $classes ) ) {
-				$key         = array_search( 'fa', $classes );
+			if ( in_array( 'fas', $classes ) ) {
+				$key         = array_search( 'fas', $classes );
 				$icon        = $classes[ $key + 1 ];
 				$class_names = str_replace( $classes[ $key + 1 ], '', $class_names );
 				$class_names = str_replace( $classes[ $key ], '', $class_names );
@@ -123,9 +123,9 @@ class understrap_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 				}
 			}
 			$item_output = $args->before;
-			// Font Awesome icons
+			// Font Awesome 5 Icons
 			if ( ! empty( $icon ) ) {
-				$item_output .= '<a' . $attributes . '><span class="fa ' . esc_attr( $icon ) . '"></span>&nbsp;';
+				$item_output .= '<a' . $attributes . '><span class="fas ' . esc_attr( $icon ) . '"></span>&nbsp;';
 			} else {
 				$item_output .= '<a' . $attributes . '>';
 			}
