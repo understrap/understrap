@@ -30,26 +30,25 @@ var paths = cfg.paths;
 // Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
 gulp.task( 'scss-for-prod', function() {
     var source =  gulp.src( paths.sass + '/*.scss' )
-        .pipe(plumber({
-            errorHandler: function ( err ) {
+        .pipe( plumber({
+            errorHandler: function( err ) {
                 console.log( err );
                 this.emit( 'end' );
             }
-        }))
-        .pipe( sourcemaps.init({loadMaps: true}) )
+        }) )
+        .pipe( sourcemaps.init({ loadMaps: true }) )
         .pipe( sass() );
 
     var pipe1 = source.pipe( clone() )
-        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe( sourcemaps.write( undefined, { sourceRoot: null } ) )
         .pipe( gulp.dest( paths.css ) )
         .pipe( rename( 'custom-editor-style.css' ) );
 
-
     var pipe2 = source.pipe( clone() )
-        .pipe(minify-css())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.css));
-    return merge(pipe1, pipe2);
+        .pipe( minifycss() )
+        .pipe( rename( {suffix: '.min'} ) )
+        .pipe( gulp.dest( paths.css ) );
+    return merge( pipe1, pipe2 );
 });
 
 // Run:
@@ -141,7 +140,7 @@ gulp.task( 'cssnano', function(){
     .pipe( gulp.dest( paths.css ) );
 });
 
-gulp.task( 'minify-css', function() {
+gulp.task( 'minifycss', function() {
   return gulp.src( paths.css + '/theme.css' )
   .pipe( sourcemaps.init( {loadMaps: true} ) )
     .pipe( cleanCSS( {compatibility: '*'} ) )
@@ -162,7 +161,7 @@ gulp.task( 'cleancss', function() {
     .pipe( rimraf() );
 });
 
-gulp.task( 'styles', function( callback ){ gulpSequence( 'sass', 'minify-css' )( callback ); });
+gulp.task( 'styles', function( callback ){ gulpSequence( 'sass', 'minifycss' )( callback ); });
  
 
 // Run:
