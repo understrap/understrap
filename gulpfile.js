@@ -19,7 +19,7 @@ var del = require('del');
 var cleanCSS = require('gulp-clean-css');
 var gulpSequence = require('gulp-sequence');
 var replace = require('gulp-replace');
-var autoprefixer = require('gulp-autoprefixer')
+var autoprefixer = require('gulp-autoprefixer');
 
 // Configuration file to keep your code DRY
 var cfg = require('./gulpconfig.json');
@@ -42,7 +42,7 @@ gulp.task('scss-for-prod', function() {
     var pipe1 = source.pipe(clone())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe(gulp.dest(paths.css))
-        .pipe(rename('custom-editor-style.css'))
+        .pipe(rename('custom-editor-style.css'));
 
 
     var pipe2 = source.pipe(clone())
@@ -68,7 +68,7 @@ gulp.task('scss-for-dev', function() {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest(paths.css))
+        .pipe(gulp.dest(paths.css));
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
@@ -87,10 +87,10 @@ gulp.task('sass', function () {
                 this.emit('end');
             }
         }))
-        .pipe(sass())
+        .pipe(sass({errLogToConsole: true}))
         .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest(paths.css))
-        .pipe(rename('custom-editor-style.css'))
+        .pipe(rename('custom-editor-style.css'));
     return stream;
 });
 
@@ -121,7 +121,7 @@ gulp.task('imagemin-watch', ['imagemin'], function(done) {
 gulp.task('imagemin', function(){
     gulp.src(paths.imgsrc + '/**')
     .pipe(imagemin())
-    .pipe(gulp.dest(paths.img))
+    .pipe(gulp.dest(paths.img));
 });
 
 
@@ -140,7 +140,7 @@ gulp.task('cssnano', function(){
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(paths.css));
 });
 
 gulp.task('minify-css', function() {
@@ -164,7 +164,7 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', function(callback){ gulpSequence('sass', 'minify-css')(callback) });
+gulp.task('styles', function(callback){ gulpSequence('sass', 'minify-css')(callback); });
  
 
 // Run:
@@ -206,7 +206,7 @@ gulp.task('scripts', function() {
 
 // Deleting any file inside the /src folder
 gulp.task('clean-source', function () {
-  return del(['src/**/*',]);
+  return del(['src/**/*',,]);
 });
 
 // Run:
@@ -259,7 +259,7 @@ gulp.task('copy-assets', function() {
 
 // Deleting the files distributed by the copy-assets task
 gulp.task('clean-vendor-assets', function () {
-  return del([paths.dev+'/js/bootstrap4/**', paths.dev+'/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eot,svg}', paths.dev+'/sass/fontawesome/**', paths.dev+'/sass/underscores/**', paths.dev+'/js/skip-link-focus-fix.js', paths.js+'/**/skip-link-focus-fix.js', paths.js+'/**/popper.min.js', paths.js+'/**/popper.js', (paths.vendor!=''?(paths.js+paths.vendor+'/**'):'')]);
+  return del([paths.dev+'/js/bootstrap4/**', paths.dev+'/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eot,svg}', paths.dev+'/sass/fontawesome/**', paths.dev+'/sass/underscores/**', paths.dev+'/js/skip-link-focus-fix.js', paths.js+'/**/skip-link-focus-fix.js', paths.js+'/**/popper.min.js', paths.js+'/**/popper.js', (paths.vendor!==''?(paths.js+paths.vendor+'/**'):'')]);
 });
 
 // Run
@@ -275,7 +275,7 @@ gulp.task('dist', ['clean-dist'], function() {
 
 // Deleting any file inside the /dist folder
 gulp.task('clean-dist', function () {
-  return del([paths.dist + '/**',]);
+  return del([paths.dist + '/**',,]);
 });
 
 // Run
@@ -283,10 +283,10 @@ gulp.task('clean-dist', function () {
 // Copies the files to the /dist-prod folder for distribution as theme with all assets
 gulp.task('dist-product', ['clean-dist-product'], function() {
   return gulp.src(['**/*', '!'+paths.bower, '!'+paths.bower+'/**', '!'+paths.node, '!'+paths.node+'/**', '!'+paths.dist, '!'+paths.dist+'/**', '!'+paths.distprod, '!'+paths.distprod+'/**', '*'])
-    .pipe(gulp.dest(paths.distprod))
+    .pipe(gulp.dest(paths.distprod));
 });
 
 // Deleting any file inside the /dist-product folder
 gulp.task('clean-dist-product', function () {
-  return del([paths.distprod + '/**',]);
+  return del([paths.distprod + '/**',,]);
 });
