@@ -126,7 +126,7 @@ gulp.task( 'imagemin', function() {
 gulp.task( 'cssnano', function() {
   return gulp.src( paths.css + '/theme.css' )
     .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( plumber ( {
+    .pipe( plumber( {
             errorHandler: function( err ) {
                 console.log( err );
                 this.emit( 'end' );
@@ -144,7 +144,7 @@ gulp.task( 'minifycss', function() {
     .pipe( cleanCSS( { compatibility: '*' } ) )
     .pipe( plumber( {
             errorHandler: function( err ) {
-                console.log( err) ;
+                console.log( err ) ;
                 this.emit( 'end' );
             }
         } ) )
@@ -154,12 +154,14 @@ gulp.task( 'minifycss', function() {
 });
 
 gulp.task( 'cleancss', function() {
-  return gulp.src( paths.css + '/*.min.css', { read: false } ) // much faster
-    .pipe(ignore( 'theme.css') )
+  return gulp.src( paths.css + '/*.min.css', { read: false } ) // Much faster
+    .pipe( ignore( 'theme.css' ) )
     .pipe( rimraf() );
 });
 
-gulp.task( 'styles', function( callback ){ gulpSequence( 'sass', 'minifycss' )( callback ); });
+gulp.task( 'styles', function( callback ) { 
+    gulpSequence( 'sass', 'minifycss' )( callback );
+} );
  
 
 // Run:
@@ -169,12 +171,10 @@ gulp.task( 'browser-sync', function() {
     browserSync.init( cfg.browserSyncWatchFiles, cfg.browserSyncOptions );
 } );
 
-
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function () { } );
-
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { } );
 
 // Run: 
 // gulp scripts. 
@@ -192,7 +192,7 @@ gulp.task( 'scripts', function() {
   gulp.src( scripts )
     .pipe( concat( 'theme.min.js' ) )
     .pipe( uglify() )
-    .pipe( gulp.dest(paths.js) );
+    .pipe( gulp.dest( paths.js) );
 
   gulp.src( scripts )
     .pipe( concat( 'theme.js' ) )
@@ -213,10 +213,9 @@ gulp.task( 'copy-assets', function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all JS files
-
-  
     var stream = gulp.src( paths.node + 'bootstrap/dist/js/**/*.js' )
         .pipe( gulp.dest( paths.dev + '/js/bootstrap4' ) );
+
 // Copy all Bootstrap SCSS files
     gulp.src( paths.node + 'bootstrap/scss/**/*.scss' )
         .pipe( gulp.dest( paths.dev + '/sass/bootstrap4' ) );
@@ -225,7 +224,7 @@ gulp.task( 'copy-assets', function() {
 
 // Copy all Font Awesome Fonts
     gulp.src( paths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}' )
-        .pipe( gulp.dest( './fonts') );
+        .pipe( gulp.dest( './fonts' ) );
 
 // Copy all Font Awesome SCSS files
     gulp.src( paths.node + 'font-awesome/scss/*.scss' )
@@ -244,7 +243,6 @@ gulp.task( 'copy-assets', function() {
         .pipe( gulp.dest( paths.js + paths.vendor ) );
 
 // Copy Popper JS files
-        
     gulp.src( paths.node + 'popper.js/dist/umd/popper.min.js' )
         .pipe( gulp.dest( paths.js + paths.vendor ) );
     gulp.src( paths.node + 'popper.js/dist/umd/popper.js' )
@@ -253,7 +251,7 @@ gulp.task( 'copy-assets', function() {
 });
 
 // Deleting the files distributed by the copy-assets task
-gulp.task( 'clean-vendor-assets', function () {
+gulp.task( 'clean-vendor-assets', function() {
   return del( [paths.dev+'/js/bootstrap4/**', paths.dev+'/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eot,svg}', paths.dev+'/sass/fontawesome/**', paths.dev+'/sass/underscores/**', paths.dev+'/js/skip-link-focus-fix.js', paths.js+'/**/skip-link-focus-fix.js', paths.js+'/**/popper.min.js', paths.js+'/**/popper.js', ( paths.vendor!==''?( paths.js+paths.vendor+'/**' ):'' )]);
 });
 
