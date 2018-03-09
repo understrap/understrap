@@ -10,7 +10,7 @@
 
 	<header class="entry-header">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+		<?php the_title( sprintf( '<h2 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ),
 		'</a></h2>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -25,7 +25,7 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
+	<div class="entry-summary" itemprop="description">
 
 		<?php the_excerpt(); ?>
 
