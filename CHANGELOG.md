@@ -6,6 +6,7 @@
               - Lot of fixes and improvements - Thx @Thomas-A-Reinert and @lilolbear
               - Fixes invalid code due to WP´s itemprop insertion - Thx @Thomas-A-Reinert
               - Enhanced contrast to comply with WCAG 2.0 rules - Thx @Thomas-A-Reinert
+              - Completed german translation, fixed typos etc. - Thx @Thomas-A-Reinert
               - Fixing typos in FR translation - Thx @MarieComet
               - Adding hebrew language file - Thx @asaf147369
               - Adding gulp-autoprefixer - Thx @axlright
