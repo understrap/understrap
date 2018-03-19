@@ -107,3 +107,49 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 		<?php
 	}
 endif;
+
+
+/**
+ * Add schema.org tags to html tag.
+ */
+if ( ! function_exists( 'understrap_schema_html_tag' ) ) :
+	function understrap_schema_html_tag() {
+	    $schema = 'http://schema.org/';
+
+	    // Is single post
+	    if(is_single()) {
+	        $type = "Article";
+	    }
+
+	    // Is author page
+	    elseif( is_author() ) {
+	        $type = 'ProfilePage';
+	    }
+
+	    // Is search results page
+	    elseif( is_search() ) {
+	        $type = 'SearchResultsPage';
+	    }
+
+	    else {
+	        $type = 'WebPage';
+	    }
+
+	    echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
+	}
+endif;
+
+// Remove default title-tag
+add_action( 'after_setup_theme', function() { remove_theme_support( 'title-tag' ); }, 11 );
+// Title-tag with schema.org
+add_action( 'wp_head', 'render_title_tag_with_itemprop', 1 );
+function render_title_tag_with_itemprop() {
+
+    if ( did_action( 'wp_head' ) || doing_action( 'wp_head' ) )
+    {
+        printf(
+            '<title itemprop="name">%s</title>' . PHP_EOL,
+             wp_title( '|', false, 'right' )
+        );
+    }
+}
