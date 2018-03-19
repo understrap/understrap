@@ -10,7 +10,7 @@
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php understrap_schema_html_tag(); ?> <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,14 +44,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php if ( is_front_page() && is_home() ) : ?>
 
 							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-							
+
 						<?php else : ?>
 
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-						
+
 						<?php endif; ?>
-						
-					
+
+
 					<?php } else {
 						the_custom_logo();
 					} ?><!-- end custom logo -->

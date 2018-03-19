@@ -123,3 +123,15 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	}
 }
 add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+
+
+// Add Featured Thumbnail
+if ( function_exists( 'add_theme_support' ) ) {
+    // delete the next line if you do not need additional image sizes
+    add_image_size( 'thumbnail', array('itemprop'=>'image' ) ); // Thumbnail (default 150px x 150px max)
+    add_image_size( 'medium', array('itemprop'=>'image' ), 340, 130, true ); // Medium resolution (default 300px x 300px max)
+    add_image_size( 'medium_large', array('itemprop'=>'image' ), 369, 222, true ); // Medium Large resolution (default 768px x 0px max)
+    add_image_size( 'large', array('itemprop'=>'image' ), 1920, 560, true ); // Large resolution (default 1024px x 1024px max)
+    add_image_size( 'full', array('itemprop'=>'image' ), 342, 228, true ); // Original image resolution (unmodified)
+    add_image_size( array('itemprop'=>'image' ), array(100,100) ); // Other resolutions
+ }

@@ -186,7 +186,11 @@ gulp.task( 'scripts', function() {
 
         // End - All BS4 stuff
 
-        paths.dev + '/js/skip-link-focus-fix.js'
+        paths.dev + '/js/skip-link-focus-fix.js',
+
+        // Adding currently empty javascript file to add on for your own themes´ customizations
+        // Please add any customizations to this .js file only!
+        paths.dev + '/js/custom-javascript.js'
     ];
   gulp.src( scripts )
     .pipe( concat( 'theme.min.js' ) )
