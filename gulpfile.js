@@ -44,11 +44,12 @@ gulp.task( 'scss-for-prod', function() {
         .pipe( gulp.dest( paths.css ) )
         .pipe( rename( 'custom-editor-style.css' ) );
 
-    var pipe2 = source.pipe( clone() )
-        .pipe( minifycss() )
-        .pipe( rename( { suffix: '.min' } ) )
-        .pipe( gulp.dest( paths.css ) );
-    return merge( pipe1, pipe2 );
+     var pipe2 = source.pipe( clone() )
+            .pipe( cleanCSS( { compatibility: '*' } ) )
+            .pipe( rename( { suffix: '.min' } ) )
+            .pipe( sourcemaps.write( './' ) )
+            .pipe( gulp.dest( paths.css ) );
+        return merge( pipe1, pipe2 );
 });
 
 // Run:
