@@ -83,9 +83,11 @@ gulp.task( 'sass', function() {
                 this.emit( 'end' );
             }
         } ) )
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe( sass( { errLogToConsole: true } ) )
         .pipe( autoprefixer( 'last 2 versions' ) )
-        .pipe( gulp.dest( paths.css ) );
+        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe( gulp.dest( paths.css ) )
     return stream;
 });
 
