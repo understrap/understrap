@@ -29,15 +29,3 @@ Please delete anything that does not apply for you!
 ### Expected behavior (i.e. solution)
 
 ### Other Comments
-
----
-
-## In case of Suggestions / Improvements
-
-### For which *Section* would you like to suggest a proposal?
-Please see currently planned/completed sections and their current status in [README.md](https://github.com/Thomas-A-Reinert/WordPress-Developer-Checklist/blob/master/README.md)
-
-### *What* would you like to suggest / improve?
-Please try to find at least two sources that confirm your proposal. Include URLs.
-
-### Are you missing something completely?
