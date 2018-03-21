@@ -85,8 +85,7 @@ gulp.task( 'sass', function() {
         } ) )
         .pipe( sass( { errLogToConsole: true } ) )
         .pipe( autoprefixer( 'last 2 versions' ) )
-        .pipe( gulp.dest( paths.css ) )
-        .pipe( rename( 'custom-editor-style.css' ) );
+        .pipe( gulp.dest( paths.css ) );
     return stream;
 });
 
