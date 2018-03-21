@@ -83,8 +83,10 @@ gulp.task( 'sass', function() {
                 this.emit( 'end' );
             }
         } ) )
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe( sass( { errLogToConsole: true } ) )
         .pipe( autoprefixer( 'last 2 versions' ) )
+        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe( gulp.dest( paths.css ) )
         .pipe( rename( 'custom-editor-style.css' ) );
     return stream;
