@@ -88,7 +88,6 @@ gulp.task( 'sass', function() {
         .pipe( autoprefixer( 'last 2 versions' ) )
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe( gulp.dest( paths.css ) )
-        .pipe( rename( 'custom-editor-style.css' ) );
     return stream;
 });
 
