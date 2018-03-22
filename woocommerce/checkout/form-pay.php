@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							?>
 						</td>
 						<td class="product-quantity"><?php echo apply_filters( 'woocommerce_order_item_quantity_html', ' <strong class="product-quantity">' . sprintf( '&times; %s', esc_html( $item['qty'] ) ) . '</strong>', $item ); ?></td>
-						<td class="product-subtotal"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
+						<td class="product-subtotal"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td><?php // @codingStandardsIgnoreLine ?>
 					</tr>
 				<?php endforeach; ?>
 			<?php endif; ?>
@@ -59,8 +59,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if ( $totals = $order->get_order_item_totals() ) : ?>
 				<?php foreach ( $totals as $total ) : ?>
 					<tr>
-						<th scope="row" colspan="2"><?php echo $total['label']; ?></th>
-						<td class="product-total"><?php echo $total['value']; ?></td>
+						<th scope="row" colspan="2"><?php echo $total['label']; ?></th><?php // @codingStandardsIgnoreLine ?>
+						<td class="product-total"><?php echo $total['value']; ?></td><?php // @codingStandardsIgnoreLine ?>
 					</tr>
 				<?php endforeach; ?>
 			<?php endif; ?>
