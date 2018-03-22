@@ -26,7 +26,7 @@ wc_print_notices(); ?>
 
 	<p><?php echo apply_filters( 'woocommerce_reset_password_message', __( 'Enter a new password below.', 'understrap') ); ?></p>
 
-	<p class="woocommerce-FormRow woocommerce-FormRow--first form-row form-row-first">
+	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 		<label for="password_1"><?php esc_html_e( 'New password', 'understrap' ); ?> <span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_1" id="password_1" />
 	</p>
