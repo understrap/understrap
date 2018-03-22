@@ -139,7 +139,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					<?php } ?>
 
-				<input type="submit" class="btn btn-outline-primary"  name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'understrap' ); ?>" />
+				<button type="submit" class="btn btn-outline-primary"  name="update_cart" value="<?php esc_attr_e( 'Update cart', 'understrap' ); ?>"><?php esc_html_e( 'Update cart', 'understrap' ); ?></button>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
