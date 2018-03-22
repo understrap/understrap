@@ -73,13 +73,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( $order->needs_payment() ) : ?>
 			<ul class="wc_payment_methods payment_methods methods">
 				<?php
-					if ( ! empty( $available_gateways ) ) {
-						foreach ( $available_gateways as $gateway ) {
-							wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
-						}
-					} else {
-						echo '<li>' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'understrap' ) ) . '</li>';
+				if ( ! empty( $available_gateways ) ) {
+					foreach ( $available_gateways as $gateway ) {
+						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 					}
+				} else {
+					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'understrap' ) ) . '</li>'; // @codingStandardsIgnoreLine
+				}
 				?>
 			</ul>
 		<?php endif; ?>
