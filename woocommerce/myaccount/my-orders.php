@@ -59,7 +59,7 @@ if ( $customer_orders ) : ?>
 								<time datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created() ) ); ?></time>
 
 							<?php elseif ( 'order-status' === $column_id ) : ?>
-								<?php echo wc_get_order_status_name( $order->get_status() ); ?>
+								<?php echo esc_html( wc_get_order_status_name( $order->get_status() ) ); ?>
 
 							<?php elseif ( 'order-total' === $column_id ) : ?>
 								<?php echo sprintf( _n( '%s for %s item', '%s for %s items', $item_count, 'understrap' ), $order->get_formatted_order_total(), $item_count ); ?>
