@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</tr>
 		</thead>
 		<tbody>
-			<?php if ( sizeof( $order->get_items() ) > 0 ) : ?>
+			<?php if ( count( $order->get_items() ) > 0 ) : ?>
 				<?php foreach ( $order->get_items() as $item_id => $item ) : ?>
 					<?php
 					if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
