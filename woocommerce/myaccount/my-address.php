@@ -41,7 +41,9 @@ $col    = 1;
 	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'understrap' ) ); ?>
 </p>
 
-<?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '<div class="u-columns woocommerce-Addresses col2-set addresses">'; ?>
+<?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
+	<div class="u-columns woocommerce-Addresses col2-set addresses">
+<?php endif; ?>
 
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
