@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
 			</p>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-				<label for="password"><?php _e( 'Password', 'understrap' ); ?> <span class="required">*</span></label>
+				<label for="password"><?php esc_html_e( 'Password', 'understrap' ); ?> <span class="required">*</span></label>
 				<input class="woocommerce-Input woocommerce-Input--text input-text form-control" type="password" name="password" id="password" />
 			</p>
 
