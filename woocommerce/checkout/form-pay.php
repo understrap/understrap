@@ -35,9 +35,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if ( sizeof( $order->get_items() ) > 0 ) : ?>
 				<?php foreach ( $order->get_items() as $item_id => $item ) : ?>
 					<?php
-						if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
-							continue;
-						}
+					if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
+						continue;
+					}
 					?>
 					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_order_item_class', 'order_item', $item, $order ) ); ?>">
 						<td class="product-name">
