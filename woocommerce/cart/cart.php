@@ -74,23 +74,21 @@ do_action( 'woocommerce_before_cart' ); ?>
 						}
 						?></td>
 
-						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'understrap' ); ?>">
-							<?php
-								if ( ! $product_permalink ) {
-									echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
-								} else {
-									echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
-								}
+						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'understrap' ); ?>"><?php
+						if ( ! $product_permalink ) {
+							echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
+						} else {
+							echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
+						}
 
-								// Meta data
-								echo wc_get_formatted_cart_item_data( $cart_item );
+						// Meta data.
+						echo wc_get_formatted_cart_item_data( $cart_item );
 
-								// Backorder notification
-								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-									echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>';
-								}
-							?>
-						</td>
+						// Backorder notification.
+						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+							echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'understrap' ) . '</p>';
+						}
+						?></td>
 
 						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'understrap' ); ?>">
 							<?php
