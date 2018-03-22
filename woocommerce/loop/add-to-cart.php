@@ -21,15 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product;
-echo apply_filters( 'woocommerce_loop_add_to_cart_link',
-	sprintf( '<div class="add-to-cart-container"><a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-outline-primary btn-block %s"> %s</a></div>',
+
+echo apply_filters( 'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
+	sprintf( '<div class="add-to-cart-container"><a href="%s" data-quantity="%s" class="%s product_type_%s single_add_to_cart_button btn btn-outline-primary btn-block %s" %s> %s</a></div>',
 		esc_url( $product->add_to_cart_url() ),
-		esc_attr( $product->get_id() ),
-		esc_attr( $product->get_sku() ),
-		esc_attr( isset( $quantity ) ? $quantity : 1 ),
-	$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
+		$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
 		esc_attr( $product->get_type() ),
-	$product->get_type() == 'simple' ? 'ajax_add_to_cart' : '',
+		$product->get_type() == 'simple' ? 'ajax_add_to_cart' : '',
+		isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
 		esc_html( $product->add_to_cart_text() )
 	),
-	$product );
+$product, $args );
