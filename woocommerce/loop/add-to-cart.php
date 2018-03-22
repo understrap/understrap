@@ -1,7 +1,7 @@
 <?php
 /**
  * Loop Add to Cart
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ *
  * This template can be overridden by copying it to yourtheme/woocommerce/loop/add-to-cart.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see        https://docs.woocommerce.com/document/template-structure/
- * @author        WooThemes
- * @package    WooCommerce/Templates
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
  * @version     3.3.0
  */
 

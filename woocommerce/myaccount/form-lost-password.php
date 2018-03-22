@@ -1,7 +1,7 @@
 <?php
 /**
  * Lost password form
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ *
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-lost-password.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
