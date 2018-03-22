@@ -67,13 +67,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 						<td class="product-thumbnail"><?php
 						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
-								if ( ! $product_permalink ) {
-									echo $thumbnail;
-								} else {
-									printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
-								}
-							?>
-						</td>
+						if ( ! $product_permalink ) {
+							echo $thumbnail;
+						} else {
+							printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
+						}
+						?></td>
 
 						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'understrap' ); ?>">
 							<?php
