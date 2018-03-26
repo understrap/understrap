@@ -1,31 +1,48 @@
 Please delete anything that does not apply for you!
 
-## I'm submitting a ...
-  - [ ] bug report
-  - [ ] feature request
-  - [ ] suggestion
+## Issue is about..
+  - [ ] a Bug Report
+  - [ ] a Feature Request
+  - [ ] a Suggestion
+  - [ ] a Question
+  - [ ] I need help
 
 ## Please tell us about your environment:
 
   - WordPress Version: 4.9.x
+  - OS Version: [Windows 7 | Windows 8 | Windows 10 | Linux [Distribution / Version] | MacOsX [Version | Android[Version] | iOS[Version]
   - Browser: [ all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android X.X Web Browser | iOS XX Safari ]
-  - Language: [ all | HTML | S/CSS | ES6 | JSON | NPM ]
+  - Language: [ all | PHP | SQL | HTML | S/CSS | Javascript | jQuery | ES6 | JSON | XML]
+  - Node.js & NPM Versions: Node.js [V X.XX] | NPM [V X.XX]
 
 
 ---
 
-## In case of Bugs
+# Issue Overview for Bugreports
 
-### *Who* is the bug affecting?
+## Steps to reproduce?
 
-### *What* is affected by this bug?
+## *Who* is the bug affecting?
 
-### *When* does this occur?
+## *What* is affected by this bug?
 
-### *Where* on the platform does it happen?
+## *When* does this occur?
 
-### *How* do we replicate the issue?
+## *Where* on the platform does it happen?
 
-### Expected behavior (i.e. solution)
+## *How* do we replicate the issue?
+
+## Are there any related Issues and/or PRs?
+
+## Screenshots / Video
+
+## Expected behavior
+
+# Todos
+
+ * Test
+ * Documentation
+
+
 
 ### Other Comments
