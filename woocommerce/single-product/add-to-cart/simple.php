@@ -1,7 +1,7 @@
 <?php
 /**
  * Simple product add to cart
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/add-to-cart/simple.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.3.2
+ * @version     3.0.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -31,7 +31,7 @@ if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-	<form class="cart" method="post" enctype='multipart/form-data'>
+	<form class="cart" action="<?php echo esc_url( get_permalink() ); ?>" method="post" enctype='multipart/form-data'>
 		<?php
 			/**
 			 * @since 2.1.0.
@@ -55,7 +55,7 @@ if ( $product->is_in_stock() ) : ?>
 			do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="btn btn-outline-primary"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php
 			/**

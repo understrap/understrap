@@ -132,3 +132,12 @@ function understrap_wc_form_field_args( $args, $key, $value = null ) {
 	return $args;
 }
 
+
+/**
+* Change loop add-to-cart button class to Bootstrap
+*/
+add_filter( 'woocommerce_loop_add_to_cart_args', 'understrap_woocommerce_add_to_cart_args', 10, 2 );
+function understrap_woocommerce_add_to_cart_args( $args, $product ) {
+	$args['class'] = str_replace('button','btn btn-outline-primary', 'button');
+	return $args;
+}
