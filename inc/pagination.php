@@ -5,89 +5,54 @@
  * @package understrap
  */
 
-/**
- * Custom Pagination with numbers
- * Credits to http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
- */
+    if ( ! function_exists( 'understrap_pagination' ) ) :
+        function understrap_pagination($args = [], $class = 'pagination') {
 
-if ( ! function_exists( 'understrap_pagination' ) ) :
-function understrap_pagination() {
-	if ( is_singular() ) {
-		return;
-	}
+            if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 
-	global $wp_query;
+            $args = wp_parse_args( $args, [
+                'mid_size'           => 2,
+                'prev_next'          => false,
+                'prev_text'          => __('&laquo;', 'understrap'),
+                'next_text'          => __('&raquo;', 'understrap'),
+                'screen_reader_text' => __('Posts navigation', 'understrap'),
+                'type'               => 'array',
+                'current'            => max( 1, get_query_var('paged') ),
+            ]);
 
-	/** Stop execution if there's only 1 page */
-	if ( $wp_query->max_num_pages <= 1 ) {
-		return;
-	}
+            $links     = paginate_links($args);
+            $next_link = get_next_posts_page_link();
+            $prev_link = get_previous_posts_page_link();
 
-	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-	$max   = intval( $wp_query->max_num_pages );
+            ?>
 
-	/**    Add current page to the array */
-	if ( $paged >= 1 ) {
-		$links[] = $paged;
-	}
+            <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="<?php echo esc_attr($prev_link); ?>" aria-label="<?php echo __('Previous', 'understrap'); ?>">
+                            <span aria-hidden="true"><?php echo esc_attr($args['prev_text']); ?></span>
+                            <span class="sr-only"><?php echo __('Previous', 'understrap'); ?></span>
+                        </a>
+                    </li>
 
-	/**    Add the pages around the current page to the array */
-	if ( $paged >= 3 ) {
-		$links[] = $paged - 1;
-		$links[] = $paged - 2;
-	}
+                    <?php
+                    $i = 1;
+                        foreach ( $links as $link ) { ?>
+                            <li class="page-item <?php if ($i == $args['current']) { echo active; }; ?>">
+                    <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+                            </li>
 
-	if ( ( $paged + 2 ) <= $max ) {
-		$links[] = $paged + 2;
-		$links[] = $paged + 1;
-	}
+                    <?php $i++;} ?>
 
-	echo '<nav aria-label="Page navigation"><ul class="pagination ">' . "\n";
-
-	/**    Link to first page, plus ellipses if necessary */
-	if ( ! in_array( 1, $links ) ) {
-		$class = 1 == $paged ? ' class="active page-item"' : ' class="page-item"';
-
-		printf( '<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
-		$class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-		/**    Previous Post Link */
-		if ( get_previous_posts_link() ) {
-			printf( '<li class="page-item page-item-direction page-item-prev"><span class="page-link">%1$s</span></li> ' . "\n",
-			get_previous_posts_link( '<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>' ) );
-		}
-
-		if ( ! in_array( 2, $links ) ) {
-			echo '<li class="page-item"></li>';
-		}
-	}
-
-	// Link to current page, plus 2 pages in either direction if necessary.
-	sort( $links );
-	foreach ( (array) $links as $link ) {
-		$class = $paged == $link ? ' class="active page-item"' : ' class="page-item"';
-		printf( '<li %s><a href="%s" class="page-link">%s</a></li>' . "\n", $class,
-			esc_url( get_pagenum_link( $link ) ), $link );
-	}
-
-	// Next Post Link.
-	if ( get_next_posts_link() ) {
-		printf( '<li class="page-item page-item-direction page-item-next"><span class="page-link">%s</span></li>' . "\n",
-			get_next_posts_link( '<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>' ) );
-	}
-
-	// Link to last page, plus ellipses if necessary.
-	if ( ! in_array( $max, $links ) ) {
-		if ( ! in_array( $max - 1, $links ) ) {
-			echo '<li class="page-item"></li>' . "\n";
-		}
-
-		$class = $paged == $max ? ' class="active "' : ' class="page-item"';
-		printf( '<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true"><i class="fa fa-step-forward" aria-hidden="true"></i></span><span class="sr-only">%s</span></a></li>' . "\n",
-		$class . '', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html( $max ) );
-	}
-
-	echo '</ul></nav>' . "\n";
-}
-
-endif;
+                    <li class="page-item">
+                        <a class="page-link" href="<?php echo esc_attr($next_link); ?>" aria-label="<?php echo __('Next', 'understrap'); ?>">
+                            <span aria-hidden="true"><?php echo esc_attr($args['next_text']); ?></span>
+                            <span class="sr-only"><?php echo __('Next', 'understrap'); ?></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <?php
+        }
+    endif;
+?>
