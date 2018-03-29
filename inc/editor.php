@@ -9,11 +9,12 @@
  * Registers an editor stylesheet for the theme.
  */
 
+add_action( 'admin_init', 'understrap_wpdocs_theme_add_editor_styles' );
+
 if ( ! function_exists ( 'understrap_wpdocs_theme_add_editor_styles' ) ) {
   function understrap_wpdocs_theme_add_editor_styles() {
     add_editor_style( 'css/custom-editor-style.min.css' );
   }
-  add_action( 'admin_init', 'understrap_wpdocs_theme_add_editor_styles' );
 }
 
 // Add TinyMCE style formats.
@@ -26,6 +27,9 @@ if ( ! function_exists ( 'understrap_tiny_mce_style_formats' ) ) {
       return $styles;
   }
 }
+
+
+add_filter( 'tiny_mce_before_init', 'understrap_tiny_mce_before_init' );
 
 if ( ! function_exists ( 'understrap_tiny_mce_before_init' ) ) {
   function understrap_tiny_mce_before_init( $settings ) {
@@ -68,5 +72,3 @@ if ( ! function_exists ( 'understrap_tiny_mce_before_init' ) ) {
       return $settings;
   }
 }
-
-add_filter( 'tiny_mce_before_init', 'understrap_tiny_mce_before_init' );
