@@ -31,7 +31,7 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom template tags for this theme.
+ * Custom pagination for this theme.
  */
 require get_template_directory() . '/inc/pagination.php';
 
