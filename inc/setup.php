@@ -11,7 +11,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'understrap_setup' ) ) :
+add_action( 'after_setup_theme', 'understrap_setup' );
+
+if ( ! function_exists ( 'understrap_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -91,8 +93,10 @@ if ( ! function_exists( 'understrap_setup' ) ) :
 		understrap_setup_theme_default_settings();
 
 	}
-endif; // understrap_setup.
-add_action( 'after_setup_theme', 'understrap_setup' );
+}
+
+
+add_filter( 'excerpt_more', 'understrap_custom_excerpt_more' );
 
 if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 	/**
@@ -106,7 +110,8 @@ if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 		return '';
 	}
 }
-add_filter( 'excerpt_more', 'understrap_custom_excerpt_more' );
+
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
 
 if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	/**
@@ -122,4 +127,3 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 		'understrap' ) . '</a></p>';
 	}
 }
-add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );

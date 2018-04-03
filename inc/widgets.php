@@ -44,6 +44,8 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 	}
 }
 
+add_action( 'widgets_init', 'understrap_widgets_init' );
+
 if ( ! function_exists( 'understrap_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
@@ -101,5 +103,3 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
-add_action( 'widgets_init', 'understrap_widgets_init' );
-
