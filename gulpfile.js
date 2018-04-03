@@ -107,9 +107,8 @@ gulp.task( 'watch', function() {
  * Ensures the 'imagemin' task is complete before reloading browsers
  * @verbose
  */
-gulp.task( 'imagemin-watch', ['imagemin'], function( done ) {
+gulp.task( 'imagemin-watch', ['imagemin'], function( ) {
   browserSync.reload();
-  done();
 });
 
 // Run:
