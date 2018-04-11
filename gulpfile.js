@@ -60,6 +60,7 @@ function scripts( done ) {
 
         paths.dev + '/js/bootstrap4/bootstrap.js',
 
+        paths.dev + '/js/skip-link-focus-fix.js',
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
         paths.dev + '/js/custom-javascript.js'
@@ -118,6 +119,10 @@ gulp.task( 'copy-assets', function(done) {
 // _s SCSS files
     gulp.src( paths.node + 'undescores-for-npm/sass/media/*.scss' )
         .pipe( gulp.dest( paths.dev + '/sass/underscores' ) );
+
+// _s JS files into /src/js
+    gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
+.pipe( gulp.dest( paths.dev + '/js' ) );
 
 // Copy Popper JS files
     gulp.src( paths.node + 'popper.js/dist/umd/popper.min.js' )
