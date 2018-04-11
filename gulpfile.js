@@ -60,8 +60,6 @@ function scripts( done ) {
 
         paths.dev + '/js/bootstrap4/bootstrap.js',
 
-        paths.dev + '/js/skip-link-focus-fix.js',
-
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
         paths.dev + '/js/custom-javascript.js'
@@ -121,14 +119,6 @@ gulp.task( 'copy-assets', function(done) {
     gulp.src( paths.node + 'undescores-for-npm/sass/media/*.scss' )
         .pipe( gulp.dest( paths.dev + '/sass/underscores' ) );
 
-// _s JS files into /src/js
-    gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
-        .pipe( gulp.dest( paths.dev + '/js' ) );
-
-// _s JS files into /js
-    gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
-        .pipe( gulp.dest( paths.js + paths.vendor ) );
-
 // Copy Popper JS files
     gulp.src( paths.node + 'popper.js/dist/umd/popper.min.js' )
         .pipe( gulp.dest( paths.js + paths.vendor ) );
@@ -155,8 +145,7 @@ gulp.task( 'dist', gulp.series('clean-dist', function() {
   return gulp.src( ['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'], { 'buffer': false } )
   .pipe( replace( '/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', { 'skipBinary': true } ) )
   .pipe( replace( '/js/popper.min.js', '/js' + paths.vendor + '/popper.min.js', { 'skipBinary': true } ) )
-  .pipe( replace( '/js/skip-link-focus-fix.js', '/js' + paths.vendor + '/skip-link-focus-fix.js', { 'skipBinary': true } ) )
-    .pipe( gulp.dest( paths.dist ) );
+  .pipe( gulp.dest( paths.dist ) );
 }));
 
 // BrowserSync reload helper function
