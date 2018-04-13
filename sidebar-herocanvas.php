@@ -11,6 +11,10 @@
 
 	<!-- ******************* The Hero Canvas Widget Area ******************* -->
 
-	<?php dynamic_sidebar( 'herocanvas' ); ?>
+	<div class="wrapper" id="wrapper-hero-canvas">
+
+		<?php dynamic_sidebar( 'herocanvas' ); ?>
+
+	</div>
 
 <?php endif; ?>
