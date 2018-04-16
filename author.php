@@ -8,7 +8,7 @@
  */
 
 get_header();
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 
@@ -27,7 +27,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<?php
 					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
-						$author_name ) : get_userdata( intval( $author ) );
+					$author_name ) : get_userdata( intval( $author ) );
 					?>
 
 					<h1><?php esc_html_e( 'About:', 'understrap' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
@@ -58,11 +58,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<ul>
 
 					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					if ( have_posts() ) :
+
+						while ( have_posts() ) :
+							the_post();
+							?>
 							<li>
-								<a rel="bookmark" href="<?php the_permalink() ?>"
-								   title="<?php esc_html_e( 'Permanent Link:', 'understrap' ); ?> <?php the_title(); ?>">
+								<a rel="bookmark" href="<?php the_permalink(); ?>" title="<?php esc_html_e( 'Permanent Link:', 'understrap' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
 								<?php understrap_posted_on(); ?> <?php esc_html_e( 'in',
 								'understrap' ); ?> <?php the_category( '&' ); ?>

@@ -5,12 +5,11 @@
  * @package understrap
  */
 
-?>
-
-<?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
-
+if ( is_active_sidebar( 'herocanvas' ) ) :
+	?>
 	<!-- ******************* The Hero Canvas Widget Area ******************* -->
 
-	<?php dynamic_sidebar( 'herocanvas' ); ?>
+	<?php
+	dynamic_sidebar( 'herocanvas' );
 
-<?php endif; ?>
+endif;
