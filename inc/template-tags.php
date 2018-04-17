@@ -7,11 +7,10 @@
  * @package understrap
  */
 
-
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
-if ( ! function_exists ( 'understrap_posted_on' ) ) {
+if ( ! function_exists( 'understrap_posted_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
 	function understrap_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -23,11 +22,11 @@ if ( ! function_exists ( 'understrap_posted_on' ) ) {
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
 		);
-		$posted_on = sprintf(
+		$posted_on   = sprintf( /* translators: %s is a link to date based archives with a time string */
 			esc_html_x( 'Posted on %s', 'post date', 'understrap' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
-		$byline = sprintf(
+		$byline      = sprintf( /* translators: %s is a vcard containing a link to author archives */
 			esc_html_x( 'by %s', 'post author', 'understrap' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
@@ -35,22 +34,23 @@ if ( ! function_exists ( 'understrap_posted_on' ) ) {
 	}
 }
 
-
-/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
-if ( ! function_exists ( 'understrap_entry_footer' ) ) {
+if ( ! function_exists( 'understrap_entry_footer' ) ) {
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
 	function understrap_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
 			if ( $categories_list && understrap_categorized_blog() ) {
+				/* translators: %1%s is a list of taxonomy terms (tags). */
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'understrap' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
 			if ( $tags_list ) {
+				/* translators: %1%s is a list of taxonomy terms (tags). */
 				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'understrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
@@ -77,9 +77,10 @@ if ( ! function_exists ( 'understrap_entry_footer' ) ) {
  *
  * @return bool
  */
-if ( ! function_exists ( 'understrap_categorized_blog' ) ) {
+if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 	function understrap_categorized_blog() {
-		if ( false === ( $all_the_cool_cats = get_transient( 'understrap_categories' ) ) ) {
+		$all_the_cool_cats = get_transient( 'understrap_categories' );
+		if ( false === $all_the_cool_cats ) {
 			// Create an array of all the categories that are attached to posts.
 			$all_the_cool_cats = get_categories( array(
 				'fields'     => 'ids',
@@ -101,14 +102,12 @@ if ( ! function_exists ( 'understrap_categorized_blog' ) ) {
 	}
 }
 
-
-/**
- * Flush out the transients used in understrap_categorized_blog.
- */
 add_action( 'edit_category', 'understrap_category_transient_flusher' );
-add_action( 'save_post',     'understrap_category_transient_flusher' );
-
-if ( ! function_exists ( 'understrap_category_transient_flusher' ) ) {
+add_action( 'save_post', 'understrap_category_transient_flusher' );
+if ( ! function_exists( 'understrap_category_transient_flusher' ) ) {
+	/**
+	 * Flush out the transients used in understrap_categorized_blog.
+	 */
 	function understrap_category_transient_flusher() {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;

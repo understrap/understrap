@@ -5,7 +5,6 @@
  * @package understrap
  */
 
-
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
@@ -13,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 
 add_action( 'after_setup_theme', 'understrap_setup' );
 
-if ( ! function_exists ( 'understrap_setup' ) ) {
+if ( ! function_exists( 'understrap_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -123,7 +122,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 
-		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __( 'Read More...',
+		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
 		'understrap' ) . '</a></p>';
 	}
 }
