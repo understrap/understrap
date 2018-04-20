@@ -49,7 +49,6 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 function understrap_woocommerce_wrapper_end() {
 	echo '</main><!-- #main -->';
-	echo '</div><!-- #primary -->';
 	get_template_part( 'global-templates/right-sidebar-check' );
   echo '</div><!-- .row -->';
 	echo '</div><!-- Container end -->';
