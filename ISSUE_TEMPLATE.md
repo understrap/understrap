@@ -9,11 +9,11 @@ Please delete anything that does not apply for you!
 
 ## Please tell us about your environment:
 
-  - WordPress Version: 4.9.x
-  - OS Version: [Windows 7 | Windows 8 | Windows 10 | Linux [Distribution / Version] | MacOsX [Version | Android[Version] | iOS[Version]
-  - Browser: [ all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android X.X Web Browser | iOS XX Safari ]
-  - Language: [ all | PHP | SQL | HTML | S/CSS | Javascript | jQuery | ES6 | JSON | XML]
-  - Node.js & NPM Versions: Node.js [V X.XX] | NPM [V X.XX]
+  - **WordPress Version:** 4.9.x
+  - **OS Version:** [Windows 7 | Windows 8 | Windows 10] | Linux [Distribution / Version] | MacOS [Version] | Android [Version] | iOS [Version]
+  - **Browser:** [ all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android X.X Web Browser | iOS XX Safari ]
+  - **Language:** [ all | PHP | SQL | HTML | S/CSS | Javascript | jQuery | ES6 | JSON | XML]
+  - **Node.js & NPM Versions:** Node.js [V X.XX] | NPM [V X.XX]
 
 
 ---
