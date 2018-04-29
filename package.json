@@ -31,11 +31,12 @@
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "font-awesome": "^4.7.0",
-    "gulp": "3.9.1",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-clone": "2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-clone": "^2.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.2",
+    "gulp-cssnano": "^2.1.3",
     "gulp-ignore": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-merge": "^0.1.1",
@@ -43,15 +44,17 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-rimraf": "^0.2.2",
-    "gulp-sass": "4.0.1",
-    "gulp-sequence": "1.0.0",
-    "gulp-sourcemaps": "2.6.4",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
-    "gulp-watch": "5.0.0",
+    "gulp-watch": "^5.0.0",
     "merge2": "^1.2.1",
     "popper.js": "^1.12.9",
     "run-sequence": "^2.2.1",
-    "undescores-for-npm": "^1.0.0",
-    "gulp-autoprefixer": "^5.0.0"
+    "undescores-for-npm": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-rev": "^8.1.1"
   }
 }

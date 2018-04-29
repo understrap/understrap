@@ -20,6 +20,7 @@ var cleanCSS = require( 'gulp-clean-css' );
 var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
+var rev = require( 'gulp-rev' );
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
@@ -94,7 +95,23 @@ gulp.task( 'cssnano', function() {
     .pipe( gulp.dest( paths.css ) );
 });
 
-gulp.task( 'minifycss', function() {
+gulp.task( 'rev', function() {
+  // by default, gulp would pick `assets/css` as the base,
+  // so we need to set it explicitly:
+  gulp.src([paths.css + '/theme.min.css', paths.js + '/theme.min.js'], {base: './'})
+    .pipe(rev())
+    .pipe(gulp.dest('./'))  // write rev'd assets to build dir
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('./'));  // write manifest to build dir
+
+  gulp.src([paths.js + '/theme.min.js'], {base: './'})
+    .pipe(rev())
+    .pipe(gulp.dest('./'))  // write rev'd assets to build dir
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task( 'minifycss', function( ) {
   return gulp.src( paths.css + '/theme.css' )
   .pipe( sourcemaps.init( { loadMaps: true } ) )
     .pipe( cleanCSS( { compatibility: '*' } ) )
@@ -105,7 +122,8 @@ gulp.task( 'minifycss', function() {
             }
         } ) )
     .pipe( rename( { suffix: '.min' } ) )
-     .pipe( sourcemaps.write( './' ) )
+    .pipe( cssnano( { discardComments: { removeAll: true } } ) )
+    .pipe( sourcemaps.write( './' ) )
     .pipe( gulp.dest( paths.css ) );
 });
 
@@ -116,7 +134,7 @@ gulp.task( 'cleancss', function() {
 });
 
 gulp.task( 'styles', function( callback ) {
-    gulpSequence( 'sass', 'minifycss' )( callback );
+    gulpSequence( 'sass', 'minifycss', 'rev' )( callback );
 } );
 
 // Run:
@@ -129,11 +147,11 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { 
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 } );
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task( 'scripts', function() {
     var scripts = [
@@ -157,6 +175,8 @@ gulp.task( 'scripts', function() {
   gulp.src( scripts )
     .pipe( concat( 'theme.js' ) )
     .pipe( gulp.dest( paths.js ) );
+
+    rev();
 });
 
 // Deleting any file inside the /src folder
@@ -215,11 +235,11 @@ gulp.task( 'clean-vendor-assets', function() {
 // gulp dist
 // Copies the files to the /dist folder for distribution as simple theme
 gulp.task( 'dist', ['clean-dist'], function() {
-  return gulp.src( ['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'], { 'buffer': false } )
+  gulp.src( ['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml',  '*'], { 'buffer': false } )
   .pipe( replace( '/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', { 'skipBinary': true } ) )
   .pipe( replace( '/js/popper.min.js', '/js' + paths.vendor + '/popper.min.js', { 'skipBinary': true } ) )
   .pipe( replace( '/js/skip-link-focus-fix.js', '/js' + paths.vendor + '/skip-link-focus-fix.js', { 'skipBinary': true } ) )
-    .pipe( gulp.dest( paths.dist ) );
+  .pipe( gulp.dest( paths.dist ) );
 });
 
 // Deleting any file inside the /dist folder
