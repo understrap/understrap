@@ -26,7 +26,7 @@ var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
 gulp.task( 'watch-scss', ['browser-sync'], function() {
-    gulp.watch( paths.sass + '/**/*.scss', ['scss-for-dev'] );
+    gulp.watch( paths.sass + '/**/*.scss', ['sass'] );
 });
 
 // Run:
@@ -78,7 +78,7 @@ gulp.task( 'imagemin', function() {
 
 // Run:
 // gulp cssnano
-// Minifies CSS files
+// Minifies CSS files. Alternative to minifycss.
 gulp.task( 'cssnano', function() {
   return gulp.src( paths.css + '/theme.css' )
     .pipe( sourcemaps.init( { loadMaps: true } ) )
@@ -94,6 +94,9 @@ gulp.task( 'cssnano', function() {
     .pipe( gulp.dest( paths.css ) );
 });
 
+// Run:
+// gulp minifycss
+// Minifies CSS files. The current default.
 gulp.task( 'minifycss', function() {
   return gulp.src( paths.css + '/theme.css' )
   .pipe( sourcemaps.init( { loadMaps: true } ) )
@@ -109,12 +112,18 @@ gulp.task( 'minifycss', function() {
     .pipe( gulp.dest( paths.css ) );
 });
 
+// Run:
+// gulp cleancss
+// Cleans minified CSS files.
 gulp.task( 'cleancss', function() {
   return gulp.src( paths.css + '/*.min.css', { read: false } ) // Much faster
     .pipe( ignore( 'theme.css' ) )
     .pipe( rimraf() );
 });
 
+// Run:
+// gulp styles
+// Compiles and minifies Sass
 gulp.task( 'styles', function( callback ) {
     gulpSequence( 'sass', 'minifycss' )( callback );
 } );
