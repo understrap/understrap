@@ -172,9 +172,13 @@ gulp.task( 'clean-source', function() {
 gulp.task( 'copy-assets', function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
-// Copy all JS files
+// Copy all pre-compiled JS files
     var stream = gulp.src( paths.node + 'bootstrap/dist/js/**/*.js' )
         .pipe( gulp.dest( paths.dev + '/js/bootstrap4' ) );
+
+// Copy all individual dist JS files
+    var stream = gulp.src( paths.node + 'bootstrap/js/dist/*.js' )
+        .pipe( gulp.dest( paths.dev + '/js/bootstrap4/dist/' ) );
 
 // Copy all Bootstrap SCSS files
     gulp.src( paths.node + 'bootstrap/scss/**/*.scss' )
