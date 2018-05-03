@@ -139,7 +139,25 @@ gulp.task( 'scripts', function() {
     var scripts = [
 
         // Start - All BS4 stuff
+
+        // Full BS4 JS file. Comment this out if you are using the individual modules below
         paths.dev + '/js/bootstrap4/bootstrap.js',
+
+        // BS4 Modules. Select which BS4 modules to include.
+        // Comment out the main BS4 file above if you use the modules below.
+        // Include util.js and index.js if you use any of the modules below.
+        //paths.dev + '/js/bootstrap4/dist/util.js', // Required for all individual modules
+        //paths.dev + '/js/bootstrap4/dist/alert.js',
+        //paths.dev + '/js/bootstrap4/dist/button.js',
+        //paths.dev + '/js/bootstrap4/dist/carousel.js',
+        //paths.dev + '/js/bootstrap4/dist/collapse.js',
+        //paths.dev + '/js/bootstrap4/dist/dropdown.js', // Requires popper.js
+        //paths.dev + '/js/bootstrap4/dist/modal.js',
+        //paths.dev + '/js/bootstrap4/dist/popover.js', // Requires popper.js
+        //paths.dev + '/js/bootstrap4/dist/scrollspy.js',
+        //paths.dev + '/js/bootstrap4/dist/tab.js',
+        //paths.dev + '/js/bootstrap4/dist/tooltip.js', // Requires popper.js
+        //paths.dev + '/js/bootstrap4/dist/index.js', // Required for all individual modules
 
         // End - All BS4 stuff
 
