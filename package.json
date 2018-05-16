@@ -42,6 +42,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
+    "gulp-rev": "^8.1.1",
     "gulp-rimraf": "^0.2.2",
     "gulp-sass": "4.0.1",
     "gulp-sequence": "1.0.0",
