@@ -140,7 +140,7 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts', 'rev'], function() {
 } );
 
 // Run:
@@ -163,13 +163,12 @@ gulp.task( 'scripts', function() {
   gulp.src( scripts )
     .pipe( concat( 'theme.min.js' ) )
     .pipe( uglify() )
-    .pipe( gulp.dest( paths.js ) );
+    .pipe( gulp.dest( paths.js ) )
+    rev();
 
   gulp.src( scripts )
     .pipe( concat( 'theme.js' ) )
     .pipe( gulp.dest( paths.js ) );
-
-  rev();
 });
 
 // Deleting any file inside the /src folder
