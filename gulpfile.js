@@ -161,7 +161,7 @@ gulp.task( 'scripts', function() {
         paths.dev + '/js/custom-javascript.js'
     ];
   gulp.src( scripts )
-    .pipe( concat( 'child-theme.min.js' ) )
+    .pipe( concat( 'theme.min.js' ) )
     .pipe( uglify() )
     .pipe( gulp.dest( paths.js ) )
     rev();
