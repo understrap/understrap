@@ -23,6 +23,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
 		$req       = get_option( 'require_name_email' );
 		$aria_req  = ( $req ? " aria-required='true'" : '' );
 		$html5     = current_theme_supports( 'html5', 'comment-form' ) ? 1 : 0;
+		$consent  = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 		$fields    = array(
 			'author'  => '<div class="form-group comment-form-author"><label for="author">' . __( 'Name',
 					'understrap' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
