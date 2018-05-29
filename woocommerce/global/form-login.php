@@ -32,11 +32,11 @@ if ( is_user_logged_in() ) {
 	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?>
 
 	<p class="form-row form-row-first">
-		<label for="username"><?php esc_html_e( 'Username or email', 'understrap' ); ?> <span class="required">*</span></label>
+		<label for="username"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="text" class="input-text form-control" name="username" id="username" />
 	</p>
 	<p class="form-row form-row-last">
-		<label for="password"><?php esc_html_e( 'Password', 'understrap' ); ?> <span class="required">*</span></label>
+		<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input class="input-text form-control" type="password" name="password" id="password" />
 	</p>
 	<div class="clear"></div>
@@ -45,14 +45,14 @@ if ( is_user_logged_in() ) {
 
 	<p class="form-row">
 		<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-		<button type="submit" class="btn btn-outline-primary" name="login" value="<?php esc_attr_e( 'Login', 'understrap' ); ?>"><?php esc_html_e( 'Login', 'understrap' ); ?></button>
+		<button type="submit" class="btn btn-outline-primary" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
 		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ) ?>" />
 		<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
-			<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'understrap' ); ?></span>
+			<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
 		</label>
 	</p>
 	<p class="lost_password">
-		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'understrap' ); ?></a>
+		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
 	</p>
 
 	<div class="clear"></div>
