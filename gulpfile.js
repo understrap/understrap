@@ -102,6 +102,7 @@ gulp.task( 'rev', function() {
     .pipe(rev())
     .pipe(gulp.dest('./'))  // write rev'd assets to build dir
     .pipe(rev.manifest())
+    .pipe(revDel({dest: './'}))
     .pipe(gulp.dest('./'));  // write manifest to build dir
 });
 
