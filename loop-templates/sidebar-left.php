@@ -20,4 +20,4 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<?php endif; ?>
 <?php dynamic_sidebar( 'left-sidebar' ); ?>
 
-</div><!-- #secondary -->
+</div><!-- #left-sidebar -->
