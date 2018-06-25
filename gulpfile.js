@@ -21,6 +21,7 @@ var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 var rev = require('gulp-rev');
+var revDel = require('rev-del)';
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
@@ -102,6 +103,7 @@ gulp.task( 'rev', function() {
     .pipe(rev())
     .pipe(gulp.dest('./'))  // write rev'd assets to build dir
     .pipe(rev.manifest())
+    .pipe(revDel({dest: './'}))
     .pipe(gulp.dest('./'));  // write manifest to build dir
 });
 
