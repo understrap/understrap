@@ -10,7 +10,7 @@
  * @return string
  */
 function asset_path($filename) {
-    $manifest_path = get_stylesheet_directory_uri() .'/rev-manifest.json';
+    $manifest_path = get_stylesheet_directory() .'/rev-manifest.json';
     if ( file_exists($manifest_path ) ) {
         $manifest = json_decode( file_get_contents( $manifest_path ), TRUE );
     } else {
