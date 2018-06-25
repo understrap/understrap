@@ -11,11 +11,11 @@
 
 	<div class="wrapper" id="wrapper-hero">
 	
-		<?php get_template_part( 'loop-templates/sidebar', 'hero' ); ?>
+		<?php get_template_part( 'sidebar-templates/sidebar', 'hero' ); ?>
 		
-		<?php get_template_part( 'loop-templates/sidebar', 'herocanvas' ); ?>
+		<?php get_template_part( 'sidebar-templates/sidebar', 'herocanvas' ); ?>
 
-		<?php get_template_part( 'loop-templates/sidebar', 'statichero' ); ?>
+		<?php get_template_part( 'sidebar-templates/sidebar', 'statichero' ); ?>
 
 	</div>
 

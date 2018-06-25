@@ -12,7 +12,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <?php if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
-	<?php get_template_part( 'loop-templates/sidebar', 'left' ); ?>
+	<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
 <?php endif; ?>
 
 <?php
