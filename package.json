@@ -46,7 +46,9 @@
     "gulp-watch": "5.0.0",
     "merge2": "^1.2.1",
     "popper.js": "^1.14.1",
-    "rev-del": "1.0.5",
-    "undescores-for-npm": "^1.0.0"
+    "rev-del": "^1.0.5",
+    "undescores-for-npm": "^1.0.0",
+    "undescores-for-npm": "^1.0.0",
+
   }
 }
