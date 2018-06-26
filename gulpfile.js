@@ -12,7 +12,8 @@ var autoprefixer = require( 'autoprefixer' ),
     sass = require( 'gulp-sass' ),
     sourcemaps = require( 'gulp-sourcemaps' ),
     uglify = require( 'gulp-uglify' ),
-    rev = require('gulp-rev');
+    rev = require('gulp-rev'),
+    revDel = require('rev-del');
 
 
 // Configuration file to keep your code DRY
@@ -193,6 +194,7 @@ gulp.task( 'revision', function(done) {
     .pipe(rev())
     .pipe(gulp.dest('./'))  // write rev'd assets to build dir
     .pipe(rev.manifest())
+    .pipe(revDel({dest: './'}))
     .pipe(gulp.dest('./'));  // write manifest to build dir
     done();
 
