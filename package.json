@@ -28,7 +28,7 @@
   "homepage": "https://understrap.com",
   "dependencies": {
     "autoprefixer": "^8.6.2",
-    "bootstrap": "4.0.0",
+    "bootstrap": "4.1.0",
     "browser-sync": "^2.24.4",
     "del": "^3.0.0",
     "font-awesome": "^4.7.0",
