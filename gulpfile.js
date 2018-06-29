@@ -145,7 +145,7 @@ gulp.task( 'clean-dist', function() {
   return del( ['dist/**/*', '!dist'] );
 });
 
-gulp.task( 'revision', function(done) {
+function revision( done ) {
   // by default, gulp would pick `assets/css` as the base,
   // so we need to set it explicitly:
   gulp.src([paths.css + '/theme.min.css', paths.js + '/theme.min.js'], {base: './'})
@@ -155,7 +155,9 @@ gulp.task( 'revision', function(done) {
     .pipe(revDel({dest: './'}))
     .pipe(gulp.dest('./'));  // write manifest to build dir
     done();
-});
+};
+
+exports.revision = revision;
 
 // Run
 // gulp dist
