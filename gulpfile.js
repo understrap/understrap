@@ -145,21 +145,24 @@ gulp.task( 'clean-dist', function() {
   return del( ['dist/**/*', '!dist'] );
 });
 
-gulp.task('revision', function(done) {
+function revision( done ) {
   // by default, gulp would pick `assets/css` as the base,
   // so we need to set it explicitly:
   gulp.src([paths.css + '/theme.min.css', paths.js + '/theme.min.js'], {base: './'})
     .pipe(rev())
     .pipe(gulp.dest('./'))  // write rev'd assets to build dir
     .pipe(rev.manifest())
+    .pipe(revDel({dest: './'}))
     .pipe(gulp.dest('./'));  // write manifest to build dir
-done();
-});
+    done();
+};
+
+exports.revision = revision;
 
 // Run
 // gulp dist
 // Copies the files to the /dist folder for distribution as simple theme
-gulp.task( 'dist', gulp.series( 'clean-dist', 'revision', function(done) {
+gulp.task( 'dist', gulp.series( 'clean-dist', function(done) {
 
   gulp.src( ['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml', 'rev-manifest.json', '*'], { 'buffer': false } )
   .pipe( replace( '/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', { 'skipBinary': true } ) )
@@ -178,24 +181,11 @@ function reload( done ){
 // BrowserSync main task
 gulp.task( 'watch-bs', function( done ) {
     browserSync.init( cfg.browserSyncWatchFiles, cfg.browserSyncOptions );
-    gulp.watch( paths.sass + '/**/*.scss', gulp.series(scss, minifycss, reload) );
-    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], gulp.series( scripts, reload ) );
+    gulp.watch( paths.sass + '/**/*.scss', gulp.series(scss, minifycss, revision, reload) );
+    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], gulp.series( scripts, revision, reload ) );
 
     //Inside the watch task.
     gulp.watch( paths.imgsrc + '/**', gulp.series( imagemin, reload ) );
-    done();
-
-});
-
-gulp.task( 'revision', function(done) {
-  // by default, gulp would pick `assets/css` as the base,
-  // so we need to set it explicitly:
-  gulp.src([paths.css + '/theme.min.css', paths.js + '/theme.min.js'], {base: './'})
-    .pipe(rev())
-    .pipe(gulp.dest('./'))  // write rev'd assets to build dir
-    .pipe(rev.manifest())
-    .pipe(revDel({dest: './'}))
-    .pipe(gulp.dest('./'));  // write manifest to build dir
     done();
 
 });
