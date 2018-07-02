@@ -7,6 +7,8 @@
  * @package understrap
  */
 
+add_filter( 'body_class', 'understrap_body_classes' );
+
 if ( ! function_exists( 'understrap_body_classes' ) ) {
 	/**
 	 * Adds custom classes to the array of body classes.
@@ -28,7 +30,6 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 		return $classes;
 	}
 }
-add_filter( 'body_class', 'understrap_body_classes' );
 
 // Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
 add_filter( 'body_class', 'understrap_adjust_body_class' );
@@ -78,8 +79,8 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 /**
  * Display navigation to next/previous post when applicable.
  */
-if ( ! function_exists( 'understrap_post_nav' ) ) :
 
+if ( ! function_exists ( 'understrap_post_nav' ) ) {
 	function understrap_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
@@ -106,4 +107,4 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 
 		<?php
 	}
-endif;
+}
