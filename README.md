@@ -91,6 +91,8 @@ There are several ways to install UnderStrap. We'll look at three of them: (1) c
 - Run: `$ npm install`
 
 ### Running
+NOTE: UnderStrap uses gulp v.4. Please make sure that gulp-cli is up to date (As of writing current version is 2.0.1)
+
 To work with and compile your Sass files on the fly start:
 
 - `$ gulp watch`
