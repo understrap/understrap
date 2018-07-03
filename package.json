@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "author": "Holger Koenemann",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/holger1411/understrap/issues"
+    "url": "https://github.com/understrap/understrap/issues"
   },
   "homepage": "https://understrap.com",
   "dependencies": {
