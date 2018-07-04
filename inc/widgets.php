@@ -102,9 +102,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Bottom Full', 'understrap' ),
+			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
-			'description'   => 'Full bottom widget with dynmic grid',
+			'description'   => 'Full sized footer widget with dynamic grid',
 		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. understrap_slbd_count_widgets( 'footerfull' ) .'">', 
 		    'after_widget'   => '</div><!-- .footer-widget -->', 
 		    'before_title'   => '<h3 class="widget-title">', 
