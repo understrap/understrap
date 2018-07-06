@@ -5,7 +5,6 @@
  * @package understrap
  */
 
-
 add_action( 'after_setup_theme', 'understrap_woocommerce_support' );
 if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 	/**
@@ -23,7 +22,6 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
 	}
 }
-
 
 /**
 * First unhook the WooCommerce wrappers
