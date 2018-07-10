@@ -1,3 +1,20 @@
+            - ** Release 0.8.3 July 3rd 2018 **  
+              - Update to Bootstrap 4.1.1   
+              - Update to Gulp 4
+              - Moving closing primary </div> into right-sidebar-check.php    
+              - Adding hero canvas widget pos
+              - Swap customized walker to latest upstream wp-bootstrap-navwalker class - Thx @pattonwebz
+              - gulp-rev - Thx @0dp
+              - Update pagination - thx @0dp
+              - Adding german formal language - Thx @Thomas-A-Reinert
+              - Added cookies checkbox support for inc/custom-comments.php - Thx @Jean Pierre Kolb
+              - Create Japanese translation - Thx @teruteru128
+              - WooCommerce 3.4.0 update - Thx @ZacharyElkins
+              - Organize sidebar files into loop-templates directory - Thx @axlright
+              - Update package.json
+              - POT file and Russian translation update - Thx @edkozuto 
+
+
             - ** Release 0.8.2 April 11th 2018 **
               - Update to Bootstrap 4.1
               - Adding CONTRIBUTING.md and ISSUE_TEMPLATE.md - Thx @Thomas-A-Reinert

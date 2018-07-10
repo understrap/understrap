@@ -1,5 +1,0 @@
-# Testing
-
-[] YES
-
-[] NO!

@@ -25,7 +25,7 @@ if ( $max_value && $min_value === $max_value ) {
 	<?php
 } else {
 	/* translators: %s: Quantity. */
-	$labelledby = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'woocommerce' ), strip_tags( $args['product_name'] ) ) : '';
+	$labelledby = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'understrap' ), strip_tags( $args['product_name'] ) ) : '';
 	?>
 	<div class="quantity">
 		<label class="sr-only" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'understrap' ); ?></label>
