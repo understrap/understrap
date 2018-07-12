@@ -11,15 +11,15 @@ if ( ! function_exists ( 'understrap_pagination' ) ) {
 
         if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 
-        $args = wp_parse_args( $args, [
-            'mid_size'           => 2,
-            'prev_next'          => true,
-            'prev_text'          => __('&laquo;', 'understrap'),
-            'next_text'          => __('&raquo;', 'understrap'),
-            'screen_reader_text' => __('Posts navigation', 'understrap'),
-            'type'               => 'array',
-            'current'            => max( 1, get_query_var('paged') ),
-        ]);
+		$args = wp_parse_args( $args, array(
+			'mid_size'           => 2,
+			'prev_next'          => true,
+			'prev_text'          => __('&laquo;', 'understrap'),
+			'next_text'          => __('&raquo;', 'understrap'),
+			'screen_reader_text' => __('Posts navigation', 'understrap'),
+			'type'               => 'array',
+			'current'            => max( 1, get_query_var('paged') ),
+		) );
 
         $links = paginate_links($args);
 
