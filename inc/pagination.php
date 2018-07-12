@@ -7,7 +7,7 @@
 
 if ( ! function_exists ( 'understrap_pagination' ) ) {
 
-    function understrap_pagination($args = [], $class = 'pagination') {
+	function understrap_pagination( $args = array(), $class = 'pagination' ) {
 
         if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 
