@@ -44,6 +44,8 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 	}
 }
 
+add_action( 'widgets_init', 'understrap_widgets_init' );
+
 if ( ! function_exists( 'understrap_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
@@ -80,9 +82,19 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Hero Static', 'understrap' ),
+			'name'          => __( 'Hero Canvas', 'understrap' ),
+			'id'            => 'herocanvas',
+			'description'   => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Top Full', 'understrap' ),
 			'id'            => 'statichero',
-			'description'   => 'Static Hero widget. no slider functionallity',
+			'description'   => 'Full top widget with dynmic grid',
 		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. understrap_slbd_count_widgets( 'statichero' ) .'">', 
 		    'after_widget'   => '</div><!-- .static-hero-widget -->', 
 		    'before_title'   => '<h3 class="widget-title">', 
@@ -92,7 +104,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		register_sidebar( array(
 			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
-			'description'   => 'Widget area below main content and above footer',
+			'description'   => 'Full sized footer widget with dynamic grid',
 		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. understrap_slbd_count_widgets( 'footerfull' ) .'">', 
 		    'after_widget'   => '</div><!-- .footer-widget -->', 
 		    'before_title'   => '<h3 class="widget-title">', 
@@ -101,5 +113,3 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
-add_action( 'widgets_init', 'understrap_widgets_init' );
-

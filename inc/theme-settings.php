@@ -6,7 +6,7 @@
  *
  */
 
-if ( ! function_exists( 'understrap_setup_theme_default_settings' ) ) :
+if ( ! function_exists ( 'understrap_setup_theme_default_settings' ) ) {
 	function understrap_setup_theme_default_settings() {
 
 		// check if settings are set, if not set defaults.
@@ -29,4 +29,4 @@ if ( ! function_exists( 'understrap_setup_theme_default_settings' ) ) :
 			set_theme_mod( 'understrap_container_type', 'container' );
 		}
 	}
-endif;
+}

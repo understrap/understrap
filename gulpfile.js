@@ -25,49 +25,6 @@ var autoprefixer = require( 'gulp-autoprefixer' );
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
-// Run:
-// gulp sass + cssnano + rename
-// Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
-gulp.task( 'scss-for-prod', function() {
-    var source =  gulp.src( paths.sass + '/*.scss' )
-        .pipe( plumber({
-            errorHandler: function( err ) {
-                console.log( err );
-                this.emit( 'end' );
-            }
-        }) )
-        .pipe( sourcemaps.init({ loadMaps: true }) )
-        .pipe( sass() );
-
-    var pipe1 = source.pipe( clone() )
-        .pipe( sourcemaps.write( undefined, { sourceRoot: null } ) )
-        .pipe( gulp.dest( paths.css ) )
-        .pipe( rename( 'custom-editor-style.css' ) );
-
-    var pipe2 = source.pipe( clone() )
-        .pipe( minifycss() )
-        .pipe( rename( { suffix: '.min' } ) )
-        .pipe( gulp.dest( paths.css ) );
-    return merge( pipe1, pipe2 );
-});
-
-// Run:
-// gulp sourcemaps + sass + reload(browserSync)
-// Prepare the child-theme.css for the development environment
-gulp.task( 'scss-for-dev', function() {
-    gulp.src( paths.sass + '/*.scss' )
-        .pipe( plumber( {
-            errorHandler: function( err ) {
-                console.log( err );
-                this.emit( 'end' );
-            }
-        } ) )
-        .pipe( sourcemaps.init({ loadMaps: true }) )
-        .pipe( sass() )
-        .pipe( sourcemaps.write( undefined, { sourceRoot: null } ) )
-        .pipe( gulp.dest( paths.css ) );
-});
-
 gulp.task( 'watch-scss', ['browser-sync'], function() {
     gulp.watch( paths.sass + '/**/*.scss', ['scss-for-dev'] );
 });
@@ -83,10 +40,11 @@ gulp.task( 'sass', function() {
                 this.emit( 'end' );
             }
         } ) )
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe( sass( { errLogToConsole: true } ) )
         .pipe( autoprefixer( 'last 2 versions' ) )
+        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe( gulp.dest( paths.css ) )
-        .pipe( rename( 'custom-editor-style.css' ) );
     return stream;
 });
 
@@ -105,9 +63,8 @@ gulp.task( 'watch', function() {
  * Ensures the 'imagemin' task is complete before reloading browsers
  * @verbose
  */
-gulp.task( 'imagemin-watch', ['imagemin'], function( done ) {
+gulp.task( 'imagemin-watch', ['imagemin'], function( ) {
   browserSync.reload();
-  done();
 });
 
 // Run:
@@ -186,7 +143,11 @@ gulp.task( 'scripts', function() {
 
         // End - All BS4 stuff
 
-        paths.dev + '/js/skip-link-focus-fix.js'
+        paths.dev + '/js/skip-link-focus-fix.js',
+
+        // Adding currently empty javascript file to add on for your own themes´ customizations
+        // Please add any customizations to this .js file only!
+        paths.dev + '/js/custom-javascript.js'
     ];
   gulp.src( scripts )
     .pipe( concat( 'theme.min.js' ) )
@@ -236,10 +197,6 @@ gulp.task( 'copy-assets', function() {
 // _s JS files into /src/js
     gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
         .pipe( gulp.dest( paths.dev + '/js' ) );
-
-// _s JS files into /js
-    gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
-        .pipe( gulp.dest( paths.js + paths.vendor ) );
 
 // Copy Popper JS files
     gulp.src( paths.node + 'popper.js/dist/umd/popper.min.js' )

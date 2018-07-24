@@ -1,7 +1,7 @@
 <?php
 /**
  * Lost password reset form.
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ *
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-reset-password.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
@@ -10,29 +10,26 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
+ * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 	3.3.0
+ * @version 3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 wc_print_notices(); ?>
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
 
-	<p><?php echo apply_filters( 'woocommerce_reset_password_message', __( 'Enter a new password below.', 'understrap') ); ?></p>
+	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_html__( 'Enter a new password below.', 'understrap') ); ?></p><?php // @codingStandardsIgnoreLine ?>
 
-	<p class="woocommerce-FormRow woocommerce-FormRow--first form-row form-row-first">
-		<label for="password_1"><?php _e( 'New password', 'understrap' ); ?> <span class="required">*</span></label>
-		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_1" id="password_1" />
+	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+		<label for="password_1"><?php esc_html_e( 'New password', 'understrap' ); ?>&nbsp;<span class="required">*</span></label>
+		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_1" id="password_1" autocomplete="new-password" />
 	</p>
 	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-		<label for="password_2"><?php _e( 'Re-enter new password', 'understrap' ); ?> <span class="required">*</span></label>
-		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_2" id="password_2" />
+		<label for="password_2"><?php esc_html_e( 'Re-enter new password', 'understrap' ); ?>&nbsp;<span class="required">*</span></label>
+		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_2" id="password_2" autocomplete="new-password" />
 	</p>
 
 	<input type="hidden" name="reset_key" value="<?php echo esc_attr( $args['key'] ); ?>" />
@@ -44,9 +41,9 @@ wc_print_notices(); ?>
 
 	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<input type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'understrap' ); ?>" />
+		<button type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'understrap' ); ?>"><?php esc_html_e( 'Save', 'understrap' ); ?></button>
 	</p>
 
-	<?php wp_nonce_field( 'reset_password' ); ?>
+	<?php wp_nonce_field( 'reset_password', 'woocommerce-reset-password-nonce' ); ?>
 
 </form>

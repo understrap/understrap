@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<?php get_sidebar( 'left' ); ?>
+			<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
 
 			<div
 				class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"

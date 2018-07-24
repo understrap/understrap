@@ -1,3 +1,37 @@
+            - ** Release 0.8.3 July 3rd 2018 **  
+              - Update to Bootstrap 4.1.1   
+              - Update to Gulp 4
+              - Moving closing primary </div> into right-sidebar-check.php    
+              - Adding hero canvas widget pos
+              - Swap customized walker to latest upstream wp-bootstrap-navwalker class - Thx @pattonwebz
+              - gulp-rev - Thx @0dp
+              - Update pagination - thx @0dp
+              - Adding german formal language - Thx @Thomas-A-Reinert
+              - Added cookies checkbox support for inc/custom-comments.php - Thx @Jean Pierre Kolb
+              - Create Japanese translation - Thx @teruteru128
+              - WooCommerce 3.4.0 update - Thx @ZacharyElkins
+              - Organize sidebar files into loop-templates directory - Thx @axlright
+              - Update package.json
+              - POT file and Russian translation update - Thx @edkozuto 
+
+
+            - ** Release 0.8.2 April 11th 2018 **
+              - Update to Bootstrap 4.1
+              - Adding CONTRIBUTING.md and ISSUE_TEMPLATE.md - Thx @Thomas-A-Reinert
+              - Adding empty JS file into build process for adding own JS more easily - Thx @Thomas-A-Reinert
+              - WooCommerce update and cleanup - Thx @ZacharyElkins
+              - Adding SASS source map functionality - Thx @axlright
+              - Cleanup - Thx @axlright
+              - Adding custom editor SASS stylesheet into build process
+              - Remove woocommerce.php integration and replace it with hooked approach - See: https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/#section-5
+              - New pagination - Thx @0dp
+              - Update functions.php - Thx @0dp
+              - Add pluggable functions - Thx @axlright
+              - Add polish translation - Thx @mirzal
+              - Adding timestamp to js and css resources to prevent caching while developinh - Thx @@gintsmurans
+              - Improve left sidebar check - Thx @ZacharyElkins
+
+
             - ** Release 0.8.1 March 7th 2018 **
               - Updating dependencies
               - Fixing and improing gulpfile.js - thx @0dp
