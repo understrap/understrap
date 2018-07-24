@@ -21,7 +21,7 @@ if ( ! function_exists ( 'understrap_components_jetpack_setup' ) ) {
 		// Add theme support for Infinite Scroll.
 		add_theme_support( 'infinite-scroll', array(
 			'container' => 'main',
-			'render'    => 'components_infinite_scroll_render',
+			'render'    => 'understrap_components_infinite_scroll_render',
 			'footer'    => 'page',
 		) );
 
