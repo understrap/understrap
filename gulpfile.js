@@ -36,8 +36,8 @@ function scss( ) {
 exports.scss = scss;
 
 // Minify CSS
-function minifycss( done ) {
-    gulp.src( paths.css + '/theme.css' )
+function minifycss( ) {
+    return gulp.src( paths.css + '/theme.css' )
         .pipe( sourcemaps.init( { loadMaps: true } ) )
         .pipe( cleanCSS( { compatibility: '*' } ) )
         .pipe( rename( { suffix: '.min' } ) )
@@ -50,8 +50,6 @@ function minifycss( done ) {
         .pipe( rename( { suffix: '.min' } ) )
         .pipe( sourcemaps.write( './' ) )
         .pipe( gulp.dest( paths.css ) );
-
-    done();
 };
 
 exports.minifycss = minifycss;
@@ -76,8 +74,8 @@ function scripts( done ) {
         .pipe( concat( 'theme.min.js' ) )
         .pipe( uglify() )
         .pipe( gulp.dest( paths.js ) );
+        revision();
 
-    done();
 }
 
 exports.scripts = scripts;
@@ -148,11 +146,11 @@ gulp.task( 'clean-dist', function() {
 function revision( done ) {
   // by default, gulp would pick `assets/css` as the base,
   // so we need to set it explicitly:
-  gulp.src([paths.css + '/theme.min.css', paths.js + '/theme.min.js'], {base: './'})
+  return gulp.src([paths.css + '/theme.min.css', paths.js + '/theme.min.js'], {base: './'})
     .pipe(rev())
     .pipe(gulp.dest('./'))  // write rev'd assets to build dir
     .pipe(rev.manifest())
-    .pipe(revDel({dest: './'}))
+    .pipe(revDel({dest: './', force: true}))
     .pipe(gulp.dest('./'));  // write manifest to build dir
     done();
 };
@@ -181,8 +179,8 @@ function reload( done ){
 // BrowserSync main task
 gulp.task( 'watch-bs', function( done ) {
     browserSync.init( cfg.browserSyncWatchFiles, cfg.browserSyncOptions );
-    gulp.watch( paths.sass + '/**/*.scss', gulp.series(scss, minifycss, revision, reload) );
-    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], gulp.series( scripts, revision, reload ) );
+    gulp.watch( paths.sass + '/**/*.scss', gulp.series( scss, minifycss, revision, reload ) );
+    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], gulp.series( scripts, reload ) );
 
     //Inside the watch task.
     gulp.watch( paths.imgsrc + '/**', gulp.series( imagemin, reload ) );
