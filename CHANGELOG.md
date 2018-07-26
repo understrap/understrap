@@ -1,3 +1,14 @@
+            - ** Release 0.8.6 July 26th 2018 ** 
+              - Re - Release
+
+            - ** Release 0.8.5 July 26th 2018 ** 
+              - Update to Bootstrap 4.1.3
+
+            - ** Release 0.8.4 July 16th 2018 **  Maintenace Release:
+              - Update to Bootstrap 4.1.2
+              - fixing sidebar.php problem
+              - Revert to Gulp 3.x support
+
             - ** Release 0.8.3 July 3rd 2018 **  
               - Update to Bootstrap 4.1.1   
               - Update to Gulp 4
