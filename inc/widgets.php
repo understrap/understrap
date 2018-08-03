@@ -94,7 +94,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		register_sidebar( array(
 			'name'          => __( 'Top Full', 'understrap' ),
 			'id'            => 'statichero',
-			'description'   => 'Full top widget with dynmic grid',
+			'description'   => 'Full top widget with dynamic grid',
 		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. understrap_slbd_count_widgets( 'statichero' ) .'">', 
 		    'after_widget'   => '</div><!-- .static-hero-widget -->', 
 		    'before_title'   => '<h3 class="widget-title">', 
