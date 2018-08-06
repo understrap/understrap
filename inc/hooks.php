@@ -5,8 +5,6 @@
  * @package understrap
  */
 
-
-
 if ( ! function_exists( 'understrap_add_site_info' ) ) {
   /**
    * Add site info hook to WP hook library.
