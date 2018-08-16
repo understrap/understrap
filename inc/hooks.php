@@ -5,7 +5,7 @@
  * @package understrap
  */
 
-if ( ! function_exists( 'understrap_add_site_info' ) ) {
+if ( ! function_exists( 'understrap_site_info' ) ) {
   /**
    * Add site info hook to WP hook library.
    */
@@ -40,6 +40,6 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
       )
     );
 
-    echo apply_filters( understrap_site_info_content, $site_info ); // WPCS: XSS ok.
+    echo apply_filters( 'understrap_site_info_content', $site_info ); // WPCS: XSS ok.
   }
 }
