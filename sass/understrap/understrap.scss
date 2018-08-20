@@ -40,6 +40,13 @@
 
 .aligncenter { margin: 0px auto; }
 
+.widget_categories,
+.widget_archive {
+	select { 
+		@extend .form-control;
+	}
+}
+
 // Post design
 .entry-footer span { padding-right: 10px; }
 
