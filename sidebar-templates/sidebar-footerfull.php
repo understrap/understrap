@@ -5,7 +5,7 @@
  * @package understrap
  */
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
