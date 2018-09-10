@@ -5,6 +5,10 @@
  * @package understrap
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 if ( ! function_exists( 'understrap_scripts' ) ) {
 	/**
 	 * Load theme's JavaScript and CSS sources.
