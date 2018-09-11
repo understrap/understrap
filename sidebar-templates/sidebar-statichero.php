@@ -5,11 +5,10 @@
  * @package understrap
  */
 
+$container = get_theme_mod( 'understrap_container_type' );
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-$container   = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
