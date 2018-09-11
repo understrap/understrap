@@ -1,7 +1,29 @@
-            - ** Release 0.8.6 July 26th 2018 ** 
+            - ** Release 0.8.7 September 11th 2018 **
+              - Spelling corrections thx @davidshq
+              - Updated pt_PT Translation thx @jfig
+              - Code cleanup thx @pattonwebz
+              - Using bootstrap.bundle.js instead of bootstrapjs and popper.js
+              - Update widgets.php thx @0dp
+              - Update form-coupon thx @Noel Springer
+              - Remove the X-UA-Compatible meta tag thx @redpik
+              - Fixing typo in FR text thx @redpik
+              - Create hooks.php thx @IanDelMar
+              - Using site info hook thx @IanDelMar
+              - Fix function_exists & parenthesis thx @IanDelMar
+              - Fix for Issue #769 thx @IanDelMar
+              - searchform.php replace assistive-text by sr-only thx @IanDelMar
+              - Update gulpconfig.json thx @0dp
+              - Fix for issue #785 thx @IanDelMar
+              - sidebar-footerfull.php: incorrect spacing  thx @IanDelMar
+              - Stick to single quotes & other minor changes thx @IanDelMar
+              - Define .screen-reader-text thx @IanDelMar
+              - Focusable 'Skip to content' thx @IanDelMar
+              - Prevent direct access thx @IanDelMar
+
+            - ** Release 0.8.6 July 26th 2018 **
               - Re - Release
 
-            - ** Release 0.8.5 July 26th 2018 ** 
+            - ** Release 0.8.5 July 26th 2018 **
               - Update to Bootstrap 4.1.3
 
 
@@ -15,7 +37,7 @@
               - Update to Bootstrap 4
               - fixing sidebar.php problem
               - Revert to Gulp 3.x support
-              
+
 
             - ** Release 0.8.3 July 3rd 2018 **  
               - Update to Bootstrap 4.1.1   
@@ -31,7 +53,7 @@
               - WooCommerce 3.4.0 update - Thx @ZacharyElkins
               - Organize sidebar files into loop-templates directory - Thx @axlright
               - Update package.json
-              - POT file and Russian translation update - Thx @edkozuto 
+              - POT file and Russian translation update - Thx @edkozuto
 
 
             - ** Release 0.8.2 April 11th 2018 **
@@ -83,7 +105,7 @@
               - Hotfix release
 
 
-            - ** Release 0.6.11 December 11th 2017 ** 
+            - ** Release 0.6.11 December 11th 2017 **
               - Fixing WooCommerce functions
               - Fixing sanitizing, escaping and prefix´s issues
               - Fixing customizer settings
@@ -117,20 +139,20 @@
               - Update page.php - thx @Vishal-Deshpande
               - Fixing colormap problem with beta 2
               - Making navwalker function pluggable  - Thx @bruceconlon
-              - Adding WordPress title attribute - Thx @JDVirtual and @Thomas-A-Reinert 
+              - Adding WordPress title attribute - Thx @JDVirtual and @Thomas-A-Reinert
               - Fixing comments in _theme_variable.scss - thx @ianwyllie
               - Adding spaces the separate "posted on" and "edited" timestamps  - Thx @bruceconlon
-              
+
 
             - ** Release 0.6.6 October 23h 2017 **
               - Update to Bootstrap 4 Beta 2
               - Moving hamburger icon to the right by default
-              - Fixing issue #392 
+              - Fixing issue #392
               - Gramma and typo fixes
               - Making inc/security.php hookable
               - Variable product ajax_add_to_cart fix
               - Update Woocommerce 3.2.1 compatibility
-              
+
 
             - ** Release 0.6.5 August 17h 2017 **
               - Hot fix release
@@ -185,20 +207,20 @@
             - ** Release 0.5.7  Feb. 13th 2017 **
                - Fixing WooCommerce base layout by reverting custom woocommerce integration and switch back to default integration
                - Adding /js/ folder to watcher task excluding theme.js and theme.min.js
-               - Removing duplicate DIV from "both-sidebars" page template - Thx @evandiamond 
+               - Removing duplicate DIV from "both-sidebars" page template - Thx @evandiamond
                - Fixing sidebar check
                - Remove customizer from theme.min.js
-               
+
 
             - ** Release 0.5.6 (skipping 0.5.5) Feb. 9th 2017 **
-               - Adding automated tests - thx @carl-alberto 
+               - Adding automated tests - thx @carl-alberto
                - Remove custom Bootstrap gellery completely
                - Fixing typos - thx to @catgofire
                - Checking for WP coding standards
                - Adding a "dist-product" gulp task
-               - Adding  WooCommerce form-checkout.php - thx @stef-k 
-               - Fixing bug #240 - thx @arpage 
-               - Adding AJAX classes to add-to-cart buttons - thx @typeplus 
+               - Adding  WooCommerce form-checkout.php - thx @stef-k
+               - Fixing bug #240 - thx @arpage
+               - Adding AJAX classes to add-to-cart buttons - thx @typeplus
                - Updating Jetpack integration
                - Fixing "missing" h1 on frontpage problem
                - Updating inc/template-tags.php from _s
@@ -272,7 +294,7 @@
                   - Fixing "Gulp dist" Task
                   - Adding masonry layout option to optimizer - Thx @stef-k
                   - Adding fluid/fixed conatiner option to optimizer
-                  
+
 
             - ** 0.4.9 Oct. 25th 2016 **
                   - Updating to Bootstrap 4 Alpha 5
