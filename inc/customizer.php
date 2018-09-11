@@ -5,6 +5,10 @@
  * @package understrap
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -40,19 +44,25 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			'priority'    => 160,
 		) );
 
-		 //select sanitization function
-        function understrap_theme_slug_sanitize_select( $input, $setting ){
-         
-            //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
-            $input = sanitize_key($input);
- 
-            //get the list of possible select options 
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-                             
-            //return input if valid or return default option
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
-             
-        }
+		/**
+		 * Select sanitization function
+		 *
+		 * @param string               $input   Slug to sanitize.
+		 * @param WP_Customize_Setting $setting Setting instance.
+		 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
+		 */
+        	function understrap_theme_slug_sanitize_select( $input, $setting ){
+
+            		// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
+            		$input = sanitize_key( $input );
+
+           		// Get the list of possible select options.
+           		$choices = $setting->manager->get_control( $setting->id )->choices;
+
+            		// If the input is a valid key, return it; otherwise, return the default.
+            		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+
+        	}
 
 		$wp_customize->add_setting( 'understrap_container_type', array(
 			'default'           => 'container',
@@ -66,7 +76,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_container_type', array(
 					'label'       => __( 'Container Width', 'understrap' ),
-					'description' => __( "Choose between Bootstrap's container and container-fluid", 'understrap' ),
+					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_container_type',
 					'type'        => 'select',
@@ -90,7 +100,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_sidebar_position', array(
 					'label'       => __( 'Sidebar Positioning', 'understrap' ),
-					'description' => __( "Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
+					'description' => __( 'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
 					'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_sidebar_position',
@@ -118,7 +128,8 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	 */
 	function understrap_customize_preview_js() {
 		wp_enqueue_script( 'understrap_customizer', get_template_directory_uri() . '/js/customizer.js',
-			array( 'customize-preview' ), '20130508', true );
+			array( 'customize-preview' ), '20130508', true
+		);
 	}
 }
 add_action( 'customize_preview_init', 'understrap_customize_preview_js' );

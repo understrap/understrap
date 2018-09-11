@@ -5,6 +5,10 @@
  * @package understrap
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 add_action( 'after_setup_theme', 'understrap_custom_header_setup' );
 
 if ( ! function_exists ( 'understrap_custom_header_setup' ) ) {

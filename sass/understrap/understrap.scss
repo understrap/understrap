@@ -24,7 +24,7 @@
 
 .wp-caption-text { font-size: inherit; }
 
-.screen-reader-text { font-size: inherit; }
+.screen-reader-text { @extend .sr-only; }
 
 .alignleft {
   display: inline;
