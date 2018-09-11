@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -52,6 +52,6 @@
     "popper.js": "^1.12.9",
     "run-sequence": "^2.2.1",
     "undescores-for-npm": "^1.0.0",
-    "gulp-autoprefixer": "^5.0.0"
+    "gulp-autoprefixer": "6.0.0"
   }
 }
