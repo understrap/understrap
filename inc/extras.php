@@ -7,6 +7,10 @@
  * @package understrap
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 add_filter( 'body_class', 'understrap_body_classes' );
 
 if ( ! function_exists( 'understrap_body_classes' ) ) {

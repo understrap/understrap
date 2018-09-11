@@ -4,6 +4,10 @@
  *
  * @package understrap
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 ?>
 
 </div><!-- #closing the primary container from /global-templates/left-sidebar-check.php -->
