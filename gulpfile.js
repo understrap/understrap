@@ -129,11 +129,11 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { 
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 } );
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task( 'scripts', function() {
     var scripts = [
@@ -197,14 +197,6 @@ gulp.task( 'copy-assets', function() {
 // _s JS files into /src/js
     gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
         .pipe( gulp.dest( paths.dev + '/js' ) );
-
-// Copy Popper JS files
-    gulp.src( paths.node + 'popper.js/dist/umd/popper.min.js' )
-        .pipe( gulp.dest( paths.js + paths.vendor ) );
-    gulp.src( paths.node + 'popper.js/dist/umd/popper.js' )
-        .pipe( gulp.dest( paths.js + paths.vendor ) );
-    return stream;
-});
 
 // Deleting the files distributed by the copy-assets task
 gulp.task( 'clean-vendor-assets', function() {
