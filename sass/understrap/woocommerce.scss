@@ -2,3 +2,8 @@
 .woocommerce-input-wrapper {
 	width: 100%;
 }
+
+// Woocommerce product gallery slider width fix
+figure.woocommerce-product-gallery__wrapper { 
+  max-width: inherit !important; 
+}
