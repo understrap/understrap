@@ -38,7 +38,7 @@
   margin-left: 1.5em;
 }
 
-.aligncenter { margin: 0px auto; }
+.aligncenter { @extend .mx-auto; }
 
 // Post design
 .entry-footer span { padding-right: 10px; }
