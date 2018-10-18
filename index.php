@@ -17,12 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
+<?php
+if ( is_front_page() && is_home() ) {
+	get_template_part( 'global-templates/hero' );
+}
+?>
 
 <div class="wrapper" id="index-wrapper">
 
@@ -33,44 +35,47 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+			<div class="col-md content-area" id="primary">
 
-				<?php if ( have_posts() ) : ?>
+				<main class="site-main" id="main">
 
-					<?php /* Start the Loop */ ?>
+					<?php if ( have_posts() ) : ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+						<?php /* Start the Loop */ ?>
 
-						<?php
+						<?php while ( have_posts() ) : the_post(); ?>
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
+							<?php
 
-					<?php endwhile; ?>
+							/*
+							* Include the Post-Format-specific template for the content.
+							* If you want to override this in a child theme, then include a file
+							* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							*/
+							get_template_part( 'loop-templates/content', get_post_format() );
+							?>
 
-				<?php else : ?>
+						<?php endwhile; ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					<?php else : ?>
 
-				<?php endif; ?>
+						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-			</main><!-- #main -->
+					<?php endif; ?>
+
+				</main><!-- #main -->
+
+			</div><!-- #primary -->
 
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-		
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-	</div><!-- .row -->
+		</div><!-- .row -->
 
-</div><!-- Container end -->
+	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
