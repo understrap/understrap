@@ -232,3 +232,8 @@ gulp.task( 'dist-product', ['clean-dist-product'], function() {
 gulp.task( 'clean-dist-product', function() {
   return del( [paths.distprod + '/**'] );
 } );
+
+// Run:
+// gulp
+// Starts watcher (default task)
+gulp.task('default', ['watch']);
