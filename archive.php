@@ -61,10 +61,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</main><!-- #main -->
 
-			</div><!-- #primary -->
+				<!-- The pagination component -->
+				<?php understrap_pagination(); ?>
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			</div><!-- #primary -->
 
 			<!-- Do the right sidebar check -->
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
