@@ -44,14 +44,14 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 	  echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
-		get_template_part( 'global-templates/left-sidebar-check' );
+		get_template_part( 'templates/global/left-sidebar-check' );
 		echo '<main class="site-main" id="main">';
 	}
 }
 if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 function understrap_woocommerce_wrapper_end() {
 	echo '</main><!-- #main -->';
-	get_template_part( 'global-templates/right-sidebar-check' );
+	get_template_part( 'templates/global/right-sidebar-check' );
   echo '</div><!-- .row -->';
 	echo '</div><!-- Container end -->';
 	echo '</div><!-- Wrapper end -->';
