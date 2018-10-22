@@ -286,34 +286,34 @@ msgstr "סטטי"
 msgid "Footer Full"
 msgstr "כותרת תחתונה"
 
-#: loop-templates/content-none.php:16
+#: templates/loop/content-none.php:16
 msgid "Nothing Found"
 msgstr "לא נמצא כלום"
 
-#: loop-templates/content-none.php:25
+#: templates/loop/content-none.php:25
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "מוכן לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">נא להתחיל כאן</a>."
 
-#: loop-templates/content-none.php:33
+#: templates/loop/content-none.php:33
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr "סליחה, אבל לא מצאנו את מה שחיפשתם. נסו שוב עם מילות חיפוש אחרות."
 
-#: loop-templates/content-none.php:38
+#: templates/loop/content-none.php:38
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "נראה שאנחנו לא מוצאים את מה שחיפשת. אולי חיפוש יכול לעזור."
 
-#: loop-templates/content-page.php:25 loop-templates/content-single.php:31
-#: loop-templates/content.php:37
+#: templates/loop/content-page.php:25 templates/loop/content-single.php:31
+#: templates/loop/content.php:37
 msgid "Pages:"
 msgstr "עמודים:"
 
-#: loop-templates/content-page.php:34 woocommerce/myaccount/my-address.php:52
+#: templates/loop/content-page.php:34 woocommerce/myaccount/my-address.php:52
 msgid "Edit"
 msgstr "עריכה"
 

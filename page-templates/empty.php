@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 while ( have_posts() ) : the_post();
-	get_template_part( 'loop-templates/content', 'empty' );
+	get_template_part( 'templates/loop/content', 'empty' );
 endwhile;
 
 get_footer();

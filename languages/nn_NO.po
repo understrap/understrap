@@ -145,22 +145,22 @@ msgstr "Søk"
 msgid "Search &hellip;"
 msgstr "Søk &hellip;"
 
-#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
-#: loop-templates/content.php:37 loop-templates/content-single.php:31
-#: loop-templates/content-verticalpage.php:28
+#: templates/loop/content-card.php:43 templates/loop/content-page.php:25
+#: templates/loop/content.php:37 templates/loop/content-single.php:31
+#: templates/loop/content-verticalpage.php:28
 msgid "Pages:"
 msgstr "Sider:"
 
-#: loop-templates/content-page.php:34
-#: loop-templates/content-verticalpage.php:37
+#: templates/loop/content-page.php:34
+#: templates/loop/content-verticalpage.php:37
 msgid "Edit"
 msgstr "Redigere"
 
-#: loop-templates/content-none.php:15
+#: templates/loop/content-none.php:15
 msgid "Nothing Found"
 msgstr "Ingenting funne"
 
-#: loop-templates/content-none.php:23
+#: templates/loop/content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
@@ -168,7 +168,7 @@ msgstr ""
 "Klar til å publisere ditt første innlegg? <a href=\"%1$s\">Kom i gang her</"
 "a>."
 
-#: loop-templates/content-none.php:28
+#: templates/loop/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -176,7 +176,7 @@ msgstr ""
 "Beklager, men ingenting samsvarer med søkeordene dine. Vennligst prøv igjen "
 "med nokre andre søkeord."
 
-#: loop-templates/content-none.php:34
+#: templates/loop/content-none.php:34
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
