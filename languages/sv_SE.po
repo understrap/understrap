@@ -252,35 +252,35 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentarer"
 
-#: ../templates/loop/content-single.php:29 ../templates/loop/content.php:33 ..
-#: templates/loop/content-page.php:25
+#: ../templates/content-single.php:29 ../templates/content.php:33 ..
+#: templates/content-page.php:25
 msgid "Pages:"
 msgstr "Sidor:"
 
-#: ../templates/loop/content-none.php:16
+#: ../templates/content-none.php:16
 msgid "Nothing Found"
 msgstr "Inget hittades"
 
-#: ../templates/loop/content-none.php:24
+#: ../templates/content-none.php:24
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Redo att skriv ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
 
-#: ../templates/loop/content-none.php:28
+#: ../templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 "Tyvärr fick din sökning inga träffar. Du kan prova igen med nya nyckelord."
 
-#: ../templates/loop/content-none.php:33
+#: ../templates/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "Vi verkar inte hitta det du söker, Det kanske hjälper att söka."
 
-#: ../templates/loop/content-page.php:34
+#: ../templates/content-page.php:34
 msgid "Edit"
 msgstr "Ändra"
 

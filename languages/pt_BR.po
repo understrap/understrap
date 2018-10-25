@@ -237,7 +237,7 @@ msgstr "1 coment&aacute;rio"
 msgid "% Comments"
 msgstr "% Coment&aacute;rios"
 
-#: ../inc/template-tags.php:122 ../templates/loop/content-page.php:34
+#: ../inc/template-tags.php:122 ../templates/content-page.php:34
 msgid "Edit"
 msgstr "Editar"
 
@@ -396,21 +396,21 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Comentário"
 
-#: ../templates/loop/content.php:33 ../templates/loop/content-single.php:29 ..
-#: templates/loop/content-page.php:25
+#: ../templates/content.php:33 ../templates/content-single.php:29 ..
+#: templates/content-page.php:25
 msgid "Pages:"
 msgstr "P&aacute;ginas"
 
-#: ../templates/loop/content-none.php:16
+#: ../templates/content-none.php:16
 msgid "Nothing Found"
 msgstr "Nada encontrado."
 
-#: ../templates/loop/content-none.php:24
+#: ../templates/content-none.php:24
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece aqui</a>."
 
-#: ../templates/loop/content-none.php:28
+#: ../templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -418,7 +418,7 @@ msgstr ""
 "Desculpe, mas nada foi encontrado para sua pesquisa. Por favor, tente "
 "novamente com outras palavras."
 
-#: ../templates/loop/content-none.php:33
+#: ../templates/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."

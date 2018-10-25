@@ -75,7 +75,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<?php else : ?>
 
-						<?php get_template_part( 'templates/loop/content', 'none' ); ?>
+						<?php get_template_part( 'templates/content', 'none' ); ?>
 
 					<?php endif; ?>
 

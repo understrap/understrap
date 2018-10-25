@@ -16,6 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
-  <?php get_template_part( 'templates/sidebar/sidebar', 'right' ); ?>
+  <?php get_template_part( 'templates/sidebar', 'right' ); ?>
 
 <?php endif; ?>

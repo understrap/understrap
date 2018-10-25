@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<?php get_template_part( 'templates/sidebar/sidebar', 'left' ); ?>
+			<?php get_template_part( 'templates/sidebar', 'left' ); ?>
 
 			<div
 				class="<?php
@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'templates/loop/content', 'page' ); ?>
+						<?php get_template_part( 'templates/content', 'page' ); ?>
 
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.
@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div><!-- #primary -->
 
-			<?php get_template_part( 'templates/sidebar/sidebar', 'right' ); ?>
+			<?php get_template_part( 'templates/sidebar', 'right' ); ?>
 			
 		</div><!-- .row -->
 

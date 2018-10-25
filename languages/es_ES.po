@@ -249,22 +249,22 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Commentario"
 
-#: ../templates/loop/content-single.php:29 ../templates/loop/content.php:33 ..
-#: /templates/loop/content-page.php:25
+#: ../templates/content-single.php:29 ../templates/content.php:33 ..
+#: /templates/content-page.php:25
 msgid "Pages:"
 msgstr "Páginas: "
 
-#: ../templates/loop/content-none.php:16
+#: ../templates/content-none.php:16
 msgid "Nothing Found"
 msgstr "No se ha encontrado nada"
 
-#: ../templates/loop/content-none.php:24
+#: ../templates/content-none.php:24
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "¿Preparado para publicar tu primer post? <a href=\"%1$s\">Comenzar aquí</a>."
 
-#: ../templates/loop/content-none.php:28
+#: ../templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -272,13 +272,13 @@ msgstr ""
 "Lo siento, pero no hemos encontrado nada con las palabras utilizadas. Prueba de "
 "nuevo con otras palabras."
 
-#: ../templates/loop/content-none.php:33
+#: ../templates/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
 "can help."
 msgstr "Al parecer no he mos podido encontrar lo que estaba buscando."
 
-#: ../templates/loop/content-page.php:34
+#: ../templates/content-page.php:34
 msgid "Edit"
 msgstr "Editar"
 

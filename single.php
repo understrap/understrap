@@ -26,7 +26,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'templates/loop/content', 'single' ); ?>
+					<?php get_template_part( 'templates/content', 'single' ); ?>
 
 						<?php understrap_post_nav(); ?>
 

@@ -162,13 +162,13 @@ msgstr "%1$s 에 게재"
 msgid "Tagged %1$s"
 msgstr "태그된 %1$s"
 
-#: ../templates/loop/content-none.php:28
+#: ../templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr "죄송합니다만 일치하는 검색 Term이 없습니다. 다른 키워드를 사용해서 다시 시도해주세요."
 
-#: ../templates/loop/content-none.php:33
+#: ../templates/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -283,21 +283,21 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "댓글"
 
-#: ../templates/loop/content-single.php:29 ../templates/loop/content.php:33 ..
-#: templates/loop/content-page.php:25
+#: ../templates/content-single.php:29 ../templates/content.php:33 ..
+#: templates/content-page.php:25
 msgid "Pages:"
 msgstr "페이지:"
 
-#: ../templates/loop/content-none.php:16
+#: ../templates/content-none.php:16
 msgid "Nothing Found"
 msgstr "찾을수가 없습니다"
 
-#: ../templates/loop/content-none.php:24
+#: ../templates/content-none.php:24
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "첫 포스트를 등록할 준비가 되었나요? <a href=\"%1$s\">작성하기</a>"
 
-#: ../templates/loop/content-page.php:34
+#: ../templates/content-page.php:34
 msgid "Edit"
 msgstr "수정"

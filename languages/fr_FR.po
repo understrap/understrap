@@ -146,29 +146,29 @@ msgstr "Rechercher"
 msgid "Search &hellip;"
 msgstr "Recherche &hellip;"
 
-#: templates/loop/content-card.php:43 templates/loop/content-page.php:25
-#: templates/loop/content.php:37 templates/loop/content-single.php:31
-#: templates/loop/content-verticalpage.php:28
+#: templates/content-card.php:43 templates/content-page.php:25
+#: templates/content.php:37 templates/content-single.php:31
+#: templates/content-verticalpage.php:28
 msgid "Pages:"
 msgstr "Pages: "
 
-#: templates/loop/content-page.php:34
-#: templates/loop/content-verticalpage.php:37
+#: templates/content-page.php:34
+#: templates/content-verticalpage.php:37
 msgid "Edit"
 msgstr "Editer"
 
-#: templates/loop/content-none.php:15
+#: templates/content-none.php:15
 msgid "Nothing Found"
 msgstr "Non trouvé"
 
-#: templates/loop/content-none.php:23
+#: templates/content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Prêt à publier votre premier article ? <a href=\"%1$s\">Démarrer ici</a>."
 
-#: templates/loop/content-none.php:28
+#: templates/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -176,7 +176,7 @@ msgstr ""
 "Désolé, rien ne correspond à votre recherche. Veuillez réessayer avec "
 "d'autres termes."
 
-#: templates/loop/content-none.php:34
+#: templates/content-none.php:34
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."

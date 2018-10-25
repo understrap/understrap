@@ -14,11 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="wrapper" id="wrapper-hero">
 	
-		<?php get_template_part( 'templates/sidebar/sidebar', 'hero' ); ?>
+		<?php get_template_part( 'templates/sidebar', 'hero' ); ?>
 		
-		<?php get_template_part( 'templates/sidebar/sidebar', 'herocanvas' ); ?>
+		<?php get_template_part( 'templates/sidebar', 'herocanvas' ); ?>
 
-		<?php get_template_part( 'templates/sidebar/sidebar', 'statichero' ); ?>
+		<?php get_template_part( 'templates/sidebar', 'statichero' ); ?>
 
 	</div>
 
