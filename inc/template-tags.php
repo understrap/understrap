@@ -138,6 +138,9 @@ if ( ! function_exists( 'understrap_templates_back_compat' ) ) {
 	$template_slugs = array(
 		'templates/sidebar',
 		'templates/loop',
+		'templates/hero',
+		'templates/left-sidebar-check',
+		'templates/right-sidebar-check',
 	);
 
 	foreach ( $template_slugs as $slug ) {
@@ -145,12 +148,19 @@ if ( ! function_exists( 'understrap_templates_back_compat' ) ) {
 	}
 
 	function understrap_templates_back_compat( $slug, $name ) {
-		$slug_array = explode( '/',  $slug );
-		$old_slug   = $slug_array[1] . '-templates/' . $slug_array[1];
-		$templates  = array(
-			$old_slug . '-' . $name . '.php',
-			$old_slug . '.php',
-		);
+		$slug_array         = explode( '/',  $slug );
+		$is_loop_or_content = in_array( $slug_array[1], array( 'loop', 'sidebar' ) );
+
+		if ( $is_loop_or_content ) {
+			$old_slug   = $slug_array[1] . '-templates/' . $slug_array[1];
+			$templates  = array(
+				$old_slug . '-' . $name . '.php',
+				$old_slug . '.php',
+			);
+		} else {
+			$old_slug   = 'global-templates/' . $slug_array[1];
+			$templates  = $old_slug . '.php';
+		}
 
 		if ( locate_template( $templates ) ) {
 			locate_template( $templates, true, true );
