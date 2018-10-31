@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-</div><!-- #closing the primary container from /templates/global/left-sidebar-check.php -->
+</div><!-- #closing the primary container from /templates/left-sidebar-check.php -->
 
 <?php $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' ); ?>
 
