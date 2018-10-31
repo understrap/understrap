@@ -130,3 +130,30 @@ if ( ! function_exists ( 'understrap_category_transient_flusher' ) ) {
 		delete_transient( 'understrap_categories' );
 	}
 }
+
+/**
+ * Add backwards compatibilty for templates
+ */
+if ( ! function_exists( 'understrap_templates_back_compat' ) ) {
+	$template_slugs = array(
+		'templates/sidebar',
+		'templates/loop',
+	);
+
+	foreach ( $template_slugs as $slug ) {
+		add_action( "get_template_part_{$slug}", 'understrap_templates_back_compat', 99, 2 );
+	}
+
+	function understrap_templates_back_compat( $slug, $name ) {
+		$slug_array = explode( '/',  $slug );
+		$old_slug   = $slug_array[1] . '-templates/' . $slug_array[1];
+		$templates  = array(
+			$old_slug . '-' . $name . '.php',
+			$old_slug . '.php',
+		);
+
+		if ( locate_template( $templates ) ) {
+			locate_template( $templates, true, true );
+		}
+	}
+}
