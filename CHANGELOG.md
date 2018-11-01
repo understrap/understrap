@@ -1,6 +1,6 @@
             - ** Release 0.8.8 November 1st 2018 **
               - Refactor functions.php - Thx @ylkyrg
-              -  Fix for #808  - Thx @VarunBatraIT
+              - Fix for #808  - Thx @VarunBatraIT
               - Add filters for posted on/by  - Thx @IanDelMar
               - Adjust byline for hidden date case  - Thx @IanDelMar
               - Fixed typo in wp_enqueue_style() call in inc/wpcom.php - Thx @Salmatron
@@ -9,7 +9,8 @@
               - Tidy up left sidebar check - thx @gillespieza
               - Add gulp default talk (watcher) - thx @redpik
               - Remove $sidebar_pos - Thx @IanDelMar
-              - Update Woocommerce templates for WC 3.5.0 - thx @ Noel Springer
+              - Update Woocommerce templates for WC 3.5.x - thx @ Noel Springer
+
 
             - ** Release 0.8.7 September 11th 2018 **
               - Spelling corrections thx @davidshq
