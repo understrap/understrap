@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.8.7",
+  "version": "0.8.8",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -43,13 +43,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "1.0.0",
     "gulp-rimraf": "^0.2.2",
-    "gulp-sass": "4.0.1",
+    "gulp-sass": "4.0.2",
     "gulp-sequence": "1.0.0",
     "gulp-sourcemaps": "2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "5.0.1",
     "merge2": "^1.2.1",
-    "popper.js": "^1.12.9",
     "run-sequence": "^2.2.1",
     "undescores-for-npm": "^1.0.0",
     "gulp-autoprefixer": "6.0.0"
