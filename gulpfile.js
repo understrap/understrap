@@ -3,16 +3,12 @@ var gulp = require( 'gulp' );
 var plumber = require( 'gulp-plumber' );
 var sass = require( 'gulp-sass' );
 var watch = require( 'gulp-watch' );
-var cssnano = require( 'gulp-cssnano' );
 var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
-var merge2 = require( 'merge2' );
 var imagemin = require( 'gulp-imagemin' );
 var ignore = require( 'gulp-ignore' );
 var rimraf = require( 'gulp-rimraf' );
-var clone = require( 'gulp-clone' );
-var merge = require( 'gulp-merge' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var browserSync = require( 'browser-sync' ).create();
 var del = require( 'del' );
@@ -24,10 +20,6 @@ var autoprefixer = require( 'gulp-autoprefixer' );
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
-
-gulp.task( 'watch-scss', ['browser-sync'], function() {
-    gulp.watch( paths.sass + '/**/*.scss', ['scss-for-dev'] );
-});
 
 // Run:
 // gulp sass
