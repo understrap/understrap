@@ -64,7 +64,7 @@ if ( post_password_required() ) {
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
-						<?php previous_comments_link( __( '&larr; Older Comments','understrap' ) ); ?>
+						<?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) ); ?>
 					</div>
 				<?php } ?>
 
