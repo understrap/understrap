@@ -14,8 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<header class="entry-header">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-		'</a></h2>' ); ?>
+		<?php
+		the_title(
+			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+			'</a></h2>'
+		);
+		?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 
@@ -31,15 +35,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="entry-content">
 
-		<?php
-		the_excerpt();
-		?>
+		<?php the_excerpt(); ?>
 
 		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+				'after'  => '</div>',
+			)
+		);
 		?>
 
 	</div><!-- .entry-content -->
