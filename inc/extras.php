@@ -112,3 +112,23 @@ if ( ! function_exists ( 'understrap_post_nav' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Add a pingback url auto-discovery header for single posts of any post type.
+ */
+function understrap_pingback() {
+	if ( is_singular() && pings_open() ) {
+		echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">' . "\n";
+	}
+}
+add_action( 'wp_head', 'understrap_pingback' );
+
+/**
+ * Add mobile-web-app meta.
+ */
+function understrap_mobile_web_app_meta() {
+	echo '<meta name="mobile-web-app-capable" content="yes">' . "\n";
+	echo '<meta name="apple-mobile-web-app-capable" content="yes">' . "\n";
+	echo '<meta name="apple-mobile-web-app-title" content="' . esc_attr( get_bloginfo( 'name' ) ) . ' - ' . esc_attr( get_bloginfo( 'description' ) ) . '">' . "\n";
+}
+add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
