@@ -31,7 +31,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
 				esc_html_x( 'Posted on', 'post date', 'understrap' ),
 				esc_url( get_permalink() ),
-				apply_filters( 'understrap_posted_on_time', $time_string ) 
+				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
 		);
 		$byline      = apply_filters(
