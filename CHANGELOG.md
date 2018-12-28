@@ -170,7 +170,7 @@
               - Fixing colormap problem with beta 2
               - Making navwalker function pluggable  - Thx @bruceconlon
               - Adding WordPress title attribute - Thx @JDVirtual and @Thomas-A-Reinert
-              - Fixing comments in _theme_variable.scss - thx @ianwyllie
+              - Fixing comments in theme_variable.scss - thx @ianwyllie
               - Adding spaces the separate "posted on" and "edited" timestamps  - Thx @bruceconlon
 
 
@@ -253,7 +253,7 @@
                - Adding AJAX classes to add-to-cart buttons - thx @typeplus
                - Updating Jetpack integration
                - Fixing "missing" h1 on frontpage problem
-               - Updating inc/template-tags.php from _s
+               - Updating inc/template-tags.php from s
                - Fixing W3C validator issues
                - Removing cleancss gulp task from cssnano task sequence due to performance issues
 
@@ -411,7 +411,7 @@
             - ** 0.3.4 SEP. 9th 2015**
                    - Adding basic WooCommerce support
                    - Cleanup for submitting to wordpress.org
-                   - Removing _s SASS ... no need for basic styling. Thats Bootstrap´s job.
+                   - Removing s SASS ... no need for basic styling. Thats Bootstrap´s job.
 
 
             - ** 0.3.1 AUG. 12th 2015**
