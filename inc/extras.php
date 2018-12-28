@@ -74,7 +74,7 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 
 		$html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
 		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
-		$html = str_replace( 'alt=""', 'title="Home" alt="logo"' , $html );
+		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
 
 		return $html;
 	}
@@ -94,21 +94,19 @@ if ( ! function_exists ( 'understrap_post_nav' ) ) {
 			return;
 		}
 		?>
-				<nav class="container navigation post-navigation">
-					<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
-					<div class="row nav-links justify-content-between">
-						<?php
-
-							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
-							}
-							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
-							}
-						?>
-					</div><!-- .nav-links -->
-				</nav><!-- .navigation -->
-
+		<nav class="container navigation post-navigation">
+			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+			<div class="row nav-links justify-content-between">
+				<?php
+				if ( get_previous_post_link() ) {
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+				}
+				if ( get_next_post_link() ) {
+					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+				}
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
 		<?php
 	}
 }
