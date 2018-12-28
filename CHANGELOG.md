@@ -1,3 +1,19 @@
+            - ** Release 0.8.9 December 28th 2018 **
+              - Update to Bootstrap 4.2.1
+              - Fix for #796  - thx @IanDelMar
+              - Add .editorconfig - thx @IanDelMar
+              - Clean up gulp file and package.json according to #853
+              - Conditionally add pingback - thx @IanDelMar
+              - Add mobile-web-app meta as action  - thx @IanDelMar
+              - Fixing spacing and indentation on a lot of spots - thx @IanDelMar
+              - Update comments.php - thx @IanDelMar
+              - Update sidebar-statichero.php - thx @IanDelMar
+              - Update several .php files - thx @IanDelMar
+              - Fix dropdown when setting depth=0 in wp_nav_menu - thx @stevygee
+              - WooCommerce 3.5.2 update - thx @Fatshape
+              - Fix for issue #876 - thx @Noel Springer
+
+
             - ** Release 0.8.8 November 1st 2018 **
               - Refactor functions.php - Thx @ylkyrg
               - Fix for #808  - Thx @VarunBatraIT
