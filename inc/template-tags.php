@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-if ( ! function_exists ( 'understrap_posted_on' ) ) {
+if ( ! function_exists( 'understrap_posted_on' ) ) {
 	function understrap_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -31,7 +31,7 @@ if ( ! function_exists ( 'understrap_posted_on' ) ) {
 				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
 				esc_html_x( 'Posted on', 'post date', 'understrap' ),
 				esc_url( get_permalink() ),
-				apply_filters( 'understrap_posted_on_time', $time_string ) 
+				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
 		);
 		$byline      = apply_filters(
@@ -50,7 +50,7 @@ if ( ! function_exists ( 'understrap_posted_on' ) ) {
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-if ( ! function_exists ( 'understrap_entry_footer' ) ) {
+if ( ! function_exists( 'understrap_entry_footer' ) ) {
 	function understrap_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
@@ -90,7 +90,7 @@ if ( ! function_exists ( 'understrap_entry_footer' ) ) {
  *
  * @return bool
  */
-if ( ! function_exists ( 'understrap_categorized_blog' ) ) {
+if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 	function understrap_categorized_blog() {
 		if ( false === ( $all_the_cool_cats = get_transient( 'understrap_categories' ) ) ) {
 			// Create an array of all the categories that are attached to posts.
@@ -121,7 +121,7 @@ if ( ! function_exists ( 'understrap_categorized_blog' ) ) {
 add_action( 'edit_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post',     'understrap_category_transient_flusher' );
 
-if ( ! function_exists ( 'understrap_category_transient_flusher' ) ) {
+if ( ! function_exists( 'understrap_category_transient_flusher' ) ) {
 	function understrap_category_transient_flusher() {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;

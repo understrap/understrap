@@ -4,6 +4,13 @@
 }
 
 // Woocommerce product gallery slider width fix
-figure.woocommerce-product-gallery__wrapper { 
-  max-width: inherit !important; 
+figure.woocommerce-product-gallery__wrapper {
+	max-width: inherit !important;
+}
+
+// Fix coupon code input width
+@media(min-width: 768px) {
+	#coupon_code.input-text {
+		width: 110px !important;
+	}
 }
