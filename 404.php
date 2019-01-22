@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
@@ -28,15 +28,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'understrap' ); ?></h1>
+							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'understrap' ); ?></h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'understrap' ); ?></p>
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ); ?></p>
 
 							<?php get_search_form(); ?>
 
@@ -50,13 +48,15 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 									<ul>
 										<?php
-										wp_list_categories( array(
-											'orderby'    => 'count',
-											'order'      => 'DESC',
-											'show_count' => 1,
-											'title_li'   => '',
-											'number'     => 10,
-										) );
+										wp_list_categories(
+											array(
+												'orderby'    => 'count',
+												'order'      => 'DESC',
+												'show_count' => 1,
+												'title_li'   => '',
+												'number'     => 10,
+											)
+										);
 										?>
 									</ul>
 
@@ -83,8 +83,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		</div><!-- .row -->
 
-	</div><!-- Container end -->
+	</div><!-- #content -->
 
-</div><!-- Wrapper end -->
+</div><!-- #error-404-wrapper -->
 
 <?php get_footer(); ?>

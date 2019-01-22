@@ -11,7 +11,7 @@ At the moment, UnderStrap is in a very early stage. But if you want, feel free t
 
 # UnderStrap WordPress Theme Framework
 
-Website: [http://understrap.com](http://understrap.com)
+Website: [https://understrap.com](https://understrap.com)
 
 Child Theme Project: [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
 
@@ -212,12 +212,12 @@ The front-page slider is widget driven. Simply add more than one widget to widge
 - Add two, or more, widgets of any kind to widget area “Hero”.
 - That’s it.
 
-[1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
+[1] Visit [https://browsersync.io](https://browsersync.io) for more information on Browser Sync
 
 Licenses & Credits
 =
 - Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-- Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
+- Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
 - Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
 and of course
 - jQuery: https://jquery.org | (Code licensed under MIT)

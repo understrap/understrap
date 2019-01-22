@@ -3,14 +3,13 @@
  * Check and setup theme's default settings
  *
  * @package understrap
- *
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists ( 'understrap_setup_theme_default_settings' ) ) {
+if ( ! function_exists( 'understrap_setup_theme_default_settings' ) ) {
 	function understrap_setup_theme_default_settings() {
 
 		// check if settings are set, if not set defaults.

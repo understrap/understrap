@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying search forms in Underscores.me
+ * The template for displaying search forms
  *
  * @package understrap
  */
@@ -18,6 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<span class="input-group-append">
 			<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
 			value="<?php esc_attr_e( 'Search', 'understrap' ); ?>">
-	</span>
+		</span>
 	</div>
 </form>

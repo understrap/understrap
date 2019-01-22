@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
@@ -64,14 +64,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-		
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-	</div><!-- .row -->
+		</div><!-- .row -->
 
-</div><!-- Container end -->
+	</div><!-- #content -->
 
-</div><!-- Wrapper end -->
+</div><!-- #index-wrapper -->
 
 <?php get_footer(); ?>
