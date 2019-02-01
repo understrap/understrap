@@ -1,0 +1,810 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: understrap\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
+"POT-Creation-Date: 2018-06-17 17:56+0000\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"PO-Revision-Date: 2019-02-01 10:57+0100\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Last-Translator: Davor Lonzaric <info@fatshape.com>\n"
+"Language: sl_SI\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc\n"
+
+#: search.php:29
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Rezultati iskanja za: %s"
+
+#: header.php:34
+msgid "Skip to content"
+msgstr "Preskoči na vsebino"
+
+#: 404.php:24
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! Strani ni bilo mogoče najti."
+
+#: 404.php:31
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Izgleda, da na tej lokaciji nismo našli ničesar. Poskusite s spodnjimi "
+"povezavami ali pa z iskalnikom?"
+
+#: 404.php:42
+msgid "Most Used Categories"
+msgstr "Najbolj uporabljene kategorije"
+
+#. translators: %1$s: smiley
+#: 404.php:62
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Pokukajte v mesečni arhiv. %1$s"
+
+#: author.php:34
+msgid "About:"
+msgstr "O avtorju:"
+
+#: author.php:42 inc/custom-comments.php:30
+msgid "Website"
+msgstr "Spletna stran"
+
+#: author.php:49
+msgid "Profile"
+msgstr "Profil"
+
+#: author.php:54
+msgid "Posts by"
+msgstr "Objave od"
+
+#: author.php:68
+msgid "in"
+msgstr ""
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Ena misel o &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s misli o &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s misli o &ldquo;%2$s&rdquo;"
+msgstr[3] "%1$s misli o &ldquo;%2$s&rdquo;"
+
+#: comments.php:36 comments.php:59
+msgid "Comment navigation"
+msgstr "Navigacija komentarjev"
+
+#: comments.php:38 comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; Starejši komentarji"
+
+#: comments.php:42 comments.php:65
+msgid "Newer Comments &rarr;"
+msgstr "Novejši komentarji &rarr;"
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "Komentarji so zaklenjeni."
+
+#: footer.php:27
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:28
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Ponosno poganja %s"
+
+#: footer.php:31
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s od %2$s."
+
+#: footer.php:33
+#, php-format
+msgid "Version: %1$s"
+msgstr "Verzija: %1$s"
+
+#: searchform.php:10 searchform.php:16
+msgid "Search"
+msgstr "Iskanje"
+
+#: searchform.php:13
+msgid "Search &hellip;"
+msgstr "Iskanje &hellip;"
+
+#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
+#: loop-templates/content.php:37 loop-templates/content-single.php:31
+#: loop-templates/content-verticalpage.php:28
+msgid "Pages:"
+msgstr "Strani:"
+
+#: loop-templates/content-page.php:34
+#: loop-templates/content-verticalpage.php:37
+msgid "Edit"
+msgstr "Uredi"
+
+#: loop-templates/content-none.php:15
+msgid "Nothing Found"
+msgstr "Nič ni mogoče najti"
+
+#: loop-templates/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Ste pripravljeni objaviti prvo objavo? <a href=\"%1$s\"> Začnite tukaj </a>."
+
+#: loop-templates/content-none.php:28
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Oprostite, toda nič ne ustreza vašemu iskalnemu nizu. Poskusite znova z "
+"drugimi ključnimi besedami."
+
+#: loop-templates/content-none.php:34
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Videti je, da ne moremo najti tistega, kar iščete. Pomagajte si z iskalcem."
+
+#. Name of the template
+msgid "Blank Page Template"
+msgstr "Predloga s prazno stranjo"
+
+#. Name of the template
+msgid "Left and Right Sidebar Layout"
+msgstr "Razporeditev za levo in desno stransko pasico"
+
+#. Name of the template
+msgid "Empty Page Template"
+msgstr "Predloga s prazno stranjo"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "Stran čez celo širino"
+
+#. Name of the template
+msgid "Left Sidebar Layout"
+msgstr "Razporeditev za levo stransko pasico"
+
+#. Name of the template
+msgid "Vertical One Page"
+msgstr "Ena vertikalna stran"
+
+#: inc/template-tags.php:18
+#, php-format
+msgid " Edited %4$s"
+msgstr "Urejeno %4$s"
+
+#: inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Poslano: %s"
+
+#: inc/template-tags.php:34
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "od %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:51 inc/template-tags.php:57
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:53
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Poslano v %1$s"
+
+#: inc/template-tags.php:59
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Označeno %1$s"
+
+#: inc/template-tags.php:65
+msgid "Leave a comment"
+msgstr "Napiši komentar"
+
+#: inc/template-tags.php:65
+msgid "1 Comment"
+msgstr "1 Komentar"
+
+#: inc/template-tags.php:65
+msgid "% Comments"
+msgstr "% komentarjev"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:72
+#, php-format
+msgid "Edit %s"
+msgstr "Uredi %s"
+
+#: inc/template-tags.php:143
+msgid "Post navigation"
+msgstr "Navigacija za objave"
+
+#: inc/template-tags.php:148
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:151
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/setup.php:51
+msgid "Primary Menu"
+msgstr "Primarni meni"
+
+#: inc/setup.php:122
+msgid "Read More..."
+msgstr "Preberi več..."
+
+#: inc/widgets.php:14
+msgid "Right Sidebar"
+msgstr "Desna stranska pasica"
+
+#: inc/widgets.php:24
+msgid "Left Sidebar"
+msgstr "Leva stranska pasica"
+
+#: inc/widgets.php:34
+msgid "Hero Slider"
+msgstr "Hero drsnik"
+
+#: inc/widgets.php:44
+msgid "Hero Static"
+msgstr "Hero Static"
+
+#: inc/widgets.php:54
+msgid "Footer Full"
+msgstr "Noga čez celo širino"
+
+#: inc/custom-comments.php:24
+msgid "Name"
+msgstr "Ime"
+
+#: inc/custom-comments.php:27
+msgid "Email"
+msgstr "E-pošta"
+
+#: inc/custom-comments.php:49
+msgctxt "noun"
+msgid "Comment"
+msgstr "Komentar"
+
+#: inc/customizer.php:36
+msgid "Slider Settings"
+msgstr "Nastavitve drsnika"
+
+#: inc/customizer.php:45
+msgid "Number of slides displaying at once"
+msgstr "Število elementov drsnika prikazanih naenkrat"
+
+#: inc/customizer.php:57
+msgid "Slider Time (in ms)"
+msgstr "Čas drsnika (v ms)"
+
+#: inc/customizer.php:69
+msgid "Loop Slider Content"
+msgstr "Vsebina drsnika"
+
+#: inc/customizer.php:81
+msgid "Theme Layout Settings"
+msgstr "Nastavitve razporeditev v temi"
+
+#: inc/customizer.php:83
+msgid "Container width and sidebar defaults"
+msgstr "Privzeta širina kontejnerja in stranskih pasic"
+
+#: inc/customizer.php:98
+msgid "Container Width"
+msgstr "Širina kontejnerja"
+
+#: inc/customizer.php:99
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr ""
+"Izberite med Bootstrap \"container\" (omejen) ali \"container-fluid"
+"\" (razpotegnjen)"
+
+#: inc/customizer.php:104
+msgid "Fixed width container"
+msgstr "Stran s fiksno širino"
+
+#: inc/customizer.php:105
+msgid "Full width container"
+msgstr "Čez celo širino"
+
+#: inc/customizer.php:122
+msgid "Sidebar Positioning"
+msgstr "Pozicija stranske pasice"
+
+#: inc/customizer.php:123
+msgid "Set sidebar's position. Can either be: right, left, both or none"
+msgstr ""
+"Nastavite pozicijo stranske pasice. Lahko je: desno, levo, oboje ali nič"
+
+#: inc/customizer.php:129
+msgid "Right sidebar"
+msgstr "Desna stranska pasica"
+
+#: inc/customizer.php:130
+msgid "Left sidebar"
+msgstr "Leva stranska pasica"
+
+#: inc/customizer.php:131
+msgid "Left & Right sidebars"
+msgstr "Leva in desna stranska pasica"
+
+#: inc/customizer.php:132
+msgid "No sidebar"
+msgstr "Brez stranske pasica"
+
+#: inc/customizer.php:150
+msgid "Posts Index Style"
+msgstr "Slog indeksa objav"
+
+#: inc/customizer.php:151
+msgid "Choose how to display latest posts"
+msgstr "Izberite kako prikazovati zadnje objave"
+
+#: inc/customizer.php:156
+msgid "Default"
+msgstr "Privzeto"
+
+#: inc/customizer.php:157
+msgid "Masonry"
+msgstr "Zidaki"
+
+#: inc/customizer.php:158
+msgid "Grid"
+msgstr "Mreža"
+
+#: inc/customizer.php:187
+msgid "Grid Post Columns"
+msgstr "Stolpci objav v mreži"
+
+#: inc/customizer.php:188
+msgid "Choose how many columns to use"
+msgstr "Izberite koliko vrstic uporabiti"
+
+#: woocommerce/cart/proceed-to-checkout-button.php:27
+msgid "Proceed to Checkout"
+msgstr "Na blagajno"
+
+#: woocommerce/cart/mini-cart.php:49 woocommerce/cart/cart.php:60
+msgid "Remove this item"
+msgstr "Odstrani izdelek"
+
+#: woocommerce/cart/mini-cart.php:72
+msgid "No products in the cart."
+msgstr "V košarici ni izdelkov."
+
+#: woocommerce/cart/mini-cart.php:80
+msgid "Subtotal"
+msgstr "Vmesni znesek"
+
+#: woocommerce/cart/mini-cart.php:85
+msgid "View Cart"
+msgstr "Poglej košarico"
+
+#: woocommerce/cart/mini-cart.php:86
+msgid "Checkout"
+msgstr "Na blagajno"
+
+#: woocommerce/cart/cart-empty.php:28
+msgid "Your cart is currently empty."
+msgstr "Vaša košarica je trenutno prazna."
+
+#: woocommerce/cart/cart-empty.php:36
+msgid "Return To Shop"
+msgstr "Nadaljuj z nakupom"
+
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:79
+#: woocommerce/checkout/form-pay.php:29
+msgid "Product"
+msgstr "Izdelek"
+
+#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:97
+msgid "Price"
+msgstr "Cena"
+
+#: woocommerce/cart/cart.php:38 woocommerce/cart/cart.php:103
+msgid "Quantity"
+msgstr "Količina"
+
+#: woocommerce/cart/cart.php:39 woocommerce/cart/cart.php:120
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Total"
+msgstr "Skupaj"
+
+#: woocommerce/cart/cart.php:92
+msgid "Available on backorder"
+msgstr "Na voljo kot prednaročilo"
+
+#: woocommerce/cart/cart.php:138
+msgid "Coupon:"
+msgstr "Kupon:"
+
+#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:36
+msgid "Coupon code"
+msgstr "Koda kupona"
+
+#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:40
+msgid "Apply Coupon"
+msgstr "Unovči kupon"
+
+#: woocommerce/cart/cart.php:144
+msgid "Update Cart"
+msgstr "Posodobi košarico"
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Žal kaže, da za vašo državo ni na voljo nobenega načina plačila. Če "
+"potrebujete pomoč ali želite alternativno rešitev, nas prosim kontaktirajte."
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+"Vnesite svoje podatke zgoraj, da boste videli razpoložljive načine plačila."
+
+#: woocommerce/checkout/payment.php:42
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+"Ker vaš brskalnik ne podpira JavaScripta ali pa je onemogočen, se "
+"prepričajte, da kliknete gumb <em> Posodobi končni znesek </em>, preden "
+"oddate naročilo. Če tega ne storite, vam lahko zaračunamo več, kot je "
+"navedeno zgoraj."
+
+#: woocommerce/checkout/payment.php:43
+msgid "Update totals"
+msgstr "Posodobi končni znesek"
+
+#: woocommerce/checkout/form-pay.php:30
+msgid "Qty"
+msgstr "Kol"
+
+#: woocommerce/checkout/form-pay.php:31
+msgid "Totals"
+msgstr "Skupaj"
+
+#: woocommerce/checkout/form-pay.php:79
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Žal kaže, da za vašo lokacijo ni na voljo nobenega načina plačila. Če "
+"potrebujete pomoč ali želite alternativno rešitev, nas prosim kontaktirajte."
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Have a coupon?"
+msgstr "Imate kupon?"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Click here to enter your code"
+msgstr "Kliknite sem za vpis kode"
+
+#: woocommerce/global/form-login.php:35
+#: woocommerce/myaccount/form-lost-password.php:30
+msgid "Username or email"
+msgstr "Uporabniško ime ali email"
+
+#: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:48
+#: woocommerce/myaccount/form-login.php:98
+msgid "Password"
+msgstr "Geslo"
+
+#: woocommerce/global/form-login.php:48 woocommerce/myaccount/form-login.php:37
+#: woocommerce/myaccount/form-login.php:56
+msgid "Login"
+msgstr "Prijava"
+
+#: woocommerce/global/form-login.php:51 woocommerce/myaccount/form-login.php:58
+msgid "Remember me"
+msgstr "Zapomni si me"
+
+#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:62
+msgid "Lost your password?"
+msgstr "Izgubljeno geslo?"
+
+#: woocommerce/global/quantity-input.php:24
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "Kol"
+
+#: woocommerce/myaccount/form-lost-password.php:27
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"Pozabili geslo? Vnesite svoje uporabniško ime ali e-poštni naslov. Prejeli "
+"boste povezavo za ustvarjanje novega gesla po e-pošti."
+
+#: woocommerce/myaccount/form-lost-password.php:40
+msgid "Reset Password"
+msgstr "Ponastavi geslo"
+
+#: woocommerce/myaccount/form-login.php:44
+msgid "Username or email address"
+msgstr "Uporabniško ime ali email naslov"
+
+#: woocommerce/myaccount/form-login.php:75
+#: woocommerce/myaccount/form-login.php:112
+msgid "Register"
+msgstr "Registriraj se"
+
+#: woocommerce/myaccount/form-login.php:84
+msgid "Username"
+msgstr "Uporabniško ime"
+
+#: woocommerce/myaccount/form-login.php:91
+#: woocommerce/myaccount/form-edit-account.php:40
+msgid "Email address"
+msgstr "E-mail naslov"
+
+#: woocommerce/myaccount/form-login.php:105
+msgid "Anti-spam"
+msgstr "Anti-spam"
+
+#: woocommerce/myaccount/form-edit-account.php:30
+msgid "First name"
+msgstr "Ime"
+
+#: woocommerce/myaccount/form-edit-account.php:34
+msgid "Last name"
+msgstr "Priimek"
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid "Password Change"
+msgstr "Menjava gesla"
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr "Trenutno geslo (pustite prazno, če ne želite spremeniti)"
+
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "New Password (leave blank to leave unchanged)"
+msgstr "Novo geslo (pustite prazno, če ne želite spremeniti)"
+
+#: woocommerce/myaccount/form-edit-account.php:56
+msgid "Confirm New Password"
+msgstr "Potrdite novo geslo"
+
+#: woocommerce/myaccount/form-edit-account.php:66
+msgid "Save changes"
+msgstr "Shrani spremembe"
+
+#: woocommerce/myaccount/my-orders.php:13
+msgid "Order"
+msgstr "Naročilo"
+
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Date"
+msgstr "Datum"
+
+#: woocommerce/myaccount/my-orders.php:15
+msgid "Status"
+msgstr "Stanje"
+
+#: woocommerce/myaccount/my-orders.php:30
+msgid "Recent Orders"
+msgstr "Zadnja naročila"
+
+#: woocommerce/myaccount/my-orders.php:55 woocommerce/myaccount/orders.php:51
+msgctxt "hash before order number"
+msgid "#"
+msgstr "#"
+
+#: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:61
+#, php-format
+msgid "%s for %s item"
+msgid_plural "%s for %s items"
+msgstr[0] "%s za %s izdelek"
+msgstr[1] "%s za %s izdelka"
+msgstr[2] "%s za %s izdelke"
+msgstr[3] "%s za %s izdelkov"
+
+#: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:68
+msgid "Pay"
+msgstr "Plačaj"
+
+#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:72
+msgid "View"
+msgstr "Poglej"
+
+#: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:76
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: woocommerce/myaccount/orders.php:107
+msgid "Previous"
+msgstr "Prejšnji"
+
+#: woocommerce/myaccount/orders.php:111
+msgid "Next"
+msgstr "Naslednji"
+
+#: woocommerce/myaccount/orders.php:119 woocommerce/myaccount/downloads.php:98
+msgid "Go Shop"
+msgstr "Pojdi nakupovati"
+
+#: woocommerce/myaccount/orders.php:121
+msgid "No order has been made yet."
+msgstr "Do sedaj ni bilo oddano nobeno naročilo."
+
+#: woocommerce/myaccount/form-edit-address.php:23
+msgid "Billing Address"
+msgstr "Naslov plačnika"
+
+#: woocommerce/myaccount/form-edit-address.php:23
+msgid "Shipping Address"
+msgstr "Naslov prejemnika"
+
+#: woocommerce/myaccount/form-edit-address.php:46
+msgid "Save Address"
+msgstr "Shrani naslov"
+
+#: woocommerce/myaccount/form-reset-password.php:27
+msgid "Enter a new password below."
+msgstr "Vnesite novo geslo."
+
+#: woocommerce/myaccount/form-reset-password.php:30
+msgid "New password"
+msgstr "Novo geslo"
+
+#: woocommerce/myaccount/form-reset-password.php:34
+msgid "Re-enter new password"
+msgstr "Znova vnesite novo geslo"
+
+#: woocommerce/myaccount/form-reset-password.php:47
+msgid "Save"
+msgstr "Shrani"
+
+#: woocommerce/myaccount/downloads.php:59
+msgid "&infin;"
+msgstr "&infin;"
+
+#: woocommerce/myaccount/downloads.php:67
+msgid "Never"
+msgstr "Nikoli"
+
+#: woocommerce/myaccount/downloads.php:75
+msgid "Download"
+msgstr "Prenos"
+
+#: woocommerce/myaccount/downloads.php:100
+msgid "No downloads available yet."
+msgstr "Zaenkrat še ni razpoložljivih prenosov."
+
+#: woocommerce/single-product/review-rating.php:28
+#, php-format
+msgid "Rated %d out of 5"
+msgstr "Ocena %d od 5"
+
+#: woocommerce/single-product/review-rating.php:29
+msgid "out of 5"
+msgstr "od 5"
+
+#: woocommerce/single-product/rating.php:36
+#, php-format
+msgid "Rated %s out of 5"
+msgstr "Ocena %s od 5"
+
+#: woocommerce/single-product/rating.php:38
+#, php-format
+msgid "out of %s5%s"
+msgstr "od %s5%s"
+
+#: woocommerce/single-product/rating.php:39
+#, php-format
+msgid "based on %s customer rating"
+msgid_plural "based on %s customer ratings"
+msgstr[0] "glede na %s uporabnikovo oceno"
+msgstr[1] "glede na %s uporabnikovi oceni"
+msgstr[2] "glede na %s uporabnikove ocene"
+msgstr[3] "glede na %s uporabniških ocen"
+
+#: woocommerce/single-product/rating.php:42
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] "%s mnenje uporabnika"
+msgstr[1] "%s mnenji uporabnikov"
+msgstr[2] "%s mnenja uporabnikov"
+msgstr[3] "%s mnenj uporabnikov"
+
+#. Name of the theme
+msgid "UnderStrap"
+msgstr "UnderStrap"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as a parent theme. It is up to you. Including Font Awesome "
+"support, built-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
+msgstr ""
+"Kombinacija teme \"_s\" s strani Automattic ekipe in Bootstrap 4. Namenjena "
+"kot izhodiščni točki pri izdelavi predloge (teme) in  WordPress spletne "
+"strani. Uporabite jo lahko kot začetno temo ali kot nadrejeno temo. Podpira "
+"Font Awesome, ima vgrajen drsnik za gradnike in še veliko več. POMEMBNO: Vse "
+"odvisnosti razvijalcev niso povezane s to namestitveno datoteko. Preprosto "
+"prenesite datoteko .zip, jo odpakirajte in zaženite \"npm install\" in "
+"\"gulp copy-assets\" v mapi /understrap."
+
+#. Theme URI of the theme
+msgid "http://understrap.com"
+msgstr "http://understrap.com"
+
+#. Author of the theme
+msgid "Holger Koenemann"
+msgstr "Holger Koenemann"
+
+#. Author URI of the theme
+msgid "http://www.holgerkoenemann.de"
+msgstr "http://www.holgerkoenemann.de"
+
+msgid "Proceed to checkout"
+msgstr "Na blagajno"
+
+msgid "Apply coupon"
+msgstr "Unovči kupon"
+
+msgid "Update cart"
+msgstr "Posodobi košarico"
+
+msgid "Your order"
+msgstr "Vaše naročilo"
