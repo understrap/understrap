@@ -56,6 +56,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- #content -->
 
-</div><!-- page-wrapper -->
+</div><!-- #page-wrapper -->
 
 <?php get_footer(); ?>
