@@ -1,3 +1,15 @@
+          - ** Release 0.9.0 February 12th, 2019 **
+            - Update to Bootstrap 4.3.0
+            - Update both-sidebarspage.php - thx @stevygee
+            - Update left-sidebar.php - thx @stevygee
+            - Update right-sidebars.php - thx @stevygee
+            - Add deprecated.php - thx @IanDelMar
+            - Escape translation fix - thx @IanDelMar
+            - Update WooCommerce templates to 3.5.3
+            - HTTPS Links - thx @Noel Springer
+            - Adding Slovene Translation - thx @Fatshape
+            - Update pt_Pt translation - thx @jfig
+
             - ** Release 0.8.9 December 28th 2018 **
               - Update to Bootstrap 4.2.1
               - Fix for #796  - thx @IanDelMar

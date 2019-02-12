@@ -8,7 +8,7 @@ Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a so
 That downloads everything and moves it in place so that you can recompile your CSS and JS files;
 A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/understrap/understrap
 A child theme is available on Github, too: https://github.com/understrap/understrap-child;
-Version: 0.8.9
+Version: 0.9.0
 License: UnderStrap WordPress Theme, Copyright 2013-2017 Holger Koenemann
 UnderStrap is distributed under the terms of the GNU GPL version 2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,7 +21,6 @@ UnderStrap is based on Underscores http://underscores.me/, (C) 2012-2016 Automat
 Resource Licenses:
 Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
 Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
-Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
 and of course
 jQuery: https://jquery.org | (Code licensed under MIT)
 WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
