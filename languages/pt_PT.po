@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2016-12-20 05:10+0000\n"
-"PO-Revision-Date: 2018-07-02 12:58+0100\n"
+"POT-Creation-Date: 2018-06-17 17:56+0000\n"
+"PO-Revision-Date: 2019-02-05 12:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_PT\n"
@@ -14,7 +14,7 @@ msgstr ""
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -63,7 +63,7 @@ msgid ""
 "below or a search?"
 msgstr ""
 "Parece que nada foi encontrado neste local. Talvez tente um dos links abaixo "
-"ou uma pesquisa!"
+"ou uma pesquisa?"
 
 #: 404.php:42
 msgid "Most Used Categories"
@@ -136,7 +136,7 @@ msgstr "Tema: %1$s por %2$s."
 #: footer.php:33
 #, php-format
 msgid "Version: %1$s"
-msgstr "versão: %1$s"
+msgstr "Versão: %1$s"
 
 #: searchform.php:10 searchform.php:16
 msgid "Search"
@@ -264,12 +264,12 @@ msgstr "Navegação nos Posts"
 #: inc/template-tags.php:148
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr ""
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
 #: inc/template-tags.php:151
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr ""
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/setup.php:51
 msgid "Primary Menu"
@@ -419,7 +419,7 @@ msgstr "Sem produtos no carrilho."
 
 #: woocommerce/cart/mini-cart.php:80
 msgid "Subtotal"
-msgstr ""
+msgstr "Subtotal"
 
 #: woocommerce/cart/mini-cart.php:85
 msgid "View Cart"
@@ -453,7 +453,7 @@ msgstr "Quantidade"
 #: woocommerce/cart/cart.php:39 woocommerce/cart/cart.php:120
 #: woocommerce/myaccount/my-orders.php:16
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: woocommerce/cart/cart.php:92
 msgid "Available on backorder"
@@ -542,7 +542,7 @@ msgstr "Palavra passe"
 #: woocommerce/global/form-login.php:48 woocommerce/myaccount/form-login.php:37
 #: woocommerce/myaccount/form-login.php:56
 msgid "Login"
-msgstr ""
+msgstr "Entrar"
 
 #: woocommerce/global/form-login.php:51 woocommerce/myaccount/form-login.php:58
 msgid "Remember me"
@@ -589,7 +589,7 @@ msgstr "Endereço de email"
 
 #: woocommerce/myaccount/form-login.php:105
 msgid "Anti-spam"
-msgstr ""
+msgstr "Anti-spam"
 
 #: woocommerce/myaccount/form-edit-account.php:30
 msgid "First name"
@@ -605,7 +605,7 @@ msgstr "Alterar palavra passe"
 
 #: woocommerce/myaccount/form-edit-account.php:48
 msgid "Current Password (leave blank to leave unchanged)"
-msgstr "Palavra passe actual (deixar em branco para não alterar) "
+msgstr "Palavra passe actual (deixar em branco para não alterar)"
 
 #: woocommerce/myaccount/form-edit-account.php:52
 msgid "New Password (leave blank to leave unchanged)"
@@ -638,14 +638,14 @@ msgstr "Encomendas recentes"
 #: woocommerce/myaccount/my-orders.php:55 woocommerce/myaccount/orders.php:51
 msgctxt "hash before order number"
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:61
 #, php-format
 msgid "%s for %s item"
 msgid_plural "%s for %s items"
-msgstr[0] "%s por %s item."
-msgstr[1] "%s por %s items."
+msgstr[0] "%s por %s item"
+msgstr[1] "%s por %s items"
 
 #: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:68
 msgid "Pay"
@@ -673,7 +673,7 @@ msgstr "Ir comprar"
 
 #: woocommerce/myaccount/orders.php:121
 msgid "No order has been made yet."
-msgstr "Sem encomendas"
+msgstr "Sem encomendas."
 
 #: woocommerce/myaccount/form-edit-address.php:23
 msgid "Billing Address"
@@ -705,7 +705,7 @@ msgstr "Gravar"
 
 #: woocommerce/myaccount/downloads.php:59
 msgid "&infin;"
-msgstr ""
+msgstr "&infin;"
 
 #: woocommerce/myaccount/downloads.php:67
 msgid "Never"
@@ -772,7 +772,7 @@ msgstr ""
 "slider de widgets e muito mais. IMPORTANTE as dependências de "
 "desenvolvimento não estão incluídas com o ficheiro de instalação. é "
 "necessário executar \"npm install\" e \"gulp copy-assets\" dentro da "
-"directoria /understrap.  "
+"directoria /understrap."
 
 #. Theme URI of the theme
 msgid "http://understrap.com"
@@ -785,6 +785,18 @@ msgstr "Holger Koenemann"
 #. Author URI of the theme
 msgid "http://www.holgerkoenemann.de"
 msgstr "http://www.holgerkoenemann.de"
+
+msgid "Proceed to checkout"
+msgstr "Prosseguir com a compra"
+
+msgid "Apply coupon"
+msgstr "Aplicar cupão"
+
+msgid "Update cart"
+msgstr "Atualizar carrinho"
+
+msgid "Your order"
+msgstr "A sua encomenda"
 
 #~ msgid ""
 #~ "Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
