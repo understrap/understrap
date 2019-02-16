@@ -1,3 +1,6 @@
+          - ** Release 0.9.1 February 15th, 2019 - SECURITY UPDATE **
+            - Update to Bootstrap 4.3.1 - Fixes a XSS vulnerability in BS 4.3.0
+
           - ** Release 0.9.0 February 12th, 2019 **
             - Update to Bootstrap 4.3.0
             - Update both-sidebarspage.php - thx @stevygee
