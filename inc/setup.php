@@ -91,6 +91,9 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
+		
+		// Add support for responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
 
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
