@@ -160,7 +160,7 @@ gulp.task( 'watch-bs', gulp.series('browser-sync', 'watch', 'scripts'));
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
-gulp.task( 'copy-assets', function() {
+gulp.task( 'copy-assets', function(done) {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all JS files
@@ -188,6 +188,8 @@ gulp.task( 'copy-assets', function() {
 // _s JS files into /src/js
     gulp.src( `${paths.node}undescores-for-npm/js/skip-link-focus-fix.js` )
         .pipe( gulp.dest( `${paths.dev}/js` ) );
+
+    done();
 });
 
 // Deleting the files distributed by the copy-assets task
