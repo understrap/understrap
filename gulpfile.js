@@ -153,7 +153,7 @@ gulp.task( 'clean-source', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', gulp.series('browser-sync', 'watch', 'scripts'));
+gulp.task( 'watch-bs', gulp.parallel('browser-sync', 'watch'));
 
 // Run:
 // gulp copy-assets.
