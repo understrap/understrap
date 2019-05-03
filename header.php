@@ -23,13 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
-<?php 
-if ( function_exists( 'wp_body_open' ) ) {
-    wp_body_open();
-} else {
-    do_action( 'wp_body_open' );
-}
-?>
+<?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
