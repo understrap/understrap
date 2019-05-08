@@ -1,0 +1,10 @@
+# please see https://github.com/browserslist/browserslist for more info
+# These settings can be changed depending on what browsers your project is supporting
+
+>= 0.01%
+Last 5 versions
+last 8 iOS versions
+Firefox >= 28
+IE 10 # sorry
+IE 11 # sorry
+dead # sorry
