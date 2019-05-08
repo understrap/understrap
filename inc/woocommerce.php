@@ -28,14 +28,14 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 }
 
 /**
-* First unhook the WooCommerce wrappers
-*/
+ * First unhook the WooCommerce wrappers
+ */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
 /**
-* Then hook in your own functions to display the wrappers your theme requires
-*/
+ * Then hook in your own functions to display the wrappers your theme requires
+ */
 add_action( 'woocommerce_before_main_content', 'understrap_woocommerce_wrapper_start', 10 );
 add_action( 'woocommerce_after_main_content', 'understrap_woocommerce_wrapper_end', 10 );
 if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
@@ -136,5 +136,29 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				break;
 		} // end switch ($args).
 		return $args;
+	}
+}
+
+if ( ! function_exists( 'wc_review_ratings_enabled' ) ) {
+	/**
+	 * Check if reviews are enabled.
+	 *
+	 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
+	 *
+	 * @return bool
+	 */
+	function wc_reviews_enabled() {
+		return 'yes' === get_option( 'woocommerce_enable_reviews' );
+	}
+
+	/**
+	 * Check if reviews ratings are enabled.
+	 *
+	 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
+	 *
+	 * @return bool
+	 */
+	function wc_review_ratings_enabled() {
+		return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
 	}
 }
