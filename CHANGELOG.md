@@ -1,3 +1,6 @@
+          - ** Release 0.9.3 May 8th 2019 **
+          - hotfix release
+          
           - ** Release 0.9.2 May 8th 2019 **
           Commits on Feb 16, 2019
             @holgerkoenemann
@@ -169,7 +172,7 @@
             IanDelMar
             Improve code simplicity
             6076c91
-            
+
             Commits on May 08, 2019
             @holger1411
             holger1411
