@@ -139,7 +139,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wc_review_ratings_enabled' ) ) {
+if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 	/**
 	 * Check if reviews are enabled.
 	 *
