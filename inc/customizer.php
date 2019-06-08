@@ -67,6 +67,31 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 
 		}
 
+		// Sticky Header options
+		$wp_customize->add_setting(
+			'understrap_header_position',
+			array(
+				'default'           => false,
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_header_position',
+				array(
+					'label'    => __( 'Fixed Header?', 'understrap' ),
+					'section'  => 'understrap_theme_layout_options',
+					'settings' => 'understrap_header_position',
+					'type'     => 'checkbox',
+					'priority' => '10',
+					'std'      => '0'
+				)
+			)
+		);
+
 		$wp_customize->add_setting(
 			'understrap_container_type',
 			array(

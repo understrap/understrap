@@ -118,3 +118,21 @@ a.skip-link {
 }
 
 .navbar h1 { font-weight: $font-weight-normal; }
+
+// Fixed Top Navbar offset if logged in.
+// @see "/wp-includes/admin-bar.php"
+
+body.logged-in {
+  #wrapper-navbar > nav.fixed-top {
+    margin-top:32px; 
+    transition: .16s;
+    @media screen and (max-width: 782px){
+      margin-top:46px;
+    }
+    @media screen and (max-width: 600px){
+      &.scrolled {
+        margin-top:0;
+      }
+    }
+  }
+}
