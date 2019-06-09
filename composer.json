@@ -6,5 +6,8 @@
     "minimum-stability": "stable",
     "require": {"composer/installers": "^1.5"},
     "keywords": ["wordpress","theme","bootstrap"],
-    "homepage": "https://github.com/holger1411/understrap"
+    "homepage": "https://github.com/holger1411/understrap",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4"
+    }
 }

@@ -42,7 +42,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			array(
 				'title'       => __( 'Theme Layout Settings', 'understrap' ),
 				'capability'  => 'edit_theme_options',
-				'description' => __( 'Container width and sidebar defaults', 'understrap' ),
+				'description' => __( 'Container width, sidebar, and navbar defaults', 'understrap' ),
 				'priority'    => 160,
 			)
 		);
@@ -67,30 +67,17 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 
 		}
 
-		// Sticky Header options
-		$wp_customize->add_setting(
-			'understrap_header_position',
-			array(
-				'default'           => false,
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'understrap_header_position',
-				array(
-					'label'    => __( 'Fixed Header?', 'understrap' ),
-					'section'  => 'understrap_theme_layout_options',
-					'settings' => 'understrap_header_position',
-					'type'     => 'checkbox',
-					'priority' => '10',
-					'std'      => '0'
-				)
-			)
-		);
+		/**
+		 * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+		 * as a boolean value, either TRUE or FALSE.
+		 *
+		 * @param bool $checked Whether the checkbox is checked.
+		 * @return bool Whether the checkbox is checked.
+		 */
+		function understrap_sanitize_checkbox( $checked ) {
+			// Boolean check.
+			return ( ( isset( $checked ) && true == $checked ) ? true : false );
+		}
 
 		$wp_customize->add_setting(
 			'understrap_container_type',
@@ -152,6 +139,33 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'none'  => __( 'No sidebar', 'understrap' ),
 					),
 					'priority'          => '20',
+				)
+			)
+		);
+
+		// Sticky Header options.
+		$wp_customize->add_setting(
+			'understrap_header_position',
+			array(
+				'default'           => false,
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'understrap_sanitize_checkbox',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_header_position',
+				array(
+					'label'    => __( 'Fixed Header?', 'understrap' ),
+					'description' => __('Check if you would like the navbar to stay fixed to the top of the page when scrolling', 'understrap'),
+					'section'  => 'understrap_theme_layout_options',
+					'settings' => 'understrap_header_position',
+					'type'     => 'checkbox',
+					'priority' => '30',
+					'std'      => '0'
 				)
 			)
 		);

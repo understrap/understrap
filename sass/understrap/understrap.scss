@@ -120,9 +120,10 @@ a.skip-link {
 .navbar h1 { font-weight: $font-weight-normal; }
 
 // Fixed Top Navbar offset if logged in.
-// @see "/wp-includes/admin-bar.php"
+// @see "/wp-includes/admin-bar.php" for margin values and breakpoints
+// Disabled when using Customizer
 
-body.logged-in {
+body.logged-in:not([class*="customize-partial-edit-"]) {
   #wrapper-navbar > nav.fixed-top {
     margin-top:32px; 
     transition: .16s;
