@@ -7050,7 +7050,7 @@ var mainNavOffset = function mainNavOffset() {
   */
 
 
-  if (document.querySelector('body').classList.contains('logged-in')) {
+  if (document.querySelector('body').classList.contains('admin-bar')) {
     var scrollTop = document.documentElement.scrollTop;
 
     if (scrollTop > 46) {

@@ -19,7 +19,7 @@ var mainNavOffset = function mainNavOffset() {
   * For when logged in. Offsets fixed navbar so that it's not hidden by wpadmin bar.
   * @see /wp-includes/admin-bar.php
   */
-  if (document.querySelector('body').classList.contains('logged-in')) {
+  if (document.querySelector('body').classList.contains('admin-bar')) {
     var scrollTop = document.documentElement.scrollTop;
     if (scrollTop > 46) {
       mainNav.classList.add('scrolled')

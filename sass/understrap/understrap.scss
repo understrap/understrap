@@ -123,7 +123,7 @@ a.skip-link {
 // @see "/wp-includes/admin-bar.php" for margin values and breakpoints
 // Disabled when using Customizer
 
-body.logged-in:not([class*="customize-partial-edit-"]) {
+body.admin-bar:not([class*="customize-partial-edit-"]) {
   #wrapper-navbar > nav.fixed-top {
     margin-top:32px; 
     transition: .16s;
