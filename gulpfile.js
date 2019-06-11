@@ -160,7 +160,11 @@ gulp.task('scripts', function() {
 	];
 	gulp
 		.src(scripts, { allowEmpty: true })
-		.pipe(babel())
+		.pipe(babel(
+			{
+				presets: ['@babel/preset-env']
+			}
+		))
 		.pipe(concat('theme.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.js));
