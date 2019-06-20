@@ -7,9 +7,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
@@ -76,8 +75,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 									the_title( '', '', false )
 								);
 								?>
-								<?php understrap_posted_on(); ?> 
-								<?php esc_html_e( 'in', 'understrap' ); ?> 
+								<?php understrap_posted_on(); ?>
+								<?php esc_html_e( 'in', 'understrap' ); ?>
 								<?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>

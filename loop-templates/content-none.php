@@ -7,9 +7,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <section class="no-results not-found">
@@ -43,5 +42,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 				get_search_form();
 		endif; ?>
 	</div><!-- .page-content -->
-	
+
 </section><!-- .no-results -->
