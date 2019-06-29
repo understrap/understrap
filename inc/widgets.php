@@ -5,9 +5,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Add filter to the parameters passed to a widget's display callback.

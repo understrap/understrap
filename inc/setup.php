@@ -5,9 +5,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
