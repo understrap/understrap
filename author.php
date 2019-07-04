@@ -105,4 +105,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #author-wrapper -->
 
-<?php get_footer(); ?>
+<?php get_footer();

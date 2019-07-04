@@ -30,4 +30,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- #wrapper-footer-full -->
 
-<?php endif; ?>
+<?php endif;

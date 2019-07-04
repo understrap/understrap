@@ -55,4 +55,4 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	}
 }
 
-?>
+

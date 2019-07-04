@@ -49,4 +49,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #single-wrapper -->
 
-<?php get_footer(); ?>
+<?php get_footer();

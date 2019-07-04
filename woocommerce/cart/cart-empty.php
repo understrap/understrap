@@ -28,4 +28,4 @@ if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 			<?php esc_html_e( 'Return to shop', 'understrap' ); ?>
 		</a>
 	</p>
-<?php endif; ?>
+<?php endif;

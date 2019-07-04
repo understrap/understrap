@@ -74,7 +74,7 @@
 	</rule>
 
 	<!-- A closing tag is not permitted at the end of a PHP file -->
-	<!-- <rule ref="Zend.Files.ClosingTag"/> -->
+	<rule ref="Zend.Files.ClosingTag"/>
 
 	<!-- Use the PHPCompatibility Ruleset -->
 	<config name="testVersion" value="5.2-99.0"/>
