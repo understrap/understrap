@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<?php if ( ! empty( $curauth->user_description ) ) : ?>
 								<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
-								<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
+								<dd><?php esc_html_e( $curauth->user_description, 'understrap' ); ?></dd>
 							<?php endif; ?>
 						</dl>
 					<?php endif; ?>

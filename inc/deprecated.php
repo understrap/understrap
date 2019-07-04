@@ -8,13 +8,14 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-/**
- * Count number of widgets in a sidebar
- * Used to add classes to widget areas so widgets can be displayed one, two, three or four per row
- *
- * @deprecated 0.8.9
- */
 if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
+	/**
+	 * Count number of widgets in a sidebar
+	 * Used to add classes to widget areas so widgets can be displayed one, two, three or four per row
+	 *
+	 * @param int $sidebar_id The ID of the sidebar.
+	 * @deprecated 0.8.9
+	 */
 	function understrap_slbd_count_widgets( $sidebar_id ) {
 		// If loading from front page, consult $_wp_sidebars_widgets rather than options
 		// to see if wp_convert_widget_settings() has made manipulations in memory.

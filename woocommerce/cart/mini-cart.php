@@ -17,6 +17,7 @@
  * @package WooCommerce/Templates
  * @version 3.6.1
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
