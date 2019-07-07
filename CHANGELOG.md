@@ -1,6 +1,7 @@
+          - ** Release 0.9.4 June 30th 2019 **
           - ** Release 0.9.3 May 8th 2019 **
           - hotfix release
-          
+
           - ** Release 0.9.2 May 8th 2019 **
           Commits on Feb 16, 2019
             @holgerkoenemann

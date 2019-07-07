@@ -6,6 +6,21 @@
 	<!-- Set a description for this ruleset. -->
 	<description>A custom set of code standard rules to check for WordPress themes.</description>
 
+	<!-- Only check the PHP files -->
+	<arg name="extensions" value="php"/>
+
+	<!-- Scan these files -->
+	<file>.</file>
+
+	<!-- Ignore the vendor directory -->
+	<exclude-pattern>./vendor</exclude-pattern>
+
+	<!-- Show colors in console -->
+	<arg value="-colors"/>
+
+	<!-- Show sniff codes in all reports -->
+	<arg value="s"/>
+
 	<!-- Include the WordPress ruleset, with space for exclusions if necessary. -->
 	<rule ref="WordPress-Core">
 		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />

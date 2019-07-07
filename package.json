@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://understrap.com",
   "dependencies": {
+    "@babel/preset-env": "^7.4.5",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.3",
     "del": "^4.1.0",
