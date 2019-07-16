@@ -32,4 +32,4 @@ do_action( 'woocommerce_before_account_navigation' );
 	</div>
 </nav>
 
-<?php do_action( 'woocommerce_after_account_navigation' ); ?>
+<?php do_action( 'woocommerce_after_account_navigation' );

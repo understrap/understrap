@@ -21,4 +21,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</div>
 
-<?php endif; ?>
+<?php endif;

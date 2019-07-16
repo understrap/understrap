@@ -1,10 +1,17 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Theme Coding Standards">
-	<!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
-	<!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/blob/develop/WordPress-Core/ruleset.xml -->
+<ruleset name="UnderStrap Coding Standards">
 
 	<!-- Set a description for this ruleset. -->
-	<description>A custom set of code standard rules to check for WordPress themes.</description>
+	<description>A custom set of code standard rules for UnderStrap.</description>
+
+	<!-- Show colors in console -->
+	<arg value="-colors"/>
+
+	<!-- Show sniff codes in all reports -->
+	<arg value="s"/>
+
+	<!-- Don't show warnings -->
+	<arg value="n"/>
 
 	<!-- Only check the PHP files -->
 	<arg name="extensions" value="php"/>
@@ -13,31 +20,86 @@
 	<file>.</file>
 
 	<!-- Ignore the vendor directory -->
-	<exclude-pattern>./vendor</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
 
-	<!-- Show colors in console -->
-	<arg value="-colors"/>
+	<!-- Use the WordPress Ruleset -->
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd"/>
+		<exclude name="WordPress.WhiteSpace.DisallowInlineTabs.NonIndentTabsUsed"/>
+		<exclude name="WordPress.Security.EscapeOutput.UnsafePrintingFunction"/>
+		<exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped"/>
+		<exclude name="WordPress.Security.ValidatedSanitizedInput.InputNotSanitized"/>
+		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
+		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
+		<exclude name="WordPress.WP.I18n.NonSingularStringLiteralText"/>
 
-	<!-- Show sniff codes in all reports -->
-	<arg value="s"/>
+		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
+		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
+		<exclude name="Generic.WhiteSpace.ScopeIndent"/>
 
-	<!-- Include the WordPress ruleset, with space for exclusions if necessary. -->
-	<rule ref="WordPress-Core">
-		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
-		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
+		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.Indent"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
 
-		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
-
-		<exclude name="Squiz.Commenting.FileComment.SpacingAfterComment" />
-		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
-		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
-		<exclude name="Squiz.Commenting.InlineComment.NotCapital" />
+		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+		<exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
+		<exclude name="Squiz.PHP.DisallowMultipleAssignments.Found"/>
+		<exclude name="Squiz.PHP.EmbeddedPhp"/>
 	</rule>
-	<rule ref="WordPress-Docs">
 
+	<!--
+		Verify that the text_domain is set to the desired text-domain.
+		Multiple valid text domains can be provided as a comma-delimited list.
+	-->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="understrap"/>
+		</properties>
 	</rule>
 
-	<rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing">
-		<severity>0</severity>
+	<!--
+		Allow for theme specific exceptions to the file name rules based
+		on the theme hierarchy.
+	-->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="is_theme" value="true"/>
+		</properties>
 	</rule>
+
+	<!-- A closing tag is not permitted at the end of a PHP file -->
+	<rule ref="Zend.Files.ClosingTag"/>
+
+	<!-- Use the PHPCompatibility Ruleset -->
+	<config name="testVersion" value="5.2-99.0"/>
+	<rule ref="PHPCompatibility">
+		<!--
+			Whitelist PHP native classes, interfaces, functions and constants which
+			are back-filled by WP.
+
+			Based on:
+			* /wp-includes/compat.php
+			* /wp-includes/random_compat/random.php
+		-->
+		<exclude name="PHPCompatibility.PHP.NewClasses.errorFound"/>
+		<exclude name="PHPCompatibility.PHP.NewClasses.typeerrorFound"/>
+
+		<exclude name="PHPCompatibility.PHP.NewConstants.json_pretty_printFound"/>
+		<exclude name="PHPCompatibility.PHP.NewConstants.php_version_idFound"/>
+
+		<exclude name="PHPCompatibility.PHP.NewFunctions.hash_equalsFound"/>
+		<exclude name="PHPCompatibility.PHP.NewFunctions.json_last_error_msgFound"/>
+		<exclude name="PHPCompatibility.PHP.NewFunctions.random_intFound"/>
+		<exclude name="PHPCompatibility.PHP.NewFunctions.random_bytesFound"/>
+		<exclude name="PHPCompatibility.PHP.NewFunctions.array_replace_recursiveFound"/>
+
+		<exclude name="PHPCompatibility.PHP.NewInterfaces.jsonserializableFound"/>
+	</rule>
+
 </ruleset>

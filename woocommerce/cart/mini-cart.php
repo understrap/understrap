@@ -17,6 +17,7 @@
  * @package WooCommerce/Templates
  * @version 3.6.1
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -82,4 +83,4 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_after_mini_cart' ); ?>
+<?php do_action( 'woocommerce_after_mini_cart' );

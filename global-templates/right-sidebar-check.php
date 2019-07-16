@@ -17,4 +17,4 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
 
-<?php endif; ?>
+<?php endif;

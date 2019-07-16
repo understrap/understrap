@@ -15,4 +15,4 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php dynamic_sidebar( 'herocanvas' ); ?>
 
-<?php endif; ?>
+<?php endif;
