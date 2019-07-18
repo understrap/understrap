@@ -53,14 +53,14 @@ Some basics about the Sass and CSS files that come with UnderStrap:
  @import "theme/theme";  // 5. Add your styles into this file
  ```
 
-- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update Understrap without overwriting your own work!
-- Your design goes into: `/sass/theme`. 
-  - Add your styles to the `/sass/theme/_theme.scss` file 
+- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update UnderStrap without overwriting your own work!
+- Your design goes into: `/sass/theme`.
+  - Add your styles to the `/sass/theme/_theme.scss` file
   - And your variables to the `/sass/theme/_theme_variables.scss`
   - Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
 ## Installation
-There are several ways to install UnderStrap. We'll look at three of them: (1) classic install by uploading UnderStrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress. 
+There are several ways to install UnderStrap. We'll look at three of them: (1) classic install by uploading UnderStrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
 
 ### Classic install
 - Download the understrap folder from GitHub or from [https://understrap.com](https://understrap.com)

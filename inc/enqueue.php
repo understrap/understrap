@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap enqueue scripts
+ * UnderStrap enqueue scripts
  *
  * @package understrap
  */
