@@ -34,7 +34,6 @@
 		<exclude name="WordPress.Security.ValidatedSanitizedInput.InputNotSanitized"/>
 		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
 		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
-		<exclude name="WordPress.WP.I18n.NonSingularStringLiteralText"/>
 
 		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
 		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
