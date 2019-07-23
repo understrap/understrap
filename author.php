@@ -61,35 +61,35 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</header><!-- .page-header -->
 
-				<ul>
+				<!-- The Loop -->
+				<?php if ( have_posts() ) : ?>
 
-					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
-							<li>
-								<?php
-								printf(
-									'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
-									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-									esc_attr( __( 'Permanent Link:', 'understrap' ) ),
-									the_title( '', '', false )
-								);
-								?>
-								<?php understrap_posted_on(); ?>
-								<?php esc_html_e( 'in', 'understrap' ); ?>
-								<?php the_category( '&' ); ?>
-							</li>
-						<?php endwhile; ?>
+					<ul>
 
-					<?php else : ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<li>
+							<?php
+							printf(
+								'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
+								esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
+								esc_attr( __( 'Permanent Link:', 'understrap' ) ),
+								the_title( '', '', false )
+							);
+							?>
+							<?php understrap_posted_on(); ?>
+							<?php esc_html_e( 'in', 'understrap' ); ?>
+							<?php the_category( '&' ); ?>
+						</li>
+					<?php endwhile; ?>
 
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					</ul>
 
-					<?php endif; ?>
+				<?php else : ?>
 
-					<!-- End Loop -->
+					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-				</ul>
+				<?php endif; ?>
+				<!-- End Loop -->
 
 			</main><!-- #main -->
 
