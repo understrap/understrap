@@ -8,33 +8,41 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-/**
- * Registers an editor stylesheet for the theme.
- */
-
 add_action( 'admin_init', 'understrap_wpdocs_theme_add_editor_styles' );
 
 if ( ! function_exists( 'understrap_wpdocs_theme_add_editor_styles' ) ) {
+	/**
+	 * Registers an editor stylesheet for the theme.
+	 */
 	function understrap_wpdocs_theme_add_editor_styles() {
 		add_editor_style( 'css/custom-editor-style.min.css' );
 	}
 }
 
-// Add TinyMCE style formats.
 add_filter( 'mce_buttons_2', 'understrap_tiny_mce_style_formats' );
 
 if ( ! function_exists( 'understrap_tiny_mce_style_formats' ) ) {
-	function understrap_tiny_mce_style_formats( $styles ) {
-
-		array_unshift( $styles, 'styleselect' );
-		return $styles;
+	/**
+	 * Reveals TinyMCE's hidden Style dropdown.
+	 * 
+	 * @param $buttons Array of Tiny MCE's button ids.
+	 * @return array
+	 */
+	function understrap_tiny_mce_style_formats( $buttons ) {
+		array_unshift( $buttons, 'styleselect' );
+		return $buttons;
 	}
 }
-
 
 add_filter( 'tiny_mce_before_init', 'understrap_tiny_mce_before_init' );
 
 if ( ! function_exists( 'understrap_tiny_mce_before_init' ) ) {
+	/**
+	 * Adds style options to TinyMCE's Style dropdown.
+	 *
+	 * @param array $settings TinyMCE settings array.
+	 * @return array
+	 */
 	function understrap_tiny_mce_before_init( $settings ) {
 
 		$style_formats = array(
@@ -71,7 +79,7 @@ if ( ! function_exists( 'understrap_tiny_mce_before_init' ) ) {
 			$style_formats      = array_merge( $orig_style_formats, $style_formats );
 		}
 
-		$settings['style_formats'] = json_encode( $style_formats );
+		$settings['style_formats'] = wp_json_encode( $style_formats );
 		return $settings;
 	}
 }
