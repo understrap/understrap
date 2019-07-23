@@ -1,8 +1,8 @@
 /*
 Theme Name: UnderStrap
-Theme URI: http://understrap.com
+Theme URI: https://understrap.com
 Author: Holger Koenemann
-Author URI: http://www.holgerkoenemann.de
+Author URI: https://www.holgerkoenemann.de
 GitHub Theme URI: https://github.com/understrap/understrap
 Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as a parent theme. It is up to you. Including Font Awesome support, built-in widget slider and much more you need for basic websites. IMPORTANT: All developer dependencies are not bundled with this install file. Just download the .zip, extract it and run "npm install" and "gulp copy-assets" inside the extracted /understrap folder.
 That downloads everything and moves it in place so that you can recompile your CSS and JS files;
@@ -11,16 +11,16 @@ A child theme is available on Github, too: https://github.com/understrap/underst
 Version: 0.9.4
 License: UnderStrap WordPress Theme, Copyright 2013-2017 Holger Koenemann
 UnderStrap is distributed under the terms of the GNU GPL version 2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: understrap
 Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-UnderStrap is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+UnderStrap is based on Underscores https://underscores.me/, (C) 2012-2016 Automattic, Inc.
 
 Resource Licenses:
 Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
 and of course
 jQuery: https://jquery.org | (Code licensed under MIT)
 WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
