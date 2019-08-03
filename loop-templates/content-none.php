@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'understrap' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h1>
 
 	</header><!-- .page-header -->
 
@@ -40,14 +40,14 @@ defined( 'ABSPATH' ) || exit;
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'understrap' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'understrap' ); ?></p>
 			<?php
 			get_search_form();
 
 		else :
 			?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'understrap' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'understrap' ); ?></p>
 			<?php
 			get_search_form();
 
