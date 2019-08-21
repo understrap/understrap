@@ -108,7 +108,7 @@ gulp.task('cssnano', function() {
 
 gulp.task('minifycss', function() {
 	return gulp
-		.src(`${paths.css}/theme.css`)
+		.src([`${paths.css}/theme.css`, `${paths.css}/custom-editor-style.css`])
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(cleanCSS({ compatibility: '*' }))
 		.pipe(
