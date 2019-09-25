@@ -3,7 +3,9 @@
 		"proxy": "localhost:8080/",
 		"notify": false
 	},
-	"browserSyncWatchFiles": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"],
+	"browserSyncWatchFiles": {
+		"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
+	},
 	"paths": {
 		"js": "./js",
 		"css": "./css",
