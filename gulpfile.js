@@ -107,10 +107,18 @@ gulp.task('cssnano', function () {
 });
 
 gulp.task('minifycss', function () {
+
 	return gulp
-		.src(`${paths.css}/theme.css`)
-		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(cleanCSS({ compatibility: '*' }))
+		.src([
+			`${paths.css}/custom-editor-style.css`,
+			`${paths.css}/theme.css`,
+		])
+		.pipe(sourcemaps.init({
+			loadMaps: true
+		}))
+		.pipe(cleanCSS({
+			compatibility: '*'
+		}))
 		.pipe(
 			plumber({
 				errorHandler: function (err) {
