@@ -47,11 +47,11 @@ before_script:
     - sed -i "s/yourusernamehere/root/" wp-tests-config.php
     - sed -i "s/yourpasswordhere//" wp-tests-config.php
     # Create WordPress database.
-    - mysql -e 'CREATE DATABASE wordpress_test;' -uroot
+    #- mysql -u root -e "CREATE DATABASE wordpress_test;"
     # Install CodeSniffer for WordPress Coding Standards checks.
-    - mkdir php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/2.7.0.tar.gz | tar xz --strip-components=1 -C php-codesniffer
+    - mkdir php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/3.5.0.tar.gz | tar xz --strip-components=1 -C php-codesniffer
     # Install WordPress Coding Standards.
-    - mkdir wordpress-coding-standards && curl -L https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/0.10.0.tar.gz | tar xz --strip-components=1 -C wordpress-coding-standards
+    - mkdir wordpress-coding-standards && curl -L https://github.com/WordPress/WordPress-Coding-Standards/archive/2.1.1.tar.gz | tar xz --strip-components=1 -C wordpress-coding-standards
     # Hop into CodeSniffer directory.
     - cd php-codesniffer
     # Set install path for WordPress Coding Standards
