@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var postcss = require('gulp-postcss');
 var watch = require('gulp-watch');
+var touch = require('gulp-touch-fd');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -41,7 +42,8 @@ gulp.task('sass', function () {
 		.pipe(sass({ errLogToConsole: true }))
 		.pipe(postcss([autoprefixer()]))
 		.pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 	return stream;
 });
 
@@ -103,7 +105,8 @@ gulp.task('cssnano', function () {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(cssnano({ discardComments: { removeAll: true } }))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 });
 
 gulp.task('minifycss', function () {
@@ -129,7 +132,8 @@ gulp.task('minifycss', function () {
 		)
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 });
 
 gulp.task('cleancss', function () {
@@ -313,7 +317,8 @@ gulp.task(
 					{ skipBinary: true }
 				)
 			)
-			.pipe(gulp.dest(paths.dist));
+			.pipe(gulp.dest(paths.dist))
+			.pipe(touch());
 	})
 );
 
@@ -341,7 +346,8 @@ gulp.task(
 				`!${paths.distprod}/**`,
 				'*'
 			])
-			.pipe(gulp.dest(paths.distprod));
+			.pipe(gulp.dest(paths.distprod))
+			.pipe(touch());
 	})
 );
 
