@@ -23,6 +23,7 @@ $understrap_includes = array(
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
+	'/wp-admin.php',                        // /wp-admin/ related functions
 	'/deprecated.php',                      // Load deprecated functions.
 );
 
