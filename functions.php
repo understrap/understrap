@@ -20,7 +20,7 @@ $understrap_includes = array(
 	'/customizer.php',                      // Customizer additions.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
-	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
+	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
 	'/wp-admin.php',                        // /wp-admin/ related functions
