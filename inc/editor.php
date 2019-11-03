@@ -25,7 +25,7 @@ if ( ! function_exists( 'understrap_tiny_mce_style_formats' ) ) {
 	/**
 	 * Reveals TinyMCE's hidden Style dropdown.
 	 * 
-	 * @param $buttons Array of Tiny MCE's button ids.
+	 * @param array $buttons Array of Tiny MCE's button ids.
 	 * @return array
 	 */
 	function understrap_tiny_mce_style_formats( $buttons ) {
