@@ -9,26 +9,39 @@
 defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists( 'understrap_setup_theme_default_settings' ) ) {
+	/**
+	 * Store default theme settings in database.
+	 */
 	function understrap_setup_theme_default_settings() {
-
-		// check if settings are set, if not set defaults.
-		// Caution: DO NOT check existence using === always check with == .
-		// Latest blog posts style.
-		$understrap_posts_index_style = get_theme_mod( 'understrap_posts_index_style' );
-		if ( '' == $understrap_posts_index_style ) {
-			set_theme_mod( 'understrap_posts_index_style', 'default' );
+		$defaults = understrap_get_theme_default_settings();
+		$settings = get_theme_mods();
+		foreach ( $defaults as $setting_id => $default_value ) {
+			// Check if setting is set, if not set it to its default value.
+			if ( ! isset( $settings[ $setting_id ] ) ) {
+				set_theme_mod( $setting_id, $default_value );
+			}
 		}
+	}
+}
 
-		// Sidebar position.
-		$understrap_sidebar_position = get_theme_mod( 'understrap_sidebar_position' );
-		if ( '' == $understrap_sidebar_position ) {
-			set_theme_mod( 'understrap_sidebar_position', 'right' );
-		}
+if ( ! function_exists( 'understrap_get_theme_default_settings' ) ) {
+	/**
+	 * Retrieve default theme settings.
+	 *
+	 * @return array
+	 */
+	function understrap_get_theme_default_settings() {
+		$defaults = array(
+			'understrap_posts_index_style' => 'default',   // Latest blog posts style.
+			'understrap_sidebar_position'  => 'right',     // Sidebar position.
+			'understrap_container_type'    => 'container', // Container width.
+		);
 
-		// Container width.
-		$understrap_container_type = get_theme_mod( 'understrap_container_type' );
-		if ( '' == $understrap_container_type ) {
-			set_theme_mod( 'understrap_container_type', 'container' );
-		}
+		/**
+		 * Filters the default theme settings.
+		 *
+		 * @param array $defaults Array of default theme settings.
+		 */
+		return apply_filters( 'understrap_theme_default_settings', $defaults );
 	}
 }
