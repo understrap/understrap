@@ -61,8 +61,8 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			// Get the list of possible select options.
 			$choices = $setting->manager->get_control( $setting->id )->choices;
 
-				// If the input is a valid key, return it; otherwise, return the default.
-				return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+			// If the input is a valid key, return it; otherwise, return the default.
+			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
 		}
 
