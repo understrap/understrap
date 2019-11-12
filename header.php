@@ -49,7 +49,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php endif; ?>
 
-
 					<?php } else {
 						the_custom_logo();
 					} ?><!-- end custom logo -->
