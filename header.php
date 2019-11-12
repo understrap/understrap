@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
 
-		<?php if ( 'container' == $container ) : ?>
+		<?php if ( 'container' === $container ) : ?>
 			<div class="container">
 		<?php endif; ?>
 
@@ -71,7 +71,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-			<?php if ( 'container' == $container ) : ?>
+			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
 
