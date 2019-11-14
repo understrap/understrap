@@ -1,6 +1,6 @@
 <?php
 /**
- * Sidebar setup for footer full.
+ * Sidebar setup for footer full
  *
  * @package understrap
  */

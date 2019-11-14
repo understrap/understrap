@@ -1,6 +1,6 @@
 <?php
 /**
- * Post rendering content according to caller of get_template_part.
+ * Post rendering content according to caller of get_template_part
  *
  * @package understrap
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Search results partial template.
+ * Search results partial template
  *
  * @package understrap
  */
