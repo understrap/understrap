@@ -45,7 +45,6 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 	}
 }
 
-
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
@@ -83,7 +82,6 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 	}
 }
 
-
 /**
  * Returns true if a blog has more than 1 category.
  *
@@ -113,7 +111,6 @@ if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 	}
 }
 
-
 /**
  * Flush out the transients used in understrap_categorized_blog.
  */
@@ -127,5 +124,31 @@ if ( ! function_exists( 'understrap_category_transient_flusher' ) ) {
 		}
 		// Like, beat it. Dig?
 		delete_transient( 'understrap_categories' );
+	}
+}
+
+if ( ! function_exists( 'understrap_body_attributes' ) ) {
+	/**
+	 * Displays the attributes for the body element.
+	 */
+	function understrap_body_attributes() {
+		/**
+		 * Filters the body attributes.
+		 *
+		 * @param array $atts An associative array of attributes.
+		 */
+		$atts = array_unique( apply_filters( 'understrap_body_attributes', $atts = array() ) );
+		if ( ! is_array( $atts ) || empty( $atts ) ) {
+			return;
+		}
+		$attributes = '';
+		foreach ( $atts as $name => $value ) {
+			if ( $value ) {
+				$attributes .= sanitize_key( $name ) . '="' . esc_attr( $value ) . '" ';
+			} else {
+				$attributes .= sanitize_key( $name ) . ' ';
+			}
+		}
+		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
