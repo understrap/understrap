@@ -1,6 +1,6 @@
 <?php
 /**
- * Rest in peace.
+ * Rest in peace
  *
  * @package understrap
  */

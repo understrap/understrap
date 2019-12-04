@@ -1,6 +1,6 @@
 <?php
 /**
- * Blank content partial template.
+ * Blank content partial template
  *
  * @package understrap
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Hero setup.
+ * Hero setup
  *
  * @package understrap
  */

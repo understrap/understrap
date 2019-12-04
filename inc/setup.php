@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme basic setup.
+ * Theme basic setup
  *
  * @package understrap
  */

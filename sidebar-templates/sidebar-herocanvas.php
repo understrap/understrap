@@ -1,6 +1,6 @@
 <?php
 /**
- * Sidebar - hero canvas setup.
+ * Sidebar - hero canvas setup
  *
  * @package understrap
  */

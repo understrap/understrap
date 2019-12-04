@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom header setup.
+ * Custom header setup
  *
  * @package understrap
  */

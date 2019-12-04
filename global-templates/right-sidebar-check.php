@@ -1,6 +1,6 @@
 <?php
 /**
- * Right sidebar check.
+ * Right sidebar check
  *
  * @package understrap
  */
