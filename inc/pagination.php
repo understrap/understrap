@@ -35,7 +35,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 
 		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-			<ul class="pagination">
+			<ul class="<?php echo esc_attr($class); ?>">
 
 				<?php
 				foreach ( $links as $key => $link ) {
