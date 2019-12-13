@@ -42,7 +42,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'title'       => __( 'Theme Layout Settings', 'understrap' ),
 				'capability'  => 'edit_theme_options',
 				'description' => __( 'Container width and sidebar defaults', 'understrap' ),
-				'priority'    => 160,
+				'priority'    => apply_filters( 'understrap_theme_layout_options_priority', 160 ),
 			)
 		);
 
@@ -61,8 +61,8 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			// Get the list of possible select options.
 			$choices = $setting->manager->get_control( $setting->id )->choices;
 
-				// If the input is a valid key, return it; otherwise, return the default.
-				return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+			// If the input is a valid key, return it; otherwise, return the default.
+			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
 		}
 
@@ -90,7 +90,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'container'       => __( 'Fixed width container', 'understrap' ),
 						'container-fluid' => __( 'Full width container', 'understrap' ),
 					),
-					'priority'    => '10',
+					'priority'    => apply_filters( 'understrap_container_type_priority', 10 ),
 				)
 			)
 		);
@@ -125,7 +125,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'both'  => __( 'Left & Right sidebars', 'understrap' ),
 						'none'  => __( 'No sidebar', 'understrap' ),
 					),
-					'priority'          => '20',
+					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 20 ),
 				)
 			)
 		);
