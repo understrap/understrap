@@ -6,9 +6,14 @@
  */
 
 
-/* UnderStrap news dashboard widget */
+/* Actions etc. */
 
-add_action( 'wp_dashboard_setup', 'understrap_dashboard_news_meta_box' );
+add_action('wp_dashboard_setup', 'understrap_dashboard_news_meta_box');
+add_action('admin_menu', 'understap_overstrap_menu');
+
+
+
+/* UnderStrap news dashboard widget */
 
 function understrap_dashboard_news_meta_box(){
   add_meta_box('understrap-news', 'UnderStrap News', 'understrap_news_widget_render', 'dashboard', 'side', 'high' );
@@ -69,3 +74,56 @@ function understrap_news_widget_render(){
   </div>
 	<?php
 }
+
+
+
+/* UnderStrap OverStrap Menu */
+
+function understap_overstrap_menu() {
+  add_menu_page("OverStrap", "OverStrap", "manage_options", "overstrap_page", "understrap_overstrap_page", 'dashicons-layout', 65);
+}
+
+function understrap_overstrap_page() {
+  add_thickbox();
+  $active_tab = $_GET[ 'tab' ];
+  if($active_tab == ''){$active_tab = 'featured';}
+?>
+<style>
+  #inv_os_analytics {
+    display: none;
+  }
+  h2 {
+    font-size: 24px;
+    margin-top: 38px;
+    margin-bottom: 14px;
+  }
+  p {
+    margin-bottom: 28px;
+    max-width: 930px;
+    font-size: 16px;
+  }
+  .wrap .page-title-action {
+    font-size: 18px;
+  }
+</style>
+
+<div class="wrap">
+  
+  <img src="https://understrap.com/img/overstrap-banner-min.png" alt="OverStrap Banner" />
+  
+  <h2>Learn More About OverStrap & See Demos</h2>
+  
+  <p>Find out more about the premium starter child theme pack that works on top of UnderStrap. <strong>OverStrap</strong> follows the same principles as UnderStrap but saves you countless hours of development time.</p>
+  
+  <a href="https://understrap.com/overstrap/" class="page-title-action" target="_blank">Learn More</a>
+  
+  <h2>Buy OverStrap Now</h2>
+  
+  <p>Ready to buy the pack? Go straight to the GumRoad product page:</p>
+  
+  <a href="https://gumroad.com/l/overstrap" class="page-title-action" target="_blank">Buy Now</a>
+  
+  <iframe src="https://understrap.com/overstrap/?wp=1" id="inv_os_analytics"></iframe>
+
+</div>
+<?php }
