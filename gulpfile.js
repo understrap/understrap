@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var postcss = require('gulp-postcss');
 var watch = require('gulp-watch');
+var touch = require('gulp-touch-fd');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -26,12 +27,12 @@ var paths = cfg.paths;
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
-gulp.task('sass', function() {
+gulp.task('sass', function () {
 	var stream = gulp
 		.src(paths.sass + '/*.scss')
 		.pipe(
 			plumber({
-				errorHandler: function(err) {
+				errorHandler: function (err) {
 					console.log(err);
 					this.emit('end');
 				}
@@ -41,15 +42,16 @@ gulp.task('sass', function() {
 		.pipe(sass({ errLogToConsole: true }))
 		.pipe(postcss([autoprefixer()]))
 		.pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 	return stream;
 });
 
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task('watch', function() {
-	gulp.watch(`${paths.sass}/**/*.scss`, gulp.series('styles'));
+gulp.task('watch', function () {
+	gulp.watch([`${paths.sass}/**/*.scss`, `${paths.sass}/*.scss`], gulp.series('styles'));
 	gulp.watch(
 		[
 			`${paths.dev}/js/**/*.js`,
@@ -67,7 +69,7 @@ gulp.task('watch', function() {
 // Run:
 // gulp imagemin
 // Running image optimizing task
-gulp.task('imagemin', function() {
+gulp.task('imagemin', function () {
 	gulp
 		.src(`${paths.imgsrc}/**`)
 		.pipe(imagemin())
@@ -80,7 +82,7 @@ gulp.task('imagemin', function() {
  */
 gulp.task(
 	'imagemin-watch',
-	gulp.series('imagemin', function() {
+	gulp.series('imagemin', function () {
 		browserSync.reload();
 	})
 );
@@ -88,13 +90,13 @@ gulp.task(
 // Run:
 // gulp cssnano
 // Minifies CSS files
-gulp.task('cssnano', function() {
+gulp.task('cssnano', function () {
 	return gulp
 		.src(paths.css + '/theme.css')
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(
 			plumber({
-				errorHandler: function(err) {
+				errorHandler: function (err) {
 					console.log(err);
 					this.emit('end');
 				}
@@ -103,17 +105,26 @@ gulp.task('cssnano', function() {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(cssnano({ discardComments: { removeAll: true } }))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 });
 
-gulp.task('minifycss', function() {
+gulp.task('minifycss', function () {
+
 	return gulp
-		.src(`${paths.css}/theme.css`)
-		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(cleanCSS({ compatibility: '*' }))
+		.src([
+			`${paths.css}/custom-editor-style.css`,
+			`${paths.css}/theme.css`,
+		])
+		.pipe(sourcemaps.init({
+			loadMaps: true
+		}))
+		.pipe(cleanCSS({
+			compatibility: '*'
+		}))
 		.pipe(
 			plumber({
-				errorHandler: function(err) {
+				errorHandler: function (err) {
 					console.log(err);
 					this.emit('end');
 				}
@@ -121,34 +132,36 @@ gulp.task('minifycss', function() {
 		)
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 });
 
-gulp.task('cleancss', function() {
+gulp.task('cleancss', function () {
 	return gulp
 		.src(`${paths.css}/*.min.css`, { read: false }) // Much faster
 		.pipe(ignore('theme.css'))
 		.pipe(rimraf());
 });
 
-gulp.task('styles', function(callback) {
+gulp.task('styles', function (callback) {
 	gulp.series('sass', 'minifycss')(callback);
 });
 
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
 	browserSync.init(cfg.browserSyncWatchFiles, cfg.browserSyncOptions);
 });
 
 // Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
 	var scripts = [
 		// Start - All BS4 stuff
 		`${paths.dev}/js/bootstrap4/bootstrap.bundle.js`,
+		`${paths.dev}/js/themejs/*.js`,
 
 		// End - All BS4 stuff
 
@@ -162,7 +175,7 @@ gulp.task('scripts', function() {
 		.src(scripts, { allowEmpty: true })
 		.pipe(babel(
 			{
-				presets: ['@babel/preset-env']
+			presets: ['@babel/preset-env']
 			}
 		))
 		.pipe(concat('theme.min.js'))
@@ -177,7 +190,7 @@ gulp.task('scripts', function() {
 });
 
 // Deleting any file inside the /src folder
-gulp.task('clean-source', function() {
+gulp.task('clean-source', function () {
 	return del(['src/**/*']);
 });
 
@@ -191,7 +204,7 @@ gulp.task('watch-bs', gulp.parallel('browser-sync', 'watch'));
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
-gulp.task('copy-assets', function(done) {
+gulp.task('copy-assets', function (done) {
 	////////////////// All Bootstrap 4 Assets /////////////////////////
 	// Copy all JS files
 	var stream = gulp
@@ -229,7 +242,7 @@ gulp.task('copy-assets', function(done) {
 });
 
 // Deleting the files distributed by the copy-assets task
-gulp.task('clean-vendor-assets', function() {
+gulp.task('clean-vendor-assets', function () {
 	return del([
 		`${paths.dev}/js/bootstrap4/**`,
 		`${paths.dev}/sass/bootstrap4/**`,
@@ -245,7 +258,7 @@ gulp.task('clean-vendor-assets', function() {
 });
 
 // Deleting any file inside the /dist folder
-gulp.task('clean-dist', function() {
+gulp.task('clean-dist', function () {
 	return del([paths.dist + '/**']);
 });
 
@@ -254,7 +267,7 @@ gulp.task('clean-dist', function() {
 // Copies the files to the /dist folder for distribution as simple theme
 gulp.task(
 	'dist',
-	gulp.series(['clean-dist'], function() {
+	gulp.series(['clean-dist'], function () {
 		return gulp
 			.src(
 				[
@@ -304,12 +317,13 @@ gulp.task(
 					{ skipBinary: true }
 				)
 			)
-			.pipe(gulp.dest(paths.dist));
+			.pipe(gulp.dest(paths.dist))
+			.pipe(touch());
 	})
 );
 
 // Deleting any file inside the /dist-product folder
-gulp.task('clean-dist-product', function() {
+gulp.task('clean-dist-product', function () {
 	return del([paths.distprod + '/**']);
 });
 
@@ -318,7 +332,7 @@ gulp.task('clean-dist-product', function() {
 // Copies the files to the /dist-prod folder for distribution as theme with all assets
 gulp.task(
 	'dist-product',
-	gulp.series(['clean-dist-product'], function() {
+	gulp.series(['clean-dist-product'], function () {
 		return gulp
 			.src([
 				'**/*',
@@ -332,7 +346,8 @@ gulp.task(
 				`!${paths.distprod}/**`,
 				'*'
 			])
-			.pipe(gulp.dest(paths.distprod));
+			.pipe(gulp.dest(paths.distprod))
+			.pipe(touch());
 	})
 );
 
