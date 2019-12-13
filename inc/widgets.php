@@ -148,7 +148,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'name'          => __( 'Top Full', 'understrap' ),
 				'id'            => 'statichero',
 				'description'   => __( 'Full top widget with dynamic grid', 'understrap' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
+				'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .static-hero-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
