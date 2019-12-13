@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap Theme Customizer
+ * UnderStrap Theme Customizer
  *
  * @package understrap
  */

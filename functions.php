@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap functions and definitions
+ * UnderStrap functions and definitions
  *
  * @package understrap
  */
