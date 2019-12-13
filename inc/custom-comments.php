@@ -1,6 +1,6 @@
 <?php
 /**
- * Comment layout.
+ * Comment layout
  *
  * @package understrap
  */

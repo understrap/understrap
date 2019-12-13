@@ -1,6 +1,6 @@
 <?php
 /**
- * The sidebar containing the main widget area.
+ * The sidebar containing the main widget area
  *
  * @package understrap
  */

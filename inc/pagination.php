@@ -1,6 +1,6 @@
 <?php
 /**
- * Pagination layout.
+ * Pagination layout
  *
  * @package understrap
  */

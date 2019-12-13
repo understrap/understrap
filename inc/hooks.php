@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom hooks.
+ * Custom hooks
  *
  * @package understrap
  */
