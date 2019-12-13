@@ -26,7 +26,6 @@
 	<!-- Use the WordPress Ruleset -->
 	<rule ref="WordPress">
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
-		<exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
 		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd"/>
 		<exclude name="WordPress.WhiteSpace.DisallowInlineTabs.NonIndentTabsUsed"/>
 		<exclude name="WordPress.Security.EscapeOutput.UnsafePrintingFunction"/>
