@@ -2,15 +2,15 @@
 # @link https://travis-ci.org/
 
 # For use with the UnderStrap WordPress theme
-# @link https://github.com/holger1411/understrap
+# @link https://github.com/understrap/understrap
 
 # Declare project language and PHP versions to test against.
-# @link http://about.travis-ci.org/docs/user/languages/php/
+# @link https://docs.travis-ci.com/user/languages/php/
 language: php
 
 # Declare versions of PHP to use. Use one decimal max.
 php:
-    - "7.0"
+    - "7.3"
     - "5.6"
 
 # Ditch sudo and use containers.
@@ -21,7 +21,7 @@ sudo: false
 # Declare which versions of WordPress to test against.
 # Also declare whether or not to test in Multisite.
 env:
-    # Trunk (current version in development is 4.7)
+    # Trunk (current version in development is 5.3)
     # @link https://github.com/WordPress/WordPress
     - WP_VERSION=master WP_MULTISITE=0
 
@@ -34,7 +34,7 @@ before_script:
     - mkdir -p $WP_DEVELOP_DIR
     # Use the Git mirror of WordPress.
     - git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ $WP_DEVELOP_DIR
-    # Set up Twenty Seventeen theme information.
+    # Set up UnderStrap theme information.
     - theme_slug=$(basename $(pwd))
     - theme_dir=$WP_DEVELOP_DIR/src/wp-content/themes/$theme_slug
     - cd ..
@@ -56,7 +56,7 @@ before_script:
     - cd php-codesniffer
     # Set install path for WordPress Coding Standards
     # @link https://github.com/squizlabs/PHP_CodeSniffer/blob/4237c2fc98cc838730b76ee9cee316f99286a2a7/CodeSniffer.php#L1941
-    - scripts/phpcs --config-set installed_paths ../wordpress-coding-standards
+    - bin/phpcs --config-set installed_paths ../wordpress-coding-standards
     # Hop into themes directory.
     - cd $theme_dir
     # After CodeSniffer install you should refresh your path.
@@ -65,7 +65,7 @@ before_script:
     # @link http://jscs.info/
     - npm install -g jscs
     # Install JSHint, a JavaScript Code Quality Tool
-    # @link http://jshint.com/docs/
+    # @link https://jshint.com/docs/
     - npm install -g jshint
     - wget https://develop.svn.wordpress.org/trunk/.jshintrc
 
