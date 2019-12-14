@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 
 	function understrap_pagination( $args = array(), $class = 'pagination' ) {
 
-		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
+		if ( ! isset( $args['total'] ) && $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;
 		}
 
@@ -30,6 +30,9 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 		);
 
 		$links = paginate_links( $args );
+		if ( ! $links ) {
+			return;
+		}
 
 		?>
 
