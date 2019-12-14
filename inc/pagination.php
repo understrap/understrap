@@ -33,7 +33,11 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 
 		?>
 
-		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+		<nav aria-labelledby="posts-nav-label">
+
+			<h2 id="posts-nav-label" class="sr-only">
+				<?php echo esc_html( $args['screen_reader_text'] ); ?>
+			</h2>
 
 			<ul class="<?php echo esc_attr( $class ); ?>">
 
