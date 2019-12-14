@@ -13,39 +13,33 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+  <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
+  <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+    <div class="<?php echo esc_attr( $container ); ?>">
+      <div class="row">
+        <div class="col-md-12">
 
-		<div class="row">
+          <footer class="site-footer" id="colophon" aria-labelledby="page-footer-label">
+            <h2 id="page-footer-label" class="sr-only">
+              <?php esc_html_e( 'Footer', 'understrap' ); ?>
+            </h2>
 
-			<div class="col-md-12">
+            <div class="site-info">
 
-				<footer class="site-footer" id="colophon">
+              <?php understrap_site_info(); ?>
 
-					<div class="site-info">
+            </div><!-- .site-info -->
+          </footer><!-- #colophon -->
+        </div><!--col end -->
+      </div><!-- row end -->
+    </div><!-- container end -->
+  </div><!-- wrapper end -->
 
-						<?php understrap_site_info(); ?>
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
-
-</div><!-- #page we need this extra closing tag here -->
+</div><!-- #page we need this extra closing tag here, opened in header.php -->
 
 <?php wp_footer(); ?>
 
 </body>
-
 </html>
-
