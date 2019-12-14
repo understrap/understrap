@@ -1,8 +1,8 @@
 <?php
 /**
- * The header for our theme
+ * The header for Theme UnderStrap
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays all of the <header> section and everything up till <div id="content">
  *
  * @package understrap
  */
@@ -25,30 +25,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar">
+	<!-- The Site Header including Branding/Title and Navigation -->
+	<header id="wrapper-navbar">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
 		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
-
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 			</h2>
 
-		<?php if ( 'container' === $container ) : ?>
-			<div class="container">
-		<?php endif; ?>
+      <?php if ( 'container' === $container ) : ?>
+        <div class="container">
+      <?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
 
 						<?php if ( is_front_page() && is_home() ) : ?>
-
 							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
 						<?php else : ?>
-
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
 
 						<?php endif; ?>
@@ -80,4 +77,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav><!-- .site-navigation -->
 
-	</div><!-- #wrapper-navbar end -->
+	</header><!-- #wrapper-navbar end -->
