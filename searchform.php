@@ -13,8 +13,8 @@ defined( 'ABSPATH' ) || exit;
 
 	<fieldset>
 
-		<legend>
-			<h3 id="site-search"><?php esc_html_e( 'Search this site', 'understrap' ); ?></h3>
+		<legend id="site-search">
+			<?php esc_html_e( 'Search this site', 'understrap' ); ?>
 		</legend>
 
 		<div class="input-group">
