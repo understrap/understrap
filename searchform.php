@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-labelledby="site-search">
 
-	<fieldset aria-labelledby="id="site-search"">
+	<fieldset aria-labelledby="site-search">
 
 		<h3 class="sr-only" id="site-search">
 			<?php esc_html_e( 'Search this site', 'understrap' ); ?>
