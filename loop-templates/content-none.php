@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h1>
+		<h3 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h3>
 
 	</header><!-- .page-header -->
 

@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					endif; ?> content-area"
 				id="primary">
 
-				<main class="site-main" id="main"aria-labelledby="main-content-heading">
+				<main class="site-main" id="main" aria-labelledby="main-content-heading">
 
 					<h2 id="main-content-heading" class="sr-only"><?php esc_html_e( 'Main content', 'understrap' ); ?></h2>
 

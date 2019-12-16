@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main"aria-labelledby="main-content-heading">
+			<main class="site-main" aria-labelledby="main-content-heading">
 
         <h2 id="main-content-heading" class="sr-only"><?php esc_html_e( 'Main content', 'understrap' ); ?></h2>
 
