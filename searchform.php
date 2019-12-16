@@ -9,14 +9,25 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-	<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'understrap' ); ?></label>
-	<div class="input-group">
-		<input class="field form-control" id="s" name="s" type="text"
-			placeholder="<?php esc_attr_e( 'Search &hellip;', 'understrap' ); ?>" value="<?php the_search_query(); ?>">
-		<span class="input-group-append">
-			<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
-			value="<?php esc_attr_e( 'Search', 'understrap' ); ?>">
-		</span>
-	</div>
+<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-labelledby="site-search">
+
+	<fieldset>
+
+		<legend>
+			<h3 id="site-search"><?php esc_html_e( 'Search this site', 'understrap' ); ?></h3>
+		</legend>
+
+		<div class="input-group">
+
+			<label class="sr-only" for="s"><?php esc_html_e( 'Search string', 'understrap' ); ?></label>
+			<input class="field form-control" id="s" name="s" type="search" spellcheck="false" autocomplete="off" placeholder="<?php esc_attr_e( 'Search &hellip;', 'understrap' ); ?>" value="<?php the_search_query(); ?>">
+
+			<span class="input-group-append">
+				<label class="sr-only" for="searchsubmit"><?php esc_html_e( 'Conduct search', 'understrap' ); ?></label>
+				<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="<?php esc_attr_e( 'Search', 'understrap' ); ?>">
+			</span>
+
+		</div>
+
+	</fieldset>
 </form>
