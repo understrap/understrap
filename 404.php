@@ -21,7 +21,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-12 content-area" id="primary">
 
-				<main class="site-main" id="main">
+				<main class="site-main" id="main" aria-labelledby="main-content-heading">
+
+					<h2 id="main-content-heading" class="sr-only"><?php esc_html_e( 'Main content', 'understrap' ); ?></h2>
 
 					<section class="error-404 not-found">
 
