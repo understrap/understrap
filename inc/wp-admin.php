@@ -84,9 +84,6 @@ function understap_overstrap_menu() {
 }
 
 function understrap_overstrap_page() {
-  add_thickbox();
-  $active_tab = $_GET[ 'tab' ];
-  if($active_tab == ''){$active_tab = 'featured';}
 ?>
 <style>
   #inv_os_analytics {
@@ -122,8 +119,6 @@ function understrap_overstrap_page() {
   <p>Ready to buy the pack? Go straight to the GumRoad product page:</p>
   
   <a href="https://gumroad.com/l/overstrap" class="page-title-action" target="_blank">Buy Now</a>
-  
-  <iframe src="https://understrap.com/overstrap/?wp=1" id="inv_os_analytics"></iframe>
 
 </div>
 <?php }
