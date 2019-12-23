@@ -87,28 +87,6 @@ gulp.task(
 	})
 );
 
-// Run:
-// gulp cssnano
-// Minifies CSS files
-gulp.task('cssnano', function () {
-	return gulp
-		.src(paths.css + '/theme.css')
-		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(
-			plumber({
-				errorHandler: function (err) {
-					console.log(err);
-					this.emit('end');
-				}
-			})
-		)
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(cssnano({ discardComments: { removeAll: true } }))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css))
-		.pipe(touch());
-});
-
 gulp.task('minifycss', function () {
 
 	return gulp
