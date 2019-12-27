@@ -176,10 +176,10 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			<h2 id="post-nav-label" class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
 				<?php
 				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', '<i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;%title' );
+					previous_post_link( '%link', '<i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;%title' );
 				}
 				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', '%title&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>' );
+					next_post_link( '%link', '%title&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>' );
 				}
 				?>
 		</nav><!-- .navigation -->
