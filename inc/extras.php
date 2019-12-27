@@ -235,9 +235,9 @@ if ( ! function_exists( 'understrap_post_nav_link_class' ) ) {
 	 */
 	function understrap_post_nav_link_class( $output, $format, $link, $post, $adjacent ) {
 		if ( 'previous' === $adjacent ) {
-			$output = str_replace( '<a ', '<a class="nav-link nav-previous pl-0"', $output );
+			$output = str_replace( '<a ', '<a class="nav-link nav-previous pl-0" ', $output );
 		} else {
-			$output = str_replace( '<a ', '<a class="nav-link nav-next pr-0"', $output );
+			$output = str_replace( '<a ', '<a class="nav-link nav-next pr-0" ', $output );
 		}
 		return $output;
 	}
