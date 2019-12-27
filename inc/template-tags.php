@@ -172,15 +172,15 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			return;
 		}
 		?>
-		<nav class="container navigation post-navigation">
-			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+		<nav class="container navigation post-navigation" aria-labelledby="post-nav-label">
+			<h2 id="post-nav-label" class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
 			<div class="row nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', '<i class="fa fa-angle-left"></i>&nbsp;%title' );
+					previous_post_link( '<span class="nav-previous">%link</span>', '<i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;%title' );
 				}
 				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', '%title&nbsp;<i class="fa fa-angle-right"></i>' );
+					next_post_link( '<span class="nav-next">%link</span>', '%title&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>' );
 				}
 				?>
 			</div><!-- .nav-links -->
