@@ -222,3 +222,25 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 		return wp_kses( $data, $allowed_tags );
 	}
 } // End of if function_exists( 'understrap_kses_title' ).
+if ( ! function_exists( 'understrap_post_nav_link_class' ) ) {
+	/**
+	 * Adds CSS class to a post navigation link.
+	 *
+	 * @param string  $output   HTML markup for the adjacent post link..
+	 * @param string  $format   Link anchor format.
+	 * @param string  $link     Link permalink format.
+	 * @param WP_Post $post     The adjacent post.
+	 * @param string  $adjacent Whether the post is previous or next.
+	 * @return string
+	 */
+	function understrap_post_nav_link_class( $output, $format, $link, $post, $adjacent ) {
+		if ( 'previous' === $adjacent ) {
+			$output = str_replace( '<a ', '<a class="nav-link nav-previous pl-0"', $output );
+		} else {
+			$output = str_replace( '<a ', '<a class="nav-link nav-next pr-0"', $output );
+		}
+		return $output;
+	}
+}
+add_filter( 'next_post_link', 'understrap_post_nav_link_class', 20, 5 );
+add_filter( 'previous_post_link', 'understrap_post_nav_link_class', 20, 5 );
