@@ -1,0 +1,34 @@
+/* The Older Posts button that appears when posts can't automatically display */
+#infinite-handle {
+  @extend .d-block,
+  .my-2;
+
+  span {
+    @extend .p-0;
+    background: none;
+
+    button,
+    button:hover {
+      @extend .btn,
+      .btn-primary;
+    }
+  }
+}
+
+/* The footer that is shown instead of the regular footer */
+#infinite-footer {
+  @extend .site-footer !optional;
+  @extend .bg-white,
+  .wrapper;
+
+  .blog-credits {
+    font-size: inherit;
+  }
+
+  .blog-info {
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+}
