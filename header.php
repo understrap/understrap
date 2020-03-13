@@ -18,6 +18,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<!-- FIX DUPLICATE CONTENT -->
+	<!-- Stop robots indexing the pages where posts are duplicated, if this is a paged page/date/category page -->
+	<?php
+	if ( ( is_home() && ( $paged > 2 ) ) || is_date() || is_category() ) {
+		echo '<meta name="robots" content="noindex, follow, noarchive" />';
+	}
+	?>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -53,16 +62,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<?php endif; ?>
 
-					<?php } else {
+						<?php
+					} else {
 						the_custom_logo();
-					} ?><!-- end custom logo -->
+					}
+					?>
+					<!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
+				<?php
+				wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
@@ -73,7 +86,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'depth'           => 2,
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
-				); ?>
+				);
+				?>
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
