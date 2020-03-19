@@ -67,7 +67,7 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 	 *
 	 * @param string $html Markup.
 	 *
-	 * @return mixed
+	 * @return string
 	 */
 	function understrap_change_logo_class( $html ) {
 
@@ -79,11 +79,10 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 	}
 }
 
-/**
- * Display navigation to next/previous post when applicable.
- */
-
 if ( ! function_exists( 'understrap_post_nav' ) ) {
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 */
 	function understrap_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
