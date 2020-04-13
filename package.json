@@ -27,7 +27,7 @@
   },
   "homepage": "https://understrap.com",
   "dependencies": {
-    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-env": "^7.9.5",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
