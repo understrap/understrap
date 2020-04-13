@@ -4,7 +4,6 @@ var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var postcss = require('gulp-postcss');
-var watch = require('gulp-watch');
 var touch = require('gulp-touch-fd');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
