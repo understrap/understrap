@@ -158,3 +158,105 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
+
+if ( ! function_exists( 'understrap_sidebar_pos' ) ) {
+	/**
+	 * Retrieve sidebar position.
+	 *
+	 * @param integer $post (Optional) Post ID or WP_Post object. Default is global $post.
+	 * @return string left|right|both|none
+	 */
+	function understrap_sidebar_pos( $post = 0 ) {
+		$post = get_post( $post );
+		$id   = isset( $post->ID ) ? $post->ID : 0;
+
+		if ( ! $id ) {
+			return;
+		}
+
+		$left_active  = is_active_sidebar( 'left-sidebar' ) ? true : false;
+		$right_active = is_active_sidebar( 'right-sidebar' ) ? true : false;
+		$template     = basename( get_page_template( $id ), '.php' );
+
+		switch ( $template ) {
+			case 'right-sidebarpage':
+				$pos = $right_active ? 'right' : 'none';
+				break;
+			case 'left-sidebarpage':
+				$pos = $left_active ? 'left' : 'none';
+				break;
+			case 'both-sidebarspage':
+				if ( $left_active && $right_active ) {
+					$pos = 'both';
+				} elseif ( $left_active xor $right_active ) {
+					$pos = $left_active ? 'left' : 'right';
+				} else {
+					$pos = 'none';
+				}
+				break;
+			case 'fullwidthpage':
+				$pos = 'none';
+				break;
+			default:
+				$pos = get_theme_mod( 'understrap_sidebar_position' );
+		}
+
+		return $pos;
+	}
+}
+
+if ( ! function_exists( 'understrap_left_sidebar_width' ) ) {
+	/**
+	 * Retrieve left sidebar width.
+	 *
+	 * @param string $pos The position of the sidebars.
+	 * @return int The number of grid columns for the right sidebar.
+	 */
+	function understrap_left_sidebar_width( $pos = 'left' ) {
+		if ( 'left' !== $pos && 'both' !== $pos ) {
+			return 0;
+		}
+		$pos_width = array(
+			'left' => 4,
+			'both' => 3,
+		);
+
+		/**
+		 * Filters the array of left sidebar width'.
+		 *
+		 * @param array $pos_width An array of width' for the left sidebar.
+		 */
+		$width = apply_filters( 'understrap_left_sidebar_width', $pos_width );
+
+		return $width[ $pos ];
+	}
+}
+
+if ( ! function_exists( 'understrap_right_sidebar_width' ) ) {
+	/**
+	 * Retrieve left sidebar width.
+	 *
+	 * @param string $pos The position of the sidebars.
+	 * @return int The number of grid columns for the left sidebar.
+	 */
+	function understrap_right_sidebar_width( $pos = 'right' ) {
+		if ( 'right' !== $pos && 'both' !== $pos ) {
+			return 0;
+		}
+
+		$pos_width = array(
+			'right' => 4,
+			'both'  => 3,
+		);
+
+		/**
+		 * Filters the array of right sidebar width'.
+		 *
+		 * @param array $pos_width An array of width' for the right sidebar.
+		 */
+		$width = apply_filters( 'understrap_right_sidebar_width', $pos_width );
+
+		return $width[ $pos ];
+	}
+}
+

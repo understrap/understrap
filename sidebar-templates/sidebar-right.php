@@ -8,19 +8,16 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Return early if the sidebar is not active.
 if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 	return;
 }
 
-// when both sidebars turned on reduce col size to 3 from 4.
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+// Set sidebar width according to the sidebar position (right or both).
+$sidebar_width = understrap_right_sidebar_width( understrap_sidebar_pos() );
+
+// Print the sidebar.
 ?>
-
-<?php if ( 'both' === $sidebar_pos ) : ?>
-	<div class="col-md-3 widget-area" id="right-sidebar" role="complementary">
-<?php else : ?>
-	<div class="col-md-4 widget-area" id="right-sidebar" role="complementary">
-<?php endif; ?>
-<?php dynamic_sidebar( 'right-sidebar' ); ?>
-
+<div class="col-md-<?php echo absint( $sidebar_width ); ?> widget-area" id="right-sidebar" role="complementary">
+	<?php dynamic_sidebar( 'right-sidebar' ); ?>
 </div><!-- #right-sidebar -->
