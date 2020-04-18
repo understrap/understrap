@@ -87,3 +87,20 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
 		return $args;
 	}
 } // End of if function_exists( 'understrap_bootstrap_comment_form' ).
+
+
+// Add note if comments are closed.
+add_action( 'comment_form_comments_closed', 'understrap_comment_form_comments_closed' );
+
+if ( ! function_exists( 'understrap_comment_form_comments_closed' ) ) {
+	/**
+	 * Displays a note that comments are closed if comments are closed and there are comments.
+	 */
+	function understrap_comment_form_comments_closed() {
+		if ( get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) {
+			?>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'understrap' ); ?></p>
+			<?php
+		}
+	}
+} // End of if function_exists( 'understrap_comment_form_comments_closed' ).
