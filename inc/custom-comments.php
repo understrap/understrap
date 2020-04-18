@@ -63,7 +63,7 @@ add_filter( 'comment_form_defaults', 'understrap_bootstrap_comment_form' );
 
 if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
 	/**
-	 * Builds the form.
+	 * Adds Bootstrap classes to comment form submit button and comment field.
 	 *
 	 * @param string[] $args Comment form arguments and fields.
 	 *
