@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$totals = $order->get_order_item_totals();
+$item_totals = $order->get_order_item_totals();
 ?>
 <form id="order_review" method="post">
 
@@ -56,8 +56,8 @@ $totals = $order->get_order_item_totals();
 			<?php endif; ?>
 		</tbody>
 		<tfoot>
-			<?php if ( $totals ) : ?>
-				<?php foreach ( $totals as $total ) : ?>
+			<?php if ( $item_totals ) : ?>
+				<?php foreach ( $item_totals as $total ) : ?>
 					<tr>
 						<th scope="row" colspan="2"><?php echo $total['label']; ?></th><?php // @codingStandardsIgnoreLine ?>
 						<td class="product-total"><?php echo $total['value']; ?></td><?php // @codingStandardsIgnoreLine ?>

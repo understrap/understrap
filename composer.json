@@ -1,5 +1,5 @@
 {
-	"name": "holger1411/understrap",
+	"name": "understrap/understrap",
 	"description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
 	"type": "wordpress-theme",
 	"license": "GPL-2.0",
@@ -9,17 +9,22 @@
 		"theme",
 		"bootstrap"
 	],
-	"homepage": "https://github.com/holger1411/understrap",
+	"homepage": "https://github.com/understrap/understrap",
 	"require": {
-		"composer/installers": "^1.5"
+		"composer/installers": "^1.9",
+		"php": ">=5.6"
 	},
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-		"wp-coding-standards/wpcs": "^2.1",
-		"phpcompatibility/php-compatibility": "^9.2"
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+		"roave/security-advisories": "dev-master",
+		"wptrt/wpthemereview": "^0.2"
 	},
 	"scripts": {
-		"test": ["vendor/bin/phpcs"],
-		"fix": ["vendor/bin/phpcbf"]
+		"check-cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -w"],
+		"fix-cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"]
+	},
+	"support": {
+		"issues": "https://github.com/understrap/understrap/issues",
+		"source": "https://github.com/understrap/understrap"
 	}
 }

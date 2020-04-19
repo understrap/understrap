@@ -1,18 +1,15 @@
 <?php
 /**
- * Sidebar - hero canvas setup
+ * Sidebar - The Hero Canvas Widget Area
  *
  * @package understrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-?>
 
-<?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
+if ( is_active_sidebar( 'herocanvas' ) ) {
 
-	<!-- ******************* The Hero Canvas Widget Area ******************* -->
+	dynamic_sidebar( 'herocanvas' );
 
-	<?php dynamic_sidebar( 'herocanvas' ); ?>
-
-<?php endif;
+}

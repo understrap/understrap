@@ -20,30 +20,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
+			<?php
+			get_template_part( 'sidebar-templates/sidebar', 'left' );
 
-			<div
-				class="<?php
-					if ( is_active_sidebar( 'left-sidebar' ) xor is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-8<?php
-					elseif ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-4<?php
-					else : ?>col-md-12<?php
-					endif; ?> content-area"
-				id="primary">
+			if ( is_active_sidebar( 'left-sidebar' ) xor is_active_sidebar( 'right-sidebar' ) ) {
+				$class = 'col-md-8';
+			} elseif ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) ) {
+				$class = 'col-md-4';
+			} else {
+				$class = 'col-md-12';
+			}
+			?>
+			<div class="<?php echo $class; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) {
+						the_post();
 
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						get_template_part( 'loop-templates/content', 'page' );
 
-						<?php
 						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
+						if ( comments_open() || get_comments_number() ) {
 							comments_template();
-						endif;
-						?>
-
-					<?php endwhile; // end of the loop. ?>
+						}
+					}
+					?>
 
 				</main><!-- #main -->
 
@@ -57,4 +60,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page-wrapper -->
 
-<?php get_footer();
+<?php
+get_footer();
