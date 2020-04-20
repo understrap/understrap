@@ -159,14 +159,14 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 	}
 }
 
-if ( ! function_exists( 'understrap_sidebar_pos' ) ) {
+if ( ! function_exists( 'understrap_get_sidebar_pos' ) ) {
 	/**
-	 * Retrieve sidebar position.
+	 * Retrieves sidebar position.
 	 *
 	 * @param integer $post (Optional) Post ID or WP_Post object. Default is global $post.
 	 * @return string left|right|both|none
 	 */
-	function understrap_sidebar_pos( $post = 0 ) {
+	function understrap_get_sidebar_pos( $post = 0 ) {
 		$post = get_post( $post );
 		$id   = isset( $post->ID ) ? $post->ID : 0;
 
@@ -207,12 +207,13 @@ if ( ! function_exists( 'understrap_sidebar_pos' ) ) {
 
 if ( ! function_exists( 'understrap_left_sidebar_width' ) ) {
 	/**
-	 * Retrieve left sidebar width.
+	 * Retrieves or displays the left sidebar width.
 	 *
-	 * @param string $pos The position of the sidebars.
+	 * @param string $pos  (Optional) The position of the sidebars.
+	 * @param bool   $echo (Optional) Whether to echo (true = default) or return (false).
 	 * @return int The number of grid columns for the right sidebar.
 	 */
-	function understrap_left_sidebar_width( $pos = 'left' ) {
+	function understrap_left_sidebar_width( $pos = 'left', $echo = true ) {
 		if ( 'left' !== $pos && 'both' !== $pos ) {
 			return 0;
 		}
@@ -228,18 +229,23 @@ if ( ! function_exists( 'understrap_left_sidebar_width' ) ) {
 		 */
 		$width = apply_filters( 'understrap_left_sidebar_width', $pos_width );
 
-		return $width[ $pos ];
+		if ( $echo ) {
+			echo absint( $width[ $pos ] );
+		} else {
+			return $width[ $pos ];
+		}
 	}
 }
 
 if ( ! function_exists( 'understrap_right_sidebar_width' ) ) {
 	/**
-	 * Retrieve left sidebar width.
+	 * Retrieves the right sidebar width.
 	 *
-	 * @param string $pos The position of the sidebars.
-	 * @return int The number of grid columns for the left sidebar.
+	 * @param string $pos  (Optional) The position of the sidebars.
+	 * @param bool   $echo (Optional) Whether to echo (true = default) or return (false).
+	 * @return int The number of grid columns for the right sidebar.
 	 */
-	function understrap_right_sidebar_width( $pos = 'right' ) {
+	function understrap_right_sidebar_width( $pos = 'right', $echo = true ) {
 		if ( 'right' !== $pos && 'both' !== $pos ) {
 			return 0;
 		}
@@ -256,7 +262,47 @@ if ( ! function_exists( 'understrap_right_sidebar_width' ) ) {
 		 */
 		$width = apply_filters( 'understrap_right_sidebar_width', $pos_width );
 
-		return $width[ $pos ];
+		if ( $echo ) {
+			echo absint( $width[ $pos ] );
+		} else {
+			return $width[ $pos ];
+		}
 	}
 }
 
+if ( ! function_exists( 'understrap_content_area_width' ) ) {
+	/**
+	 * Retrieves content area width.
+	 *
+	 * @param int|WP_Post $post (Optional) Post ID or WP_Post object. Default is the global $post.
+	 * @param bool        $echo (Optional) Whether to echo (true = default) or return (false).
+	 * @return int The number of grid columns for the content area.
+	 */
+	function understrap_content_area_width( $post = 0, $echo = true ) {
+		$post = get_post( $post );
+		$id   = isset( $post->ID ) ? $post->ID : 0;
+
+		if ( ! $id ) {
+			return;
+		}
+
+		$pos   = understrap_get_sidebar_pos( $post );
+		$left  = understrap_left_sidebar_width( $pos, false );
+		$right = understrap_right_sidebar_width( $pos, false );
+
+		/**
+		 * Filters the number of grid columns.
+		 *
+		 * @param int|string $grid_columns An integer or numeric string representing the number of grid columns.
+		 */
+		$grid_columns = absint( apply_filters( 'understrap_grid_columns', $grid_columns = 12 ) );
+
+		$width = $grid_columns - $left - $right;
+
+		if ( $echo ) {
+			echo absint( $grid_columns - $left - $right );
+		} else {
+			return $grid_columns - $left - $right;
+		}
+	}
+}

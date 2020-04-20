@@ -14,10 +14,10 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 }
 
 // Set sidebar width according to the sidebar position (right or both).
-$sidebar_width = understrap_right_sidebar_width( understrap_sidebar_pos() );
+$sidebar_pos = understrap_get_sidebar_pos();
 
 // Print the sidebar.
 ?>
-<div class="col-md-<?php echo absint( $sidebar_width ); ?> widget-area" id="right-sidebar" role="complementary">
+<div class="col-md-<?php understrap_right_sidebar_width( $sidebar_pos ); ?> widget-area" id="right-sidebar" role="complementary">
 	<?php dynamic_sidebar( 'right-sidebar' ); ?>
 </div><!-- #right-sidebar -->

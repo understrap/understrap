@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
 
-			<div class="col-md content-area" id="primary">
+			<div class="col-md-<?php understrap_content_area_width(); ?> content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
