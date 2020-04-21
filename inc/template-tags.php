@@ -172,16 +172,16 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			return;
 		}
 		?>
-		<nav class="container nav navigation post-navigation justify-content-between" aria-labelledby="post-nav-label">
+		<nav class="nav navigation post-navigation justify-content-between" aria-labelledby="post-nav-label">
 			<h2 id="post-nav-label" class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
-				<?php
-				if ( get_previous_post_link() ) {
-					previous_post_link( '%link', '<i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;%title' );
-				}
-				if ( get_next_post_link() ) {
-					next_post_link( '%link', '%title&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>' );
-				}
-				?>
+			<?php
+			if ( get_previous_post_link() ) {
+				previous_post_link( '%link', '<i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;%title' );
+			}
+			if ( get_next_post_link() ) {
+				next_post_link( '%link', '%title&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>' );
+			}
+			?>
 		</nav><!-- .navigation -->
 		<?php
 	}
