@@ -62,12 +62,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<h2><?php echo esc_html__( 'Posts by', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
 
 				</header><!-- .page-header -->
-
-				<ul>
-
 					<!-- The Loop -->
 					<?php
 					if ( have_posts() ) {
+						echo '<ul>';
 						while ( have_posts() ) {
 							the_post();
 							echo '<li>';
@@ -82,13 +80,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 								the_category( '&' );
 							echo '</li>';
 						}
+						echo '</ul>';
 					} else {
 						get_template_part( 'loop-templates/content', 'none' );
 					}
 					?>
 					<!-- End Loop -->
-
-				</ul>
 
 			</main><!-- #main -->
 
