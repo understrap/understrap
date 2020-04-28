@@ -301,11 +301,12 @@ gulp.task(
 				'**/*',
 				`!${paths.node}`,
 				`!${paths.node}/**`,
+				`!${paths.composer}`,
+				`!${paths.composer}/**`,
 				`!${paths.dist}`,
 				`!${paths.dist}/**`,
 				`!${paths.distprod}`,
 				`!${paths.distprod}/**`,
-				'*'
 			])
 			.pipe(gulp.dest(paths.distprod))
 			.pipe(touch());
