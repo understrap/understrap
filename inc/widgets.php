@@ -17,6 +17,7 @@ defined( 'ABSPATH' ) || exit;
 add_filter( 'dynamic_sidebar_params', 'understrap_widget_classes' );
 
 if ( ! function_exists( 'understrap_widget_classes' ) ) {
+
 	/**
 	 * Count number of visible widgets in a sidebar and add classes to widgets accordingly,
 	 * so widgets can be displayed one, two, three or four per row.
@@ -24,6 +25,8 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 	 * @global array $sidebars_widgets
 	 *
 	 * @param array $params {
+	 *     Parameters passed to a widget’s display callback.
+	 *
 	 *     @type array $args  {
 	 *         An array of widget display arguments.
 	 *
@@ -86,7 +89,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 		return $params;
 
 	}
-} // endif function_exists( 'understrap_widget_classes' ).
+} // End of if function_exists( 'understrap_widget_classes' ).
 
 add_action( 'widgets_init', 'understrap_widgets_init' );
 
@@ -168,4 +171,4 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		);
 
 	}
-} // endif function_exists( 'understrap_widgets_init' ).
+} // End of function_exists( 'understrap_widgets_init' ).

@@ -1,8 +1,16 @@
 <?xml version="1.0"?>
 <ruleset name="UnderStrap Coding Standards">
 
-	<!-- Set a description for this ruleset. -->
-	<description>A custom set of code standard rules for UnderStrap.</description>
+	<description>Apply WordPress Coding Standards to UnderStrap</description>
+
+	<!-- Only scan PHP files. -->
+	<arg name="extensions" value="php"/>
+
+	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
+	<arg name="cache"/>
+
+	<!-- Strip the filepaths down to the relevant bit. -->
+	<arg name="basepath" value="./"/>
 
 	<!-- Show colors in console -->
 	<arg value="-colors"/>
@@ -13,44 +21,16 @@
 	<!-- Don't show warnings -->
 	<arg value="n"/>
 
-	<!-- Only check the PHP files -->
-	<arg name="extensions" value="php"/>
-
 	<!-- Scan these files -->
 	<file>.</file>
 
-	<!-- Ignore the vendor directory -->
-	<exclude-pattern>*/vendor/*</exclude-pattern>
-	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<!-- Directories and third party library exclusions. -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/dist/*</exclude-pattern>
 
 	<!-- Use the WordPress Ruleset -->
-	<rule ref="WordPress">
-		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
-		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd"/>
-		<exclude name="WordPress.WhiteSpace.DisallowInlineTabs.NonIndentTabsUsed"/>
-		<exclude name="WordPress.Security.EscapeOutput.UnsafePrintingFunction"/>
-		<exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped"/>
-		<exclude name="WordPress.Security.ValidatedSanitizedInput.InputNotSanitized"/>
-		<exclude name="WordPress.WP.GlobalVariablesOverride.Prohibited"/>
-		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
-		<exclude name="WordPress.WP.I18n.NonSingularStringLiteralText"/>
-
-		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
-		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
-		<exclude name="Generic.WhiteSpace.ScopeIndent"/>
-
-		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.Indent"/>
-		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
-
-		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
-		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
-		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
-		<exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
-		<exclude name="Squiz.PHP.DisallowMultipleAssignments.Found"/>
-		<exclude name="Squiz.PHP.EmbeddedPhp"/>
-	</rule>
+	<rule ref="WordPress"/>
 
 	<!--
 		Verify that the text_domain is set to the desired text-domain.
@@ -72,33 +52,41 @@
 		</properties>
 	</rule>
 
+	<!-- Assignments in while conditions are a valid method of looping over iterables. -->
+	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">
+		<exclude-pattern>*</exclude-pattern>
+	</rule>
+
+	<!-- Exclude incorrectly named files that won't be renamed. -->
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>/inc/class-wp-bootstrap-navwalker\.php</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.Security.EscapeOutput">
+		<!-- Exclude functions which are escaped in inc/extras.php -->
+		<properties>
+			<property name="customAutoEscapedFunctions" type="array">
+				<element value="get_the_title"/>
+				<element value="get_the_archive_title"/>
+				<element value="get_the_archive_description"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- 
+		Exclude checking of line endings when reporting errors, but fix them
+		when running phpcbf.
+	-->
+	<rule ref="Generic.Files.LineEndings">
+		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
+	</rule>
+
 	<!-- A closing tag is not permitted at the end of a PHP file -->
 	<rule ref="Zend.Files.ClosingTag"/>
 
 	<!-- Use the PHPCompatibility Ruleset -->
-	<config name="testVersion" value="5.2-99.0"/>
-	<rule ref="PHPCompatibility">
-		<!--
-			Whitelist PHP native classes, interfaces, functions and constants which
-			are back-filled by WP.
-
-			Based on:
-			* /wp-includes/compat.php
-			* /wp-includes/random_compat/random.php
-		-->
-		<exclude name="PHPCompatibility.PHP.NewClasses.errorFound"/>
-		<exclude name="PHPCompatibility.PHP.NewClasses.typeerrorFound"/>
-
-		<exclude name="PHPCompatibility.PHP.NewConstants.json_pretty_printFound"/>
-		<exclude name="PHPCompatibility.PHP.NewConstants.php_version_idFound"/>
-
-		<exclude name="PHPCompatibility.PHP.NewFunctions.hash_equalsFound"/>
-		<exclude name="PHPCompatibility.PHP.NewFunctions.json_last_error_msgFound"/>
-		<exclude name="PHPCompatibility.PHP.NewFunctions.random_intFound"/>
-		<exclude name="PHPCompatibility.PHP.NewFunctions.random_bytesFound"/>
-		<exclude name="PHPCompatibility.PHP.NewFunctions.array_replace_recursiveFound"/>
-
-		<exclude name="PHPCompatibility.PHP.NewInterfaces.jsonserializableFound"/>
+	<config name="testVersion" value="5.6-99.0"/>
+	<rule ref="PHPCompatibilityWP">
+		<include-pattern>*\.php$</include-pattern>
 	</rule>
-
 </ruleset>
