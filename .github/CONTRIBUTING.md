@@ -43,8 +43,8 @@ People *love* thorough bug reports. I'm not even kidding.
 
 ## Use a Consistent Coding Style
 
-* 2 spaces for indentation rather than tabs
-* Use ./.editorconfig if your editor supports it
+* Stick to the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/)
+* Use [./.editorconfig](https://github.com/understrap/understrap/blob/master/.editorconfig) if your editor supports it
 <!-- * You can try running `npm run lint` for style unification -->
 
 ## License
