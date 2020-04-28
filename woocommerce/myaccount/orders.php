@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 		<tbody>
 			<?php
 			foreach ( $customer_orders->orders as $customer_order ) {
-				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Override
 				$item_count = $order->get_item_count() - $order->get_item_count_refunded();
 				?>
 				<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-<?php echo esc_attr( $order->get_status() ); ?> order">
@@ -63,11 +63,11 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
-								$actions = wc_get_account_orders_actions( $order );
+								$orders_actions = wc_get_account_orders_actions( $order );
 
-								if ( ! empty( $actions ) ) {
-									foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
-										echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+								if ( ! empty( $orders_actions ) ) {
+									foreach ( $orders_actions as $key => $orders_action ) {
+										echo '<a href="' . esc_url( $orders_action['url'] ) . '" class="woocommerce-button btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $orders_action['name'] ) . '</a>';
 									}
 								}
 								?>
@@ -104,4 +104,5 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	</div>
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_after_account_orders', $has_orders ); ?>
+<?php
+do_action( 'woocommerce_after_account_orders', $has_orders );

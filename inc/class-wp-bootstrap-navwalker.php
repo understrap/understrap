@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
  * GitHub Branch: master
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
-*/
+ */
 
 /* Check if Class Exists. */
 if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
@@ -182,7 +182,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			}
 
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-			if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/understrap/understrap/issues/973
+			if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/understrap/understrap/issues/973.
 				$atts['rel'] = 'noopener noreferrer';
 			} else {
 				$atts['rel'] = $item->xfn;
@@ -381,7 +381,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 
 				// if $args has 'echo' key and it's true echo, otherwise return.
 				if ( array_key_exists( 'echo', $args ) && $args['echo'] ) {
-					echo $fallback_output; // WPCS: XSS OK.
+					echo $fallback_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				} else {
 					return $fallback_output;
 				}

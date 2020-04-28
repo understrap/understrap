@@ -26,18 +26,18 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 	}
 }
 
-/**
- * First unhook the WooCommerce wrappers
- */
+// First unhook the WooCommerce content wrappers.
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-/**
- * Then hook in your own functions to display the wrappers your theme requires
- */
+// Then hook in your own functions to display the wrappers your theme requires.
 add_action( 'woocommerce_before_main_content', 'understrap_woocommerce_wrapper_start', 10 );
 add_action( 'woocommerce_after_main_content', 'understrap_woocommerce_wrapper_end', 10 );
+
 if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
+	/**
+	 * Display the theme specific start of the page wrapper.
+	 */
 	function understrap_woocommerce_wrapper_start() {
 		$container = get_theme_mod( 'understrap_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
@@ -47,7 +47,11 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 		echo '<main class="site-main" id="main">';
 	}
 }
+
 if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
+	/**
+	 * Display the theme specific end of the page wrapper.
+	 */
 	function understrap_woocommerce_wrapper_end() {
 		echo '</main><!-- #main -->';
 		get_template_part( 'global-templates/right-sidebar-check' );
@@ -57,18 +61,17 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 	}
 }
 
-
-/**
- * Filter hook function monkey patching form classes
- * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
- *
- * @param string $args Form attributes.
- * @param string $key Not in use.
- * @param null   $value Not in use.
- *
- * @return mixed
- */
 if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
+	/**
+	 * Filter hook function monkey patching form classes
+	 * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
+	 *
+	 * @param string $args Form attributes.
+	 * @param string $key Not in use.
+	 * @param null   $value Not in use.
+	 *
+	 * @return mixed
+	 */
 	function understrap_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
@@ -133,7 +136,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				$args['input_class'] = array( 'form-control', 'input-lg' );
 				$args['label_class'] = array( 'control-label' );
 				break;
-		} // end switch ($args).
+		} // End of switch ( $args ).
 		return $args;
 	}
 }

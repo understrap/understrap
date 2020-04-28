@@ -20,7 +20,7 @@
 		"wptrt/wpthemereview": "^0.2"
 	},
 	"scripts": {
-		"check-cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs"],
+		"check-cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -w"],
 		"fix-cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"]
 	},
 	"support": {

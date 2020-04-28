@@ -130,7 +130,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 	}
-} // endif function_exists( 'understrap_theme_customize_register' ).
+} // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
 
 /**
