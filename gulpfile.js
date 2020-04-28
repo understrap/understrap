@@ -171,7 +171,7 @@ gulp.task('watch-bs', gulp.parallel('browser-sync', 'watch'));
 
 // Run:
 // gulp copy-assets.
-// Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
+// Copy all needed dependency assets files from node_modules to theme's /js, /scss and /fonts folder. Run this task after npm install or npm update
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task('copy-assets', function (done) {
@@ -299,8 +299,6 @@ gulp.task(
 		return gulp
 			.src([
 				'**/*',
-				`!${paths.bower}`,
-				`!${paths.bower}/**`,
 				`!${paths.node}`,
 				`!${paths.node}/**`,
 				`!${paths.dist}`,
