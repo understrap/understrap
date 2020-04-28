@@ -17,20 +17,28 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
 $customer_id = get_current_user_id();
 
 if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
-	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' => __( 'Billing address', 'understrap' ),
-		'shipping' => __( 'Shipping address', 'understrap' ),
-	), $customer_id );
+	$get_addresses = apply_filters(
+		'woocommerce_my_account_get_addresses',
+		array(
+			'billing'  => __( 'Billing address', 'understrap' ),
+			'shipping' => __( 'Shipping address', 'understrap' ),
+		),
+		$customer_id
+	);
 } else {
-	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' => __( 'Billing address', 'understrap' ),
-	), $customer_id );
+	$get_addresses = apply_filters(
+		'woocommerce_my_account_get_addresses',
+		array(
+			'billing' => __( 'Billing address', 'understrap' ),
+		),
+		$customer_id
+	);
 }
 
 $oldcol = 1;
@@ -38,28 +46,31 @@ $col    = 1;
 ?>
 
 <p>
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'understrap' ) ); ?>
+	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', esc_html__( 'The following addresses will be used on the checkout page by default.', 'understrap' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 </p>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
 	<div class="u-columns woocommerce-Addresses col2-set addresses">
 <?php endif; ?>
 
-<?php foreach ( $get_addresses as $name => $title ) : ?>
+<?php foreach ( $get_addresses as $name => $address_title ) : ?>
 
 	<div class="u-column woocommerce-Address">
 		<header class="woocommerce-Address-title title">
-			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'understrap' ); ?></a>
+			<h3><?php echo esc_html( $address_title ); ?></h3>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php esc_html_e( 'Edit', 'understrap' ); ?></a>
 		</header>
-		<address><?php
+		<address>
+		<?php
 			$address = wc_get_account_formatted_address( $name );
 			echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'understrap' );
-		?></address>
+		?>
+		</address>
 	</div>
 
 <?php endforeach; ?>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
 	</div>
-<?php endif;
+	<?php
+endif;

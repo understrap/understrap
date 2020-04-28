@@ -28,8 +28,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<header class="page-header author-header">
 
 					<?php
-					if ( isset( $_GET['author_name'] ) ) {
-						$curauth = get_user_by( 'slug', $author_name );
+					if ( get_query_var( 'author_name' ) ) {
+						$curauth = get_user_by( 'slug', get_query_var( 'author_name' ) );
 					} else {
 						$curauth = get_userdata( intval( $author ) );
 					}
@@ -37,9 +37,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<h1><?php echo esc_html__( 'About:', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
 
-					<?php if ( ! empty( $curauth->ID ) ) : ?>
-						<?php echo get_avatar( $curauth->ID ); ?>
-					<?php endif; ?>
+					<?php
+					if ( ! empty( $curauth->ID ) ) {
+						echo get_avatar( $curauth->ID );
+					}
+					?>
 
 					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
 						<dl>
@@ -52,44 +54,38 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<?php if ( ! empty( $curauth->user_description ) ) : ?>
 								<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
-								<dd><?php esc_html_e( $curauth->user_description, 'understrap' ); ?></dd>
+								<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 							<?php endif; ?>
 						</dl>
 					<?php endif; ?>
 
-					<h2><?php echo esc_html( 'Posts by', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
+					<h2><?php echo esc_html__( 'Posts by', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
 
 				</header><!-- .page-header -->
-
-				<ul>
-
 					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
-							<li>
-								<?php
+					<?php
+					if ( have_posts() ) {
+						echo '<ul>';
+						while ( have_posts() ) {
+							the_post();
+							echo '<li>';
 								printf(
 									'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
 									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
 									esc_attr( __( 'Permanent Link:', 'understrap' ) ),
-									the_title( '', '', false )
+									get_the_title()
 								);
-								?>
-								<?php understrap_posted_on(); ?>
-								<?php esc_html_e( 'in', 'understrap' ); ?>
-								<?php the_category( '&' ); ?>
-							</li>
-						<?php endwhile; ?>
-
-					<?php else : ?>
-
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
-					<?php endif; ?>
-
+								understrap_posted_on();
+								esc_html_e( 'in', 'understrap' );
+								the_category( '&' );
+							echo '</li>';
+						}
+						echo '</ul>';
+					} else {
+						get_template_part( 'loop-templates/content', 'none' );
+					}
+					?>
 					<!-- End Loop -->
-
-				</ul>
 
 			</main><!-- #main -->
 
@@ -105,4 +101,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #author-wrapper -->
 
-<?php get_footer();
+<?php
+get_footer();

@@ -11,6 +11,9 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'after_setup_theme', 'understrap_custom_header_setup' );
 
 if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
+	/**
+	 * Set up custom header feature.
+	 */
 	function understrap_custom_header_setup() {
 
 		/**

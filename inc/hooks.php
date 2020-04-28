@@ -29,23 +29,23 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s(%4$s)',
 			esc_url( __( 'http://wordpress.org/', 'understrap' ) ),
 			sprintf(
-				/* translators:*/
+				/* translators: WordPress */
 				esc_html__( 'Proudly powered by %s', 'understrap' ),
 				'WordPress'
 			),
 			sprintf( // WPCS: XSS ok.
-				/* translators:*/
+				/* translators: 1: Theme name, 2: Theme author */
 				esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ),
 				$the_theme->get( 'Name' ),
 				'<a href="' . esc_url( __( 'http://understrap.com', 'understrap' ) ) . '">understrap.com</a>'
 			),
 			sprintf( // WPCS: XSS ok.
-				/* translators:*/
+				/* translators: Theme version */
 				esc_html__( 'Version: %1$s', 'understrap' ),
 				$the_theme->get( 'Version' )
 			)
 		);
 
-		echo apply_filters( 'understrap_site_info_content', $site_info ); // WPCS: XSS ok.
+		echo apply_filters( 'understrap_site_info_content', $site_info ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
