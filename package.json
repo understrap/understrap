@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holger1411/understrap.git"
+    "url": "https://github.com/understrap/understrap.git"
   },
   "keywords": [
     "wordpress",
@@ -23,36 +23,31 @@
   "author": "Holger Koenemann",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/holger1411/understrap/issues"
+    "url": "https://github.com/understrap/understrap/issues"
   },
   "homepage": "https://understrap.com",
-  "dependencies": {
-    "@babel/preset-env": "^7.7.7",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "autoprefixer": "^9.7.6",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-ignore": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
-    "gulp-rimraf": "^0.2.2",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-touch-fd": "^2.0.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-watch": "^5.0.1",
     "undescores-for-npm": "^1.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "autoprefixer": "^9.7.3",
-    "gulp-babel": "^8.0.0",
-    "gulp-postcss": "^8.0.0"
   }
 }

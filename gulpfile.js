@@ -4,14 +4,11 @@ var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var postcss = require('gulp-postcss');
-var watch = require('gulp-watch');
 var touch = require('gulp-touch-fd');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
-var ignore = require('gulp-ignore');
-var rimraf = require('gulp-rimraf');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
@@ -86,28 +83,6 @@ gulp.task(
 	})
 );
 
-// Run:
-// gulp cssnano
-// Minifies CSS files
-gulp.task('cssnano', function () {
-	return gulp
-		.src(paths.css + '/theme.css')
-		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(
-			plumber({
-				errorHandler: function (err) {
-					console.log(err);
-					this.emit('end');
-				}
-			})
-		)
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(cssnano({ discardComments: { removeAll: true } }))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css))
-		.pipe(touch());
-});
-
 gulp.task('minifycss', function () {
 
 	return gulp
@@ -135,11 +110,11 @@ gulp.task('minifycss', function () {
 		.pipe(touch());
 });
 
+/**
+ * Delete minified CSS files and their maps
+ */
 gulp.task('cleancss', function () {
-	return gulp
-		.src(`${paths.css}/*.min.css`, { read: false }) // Much faster
-		.pipe(ignore('theme.css'))
-		.pipe(rimraf());
+	return del(paths.css + '/*.min.css*');
 });
 
 gulp.task('styles', function (callback) {
@@ -172,11 +147,7 @@ gulp.task('scripts', function () {
 	];
 	gulp
 		.src(scripts, { allowEmpty: true })
-		.pipe(babel(
-			{
-			presets: ['@babel/preset-env']
-			}
-		))
+		.pipe(babel({ presets: ['@babel/preset-env'] }))
 		.pipe(concat('theme.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.js));
