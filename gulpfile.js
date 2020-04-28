@@ -242,8 +242,6 @@ gulp.task(
 			.src(
 				[
 					'**/*',
-					`!${paths.bower}`,
-					`!${paths.bower}/**`,
 					`!${paths.node}`,
 					`!${paths.node}/**`,
 					`!${paths.dev}`,
@@ -254,17 +252,12 @@ gulp.task(
 					`!${paths.distprod}/**`,
 					`!${paths.sass}`,
 					`!${paths.sass}/**`,
+					`!${paths.composer}`,
+					`!${paths.composer}/**`,
 					'!readme.txt',
-					'!readme.md',
-					'!package.json',
-					'!package-lock.json',
-					'!gulpfile.js',
-					'!gulpconfig.json',
+					'!README.md',
+					'!*.+(json|js|lock|xml)',
 					'!CHANGELOG.md',
-					'!.travis.yml',
-					'!jshintignore',
-					'!codesniffer.ruleset.xml',
-					'*'
 				],
 				{ buffer: true }
 			)
