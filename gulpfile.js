@@ -171,7 +171,7 @@ gulp.task('watch-bs', gulp.parallel('browser-sync', 'watch'));
 
 // Run:
 // gulp copy-assets.
-// Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
+// Copy all needed dependency assets files from node_modules to theme's /js, /scss and /fonts folder. Run this task after npm update
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task('copy-assets', function (done) {
@@ -242,8 +242,6 @@ gulp.task(
 			.src(
 				[
 					'**/*',
-					`!${paths.bower}`,
-					`!${paths.bower}/**`,
 					`!${paths.node}`,
 					`!${paths.node}/**`,
 					`!${paths.dev}`,
@@ -254,17 +252,12 @@ gulp.task(
 					`!${paths.distprod}/**`,
 					`!${paths.sass}`,
 					`!${paths.sass}/**`,
+					`!${paths.composer}`,
+					`!${paths.composer}/**`,
 					'!readme.txt',
-					'!readme.md',
-					'!package.json',
-					'!package-lock.json',
-					'!gulpfile.js',
-					'!gulpconfig.json',
+					'!README.md',
+					'!*.+(json|js|lock|xml)',
 					'!CHANGELOG.md',
-					'!.travis.yml',
-					'!jshintignore',
-					'!codesniffer.ruleset.xml',
-					'*'
 				],
 				{ buffer: true }
 			)
@@ -306,15 +299,14 @@ gulp.task(
 		return gulp
 			.src([
 				'**/*',
-				`!${paths.bower}`,
-				`!${paths.bower}/**`,
 				`!${paths.node}`,
 				`!${paths.node}/**`,
+				`!${paths.composer}`,
+				`!${paths.composer}/**`,
 				`!${paths.dist}`,
 				`!${paths.dist}/**`,
 				`!${paths.distprod}`,
 				`!${paths.distprod}/**`,
-				'*'
 			])
 			.pipe(gulp.dest(paths.distprod))
 			.pipe(touch());
