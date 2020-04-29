@@ -49,7 +49,7 @@ if ( post_password_required() ) {
 							'understrap'
 						)
 					),
-					number_format_i18n( '$comments_number' ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					number_format_i18n( $comments_number ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
