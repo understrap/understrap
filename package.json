@@ -29,7 +29,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-env": "^7.9.6",
     "autoprefixer": "^9.7.6",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
