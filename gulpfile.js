@@ -62,15 +62,31 @@ gulp.task('watch', function () {
 	gulp.watch(`${paths.imgsrc}/**`, gulp.series('imagemin-watch'));
 });
 
-// Run:
-// gulp imagemin
-// Running image optimizing task
-gulp.task('imagemin', function () {
-	gulp
-		.src(`${paths.imgsrc}/**`)
-		.pipe(imagemin())
-		.pipe(gulp.dest(paths.img));
-});
+/**
+ * Optimizes images and copies images from src to dest.
+ * 
+ * Run: gulp imagemin
+ */
+gulp.task('imagemin', () =>
+	gulp.src(paths.imgsrc + '/**')
+		.pipe(imagemin([
+			// Bundled plugins
+			imagemin.gifsicle({
+				interlaced: true,
+				optimizationLevel: 3
+			}),
+			imagemin.mozjpeg({
+				quality: 100,
+				progressive: true
+			}),
+			imagemin.optipng(),
+			imagemin.svgo()
+			], {
+				verbose: true
+		})
+		)
+		.pipe(gulp.dest(paths.img))
+);
 
 /**
  * Ensures the 'imagemin' task is complete before reloading browsers
