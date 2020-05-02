@@ -33,7 +33,7 @@
     "autoprefixer": "^9.7.6",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
-    "del": "^4.1.1",
+    "del": "^5.1.0",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",

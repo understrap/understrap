@@ -20,9 +20,11 @@ var autoprefixer = require('autoprefixer');
 var cfg = require('./gulpconfig.json');
 var paths = cfg.paths;
 
-// Run:
-// gulp sass
-// Compiles SCSS files in CSS
+/**
+ * Compiles .scss to .css files.
+ * 
+ * Run: gulp sass
+ */
 gulp.task('sass', function () {
 	var stream = gulp
 		.src(paths.sass + '/*.scss')
@@ -47,10 +49,10 @@ gulp.task('sass', function () {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
-	gulp.watch([`${paths.sass}/**/*.scss`, `${paths.sass}/*.scss`], gulp.series('styles'));
+	gulp.watch([paths.sass + '/**/*.scss', paths.sass + '/*.scss'], gulp.series('styles'));
 	gulp.watch(
 		[
-			`${paths.dev}/js/**/*.js`,
+			paths.dev + '/js/**/*.js',
 			'js/**/*.js',
 			'!js/theme.js',
 			'!js/theme.min.js'
@@ -58,8 +60,8 @@ gulp.task('watch', function () {
 		gulp.series('scripts')
 	);
 
-	//Inside the watch task.
-	gulp.watch(`${paths.imgsrc}/**`, gulp.series('imagemin-watch'));
+	// Inside the watch task.
+	gulp.watch(paths.imgsrc + '/**', gulp.series('imagemin-watch'));
 });
 
 /**
@@ -99,12 +101,17 @@ gulp.task(
 	})
 );
 
+/**
+ * Minifies css files.
+ * 
+ * Run: gulp minifycss
+ */
 gulp.task('minifycss', function () {
 
 	return gulp
 		.src([
-			`${paths.css}/custom-editor-style.css`,
-			`${paths.css}/theme.css`,
+			paths.css + '/custom-editor-style.css',
+			paths.css + '/theme.css',
 		])
 		.pipe(sourcemaps.init({
 			loadMaps: true
@@ -128,11 +135,18 @@ gulp.task('minifycss', function () {
 
 /**
  * Delete minified CSS files and their maps
+ * 
+ * Run: gulp cleancss
  */
 gulp.task('cleancss', function () {
 	return del(paths.css + '/*.min.css*');
 });
 
+/**
+ * Compiles .scss to .css minifies css files.
+ * 
+ * Run: gulp styles
+ */
 gulp.task('styles', function (callback) {
 	gulp.series('sass', 'minifycss')(callback);
 });
@@ -150,16 +164,16 @@ gulp.task('browser-sync', function () {
 gulp.task('scripts', function () {
 	var scripts = [
 		// Start - All BS4 stuff
-		`${paths.dev}/js/bootstrap4/bootstrap.bundle.js`,
-		`${paths.dev}/js/themejs/*.js`,
+		paths.dev + '/js/bootstrap4/bootstrap.bundle.js',
+		paths.dev + '/js/themejs/*.js',
 
 		// End - All BS4 stuff
 
-		`${paths.dev}/js/skip-link-focus-fix.js`,
+		paths.dev + '/js/skip-link-focus-fix.js',
 
 		// Adding currently empty javascript file to add on for your own themes´ customizations
 		// Please add any customizations to this .js file only!
-		`${paths.dev}/js/custom-javascript.js`
+		paths.dev + '/js/custom-javascript.js'
 	];
 	gulp
 		.src(scripts, { allowEmpty: true })
@@ -194,35 +208,35 @@ gulp.task('copy-assets', function (done) {
 	////////////////// All Bootstrap 4 Assets /////////////////////////
 	// Copy all JS files
 	var stream = gulp
-		.src(`${paths.node}/bootstrap/dist/js/**/*.js`)
-		.pipe(gulp.dest(`${paths.dev}/js/bootstrap4`));
+		.src(paths.node + '/bootstrap/dist/js/**/*.js')
+		.pipe(gulp.dest(paths.dev + '/js/bootstrap4'));
 
 	// Copy all Bootstrap SCSS files
 	gulp
-		.src(`${paths.node}/bootstrap/scss/**/*.scss`)
-		.pipe(gulp.dest(`${paths.dev}/sass/bootstrap4`));
+		.src(paths.node + '/bootstrap/scss/**/*.scss')
+		.pipe(gulp.dest(paths.dev + '/sass/bootstrap4'));
 
 	////////////////// End Bootstrap 4 Assets /////////////////////////
 
 	// Copy all Font Awesome Fonts
 	gulp
-		.src(`${paths.node}/font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}`)
-		.pipe(gulp.dest('./fonts'));
+		.src(paths.node + '/font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}')
+		.pipe(gulp.dest(paths.fonts));
 
 	// Copy all Font Awesome SCSS files
 	gulp
-		.src(`${paths.node}/font-awesome/scss/*.scss`)
-		.pipe(gulp.dest(`${paths.dev}/sass/fontawesome`));
+		.src(paths.node + '/font-awesome/scss/*.scss')
+		.pipe(gulp.dest(paths.dev + '/sass/fontawesome'));
 
 	// _s SCSS files
 	gulp
-		.src(`${paths.node}/undescores-for-npm/sass/media/*.scss`)
-		.pipe(gulp.dest(`${paths.dev}/sass/underscores`));
+		.src(paths.node + '/undescores-for-npm/sass/media/*.scss')
+		.pipe(gulp.dest(paths.dev + '/sass/underscores'));
 
 	// _s JS files into /src/js
 	gulp
-		.src(`${paths.node}/undescores-for-npm/js/skip-link-focus-fix.js`)
-		.pipe(gulp.dest(`${paths.dev}/js`));
+		.src(paths.node + '/undescores-for-npm/js/skip-link-focus-fix.js')
+		.pipe(gulp.dest(paths.dev + '/js'));
 
 	done();
 });
@@ -230,27 +244,31 @@ gulp.task('copy-assets', function (done) {
 // Deleting the files distributed by the copy-assets task
 gulp.task('clean-vendor-assets', function () {
 	return del([
-		`${paths.dev}/js/bootstrap4/**`,
-		`${paths.dev}/sass/bootstrap4/**`,
-		'./fonts/*wesome*.{ttf,woff,woff2,eot,svg}',
-		`${paths.dev}/sass/fontawesome/**`,
-		`${paths.dev}/sass/underscores/**`,
-		`${paths.dev}/js/skip-link-focus-fix.js`,
-		`${paths.js}/**/skip-link-focus-fix.js`,
-		`${paths.js}/**/popper.min.js`,
-		`${paths.js}/**/popper.js`,
-		paths.vendor !== '' ? paths.js + paths.vendor + '/**' : ''
+		paths.dev + '/js/bootstrap4',
+		paths.dev + '/sass/bootstrap4',
+		paths.fonts + '/*wesome*.{ttf,woff,woff2,eot,svg}',
+		paths.dev + '/sass/fontawesome',
+		paths.dev + '/sass/underscores',
+		paths.dev + '/js/skip-link-focus-fix.js',
+		paths.js + '/**/skip-link-focus-fix.js',
+		paths.js + '/**/popper.min.js',
+		paths.js + '/**/popper.js',
+		paths.js + paths.vendor
 	]);
 });
 
-// Deleting any file inside the /dist folder
+/**
+ * Deletes all files inside the dist folder and the folder itself.
+ * 
+ * Run: gulp clean-dist
+ */
 gulp.task('clean-dist', function () {
-	return del([paths.dist + '/**']);
+	return del( paths.dist );
 });
 
 // Run
 // gulp dist
-// Copies the files to the /dist folder for distribution as simple theme
+// Copies the files to the dist folder for distribution as simple theme
 gulp.task(
 	'dist',
 	gulp.series(['clean-dist'], function () {
@@ -258,20 +276,19 @@ gulp.task(
 			.src(
 				[
 					'**/*',
-					`!${paths.node}`,
-					`!${paths.node}/**`,
-					`!${paths.dev}`,
-					`!${paths.dev}/**`,
-					`!${paths.dist}`,
-					`!${paths.dist}/**`,
-					`!${paths.distprod}`,
-					`!${paths.distprod}/**`,
-					`!${paths.sass}`,
-					`!${paths.sass}/**`,
-					`!${paths.composer}`,
-					`!${paths.composer}/**`,
-					'!readme.txt',
-					'!README.md',
+					'!' + paths.node,
+					'!' + paths.node + '/**',
+					'!' + paths.dev,
+					'!' + paths.dev + '/**',
+					'!' + paths.dist,
+					'!' + paths.dist + '/**',
+					'!' + paths.distprod,
+					'!' + paths.distprod + '/**',
+					'!' + paths.sass,
+					'!' + paths.sass + '/**',
+					'!' + paths.composer,
+					'!' + paths.composer + '/**',
+					'!+(readme|README).+(txt|md)',
 					'!*.+(json|js|lock|xml)',
 					'!CHANGELOG.md',
 				],
@@ -301,9 +318,13 @@ gulp.task(
 	})
 );
 
-// Deleting any file inside the /dist-product folder
+/**
+ * Deletes all files inside the dist-product folder and the folder itself.
+ * 
+ * Run: gulp clean-dist-product
+ */
 gulp.task('clean-dist-product', function () {
-	return del([paths.distprod + '/**']);
+	return del(paths.distprod);
 });
 
 // Run
@@ -315,14 +336,14 @@ gulp.task(
 		return gulp
 			.src([
 				'**/*',
-				`!${paths.node}`,
-				`!${paths.node}/**`,
-				`!${paths.composer}`,
-				`!${paths.composer}/**`,
-				`!${paths.dist}`,
-				`!${paths.dist}/**`,
-				`!${paths.distprod}`,
-				`!${paths.distprod}/**`,
+				'!' + paths.node,
+				'!' + paths.node + '/**',
+				'!' + paths.composer,
+				'!' + paths.composer + '/**',
+				'!' + paths.dist,
+				'!' + paths.dist + '/**',
+				'!' + paths.distprod,
+				'!' + paths.distprod + '/**',				
 			])
 			.pipe(gulp.dest(paths.distprod))
 			.pipe(touch());
