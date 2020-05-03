@@ -2,7 +2,7 @@
 	"name": "understrap/understrap",
 	"description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
 	"type": "wordpress-theme",
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"minimum-stability": "stable",
 	"keywords": [
 		"wordpress",
@@ -15,13 +15,18 @@
 		"php": ">=5.6"
 	},
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.6",
 		"roave/security-advisories": "dev-master",
-		"wptrt/wpthemereview": "^0.2"
+		"wptrt/wpthemereview": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "0.6",
+		"php-parallel-lint/php-parallel-lint": "^1.2"
 	},
 	"scripts": {
-		"check-cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -w"],
-		"fix-cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"]
+		"check:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p"],
+		"check:compatibility": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p --standard=phpcs.xml,PHPCompatibilityWP"],
+		"check:theme-review": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p --standard=phpcs.xml,WPThemeReview"],
+		"lint:php": ["@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."],
+		"checks": [ "@check:cs", "@check:compatibility", "@check:theme-review"],
+		"fix:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"]
 	},
 	"support": {
 		"issues": "https://github.com/understrap/understrap/issues",
