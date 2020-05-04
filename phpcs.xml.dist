@@ -82,8 +82,8 @@
 		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
 	</rule>
 
-	<!-- Use the PHPCompatibility Ruleset -->
-	<config name="testVersion" value="5.6-99.0"/>
+	<!-- Use the PHPCompatibilityWP Ruleset -->
+	<config name="testVersion" value="5.6-"/>
 	<rule ref="PHPCompatibilityWP" />
 
 	<!-- Use the WPThemeReview Ruleset -->
