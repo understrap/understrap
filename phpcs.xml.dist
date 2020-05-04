@@ -82,9 +82,6 @@
 		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
 	</rule>
 
-	<!-- A closing tag is not permitted at the end of a PHP file -->
-	<rule ref="Zend.Files.ClosingTag"/>
-
 	<!-- Use the PHPCompatibility Ruleset -->
 	<config name="testVersion" value="5.6-99.0"/>
 	<rule ref="PHPCompatibilityWP" />
