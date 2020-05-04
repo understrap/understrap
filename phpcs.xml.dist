@@ -13,7 +13,7 @@
 	<arg name="basepath" value="./"/>
 
 	<!-- Show colors in console -->
-	<arg value="-colors"/>
+	<arg value="colors"/>
 
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
