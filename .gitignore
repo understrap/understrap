@@ -26,3 +26,6 @@ Thumbs.db
 
 *.swp
 .idea/
+
+phpcs.xml.dist
+.phpcs.xml
