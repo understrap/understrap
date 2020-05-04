@@ -28,6 +28,7 @@
 	<exclude-pattern>/vendor/*</exclude-pattern>
 	<exclude-pattern>/node_modules/*</exclude-pattern>
 	<exclude-pattern>/dist/*</exclude-pattern>
+	<exclude-pattern>/dist-product/*</exclude-pattern>
 
 	<!-- Use the WordPress Ruleset -->
 	<rule ref="WordPress"/>
