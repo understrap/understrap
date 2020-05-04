@@ -7,7 +7,7 @@
 	<arg name="extensions" value="php"/>
 
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
-	<arg name="cache"/>
+	<arg name="cache" value=".phpcs-cache"/>
 
 	<!-- Strip the filepaths down to the relevant bit. -->
 	<arg name="basepath" value="./"/>
