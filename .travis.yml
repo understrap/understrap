@@ -58,7 +58,7 @@ script:
   - composer lint:php
 
   # Check the code against the standards as documented in the phpcs.xml file.
-  - if [[ "$PHPCS" == 1 ]]; then composer checks; fi
+  - if [[ "$PHPCS" == 1 ]]; then composer check:cs; fi
   # Run the theme through JSHint
   - if [[ "$PHPCS" == 1 ]]; then jshint .; fi
   # Run the theme through JavaScript Code Style checker

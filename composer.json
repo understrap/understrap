@@ -24,10 +24,7 @@
 	"scripts": {
 		"check:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p"],
 		"fix:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"],
-		"check:compatibility": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p --standard=phpcs.xml.dist,PHPCompatibilityWP"],
-		"check:theme-review": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p --standard=phpcs.xml.dist,WPThemeReview"],
 		"lint:php": ["@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."],
-		"checks": [ "@check:cs", "@check:compatibility", "@check:theme-review"]
 	},
 	"support": {
 		"issues": "https://github.com/understrap/understrap/issues",
