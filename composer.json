@@ -16,6 +16,7 @@
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
+		"wp-coding-standards/wpcs": "^2.2",
 		"wptrt/wpthemereview": "*",
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.6",
 		"php-parallel-lint/php-parallel-lint": "^1.2"
