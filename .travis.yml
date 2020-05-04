@@ -52,7 +52,7 @@ before_script:
 script:
   # Validate the composer.json file.
   # @link https://getcomposer.org/doc/03-cli.md#validate
-  - composer validate --no-check-all --strict
+  - if [[ "$PHPCS" == 1 ]]; then composer validate --no-check-all --strict; fi
 
   # Lint the PHP files against parse errors.
   - composer lint:php
