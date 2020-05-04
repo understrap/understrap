@@ -21,6 +21,9 @@
 	<!-- Don't show warnings -->
 	<arg value="n"/>
 
+	<!-- Show progress of the run -->
+	<arg value="p"/>
+
 	<!-- Scan these files -->
 	<file>.</file>
 
