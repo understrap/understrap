@@ -29,3 +29,4 @@ Thumbs.db
 
 phpcs.xml.dist
 .phpcs.xml
+.phpcs-cache
