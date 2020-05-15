@@ -31,7 +31,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "autoprefixer": "^9.7.6",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "font-awesome": "^4.7.0",
