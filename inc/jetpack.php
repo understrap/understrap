@@ -65,8 +65,7 @@ if ( ! function_exists( 'understrap_components_social_menu' ) ) {
 		if ( ! function_exists( 'jetpack_social_menu' ) ) {
 			// Return early if social menu is not available.
 			return;
-		} else {
-			jetpack_social_menu();
 		}
+		jetpack_social_menu();
 	}
 }
