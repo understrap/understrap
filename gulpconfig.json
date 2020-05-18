@@ -7,6 +7,7 @@
 	"paths": {
 		"js": "./js",
 		"css": "./css",
+		"fonts": "./fonts",
 		"img": "./img",
 		"imgsrc": "./src/img",
 		"sass": "./sass",
