@@ -248,8 +248,6 @@ gulp.task( 'clean-vendor-assets', function() {
 		paths.dev + '/sass/bootstrap4',
 		paths.fonts + '/*wesome*.{ttf,woff,woff2,eot,svg}',
 		paths.dev + '/sass/fontawesome',
-		paths.js + '/**/popper.min.js',
-		paths.js + '/**/popper.js',
 		paths.js + paths.vendor,
 	] );
 } );
@@ -290,22 +288,6 @@ gulp.task(
 					'!CHANGELOG.md',
 				],
 				{ buffer: true }
-			)
-			.pipe(
-				replace(
-					'/js/jquery.slim.min.js',
-					'/js' + paths.vendor + '/jquery.slim.min.js',
-					{ skipBinary: true }
-				)
-			)
-			.pipe(
-				replace(
-					'/js/popper.min.js',
-					'/js' + paths.vendor + '/popper.min.js',
-					{
-						skipBinary: true,
-					}
-				)
 			)
 			.pipe(
 				replace(
