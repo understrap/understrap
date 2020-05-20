@@ -147,3 +147,23 @@ a.skip-link {
 .navbar h1 {
 	font-weight: $font-weight-normal;
 }
+
+// Galleries
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+
+	@for $i from 2 through 9 {
+		.gallery-columns-#{$i} & {
+			max-width: floor( percentage( 1 / $i ) * 100 ) / 100;
+		}
+	}
+}
+.gallery-caption {
+	display: block;
+}
