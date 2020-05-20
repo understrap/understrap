@@ -306,13 +306,6 @@ gulp.task(
 			)
 			.pipe(
 				replace(
-					'/js/jquery.slim.min.js',
-					'/js' + paths.vendor + '/jquery.slim.min.js',
-					{ skipBinary: true }
-				)
-			)
-			.pipe(
-				replace(
 					'/js/popper.min.js',
 					'/js' + paths.vendor + '/popper.min.js',
 					{
