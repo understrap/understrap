@@ -48,7 +48,6 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-touch-fd": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
-    "undescores-for-npm": "^1.0.0"
+    "gulp-uglify": "^3.0.2"
   }
 }
