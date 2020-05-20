@@ -261,8 +261,6 @@ gulp.task( 'clean-vendor-assets', function() {
 		paths.dev + '/sass/underscores',
 		paths.dev + '/js/skip-link-focus-fix.js',
 		paths.js + '/**/skip-link-focus-fix.js',
-		paths.js + '/**/popper.min.js',
-		paths.js + '/**/popper.js',
 		paths.js + paths.vendor,
 	] );
 } );
@@ -303,22 +301,6 @@ gulp.task(
 					'!CHANGELOG.md',
 				],
 				{ buffer: true }
-			)
-			.pipe(
-				replace(
-					'/js/jquery.slim.min.js',
-					'/js' + paths.vendor + '/jquery.slim.min.js',
-					{ skipBinary: true }
-				)
-			)
-			.pipe(
-				replace(
-					'/js/popper.min.js',
-					'/js' + paths.vendor + '/popper.min.js',
-					{
-						skipBinary: true,
-					}
-				)
 			)
 			.pipe(
 				replace(
