@@ -25,19 +25,26 @@ php:
   - '7.2'
   - '7.3'
   - '7.4'
+  - nightly
 
 matrix:
   fast_finish: true
   include:
     - php: 7.4
       env: PHPCS=1
-
+  allow_failures:
+    - php: nightly
+  
 # Use this to prepare the build for testing.
 before_script:
     # Speed up build time by disabling Xdebug.
     - phpenv config-rm xdebug.ini || echo 'No xdebug config.'
     # Install composer dependencies
-    - composer install
+    - if [ "$TRAVIS_PHP_VERSION" != "nightly" ]; then 
+        composer install;
+      else
+        composer install --ignore-platform-reqs;
+      fi
     # Install JSCS: JavaScript Code Style checker
     # @link http://jscs.info/
     - if [[ "$PHPCS" == 1 ]]; then npm install -g jscs; fi
