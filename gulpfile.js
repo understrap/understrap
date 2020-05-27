@@ -246,16 +246,6 @@ gulp.task( 'copy-assets', function( done ) {
 		.src( paths.node + '/font-awesome/scss/*.scss' )
 		.pipe( gulp.dest( paths.dev + '/sass/fontawesome' )	);
 
-	// _s SCSS files
-	gulp
-		.src( paths.node + '/undescores-for-npm/sass/media/*.scss' )
-		.pipe( gulp.dest( paths.dev + '/sass/underscores' )	);
-
-	// _s JS files into /src/js
-	gulp
-		.src(	paths.node + '/undescores-for-npm/js/skip-link-focus-fix.js' )
-		.pipe( gulp.dest( paths.dev + '/js' ) );
-
 	done();
 } );
 
@@ -266,9 +256,6 @@ gulp.task( 'clean-vendor-assets', function() {
 		paths.dev + '/sass/bootstrap4',
 		paths.fonts + '/*wesome*.{ttf,woff,woff2,eot,svg}',
 		paths.dev + '/sass/fontawesome',
-		paths.dev + '/sass/underscores',
-		paths.dev + '/js/skip-link-focus-fix.js',
-		paths.js + '/**/skip-link-focus-fix.js',
 		paths.js + paths.vendor,
 	] );
 } );
