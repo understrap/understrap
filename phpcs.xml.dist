@@ -3,23 +3,23 @@
 
 	<description>Apply WordPress Coding Standards to UnderStrap</description>
 
-	<!-- Only scan PHP files. -->
-	<arg name="extensions" value="php"/>
-
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
-	<arg name="cache"/>
+	<arg name="cache" value=".phpcs-cache"/>
 
 	<!-- Strip the filepaths down to the relevant bit. -->
 	<arg name="basepath" value="./"/>
 
 	<!-- Show colors in console -->
-	<arg value="-colors"/>
+	<arg name="colors"/>
 
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
 
 	<!-- Don't show warnings -->
 	<arg value="n"/>
+
+	<!-- Show progress of the run -->
+	<arg value="p"/>
 
 	<!-- Scan these files -->
 	<file>.</file>
@@ -28,9 +28,12 @@
 	<exclude-pattern>/vendor/*</exclude-pattern>
 	<exclude-pattern>/node_modules/*</exclude-pattern>
 	<exclude-pattern>/dist/*</exclude-pattern>
+	<exclude-pattern>/dist-product/*</exclude-pattern>
 
 	<!-- Use the WordPress Ruleset -->
-	<rule ref="WordPress"/>
+	<rule ref="WordPress">
+		<include-pattern>*\.php$</include-pattern>
+	</rule>
 
 	<!--
 		Verify that the text_domain is set to the desired text-domain.
@@ -81,12 +84,15 @@
 		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
 	</rule>
 
-	<!-- A closing tag is not permitted at the end of a PHP file -->
-	<rule ref="Zend.Files.ClosingTag"/>
+	<!-- Use the WPThemeReview Ruleset -->
+	<rule ref="WPThemeReview" />
 
-	<!-- Use the PHPCompatibility Ruleset -->
-	<config name="testVersion" value="5.6-99.0"/>
-	<rule ref="PHPCompatibilityWP">
-		<include-pattern>*\.php$</include-pattern>
+	<!-- 
+		Exclude checking for shortened URLs in Bootstrap's js. files.
+		Also exlude theme.js which includes bootstrap.js.
+	-->
+	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
+		<exclude-pattern>/src/js/bootstrap4/bootstrap\.*js</exclude-pattern>
+		<exclude-pattern>/js/theme\.js</exclude-pattern>
 	</rule>
 </ruleset>
