@@ -3,9 +3,6 @@
 
 	<description>Apply WordPress Coding Standards to UnderStrap</description>
 
-	<!-- Only scan PHP files. -->
-	<arg name="extensions" value="php"/>
-
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
 	<arg name="cache" value=".phpcs-cache"/>
 
@@ -34,7 +31,9 @@
 	<exclude-pattern>/dist-product/*</exclude-pattern>
 
 	<!-- Use the WordPress Ruleset -->
-	<rule ref="WordPress"/>
+	<rule ref="WordPress">
+		<include-pattern>*\.php$</include-pattern>
+	</rule>
 
 	<!--
 		Verify that the text_domain is set to the desired text-domain.
@@ -87,4 +86,13 @@
 
 	<!-- Use the WPThemeReview Ruleset -->
 	<rule ref="WPThemeReview" />
+
+	<!-- 
+		Exclude checking for shortened URLs in Bootstrap's js. files.
+		Also exlude theme.js which includes bootstrap.js.
+	-->
+	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
+		<exclude-pattern>/src/js/bootstrap4/bootstrap\.*js</exclude-pattern>
+		<exclude-pattern>/js/theme\.js</exclude-pattern>
+	</rule>
 </ruleset>
