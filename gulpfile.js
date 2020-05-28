@@ -4,7 +4,6 @@ var plumber = require( 'gulp-plumber' );
 var sass = require( 'gulp-sass' );
 var babel = require( 'gulp-babel' );
 var postcss = require( 'gulp-postcss' );
-var touch = require( 'gulp-touch-fd' );
 var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
@@ -26,7 +25,7 @@ var paths = cfg.paths;
  * Run: gulp sass
  */
 gulp.task( 'sass', function() {
-	var stream = gulp
+	return gulp
 		.src( paths.sass + '/*.scss' )
 		.pipe(
 			plumber( {
@@ -40,9 +39,7 @@ gulp.task( 'sass', function() {
 		.pipe( sass( { errLogToConsole: true } ) )
 		.pipe( postcss( [ autoprefixer() ] ) )
 		.pipe( sourcemaps.write( undefined, { sourceRoot: null } ) )
-		.pipe( gulp.dest( paths.css ) )
-		.pipe( touch() );
-	return stream;
+		.pipe( gulp.dest( paths.css ) );
 } );
 
 /**
@@ -107,8 +104,7 @@ gulp.task( 'minifycss', function() {
 		)
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( sourcemaps.write( './' ) )
-		.pipe( gulp.dest( paths.css ) )
-		.pipe( touch() );
+		.pipe( gulp.dest( paths.css ) );
 } );
 
 /**
@@ -304,8 +300,7 @@ gulp.task(
 					{ skipBinary: true }
 				)
 			)
-			.pipe( gulp.dest( paths.dist ) )
-			.pipe( touch() );
+			.pipe( gulp.dest( paths.dist ) );
 	} )
 );
 
@@ -336,8 +331,7 @@ gulp.task(
 				'!' + paths.distprod,
 				'!' + paths.distprod + '/**',
 			] )
-			.pipe( gulp.dest( paths.distprod ) )
-			.pipe( touch() );
+			.pipe( gulp.dest( paths.distprod ) );
 	} )
 );
 
