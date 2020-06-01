@@ -30,7 +30,6 @@
 # Ignore all files with .lock extentions
 *.lock
 # but track
-!package-lock.json
 !composer.lock
 
 # OS or Editor files and folders
