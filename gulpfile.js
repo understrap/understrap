@@ -293,13 +293,6 @@ gulp.task(
 				],
 				{ buffer: true }
 			)
-			.pipe(
-				replace(
-					'/js/skip-link-focus-fix.js',
-					'/js' + paths.vendor + '/skip-link-focus-fix.js',
-					{ skipBinary: true }
-				)
-			)
 			.pipe( gulp.dest( paths.dist ) );
 	} )
 );
