@@ -12,7 +12,6 @@ var sourcemaps = require( 'gulp-sourcemaps' );
 var browserSync = require( 'browser-sync' ).create();
 var del = require( 'del' );
 var cleanCSS = require( 'gulp-clean-css' );
-var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'autoprefixer' );
 
 // Configuration file to keep your code DRY
