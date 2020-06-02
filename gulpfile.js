@@ -4,6 +4,7 @@ var plumber = require( 'gulp-plumber' );
 var sass = require( 'gulp-sass' );
 var babel = require( 'gulp-babel' );
 var postcss = require( 'gulp-postcss' );
+var rtl = require('gulp-rtlcss')
 var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
@@ -102,6 +103,41 @@ gulp.task( 'minifycss', function() {
 			} )
 		)
 		.pipe( rename( { suffix: '.min' } ) )
+		.pipe( sourcemaps.write( './' ) )
+		.pipe( gulp.dest( paths.css ) );
+} );
+
+/**
+ * Build RTL (Right To Left) css files.
+ *
+ * Run: gulp rtl
+ */
+gulp.task( 'rtl', function() {
+	return gulp
+		.src( [
+			paths.css + '/custom-editor-style.css',
+			paths.css + '/theme.css',
+		] )
+		.pipe(
+			sourcemaps.init( {
+				loadMaps: true,
+			} )
+		)
+		.pipe(
+			cleanCSS( {
+				compatibility: '*',
+			} )
+		)
+		.pipe(
+			plumber( {
+				errorHandler( err ) {
+					console.log( err );
+					this.emit( 'end' );
+				},
+			} )
+		)
+		.pipe(rtl())
+		.pipe( rename( { suffix: '-rtl.min' } ) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( paths.css ) );
 } );
