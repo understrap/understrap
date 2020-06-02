@@ -288,7 +288,7 @@ gulp.task(
 					'!' + paths.composer,
 					'!' + paths.composer + '/**',
 					'!+(readme|README).+(txt|md)',
-					'!*.+(json|js|lock|xml)',
+					'!*.+(dist|json|js|lock|xml)',
 					'!CHANGELOG.md',
 				],
 				{ buffer: true }
