@@ -2,7 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.

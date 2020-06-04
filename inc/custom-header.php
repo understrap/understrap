@@ -2,7 +2,7 @@
 /**
  * Custom header setup
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.
