@@ -4,7 +4,7 @@
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * Comment layout
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * Rest in peace
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.

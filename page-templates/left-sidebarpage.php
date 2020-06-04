@@ -4,7 +4,7 @@
  *
  * This template can be used to override the default template and sidebar setup
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.

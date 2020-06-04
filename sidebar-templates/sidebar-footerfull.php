@@ -2,7 +2,7 @@
 /**
  * Sidebar setup for footer full
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.

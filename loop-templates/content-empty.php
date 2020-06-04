@@ -2,7 +2,7 @@
 /**
  * Content empty partial template
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.
