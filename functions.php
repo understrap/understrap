@@ -8,6 +8,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// UnderStrap's includes directory.
+$understrap_inc_dir = get_template_directory() . '/inc';
+
+// Array of files to include.
 $understrap_includes = array(
 	'/theme-settings.php',                  // Initialize theme default settings.
 	'/setup.php',                           // Theme setup and custom theme supports.
@@ -26,6 +30,17 @@ $understrap_includes = array(
 	'/deprecated.php',                      // Load deprecated functions.
 );
 
+// Load WooCommerce functions if WooCommerce is activated.
+if ( class_exists( 'WooCommerce' ) && file_exists( $understrap_inc_dir . '/woocommerce.php' ) ) {
+	$understrap_includes[] = '/woocommerce.php';
+}
+
+// Load Jetpack compatibility file if Jetpack is activiated.
+if ( class_exists( 'Jetpack' ) && file_exists( $understrap_inc_dir . '/jetpack.php' ) ) {
+	$understrap_includes[] = '/jetpack.php';
+}
+
+// Include files.
 foreach ( $understrap_includes as $file ) {
-	require_once get_template_directory() . '/inc' . $file;
+	require_once $understrap_inc_dir . $file;
 }
