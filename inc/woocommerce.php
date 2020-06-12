@@ -16,12 +16,12 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 	function understrap_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
 
-		// Add New Woocommerce 3.0.0 Product Gallery support.
+		// Add Product Gallery support.
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-slider' );
 
-		// hook in and customizer form fields.
+		// Add Bootstrap classes to form fields.
 		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
 	}
 }
@@ -75,35 +75,35 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	function understrap_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
-			/* Targets all select input type elements, except the country and state select input types */
+			// Targets all select input type elements, except the country and state select input types.
 			case 'select':
-				// Add a class to the field's html element wrapper - woocommerce
-				// input types (fields) are often wrapped within a <p></p> tag.
+				/*
+				 * Add a class to the field's html element wrapper - woocommerce
+				 * input types (fields) are often wrapped within a <p></p> tag.
+				 */
 				$args['class'][] = 'form-group';
 				// Add a class to the form input itself.
-				$args['input_class']       = array( 'form-control', 'input-lg' );
-				$args['label_class']       = array( 'control-label' );
+				$args['input_class'] = array( 'form-control' );
+				// Add custom data attributes to the form input itself.
 				$args['custom_attributes'] = array(
 					'data-plugin'      => 'select2',
 					'data-allow-clear' => 'true',
 					'aria-hidden'      => 'true',
-					// Add custom data attributes to the form input itself.
 				);
 				break;
-			// By default WooCommerce will populate a select with the country names - $args
-			// defined for this specific input type targets only the country select element.
+			/*
+			 * By default WooCommerce will populate a select with the country names - $args
+			 * defined for this specific input type targets only the country select element.
+			 */
 			case 'country':
-				$args['class'][]     = 'form-group single-country';
-				$args['label_class'] = array( 'control-label' );
+				$args['class'][] = 'form-group single-country';
 				break;
-			// By default WooCommerce will populate a select with state names - $args defined
-			// for this specific input type targets only the country select element.
+			/*
+			 * By default WooCommerce will populate a select with state names - $args defined
+			 * for this specific input type targets only the country select element.
+			 */
 			case 'state':
-				// Add class to the field's html element wrapper.
 				$args['class'][] = 'form-group';
-				// add class to the form input itself.
-				$args['input_class']       = array( '', 'input-lg' );
-				$args['label_class']       = array( 'control-label' );
 				$args['custom_attributes'] = array(
 					'data-plugin'      => 'select2',
 					'data-allow-clear' => 'true',
@@ -116,25 +116,23 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 			case 'tel':
 			case 'number':
 				$args['class'][]     = 'form-group';
-				$args['input_class'] = array( 'form-control', 'input-lg' );
-				$args['label_class'] = array( 'control-label' );
+				$args['input_class'] = array( 'form-control' );
 				break;
 			case 'textarea':
-				$args['input_class'] = array( 'form-control', 'input-lg' );
-				$args['label_class'] = array( 'control-label' );
+				$args['input_class'] = array( 'form-control' );
 				break;
 			case 'checkbox':
+				// Add a class to the form input's <label> tag.
 				$args['label_class'] = array( 'custom-control custom-checkbox' );
-				$args['input_class'] = array( 'custom-control-input', 'input-lg' );
+				$args['input_class'] = array( 'custom-control-input' );
 				break;
 			case 'radio':
 				$args['label_class'] = array( 'custom-control custom-radio' );
-				$args['input_class'] = array( 'custom-control-input', 'input-lg' );
+				$args['input_class'] = array( 'custom-control-input' );
 				break;
 			default:
 				$args['class'][]     = 'form-group';
-				$args['input_class'] = array( 'form-control', 'input-lg' );
-				$args['label_class'] = array( 'control-label' );
+				$args['input_class'] = array( 'form-control' );
 				break;
 		} // End of switch ( $args ).
 		return $args;
