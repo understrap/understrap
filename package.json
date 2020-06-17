@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
-    "font-awesome": "^4.7.0",
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
