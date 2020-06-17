@@ -122,10 +122,13 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				$args['input_class'] = array( 'form-control' );
 				break;
 			case 'checkbox':
-				// Add a class to the form input's <label> tag.
-				$args['label_class'] = array( 'custom-control custom-checkbox' );
-				$args['input_class'] = array( 'custom-control-input' );
-				break;
+					$args['class'][] = 'form-group';
+					// Wrap the label in <span> tag.
+					$args['label'] = isset( $args['label'] ) ? '<span class="custom-control-label">' . $args['label'] . '<span>': '';
+					// Add a class to the form input's <label> tag.
+					$args['label_class'] = array( 'custom-control custom-checkbox' );
+					$args['input_class'] = array( 'custom-control-input' );
+					break;
 			case 'radio':
 				$args['label_class'] = array( 'custom-control custom-radio' );
 				$args['input_class'] = array( 'custom-control-input' );
