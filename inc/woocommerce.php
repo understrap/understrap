@@ -91,6 +91,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 					'aria-hidden'      => 'true',
 				);
 				break;
+
 			/*
 			 * By default WooCommerce will populate a select with the country names - $args
 			 * defined for this specific input type targets only the country select element.
@@ -98,12 +99,13 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 			case 'country':
 				$args['class'][] = 'form-group single-country';
 				break;
+
 			/*
 			 * By default WooCommerce will populate a select with state names - $args defined
 			 * for this specific input type targets only the country select element.
 			 */
 			case 'state':
-				$args['class'][] = 'form-group';
+				$args['class'][]           = 'form-group';
 				$args['custom_attributes'] = array(
 					'data-plugin'      => 'select2',
 					'data-allow-clear' => 'true',
@@ -124,11 +126,11 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 			case 'checkbox':
 					$args['class'][] = 'form-group';
 					// Wrap the label in <span> tag.
-					$args['label'] = isset( $args['label'] ) ? '<span class="custom-control-label">' . $args['label'] . '<span>': '';
+					$args['label'] = isset( $args['label'] ) ? '<span class="custom-control-label">' . $args['label'] . '<span>' : '';
 					// Add a class to the form input's <label> tag.
 					$args['label_class'] = array( 'custom-control custom-checkbox' );
 					$args['input_class'] = array( 'custom-control-input' );
-					break;
+				break;
 			case 'radio':
 				$args['label_class'] = array( 'custom-control custom-radio' );
 				$args['input_class'] = array( 'custom-control-input' );
