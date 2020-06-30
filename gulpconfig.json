@@ -15,6 +15,9 @@
 		"composer": "./vendor",
 		"dev": "./src",
 		"dist": "./dist",
-		"distprod": "./dist-product"
+		"distprod": "./dist-product",
+		"host": "HOST FTP ADDRESS",
+		"user": "USERNAME",
+		"password": "PASSWORD"
 	}
 }

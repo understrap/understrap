@@ -13,6 +13,8 @@ var browserSync = require( 'browser-sync' ).create();
 var del = require( 'del' );
 var cleanCSS = require( 'gulp-clean-css' );
 var autoprefixer = require( 'autoprefixer' );
+var gutil = require( 'gulp-util' );
+var ftp = require( 'vinyl-ftp' );
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
@@ -303,7 +305,7 @@ gulp.task(
  */
 gulp.task( 'clean-dist-product', function() {
 	return del( paths.distprod );
-} );
+});
 
 // Run
 // gulp dist-product
@@ -326,6 +328,32 @@ gulp.task(
 			.pipe( gulp.dest( paths.distprod ) );
 	} )
 );
+
+// Run 
+// gulp deploy
+// Uploads files in /dist-prod via FTP to a server
+gulp.task( 'deploy', function () {
+ 
+    var conn = ftp.create( {
+        host:     paths.host,
+        user:     paths.user,
+        password: paths.password,
+        parallel: 10,
+        log:      gutil.log
+    } );
+ 
+    var globs = paths.distprod;
+ 
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+	
+	gulp.series([ 'dist-product' ], function() {
+		return gulp.src( globs, { base: '.', buffer: false } )
+			.pipe( conn.newer( '/public_html' ) ) // only upload newer files
+			.pipe( conn.dest( '/public_html' ) );
+	});
+ 
+} );
 
 // Run
 // gulp compile
