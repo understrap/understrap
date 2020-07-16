@@ -10,11 +10,6 @@
 os: linux
 dist: xenial
 
-# Ditch sudo and use containers.
-# @link http://docs.travis-ci.com/user/migrating-from-legacy/#Why-migrate-to-container-based-infrastructure%3F
-# @link http://docs.travis-ci.com/user/workers/container-based-infrastructure/#Routing-your-build-to-container-based-infrastructure
-sudo: false
-
 # Declare project language and PHP versions to test against.
 # @link https://docs.travis-ci.com/user/languages/php/
 language: php

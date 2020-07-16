@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.

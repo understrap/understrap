@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @package understrap
+ * @package UnderStrap
  */
 
 // Exit if accessed directly.
