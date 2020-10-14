@@ -7,8 +7,7 @@
     "postinstall": "gulp copy-assets"
   },
   "engines": {
-    "node": ">=10",
-    "npm": ">=2.1.8"
+    "node": ">=10"
   },
   "repository": {
     "type": "git",
@@ -29,12 +28,12 @@
   "homepage": "https://understrap.com",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "autoprefixer": "^9.8.0",
-    "bootstrap": "^4.5.0",
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^9.8.6",
+    "bootstrap": "^4.5.3",
+    "browser-sync": "^2.26.12",
+    "del": "^6.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",

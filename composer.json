@@ -18,7 +18,7 @@
 		"roave/security-advisories": "dev-master",
 		"wp-coding-standards/wpcs": "^2.3",
 		"wptrt/wpthemereview": "*",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
 		"php-parallel-lint/php-parallel-lint": "^1.2"
 	},
 	"scripts": {
