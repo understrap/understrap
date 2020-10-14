@@ -161,13 +161,12 @@ if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
 	function understrap_escape_the_archive_description( $description ) {
 		if ( is_author() || is_post_type_archive() ) {
 			return wp_kses_post( $description );
-		} else {
-			/*
-			* All other descriptions are retrieved via term_description() which returns
-			* a sanitized description.
-			*/
-			return $description;
 		}
+		/*
+		 * All other descriptions are retrieved via term_description() which returns
+		 * a sanitized description.
+		 */
+		return $description;
 	}
 } // End of if function_exists( 'understrap_escape_the_archive_description' ).
 
