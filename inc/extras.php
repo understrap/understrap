@@ -34,28 +34,12 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 	}
 }
 
-// Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
-add_filter( 'body_class', 'understrap_adjust_body_class' );
-
-if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
-	/**
-	 * Setup body classes.
-	 *
-	 * @param string $classes CSS classes.
-	 *
-	 * @return mixed
+if ( function_exists( 'understrap_adjust_body_class' ) ) {
+	/*
+	 * understrap_adjust_body_class() deprecated in v0.9.4. We keep adding the
+	 * filter for child themes which use their own understrap_adjust_body_class.
 	 */
-	function understrap_adjust_body_class( $classes ) {
-
-		foreach ( $classes as $key => $value ) {
-			if ( 'tag' === $value ) {
-				unset( $classes[ $key ] );
-			}
-		}
-
-		return $classes;
-
-	}
+	add_filter( 'body_class', 'understrap_adjust_body_class' );
 }
 
 // Filter custom logo with correct classes.
