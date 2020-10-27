@@ -1,32 +1,53 @@
-.sass-cache
+# ------------------------------------------------------------------------
+# This file specifies intentionally untracked files that Git should ignore
+# - https://git-scm.com/docs/gitignore
+# ------------------------------------------------------------------------
 
-bower_components
-
-node_modules
-
-understrap.zip
-
-dist
-
-dist-product
-
-npm-debug.log
-
-/vendor/
-
-.DS_Store
-
-Thumbs.db
-
-.svn
-
-.cvs
-
+# Numerous always-ignore extensions
 *.bak
+*.cvs
+*.db
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.zip
 
-*.swp
-.idea/
+# Ignore all files and directories starting with . or ~ or ._ or ending with ~
+.*
+~*
+*~
+._*
+# but track
+!.browserslist
+!.editorconfig
+!.gitattributes
+!.gitignore
+!.jscsrc
+!.jshintignore
+!.travis.yml
 
-phpcs.xml.dist
-.phpcs.xml
-.phpcs-cache
+# Ignore all files with .lock extentions
+*.lock
+# but track
+!composer.lock
+
+# OS or Editor files and folders
+*.code-workspace
+*.elc
+*.esproj
+*.komodoproject
+*.sublime*
+*.tmproj*
+
+# Dependencies
+bower_components
+node_modules
+vendor
+
+# Other UnderStrap specific files and directories
+phpcs.xml
+dist/
+dist-product/
+**/img
