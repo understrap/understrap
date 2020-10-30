@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	/**
 	 * Setup body classes.
 	 *
-	 * @param string $classes CSS classes.
+	 * @param array $classes CSS classes.
 	 *
 	 * @deprecated 0.9.4 Styling of tag has been removed in Bootstrap v4 Alpha 6.
 	 * @link https://github.com/twbs/bootstrap/issues/20939
