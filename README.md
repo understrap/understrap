@@ -147,6 +147,6 @@ The `fullwidthpage.php` template has full width layout without a sidebar.
 
 Licenses & Credits
 =
-- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT)
 - Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code: MIT, Documentation: CC BY 3.0.)
-- WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+- WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
