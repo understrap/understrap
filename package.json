@@ -7,7 +7,7 @@
     "postinstall": "gulp copy-assets"
   },
   "engines": {
-    "node": ">=10"
+    "node": "^10 || ^12 || >=14"
   },
   "repository": {
     "type": "git",
