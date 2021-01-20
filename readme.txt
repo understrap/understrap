@@ -4,7 +4,7 @@ Start talking: [![Gitter](https://img.shields.io/gitter/room/holger1411/understr
 ## About
 
 I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
-That’s what UnderStrap is. 
+That’s what UnderStrap is.
 You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
 
 At the moment, UnderStrap is in a very early stage. But if you want, feel free to use it for your own WordPress theme!
@@ -30,7 +30,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
                   - Fixing problem with empty folders after "gulp dist" - Thx @alwizo
                   - Fixed custom logo function typo - Thx @willgorham
 
-                  
+
             - ** 0.4.8 Oct. 10th 2016 **
                   - Removing Bower and replace the dependency managment with npm
                   - Update to Bootstrap 4 Alpha 4
@@ -55,7 +55,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
             - ** 0.4.5 Jun. 20th 2016 **
                   - Adding right sanitizing function for customizer
                   - Fixing some escaping problems
-                  - Removing "add script" customizer function 
+                  - Removing "add script" customizer function
                   - Calling all sidebars with "get_sidebar"
                   - Load hero area on index.php conditionally
                   - Remove unused code, files and dependencies
@@ -216,9 +216,6 @@ The front-page slider is widget driven. Simply add more than one widget to widge
 
 Licenses & Credits
 =
-- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-- Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-- Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
-and of course
-- jQuery: https://jquery.org | (Code licensed under MIT)
-- WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT)
+- Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code: MIT, Documentation: CC BY 3.0.)
+- WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
