@@ -23,6 +23,7 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 
 		// Add Bootstrap classes to form fields.
 		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
+		add_filter( 'woocommerce_quantity_input_classes', 'understrap_quantity_input_classes' );
 	}
 }
 
@@ -165,5 +166,18 @@ if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 	 */
 	function wc_review_ratings_enabled() {
 		return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
+	}
+}
+
+if ( ! function_exists( 'understrap_quantity_input_classes' ) ) {
+	/**
+	 * Add Bootstrap class to quantity input field.
+	 *
+	 * @param array $classes Array of quantity input classes.
+	 * @return array
+	 */
+	function understrap_quantity_input_classes( $classes ) {
+		$classes[] = 'form-control';
+		return $classes;
 	}
 }
