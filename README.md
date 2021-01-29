@@ -123,8 +123,25 @@ The front-page slider is widget driven. Simply add more than one widget to widge
 - That’s it.
 
 ## RTL styles?
-Add a new file to the themes root folder called rtl.css. Add all alignments to this file according to this description:
-https://codex.wordpress.org/Right_to_Left_Language_Support
+To change the style from LTR to RTL:
+- install [gulp-rtlcss](https://www.npmjs.com/package/gulp-rtlcss "gulp-rtlcss"):
+	- run: `$ npm install --save-dev gulp-rtlcss`
+- edit `gulpfile.js`:
+	- define `gulp-rtlcss` at the top of `gulpfile.js`:
+	
+		```javascript
+		var gulp = require('gulp');
+		var rtlcss = require('gulp-rtlcss');
+		```
+	- then add `rtlcss()` to `gulpfile.js`:
+	
+		```javascript
+		gulp.task( 'sass', function() {
+		    ...
+		    .pipe( rtlcss() ) // <----- ADD IT HERE
+		    .pipe( gulp.dest( paths.css ) ); // <----- JUST BEFORE DISTRIBUTING
+		} );
+		```
 
 ## Page Templates
 UnderStrap includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
