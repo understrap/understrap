@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.12.11",
     "autoprefixer": "^10.2.3",
     "bootstrap": "^4.6.0",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.26.14",
     "browserslist": "^4.16.5",
     "caniuse-lite": "^1.0.30001219",
     "del": "^6.0.0",
