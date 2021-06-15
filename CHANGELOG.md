@@ -1,3 +1,26 @@
+## Release 0.9.6 June 15th 2021
+This is a bugfix and maintenance release.
+
+** Enhancements **
+
+- Set credit links to use https protocol.
+
+** Fixes **
+
+- Use get_theme_file_path() to make include files child theme friendly.
+
+	- Fixes breaking child theme overloading /inc/ folder files.
+
+** Dependency Updates **
+
+- Bump ws from 7.4.3 to 7.4.6
+- Bump browserslist from 4.16.1 to 4.16.6
+- Bump postcss from 8.2.9 to 8.2.10
+- Bump hosted-git-info from 2.8.8 to 2.8.9
+- Bump lodash from 4.17.20 to 4.17.21
+- Bump ua-parser-js from 0.7.23 to 0.7.28
+
+
 ## Release 0.9.5 June 10th 2021
 This is a maintenance release incorporating many commits including code formatting and dependency updates that have occured over the past two years. There are still many dependancy updates remaining and they will be addressed in new releases coming soon, but we want to get this release synced first.
 
