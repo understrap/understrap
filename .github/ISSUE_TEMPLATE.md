@@ -2,14 +2,14 @@ Please delete anything that does not apply for you!
 
 ## Issue is about..
   - [ ] a Bug Report
-  - [ ] a Feature Request
-  - [ ] a Suggestion
   - [ ] a Question
   - [ ] I need help
 
+If this issue is a feature request or suggestion, please submit it to our [public roadmap](https://github.com/understrap/understrap-roadmap/issues) instead.
+
 ## Please tell us about your environment:
 
-  - **WordPress Version:** 4.9.x
+  - **WordPress Version:** 5.7.x
   - **OS Version:** [Windows 7 | Windows 8 | Windows 10] | Linux [Distribution / Version] | MacOS [Version] | Android [Version] | iOS [Version]
   - **Browser:** [ all | Chrome XX | Firefox XX | IE XX | Safari XX | Mobile Chrome XX | Android X.X Web Browser | iOS XX Safari ]
   - **Language:** [ all | PHP | SQL | HTML | S/CSS | Javascript | jQuery | ES6 | JSON | XML]
