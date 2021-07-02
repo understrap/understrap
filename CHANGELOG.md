@@ -11,6 +11,7 @@
   - Reverts WooCommerce Translations to woocommerce language domain.
   - Updates understrap.pot file to include several translation strings that had not been added.
   - Fixes spelling and grammar errors in the CHANGELOG.md.
+  - replaces esc_attr with esc_html in Woocommerce cart template.
 
 
 
