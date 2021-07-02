@@ -30,10 +30,24 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 			$classes[] = 'hfeed';
 		}
 
-		// Adds a body class based on the sidebar position. Note: Page templates can override the sidebar position, so be sure to check the body class for any 'page-template-*' classes as well.
+		// Adds a body class based on the presence of a sidebar.
 		$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
-		if ( $sidebar_pos ) {
-			$classes[] = 'understrap-sidebar-' . $sidebar_pos;
+		if ( is_page_template( 'page-templates/fullwidthpage.php' ) ) {
+			$classes[] = 'understrap-no-sidebar';
+		} elseif (
+			is_page_template(
+				array(
+					'page-templates/both-sidebarspage.php',
+					'page-templates/left-sidebarpage.php',
+					'page-templates/right-sidebarpage.php',
+				)
+			)
+		) {
+			$classes[] = 'understrap-has-sidebar';
+		} elseif ( 'none' !== $sidebar_pos ) {
+			$classes[] = 'understrap-has-sidebar';
+		} else {
+			$classes[] = 'understrap-no-sidebar';
 		}
 
 		return $classes;

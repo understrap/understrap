@@ -38,7 +38,7 @@ figure.wp-block-image {
 
 
 // Wide alignments and covers.
-body:not(.page-template-left-sidebarpage):not(.page-template-right-sidebarpage):not(.page-template-both-sidebarspage):not(.understrap-sidebar-right):not(.understrap-sidebar-left):not(.understrap-sidebar-both){
+body.understrap-no-sidebar{
 	.alignwide, 
 	.alignfull, 
 	.wp-block-cover.alignwide,
