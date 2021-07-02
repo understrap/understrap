@@ -1,28 +1,40 @@
+## [Unreleased]
+
+** Enhancements **
+
+  - Introduces [Unreleased] Section at top of CHANGELOG.md to hold items until the branch is ready for release.
+
+** Fixes **
+
+  - Updates WooCommerce templates to current versions.
+  - Corrects mis-applied version numbers in WooCommerce templates.
+  - Reverts WooCommerce Translations to woocommerce language domain.
+  - Updates understrap.pot file to include several translation strings that had not been added.
+  - Fixes spelling and grammar errors in the CHANGELOG.md.
+
+
+
 ## Release 0.9.6 June 15th 2021
 This is a bugfix and maintenance release.
 
 ** Enhancements **
-
-- Set credit links to use https protocol.
+  - Set credit links to use https protocol.
 
 ** Fixes **
-
-- Use get_theme_file_path() to make include files child theme friendly.
-
-	- Fixes breaking child theme overloading /inc/ folder files.
+  - Use get_theme_file_path() to make include files child theme friendly.
+  - Fixes breaking child theme overloading /inc/ folder files.
 
 ** Dependency Updates **
-
-- Bump ws from 7.4.3 to 7.4.6
-- Bump browserslist from 4.16.1 to 4.16.6
-- Bump postcss from 8.2.9 to 8.2.10
-- Bump hosted-git-info from 2.8.8 to 2.8.9
-- Bump lodash from 4.17.20 to 4.17.21
-- Bump ua-parser-js from 0.7.23 to 0.7.28
+  - Bump ws from 7.4.3 to 7.4.6
+  - Bump browserslist from 4.16.1 to 4.16.6
+  - Bump postcss from 8.2.9 to 8.2.10
+  - Bump hosted-git-info from 2.8.8 to 2.8.9
+  - Bump lodash from 4.17.20 to 4.17.21
+  - Bump ua-parser-js from 0.7.23 to 0.7.28
 
 
 ## Release 0.9.5 June 10th 2021
-This is a maintenance release incorporating many commits including code formatting and dependency updates that have occured over the past two years. There are still many dependancy updates remaining and they will be addressed in new releases coming soon, but we want to get this release synced first.
+This is a maintenance release incorporating many commits including code formatting and dependency updates that have occurred over the past two years. There are still many dependency updates remaining, and they will be addressed in new releases coming soon, but we want to get this release synced first.
 
 ** Enhancements **
 - Re-add custom-javascript.js
@@ -69,11 +81,10 @@ e6c9552
 Commits on Feb 19, 2019
 Lon Koenig
 Lon Koenig
-Make understrap_mobile_web_app_meta() and understrap_pingback() plugg…
+Make understrap_mobile_web_app_meta() and understrap_pingback() plug…
 6fcf1e9
 
 Commits on Feb 22, 2019
-Noel Springer
 Noel Springer
 Update form-reset-password template for Woocommerce 3.5.5
 85ef63c
@@ -138,121 +149,95 @@ a4f20ac
 
 Commits on Apr 19, 2019
 Chris Bibby
-Chris Bibby
 initial
 89f2509
-Chris Bibby
 Chris Bibby
 Woocommerce 3.6.1 template changes
 1ab2f98
 Chris Bibby
-Chris Bibby
 Woocommerce 3.6.1 template changes
 d60c6d4
-Chris Bibby
 Chris Bibby
 woocommerce 3.6.1 template changes
 cb67c41
 Chris Bibby
-Chris Bibby
 woocommerce 3.6.1 template changes
 7d8e00f
 Chris Bibby
-Chris Bibby
 woocommerce 3.6.1 template changes
 a28c44d
-Chris Bibby
 Chris Bibby
 woocommerce 3.6.1 template changes
 c500160
 Commits on Apr 20, 2019
 Chris Bibby
-Chris Bibby
 Woocommerce 3.6.1 updates
 1fe315c
-Chris Bibby
 Chris Bibby
 Merge branch 'woocommerce-3.6.1-updates' of https://github.com/chrism…
 b8766a7
 
 Commits on Apr 22, 2019
 @holger1411
-holger1411
 Update Woocommerce version info
 cac4962
 
 Commits on Apr 28, 2019
 @holger1411
-holger1411
 Merge branch 'master' into woocommerce-3.6.1-updates
 c293c82
 @holger1411
-holger1411
 Merge pull request #955 from chrismb75/woocommerce-3.6.1-updates
 8af84c1
 @holger1411
-holger1411
 Fixing watch-bs task
 bbae68f
 
 Commits on Apr 29, 2019
 @IanDelMar
-IanDelMar
 WooCommerce backward compatibility. Fix for #961
 8b841fb
 
 Commits on Apr 30, 2019
 @kelsS
-kelsS
 removed bower.json since bower is no longer used
 7475ec1
 @kelsS
-kelsS
 add php to allow the hero widgets to show on the fullwidth page templ…
 2f5e018
 
 Commits on May 01, 2019
 @kelsS
-kelsS
 add babel, gulp-babel, autoprefixer, and gulp-postcss as dev dependen…
 0ea4793
 @kelsS
-kelsS
 add babel core, gulp-babel, autoprefixer, and gulp-postcss to gulp pr…
 b179eaf
 @IanDelMar
-IanDelMar
 Add support for wp_body_open
 0e76b40
 
 Commits on May 03, 2019
 @IanDelMar
-IanDelMar
 Improve code simplicity
 6076c91
 
 Commits on May 08, 2019
 @holger1411
-holger1411
 Merge pull request #967 from IanDelMar/wp_body_open
 1e90d3c
 @holger1411
-holger1411
 Merge pull request #965 from kelsS/master
 a09fcbe
 @holger1411
-holger1411
 Merge pull request #963 from IanDelMar/patch-6
 2d80cf4
 @holger1411
-holger1411
 Re-add customizer.js
 01af1b4
 @holger1411
-holger1411
 Clean rebuild
 5f9b8b2
-
 
 ## Release 0.9.1 February 15th, 2019 - SECURITY UPDATE
 - Update to Bootstrap 4.3.1 - Fixes a XSS vulnerability in BS 4.3.0
@@ -298,7 +283,6 @@ Clean rebuild
   - Remove $sidebar_pos - Thx @IanDelMar
   - Update Woocommerce templates for WC 3.5.x - thx @ Noel Springer
 
-
 ## Release 0.8.7 September 11th 2018
   - Spelling corrections thx @davidshq
   - Updated pt_PT Translation thx @jfig
@@ -342,11 +326,11 @@ Clean rebuild
   - Update to Gulp 4
   - Moving closing primary </div> into right-sidebar-check.php
   - Adding hero canvas widget pos
-  - Swap customized walker to latest upstream wp-bootstrap-navwalker class - Thx @pattonwebz
+  - Swap customized walker to the latest upstream wp-bootstrap-navwalker class - Thx @pattonwebz
   - gulp-rev - Thx @0dp
   - Update pagination - thx @0dp
   - Adding german formal language - Thx @Thomas-A-Reinert
-  - Added cookies checkbox support for inc/custom-comments.php - Thx @Jean Pierre Kolb
+  - Added cookie checkbox support for inc/custom-comments.php - Thx @Jean Pierre Kolb
   - Create Japanese translation - Thx @teruteru128
   - WooCommerce 3.4.0 update - Thx @ZacharyElkins
   - Organize sidebar files into loop-templates directory - Thx @axlright
@@ -356,7 +340,7 @@ Clean rebuild
 ## Release 0.8.2 April 11th 2018
   - Update to Bootstrap 4.1
   - Adding CONTRIBUTING.md and ISSUE_TEMPLATE.md - Thx @Thomas-A-Reinert
-  - Adding empty JS file into build process for adding own JS more easily - Thx @Thomas-A-Reinert
+  - Adding empty JavaScripot file into build process for adding own JS more easily - Thx @Thomas-A-Reinert
   - WooCommerce update and cleanup - Thx @ZacharyElkins
   - Adding SASS source map functionality - Thx @axlright
   - Cleanup - Thx @axlright
@@ -365,7 +349,7 @@ Clean rebuild
   - New pagination - Thx @0dp
   - Update functions.php - Thx @0dp
   - Add pluggable functions - Thx @axlright
-  - Add polish translation - Thx @mirzal
+  - Add Polish translation - Thx @mirzal
   - Adding timestamp to js and css resources to prevent caching while developinh - Thx @@gintsmurans
   - Improve left sidebar check - Thx @ZacharyElkins
 
@@ -387,7 +371,7 @@ Clean rebuild
   - Adding gulpconfig - Thx @lilolbear
   - Enable woocommerce product gallery slider by default. - Thx @typeplus
 
-## Release 0.8.0 January 22th 2018
+## Release 0.8.0 January 22nd 2018
   - Update to Bootstrap 4 (no more Beta...)
 
 
@@ -470,7 +454,7 @@ Clean rebuild
 ## Release 0.6.1 May 18th 2017
    - Replacing some older BS3 markup - Thx @typeplus and @Kostas Vrouvas
    - Add basic error handling for `gulp-plumber` - thx @L422Y
-   - Correcting woo commerce customer login markup
+   - Correcting WooCommerce customer login markup
    - Replacing cssnano with minify-css
    - Fix deprecated product accessor for WooCommerce 3.0 - Thx @willgorham
    - Declare woocommerce support - Thx @typeplus
@@ -481,7 +465,7 @@ Clean rebuild
    - Streamline 404.php and aligning with other page templates
    - Adding gulp-sequence
 
-## Release 0.6.0 (skipping 0.5.8 and 0.5.9 ) Apr. 21th 2017
+## Release 0.6.0 (skipping 0.5.8 and 0.5.9 ) Apr. 21st 2017
    - Adding WooCommerce 3.0.0 support - Big thx @typeplus
    - Add npm-debug.log to .gitignore file - thx @OussamaElgoumri
    - Adding swedish translation files
@@ -663,8 +647,8 @@ Clean rebuild
 
 ##  0.3.4 SEP. 9th 2015
    - Adding basic WooCommerce support
-   - Cleanup for submitting to wordpress.org
-   - Removing s SASS ... no need for basic styling. Thats Bootstrap´s job.
+   - Cleanup for submitting to WordPress.org
+   - Removing s SASS ... no need for basic styling. That's Bootstrap´s job.
 
 
 ##  0.3.1 AUG. 12th 2015
@@ -676,7 +660,7 @@ Clean rebuild
 ##  0.2.9 Mar. 10th 2015
    - Adding a new theme customizer option. It lets you add a code snippet right before the closing </body> tag.
 	   For example for Google Analytics, Google Tag Mananger, Pingdom etc. Just copy and past your code to the input field and save the setting.
-	   So you don´t have to edit the theme source file´s directly and your theme stay´s updateable
+	   So you don´t have to edit the theme source file´s directly, and your theme stay´s updateable
 
 ##  0.2.8 Feb. 6th 2015
    - Adding Grunt and Grunt SASS task
