@@ -115,4 +115,5 @@ $col = 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ? 6 :
 </div>
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_after_customer_login_form' );
+<?php
+do_action( 'woocommerce_after_customer_login_form' );
