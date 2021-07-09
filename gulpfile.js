@@ -18,6 +18,7 @@ var fs = require('fs');
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
+var colors = cfg.colors;
 
 /**
  * Compiles .scss to .css files.
@@ -120,24 +121,9 @@ gulp.task( 'gen-palette', function() {
 		   paths.css + '/theme.css',
 	   ] )
 	   .pipe( postcss( [ function( css, opts) {
-			var colorVariables = [
-				'--blue',
-				'--indigo',
-				'--purple',
-				'--pink',
-				'--red',
-				'--orange',
-				'--yellow',
-				'--green',
-				'--teal',
-				'--cyan',
-				'--white',
-				'--gray',
-				'--gray-dark',
-			];
 			var colorJson = {};
 			css.walkDecls(function(decl){
-				if ( colorVariables.indexOf( decl.prop ) > -1 ) {
+				if ( colors.indexOf( decl.prop ) > -1 ) {
 					colorJson[decl.prop] = decl.value;
 				}
 			});
