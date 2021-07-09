@@ -25,3 +25,9 @@
 .components-circular-option-picker__option {
 	border-radius: 50%;
 }
+
+// Matches the page title font weight.
+.editor-post-title .editor-post-title__input{
+	font-size: $h1-font-size;
+	font-weight: $headings-font-weight;
+}
