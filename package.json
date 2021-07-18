@@ -7,7 +7,7 @@
     "postinstall": "gulp copy-assets"
   },
   "engines": {
-    "node": "^10 || ^12 || >=14"
+    "node": "^12 || >=14"
   },
   "repository": {
     "type": "git",
@@ -45,9 +45,10 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.1",
+    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^8.3.5"
+    "postcss": "^8.3.5",
+    "sass": "^1.35.2"
   }
 }
