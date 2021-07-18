@@ -13,10 +13,12 @@ var browserSync = require( 'browser-sync' ).create();
 var del = require( 'del' );
 var cleanCSS = require( 'gulp-clean-css' );
 var autoprefixer = require( 'autoprefixer' );
+var fs = require('fs');
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
+var colors = cfg.colors;
 
 /**
  * Compiles .scss to .css files.
@@ -106,6 +108,31 @@ gulp.task( 'minifycss', function() {
 		.pipe( gulp.dest( paths.css ) );
 } );
 
+
+/**
+* Minifies css files.
+*
+* Run: gulp minifycss
+*/
+gulp.task( 'gen-palette', function() {
+   return gulp
+	   .src( [
+		   paths.css + '/custom-editor-style.css',
+		   paths.css + '/theme.css',
+	   ] )
+	   .pipe( postcss( [ function( css, opts) {
+			var colorJson = {};
+			css.walkDecls(function(decl){
+				if ( colors.indexOf( decl.prop ) > -1 ) {
+					colorJson[decl.prop] = decl.value;
+				}
+			});
+			fs.writeFile('inc/editor-color-palette.json', JSON.stringify(colorJson), function(){});
+			return colorJson;
+		} ] ) )
+} );
+
+
 /**
  * Delete minified CSS files and their maps
  *
@@ -121,7 +148,7 @@ gulp.task( 'cleancss', function() {
  * Run: gulp styles
  */
 gulp.task( 'styles', function( callback ) {
-	gulp.series( 'sass', 'minifycss' )( callback );
+	gulp.series( 'sass', 'minifycss', 'gen-palette' )( callback );
 } );
 
 /**
