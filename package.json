@@ -28,11 +28,11 @@
   "homepage": "https://understrap.com",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "autoprefixer": "^10.2.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "autoprefixer": "^10.3.1",
     "bootstrap": "^4.6.0",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.4",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
@@ -43,9 +43,9 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^4.1.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^8.2.9"
+    "postcss": "^8.3.5"
   }
 }
