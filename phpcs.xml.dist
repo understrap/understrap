@@ -41,7 +41,10 @@
 	-->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="understrap"/>
+			<property name="text_domain" type="array">
+				<element value="understrap"/>
+				<element value="woocommerce"/>
+			</property>
 		</properties>
 	</rule>
 
