@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+<form method="get" class="searchform" id="<?php wp_unique_id( 'searchform-' ); ?>" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 	<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'understrap' ); ?></label>
 	<div class="input-group">
 		<input class="field form-control" id="s" name="s" type="text"
