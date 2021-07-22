@@ -216,6 +216,6 @@ The front-page slider is widget driven. Simply add more than one widget to widge
 
 Licenses & Credits
 =
-- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT)
+- Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, CSS: MIT)
 - Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
 - WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
