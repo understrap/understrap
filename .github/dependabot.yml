@@ -7,6 +7,9 @@ updates:
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
+    ignore:
+      - dependency-name: "bootstrap"
+        versions: "5.x"
     labels:
     - "dependencies"
     open-pull-requests-limit: 10
