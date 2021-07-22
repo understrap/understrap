@@ -34,7 +34,7 @@
     "bootstrap": "^4.6.0",
     "browser-sync": "^2.27.4",
     "browserslist": "^4.16.6",
-    "caniuse-lite": "^1.0.30001245",
+    "caniuse-lite": "^1.0.30001246",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
@@ -48,7 +48,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^8.3.5",
+    "postcss": "^8.3.6",
     "sass": "^1.35.2"
   }
 }
