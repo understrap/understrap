@@ -1,10 +1,30 @@
-# please see https://github.com/browserslist/browserslist for more info
+# Please see https://github.com/browserslist/browserslist for more info
 # These settings can be changed depending on what browsers your project is supporting
 
+# General rules
+last 2 major version and not dead
 >= 0.01%
-Last 5 versions
-last 8 iOS versions
-Firefox >= 28
-IE 10 # sorry
-IE 11 # sorry
-dead # sorry
+
+# Explicit inclusions
+# See https://getbootstrap.com/docs/4.6/getting-started/browsers-devices/
+Chrome >= 45
+Firefox >= 38
+Firefox ESR
+Explorer >= 10
+Edge >= 12
+iOS >= 9
+Safari >= 9
+Android >= 4.4
+Opera >= 30
+
+# Explicit exclusions
+# See https://caniuse.com/?search=flex
+# See https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+not Chrome < 22        # no support for flex-basis, flex-shrink, flex-grow
+not Firefox < 28       # no support for multi-line flexbox
+not Explorer < 10      # no flexbox support
+not iOS < 8            # no support for flex-shrink
+not Safari < 8         # no support for flex-shrink
+not Opera < 12.1       # no flexbox support
+not OperaMobile < 12.1 # no flexbox support
+not Android < 4.4      # no flexbox support
