@@ -415,13 +415,20 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Sök resultat för: %s"
 
-#: searchform.php:13 searchform.php:19
-msgid "Search"
-msgstr "Sök"
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Sök efter:"
 
-#: searchform.php:16
+#: searchform.php:22
+msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Sök &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Sök"
 
 #: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
 msgid "Previous"

@@ -414,13 +414,20 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Resultados de búsqueda: %s"
 
-#: searchform.php:13 searchform.php:19
-msgid "Search"
-msgstr "Buscar"
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Buscar:"
 
-#: searchform.php:16
+#: searchform.php:22
+msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Buscar &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Buscar"
 
 #: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
 msgid "Previous"
