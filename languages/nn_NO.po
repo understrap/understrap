@@ -301,7 +301,7 @@ msgid "% Comments"
 msgstr "% kommentarer"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:161
+#: inc/template-tags.php:79
 msgid "Edit %s"
 msgstr "Rediger %s"
 
@@ -394,6 +394,10 @@ msgstr ""
 msgid "Pages:"
 msgstr "Sider:"
 
+#: loop-templates/content-page.php:39
+msgid "Edit"
+msgstr "Redigere"
+
 #. Template Name of the theme
 msgid "Blank Page Template"
 msgstr "Blank sidemal"
@@ -424,16 +428,22 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Søkjeresultat for: %s"
 
-#: searchform.php:13 searchform.php:19
-msgid "Search"
-msgstr "Søk"
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Leit etter:"
 
-#: searchform.php:16
+#: searchform.php:22
+msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Søk &hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28
-msgctxt "carousel control"
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Søk"
+
+#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
 msgid "Previous"
 msgstr "Forrige"
 

@@ -395,13 +395,20 @@ msgstr "סרגל צדדי ימני"
 msgid "Search Results for: %s"
 msgstr "תוצאות חיפוש עבור: %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "חיפוש:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "חיפוש &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "חיפוש"
-
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "חפש &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"

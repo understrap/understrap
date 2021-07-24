@@ -303,7 +303,7 @@ msgid "% Comments"
 msgstr "% Σχόλια"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:161
+#: inc/template-tags.php:79
 msgid "Edit %s"
 msgstr "Επεξεργασία %s"
 
@@ -397,6 +397,10 @@ msgstr ""
 msgid "Pages:"
 msgstr "Σελίδες:"
 
+#: loop-templates/content-page.php:39
+msgid "Edit"
+msgstr "Επεξεργασία"
+
 #. Template Name of the theme
 msgid "Blank Page Template"
 msgstr "Υπόδειγμα Κενής Σελίδας"
@@ -426,13 +430,20 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Αποτελέσματα αναζήτησης για : %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Αναζήτηση για:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Αναζήτηση&hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "Αναζήτηση"
-
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "Αναζήτηση &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"

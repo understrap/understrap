@@ -422,16 +422,22 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Wyniki wyszukiwania: %s"
 
-#: searchform.php:13 searchform.php:19
-msgid "Search"
-msgstr "Szukaj"
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Szukaj:"
 
-#: searchform.php:16
+#: searchform.php:22
+msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Szukaj &hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28
-msgctxt "carousel control"
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Szukaj"
+
+#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
 msgid "Previous"
 msgstr "Poprzednie"
 

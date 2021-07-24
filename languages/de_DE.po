@@ -428,13 +428,20 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Suche&#160;&hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "Suche"
-
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "Suche &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
