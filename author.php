@@ -35,7 +35,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
 
-					<h1><?php echo esc_html__( 'About:', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
+					<h1>
+						<?php
+						printf(
+							/* translators: %s: author name */
+							esc_html__( 'About %s', 'understrap' ),
+							$curauth->nickname
+						);
+						?>
+					</h1>
 
 					<?php
 					if ( ! empty( $curauth->ID ) ) {
@@ -59,7 +67,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</dl>
 					<?php endif; ?>
 
-					<h2><?php echo esc_html__( 'Posts by', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
+					<h2>
+						<?php
+						printf(
+							/* translators: %s: author name */
+							esc_html__( 'Posts by %s', 'understrap' ),
+							$curauth->nickname
+						);
+						?>
+					</h2>
 
 				</header><!-- .page-header -->
 					<!-- The Loop -->
