@@ -113,14 +113,6 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 					'aria-hidden'      => 'true',
 				);
 				break;
-			case 'password':
-			case 'text':
-			case 'email':
-			case 'tel':
-			case 'number':
-				$args['class'][]     = 'form-group';
-				$args['input_class'] = array( 'form-control' );
-				break;
 			case 'textarea':
 				$args['input_class'] = array( 'form-control' );
 				break;
