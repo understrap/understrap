@@ -86,9 +86,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_post();
 							echo '<li>';
 								printf(
-									'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
+									'<a rel="bookmark" href="%1$s">%2$s</a>',
 									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-									esc_attr( __( 'Permanent Link:', 'understrap' ) ),
 									get_the_title()
 								);
 								understrap_posted_on();
