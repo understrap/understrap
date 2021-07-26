@@ -34,11 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$curauth = get_userdata( intval( $author ) );
 					}
 
-					printf(
-						/* translators: %s: author name */
-						'<h1 class="page-title">' . esc_html__( 'About %s', 'understrap' ) . '</h1>',
-						$curauth->display_name
-					);
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 					if ( ! empty( $curauth->ID ) ) {
 						echo get_avatar( $curauth->ID );
