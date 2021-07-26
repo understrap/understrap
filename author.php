@@ -72,29 +72,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 
 				</header><!-- .page-header -->
-					<!-- The Loop -->
-					<?php
-					if ( have_posts() ) {
-						echo '<ul>';
-						while ( have_posts() ) {
-							the_post();
-							echo '<li>';
-								printf(
-									'<a rel="bookmark" href="%1$s">%2$s</a>',
-									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-									get_the_title()
-								);
-								understrap_posted_on();
-								esc_html_e( 'in', 'understrap' );
-								the_category( '&' );
-							echo '</li>';
-						}
-						echo '</ul>';
-					} else {
-						get_template_part( 'loop-templates/content', 'none' );
+
+				<!-- The Loop -->
+				<?php
+				if ( have_posts() ) {
+					while ( have_posts() ) {
+						the_post();
+						get_template_part( 'loop-templates/content', 'author' );
 					}
-					?>
-					<!-- End Loop -->
+				} else {
+					get_template_part( 'loop-templates/content', 'none' );
+				}
+				?>
+				<!-- End Loop -->
 
 			</main><!-- #main -->
 
