@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T06:02:59+00:00\n"
-"PO-Revision-Date: 2021-07-26 08:06+0200\n"
+"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
+"PO-Revision-Date: 2021-07-26 07:12+0200\n"
 "Last-Translator: Thomas A. Reinert | TAR MediaDesign <thomas@tarcgn.de>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -311,9 +311,9 @@ msgid "% Comments"
 msgstr "% Kommentare"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:79
+#: inc/template-tags.php:161
 msgid "Edit %s"
-msgstr "Editiere %s"
+msgstr "%s bearbeiten"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -395,10 +395,6 @@ msgstr ""
 #: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "Seiten:"
-
-#: loop-templates/content-page.php:39
-msgid "Edit"
-msgstr "Editieren"
 
 #. Template Name of the theme
 msgid "Blank Page Template"
