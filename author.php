@@ -51,7 +51,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php endif; ?>
 
 							<?php if ( ! empty( $curauth->user_description ) ) : ?>
-								<dt><?php /* translators: %s: author name */ esc_html_e( 'About %s', 'understrap' ); ?></dt>
+								<dt>
+									<?php
+									printf(
+										/* translators: %s: author name */
+										esc_html__( 'About %s', 'understrap' ),
+										$curauth->display_name
+									);
+									?>
+								</dt>
 								<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 							<?php endif; ?>
 						</dl>
