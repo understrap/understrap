@@ -33,25 +33,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 					} else {
 						$curauth = get_userdata( intval( $author ) );
 					}
-					?>
 
-					<h1>
-						<?php
-						printf(
-							/* translators: %s: author name */
-							esc_html__( 'About %s', 'understrap' ),
-							$curauth->display_name
-						);
-						?>
-					</h1>
+					printf(
+						/* translators: %s: author name */
+						'<h1 class="page-title">' . esc_html__( 'About %s', 'understrap' ) . '</h1>',
+						$curauth->display_name
+					);
 
-					<?php
 					if ( ! empty( $curauth->ID ) ) {
 						echo get_avatar( $curauth->ID );
 					}
-					?>
 
-					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
+					if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) {
+						?>
 						<dl>
 							<?php if ( ! empty( $curauth->user_url ) ) : ?>
 								<dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
@@ -65,17 +59,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 							<?php endif; ?>
 						</dl>
-					<?php endif; ?>
-
-					<h2>
 						<?php
+					}
+
+					if ( have_posts() ) {
 						printf(
 							/* translators: %s: author name */
-							esc_html__( 'Posts by %s', 'understrap' ),
+							'<h2>' . esc_html__( 'Posts by %s', 'understrap' ) . '</h2>',
 							$curauth->display_name
 						);
-						?>
-					</h2>
+					}
+					?>
 
 				</header><!-- .page-header -->
 					<!-- The Loop -->
