@@ -29,7 +29,7 @@
 - [ ] \(Optional) I have updated the translations accordingly.
 - [ ] `composer cs:check` has passed locally.
 - [ ] `composer lint:php` has passed locally.
-- [ ] I have read the **CONTRIBUTING** document.
+- [ ] I have read the **[CONTRIBUTING](https://github.com/understrap/understrap/blob/main/.github/CONTRIBUTING.md)** document.
 
 ## Related Issues or Roadmap requests
 
