@@ -164,6 +164,8 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 			'<span class="edit-link">',
 			'</span>'
 		);
+	}
+}
 
 if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 	/**
