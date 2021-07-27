@@ -111,31 +111,19 @@ msgid "Posts by %s"
 msgstr "Записи %s"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "Навигация по комментариям"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr; Старые комментарии"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "Свежие комментарии &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -311,6 +299,18 @@ msgstr "% комментариев"
 msgid "Edit %s"
 msgstr "Изменить %s"
 
+#: inc/template-tags.php:182
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: inc/template-tags.php:186
+msgid "&larr; Older Comments"
+msgstr "&larr; Старые комментарии"
+
+#: inc/template-tags.php:192
+msgid "Newer Comments &rarr;"
+msgstr "Свежие комментарии &rarr;"
+
 #: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr "Правая боковая панель"
@@ -433,10 +433,10 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Поиск"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "Назад"
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr "Далее"

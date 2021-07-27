@@ -116,30 +116,18 @@ msgid "Posts by %s"
 msgstr "Άρθρα του/της %s"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "Πλοήγηση στα σχόλια"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr; Παλαιότερα Σχόλια"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "Νεότερα Σχόλια &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -311,9 +299,21 @@ msgid "% Comments"
 msgstr "% Σχόλια"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:79
+#: inc/template-tags.php:161
 msgid "Edit %s"
 msgstr "Επεξεργασία %s"
+
+#: inc/template-tags.php:182
+msgid "Comment navigation"
+msgstr "Πλοήγηση στα σχόλια"
+
+#: inc/template-tags.php:186
+msgid "&larr; Older Comments"
+msgstr "&larr; Παλαιότερα Σχόλια"
+
+#: inc/template-tags.php:192
+msgid "Newer Comments &rarr;"
+msgstr "Νεότερα Σχόλια &rarr;"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -396,10 +396,6 @@ msgstr ""
 msgid "Pages:"
 msgstr "Σελίδες:"
 
-#: loop-templates/content-page.php:39
-msgid "Edit"
-msgstr "Επεξεργασία"
-
 #. Template Name of the theme
 msgid "Blank Page Template"
 msgstr "Υπόδειγμα Κενής Σελίδας"
@@ -444,10 +440,10 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "Προηγούμενο"
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr "Επόμενο"
