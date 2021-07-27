@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
-"PO-Revision-Date: 2021-07-26 07:22+0200\n"
+"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
+"PO-Revision-Date: 2021-07-27 18:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nn_NO\n"
@@ -105,12 +105,12 @@ msgid "Website"
 msgstr "Vevstad"
 
 #. translators: %s: author name
-#: author.php:54
+#: author.php:58
 msgid "About %s"
 msgstr "Om %s"
 
 #. translators: %s: author name
-#: author.php:64
+#: author.php:72
 msgid "Posts by %s"
 msgstr "Innlegg av %s"
 
