@@ -300,7 +300,7 @@ msgid "% Comments"
 msgstr "% 件のコメント"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:79
+#: inc/template-tags.php:161
 msgid "Edit %s"
 msgstr "%s を編集する"
 
@@ -394,10 +394,6 @@ msgstr "お探しのコンテンツを見つけられませんでした。検索
 msgid "Pages:"
 msgstr "ページ:"
 
-#: loop-templates/content-page.php:39
-msgid "Edit"
-msgstr "編集"
-
 #. Template Name of the theme
 msgid "Blank Page Template"
 msgstr "空ページのテンプレート"
@@ -442,7 +438,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "検索"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "前"
 

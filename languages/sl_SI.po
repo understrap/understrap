@@ -306,7 +306,7 @@ msgid "% Comments"
 msgstr "% komentarjev"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:79
+#: inc/template-tags.php:161
 msgid "Edit %s"
 msgstr "Uredi %s"
 
@@ -400,10 +400,6 @@ msgstr "Vsebine ni mogoče najti. Poskusite z iskanjem."
 #: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "Strani:"
-
-#: loop-templates/content-page.php:39
-msgid "Edit"
-msgstr "Uredi"
 
 #. Template Name of the theme
 msgid "Blank Page Template"

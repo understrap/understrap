@@ -434,7 +434,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Buscar"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr ""
 
