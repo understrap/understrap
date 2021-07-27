@@ -150,7 +150,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "コメントは閉じられました。"
+msgstr "コメントは受け付けていません。"
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"

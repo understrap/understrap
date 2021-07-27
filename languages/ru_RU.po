@@ -149,7 +149,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Комментарии закрыты."
+msgstr "Обсуждение закрыто."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"

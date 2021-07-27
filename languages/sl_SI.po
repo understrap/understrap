@@ -154,7 +154,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Komentarji so zaklenjeni."
+msgstr "Komentarji so onemogočeni."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"

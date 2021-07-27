@@ -141,7 +141,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "댓글 기능이 꺼져있습니다."
+msgstr "댓글이 닫혀있습니다."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
