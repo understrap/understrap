@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T06:02:59+00:00\n"
-"PO-Revision-Date: 2021-07-26 08:39+0200\n"
+"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
+"PO-Revision-Date: 2021-07-27 18:47+0200\n"
 "Last-Translator: Tanju Yıldız <ben@tanjuyildiz.com>\n"
 "Language-Team: \n"
 "Language: tr_TR\n"
@@ -103,12 +103,12 @@ msgid "Website"
 msgstr "İnternet sitesi"
 
 #. translators: %s: author name
-#: author.php:54
+#: author.php:58
 msgid "About %s"
 msgstr "%s hakkında"
 
 #. translators: %s: author name
-#: author.php:64
+#: author.php:72
 msgid "Posts by %s"
 msgstr "%s tarafından yazılan yazılar"
 

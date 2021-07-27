@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
-"PO-Revision-Date: 2021-07-26 07:17+0200\n"
+"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
+"PO-Revision-Date: 2021-07-27 18:43+0200\n"
 "Last-Translator: Max Guglielmino <info@maxguglielmino.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -98,12 +98,12 @@ msgid "Website"
 msgstr "Sito web"
 
 #. translators: %s: author name
-#: author.php:54
+#: author.php:58
 msgid "About %s"
 msgstr "Informazioni su %s"
 
 #. translators: %s: author name
-#: author.php:64
+#: author.php:72
 msgid "Posts by %s"
 msgstr "Articoli scritti da %s"
 
