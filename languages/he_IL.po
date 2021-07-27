@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UnderStrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
-"PO-Revision-Date: 2021-07-27 18:45+0200\n"
+"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
+"PO-Revision-Date: 2021-07-28 00:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -71,45 +71,39 @@ msgstr "קטגוריות פופולרייות"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "נסה להסתכל בארכיון החודשי.%1$s"
 
-#: author.php:47
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "תמונת הפרופיל של %s"
+
+#: author.php:52
 msgid "Website"
 msgstr "אתר"
 
 #. translators: %s: author name
-#: author.php:58
+#: author.php:63
 msgid "About %s"
 msgstr "אודות %s"
 
 #. translators: %s: author name
-#: author.php:72
+#: author.php:77
 msgid "Posts by %s"
 msgstr "פוסטים מאת %s"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr "מחשבה אחת על &ldquo;%s&rdquo;"
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "מחשבה אחת על &ldquo;%2$s&rdquo;"
 msgstr[1] "מחשבות על &ldquo;%2$s&rdquo;"
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "ניווט תגובות"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr;  תגובות קודמות"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "תגובות חדשות יותר &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -288,6 +282,18 @@ msgstr "% תגובות"
 msgid "Edit %s"
 msgstr "ערוך את %s"
 
+#: inc/template-tags.php:184
+msgid "Comment navigation"
+msgstr "ניווט תגובות"
+
+#: inc/template-tags.php:188
+msgid "&larr; Older Comments"
+msgstr "&larr;  תגובות קודמות"
+
+#: inc/template-tags.php:194
+msgid "Newer Comments &rarr;"
+msgstr "תגובות חדשות יותר &rarr;"
+
 #: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr "סרגל צדדי ימני"
@@ -400,10 +406,10 @@ msgstr "חיפוש"
 msgid "Search &hellip;"
 msgstr "חפש &hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "הקודם"
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr "הבא"

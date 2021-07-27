@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
-"PO-Revision-Date: 2021-07-27 18:42+0200\n"
+"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
+"PO-Revision-Date: 2021-07-27 23:56+0200\n"
 "Last-Translator: Thomas A. Reinert | TAR MediaDesign <thomas@tarcgn.de>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -101,45 +101,39 @@ msgstr "Meistgenutzte Kategorien"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Versuch es einmal im monatlichen Archiv. %1$s"
 
-#: author.php:47
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Profilbild von %s"
+
+#: author.php:52
 msgid "Website"
 msgstr "Webseite"
 
 #. translators: %s: author name
-#: author.php:58
+#: author.php:63
 msgid "About %s"
 msgstr "Über %s"
 
 #. translators: %s: author name
-#: author.php:72
+#: author.php:77
 msgid "Posts by %s"
 msgstr "Beiträge von %s"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "Kommentarnavigation"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr; Ältere Kommentare"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "Neuere Kommentare &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -315,6 +309,18 @@ msgstr "% Kommentare"
 msgid "Edit %s"
 msgstr "%s bearbeiten"
 
+#: inc/template-tags.php:184
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+#: inc/template-tags.php:188
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: inc/template-tags.php:194
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
 #: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr "Rechte Seitenleiste"
@@ -433,10 +439,10 @@ msgstr "Suche"
 msgid "Search &hellip;"
 msgstr "Suche &hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "Vorherige"
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr "Nächste"
