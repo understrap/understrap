@@ -37,7 +37,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 					if ( ! empty( $curauth->ID ) ) {
-						echo get_avatar( $curauth->ID );
+						$alt = sprintf(
+							/* translators: %s: author name */
+							_x( 'Profile picture of %s', 'Avatar alt', 'understrap' ),
+							$curauth->display_name
+						);
+						echo get_avatar( $curauth->ID, 96, '', $alt );
 					}
 
 					if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) {
