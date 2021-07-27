@@ -165,7 +165,7 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 	 * @param string $nav_id The ID of the comment navigation.
 	 */
 	function understrap_comment_navigation( $nav_id ) {
-		if ( get_comment_pages_count() <= 1 || false === get_option( 'page_comments' ) ) {
+		if ( get_comment_pages_count() <= 1 ) {
 			// Return early if there are no comments to navigate through.
 			return;
 		}
