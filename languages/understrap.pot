@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-07-02T07:47:20+00:00\n"
+"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: understrap\n"
@@ -52,28 +52,18 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: author.php:38
-msgid "About:"
-msgstr ""
-
-#: author.php:49
+#: author.php:47
 msgid "Website"
 msgstr ""
 
-#: author.php:56
-msgid "Profile"
+#. translators: %s: author name
+#: author.php:58
+msgid "About %s"
 msgstr ""
 
-#: author.php:62
-msgid "Posts by"
-msgstr ""
-
-#: author.php:75
-msgid "Permanent Link:"
-msgstr ""
-
-#: author.php:79
-msgid "in"
+#. translators: %s: author name
+#: author.php:72
+msgid "Posts by %s"
 msgstr ""
 
 #. translators: %s: post title
@@ -177,16 +167,16 @@ msgstr ""
 msgid "No sidebar"
 msgstr ""
 
-#: inc/extras.php:80
+#: inc/extras.php:100
 msgid "Post navigation"
 msgstr ""
 
-#: inc/extras.php:84
+#: inc/extras.php:104
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr ""
 
-#: inc/extras.php:87
+#: inc/extras.php:107
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
@@ -274,7 +264,7 @@ msgid "% Comments"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:79
+#: inc/template-tags.php:161
 msgid "Edit %s"
 msgstr ""
 
@@ -347,10 +337,6 @@ msgstr ""
 #: loop-templates/content-single.php:35
 #: loop-templates/content.php:42
 msgid "Pages:"
-msgstr ""
-
-#: loop-templates/content-page.php:39
-msgid "Edit"
 msgstr ""
 
 #. Template Name of the theme
