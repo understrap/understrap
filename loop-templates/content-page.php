@@ -36,7 +36,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php understrap_edit_post_link(); ?>
 
 	</footer><!-- .entry-footer -->
 

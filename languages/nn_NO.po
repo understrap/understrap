@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T06:02:59+00:00\n"
-"PO-Revision-Date: 2021-07-26 08:31+0200\n"
+"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
+"PO-Revision-Date: 2021-07-26 07:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nn_NO\n"
@@ -310,7 +310,7 @@ msgid "% Comments"
 msgstr "% kommentarer"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:79
+#: inc/template-tags.php:161
 msgid "Edit %s"
 msgstr "Rediger %s"
 
@@ -393,10 +393,6 @@ msgstr ""
 #: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "Sider:"
-
-#: loop-templates/content-page.php:39
-msgid "Edit"
-msgstr "Redigere"
 
 #. Template Name of the theme
 msgid "Blank Page Template"

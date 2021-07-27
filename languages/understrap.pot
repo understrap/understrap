@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-07-26T06:02:59+00:00\n"
+"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: understrap\n"
@@ -52,18 +52,28 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: author.php:47
+#: author.php:38
+msgid "About:"
+msgstr ""
+
+#: author.php:49
 msgid "Website"
 msgstr ""
 
-#. translators: %s: author name
-#: author.php:54
-msgid "About %s"
+#: author.php:56
+msgid "Profile"
 msgstr ""
 
-#. translators: %s: author name
-#: author.php:64
-msgid "Posts by %s"
+#: author.php:62
+msgid "Posts by"
+msgstr ""
+
+#: author.php:75
+msgid "Permanent Link:"
+msgstr ""
+
+#: author.php:79
+msgid "in"
 msgstr ""
 
 #. translators: %s: post title
@@ -264,7 +274,7 @@ msgid "% Comments"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:79
+#: inc/template-tags.php:161
 msgid "Edit %s"
 msgstr ""
 
@@ -337,10 +347,6 @@ msgstr ""
 #: loop-templates/content-single.php:35
 #: loop-templates/content.php:42
 msgid "Pages:"
-msgstr ""
-
-#: loop-templates/content-page.php:39
-msgid "Edit"
 msgstr ""
 
 #. Template Name of the theme
