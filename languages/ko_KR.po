@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
-"PO-Revision-Date: 2021-07-26 07:20+0200\n"
+"POT-Creation-Date: 2021-07-26T06:02:59+00:00\n"
+"PO-Revision-Date: 2021-07-26 08:27+0200\n"
 "Last-Translator: idpokute <mike.sayhi@gmail.com>\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -299,9 +299,9 @@ msgid "% Comments"
 msgstr "% 댓글"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:161
+#: inc/template-tags.php:79
 msgid "Edit %s"
-msgstr "%s 편집"
+msgstr "%s 수정 "
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -379,6 +379,10 @@ msgstr "원하시는 것을 찾을 수가 없습니다. 검색이 도움이 될 
 #: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "페이지:"
+
+#: loop-templates/content-page.php:39
+msgid "Edit"
+msgstr "수정"
 
 #. Template Name of the theme
 msgid "Blank Page Template"

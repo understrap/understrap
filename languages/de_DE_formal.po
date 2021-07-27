@@ -311,9 +311,9 @@ msgid "% Comments"
 msgstr "% Kommentare"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:161
+#: inc/template-tags.php:79
 msgid "Edit %s"
-msgstr "%s bearbeiten"
+msgstr "Editieren Sie %s"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -395,6 +395,10 @@ msgstr ""
 #: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "Seiten:"
+
+#: loop-templates/content-page.php:39
+msgid "Edit"
+msgstr "Editieren"
 
 #. Template Name of the theme
 msgid "Blank Page Template"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
-"PO-Revision-Date: 2021-07-26 07:18+0200\n"
+"POT-Creation-Date: 2021-07-26T06:02:59+00:00\n"
+"PO-Revision-Date: 2021-07-26 08:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -309,9 +309,9 @@ msgid "% Comments"
 msgstr "% 件のコメント"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:161
+#: inc/template-tags.php:79
 msgid "Edit %s"
-msgstr "%sを編集"
+msgstr "%s を編集する"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -391,6 +391,10 @@ msgstr "お探しのコンテンツは見つかりませんでした。検索を
 #: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "ページ:"
+
+#: loop-templates/content-page.php:39
+msgid "Edit"
+msgstr "編集"
 
 #. Template Name of the theme
 msgid "Blank Page Template"

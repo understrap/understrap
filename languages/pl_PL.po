@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-26T05:09:07+00:00\n"
-"PO-Revision-Date: 2021-07-26 07:23+0200\n"
+"POT-Creation-Date: 2021-07-26T06:02:59+00:00\n"
+"PO-Revision-Date: 2021-07-26 08:33+0200\n"
 "Last-Translator: Mirosław Zalewski <mz@miroslaw-zalewski.eu>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -310,7 +310,7 @@ msgid "% Comments"
 msgstr "Komentarzy: %"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:161
+#: inc/template-tags.php:79
 msgid "Edit %s"
 msgstr "Edytuj %s"
 
@@ -393,6 +393,10 @@ msgstr ""
 #: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "Strony:"
+
+#: loop-templates/content-page.php:39
+msgid "Edit"
+msgstr "Edytuj"
 
 #. Template Name of the theme
 msgid "Blank Page Template"
