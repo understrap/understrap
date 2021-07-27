@@ -256,3 +256,19 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 		return wp_kses( $data, $allowed_tags );
 	}
 } // End of if function_exists( 'understrap_kses_title' ).
+
+if ( ! function_exists( 'understrap_hide_posted_by' ) ) {
+	/**
+	 * Hides the posted by markup in `understrap_posted_on()`.
+	 *
+	 * @param string $byline Posted by HTML markup.
+	 * @return string Maybe filtered posted by HTML markup.
+	 */
+	function understrap_hide_posted_by( $byline ) {
+		if ( is_author() ) {
+			return '';
+		}
+		return $byline;
+	}
+}
+add_filter( 'understrap_posted_by', 'understrap_hide_posted_by' );
