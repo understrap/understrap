@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
-"PO-Revision-Date: 2021-07-27 18:46+0200\n"
+"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
+"PO-Revision-Date: 2021-07-28 00:29+0200\n"
 "Last-Translator: Davor Lonzaric <info@fatshape.com>\n"
 "Language-Team: \n"
 "Language: sl_SI\n"
@@ -100,28 +100,34 @@ msgstr "Najbolj uporabljene kategorije"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Pokukajte v mesečni arhiv. %1$s"
 
-#: author.php:47
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Profilna slika od %s"
+
+#: author.php:52
 msgid "Website"
 msgstr "Spletišče"
 
 #. translators: %s: author name
-#: author.php:58
+#: author.php:63
 msgid "About %s"
 msgstr "O %s"
 
 #. translators: %s: author name
-#: author.php:72
+#: author.php:77
 msgid "Posts by %s"
 msgstr "Prispevki od %s"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -129,18 +135,6 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "Navigacija komentarjev"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr; Starejši komentarji"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "Novejši komentarji &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -318,6 +312,18 @@ msgstr "% komentarjev"
 msgid "Edit %s"
 msgstr "Uredi %s"
 
+#: inc/template-tags.php:184
+msgid "Comment navigation"
+msgstr "Navigacija komentarjev"
+
+#: inc/template-tags.php:188
+msgid "&larr; Older Comments"
+msgstr "&larr; Starejši komentarji"
+
+#: inc/template-tags.php:194
+msgid "Newer Comments &rarr;"
+msgstr "Novejši komentarji &rarr;"
+
 #: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr "Desna stranska pasica"
@@ -434,10 +440,10 @@ msgstr "Iskanje"
 msgid "Search &hellip;"
 msgstr "Iskanje &hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "Prejšnji"
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr "Naslednji"

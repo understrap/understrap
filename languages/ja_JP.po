@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
-"PO-Revision-Date: 2021-07-27 18:43+0200\n"
+"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
+"PO-Revision-Date: 2021-07-28 00:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -99,44 +99,38 @@ msgstr "よく使われるカテゴリー"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "月々のアーカイブを見てみます。 %1$s"
 
-#: author.php:47
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "%s さんのプロフィール写真"
+
+#: author.php:52
 msgid "Website"
 msgstr "サイト"
 
 #. translators: %s: author name
-#: author.php:58
+#: author.php:63
 msgid "About %s"
 msgstr "%s について"
 
 #. translators: %s: author name
-#: author.php:72
+#: author.php:77
 msgid "Posts by %s"
 msgstr "%s の投稿"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "コメントナビゲーション"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr; 古いコメント"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "新しいコメント &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -313,6 +307,18 @@ msgstr "% 件のコメント"
 msgid "Edit %s"
 msgstr "%sを編集"
 
+#: inc/template-tags.php:184
+msgid "Comment navigation"
+msgstr "コメントナビゲーション"
+
+#: inc/template-tags.php:188
+msgid "&larr; Older Comments"
+msgstr "&larr; 古いコメント"
+
+#: inc/template-tags.php:194
+msgid "Newer Comments &rarr;"
+msgstr "新しいコメント &rarr;"
+
 #: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr "右サイドバー"
@@ -429,10 +435,10 @@ msgstr "検索"
 msgid "Search &hellip;"
 msgstr "検索&hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "前"
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr "次"
