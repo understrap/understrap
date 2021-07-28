@@ -34,15 +34,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content">
 
-		<?php the_excerpt(); ?>
-
 		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
+		the_excerpt();
+		understrap_link_pages();
 		?>
 
 	</div><!-- .entry-content -->
