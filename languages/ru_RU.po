@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
-"PO-Revision-Date: 2021-07-27 18:42+0200\n"
+"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
+"PO-Revision-Date: 2021-07-28 00:28+0200\n"
 "Last-Translator: edkozuto <edkozuto@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -96,46 +96,40 @@ msgstr "Популярные категории"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Попробуйте поискать в архивах за прошлые месяцы. %1$s"
 
-#: author.php:47
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Картинка профиля %s"
+
+#: author.php:52
 msgid "Website"
 msgstr "Сайт"
 
 #. translators: %s: author name
-#: author.php:58
+#: author.php:63
 msgid "About %s"
 msgstr "Об авторе %s"
 
 #. translators: %s: author name
-#: author.php:72
+#: author.php:77
 msgid "Posts by %s"
 msgstr "Записи %s"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "Навигация по комментариям"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr; Старые комментарии"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "Свежие комментарии &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -311,6 +305,18 @@ msgstr "% комментариев"
 msgid "Edit %s"
 msgstr "Изменить %s"
 
+#: inc/template-tags.php:184
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: inc/template-tags.php:188
+msgid "&larr; Older Comments"
+msgstr "&larr; Старые комментарии"
+
+#: inc/template-tags.php:194
+msgid "Newer Comments &rarr;"
+msgstr "Свежие комментарии &rarr;"
+
 #: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr "Правая боковая панель"
@@ -426,10 +432,10 @@ msgstr "Поиск"
 msgid "Search &hellip;"
 msgstr "Поиск &hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr "Назад"
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr "Далее"
