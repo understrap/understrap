@@ -1,6 +1,6 @@
 # Code of Conduct v2.0
 
-This code of conduct outlines our expectations for participants within the [UnderStrap](https://github.com/understrap/) community, as well as steps to reporting unacceptable behavior. We are committed to providing a welcoming and inspiring community for all and expect our code of conduct to be honored. Anyone who violates this code of conduct may be banned from the community.
+This code of conduct outlines our expectations for participants within the [Understrap](https://github.com/understrap/) community, as well as steps to reporting unacceptable behavior. We are committed to providing a welcoming and inspiring community for all and expect our code of conduct to be honored. Anyone who violates this code of conduct may be banned from the community.
 
 Our open source community strives to:
 
@@ -42,10 +42,10 @@ Anyone asked to stop unacceptable behavior is expected to comply immediately. If
 
 ## Thanks
 
-**The UnderStrap Team**
+**The Understrap Team**
 
 
 
-This code of conduct is based on the [Open Code of Conduct](https://github.com/todogroup/opencodeofconduct) from the [TODOGroup](http://todogroup.org). 
+This code of conduct is based on the [Open Code of Conduct](https://github.com/todogroup/opencodeofconduct) from the [TODOGroup](http://todogroup.org).
 
 We are thankful for their work and all the communities who have paved the way with code of conducts.

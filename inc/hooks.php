@@ -2,7 +2,7 @@
 /**
  * Custom hooks
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

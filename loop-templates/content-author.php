@@ -2,7 +2,7 @@
 /**
  * Template for displaying posts on the author archive
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

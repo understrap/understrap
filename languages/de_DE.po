@@ -44,13 +44,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 "vieles mehr, was du für die Erstellung einer einfachen Website benötigst. "
 "WICHTIG: Alle Abhängigkeiten der Entwicklertools sind in diesem Paket nicht "
 "enthalten! Lade die ZIP-Datei herunter, entpacke sie und führe \"npm install"
-"\" sowie \"gulp copy-assets\" in der Konsole im entpackten UnderStrap-Ordner "
+"\" sowie \"gulp copy-assets\" in der Konsole im entpackten Understrap-Ordner "
 "aus."
 
 #. Author of the theme
@@ -78,7 +78,7 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -225,7 +225,7 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33

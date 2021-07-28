@@ -2,7 +2,7 @@
 /**
  * Check and setup theme's default settings
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

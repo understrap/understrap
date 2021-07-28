@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

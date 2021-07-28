@@ -2,7 +2,7 @@
 /**
  * The template for displaying search forms
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

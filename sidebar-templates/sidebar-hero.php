@@ -2,7 +2,7 @@
 /**
  * Sidebar - hero setup
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
