@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T16:36:12+00:00\n"
-"PO-Revision-Date: 2021-07-27 18:46+0200\n"
+"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
+"PO-Revision-Date: 2021-07-27 23:59+0200\n"
 "Last-Translator: Filip Wessman <filip@effektid.com>\n"
 "Language-Team: Swedish (Swedish)\n"
 "Language: sv_SE\n"
@@ -95,46 +95,40 @@ msgstr "Most Used Categories"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Try looking in the monthly archives. %1$s"
 
-#: author.php:47
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Profilbild för %s"
+
+#: author.php:52
 msgid "Website"
 msgstr "Webbplats"
 
 #. translators: %s: author name
-#: author.php:58
+#: author.php:63
 msgid "About %s"
 msgstr "Om %s"
 
 #. translators: %s: author name
-#: author.php:72
+#: author.php:77
 msgid "Posts by %s"
 msgstr "Inlägg av %s"
 
 #. translators: %s: post title
-#: comments.php:37
+#: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-
-#: comments.php:64 comments.php:99
-msgid "Comment navigation"
-msgstr "Kommentars navigering"
-
-#: comments.php:68 comments.php:103
-msgid "&larr; Older Comments"
-msgstr "&larr; Äldre kommentarer"
-
-#: comments.php:74 comments.php:109
-msgid "Newer Comments &rarr;"
-msgstr "Nyare kommentarer &rarr;"
 
 #: header.php:31
 msgid "Skip to content"
@@ -310,6 +304,18 @@ msgstr "% Kommentarer"
 msgid "Edit %s"
 msgstr "Redigera %s"
 
+#: inc/template-tags.php:184
+msgid "Comment navigation"
+msgstr "Kommentars navigering"
+
+#: inc/template-tags.php:188
+msgid "&larr; Older Comments"
+msgstr "&larr; Äldre kommentarer"
+
+#: inc/template-tags.php:194
+msgid "Newer Comments &rarr;"
+msgstr "Nyare kommentarer &rarr;"
+
 #: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr ""
@@ -423,10 +429,10 @@ msgstr "Sök"
 msgid "Search &hellip;"
 msgstr "Sök &hellip;"
 
-#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+#: sidebar-templates/sidebar-hero.php:28
 msgid "Previous"
 msgstr ""
 
-#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+#: sidebar-templates/sidebar-hero.php:36
 msgid "Next"
 msgstr ""

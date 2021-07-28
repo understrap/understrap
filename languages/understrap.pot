@@ -52,17 +52,23 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: author.php:47
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr ""
+
+#: author.php:52
 msgid "Website"
 msgstr ""
 
 #. translators: %s: author name
-#: author.php:58
+#: author.php:63
 msgid "About %s"
 msgstr ""
 
 #. translators: %s: author name
-#: author.php:72
+#: author.php:77
 msgid "Posts by %s"
 msgstr ""
 
