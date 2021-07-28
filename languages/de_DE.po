@@ -157,7 +157,7 @@ msgstr "Kommentare sind geschlossen."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
-msgstr ""
+msgstr "Standard-Header-Bild"
 
 #: inc/customizer.php:42
 msgid "Theme Layout Settings"
