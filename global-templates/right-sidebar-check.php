@@ -2,7 +2,7 @@
 /**
  * Right sidebar check
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

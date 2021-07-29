@@ -2,7 +2,7 @@
 /**
  * UnderStrap functions and definitions
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

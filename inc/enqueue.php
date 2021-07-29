@@ -1,8 +1,8 @@
 <?php
 /**
- * UnderStrap enqueue scripts
+ * Understrap enqueue scripts
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

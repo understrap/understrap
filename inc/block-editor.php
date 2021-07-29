@@ -2,7 +2,7 @@
 /**
  * Block editor (gutenberg) specific functionality
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 

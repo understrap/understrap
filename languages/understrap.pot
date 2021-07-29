@@ -1,8 +1,8 @@
 # Copyright (C) 2021 the Understrap Authors
-# This file is distributed under the UnderStrap WordPress Theme, Copyright 2013-2021 Howard Development &amp; Consulting.
+# This file is distributed under the Understrap WordPress Theme, Copyright 2013-2021 Howard Development &amp; Consulting.
 msgid ""
 msgstr ""
-"Project-Id-Version: UnderStrap 0.9.6\n"
+"Project-Id-Version: Understrap 0.9.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Domain: understrap\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
+msgid "Understrap"
 msgstr ""
 
 #. Theme URI of the theme

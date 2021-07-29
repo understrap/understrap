@@ -6,7 +6,7 @@
 
 #### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
 
-# UnderStrap WordPress Theme Framework
+# Understrap WordPress Theme Framework
 
 Website: [https://understrap.com](https://understrap.com)
 
@@ -16,11 +16,11 @@ OverStrap Child Themes: [https://understrap.com/overstrap/](https://understrap.c
 
 ## About
 
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what UnderStrap is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for UnderStrap.
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what Understrap is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for Understrap.
 
 ## License
-UnderStrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
-UnderStrap is distributed under the terms of the GNU GPL version 2
+Understrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
+Understrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
@@ -47,11 +47,11 @@ Why not add a well known and supported layout framework to have a solid, clean a
 
 ## Confused by All the CSS and Sass Files?
 
-Some basics about the Sass and CSS files that come with UnderStrap:
+Some basics about the Sass and CSS files that come with Understrap:
 - The theme itself uses the `/style.css`file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
 - The `/css/theme.css` and its minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
 
- ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+ ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or Understrap variables here
  @import "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // 2. All the Bootstrap stuff - Don´t edit this!
  @import "understrap/understrap"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
  @import "../src/fontawesome/scss/font-awesome"; // 4. Font Awesome Icon styles
@@ -59,14 +59,14 @@ Some basics about the Sass and CSS files that come with UnderStrap:
  @import "theme/theme";  // 5. Add your styles into this file
  ```
 
-- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update UnderStrap without overwriting your own work!
+- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update Understrap without overwriting your own work!
 - Your design goes into: `/sass/theme`.
   - Add your styles to the `/sass/theme/_theme.scss` file
   - And your variables to the `/sass/theme/_theme_variables.scss`
   - Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
 ## Installation
-There are several ways to install UnderStrap. We'll look at three of them: (1) classic install by uploading UnderStrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
+There are several ways to install Understrap. We'll look at three of them: (1) classic install by uploading Understrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
 
 ### Classic install
 - Download the understrap folder from GitHub or from [https://understrap.com](https://understrap.com)
@@ -74,18 +74,18 @@ There are several ways to install UnderStrap. We'll look at three of them: (1) c
 - Upload it into your WordPress installation theme subfolder: `/wp-content/themes/`
 - Login to your WordPress backend
 - Go to Appearance → Themes
-- Activate the UnderStrap theme
+- Activate the Understrap theme
 
 ### npm install
 - Open your terminal
-- Change to the directory where you want to add UnderStrap
+- Change to the directory where you want to add Understrap
 - Type `npm install understrap`
 
 ### WordPress.org install
 - Open your WordPress backend
 - Click on "Appearance -> Themes"
 - Hit the "Add new" button
-- Search for "UnderStrap"
+- Search for "Understrap"
 - Hit the "install" button
 - Activate the theme
 
@@ -93,7 +93,7 @@ There are several ways to install UnderStrap. We'll look at three of them: (1) c
 
 ### Installing Dependencies
 - Make sure you have installed Node.js and Browser-Sync (optional) on your computer globally
-- Then open your terminal and browse to the location of your UnderStrap copy
+- Then open your terminal and browse to the location of your Understrap copy
 - Run: `$ npm install`
 
 ### Running
@@ -127,7 +127,7 @@ Add a new file to the themes root folder called rtl.css. Add all alignments to t
 https://codex.wordpress.org/Right_to_Left_Language_Support
 
 ## Page Templates
-UnderStrap includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
+Understrap includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
 
 ### Blank Template
 

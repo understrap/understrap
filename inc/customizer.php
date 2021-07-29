@@ -1,8 +1,8 @@
 <?php
 /**
- * UnderStrap Theme Customizer
+ * Understrap Theme Customizer
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

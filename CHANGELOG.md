@@ -437,7 +437,7 @@ Clean rebuild
   - Hot fix release
 
 ## Release 0.6.4.1 August 17h 2017
-  - Hot fix release - Rebuild new Bootstrap 4 Beta navbar markup into UnderStrap
+  - Hot fix release - Rebuild new Bootstrap 4 Beta navbar markup into Understrap
 
 ## Release 0.6.3 August 14h 2017
    - Update to Bootstrap 4 Beta

@@ -1,4 +1,4 @@
-# Contributing to the UnderStrap Project
+# Contributing to the Understrap Project
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
 - Reporting a bug
@@ -13,8 +13,8 @@ We use github to host code, to track issues and feature requests, as well as acc
 ## We Use [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), So All Code Changes Happen Through Pull Requests
 We actively welcome your pull requests.
 
-Pull requests are the best way to propose changes to the codebase. 
-All pull requests should be sumitted to the `develop` branch. 
+Pull requests are the best way to propose changes to the codebase.
+All pull requests should be sumitted to the `develop` branch.
 This will allow us to grant permissions to key contributors to merge pull requests into the `develop` branch.
 
 1. Fork the repo and create your branch from `develop`.

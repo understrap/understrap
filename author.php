@@ -4,7 +4,7 @@
  *
  * Learn more: https://codex.wordpress.org/Author_Templates
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

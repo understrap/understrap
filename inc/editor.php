@@ -1,8 +1,8 @@
 <?php
 /**
- * UnderStrap modify editor
+ * Understrap modify editor
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
