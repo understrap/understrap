@@ -23,6 +23,7 @@
 !.browserslist
 !.editorconfig
 !.gitattributes
+!.github
 !.gitignore
 !.jscsrc
 !.jshintignore
