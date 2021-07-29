@@ -1,0 +1,38 @@
+# Set up for npm and Composer
+
+version: 2
+updates:
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    ignore:
+      - dependency-name: "bootstrap"
+        versions: "5.x"
+    labels:
+    - "dependencies"
+    open-pull-requests-limit: 10
+    rebase-strategy: auto
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+    target-branch: "develop"
+    versioning-strategy: increase
+
+  # Maintain dependencies for Composer
+  - package-ecosystem: "composer"
+    allow:
+    - dependency-type: direct
+    - dependency-type: indirect
+    directory: "/"
+    labels:
+    - "dependencies"
+    open-pull-requests-limit: 10
+    rebase-strategy: auto
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+    target-branch: "develop"
+    versioning-strategy: increase
