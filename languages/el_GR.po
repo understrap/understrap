@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:33+0200\n"
+"PO-Revision-Date: 2021-07-29 20:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: stef.kariotidis@gmail.com\n"
 "Language: el_GR\n"
@@ -51,7 +51,7 @@ msgstr "UnderStrap"
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -78,11 +78,11 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ουπς! Η σελίδα δεν βρέθηκε.  "
+msgstr ""
 
 #: 404.php:36
 msgid ""
@@ -225,7 +225,7 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -375,26 +375,23 @@ msgstr "Δεν βρέθηκε κάτι"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Έτοιμος/η να δημοσιεύσετε την πρώτη σας ανάρτηση; <a href=\"%1$s\">Ξεκινήστε "
-"εδώ</a>."
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr "Έτοιμοι για το πρώτο σας άρθρο; <a href=\"%s\">Πάμε</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Συγγνώμη, δεν βρέθηκε κάτι που να ταιριάζει με τα κριτήρια αναζήτησης. "
-"Παρακαλούμε δοκιμάστε πάλι με νέα κριτήρια."
+"Λυπάμαι, αλλά τίποτα δεν βρέθηκε που ταιριάζει στους όρους αναζήτησης. "
+"Παρακαλώ προσπαθήστε ξανά με άλλες λέξεις κλειδιά."
 
 #: loop-templates/content-none.php:46
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Φαίνεται ότι δεν μπορούμε να βρούμε αυτό που αναζητάτε. Ίσως βοηθήσει η "
+"Φαίνεται ότι δεν βρήκαμε αυτό που ζητούσατε. Αν θέλετε, δοκιμάστε την "
 "αναζήτηση."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35

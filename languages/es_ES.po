@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:31+0200\n"
+"PO-Revision-Date: 2021-07-29 20:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -51,7 +51,7 @@ msgstr "UnderStrap"
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -70,7 +70,7 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -217,7 +217,7 @@ msgstr ""
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://es.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -367,24 +367,25 @@ msgstr "No se ha encontrado nada"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
 msgstr ""
-"¿Preparado para publicar tu primer post? <a href=\"%1$s\">Comenzar aquí</a>."
+"¿Listo para publicar tu primera entrada? <a href=\"%s\">Empieza aquí</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Lo siento, pero no hemos encontrado nada con las palabras utilizadas. Prueba "
-"de nuevo con otras palabras."
+"Lo siento, pero no hay nada que coincida con tus términos de búsqueda. Por "
+"favor, inténtalo de nuevo con algunas palabras clave diferentes."
 
 #: loop-templates/content-none.php:46
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Al parecer no he mos podido encontrar lo que estaba buscando."
+msgstr ""
+"Parece que no hemos podido encontrar lo que estás buscando. Quizá pueda "
+"ayudarte una búsqueda."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42

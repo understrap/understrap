@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: UnderStrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:18+0200\n"
+"PO-Revision-Date: 2021-07-29 20:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -29,7 +29,7 @@ msgstr "UnderStrap"
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -198,7 +198,7 @@ msgstr ""
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://he.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -348,15 +348,16 @@ msgstr "לא נמצא כלום"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "מוכן לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">נא להתחיל כאן</a>."
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr "מוכנ/ה לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">התחל/י כאן</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "סליחה, אבל לא מצאנו את מה שחיפשתם. נסו שוב עם מילות חיפוש אחרות."
+msgstr ""
+"מצטערים, אבל שום דבר לא תואם למונחי החיפוש שלך. נסה שוב עם כמה מילות מפתח "
+"שונות."
 
 #: loop-templates/content-none.php:46
 msgid ""

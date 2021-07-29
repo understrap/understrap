@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:00+0200\n"
+"PO-Revision-Date: 2021-07-29 20:09+0200\n"
 "Last-Translator: vincent <v.vanbergen@gmail.com>\n"
 "Language-Team: Nederlands\n"
 "Language: nl_NL\n"
@@ -23,7 +23,7 @@ msgstr "UnderStrap"
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -42,7 +42,7 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -189,7 +189,7 @@ msgstr ""
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://nl.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -339,18 +339,17 @@ msgstr "Niets gevonden"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
 msgstr ""
-"Klaar om je eerste bericht te plaatsen? <a href=\"%1$s\">Begin hier</a>."
+"Klaar om je eerste bericht te publiceren? <a href=\"%s\">Begin hier</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Helaas, er waren geen overeenkomsten met jouw zoekopdracht. Probeer het "
-"opnieuw met enkele andere zoekwoorden."
+"Er kwam niets overeen met je zoektermen. Probeer het opnieuw met een aantal "
+"andere trefwoorden."
 
 #: loop-templates/content-none.php:46
 msgid ""
