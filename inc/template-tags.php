@@ -226,6 +226,8 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
 		<?php
+	}
+}
 
 if ( ! function_exists( 'understrap_link_pages' ) ) {
 	/**
