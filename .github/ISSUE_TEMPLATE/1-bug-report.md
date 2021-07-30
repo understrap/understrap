@@ -19,11 +19,10 @@ assignees: ''
 	Note: These comments won't show up when you submit the issue.
 -->
 
-# The Bug
-
-## Describe the bug
-A clear and concise description of what the bug is.
+## Describe the Bug
 <!--
+	A clear and concise description of what the bug is.
+
 	*Who* is the bug affecting?
 	*What* is affected by this bug?
 	*When* does this occur?
@@ -37,13 +36,13 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
-## Expected behavior
-A clear and concise description of what you expected to happen.
+## Expected Behavior
+<!-- A clear and concise description of what you expected to happen. -->
 
 ## Screenshots / Videos
-If applicable, add screenshots/videos to help explain your problem.
+<!-- If applicable, add screenshots/videos to help explain your problem. -->
 
-# The Environment
+## The Environment
 
 <!-- Please complete the following information: -->
 - **WordPress Version:** [ 5.7.x | 5.8.x ]
@@ -52,7 +51,7 @@ If applicable, add screenshots/videos to help explain your problem.
 - **Language:** [ all | PHP | SQL | HTML | S/CSS | Javascript | jQuery | ES6 | JSON | XML ]
 - **Node.js & NPM Versions:** Node.js [V X.XX] | NPM [V X.XX]
 
-# Additional context
+## Additional Context
 <!--
 	Add any other context about the problem here.
 	E.g. Are there any related Issues and/or PRs?
