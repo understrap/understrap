@@ -19,9 +19,9 @@ assignees: ''
 	Note: These comments won't show up when you submit the issue.
 -->
 
-### The Bug
+# The Bug
 
-**Describe the bug**
+## Describe the bug
 A clear and concise description of what the bug is.
 <!--
 	*Who* is the bug affecting?
@@ -30,20 +30,20 @@ A clear and concise description of what the bug is.
 	*Where* on the platform does it happen?
 -->
 
-**To Reproduce**
+## To Reproduce
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+## Expected behavior
 A clear and concise description of what you expected to happen.
 
-**Screenshots / Videos**
+## Screenshots / Videos
 If applicable, add screenshots/videos to help explain your problem.
 
-### The Environment
+# The Environment
 
 <!-- Please complete the following information: -->
 - **WordPress Version:** [ 5.7.x | 5.8.x ]
@@ -52,7 +52,7 @@ If applicable, add screenshots/videos to help explain your problem.
 - **Language:** [ all | PHP | SQL | HTML | S/CSS | Javascript | jQuery | ES6 | JSON | XML ]
 - **Node.js & NPM Versions:** Node.js [V X.XX] | NPM [V X.XX]
 
-### Additional context
+# Additional context
 <!--
 	Add any other context about the problem here.
 	E.g. Are there any related Issues and/or PRs?

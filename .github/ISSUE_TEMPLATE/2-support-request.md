@@ -18,14 +18,15 @@ assignees: ''
 	Note: These comments won't show up when you submit the issue.
 -->
 
-**Describe the problem**
-A clear and concise description of the problem.
+## Description
+<!-- A clear and concise description of the problem. -->
 
-**Screenshots / Videos**
-If applicable, add screenshots/videos to help explain your problem.
 
-**Code**
-If applicable, provide code to help explain your problem.
+## Screenshots / Videos
+<!-- If applicable, add screenshots/videos to help explain your problem. -->
 
-**Additional context**
-Add any other context about the problem here (e.g. related issues).
+## Code
+<!-- If applicable, provide code to help explain your problem. -->
+
+## Additional context
+<!--Add any other context about the problem here (e.g. related issues). -->
