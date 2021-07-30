@@ -47,29 +47,29 @@ if ( ! function_exists( 'understrap_tiny_mce_before_init' ) ) {
 
 		$style_formats = array(
 			array(
-				'title'    => 'Lead Paragraph',
+				'title'    => __( 'Lead Paragraph', 'understrap' ),
 				'selector' => 'p',
 				'classes'  => 'lead',
 				'wrapper'  => true,
 			),
 			array(
-				'title'  => 'Small',
+				'title'  => _x( 'Small', 'Font size name', 'understrap' ),
 				'inline' => 'small',
 			),
 			array(
-				'title'   => 'Blockquote',
+				'title'   => __( 'Blockquote', 'understrap' ),
 				'block'   => 'blockquote',
 				'classes' => 'blockquote',
 				'wrapper' => true,
 			),
 			array(
-				'title'   => 'Blockquote Footer',
+				'title'   => __( 'Blockquote Footer', 'understrap' ),
 				'block'   => 'footer',
 				'classes' => 'blockquote-footer',
 				'wrapper' => true,
 			),
 			array(
-				'title'  => 'Cite',
+				'title'  => __( 'Cite', 'understrap' ),
 				'inline' => 'cite',
 			),
 		);
