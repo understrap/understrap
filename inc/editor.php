@@ -83,3 +83,27 @@ if ( ! function_exists( 'understrap_tiny_mce_before_init' ) ) {
 		return $settings;
 	}
 }
+
+add_filter( 'mce_buttons', 'understrap_tiny_mce_blockquote_button' );
+
+if ( ! function_exists( 'understrap_tiny_mce_blockquote_button' ) ) {
+	/**
+	 * Removes the blockquote button from the TinyMCE toolbar.
+	 *
+	 * We provide the blockquote via the style formats. Using the style formats
+	 * blockquote receives the proper Bootstrap classes.
+	 *
+	 * @see understrap_tiny_mce_before_init()
+	 *
+	 * @param array $buttons TinyMCE buttons array.
+	 * @return array TinyMCE buttons array without the blockquote button.
+	 */
+	function understrap_tiny_mce_blockquote_button( $buttons ) {
+		foreach ( $buttons as $key => $button ) {
+			if ( 'blockquote' === $button ) {
+				unset( $buttons[ $key ] );
+			}
+		}
+		return $buttons;
+	}
+}
