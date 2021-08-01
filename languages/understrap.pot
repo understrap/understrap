@@ -40,7 +40,7 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:36
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try or a search?"
 msgstr ""
 
 #: 404.php:46

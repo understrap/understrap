@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-29 19:42+0200\n"
+"PO-Revision-Date: 2021-08-01 12:23+0200\n"
 "Last-Translator: Mirosław Zalewski <mz@miroslaw-zalewski.eu>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -80,15 +80,11 @@ msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ups! Strona nie została znaleziona."
+msgstr "Ups! Nie udało się znaleźć pożądanej strony."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Wygląda na to, że nic tutaj nie znaleziono. Może spróbuj wyszukiwania "
-"lubkliknij jeden z odnośników poniżej?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Niczego tutaj nie ma. Może użyj wyszukiwarki?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -97,7 +93,7 @@ msgstr "Najczęściej używane kategorie"
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Sprawdź w archiwum %1$s"
+msgstr "Spróbuj przeszukać miesięczne archiwa. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -370,7 +366,7 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Nic nie znaleziono"
+msgstr "Niczego nie znaleziono"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30

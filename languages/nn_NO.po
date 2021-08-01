@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-29 19:42+0200\n"
+"PO-Revision-Date: 2021-08-01 12:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nn_NO\n"
@@ -81,24 +81,21 @@ msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Uffda! Den siden blei ikkje funne."
+msgstr "Ops! Den sida finst ikkje."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Det ser ikkje ut til at det finst noko her. Kanskje prøv ein av koblingene "
-"nedenfor eller eit søk?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Me fann ingenting her. Kanskje me skulle prøve å søkje?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Mest brukte kategorier"
+msgstr "Mest brukte kategoriar"
 
 #. translators: %1$s: smiley
 #: 404.php:69
+#, fuzzy
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Prøv å sjå i dei månedlige arkivene. %1$s"
+msgstr "Prøv å sjå etter i månadsarkiva. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -370,7 +367,7 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Ingenting funne"
+msgstr "Fann ingenting"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30

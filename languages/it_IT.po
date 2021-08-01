@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-29 20:10+0200\n"
+"PO-Revision-Date: 2021-08-01 12:19+0200\n"
 "Last-Translator: Max Guglielmino <info@maxguglielmino.com>\n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -16,10 +16,11 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 3.0\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;"
+"_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;"
+"esc_attr_x:1,2c;esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;"
+"transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
@@ -74,15 +75,13 @@ msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Quella pagina non può essere trovata."
+msgstr "Oops! La pagina non è stata trovata."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Sembra che nulla sia stato trovato a questo indirizzo. Magari prova uno dei "
-"link sotto o una ricerca?"
+"Non è stato trovato nulla nel posto in cui stavi cercando. Forse potresti "
+"provare con una ricerca?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -91,7 +90,7 @@ msgstr "Categorie più utilizzate"
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Prova a cercare tra gli archivi mensili. %1$s"
+msgstr "Provare a consultare gli archivi mensili. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -363,7 +362,7 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Nessun Risultato"
+msgstr "Nessun risultato"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30

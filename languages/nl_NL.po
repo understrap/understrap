@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-29 20:09+0200\n"
+"PO-Revision-Date: 2021-08-01 12:21+0200\n"
 "Last-Translator: vincent <v.vanbergen@gmail.com>\n"
 "Language-Team: Nederlands\n"
 "Language: nl_NL\n"
@@ -46,24 +46,22 @@ msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oeps! Deze pagina kan niet worden gevonden."
+msgstr "Deze pagina kon niet worden gevonden."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Het lijkt erop dat er niets gevonden is op deze locatie. Probeer anders "
-"&#233;&#233;n van de onderstaande links of een zoekopdracht? "
+"Het lijkt erop dat er op deze locatie niets is gevonden. Misschien een "
+"zoekopdracht proberen?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Meestgebruikte categorie&#235;n"
+msgstr "Meest gebruikte categorie&#235;n"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Wellicht kun je kijken in de maandelijkse archieven. %1$s"
+msgstr "Probeer te zoeken in de maandelijkse archieven. %1$s"
 
 #. translators: %s: author name
 #: author.php:42

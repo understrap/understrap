@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-29 19:39+0200\n"
+"PO-Revision-Date: 2021-08-01 12:24+0200\n"
 "Last-Translator: edkozuto <edkozuto@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -77,24 +77,23 @@ msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Не удалось найти эту страницу."
+msgstr "Ой! Страница не найдена."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Похоже, здесь ничего не удалось найти. Попробуйте одну из ссылок ниже или "
-"поиск."
+"Похоже, что по этому адресу ничего не найдено. Возможно, стоит попробовать "
+"воспользоваться поиском?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Популярные категории"
+msgstr "Часто используемые рубрики"
 
 #. translators: %1$s: smiley
 #: 404.php:69
+#, fuzzy
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Попробуйте поискать в архивах за прошлые месяцы. %1$s"
+msgstr "Загляните в архивы по месяцам %1$s"
 
 #. translators: %s: author name
 #: author.php:42

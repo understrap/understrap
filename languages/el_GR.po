@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-29 20:15+0200\n"
+"PO-Revision-Date: 2021-08-01 12:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: stef.kariotidis@gmail.com\n"
 "Language: el_GR\n"
@@ -82,24 +82,22 @@ msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Ωπα! Αυτή η σελίδα δε βρέθηκε."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Φαίνεται ότι δεν βρέθηκε κάτι σε αυτή τη τοποθεσία. Ίσως να δοκιμάζατε έναν "
-"απο τους παρακάτω συνδέσμους ή την αναζήτηση;"
+"Φαίνεται ότι δε βρέθηκε τίποτα σε αυτή την τοποθεσία. Μήπως να δοκιμάζατε "
+"μια αναζήτηση;"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Οι πιο Χρησιμοποιημένες Κατηγορίες"
+msgstr "Οι Πιο Χρησιμοποιημένες Κατηγορίες"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Δείτε στα μηνιαία αρχεία. %1$s"
+msgstr "Δοκιμάστε να αναζητήσετε στα μηνιαία αρχεία. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
