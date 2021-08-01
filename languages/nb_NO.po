@@ -371,9 +371,9 @@ msgstr "Intet funnet"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Klar til å publisere ditt første innlegg? <a href=\"%s\">Kom i gang her</a>."
+"Klar til å publisere ditt første innlegg? <a href=\"%1$s\">Kom i gang her</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""

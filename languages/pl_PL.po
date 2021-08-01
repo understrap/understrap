@@ -370,9 +370,9 @@ msgstr "Niczego nie znaleziono"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Czy można już opublikować pierwszy wpis? <a href=\"%s\">Zacznij tutaj</a>."
+"Czy można już opublikować pierwszy wpis? <a href=\"%1$s\">Zacznij tutaj</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""

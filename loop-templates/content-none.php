@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 			$kses = array( 'a' => array( 'href' => array() ) );
 			printf(
 				/* translators: 1: Link to WP admin new post page. */
-				'<p>' . wp_kses( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'understrap' ), $kses ) . '</p>',
+				'<p>' . wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'understrap' ), $kses ) . '</p>',
 				esc_url( admin_url( 'post-new.php' ) )
 			);
 

@@ -364,9 +364,9 @@ msgstr "찾을 수 없습니다"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"첫 글을 발행할 준비가 되었나요? <a href=\"%s\">여기에서 시작하세요</a>."
+"첫 글을 발행할 준비가 되었나요? <a href=\"%1$s\">여기에서 시작하세요</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
