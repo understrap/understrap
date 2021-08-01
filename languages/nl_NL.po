@@ -17,8 +17,8 @@ msgstr ""
 "X-Loco-Api-Version: 1.0.15 20161122-1\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40

@@ -44,8 +44,8 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
@@ -70,7 +70,7 @@ msgstr ""
 "benötigst. WICHTIG: Alle Abhängigkeiten der Entwicklertools sind in diesem "
 "Paket nicht enthalten! Laden Sie die ZIP-Datei herunter, entpacken Sie sie "
 "und führen Sie \"npm install\" sowie \"gulp copy-assets\" in der Konsole im "
-"entpackten UnderStrap-Ordner aus."
+"entpackten Understrap-Ordner aus."
 
 #. Author of the theme
 msgid "the Understrap Authors"
