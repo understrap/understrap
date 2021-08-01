@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-08-01 19:38+0200\n"
+"PO-Revision-Date: 2021-08-01 21:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -17,8 +17,8 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -37,9 +37,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -103,7 +103,7 @@ msgstr[1] "מחשבות על &ldquo;%2$s&rdquo;"
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "דלג לתוכן"
+msgstr "לדלג לתוכן"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -158,8 +158,8 @@ msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
-"הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם "
-"או אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
+"הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם או "
+"אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
 
 #: inc/customizer.php:123
 msgid "Right sidebar"
@@ -357,8 +357,8 @@ msgstr ""
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr "נראה שאנחנו לא מוצאים את מה שחיפשת. אולי חיפוש יכול לעזור."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
