@@ -34,7 +34,7 @@
     "bootstrap": "^4.6.0",
     "browser-sync": "^2.27.5",
     "browserslist": "^4.16.6",
-    "caniuse-lite": "^1.0.30001248",
+    "caniuse-lite": "^1.0.30001249",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
