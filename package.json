@@ -4,7 +4,12 @@
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gulp copy-assets"
+    "css": "npm-run-all css-compile css-prefix css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css sass/theme.scss:css/theme.css sass/custom-editor-style.scss:css/custom-editor-style.css",
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\"",
+    "css-prefix": "postcss --config postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "watch": "npm-run-all --parallel watch-*",
+    "watch-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\""
   },
   "engines": {
     "node": "^12 || >=14"
@@ -35,20 +40,13 @@
     "browser-sync": "^2.27.5",
     "browserslist": "^4.16.6",
     "caniuse-lite": "^1.0.30001248",
+    "clean-css-cli": "^5.3.3",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^9.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
     "sass": "^1.37.0"
   }
 }
