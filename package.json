@@ -4,10 +4,10 @@
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
-    "css": "npm-run-all css-compile css-prefix css-minify",
+    "css": "npm-run-all css-compile css-postcss css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css sass/theme.scss:css/theme.css sass/custom-editor-style.scss:css/custom-editor-style.css",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\"",
-    "css-prefix": "postcss --config postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "css-postcss": "postcss --config postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\""
   },
