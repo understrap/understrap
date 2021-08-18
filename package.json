@@ -4,12 +4,18 @@
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
+	"bs": "browser-sync start --config build/browser-sync.config.js",
     "css": "npm-run-all css-compile css-postcss css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css sass/theme.scss:css/theme.css sass/custom-editor-style.scss:css/custom-editor-style.css",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\"",
-    "css-postcss": "postcss --config postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
-    "watch": "npm-run-all --parallel watch-*",
-    "watch-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\""
+    "css-postcss": "postcss --config build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "js": "npm-run-all js-compile js-minify",
+    "js-compile": "rollup --config build/rollup.config.js --sourcemap",
+    "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=js/theme.js.map,includeSources,url=theme.min.js.map\" --output js/theme.min.js js/theme.js",
+    "watch": "npm-run-all --parallel watch-run-*",
+	"watch-bs": "npm-run-all --parallel bs watch-run-*",
+    "watch-run-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\"",
+    "watch-run-js": "nodemon --watch src/js/ --ext js --exec \"npm-run-all js\""
   },
   "engines": {
     "node": "^12 || >=14"
@@ -31,10 +37,15 @@
     "url": "https://github.com/understrap/understrap/issues"
   },
   "homepage": "https://understrap.com",
-  "dependencies": {},
+  "dependencies": {
+    "terser": "^5.7.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.9",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "autoprefixer": "^10.3.1",
     "bootstrap": "^4.6.0",
     "browser-sync": "^2.27.5",
@@ -47,6 +58,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
+    "rollup": "^2.56.2",
     "sass": "^1.37.0"
   }
 }
