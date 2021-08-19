@@ -40,7 +40,7 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:36
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try or a search?"
 msgstr ""
 
 #: 404.php:46
@@ -379,9 +379,11 @@ msgid "Search &hellip;"
 msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr ""

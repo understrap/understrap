@@ -3,16 +3,14 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-27 23:59+0200\n"
+"PO-Revision-Date: 2021-08-01 21:14+0200\n"
 "Last-Translator: Filip Wessman <filip@effektid.com>\n"
 "Language-Team: Swedish (Swedish)\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Loco-Source-Locale: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 3.0\n"
@@ -22,7 +20,6 @@ msgstr ""
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Loco-Parser: loco_parse_po\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
 "X-Poedit-SearchPath-2: index.php\n"
@@ -47,13 +44,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -61,9 +58,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -72,28 +69,25 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Sidan verkar inte finnas."
+msgstr "Hoppsan! Den sidan kan inte hittas."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Här verkar det inte finnas något. Du kan prova någon an länkarna nedan eller "
-"söka efter det?"
+"Det verkar som om inget hittades på denna plats. Kanske prova en sökning?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Most Used Categories"
+msgstr "Mest använda kategorier"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Try looking in the monthly archives. %1$s"
+msgstr "Prova att leta i månadsarkiven. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -128,11 +122,10 @@ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "Hoppa till innehållet"
+msgstr "Gå till innehåll"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -148,7 +141,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Kommentarsfältet är avstängt."
+msgstr "Kommentarer inaktiverade."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -220,7 +213,7 @@ msgstr ""
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://sv.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -370,22 +363,23 @@ msgstr "Inget hittades"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Redo att skriv ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Är du redo att publicera ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Tyvärr fick din sökning inga träffar. Du kan prova igen med nya nyckelord."
+msgstr "Inget matchade dina söktermer. Försök igen med några andra nyckelord."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "Vi verkar inte hitta det du söker, Det kanske hjälper att söka."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr ""
+"Det verkar inte som om vi kan hitta det du letar efter. Kanske kan en sökning "
+"hjälpa."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -419,7 +413,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Sök resultat för: %s"
+msgstr "Sökresultat för: %s"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -430,9 +424,11 @@ msgid "Search &hellip;"
 msgstr "Sök &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr ""

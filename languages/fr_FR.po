@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:25+0200\n"
+"PO-Revision-Date: 2021-08-01 21:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -45,13 +45,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -59,18 +59,18 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 "Une combinaison du thème _s d'Automattic et de Bootstrap 4. Un excellent "
 "point de départ pour votre prochain projet de thème et de site Web de "
-"WordPress. Utilisez-le comme thème de démarrage ou comme thème parent. À "
-"vous de décider. Inclus Font-Awesome, des widgets intégrés et tout ce dont "
-"vous avez besoin pour votre site. IMPORTANT: les dépendances des "
-"développeurs ne sont pas livrées avec ce fichier d'installation. Il suffit "
-"de télécharger le fichier .zip, de l'extraire et d'exécuter \"npm install\" "
-"et \"gulp copy-assets\" dans le dossier extract / understrap."
+"WordPress. Utilisez-le comme thème de démarrage ou comme thème parent. À vous "
+"de décider. Inclus Font-Awesome, des widgets intégrés et tout ce dont vous "
+"avez besoin pour votre site. IMPORTANT: les dépendances des développeurs ne "
+"sont pas livrées avec ce fichier d'installation. Il suffit de télécharger le "
+"fichier .zip, de l'extraire et d'exécuter \"npm install\" et \"gulp copy-"
+"assets\" dans le dossier extract / understrap."
 
 #. Author of the theme
 msgid "the Understrap Authors"
@@ -78,19 +78,16 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oups! La page n'a pu être trouvée."
+msgstr "Aïe ! Cette page est introuvable."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Il semble qu'il n'y ait rien à cet adresse. Essayez peut-être une recherche "
-"ou l'un des liens ci-dessous ?"
+"Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une recherche ?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -99,7 +96,7 @@ msgstr "Catégories les plus utilisées"
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Jetez un œil dans les archives mensuelles. %1$s"
+msgstr "Essayez de voir du côté des archives mensuelles. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -225,7 +222,7 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://fr.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -371,28 +368,29 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Non trouvé"
+msgstr "Rien de trouvé"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier article ? <a href=\"%1$s\">Démarrer ici</a>."
+"Prêt·e à publier votre premier article ? <a href=\"%1$s\">Lancez-vous ici</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Désolé, rien ne correspond à votre recherche. Veuillez réessayer avec "
-"d'autres termes."
+"Désolé, mais rien ne correspond à vos critères de recherche. Veuillez "
+"réessayer avec d’autres mots-clés."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "Il semble que nous ne puissions trouver ce que vous recherchez."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr ""
+"Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. "
+"Essayez en lançant une recherche."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -426,7 +424,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour: %s"
+msgstr "Résultats de recherche pour : %s"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -437,9 +435,11 @@ msgid "Search &hellip;"
 msgstr "Recherche &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "Précédent"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "Prochain"
