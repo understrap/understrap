@@ -3,6 +3,6 @@ contact_links:
   - name: Ask a Question
     url: https://github.com/understrap/understrap/discussions/new?category=q-a
     about: Please ask your question in the discussion forum of this repository.
-  - name: Feature Requests / Suggestion
-    url: https://github.com/understrap/understrap-roadmap/issues
-    about: Please submit it to our public roadmap repository.
+  - name: Roadmap
+    url: https://github.com/understrap/understrap/projects/2
+    about: Please review our public roadmap repository before suggesting a feature.
