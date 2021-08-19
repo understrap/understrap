@@ -12,7 +12,8 @@ module.exports = ctx => {
     plugins: {
       autoprefixer: {
         cascade: false
-      }
+      },
+	  "postcss-understrap-palette-generator" : {}
     }
   }
 }
