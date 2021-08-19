@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: UnderStrap\n"
+"Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:18+0200\n"
+"PO-Revision-Date: 2021-08-01 21:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -23,13 +23,13 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -37,9 +37,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -48,28 +48,24 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "לא ניתן למצוא את הדף."
+msgstr "העמוד לא נמצא."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"לא נמצא שום עסק במיקום זה , נסה את אחד הקישורים או נסה חיפוש חוזר. האם רשמת "
-"נכון את שם העסק?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "נראה שאין כאן כלום. שננסה את אפשרות החיפוש?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "קטגוריות פופולרייות"
+msgstr "קטגוריות בולטות"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "נסה להסתכל בארכיון החודשי.%1$s"
+msgstr "כדאי לחפש בארכיון החודשי. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -107,7 +103,7 @@ msgstr[1] "מחשבות על &ldquo;%2$s&rdquo;"
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "דלג לתוכן"
+msgstr "לדלג לתוכן"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -123,7 +119,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "תגובות סגורות."
+msgstr "סגור לתגובות."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -162,8 +158,8 @@ msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
-"הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם "
-"או אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
+"הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם או "
+"אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
 
 #: inc/customizer.php:123
 msgid "Right sidebar"
@@ -198,7 +194,7 @@ msgstr ""
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://he.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -344,24 +340,25 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "לא נמצא כלום"
+msgstr "לא נמצא דבר"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "מוכן לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">נא להתחיל כאן</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "מוכנ/ה לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">התחל/י כאן</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "סליחה, אבל לא מצאנו את מה שחיפשתם. נסו שוב עם מילות חיפוש אחרות."
+msgstr ""
+"מצטערים, אבל שום דבר לא תואם למונחי החיפוש שלך. נסה שוב עם כמה מילות מפתח "
+"שונות."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr "נראה שאנחנו לא מוצאים את מה שחיפשת. אולי חיפוש יכול לעזור."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
@@ -396,7 +393,7 @@ msgstr "סרגל צדדי ימני"
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "תוצאות חיפוש ל: %s"
+msgstr "תוצאות חיפוש עבור: %s"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -407,9 +404,11 @@ msgid "Search &hellip;"
 msgstr "חפש &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "הקודם"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "הבא"

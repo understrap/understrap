@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:24+0200\n"
+"PO-Revision-Date: 2021-08-01 21:13+0200\n"
 "Last-Translator: Diego Versiani <diegoversiani@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -44,23 +44,23 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
-"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
-"starting point for your next theme project and WordPress website. Use it as "
-"starter theme or as a parent theme. It is up to you. Including Font Awesome "
-"support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting "
+"point for your next theme project and WordPress website. Use it as starter "
+"theme or as a parent theme. It is up to you. Including Font Awesome support, "
+"built-in widget slider and much more you need for basic websites. IMPORTANT: "
+"All developer dependencies are not bundled with this install file. Just "
+"download the .zip, extract it and run \"npm install\" and \"gulp copy-assets\" "
+"inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -69,30 +69,24 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-"Ops! A p&aacute;gina que voc&ecirc; procura n&atilde;o p&ocirc;de ser "
-"encontada."
+msgstr "Opa! A página não pode ser encontrada."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Parece que a p&aacute;gina que voc&ecirc; procura n&atilde;o existe ou foi "
-"removida.<br><br> Tente os links abaixo ou use a pesquisa."
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Parece que nada foi encontrado neste local. Que tal tentar uma pesquisa?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Categorias Mais Usadas"
+msgstr "Categorias mais Usadas"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Tente procurando nos artigos mensais. %1$s"
+msgstr "Tente olhar nos arquivos mensais. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -131,7 +125,7 @@ msgstr[1] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "Ir para o conte&uacute;do"
+msgstr "Pular para o conteúdo"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -147,7 +141,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Os comentários estão fechados."
+msgstr "Os comentários estão desativados."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -219,7 +213,7 @@ msgstr ""
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://br.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -365,30 +359,29 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Nada encontrado."
+msgstr "Nada encontrado"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece aqui</a>."
+"Pronto para publicar o seu primeiro post? <a href=\"%1$s\">Comece por aqui</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Desculpe, mas nada foi encontrado para sua pesquisa. Por favor, tente "
-"novamente com outras palavras."
+"Nada foi encontrado com os termos da sua pesquisa. Tente novamente com algumas "
+"palavras-chaves diferentes."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr ""
-"Parece que a p&aacute;gina que voc&ecirc; procura n&atilde;o existe ou foi "
-"removida.<br><br> Tente os links abaixo ou use a pesquisa."
+"Parece que não conseguimos encontrar o que você está procurando. Talvez uma "
+"pesquisa pode ajudar."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -422,7 +415,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Resultado da pesquisa por: %s"
+msgstr "Resultados da pesquisa por: %s"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -433,9 +426,11 @@ msgid "Search &hellip;"
 msgstr "Pesquisando &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr ""

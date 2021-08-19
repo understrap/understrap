@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:36+0200\n"
+"PO-Revision-Date: 2021-08-01 21:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nn_NO\n"
@@ -44,13 +44,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -58,18 +58,18 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 "Kombinasjon av Automattic's _s tema og Bootstrap 4. Laget som eit solid "
-"utgangspunkt for ditt neste tema-prosjekt og WordPress-nettstad. Bruk det "
-"som utgangspunkt eller som eit overordnet tema. Det er opp til deg. "
-"Inkludert Font Awesome-støtte, innebygget widget for skyvekontroll og mye "
-"meir du trenger for grunnleggende nettstader. VIKTIG: Alle "
-"utvikleravhengigheter er ikkje buntet sammen med denne installasjonsfilen. "
-"Bare last ned .zip-filen, pakk den ut og kjør \"npm install\" og \"gulp copy-"
-"assets\" inne i utpakket /understrap-mappe."
+"utgangspunkt for ditt neste tema-prosjekt og WordPress-nettstad. Bruk det som "
+"utgangspunkt eller som eit overordnet tema. Det er opp til deg. Inkludert "
+"Font Awesome-støtte, innebygget widget for skyvekontroll og mye meir du "
+"trenger for grunnleggende nettstader. VIKTIG: Alle utvikleravhengigheter er "
+"ikkje buntet sammen med denne installasjonsfilen. Bare last ned .zip-filen, "
+"pakk den ut og kjør \"npm install\" og \"gulp copy-assets\" inne i utpakket /"
+"understrap-mappe."
 
 #. Author of the theme
 msgid "the Understrap Authors"
@@ -77,28 +77,25 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Uffda! Den siden blei ikkje funne."
+msgstr "Ops! Den sida finst ikkje."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Det ser ikkje ut til at det finst noko her. Kanskje prøv ein av koblingene "
-"nedenfor eller eit søk?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Me fann ingenting her. Kanskje me skulle prøve å søkje?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Mest brukte kategorier"
+msgstr "Mest brukte kategoriar"
 
 #. translators: %1$s: smiley
 #: 404.php:69
+#, fuzzy
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Prøv å sjå i dei månedlige arkivene. %1$s"
+msgstr "Prøv å sjå etter i månadsarkiva. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -136,7 +133,7 @@ msgstr[1] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "Hopp til innhald"
+msgstr "Gå vidare til hovudinnhaldet"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -152,7 +149,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Kommentarer er stengt."
+msgstr "Stengt for kommentarar."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -224,7 +221,7 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -370,30 +367,27 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Ingenting funne"
+msgstr "Fann ingenting"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Klar til å publisere ditt første innlegg? <a href=\"%1$s\">Kom i gang her</"
-"a>."
+#, fuzzy
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Klar til å skriva ditt fyrste innlegg? <a href=\"%1$s\">Start her</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Beklager, men ingenting samsvarer med søkeordene dine. Vennligst prøv igjen "
-"med nokre andre søkeord."
+msgstr "Ingen søkjetreff. Prøv ein gong til med andre stikkord."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr ""
-"Det virker som om vi ikkje finner det du leter etter. Kanskje søk kan hjelpe."
+"Me greier visst ikkje å finna det du ser etter. Kanskje det er hjelp i å "
+"søkja."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -426,8 +420,9 @@ msgstr ""
 
 #. translators: %s: query term
 #: search.php:36
+#, fuzzy
 msgid "Search Results for: %s"
-msgstr "Søkeresultater for: %s"
+msgstr "Søkjeresultat for: %s"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -438,9 +433,11 @@ msgid "Search &hellip;"
 msgstr "Søk &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "Forrige"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "Neste"

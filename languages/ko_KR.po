@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:14+0200\n"
+"PO-Revision-Date: 2021-08-01 21:10+0200\n"
 "Last-Translator: idpokute <mike.sayhi@gmail.com>\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -44,13 +44,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -58,9 +58,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -69,26 +69,25 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "페이지를 찾을 수 없습니다."
+msgstr "이런! 해당 페이지를 찾을 수 없습니다."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr "검색 결과가 없습니다. 아래의 링크 중의 하나, 혹은 검색을 이용해주세요."
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"이 위치에서 아무것도 발견하지 못한것으로 보이네요. 검색해보시는 것을 어떨까요?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "자주 사용된 카테고리"
+msgstr "가장 많이 사용된 카테고리"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "월별 아카이브를 "
+msgstr "월간 보관물을 확인해보세요. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -125,7 +124,7 @@ msgstr[0] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "본문가기"
+msgstr "콘텐츠로 바로가기"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -141,7 +140,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "댓글 기능이 꺼져있습니다."
+msgstr "댓글이 닫혀있습니다."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -213,7 +212,7 @@ msgstr ""
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -359,27 +358,26 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "찾을수가 없습니다"
+msgstr "찾을 수 없습니다"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "첫 포스트를 등록할 준비가 되었나요? <a href=\"%1$s\">작성하기</a>"
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"첫 글을 발행할 준비가 되었나요? <a href=\"%1$s\">여기에서 시작하세요</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"죄송합니다만 일치하는 검색 Term이 없습니다. 다른 키워드를 사용해서 다시 시도"
-"해주세요."
+"죄송하지만, 검색어에 일치하는 것이 없습니다. 다른 키워드로 다시 시도하세요."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "원하시는 것을 찾을 수가 없습니다. 검색이 도움이 될 수도 있습니다."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr "찾는 것이 없는 것 같습니다. 검색이 도움이 될 수도 있습니다."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -413,7 +411,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "%s 검색결과"
+msgstr "검색 결과: %s"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -424,9 +422,11 @@ msgid "Search &hellip;"
 msgstr "검색 ..."
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr ""

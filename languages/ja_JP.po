@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:15+0200\n"
+"PO-Revision-Date: 2021-08-01 21:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -44,13 +44,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -58,9 +58,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 "AutomatticのテーマとBootstrap 4のコンビネーション。あなたの次のテーマプロジェ"
 "クトとWordPressのウェブサイトの堅実な出発点として作られています。スターター"
@@ -77,27 +77,24 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "おっと！このページは見つかりませんでした。"
+msgstr "お探しのページが見つかりません。"
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"この場所では何も見つかりませんでした。下のリンクや検索を試してみますか？"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "こちらには何もありません。検索をお試しください。"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "よく使われるカテゴリー"
+msgstr "よく使われているカテゴリー"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "月々のアーカイブを見てみます。 %1$s"
+msgstr "月別アーカイブを探してみてください %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -134,7 +131,7 @@ msgstr[0] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "コンテンツへスキップ"
+msgstr "内容をスキップ"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -150,7 +147,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "コメントは閉じられました。"
+msgstr "コメントは受け付けていません。"
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -222,7 +219,7 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://ja.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -373,25 +370,24 @@ msgstr "何も見つかりませんでした"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"あなたの最初の投稿を公開する準備ができましたか？<a href=\"%1$s\">ここから始め"
-"ます</a>。"
+"最初の投稿を公開する準備はできましたか ? <a href=\"%1$s\">ここから始めましょう"
+"</a>。"
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"申し訳ありません。あなたの検索条件に一致するものがありませんでした。異なる"
-"キーワードで試してみてください。"
+"検索キーワードに一致するものが見つかりませんでした。 別のキーワードで試してみ"
+"てください。"
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "お探しのコンテンツは見つかりませんでした。検索をお試しください。"
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr "お探しのコンテンツを見つけられませんでした。検索をお試しください。"
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -425,7 +421,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "検索結果: %s"
+msgstr "「%s」の検索結果"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -436,9 +432,11 @@ msgid "Search &hellip;"
 msgstr "検索&hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "前"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "次"

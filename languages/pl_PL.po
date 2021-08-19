@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:01+0200\n"
+"PO-Revision-Date: 2021-08-01 21:12+0200\n"
 "Last-Translator: Mirosław Zalewski <mz@miroslaw-zalewski.eu>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -44,13 +44,13 @@ msgstr ""
 "X-Poedit-SearchPath-20: page-templates\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -58,9 +58,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 "Połączenie motywu _s od Automattic oraz Bootstrapa 4. Stworzony jako solidna "
 "podstawa dla Twojego następnego motywu lub strony opartej na WordPressie. "
@@ -76,19 +76,15 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ups! Strona nie została znaleziona."
+msgstr "Ups! Nie udało się znaleźć pożądanej strony."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Wygląda na to, że nic tutaj nie znaleziono. Może spróbuj wyszukiwania "
-"lubkliknij jeden z odnośników poniżej?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Niczego tutaj nie ma. Może użyj wyszukiwarki?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -97,7 +93,7 @@ msgstr "Najczęściej używane kategorie"
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Sprawdź w archiwum %1$s"
+msgstr "Spróbuj przeszukać miesięczne archiwa. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -136,7 +132,7 @@ msgstr[2] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "Przejdź do treści"
+msgstr "Przeskocz do treści"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -152,7 +148,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Komentarze są zamknięte"
+msgstr "Możliwość komentowania została wyłączona."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -224,7 +220,7 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://pl.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -370,30 +366,27 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Nic nie znaleziono"
+msgstr "Niczego nie znaleziono"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Gotów do opublikowania pierwszego postu? <a href=\"%1$s\">Zacznij tutaj</a>."
+"Czy można już opublikować pierwszy wpis? <a href=\"%1$s\">Zacznij tutaj</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Niestety, nie znaleziono niczego, co pasowałoby do Twoich kryteriów "
-"wyszukiwania. Spróbuj ponownie używając innych słów kluczowych."
+msgstr "Brak wyników wyszukiwania. Proszę spróbować ponownie z innymi słowami."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr ""
-"Wygląda na to, że nie mogliśmy znaleźć tej strony. Może skorzystaj z "
-"wyszukiwarki?"
+"Nie udało się znaleźć tego, czego szukasz. Być może wyszukiwanie przyniesie "
+"lepsze rezultaty."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -427,7 +420,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Wyniki wyszukiwania dla frazy: %s"
+msgstr "Wyniki wyszukiwania: %s"
 
 #: searchform.php:13 searchform.php:19
 msgid "Search"
@@ -438,9 +431,11 @@ msgid "Search &hellip;"
 msgstr "Szukaj &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "Poprzednie"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "Następne"

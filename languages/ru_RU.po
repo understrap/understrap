@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:28+0200\n"
+"PO-Revision-Date: 2021-08-01 21:13+0200\n"
 "Last-Translator: edkozuto <edkozuto@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -45,13 +45,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -59,9 +59,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install file. "
+"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
+"assets\" inside the extracted /understrap folder."
 msgstr ""
 "Сочетание темы _s от Automatic и Bootstrap 4. Надежный базис для создания "
 "ваших собственных тем и вебсайтов на WordPress. Используйте как основную или "
@@ -73,28 +73,27 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Не удалось найти эту страницу."
+msgstr "Ой! Страница не найдена."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Похоже, здесь ничего не удалось найти. Попробуйте одну из ссылок ниже или "
-"поиск."
+"Похоже, что по этому адресу ничего не найдено. Возможно, стоит попробовать "
+"воспользоваться поиском?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Популярные категории"
+msgstr "Часто используемые рубрики"
 
 #. translators: %1$s: smiley
 #: 404.php:69
+#, fuzzy
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Попробуйте поискать в архивах за прошлые месяцы. %1$s"
+msgstr "Загляните в архивы по месяцам %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -133,7 +132,7 @@ msgstr[2] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "Перейти к содержанию"
+msgstr "Перейти к содержимому"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -149,7 +148,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Комментарии закрыты."
+msgstr "Обсуждение закрыто."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -221,7 +220,7 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://ru.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -371,9 +370,9 @@ msgstr "Ничего не найдено"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Готовы опубликовать первую запись? <a href=\"%1$s\">Начните здесь</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать свою первую запись? <a href=\"%1$s\">Начните здесь</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
@@ -385,10 +384,11 @@ msgstr ""
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr ""
-"Кажется, мы не можем найти то, что вы ищете. Возможно, вам поможет поиск."
+"Похоже, нам не удалось найти то, что вы искали. Попробуйте воспользоваться "
+"поиском."
 
 #: loop-templates/content-page.php:29 loop-templates/content-single.php:35
 #: loop-templates/content.php:42
@@ -433,9 +433,11 @@ msgid "Search &hellip;"
 msgstr "Поиск &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "Назад"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "Далее"
