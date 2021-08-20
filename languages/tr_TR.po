@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-08-01 21:14+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:34+0200\n"
 "Last-Translator: Tanju Yıldız <ben@tanjuyildiz.com>\n"
 "Language-Team: \n"
 "Language: tr_TR\n"
@@ -58,9 +58,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install file. "
-"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
 "Automattic’in _s teması ve Bootstrap 4’ün birleşimi. Bir sonraki tema "
 "projeniz ve WordPress web siteniz için sağlam başlangıç noktası olarak "
@@ -204,19 +204,68 @@ msgstr "Sol & Sağ kenar çubukları"
 msgid "No sidebar"
 msgstr "Kenar çubuğu yok"
 
-#: inc/extras.php:100
-msgid "Post navigation"
-msgstr "Yazı dolaşımı"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=“fa fa-angle-left”></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr "Önceki"
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=“fa fa-angle-right”></i>"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Daha fazlasını oku…"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -252,10 +301,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "Birincil Menü"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "Daha fazlasını oku…"
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -299,22 +344,40 @@ msgstr "1 Yorum"
 msgid "% Comments"
 msgstr "% Yorum"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "%s yazısını düzenle"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "Yorum dolaşımı"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr; Eski Yorumlar"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "Yeni Yorumlar &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "%s yazısını düzenle"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Yazı dolaşımı"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=“fa fa-angle-left”></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=“fa fa-angle-right”></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Sayfalar:"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -370,9 +433,11 @@ msgstr "Hiçbirşey Bulunamadı"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"İlk yazınızı yayınlamaya hazır mısınız? <a href=\"%1$s\">Buradan başlayın</a>."
+"İlk yazınızı yayınlamaya hazır mısınız? <a href=\"%1$s\">Buradan başlayın</"
+"a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
@@ -384,15 +449,10 @@ msgstr ""
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 "Görünüşe göre aradığınız şeyi bulamıyoruz. Belki de arama yardımcı olabilir."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "Sayfalar:"
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -439,8 +499,9 @@ msgid "Search"
 msgstr "Ara"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
-msgstr "Önceki"
+msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"

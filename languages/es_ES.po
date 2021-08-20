@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-08-01 21:06+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:36+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -59,9 +59,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install file. "
-"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -199,19 +199,68 @@ msgstr ""
 msgid "No sidebar"
 msgstr ""
 
-#: inc/extras.php:100
-msgid "Post navigation"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
 msgstr ""
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:82
+msgid "Next"
 msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Leer más..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -247,10 +296,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "Menú principal"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "Leer más..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -294,22 +339,40 @@ msgstr "1 Comentario"
 msgid "% Comments"
 msgstr "% Comentarios"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "Editar %s"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "Ver los comentarios"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr; Comentarios antiguos"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "Comentarios más recientes &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr ""
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Páginas: "
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -365,7 +428,8 @@ msgstr "No se ha encontrado nada"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "¿Listo para publicar tu primera entrada? <a href=\"%1$s\">Empieza aquí</a>."
 
@@ -379,16 +443,11 @@ msgstr ""
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 "Parece que no hemos podido encontrar lo que estás buscando. Quizá pueda "
 "ayudarte una búsqueda."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "Páginas: "
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -435,6 +494,7 @@ msgid "Search"
 msgstr "Buscar"
 
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr ""
 
