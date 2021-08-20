@@ -369,13 +369,19 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:13
-#: searchform.php:19
-msgid "Search"
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
 msgstr ""
 
-#: searchform.php:16
+#: searchform.php:22
+msgctxt "placeholder"
 msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
 msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:28
