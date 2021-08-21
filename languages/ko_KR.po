@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-08-01 21:10+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:35+0200\n"
 "Last-Translator: idpokute <mike.sayhi@gmail.com>\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -58,9 +58,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install file. "
-"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -78,7 +78,8 @@ msgstr "이런! 해당 페이지를 찾을 수 없습니다."
 #: 404.php:36
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"이 위치에서 아무것도 발견하지 못한것으로 보이네요. 검색해보시는 것을 어떨까요?"
+"이 위치에서 아무것도 발견하지 못한것으로 보이네요. 검색해보시는 것을 어떨까"
+"요?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -196,19 +197,68 @@ msgstr ""
 msgid "No sidebar"
 msgstr ""
 
-#: inc/extras.php:100
-msgid "Post navigation"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
 msgstr ""
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:82
+msgid "Next"
 msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "더보기..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -244,10 +294,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "주 메뉴"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "더보기..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -291,22 +337,40 @@ msgstr "1 댓글"
 msgid "% Comments"
 msgstr "% 댓글"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "%s 편집"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "댓글 네비게이션"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "<이전 댓글"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "신규 댓글>"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "%s 편집"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr ""
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "페이지:"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -362,7 +426,8 @@ msgstr "찾을 수 없습니다"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "첫 글을 발행할 준비가 되었나요? <a href=\"%1$s\">여기에서 시작하세요</a>."
 
@@ -375,14 +440,9 @@ msgstr ""
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr "찾는 것이 없는 것 같습니다. 검색이 도움이 될 수도 있습니다."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "페이지:"
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -413,13 +473,20 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "검색 결과: %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "검색어:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "검색 &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "검색"
-
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "검색 ..."
 
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"

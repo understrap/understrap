@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-08-01 21:12+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nn_NO\n"
@@ -58,18 +58,18 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install file. "
-"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
 "Kombinasjon av Automattic's _s tema og Bootstrap 4. Laget som eit solid "
-"utgangspunkt for ditt neste tema-prosjekt og WordPress-nettstad. Bruk det som "
-"utgangspunkt eller som eit overordnet tema. Det er opp til deg. Inkludert "
-"Font Awesome-støtte, innebygget widget for skyvekontroll og mye meir du "
-"trenger for grunnleggende nettstader. VIKTIG: Alle utvikleravhengigheter er "
-"ikkje buntet sammen med denne installasjonsfilen. Bare last ned .zip-filen, "
-"pakk den ut og kjør \"npm install\" og \"gulp copy-assets\" inne i utpakket /"
-"understrap-mappe."
+"utgangspunkt for ditt neste tema-prosjekt og WordPress-nettstad. Bruk det "
+"som utgangspunkt eller som eit overordnet tema. Det er opp til deg. "
+"Inkludert Font Awesome-støtte, innebygget widget for skyvekontroll og mye "
+"meir du trenger for grunnleggende nettstader. VIKTIG: Alle "
+"utvikleravhengigheter er ikkje buntet sammen med denne installasjonsfilen. "
+"Bare last ned .zip-filen, pakk den ut og kjør \"npm install\" og \"gulp copy-"
+"assets\" inne i utpakket /understrap-mappe."
 
 #. Author of the theme
 msgid "the Understrap Authors"
@@ -205,19 +205,68 @@ msgstr "Venstre og høgre sidekolonner"
 msgid "No sidebar"
 msgstr "Ingen sidekolonne"
 
-#: inc/extras.php:100
-msgid "Post navigation"
-msgstr "Innlegg navigasjon"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr "Forrige"
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Les meir..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -253,10 +302,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "Hovedmeny"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "Les meir..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -300,22 +345,40 @@ msgstr "1 kommentar"
 msgid "% Comments"
 msgstr "% kommentarer"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "Rediger %s"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "Kommentar navigasjon"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr; Eldre kommentarer"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "Nyere kommentarer &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Rediger %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Innlegg navigasjon"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Sider:"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -372,7 +435,8 @@ msgstr "Fann ingenting"
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
 #, fuzzy
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Klar til å skriva ditt fyrste innlegg? <a href=\"%1$s\">Start her</a>."
 
 #: loop-templates/content-none.php:38
@@ -383,16 +447,11 @@ msgstr "Ingen søkjetreff. Prøv ein gong til med andre stikkord."
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 "Me greier visst ikkje å finna det du ser etter. Kanskje det er hjelp i å "
 "søkja."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "Sider:"
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -424,18 +483,25 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Søkjeresultat for: %s"
 
-#: searchform.php:13 searchform.php:19
-msgid "Search"
-msgstr "Søk"
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Leit etter:"
 
-#: searchform.php:16
+#: searchform.php:22
+msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Søk &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Søk"
 
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr "Forrige"
+msgstr ""
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"

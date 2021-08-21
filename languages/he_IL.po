@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-08-01 21:07+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -37,9 +37,9 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install file. "
-"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
 
 #. Author of the theme
@@ -158,8 +158,8 @@ msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
-"הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם או "
-"אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
+"הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם "
+"או אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
 
 #: inc/customizer.php:123
 msgid "Right sidebar"
@@ -177,20 +177,68 @@ msgstr "סרגלים צידיים שמאלה וימינה"
 msgid "No sidebar"
 msgstr "ללא סרגל צדדי"
 
-#: inc/extras.php:100
-msgid "Post navigation"
-msgstr "ניווט בפרסומים"
-
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
-"Read More&nbsp;<i class=\\\"dashicons dashicons-arrow-right-alt\\\"></i>"
+
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
+
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "קרא עוד..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -226,10 +274,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "תפריט ראשי"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "קרא עוד..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -273,22 +317,41 @@ msgstr "תגובה 1"
 msgid "% Comments"
 msgstr "% תגובות"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "ערוך את %s"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "ניווט תגובות"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr;  תגובות קודמות"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "תגובות חדשות יותר &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "ערוך את %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "ניווט בפרסומים"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+"Read More&nbsp;<i class=\\\"dashicons dashicons-arrow-right-alt\\\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "עמודים:"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -344,7 +407,8 @@ msgstr "לא נמצא דבר"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "מוכנ/ה לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">התחל/י כאן</a>."
 
 #: loop-templates/content-none.php:38
@@ -357,14 +421,9 @@ msgstr ""
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr "נראה שאנחנו לא מוצאים את מה שחיפשת. אולי חיפוש יכול לעזור."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "עמודים:"
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -395,13 +454,20 @@ msgstr "סרגל צדדי ימני"
 msgid "Search Results for: %s"
 msgstr "תוצאות חיפוש עבור: %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "חיפוש:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "חיפוש &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "חיפוש"
-
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "חפש &hellip;"
 
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
