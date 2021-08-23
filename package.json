@@ -6,7 +6,7 @@
   "scripts": {
     "bs": "browser-sync start --config build/browser-sync.config.js",
     "css": "npm-run-all css-compile css-postcss css-minify",
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css sass/theme.scss:css/theme.css sass/custom-editor-style.scss:css/custom-editor-style.css",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/sass/theme.scss:css/theme.css src/sass/custom-editor-style.scss:css/custom-editor-style.css",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\"",
     "css-postcss": "postcss --config build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
     "js": "npm-run-all js-compile js-minify",
