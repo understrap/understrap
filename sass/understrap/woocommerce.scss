@@ -30,3 +30,31 @@ figure.woocommerce-product-gallery__wrapper {
 		display: inherit;
 	}
 }
+
+.woocommerce-notices-wrapper .woocommerce-message {
+	@extend .alert;
+	@extend .alert-success;
+	padding: 1em 2em 1em 3.5em;
+
+	a.button {
+		@extend .btn;
+		@extend .btn-success;
+	}
+
+	&.woocommerce-error {
+		@extend .alert-danger;
+		a.button {
+			@extend .btn-danger;
+		}
+	}
+}
+
+.woocommerce-info {
+	@extend .alert;
+	@extend .alert-info;
+	padding: 1em 2em 1em 3.5em;
+	a.button {
+		@extend .btn;
+		@extend .btn-info;
+	}
+}
