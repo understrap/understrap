@@ -129,6 +129,31 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			)
 		);
+
+        $wp_customize->add_setting(
+            'understrap_site_info_override',
+            array(
+                'default' => '',
+                'type' => 'theme_mod',
+                'sanitize_callback' => 'wp_kses_post',
+                'capability' => 'edit_theme_options',
+            )
+        );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'understrap_site_info_override',
+                array(
+                    'label' => __('Understrap Site Info Override - Footer', 'understrap'),
+                    'description' => __('Override Understrap\'s site info located at the footer of the page.', 'understrap'),
+                    'section' => 'understrap_theme_layout_options',
+                    'settings' => 'understrap_site_info_override',
+                    'type' => 'textarea',
+                    'priority' => 20,
+                )
+            )
+        );
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
