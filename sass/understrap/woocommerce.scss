@@ -14,3 +14,19 @@ figure.woocommerce-product-gallery__wrapper {
 		width: 110px !important;
 	}
 }
+
+// Fix input fields for Stripe Checkout fields
+#stripe-payment-data {
+	#wc-stripe-cc-form {
+		.form-row {
+			display: flex;
+			flex-direction: column;
+			.wc-stripe-elements-field {
+				max-height: 2rem;
+			}
+		}
+	}
+	.woocommerce-SavedPaymentMethods-saveNew {
+		display: inherit;
+	}
+}
