@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-27 23:56+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:33+0200\n"
 "Last-Translator: Thomas A. Reinert | TAR MediaDesign <thomas@tarcgn.de>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -44,13 +44,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -70,7 +70,7 @@ msgstr ""
 "benötigst. WICHTIG: Alle Abhängigkeiten der Entwicklertools sind in diesem "
 "Paket nicht enthalten! Laden Sie die ZIP-Datei herunter, entpacken Sie sie "
 "und führen Sie \"npm install\" sowie \"gulp copy-assets\" in der Konsole im "
-"entpackten UnderStrap-Ordner aus."
+"entpackten Understrap-Ordner aus."
 
 #. Author of the theme
 msgid "the Understrap Authors"
@@ -78,28 +78,26 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oooops! Diese Seite konnte nicht gefunden werden."
+msgstr "Die Seite konnte leider nicht gefunden werden."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Es scheint dass hier nichts gefunden wurde. Vielleicht sollten Sie einen der "
-"Links unten oder die Suche verwenden?"
+"Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchten Sie eine "
+"Suche starten?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Meistgenutzte Kategorien"
+msgstr "Oft verwendete Kategorien"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Versuchen Sie es einmal im monatlichen Archiv. %1$s"
+msgstr "Versuchen Sie es mit einem Blick in die monatlichen Archive. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -137,7 +135,7 @@ msgstr[1] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "Zum Inhalt springen"
+msgstr "Direkt zum Inhalt wechseln"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -209,23 +207,72 @@ msgstr "Linke und rechte Seitenleiste"
 msgid "No sidebar"
 msgstr "Keine Seitenleiste"
 
-#: inc/extras.php:100
-msgid "Post navigation"
-msgstr "Beitrags-Navigation"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Weiterlesen..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://de.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -257,10 +304,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "Hauptmenü"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "Weiterlesen..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -304,22 +347,40 @@ msgstr "1 Kommentar"
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "%s bearbeiten"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "Kommentarnavigation"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr; Ältere Kommentare"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "Neuere Kommentare &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "%s bearbeiten"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Beitrags-Navigation"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Seiten:"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -378,29 +439,24 @@ msgstr "Nichts gefunden"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Bereit Ihren ersten Artikel zu veröffentlichen? <a href=\"%1$s\">Dann fangen "
-"Sie hier an</a>."
+"Bereit, Ihren ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starten "
+"Sie hier</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Entschuldigung, aber leider wurde nichts zu Ihrem Suchbegriff gefunden. "
-"Versuchen Sie es erneut mit einem anderen Suchbegriff."
+"Leider gibt es keine Übereinstimmung mit Ihren Suchbegriffen. Bitte "
+"versuchen Sie es nochmal mit einigen anderen Begriffen."
 
 #: loop-templates/content-none.php:46
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Leider konnten wir nicht das finden wonach Sie gesucht haben. Vielleicht "
-"kann Ihnen die Suche helfen."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "Seiten:"
+"Es sieht so aus, als ob wir nicht das finden konnten, wonach Sie gesucht "
+"haben. Möglicherweise hilft eine Suche."
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -431,18 +487,27 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Suche&#160;&hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "Suche"
 
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "Suche &hellip;"
-
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "Vorherige"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "Nächste"

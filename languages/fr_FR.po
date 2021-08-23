@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:25+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:36+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -45,13 +45,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -78,19 +78,17 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oups! La page n'a pu être trouvée."
+msgstr "Aïe ! Cette page est introuvable."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Il semble qu'il n'y ait rien à cet adresse. Essayez peut-être une recherche "
-"ou l'un des liens ci-dessous ?"
+"Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une "
+"recherche ?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -99,7 +97,7 @@ msgstr "Catégories les plus utilisées"
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Jetez un œil dans les archives mensuelles. %1$s"
+msgstr "Essayez de voir du côté des archives mensuelles. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -209,23 +207,72 @@ msgstr "Sidebar gauche et droite"
 msgid "No sidebar"
 msgstr "Pas de sidebar"
 
-#: inc/extras.php:100
-msgid "Post navigation"
-msgstr "Navigation"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Lire la suite..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://fr.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -257,10 +304,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "Menu principal"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "Lire la suite..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -304,22 +347,40 @@ msgstr "1 Commentaire"
 msgid "% Comments"
 msgstr "% Commentaires"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "Modifier %s"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "Naviguer dans les commentaires"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr; Commentaire moins récent"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "Commentaire plus récent &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Modifier %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Navigation"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Pages: "
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -371,33 +432,31 @@ msgstr ""
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Non trouvé"
+msgstr "Rien de trouvé"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier article ? <a href=\"%1$s\">Démarrer ici</a>."
+"Prêt·e à publier votre premier article ? <a href=\"%1$s\">Lancez-vous ici</"
+"a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Désolé, rien ne correspond à votre recherche. Veuillez réessayer avec "
-"d'autres termes."
+"Désolé, mais rien ne correspond à vos critères de recherche. Veuillez "
+"réessayer avec d’autres mots-clés."
 
 #: loop-templates/content-none.php:46
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Il semble que nous ne puissions trouver ce que vous recherchez."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "Pages: "
+msgstr ""
+"Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. "
+"Essayez en lançant une recherche."
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -426,20 +485,29 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour: %s"
+msgstr "Résultats de recherche pour : %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Rechercher :"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Rechercher…"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "Rechercher"
 
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "Recherche &hellip;"
-
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "Précédent"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "Prochain"

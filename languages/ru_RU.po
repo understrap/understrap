@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-07-28 00:28+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:33+0200\n"
 "Last-Translator: edkozuto <edkozuto@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -45,13 +45,13 @@ msgstr ""
 "X-Poedit-SearchPath-21: inc\n"
 
 #. Theme Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
 #: inc/hooks.php:40
 msgid "https://understrap.com"
-msgstr ""
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -73,28 +73,27 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr ""
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Не удалось найти эту страницу."
+msgstr "Ой! Страница не найдена."
 
 #: 404.php:36
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Похоже, здесь ничего не удалось найти. Попробуйте одну из ссылок ниже или "
-"поиск."
+"Похоже, что по этому адресу ничего не найдено. Возможно, стоит попробовать "
+"воспользоваться поиском?"
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Популярные категории"
+msgstr "Часто используемые рубрики"
 
 #. translators: %1$s: smiley
 #: 404.php:69
+#, fuzzy
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Попробуйте поискать в архивах за прошлые месяцы. %1$s"
+msgstr "Загляните в архивы по месяцам %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -133,7 +132,7 @@ msgstr[2] ""
 
 #: header.php:31
 msgid "Skip to content"
-msgstr "Перейти к содержанию"
+msgstr "Перейти к содержимому"
 
 #: header.php:36
 msgid "Main Navigation"
@@ -149,7 +148,7 @@ msgstr ""
 
 #: inc/custom-comments.php:102
 msgid "Comments are closed."
-msgstr "Комментарии закрыты."
+msgstr "Обсуждение закрыто."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -205,23 +204,72 @@ msgstr "Левая и правая боковые панели"
 msgid "No sidebar"
 msgstr "Без боковой панели"
 
-#: inc/extras.php:100
-msgid "Post navigation"
-msgstr "Навигация по записям"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Читать далее..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://ru.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -253,10 +301,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "Главное меню"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "Читать далее..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -300,22 +344,40 @@ msgstr "1 комментарий"
 msgid "% Comments"
 msgstr "% комментариев"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "Изменить %s"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "Навигация по комментариям"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr; Старые комментарии"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "Свежие комментарии &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Изменить %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Страницы"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -373,7 +435,8 @@ msgstr "Ничего не найдено"
 #: loop-templates/content-none.php:30
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Готовы опубликовать первую запись? <a href=\"%1$s\">Начните здесь</a>."
+msgstr ""
+"Готовы опубликовать свою первую запись? <a href=\"%1$s\">Начните здесь</a>."
 
 #: loop-templates/content-none.php:38
 msgid ""
@@ -388,12 +451,8 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Кажется, мы не можем найти то, что вы ищете. Возможно, вам поможет поиск."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "Страницы"
+"Похоже, нам не удалось найти то, что вы искали. Попробуйте воспользоваться "
+"поиском."
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -424,18 +483,27 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Результаты поиска для: %s"
 
-#: searchform.php:13 searchform.php:19
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Найти:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Поиск&hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
 msgid "Search"
 msgstr "Поиск"
 
-#: searchform.php:16
-msgid "Search &hellip;"
-msgstr "Поиск &hellip;"
-
 #: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
 msgid "Previous"
 msgstr "Назад"
 
 #: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
 msgid "Next"
 msgstr "Далее"

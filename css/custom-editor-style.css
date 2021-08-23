@@ -1038,6 +1038,38 @@ body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-cont
   margin-right: auto;
   margin-left: auto;
 }
+@media (min-width: 576px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    max-width: 1140px;
+  }
+}
 body.understrap-no-sidebar .alignwide,
 body.understrap-no-sidebar .wp-block-cover.alignwide {
   margin: 0px -webkit-calc(50% - 45vw);
@@ -1052,6 +1084,30 @@ body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-cont
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+@media (min-width: 576px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
+body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container {
+    max-width: 1140px;
+  }
 }
 @media (max-width: 920px) {
   body.understrap-no-sidebar .alignwide,
