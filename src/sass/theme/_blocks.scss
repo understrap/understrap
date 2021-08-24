@@ -49,6 +49,7 @@ body.understrap-no-sidebar{
 	
 		.wp-block-cover__inner-container {
 			@include make-container();
+			@include make-container-max-widths();
 		}
 	}
 	
@@ -60,6 +61,7 @@ body.understrap-no-sidebar{
 	
 		.wp-block-cover__inner-container {
 			@include make-container();
+			@include make-container-max-widths();
 		}
 	}
 	

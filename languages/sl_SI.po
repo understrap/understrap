@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-07-27T21:48:36+00:00\n"
-"PO-Revision-Date: 2021-08-01 21:13+0200\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:34+0200\n"
 "Last-Translator: Davor Lonzaric <info@fatshape.com>\n"
 "Language-Team: \n"
 "Language: sl_SI\n"
@@ -59,17 +59,17 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install file. "
-"Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
 "Kombinacija teme \"_s\" s strani Automattic ekipe in Bootstrap 4. Namenjena "
 "kot izhodiščni točki pri izdelavi predloge (teme) in  WordPress spletne "
 "strani. Uporabite jo lahko kot začetno temo ali kot nadrejeno temo. Podpira "
 "Font Awesome, ima vgrajen drsnik za gradnike in še veliko več. POMEMBNO: Vse "
 "odvisnosti razvijalcev niso povezane s to namestitveno datoteko. Preprosto "
-"prenesite datoteko .zip, jo odpakirajte in zaženite \"npm install\" in \"gulp "
-"copy-assets\" v mapi /understrap."
+"prenesite datoteko .zip, jo odpakirajte in zaženite \"npm install\" in "
+"\"gulp copy-assets\" v mapi /understrap."
 
 #. Author of the theme
 msgid "the Understrap Authors"
@@ -86,7 +86,8 @@ msgstr "Ups! Da strani ni mogoče najti."
 #: 404.php:36
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Na tem mestu ni bilo mogoče najti ničesar. Morda lahko poskusite z iskalnikom?"
+"Na tem mestu ni bilo mogoče najti ničesar. Morda lahko poskusite z "
+"iskalnikom?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -210,19 +211,68 @@ msgstr "Leva in desna stranska pasica"
 msgid "No sidebar"
 msgstr "Brez stranske pasica"
 
-#: inc/extras.php:100
-msgid "Post navigation"
-msgstr "Navigacija za objave"
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
 
-#: inc/extras.php:104
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
 
-#: inc/extras.php:107
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Preberi več..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -258,10 +308,6 @@ msgstr ""
 #: inc/setup.php:49
 msgid "Primary Menu"
 msgstr "Primarni meni"
-
-#: inc/setup.php:150
-msgid "Read More..."
-msgstr "Preberi več..."
 
 #: inc/template-tags.php:33
 msgctxt "post date"
@@ -305,22 +351,40 @@ msgstr "1 Komentar"
 msgid "% Comments"
 msgstr "% komentarjev"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:161
-msgid "Edit %s"
-msgstr "Uredi %s"
-
-#: inc/template-tags.php:184
+#: inc/template-tags.php:167
 msgid "Comment navigation"
 msgstr "Navigacija komentarjev"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "&larr; Older Comments"
 msgstr "&larr; Starejši komentarji"
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:177
 msgid "Newer Comments &rarr;"
 msgstr "Novejši komentarji &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Uredi %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Navigacija za objave"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Strani:"
 
 #: inc/widgets.php:103
 msgid "Right Sidebar"
@@ -377,7 +441,8 @@ msgstr "Ni zadetka"
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
 #, fuzzy
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Ste pripravljeni na objavo vašega prvega prispevka? <a href=\"%1$s\">Začnite "
 "tukaj</a>."
@@ -392,14 +457,9 @@ msgstr ""
 
 #: loop-templates/content-none.php:46
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr "Vsebine ni mogoče najti. Poskusite z iskanjem."
-
-#: loop-templates/content-page.php:29 loop-templates/content-single.php:35
-#: loop-templates/content.php:42
-msgid "Pages:"
-msgstr "Strani:"
 
 #. Template Name of the theme
 msgid "Blank Page Template"
@@ -430,13 +490,20 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Rezultati iskanja za: %s"
 
-#: searchform.php:13 searchform.php:19
-msgid "Search"
-msgstr "Iskanje"
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Išči:"
 
-#: searchform.php:16
+#: searchform.php:22
+msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr "Iskanje &hellip;"
+msgstr "Išči &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Išči"
 
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
