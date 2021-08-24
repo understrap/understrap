@@ -12,7 +12,7 @@ Website: [https://understrap.com](https://understrap.com)
 
 Child Theme Project: [https://github.com/understrap/understrap-child](https://github.com/understrap/understrap-child)
 
-OverStrap Child Themes: [https://understrap.com/overstrap/](https://understrap.com/overstrap/)
+Premium Child Themes: [https://understrap.com/child-themes/](https://understrap.com/child-themes/)
 
 ## About
 
@@ -26,6 +26,10 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Changelog
 See [changelog](CHANGELOG.md)
+
+## Documentation
+
+Full documentation for this theme is available at [docs.understrap.com](https://docs.understrap.com).
 
 
 ## Basic Features
@@ -44,26 +48,6 @@ See [changelog](CHANGELOG.md)
 
 The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
 Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
-
-## Confused by All the CSS and Sass Files?
-
-Some basics about the Sass and CSS files that come with Understrap:
-- The theme itself uses the `/style.css`file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
-- The `/css/theme.css` and its minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
-
- ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or Understrap variables here
- @import "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // 2. All the Bootstrap stuff - Don´t edit this!
- @import "understrap/understrap"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
- @import "../src/fontawesome/scss/font-awesome"; // 4. Font Awesome Icon styles
- // Any additional imported files //
- @import "theme/theme";  // 5. Add your styles into this file
- ```
-
-- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update Understrap without overwriting your own work!
-- Your design goes into: `/sass/theme`.
-  - Add your styles to the `/sass/theme/_theme.scss` file
-  - And your variables to the `/sass/theme/_theme_variables.scss`
-  - Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
 ## Installation
 There are several ways to install Understrap. We'll look at three of them: (1) classic install by uploading Understrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
@@ -89,7 +73,21 @@ There are several ways to install Understrap. We'll look at three of them: (1) c
 - Hit the "install" button
 - Activate the theme
 
-## Developing With npm, Gulp and SASS and [Browser Sync][1]
+## Developing With npm, postCSS, Rollup, SASS and BrowserSync
+
+This theme uses [sass](https://www.npmjs.com/package/sass) and [postCSS](https://postcss.org) to handle compiling all of the styles into one style sheet. The theme also includes [rollup.js](https://www.rollupjs.org/) to handle javascript compilation and minification. These choices are based on the same libraries and npm commands used in Bootstrap. In addition, it comes with [Browser Sync](http://browsersync.io) to handle live reloading while you develop.
+
+### Confused by All the CSS, SCSS, and SASS Files?
+
+Some basics about the files that come with Understrap:
+- The theme itself uses the `/style.css` file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
+- The `/css/theme.css` and its minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of different SCSS sets and one variable file, all imported at `/src/sass/theme.scss`
+- Your design goes into: `/src/sass/theme`.
+  - Override Bootstrap by addind your variables to the `/src/sass/theme/_theme_variables.scss`
+  - Add your custom styles to the `/src/sass/theme/_theme.scss` file
+  - Or add other .scss files into it and `@import` it into `/src/sass/theme/_theme.scss`.
+
+The same goes for Javascript. Just add your javascript to `/src/js/custom-javascript.js` and let rollup.js handle the rest.
 
 ### Installing Dependencies
 - Make sure you have installed Node.js and Browser-Sync (optional) on your computer globally
@@ -97,23 +95,36 @@ There are several ways to install Understrap. We'll look at three of them: (1) c
 - Run: `$ npm install`
 
 ### Running
-To work with and compile your Sass files on the fly start:
+To work with and compile your Sass and Javascript files on the fly start:
 
-- `$ gulp watch`
+```bash
+npm run watch
+```
 
 Or, to run with Browser-Sync:
 
-- First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
+First change the browser-sync options to reflect your environment in the file `/build/browser-sync.config.js` in the beginning of the file:
 ```javascript
-{
-    "browserSyncOptions" : {
-        "proxy": "localhost/theme_test/", // <----- CHANGE HERE
-        "notify": false
-    },
-    ...
+module.exports = {
+	"proxy": "localhost/", // Change here
+	"notify": false,
+	"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
 };
 ```
-- then run: `$ gulp watch-bs`
+
+then run: 
+
+```bash
+npm run watch-bs
+```
+
+
+## Block Editor (Gutenberg) Support
+
+As of version 1.0.0, Understrap supports the block editor. The theme include "Bootstrap" styles automatically for default blocks like tables, captions, and blockquotes. Even further, the theme automatically parses your Bootstrap variables to load your custom color palette into the block editor, ensuring that your color choices match the front-end of the site.
+
+
+*Note: Wide- and full-width blocks will not work with the sidebar templates. They'll simply display in a normal width. They will work, however, with any full width templates or if sidebars are globally disabled in the customizer.*
 
 ## How to Use the Built-In Widget Slider
 
@@ -127,7 +138,7 @@ Add a new file to the themes root folder called rtl.css. Add all alignments to t
 https://codex.wordpress.org/Right_to_Left_Language_Support
 
 ## Page Templates
-Understrap includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
+Understrap includes several different page template files to render a number of unique layouts.
 
 ### Blank Template
 
@@ -137,13 +148,14 @@ The `blank.php` template is useful when working with various page builders and c
 
 The `empty.php` template displays a header and a footer only. A good starting point for landing pages.
 
+### Sidebar Templates
+
+The theme also includes a number of templates for enabling the right and left sidebars.
+
 ### Full Width Template
 
-The `fullwidthpage.php` template has full width layout without a sidebar.
+The `fullwidthpage.php` template has full width layout without a sidebar. 
 
-## Footnotes
-
-[1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
 
 Licenses & Credits
 =
