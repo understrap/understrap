@@ -75,3 +75,15 @@ body.understrap-no-sidebar{
 		}
 	}
 }
+
+// Buttons
+.wp-block-buttons {
+	.wp-block-button {
+		.wp-block-button__link {
+			@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+		}
+		&:not(.is-style-outline) .wp-block-button__link {
+			border: $btn-border-width solid transparent;
+		}
+	}
+}

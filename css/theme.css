@@ -12974,6 +12974,16 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   }
 }
 
+.wp-block-buttons .wp-block-button .wp-block-button__link {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+.wp-block-buttons .wp-block-button:not(.is-style-outline) .wp-block-button__link {
+  border: 1px solid transparent;
+}
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
