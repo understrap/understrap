@@ -25,10 +25,10 @@ const globals = {
 
 
 module.exports = {
-  input: [path.resolve(__dirname, '../src/js/bootstrap.js'), path.resolve(__dirname, '../src/js/skip-link-focus-fix.js'), path.resolve(__dirname, '../src/js/custom-javascript.js')],
+  input: [path.resolve(__dirname, '../js/bootstrap.js'), path.resolve(__dirname, '../js/skip-link-focus-fix.js'), path.resolve(__dirname, '../js/custom-javascript.js')],
   output: {
     banner,
-    file: path.resolve(__dirname, `../js/${fileDest}`),
+    file: path.resolve(__dirname, `../../js/${fileDest}`),
     format: 'umd',
     globals,
     name: 'understrap'

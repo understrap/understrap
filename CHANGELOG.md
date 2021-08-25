@@ -3,6 +3,10 @@
 ** Enhancements **
 
   - Introduces [Unreleased] Section at top of CHANGELOG.md to hold items until the branch is ready for release.
+  - Adds a new customizer
+  - Adds support for wide- and full-width blocks.
+  - Includes Bootstrap designs for blocks like blockquotes, tables, image captions, and more.
+  - Introduces the Bootstrap color scheme into the block editor's default color palette.
 
 ** Fixes **
 
