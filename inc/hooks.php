@@ -46,12 +46,12 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 			)
 		);
 
-        //Check if customizer site info has value
-        if ( get_theme_mod('understrap_site_info_override') ) {
-            $site_info = get_theme_mod('understrap_site_info_override');
-        }
-        
-        echo apply_filters( 'understrap_site_info_content', $site_info ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-        
+		// Check if customizer site info has value.
+		if ( get_theme_mod( 'understrap_site_info_override' ) ) {
+			$site_info = get_theme_mod( 'understrap_site_info_override' );
+		}
+
+		echo apply_filters( 'understrap_site_info_content', $site_info ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
 	}
 }
