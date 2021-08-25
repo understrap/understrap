@@ -145,7 +145,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
                 $wp_customize,
                 'understrap_site_info_override',
                 array(
-                    'label' => __('Understrap Site Info Override - Footer', 'understrap'),
+                    'label' => __('Footer Site Info', 'understrap'),
                     'description' => __('Override Understrap\'s site info located at the footer of the page.', 'understrap'),
                     'section' => 'understrap_theme_layout_options',
                     'settings' => 'understrap_site_info_override',
