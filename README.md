@@ -4,7 +4,7 @@
 [![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap)](https://github.com/understrap/understrap/commits/master)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
 
-#### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
+#### See: [Official Demo](https://understrap.com) | Read: [Official Docs Page](https://docs.understrap.com/)
 
 # Understrap WordPress Theme Framework
 
@@ -16,10 +16,10 @@ Premium Child Themes: [https://understrap.com/child-themes/](https://understrap.
 
 ## About
 
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what Understrap is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for Understrap.
+Understrap is the renowned open-source WordPress starter theme that combines Underscores with Bootstrap. Trusted by more than 100,000 developers.
 
 ## License
-Understrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
+Copyright 2021 [Howard Development & Consulting, LLC](https://howarddc.com)
 Understrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
@@ -31,23 +31,17 @@ See [changelog](CHANGELOG.md)
 
 Full documentation for this theme is available at [docs.understrap.com](https://docs.understrap.com).
 
-
 ## Basic Features
 
 - Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
 - Comes with Bootstrap (v4) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single minified CSS file for all the basic stuff.
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.7.0)
-- Jetpack ready.
-- WooCommerce support.
-- Contact Form 7 support.
-- [Child Theme](https://github.com/understrap/understrap-child) ready.
-- Translation ready.
-
-## Starter Theme + HTML Framework = WordPress Theme Framework
-
-The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
-Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
+- Jetpack ready
+- WooCommerce support
+- Contact Form 7 support
+- [Child Theme](https://github.com/understrap/understrap-child) ready
+- Translation ready
 
 ## Installation
 There are several ways to install Understrap. We'll look at three of them: (1) classic install by uploading Understrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
