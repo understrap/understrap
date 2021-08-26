@@ -84,7 +84,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				 */
 				$args['class'][] = 'form-group';
 				// Add a class to the form input itself.
-				$args['input_class'] = array_merge( array( 'form-control' ), $args['input_class'] );
+				$args['input_class'][] = 'form-control';
 				// Add custom data attributes to the form input itself.
 				$args['custom_attributes'] = array(
 					'data-plugin'      => 'select2',
@@ -114,23 +114,23 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				);
 				break;
 			case 'textarea':
-				$args['input_class'] = array_merge( array( 'form-control' ), $args['input_class'] );
+				$args['input_class'][] = 'form-control';
 				break;
 			case 'checkbox':
 					$args['class'][] = 'form-group';
 					// Wrap the label in <span> tag.
 					$args['label'] = isset( $args['label'] ) ? '<span class="custom-control-label">' . $args['label'] . '<span>' : '';
 					// Add a class to the form input's <label> tag.
-					$args['label_class'] = array( 'custom-control custom-checkbox' );
-					$args['input_class'] = array_merge( array( 'custom-control-input' ), $args['input_class'] );
+					$args['label_class'][] = 'custom-control custom-checkbox';
+					$args['input_class'][] = 'custom-control-input';
 				break;
 			case 'radio':
-				$args['label_class'] = array( 'custom-control custom-radio' );
-				$args['input_class'] = array_merge( array( 'custom-control-input' ), $args['input_class'] );
+				$args['label_class'][] = 'custom-control custom-radio';
+				$args['input_class'][] = 'custom-control-input';
 				break;
 			default:
-				$args['class'][]     = 'form-group';
-				$args['input_class'] = array_merge( array( 'form-control' ), $args['input_class'] );
+				$args['class'][]       = 'form-group';
+				$args['input_class'][] = 'form-control';
 				break;
 		} // End of switch ( $args ).
 		return $args;
