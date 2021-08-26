@@ -16,7 +16,7 @@
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
     "watch-run-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\"",
     "watch-run-js": "nodemon --watch src/js/ --ext js --exec \"npm-run-all js\"",
-	"copy-assets": "node src/build/copy-assets.js",
+    "copy-assets": "node src/build/copy-assets.js",
     "dist": "npm-run-all --parallel css js"
   },
   "engines": {
