@@ -8,7 +8,7 @@ Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a so
 That downloads everything and moves it in place so that you can recompile your CSS and JS files;
 A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/understrap/understrap
 A child theme is available on Github, too: https://github.com/understrap/understrap-child;
-Version: 0.9.6
+Version: 1.0.0beta
 Requires at least: 5.0
 Tested up to: 5.7.2
 Requires PHP: 5.2

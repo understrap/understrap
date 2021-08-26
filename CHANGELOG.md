@@ -2,6 +2,16 @@
 
 ** Enhancements **
 
+  -
+
+** Fixes **
+
+  -
+
+##  Release 1.0.0beta August 26th 2021
+
+** Enhancements **
+
   - Introduces [Unreleased] Section at top of CHANGELOG.md to hold items until the branch is ready for release.
   - Adds a new customizer setting for overriding the site footer information.
   - Adds support for wide- and full-width blocks.
@@ -17,8 +27,6 @@
   - Updates understrap.pot file to include several translation strings that had not been added.
   - Fixes spelling and grammar errors in the CHANGELOG.md.
   - replaces esc_attr with esc_html in Woocommerce cart template.
-
-
 
 ## Release 0.9.6 June 15th 2021
 This is a bugfix and maintenance release.
