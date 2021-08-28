@@ -45,7 +45,7 @@
 # Dependencies
 bower_components
 node_modules
-vendor
+/vendor/
 
 # Other UnderStrap specific files and directories
 phpcs.xml
