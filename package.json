@@ -11,7 +11,7 @@
     "css-postcss": "postcss --config src/build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "rollup --config src/build/rollup.config.js --sourcemap",
-    "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=js/theme.js.map,includeSources,url=theme.min.js.map\" --output js/theme.min.js js/theme.js",
+    "js-minify": "terser  --config-file src/build/terser.config.json --output js/theme.min.js js/theme.js",
     "watch": "npm-run-all --parallel watch-run-*",
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
     "watch-run-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\"",
