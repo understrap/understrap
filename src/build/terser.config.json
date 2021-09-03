@@ -1,0 +1,24 @@
+{
+    "parse": {
+    },
+    "compress": {
+        "booleans": true,
+        "conditionals": true,
+        "drop_console": true,
+        "drop_debugger": true,
+        "if_return": true,
+        "join_vars": true,
+        "keep_classnames": false,
+        "keep_fnames": false,
+        "reduce_vars": true,
+        "sequences": true,
+        "warnings": false,
+        "ecma": 5
+    },
+    "mangle": {
+    },
+    "sourceMap": {
+        "filename": "js/theme.js.map",
+        "url": "theme.min.js.map"
+    }
+}
