@@ -53,7 +53,7 @@
     "bootstrap": "^4.6.0",
     "browser-sync": "^2.27.5",
     "browserslist": "^4.16.8",
-    "caniuse-lite": "^1.0.30001251",
+    "caniuse-lite": "^1.0.30001255",
     "clean-css-cli": "^5.3.3",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",
