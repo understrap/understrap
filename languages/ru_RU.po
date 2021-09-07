@@ -1,20 +1,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2018-06-17 17:56+0000\n"
-"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"PO-Revision-Date: 2018-06-17 17:57+0000\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:33+0200\n"
 "Last-Translator: edkozuto <edkozuto@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
-"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && n"
+"%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -42,721 +42,16 @@ msgstr ""
 "X-Poedit-SearchPath-18: page.php\n"
 "X-Poedit-SearchPath-19: functions.php\n"
 "X-Poedit-SearchPath-20: page-templates\n"
-"X-Poedit-SearchPath-21: inc"
-
-#: search.php:29
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Результаты поиска для: %s"
-
-#: header.php:34
-msgid "Skip to content"
-msgstr "Перейти к содержанию"
-
-#: 404.php:24
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Не удалось найти эту страницу."
-
-#: 404.php:31
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Похоже, здесь ничего не удалось найти. Попробуйте одну из ссылок ниже или "
-"поиск."
-
-#: 404.php:42
-msgid "Most Used Categories"
-msgstr "Популярные категории"
-
-#. translators: %1$s: smiley
-#: 404.php:62
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Попробуйте поискать в архивах за прошлые месяцы. %1$s"
-
-#: author.php:34
-msgid "About:"
-msgstr "О:"
-
-#: author.php:42 inc/custom-comments.php:30
-msgid "Website"
-msgstr "Сайт"
-
-#: author.php:49
-msgid "Profile"
-msgstr "Профиль"
-
-#: author.php:54
-msgid "Posts by"
-msgstr "Опубликовано"
-
-#: author.php:68
-msgid "in"
-msgstr "в"
-
-#: comments.php:28
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Один комментарий на &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s комментария на &ldquo;%2$s&rdquo;"
-msgstr[2] "%1$s комментариев на &ldquo;%2$s&rdquo;"
-
-#: comments.php:36 comments.php:59
-msgid "Comment navigation"
-msgstr "Навигация по комментариям"
-
-#: comments.php:38 comments.php:61
-msgid "&larr; Older Comments"
-msgstr "&larr; Старые комментарии"
-
-#: comments.php:42 comments.php:65
-msgid "Newer Comments &rarr;"
-msgstr "Свежие комментарии &rarr;"
-
-#: comments.php:78
-msgid "Comments are closed."
-msgstr "Комментарии закрыты."
-
-#: footer.php:27
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org/"
-
-#: footer.php:28
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Сайт работает на %s"
-
-#: footer.php:31
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Тема: %1$s за авторством %2$s."
-
-#: footer.php:33
-#, php-format
-msgid "Version: %1$s"
-msgstr "Версия: %1$s"
-
-#: searchform.php:10 searchform.php:16
-msgid "Search"
-msgstr "Поиск"
-
-#: searchform.php:13
-msgid "Search &hellip;"
-msgstr "Поиск &hellip;"
-
-#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
-#: loop-templates/content.php:37 loop-templates/content-single.php:31
-#: loop-templates/content-verticalpage.php:28
-msgid "Pages:"
-msgstr "Страницы"
-
-#: loop-templates/content-page.php:34
-#: loop-templates/content-verticalpage.php:37
-msgid "Edit"
-msgstr "Редактировать"
-
-#: loop-templates/content-none.php:15
-msgid "Nothing Found"
-msgstr "Ничего не найдено"
-
-#: loop-templates/content-none.php:23
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Готовы опубликовать первую запись? <a href=\"%1$s\">Начните здесь</a>."
-
-#: loop-templates/content-none.php:28
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые "
-"слова."
-
-#: loop-templates/content-none.php:34
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Кажется, мы не можем найти то, что вы ищете. Возможно, вам поможет поиск."
-
-#. Name of the template
-msgid "Blank Page Template"
-msgstr "Чистая страница"
-
-#. Name of the template
-msgid "Left and Right Sidebar Layout"
-msgstr "Компоновка левой и правой боковых панелей"
-
-#. Name of the template
-msgid "Empty Page Template"
-msgstr "Пустая страница"
-
-#. Name of the template
-msgid "Full Width Page"
-msgstr "Страница во всю ширину"
-
-#. Name of the template
-msgid "Left Sidebar Layout"
-msgstr "Компоновка левой боковой панели"
-
-#. Name of the template
-msgid "Vertical One Page"
-msgstr "Вертикальный одностраничник"
-
-#: inc/template-tags.php:18
-#, php-format
-msgid " Edited %4$s"
-msgstr "Отредактировано %4$s"
-
-#: inc/template-tags.php:29
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Опубликовано %s"
-
-#: inc/template-tags.php:34
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "%s"
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:51 inc/template-tags.php:57
-msgid ", "
-msgstr ", "
-
-#: inc/template-tags.php:53
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Опубликовано в %1$s"
-
-#: inc/template-tags.php:59
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Помечено %1$s"
-
-#: inc/template-tags.php:65
-msgid "Leave a comment"
-msgstr "Оставьте комментарий"
-
-#: inc/template-tags.php:65
-msgid "1 Comment"
-msgstr "1 комментарий"
-
-#: inc/template-tags.php:65
-msgid "% Comments"
-msgstr "% комментариев"
-
-#. translators: %s: Name of current post
-#: inc/template-tags.php:72
-#, php-format
-msgid "Edit %s"
-msgstr "Редактировать %s"
-
-#: inc/template-tags.php:143
-msgid "Post navigation"
-msgstr "Навигация по записям"
-
-#: inc/template-tags.php:148
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-
-#: inc/template-tags.php:151
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-
-#: inc/setup.php:51
-msgid "Primary Menu"
-msgstr "Главное меню"
-
-#: inc/setup.php:122
-msgid "Read More..."
-msgstr "Читать далее..."
-
-#: inc/widgets.php:14
-msgid "Right Sidebar"
-msgstr "Правая боковая панель"
-
-#: inc/widgets.php:24
-msgid "Left Sidebar"
-msgstr "Левая боковая панель"
-
-#: inc/widgets.php:34
-msgid "Hero Slider"
-msgstr "Слайдер Hero"
-
-#: inc/widgets.php:44
-msgid "Hero Static"
-msgstr "Статический Hero"
-
-#: inc/widgets.php:54
-msgid "Footer Full"
-msgstr "Подвал"
-
-#: inc/custom-comments.php:24
-msgid "Name"
-msgstr "Имя"
-
-#: inc/custom-comments.php:27
-msgid "Email"
-msgstr "Email"
-
-#: inc/custom-comments.php:49
-msgctxt "noun"
-msgid "Comment"
-msgstr "Комментарий"
-
-#: inc/customizer.php:36
-msgid "Slider Settings"
-msgstr "Настройки слайдера"
-
-#: inc/customizer.php:45
-msgid "Number of slides displaying at once"
-msgstr "Количество отображаемых за раз слайдеров"
-
-#: inc/customizer.php:57
-msgid "Slider Time (in ms)"
-msgstr "Время показа слайда (в мс)"
-
-#: inc/customizer.php:69
-msgid "Loop Slider Content"
-msgstr "Контент цикличного слайдера"
-
-#: inc/customizer.php:81
-msgid "Theme Layout Settings"
-msgstr "Настройки компоновки темы"
-
-#: inc/customizer.php:83
-msgid "Container width and sidebar defaults"
-msgstr "Ширина контейнера и боковая панель по умолчанию"
-
-#: inc/customizer.php:98
-msgid "Container Width"
-msgstr "Ширина контейнера"
-
-#: inc/customizer.php:99
-msgid "Choose between Bootstrap's container and container-fluid"
-msgstr "Выберите контейнер"
-
-#: inc/customizer.php:104
-msgid "Fixed width container"
-msgstr "Контейнер фиксированной ширины"
-
-#: inc/customizer.php:105
-msgid "Full width container"
-msgstr "Контейнер во всю ширину"
-
-#: inc/customizer.php:122
-msgid "Sidebar Positioning"
-msgstr "Расположение боковой панели"
-
-#: inc/customizer.php:123
-msgid "Set sidebar's position. Can either be: right, left, both or none"
-msgstr "Установите позицию боковой панели. Правая, левая, обе или ни одной"
-
-#: inc/customizer.php:129
-msgid "Right sidebar"
-msgstr "Правая боковая панель"
-
-#: inc/customizer.php:130
-msgid "Left sidebar"
-msgstr "Левая боковая панель"
-
-#: inc/customizer.php:131
-msgid "Left & Right sidebars"
-msgstr "Левая и правая боковые панели"
-
-#: inc/customizer.php:132
-msgid "No sidebar"
-msgstr "Без боковой панели"
-
-#: inc/customizer.php:150
-msgid "Posts Index Style"
-msgstr "Стиль индекса записей"
-
-#: inc/customizer.php:151
-msgid "Choose how to display latest posts"
-msgstr "Выберите способ отображения последних постов"
-
-#: inc/customizer.php:156
-msgid "Default"
-msgstr "По умолчанию"
-
-#: inc/customizer.php:157
-msgid "Masonry"
-msgstr "Masonry"
-
-#: inc/customizer.php:158
-msgid "Grid"
-msgstr "Сетка"
-
-#: inc/customizer.php:187
-msgid "Grid Post Columns"
-msgstr "Колонки сетки поста"
-
-#: inc/customizer.php:188
-msgid "Choose how many columns to use"
-msgstr "Выберите количество колонок"
-
-#: woocommerce/cart/proceed-to-checkout-button.php:27
-msgid "Proceed to Checkout"
-msgstr "Перейти к оплате"
-
-#: woocommerce/cart/mini-cart.php:49 woocommerce/cart/cart.php:60
-msgid "Remove this item"
-msgstr "Убрать"
-
-#: woocommerce/cart/mini-cart.php:72
-msgid "No products in the cart."
-msgstr "Корзина пуста."
-
-#: woocommerce/cart/mini-cart.php:80
-msgid "Subtotal"
-msgstr "Подытог"
-
-#: woocommerce/cart/mini-cart.php:85
-msgid "View Cart"
-msgstr "Посмотреть корзину"
-
-#: woocommerce/cart/mini-cart.php:86
-msgid "Checkout"
-msgstr "Оплата"
-
-#: woocommerce/cart/cart-empty.php:28
-msgid "Your cart is currently empty."
-msgstr "Ваша корзина пуста."
-
-#: woocommerce/cart/cart-empty.php:36
-msgid "Return To Shop"
-msgstr "Вернуться в магазин"
-
-#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:79
-#: woocommerce/checkout/form-pay.php:29
-msgid "Product"
-msgstr "Товар"
-
-#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:97
-msgid "Price"
-msgstr "Цена"
-
-#: woocommerce/cart/cart.php:38 woocommerce/cart/cart.php:103
-msgid "Quantity"
-msgstr "Количество"
-
-#: woocommerce/cart/cart.php:39 woocommerce/cart/cart.php:120
-#: woocommerce/myaccount/my-orders.php:16
-msgid "Total"
-msgstr "Всего"
-
-#: woocommerce/cart/cart.php:92
-msgid "Available on backorder"
-msgstr "Доступен предзаказ"
-
-#: woocommerce/cart/cart.php:138
-msgid "Coupon:"
-msgstr "Купон:"
-
-#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:36
-msgid "Coupon code"
-msgstr "Код купона"
-
-#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:40
-msgid "Apply Coupon"
-msgstr "Применить купон"
-
-#: woocommerce/cart/cart.php:144
-msgid "Update Cart"
-msgstr "Обновить корзину"
-
-#: woocommerce/checkout/payment.php:35
-msgid ""
-"Sorry, it seems that there are no available payment methods for your state. "
-"Please contact us if you require assistance or wish to make alternate "
-"arrangements."
-msgstr ""
-"Извините, для вашей страны нет доступных способов оплаты. Пожалуйста, "
-"свяжитесь с нами для решения данного вопроса."
-
-#: woocommerce/checkout/payment.php:35
-msgid "Please fill in your details above to see available payment methods."
-msgstr ""
-"Пожалуйста, введите свои данные ниже, чтолбы увидеть доступные способы "
-"оплаты."
-
-#: woocommerce/checkout/payment.php:42
-msgid ""
-"Since your browser does not support JavaScript, or it is disabled, please "
-"ensure you click the <em>Update Totals</em> button before placing your order."
-" You may be charged more than the amount stated above if you fail to do so."
-msgstr ""
-"Ваш браузер не поддерживает JavaScript или он выключен, убедитесь, что "
-"нажали на кнопку <em>Пересчитать заказ</em> перед оплатой. Если вы не "
-"нажимали эту кнопку, сумма оплаты может оказаться другой."
-
-#: woocommerce/checkout/payment.php:43
-msgid "Update totals"
-msgstr "Пересчитать заказ"
-
-#: woocommerce/checkout/form-pay.php:30
-msgid "Qty"
-msgstr "Кол-во"
-
-#: woocommerce/checkout/form-pay.php:31
-msgid "Totals"
-msgstr "Итого"
-
-#: woocommerce/checkout/form-pay.php:79
-msgid ""
-"Sorry, it seems that there are no available payment methods for your "
-"location. Please contact us if you require assistance or wish to make "
-"alternate arrangements."
-msgstr ""
-"Извините, для вашего местоположении нет доступных способов оплаты. "
-"Пожалуйста, свяжитесь с нами для решения данного вопроса."
-
-#: woocommerce/checkout/form-coupon.php:28
-msgid "Have a coupon?"
-msgstr "Есть купон?"
-
-#: woocommerce/checkout/form-coupon.php:28
-msgid "Click here to enter your code"
-msgstr "Нажмите здесь, чтобы ввести код"
-
-#: woocommerce/global/form-login.php:35
-#: woocommerce/myaccount/form-lost-password.php:30
-msgid "Username or email"
-msgstr "Имя пользователя или email"
-
-#: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:48
-#: woocommerce/myaccount/form-login.php:98
-msgid "Password"
-msgstr "Пароль"
-
-#: woocommerce/global/form-login.php:48 woocommerce/myaccount/form-login.php:37
-#: woocommerce/myaccount/form-login.php:56
-msgid "Login"
-msgstr "Вход"
-
-#: woocommerce/global/form-login.php:51 woocommerce/myaccount/form-login.php:58
-msgid "Remember me"
-msgstr "Запомнить меня"
-
-#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:62
-msgid "Lost your password?"
-msgstr "Забыли пароль?"
-
-#: woocommerce/global/quantity-input.php:24
-msgctxt "Product quantity input tooltip"
-msgid "Qty"
-msgstr "Кол-во"
-
-#: woocommerce/myaccount/form-lost-password.php:27
-msgid ""
-"Lost your password? Please enter your username or email address. You will "
-"receive a link to create a new password via email."
-msgstr ""
-"Забыли пароль? Введите вашу почту, на неё придёт ссылка для создания нового "
-"пароля."
-
-#: woocommerce/myaccount/form-lost-password.php:40
-msgid "Reset Password"
-msgstr "Сбросить пароль"
-
-#: woocommerce/myaccount/form-login.php:44
-msgid "Username or email address"
-msgstr "Имя пользователя или email"
-
-#: woocommerce/myaccount/form-login.php:75
-#: woocommerce/myaccount/form-login.php:112
-msgid "Register"
-msgstr "Зарегистрироваться"
-
-#: woocommerce/myaccount/form-login.php:84
-msgid "Username"
-msgstr "Имя пользователя"
-
-#: woocommerce/myaccount/form-login.php:91
-#: woocommerce/myaccount/form-edit-account.php:40
-msgid "Email address"
-msgstr "Email"
-
-#: woocommerce/myaccount/form-login.php:105
-msgid "Anti-spam"
-msgstr "Анти-спам"
-
-#: woocommerce/myaccount/form-edit-account.php:30
-msgid "First name"
-msgstr "Имя"
-
-#: woocommerce/myaccount/form-edit-account.php:34
-msgid "Last name"
-msgstr "Фамилия"
-
-#: woocommerce/myaccount/form-edit-account.php:45
-msgid "Password Change"
-msgstr "Смена пароля"
-
-#: woocommerce/myaccount/form-edit-account.php:48
-msgid "Current Password (leave blank to leave unchanged)"
-msgstr "Текущий пароль "
-
-#: woocommerce/myaccount/form-edit-account.php:52
-msgid "New Password (leave blank to leave unchanged)"
-msgstr "Новый пароль (оставьте пустым, чтобы не менять)"
-
-#: woocommerce/myaccount/form-edit-account.php:56
-msgid "Confirm New Password"
-msgstr "Подтвердите новый пароль"
-
-#: woocommerce/myaccount/form-edit-account.php:66
-msgid "Save changes"
-msgstr "Сохранить изменения"
-
-#: woocommerce/myaccount/my-orders.php:13
-msgid "Order"
-msgstr "Заказ"
-
-#: woocommerce/myaccount/my-orders.php:14
-msgid "Date"
-msgstr "Дата"
-
-#: woocommerce/myaccount/my-orders.php:15
-msgid "Status"
-msgstr "Статус"
-
-#: woocommerce/myaccount/my-orders.php:30
-msgid "Recent Orders"
-msgstr "Недавние заказы"
-
-#: woocommerce/myaccount/my-orders.php:55 woocommerce/myaccount/orders.php:51
-msgctxt "hash before order number"
-msgid "#"
-msgstr "#"
-
-#: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:61
-#, php-format
-msgid "%s for %s item"
-msgid_plural "%s for %s items"
-msgstr[0] "%s из %s"
-msgstr[1] "%s из %s"
-msgstr[2] "%s из %s"
-
-#: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:68
-msgid "Pay"
-msgstr "Оплатить"
-
-#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:72
-msgid "View"
-msgstr "Подробнее"
-
-#: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:76
-msgid "Cancel"
-msgstr "Отменить"
-
-#: woocommerce/myaccount/orders.php:107
-msgid "Previous"
-msgstr "Назад"
-
-#: woocommerce/myaccount/orders.php:111
-msgid "Next"
-msgstr "Далее"
-
-#: woocommerce/myaccount/orders.php:119 woocommerce/myaccount/downloads.php:98
-msgid "Go Shop"
-msgstr "В магазин"
-
-#: woocommerce/myaccount/orders.php:121
-msgid "No order has been made yet."
-msgstr "Нет заказов."
-
-#: woocommerce/myaccount/form-edit-address.php:23
-msgid "Billing Address"
-msgstr "Адрес"
-
-#: woocommerce/myaccount/form-edit-address.php:23
-msgid "Shipping Address"
-msgstr "Адрес доставки"
-
-#: woocommerce/myaccount/form-edit-address.php:46
-msgid "Save Address"
-msgstr "Сохранить адрес"
-
-#: woocommerce/myaccount/form-reset-password.php:27
-msgid "Enter a new password below."
-msgstr "Введите новый пароль"
-
-#: woocommerce/myaccount/form-reset-password.php:30
-msgid "New password"
-msgstr "Новый пароль"
-
-#: woocommerce/myaccount/form-reset-password.php:34
-msgid "Re-enter new password"
-msgstr "Повторите новый пароль"
-
-#: woocommerce/myaccount/form-reset-password.php:47
-msgid "Save"
-msgstr "Сохранить"
-
-#: woocommerce/myaccount/downloads.php:59
-msgid "&infin;"
-msgstr "&infin;"
-
-#: woocommerce/myaccount/downloads.php:67
-msgid "Never"
-msgstr "Никогда"
-
-#: woocommerce/myaccount/downloads.php:75
-msgid "Download"
-msgstr "Загрузка"
-
-#: woocommerce/myaccount/downloads.php:100
-msgid "No downloads available yet."
-msgstr "Нет доступных загрузок."
-
-#: woocommerce/single-product/review-rating.php:28
-#, php-format
-msgid "Rated %d out of 5"
-msgstr "Оценка %d из 5"
-
-#: woocommerce/single-product/review-rating.php:29
-msgid "out of 5"
-msgstr "из 5"
-
-#: woocommerce/single-product/rating.php:36
-#, php-format
-msgid "Rated %s out of 5"
-msgstr "Оценка %s из 5"
-
-#: woocommerce/single-product/rating.php:38
-#, php-format
-msgid "out of %s5%s"
-msgstr "из  %s5%s"
-
-#: woocommerce/single-product/rating.php:39
-#, php-format
-msgid "based on %s customer rating"
-msgid_plural "based on %s customer ratings"
-msgstr[0] "основываясь на %s оценке клиента"
-msgstr[1] "основываясь на  %s оценках клиенто"
-msgstr[2] "основываясь на %s оценках клиентов"
-
-#: woocommerce/single-product/rating.php:42
-#, php-format
-msgid "%s customer review"
-msgid_plural "%s customer reviews"
-msgstr[0] "&s отзыв"
-msgstr[1] "&s отзыва"
-msgstr[2] "&s отзывов"
-
-#. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+"X-Poedit-SearchPath-21: inc\n"
+
+#. Theme Name of the theme
+msgid "Understrap"
+msgstr "Understrap"
+
+#. Theme URI of the theme
+#: inc/hooks.php:40
+msgid "https://understrap.com"
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -764,34 +59,451 @@ msgid ""
 "starting point for your next theme project and WordPress website. Use it as "
 "starter theme or as a parent theme. It is up to you. Including Font Awesome "
 "support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install file."
-" Just download the .zip, extract it and run \"npm install\" and \"gulp copy-"
-"assets\" inside the extracted /understrap folder."
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
 "Сочетание темы _s от Automatic и Bootstrap 4. Надежный базис для создания "
 "ваших собственных тем и вебсайтов на WordPress. Используйте как основную или "
 "как родительскую тему. Все в ваших руках."
 
-#. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
-
 #. Author of the theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenemann"
+msgid "the Understrap Authors"
+msgstr ""
 
 #. Author URI of the theme
-msgid "http://www.holgerkoenemann.de"
-msgstr "http://www.holgerkoenemann.de"
+msgid "https://github.com/understrap/understrap/graphs/contributors"
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
-msgid "Proceed to checkout"
-msgstr "Перейти к оплате"
+#: 404.php:30
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ой! Страница не найдена."
 
-msgid "Apply coupon"
-msgstr "Применить купон"
+#: 404.php:36
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Похоже, что по этому адресу ничего не найдено. Возможно, стоит попробовать "
+"воспользоваться поиском?"
 
-msgid "Update cart"
-msgstr "Обновить корзину"
+#: 404.php:46
+msgid "Most Used Categories"
+msgstr "Часто используемые рубрики"
 
-msgid "Your order"
-msgstr "Ваш заказ"
+#. translators: %1$s: smiley
+#: 404.php:69
+#, fuzzy
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Загляните в архивы по месяцам %1$s"
+
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Картинка профиля %s"
+
+#: author.php:52
+msgid "Website"
+msgstr "Сайт"
+
+#. translators: %s: author name
+#: author.php:63
+msgid "About %s"
+msgstr "Об авторе %s"
+
+#. translators: %s: author name
+#: author.php:77
+msgid "Posts by %s"
+msgstr "Записи %s"
+
+#. translators: %s: post title
+#: comments.php:36
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:43
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr ""
+
+#: header.php:63
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr ""
+
+#: inc/custom-comments.php:102
+msgid "Comments are closed."
+msgstr "Обсуждение закрыто."
+
+#: inc/custom-header.php:54
+msgid "Default Header Image"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Theme Layout Settings"
+msgstr "Настройки компоновки темы"
+
+#: inc/customizer.php:44
+msgid "Container width and sidebar defaults"
+msgstr "Ширина контейнера и боковая панель по умолчанию"
+
+#: inc/customizer.php:84
+msgid "Container Width"
+msgstr "Ширина контейнера"
+
+#: inc/customizer.php:85
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "Выберите контейнер"
+
+#: inc/customizer.php:90
+msgid "Fixed width container"
+msgstr "Контейнер фиксированной ширины"
+
+#: inc/customizer.php:91
+msgid "Full width container"
+msgstr "Контейнер во всю ширину"
+
+#: inc/customizer.php:113
+msgid "Sidebar Positioning"
+msgstr "Расположение боковой панели"
+
+#: inc/customizer.php:114
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "Right sidebar"
+msgstr "Правая боковая панель"
+
+#: inc/customizer.php:124
+msgid "Left sidebar"
+msgstr "Левая боковая панель"
+
+#: inc/customizer.php:125
+msgid "Left & Right sidebars"
+msgstr "Левая и правая боковые панели"
+
+#: inc/customizer.php:126
+msgid "No sidebar"
+msgstr "Без боковой панели"
+
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
+
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Читать далее..."
+
+#: inc/hooks.php:30
+msgid "https://wordpress.org/"
+msgstr "https://ru.wordpress.org/"
+
+#. translators: WordPress
+#: inc/hooks.php:33
+msgid "Proudly powered by %s"
+msgstr "Сайт работает на %s"
+
+#. translators: 1: Theme name, 2: Theme author
+#: inc/hooks.php:38
+msgid "Theme: %1$s by %2$s."
+msgstr "Тема: %1$s за авторством %2$s."
+
+#. translators: Theme version
+#: inc/hooks.php:44
+msgid "Version: %1$s"
+msgstr "Версия: %1$s"
+
+#: inc/pagination.php:53
+msgid "&laquo;"
+msgstr ""
+
+#: inc/pagination.php:54
+msgid "&raquo;"
+msgstr ""
+
+#: inc/pagination.php:57
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "Главное меню"
+
+#: inc/template-tags.php:33
+msgctxt "post date"
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "Posted by"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59 inc/template-tags.php:65
+msgid ", "
+msgstr ", "
+
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:62
+msgid "Posted in %s"
+msgstr ""
+
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:68
+msgid "Tagged %s"
+msgstr ""
+
+#: inc/template-tags.php:73
+msgid "Leave a comment"
+msgstr "Оставьте комментарий"
+
+#: inc/template-tags.php:73
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+#: inc/template-tags.php:73
+msgid "% Comments"
+msgstr "% комментариев"
+
+#: inc/template-tags.php:167
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: inc/template-tags.php:171
+msgid "&larr; Older Comments"
+msgstr "&larr; Старые комментарии"
+
+#: inc/template-tags.php:177
+msgid "Newer Comments &rarr;"
+msgstr "Свежие комментарии &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Изменить %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Страницы"
+
+#: inc/widgets.php:103
+msgid "Right Sidebar"
+msgstr "Правая боковая панель"
+
+#: inc/widgets.php:105
+msgid "Right sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:115
+msgid "Left Sidebar"
+msgstr "Левая боковая панель"
+
+#: inc/widgets.php:117
+msgid "Left sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:127
+msgid "Hero Slider"
+msgstr "Слайдер Hero"
+
+#: inc/widgets.php:129
+msgid "Hero slider area. Place two or more widgets here and they will slide!"
+msgstr ""
+
+#: inc/widgets.php:139
+msgid "Hero Canvas"
+msgstr ""
+
+#: inc/widgets.php:141
+msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
+msgstr ""
+
+#: inc/widgets.php:151
+msgid "Top Full"
+msgstr ""
+
+#: inc/widgets.php:153
+msgid "Full top widget with dynamic grid"
+msgstr ""
+
+#: inc/widgets.php:163
+msgid "Footer Full"
+msgstr "Подвал"
+
+#: inc/widgets.php:165
+msgid "Full sized footer widget with dynamic grid"
+msgstr ""
+
+#: loop-templates/content-none.php:18
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#. translators: 1: Link to WP admin new post page.
+#: loop-templates/content-none.php:30
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать свою первую запись? <a href=\"%1$s\">Начните здесь</a>."
+
+#: loop-templates/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые "
+"слова."
+
+#: loop-templates/content-none.php:46
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Похоже, нам не удалось найти то, что вы искали. Попробуйте воспользоваться "
+"поиском."
+
+#. Template Name of the theme
+msgid "Blank Page Template"
+msgstr "Чистая страница"
+
+#. Template Name of the theme
+msgid "Left and Right Sidebar Layout"
+msgstr "Компоновка левой и правой боковых панелей"
+
+#. Template Name of the theme
+msgid "Empty Page Template"
+msgstr "Пустая страница"
+
+#. Template Name of the theme
+msgid "Full Width Page"
+msgstr "Страница во всю ширину"
+
+#. Template Name of the theme
+msgid "Left Sidebar Layout"
+msgstr "Компоновка левой боковой панели"
+
+#. Template Name of the theme
+msgid "Right Sidebar Layout"
+msgstr ""
+
+#. translators: %s: query term
+#: search.php:36
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для: %s"
+
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Найти:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Поиск&hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Поиск"
+
+#: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
+msgid "Previous"
+msgstr "Назад"
+
+#: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
+msgid "Next"
+msgstr "Далее"

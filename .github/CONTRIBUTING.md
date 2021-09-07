@@ -1,4 +1,4 @@
-# Contributing to the UnderStrap Project
+# Contributing to the Understrap Project
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
 - Reporting a bug
@@ -10,15 +10,17 @@ We love your input! We want to make contributing to this project as easy and tra
 ## We Develop with Github
 We use github to host code, to track issues and feature requests, as well as accept pull requests.
 
-## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
-Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://guides.github.com/introduction/flow/index.html)). We actively welcome your pull requests:
+## We Use [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), So All Code Changes Happen Through Pull Requests
+We actively welcome your pull requests.
 
-1. Fork the repo and create your branch from `master`.
+Pull requests are the best way to propose changes to the codebase.
+All pull requests should be sumitted to the `develop` branch.
+This will allow us to grant permissions to key contributors to merge pull requests into the `develop` branch.
+
+1. Fork the repo and create your branch from `develop`.
 2. If you've added code that should be tested, add tests.
 3. If you've changed APIs, update the documentation.
 4. Ensure the test suite passes.
-5. Make sure your code lints.
-6. Issue that pull request!
 
 ## Any contributions you make will be under the GNU GPL version 2
 In short, when you submit code changes, your submissions are understood to be under the same [GNU GPL version 2](https://opensource.org/licenses/GPL-2.0) that covers the project. Feel free to contact the maintainers if that's a concern.

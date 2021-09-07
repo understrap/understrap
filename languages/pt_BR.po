@@ -1,25 +1,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"PO-Revision-Date: Thu Apr 14 2016 20:58:56 GMT-0300 (E. South America "
-"Standard Time)\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:33+0200\n"
 "Last-Translator: Diego Versiani <diegoversiani@gmail.com>\n"
 "Language-Team: \n"
-"Language: Portuguese (Brazil)\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco - https://localise.biz/\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
+"X-Loco-Target-Locale: pt_BR\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
 "X-Poedit-SearchPath-2: index.php\n"
@@ -42,414 +42,463 @@ msgstr ""
 "X-Poedit-SearchPath-19: functions.php\n"
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc\n"
-"X-Loco-Target-Locale: pt_BR"
 
-#: ../inc/widgets.php:20
-msgid "Hero Slider"
-msgstr "Hero Slides"
+#. Theme Name of the theme
+msgid "Understrap"
+msgstr "Understrap"
 
-#: ../inc/widgets.php:30
-msgid "Hero Static"
-msgstr "Hero Est&aacute;tico"
+#. Theme URI of the theme
+#: inc/hooks.php:40
+msgid "https://understrap.com"
+msgstr "https://understrap.com"
 
-#: ../inc/widgets.php:40
-msgid "Footer Full"
-msgstr "Rodap&eacute;"
-
-#: ../searchform.php:9 ../searchform.php:13
-msgid "Search"
-msgstr "Pesquisar"
-
-#: ../searchform.php:11
-msgid "Search &hellip;"
-msgstr "Pesquisando &hellip;"
-
-#: ../search.php:23
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Resultado da pesquisa por: %s"
-
-#: ../footer.php:24
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org/"
-
-#: ../footer.php:24
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Orgulhosamente desenvolvido com %s"
-
-#: ../footer.php:26
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Tema: %1$s por %2$s."
-
-#: ../404.php:22
-msgid "Oops! That page can&rsquo;t be found."
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as a parent theme. It is up to you. Including Font Awesome "
+"support, built-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
-"Ops! A p&aacute;gina que voc&ecirc; procura n&atilde;o p&ocirc;de ser "
-"encontada."
 
-#: ../404.php:27
+#. Author of the theme
+msgid "the Understrap Authors"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://github.com/understrap/understrap/graphs/contributors"
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
+
+#: 404.php:30
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Opa! A página não pode ser encontrada."
+
+#: 404.php:36
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Parece que nada foi encontrado neste local. Que tal tentar uma pesquisa?"
+
+#: 404.php:46
+msgid "Most Used Categories"
+msgstr "Categorias mais Usadas"
+
+#. translators: %1$s: smiley
+#: 404.php:69
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente olhar nos arquivos mensais. %1$s"
+
+#. translators: %s: author name
+#: author.php:42
+#, fuzzy
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Foto do perfil do %s"
+
+#: author.php:52
+msgid "Website"
+msgstr "Site"
+
+#. translators: %s: author name
+#: author.php:63
+msgid "About %s"
+msgstr "Sobre %s"
+
+#. translators: %s: author name
+#: author.php:77
+msgid "Posts by %s"
+msgstr "Posts de %s"
+
+#. translators: %s: post title
+#: comments.php:36
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:43
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr ""
+
+#: header.php:63
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr ""
+
+#: inc/custom-comments.php:102
+msgid "Comments are closed."
+msgstr "Os comentários estão desativados."
+
+#: inc/custom-header.php:54
+msgid "Default Header Image"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Theme Layout Settings"
+msgstr ""
+
+#: inc/customizer.php:44
+msgid "Container width and sidebar defaults"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Container Width"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Fixed width container"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Full width container"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Sidebar Positioning"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "Left & Right sidebars"
+msgstr ""
+
+#: inc/customizer.php:126
+msgid "No sidebar"
+msgstr ""
+
+#: inc/deprecated.php:80
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Parece que a p&aacute;gina que voc&ecirc; procura n&atilde;o existe ou foi "
-"removida.<br><br> Tente os links abaixo ou use a pesquisa."
 
-#: ../404.php:37
-msgid "Most Used Categories"
-msgstr "Categorias Mais Usadas"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
 
-#. translators: %1$s: smiley
-#: ../404.php:57
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Tente procurando nos artigos mensais. %1$s"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
 
-#: ../comments.php:28
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Um coment&aacute;rio"
-msgstr[1] "%1$s coment&aacute;rios"
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
 
-#: ../comments.php:35 ../comments.php:56
-msgid "Comment navigation"
-msgstr "Navegação de comentários"
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
 
-#: ../comments.php:37 ../comments.php:58
-msgid "&larr; Older Comments"
-msgstr "&larr; Mais Antigos"
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
 
-#: ../comments.php:40 ../comments.php:61
-msgid "Newer Comments &rarr;"
-msgstr "Mais Novos"
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
 
-#: ../comments.php:72
-msgid "Comments are closed."
-msgstr "Os comentários estão fechados."
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
 
-#: ../comment-form.php:5
-msgid "Write Comment."
-msgstr "Deixe um coment&aacute;rio"
-
-#: ../comment-form.php:5
-msgid "*Mandatory"
-msgstr "* Obrigat&oacute;rios"
-
-#: ../comment-form.php:13 ../inc/custom-comments.php:12
-msgid "Name"
-msgstr "Nome"
-
-#: ../comment-form.php:19
-msgid "E-Mail"
-msgstr "E-mail"
-
-#: ../comment-form.php:19
-msgid "Not public."
-msgstr "n&atilde;o ser&aacute; publicado"
-
-#: ../comment-form.php:24 ../inc/custom-comments.php:16
-msgid "Website"
-msgstr "Website"
-
-#: ../comment-form.php:29
-msgid "Your Comment"
-msgstr "Seu Coment&aacute;rio"
-
-#: ../comment-form.php:36
-msgid "Send comment."
-msgstr "Comentar"
-
-#: ../header.php:31
-msgid "Skip to content"
-msgstr "Ir para o conte&uacute;do"
-
-#. Name of the template
-msgid "Full Width Page"
-msgstr "Sem barra lateral"
-
-#: ../inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr "Navegação entre posts"
-
-#: ../inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Mais Antigos"
-
-#: ../inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Mais Novos <span class=\"meta-nav\">&rarr;</span>"
-
-#: ../inc/template-tags.php:52
-msgid "Post navigation"
-msgstr "Navegação entre posts"
-
-#: ../inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-
-#: ../inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-
-#: ../inc/template-tags.php:82
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Postado em %s"
-
-#: ../inc/template-tags.php:87
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "por %s"
-
-#. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:104 ../inc/template-tags.php:110
-msgid ", "
-msgstr ", "
-
-#: ../inc/template-tags.php:106
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Postado em %1$s"
-
-#: ../inc/template-tags.php:112
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Tags %1$s"
-
-#: ../inc/template-tags.php:118
-msgid "Leave a comment"
-msgstr "Deixe um coment&aacute;rio"
-
-#: ../inc/template-tags.php:118
-msgid "1 Comment"
-msgstr "1 coment&aacute;rio"
-
-#: ../inc/template-tags.php:118
-#, php-format
-msgid "% Comments"
-msgstr "% Coment&aacute;rios"
-
-#: ../inc/template-tags.php:122 ../loop-templates/content-page.php:34
+#: inc/deprecated.php:88
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
 
-#: ../inc/template-tags.php:139
-#, php-format
-msgid "Category: %s"
-msgstr "Categoria: %s"
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
 
-#: ../inc/template-tags.php:141
-#, php-format
-msgid "Tag: %s"
-msgstr "Tag: %s"
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
 
-#: ../inc/template-tags.php:143
-#, php-format
-msgid "Author: %s"
-msgstr "Autor: %s"
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
 
-#: ../inc/template-tags.php:145
-#, php-format
-msgid "Year: %s"
-msgstr "Ano: %s"
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
 
-#: ../inc/template-tags.php:145
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
 
-#: ../inc/template-tags.php:147
-#, php-format
-msgid "Month: %s"
-msgstr "M&ecirc;s: %s"
-
-#: ../inc/template-tags.php:147
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "F Y"
-
-#: ../inc/template-tags.php:149
-#, php-format
-msgid "Day: %s"
-msgstr "Dia: %s"
-
-#: ../inc/template-tags.php:149
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr "F j, Y"
-
-#: ../inc/template-tags.php:151
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr "Asides"
-
-#: ../inc/template-tags.php:153
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr "Galerias"
-
-#: ../inc/template-tags.php:155
-msgctxt "post format archive title"
-msgid "Images"
-msgstr "Imagens"
-
-#: ../inc/template-tags.php:157
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr "V&iacute;deos"
-
-#: ../inc/template-tags.php:159
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr "Cita&ccedil;&otilde;es"
-
-#: ../inc/template-tags.php:161
-msgctxt "post format archive title"
-msgid "Links"
-msgstr "Links"
-
-#: ../inc/template-tags.php:163
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr "Statuses"
-
-#: ../inc/template-tags.php:165
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr "&Aacute;udios"
-
-#: ../inc/template-tags.php:167
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr "Chats"
-
-#: ../inc/template-tags.php:169
-#, php-format
-msgid "Archives: %s"
-msgstr "Arquivos: %s"
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: ../inc/template-tags.php:173
-#, php-format
-msgid "%1$s: %2$s"
-msgstr "%1$s: %2$s"
-
-#: ../inc/template-tags.php:175
-msgid "Archives"
-msgstr "Arquivos"
-
-#: ../inc/customizer.php:24
-msgid "Slider Settings"
-msgstr "Configura&ccedil;&otilde;es de Slides"
-
-#: ../inc/customizer.php:33
-msgid "Number of slides displaying at once"
-msgstr "N&uacute;mero de slides exibidos ao mesmo tempo"
-
-#: ../inc/customizer.php:45
-msgid "Slider Time (in ms)"
-msgstr "Tempo de cada slide (em ms)"
-
-#: ../inc/customizer.php:57
-msgid "Loop Slider Content"
-msgstr "Habilitar loop do conte&uacute;do"
-
-#: ../inc/customizer.php:68
-msgid "Add scripts"
-msgstr "Adicionar scripts"
-
-#: ../inc/customizer.php:77
-msgid "Add custom JS code here"
-msgstr "Adicione c&oacute;digo customizado aqui"
-
-#: ../inc/extras.php:60
-#, php-format
-msgid "Page %s"
-msgstr "P&aacute;gina %s"
-
-#: ../inc/setup.php:48
-msgid "Primary Menu"
-msgstr "Menu Prim&aacute;rio"
-
-#: ../inc/setup.php:98
+#: inc/extras.php:277
 msgid "Read More..."
 msgstr "Leia mais..."
 
-#: ../inc/widgets.php:10
-msgid "Sidebar"
-msgstr "Barra Lateral"
+#: inc/hooks.php:30
+msgid "https://wordpress.org/"
+msgstr "https://br.wordpress.org/"
 
-#: ../inc/custom-comments.php:14
-msgid "Email"
-msgstr "E-mail"
+#. translators: WordPress
+#: inc/hooks.php:33
+msgid "Proudly powered by %s"
+msgstr "Orgulhosamente desenvolvido com %s"
 
-#: ../inc/custom-comments.php:25
-msgctxt "noun"
-msgid "Comment"
-msgstr "Comentário"
+#. translators: 1: Theme name, 2: Theme author
+#: inc/hooks.php:38
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
 
-#: ../loop-templates/content.php:33 ../loop-templates/content-single.php:29 ..
-#: loop-templates/content-page.php:25
+#. translators: Theme version
+#: inc/hooks.php:44
+msgid "Version: %1$s"
+msgstr ""
+
+#: inc/pagination.php:53
+msgid "&laquo;"
+msgstr ""
+
+#: inc/pagination.php:54
+msgid "&raquo;"
+msgstr ""
+
+#: inc/pagination.php:57
+msgid "Posts navigation"
+msgstr "Navegação entre posts"
+
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "Menu Prim&aacute;rio"
+
+#: inc/template-tags.php:33
+msgctxt "post date"
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "Posted by"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59 inc/template-tags.php:65
+msgid ", "
+msgstr ", "
+
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:62
+msgid "Posted in %s"
+msgstr ""
+
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:68
+msgid "Tagged %s"
+msgstr ""
+
+#: inc/template-tags.php:73
+msgid "Leave a comment"
+msgstr "Deixe um coment&aacute;rio"
+
+#: inc/template-tags.php:73
+msgid "1 Comment"
+msgstr "1 coment&aacute;rio"
+
+#: inc/template-tags.php:73
+msgid "% Comments"
+msgstr "% Coment&aacute;rios"
+
+#: inc/template-tags.php:167
+msgid "Comment navigation"
+msgstr "Navegação de comentários"
+
+#: inc/template-tags.php:171
+msgid "&larr; Older Comments"
+msgstr "&larr; Mais Antigos"
+
+#: inc/template-tags.php:177
+msgid "Newer Comments &rarr;"
+msgstr "Mais Novos"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "Navegação entre posts"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr ""
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: inc/template-tags.php:244
 msgid "Pages:"
 msgstr "P&aacute;ginas"
 
-#: ../loop-templates/content-none.php:16
+#: inc/widgets.php:103
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/widgets.php:105
+msgid "Right sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:115
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/widgets.php:117
+msgid "Left sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:127
+msgid "Hero Slider"
+msgstr "Hero Slides"
+
+#: inc/widgets.php:129
+msgid "Hero slider area. Place two or more widgets here and they will slide!"
+msgstr ""
+
+#: inc/widgets.php:139
+msgid "Hero Canvas"
+msgstr ""
+
+#: inc/widgets.php:141
+msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
+msgstr ""
+
+#: inc/widgets.php:151
+msgid "Top Full"
+msgstr ""
+
+#: inc/widgets.php:153
+msgid "Full top widget with dynamic grid"
+msgstr ""
+
+#: inc/widgets.php:163
+msgid "Footer Full"
+msgstr "Rodap&eacute;"
+
+#: inc/widgets.php:165
+msgid "Full sized footer widget with dynamic grid"
+msgstr ""
+
+#: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Nada encontrado."
+msgstr "Nada encontrado"
 
-#: ../loop-templates/content-none.php:24
-#, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece aqui</a>."
+#. translators: 1: Link to WP admin new post page.
+#: loop-templates/content-none.php:30
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto para publicar o seu primeiro post? <a href=\"%1$s\">Comece por aqui</"
+"a>."
 
-#: ../loop-templates/content-none.php:28
+#: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Desculpe, mas nada foi encontrado para sua pesquisa. Por favor, tente "
-"novamente com outras palavras."
+"Nada foi encontrado com os termos da sua pesquisa. Tente novamente com "
+"algumas palavras-chaves diferentes."
 
-#: ../loop-templates/content-none.php:33
+#: loop-templates/content-none.php:46
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Parece que a p&aacute;gina que voc&ecirc; procura n&atilde;o existe ou foi "
-"removida.<br><br> Tente os links abaixo ou use a pesquisa."
+"Parece que não conseguimos encontrar o que você está procurando. Talvez uma "
+"pesquisa pode ajudar."
 
-#. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
-
-#. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
-
-#. Description of the theme
-msgid ""
-"Combination of Automattic´s _s theme and Bootstrap SASS. Made as a solid "
-"starting point for your next theme project and WordPress website. Including "
-"Font Awesome support, build-in widget slider and much more you need for "
-"basic websites."
+#. Template Name of the theme
+msgid "Blank Page Template"
 msgstr ""
-"Combina&ccedil;&atilde;o do tema Automattic _s com Bootstrap SASS. "
-"Construido para ser um s&oacute;lido ponto de partida para o seu pr&oacute;"
-"ximo site WordPres. Incluindo suporte a Font Awesome, slider com widgets e "
-"muito mais que voc&ecirc; precisa para um site b&aacute;sico."
 
-#. Author of the theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenemann"
+#. Template Name of the theme
+msgid "Left and Right Sidebar Layout"
+msgstr ""
 
-#. Author URI of the theme
-msgid "http://www.holgerkoenemann.de"
-msgstr "http://www.holgerkoenemann.de"
+#. Template Name of the theme
+msgid "Empty Page Template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Full Width Page"
+msgstr "Sem barra lateral"
+
+#. Template Name of the theme
+msgid "Left Sidebar Layout"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Right Sidebar Layout"
+msgstr ""
+
+#. translators: %s: query term
+#: search.php:36
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa por: %s"
+
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Pesquisar por:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Pesquisar &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Pesquisar"
+
+#: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
+msgid "Previous"
+msgstr ""
+
+#: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
+msgid "Next"
+msgstr ""

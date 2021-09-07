@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
@@ -73,15 +73,7 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 			comments_popup_link( esc_html__( 'Leave a comment', 'understrap' ), esc_html__( '1 Comment', 'understrap' ), esc_html__( '% Comments', 'understrap' ) );
 			echo '</span>';
 		}
-		edit_post_link(
-			sprintf(
-				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'understrap' ),
-				the_title( '<span class="sr-only">"', '"</span>', false )
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
+		understrap_edit_post_link();
 	}
 }
 
@@ -155,5 +147,104 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 			}
 		}
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
+	}
+}
+
+if ( ! function_exists( 'understrap_comment_navigation' ) ) {
+	/**
+	 * Displays the comment navigation.
+	 *
+	 * @param string $nav_id The ID of the comment navigation.
+	 */
+	function understrap_comment_navigation( $nav_id ) {
+		if ( get_comment_pages_count() <= 1 ) {
+			// Return early if there are no comments to navigate through.
+			return;
+		}
+		?>
+		<nav class="comment-navigation" id="<?php echo esc_attr( $nav_id ); ?>">
+
+			<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+
+			<?php if ( get_previous_comments_link() ) { ?>
+				<div class="nav-previous">
+					<?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) ); ?>
+				</div>
+			<?php } ?>
+
+			<?php if ( get_next_comments_link() ) { ?>
+				<div class="nav-next">
+					<?php next_comments_link( __( 'Newer Comments &rarr;', 'understrap' ) ); ?>
+				</div>
+			<?php } ?>
+
+		</nav><!-- #<?php echo esc_attr( $nav_id ); ?> -->
+		<?php
+	}
+}
+
+if ( ! function_exists( 'understrap_edit_post_link' ) ) {
+	/**
+	 * Displays the edit post link for post.
+	 */
+	function understrap_edit_post_link() {
+		edit_post_link(
+			sprintf(
+				/* translators: %s: Name of current post */
+				esc_html__( 'Edit %s', 'understrap' ),
+				the_title( '<span class="sr-only">"', '"</span>', false )
+			),
+			'<span class="edit-link">',
+			'</span>'
+		);
+	}
+}
+
+if ( ! function_exists( 'understrap_post_nav' ) ) {
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 */
+	function understrap_post_nav() {
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+		?>
+		<nav class="container navigation post-navigation">
+			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+			<div class="row nav-links justify-content-between">
+				<?php
+				if ( get_previous_post_link() ) {
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+				}
+				if ( get_next_post_link() ) {
+					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+				}
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+		<?php
+	}
+}
+
+if ( ! function_exists( 'understrap_link_pages' ) ) {
+	/**
+	 * Displays/retrieves page links for paginated posts (i.e. including the
+	 * `<!--nextpage-->` Quicktag one or more times). This tag must be
+	 * within The Loop. Default: echo.
+	 *
+	 * @return void|string Formatted output in HTML.
+	 */
+	function understrap_link_pages() {
+		$args = apply_filters(
+			'understrap_link_pages_args',
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
+				'after'  => '</div>',
+			)
+		);
+		wp_link_pages( $args );
 	}
 }

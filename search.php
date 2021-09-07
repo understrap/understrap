@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.

@@ -1,25 +1,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2017-01-06 07:53+0000\n"
-"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"PO-Revision-Date: 2018-05-16 15:45+0200\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:33+0200\n"
+"Last-Translator: Thomas A. Reinert | TAR MediaDesign <thomas@tarcgn.de>\n"
 "Language-Team: German\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ..\n"
-"Last-Translator: Thomas A. Reinert | TAR MediaDesign <thomas@tarcgn.de>\n"
-"Language: de_DE\n"
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: header.php\n"
 "X-Poedit-SearchPath-2: index.php\n"
@@ -43,371 +43,14 @@ msgstr ""
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc\n"
 
-#: inc/customizer.php:99
-msgid "Choose between Bootstrap's container and container-fluid"
-msgstr "Wähle zwischen dem Bootstrap container und container-fluid aus"
-
-#: inc/customizer.php:151
-msgid "Choose how to display latest posts"
-msgstr "Wähle aus wie die letzten Beiträge angezeigt werden sollen"
-
-#: inc/customizer.php:156
-msgid "Default"
-msgstr "Standard"
-
-#: inc/customizer.php:157
-msgid "Masonry"
-msgstr "Masonry (Kachel-Layout)"
-
-#: inc/customizer.php:158
-msgid "Grid"
-msgstr "Grid (Raster-Layout)"
-
-#: inc/customizer.php:187
-msgid "Grid Post Columns"
-msgstr "Raster-Spalten"
-
-#: inc/customizer.php:188
-msgid "Choose how many columns to use"
-msgstr "Wähle aus wie viele Spalten benutzt werden sollen"
-
-#: woocommerce/cart/proceed-to-checkout-button.php:27
-msgid "Proceed to Checkout"
-msgstr "Weiter zum Bezahlen"
-
-#: woocommerce/cart/mini-cart.php:49 woocommerce/cart/cart.php:60
-msgid "Remove this item"
-msgstr "Entferne diesen Artikel"
-
-#: woocommerce/cart/mini-cart.php:72
-msgid "No products in the cart."
-msgstr "Keine Produkte im Einkaufswagen."
-
-#: woocommerce/cart/mini-cart.php:80
-msgid "Subtotal"
-msgstr "Zwischensumme"
-
-#: woocommerce/cart/mini-cart.php:85
-msgid "View Cart"
-msgstr "Einkaufswagen ansehen"
-
-#: woocommerce/cart/mini-cart.php:86
-msgid "Checkout"
-msgstr "Bezahlen"
-
-#: woocommerce/cart/cart-empty.php:28
-msgid "Your cart is currently empty."
-msgstr "Der Einkaufswagen ist leer."
-
-#: woocommerce/cart/cart-empty.php:36
-msgid "Return To Shop"
-msgstr "Zurück zum Shop"
-
-#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:79
-#: woocommerce/checkout/form-pay.php:29
-msgid "Product"
-msgstr "Produkt"
-
-#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:97
-msgid "Price"
-msgstr "Preis"
-
-#: woocommerce/cart/cart.php:38 woocommerce/cart/cart.php:103
-msgid "Quantity"
-msgstr "Menge"
-
-#: woocommerce/cart/cart.php:39 woocommerce/cart/cart.php:120
-#: woocommerce/myaccount/my-orders.php:16
-msgid "Total"
-msgstr "Gesamt"
-
-#: woocommerce/cart/cart.php:92
-msgid "Available on backorder"
-msgstr "Wird nachbestellt"
-
-#: woocommerce/cart/cart.php:138
-msgid "Coupon:"
-msgstr "Coupon:"
-
-#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:36
-msgid "Coupon code"
-msgstr "Coupon-Code"
-
-#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:40
-msgid "Apply Coupon"
-msgstr "Coupon anwenden"
-
-#: woocommerce/cart/cart.php:144
-msgid "Update Cart"
-msgstr "Einkaufswagen aktualisieren"
-
-#: woocommerce/checkout/payment.php:35
-msgid ""
-"Sorry, it seems that there are no available payment methods for your state. "
-"Please contact us if you require assistance or wish to make alternate "
-"arrangements."
-msgstr ""
-"Entschuldige, aber es sieht so aus als ob es keine verfügbaren "
-"Zahlungsmethoden für dein Land gibt.  Bitte kontaktiere uns, falls du Hilfe "
-"benötigst oder ein alternatives Arrangement mit uns treffen möchtest."
-
-#: woocommerce/checkout/payment.php:35
-msgid "Please fill in your details above to see available payment methods."
-msgstr ""
-"Bitte fülle die Details aus, um verfügbare Zahlungsmethoden einsehen zu "
-"können."
-
-#: woocommerce/checkout/payment.php:42
-msgid ""
-"Since your browser does not support JavaScript, or it is disabled, please "
-"ensure you click the <em>Update Totals</em> button before placing your "
-"order. You may be charged more than the amount stated above if you fail to "
-"do so."
-msgstr ""
-"Da dein Browser kein JavaScript unterstützt oder JavaScript deaktiviert ist, "
-"stelle bitte sicher, den <em>Aktualisieren</em> Button zu klicken bevor du "
-"deine Bestellung durchführst. Falls du dies vergisst, könnte dir ansonsten "
-"mehr in Rechnung gestellt werden, als hier angezeigt wird."
-
-#: woocommerce/checkout/payment.php:43
-msgid "Update totals"
-msgstr "Gesamtbetrag aktualisieren"
-
-#: woocommerce/checkout/form-pay.php:30
-msgid "Qty"
-msgstr "Menge"
-
-#: woocommerce/checkout/form-pay.php:31
-msgid "Totals"
-msgstr "Gesamt"
-
-#: woocommerce/checkout/form-pay.php:79
-msgid ""
-"Sorry, it seems that there are no available payment methods for your "
-"location. Please contact us if you require assistance or wish to make "
-"alternate arrangements."
-msgstr ""
-"Entschuldige, aber es sieht so aus als ob es keine verfügbaren "
-"Zahlungsmethoden für deinen Standort gibt.  Bitte kontaktiere uns, falls du "
-"Hilfe benötigst oder ein alternatives Arrangement mit uns treffen möchtest."
-
-#: woocommerce/checkout/form-coupon.php:28
-msgid "Have a coupon?"
-msgstr "Hast du einen Coupon?"
-
-#: woocommerce/checkout/form-coupon.php:28
-msgid "Click here to enter your code"
-msgstr "Hier klicken um deinen Code einzugeben"
-
-#: woocommerce/global/form-login.php:35
-#: woocommerce/myaccount/form-lost-password.php:30
-msgid "Username or email"
-msgstr "Benutzername oder E-Mail"
-
-#: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:48
-#: woocommerce/myaccount/form-login.php:98
-msgid "Password"
-msgstr "Passwort"
-
-#: woocommerce/global/form-login.php:48 woocommerce/myaccount/form-login.php:37
-#: woocommerce/myaccount/form-login.php:56
-msgid "Login"
-msgstr "Benutzername"
-
-#: woocommerce/global/form-login.php:51 woocommerce/myaccount/form-login.php:58
-msgid "Remember me"
-msgstr "Login speichern"
-
-#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:62
-msgid "Lost your password?"
-msgstr "Passwort vergessen?"
-
-#: woocommerce/global/quantity-input.php:24
-msgctxt "Product quantity input tooltip"
-msgid "Qty"
-msgstr "Menge"
-
-#: woocommerce/myaccount/form-lost-password.php:27
-msgid ""
-"Lost your password? Please enter your username or email address. You will "
-"receive a link to create a new password via email."
-msgstr ""
-"Passwort vergessen? Bitte gib deinen Benutzernamen oder E-Mail Adresse ein. "
-"Du wirst dann per E-Mail einen Link erhalten mit dem du ein neues Passwort "
-"vergeben kannst."
-
-#: woocommerce/myaccount/form-lost-password.php:40
-msgid "Reset Password"
-msgstr "Passwort zurücksetzen"
-
-#: woocommerce/myaccount/form-login.php:44
-msgid "Username or email address"
-msgstr "Benutzername oder E-Mail Adresse"
-
-#: woocommerce/myaccount/form-login.php:75
-#: woocommerce/myaccount/form-login.php:112
-msgid "Register"
-msgstr "Registrieren"
-
-#: woocommerce/myaccount/form-login.php:84
-msgid "Username"
-msgstr "Benutzername"
-
-#: woocommerce/myaccount/form-login.php:91
-#: woocommerce/myaccount/form-edit-account.php:40
-msgid "Email address"
-msgstr "E-Mail Adresse"
-
-#: woocommerce/myaccount/form-login.php:105
-msgid "Anti-spam"
-msgstr "Spam Schutz"
-
-#: woocommerce/myaccount/form-edit-account.php:30
-msgid "First name"
-msgstr "Vorname"
-
-#: woocommerce/myaccount/form-edit-account.php:34
-msgid "Last name"
-msgstr "Nachname"
-
-#: woocommerce/myaccount/form-edit-account.php:45
-msgid "Password Change"
-msgstr "Passwort ändern"
-
-#: woocommerce/myaccount/form-edit-account.php:48
-msgid "Current Password (leave blank to leave unchanged)"
-msgstr "Aktuelles Passwort (Leer lassen wenn es nicht geändert werden soll)"
-
-#: woocommerce/myaccount/form-edit-account.php:52
-msgid "New Password (leave blank to leave unchanged)"
-msgstr "Neues Passwort (Leer lassen wenn es nicht geändert werden soll)"
-
-#: woocommerce/myaccount/form-edit-account.php:56
-msgid "Confirm New Password"
-msgstr "Neues Passwort bestätigen"
-
-#: woocommerce/myaccount/form-edit-account.php:66
-msgid "Save changes"
-msgstr "Änderungen speichern"
-
-#: woocommerce/myaccount/my-orders.php:13
-msgid "Order"
-msgstr "Bestellung"
-
-#: woocommerce/myaccount/my-orders.php:14
-msgid "Date"
-msgstr "Datum"
-
-#: woocommerce/myaccount/my-orders.php:15
-msgid "Status"
-msgstr "Status"
-
-#: woocommerce/myaccount/my-orders.php:30
-msgid "Recent Orders"
-msgstr "Kürzlich bestellt"
-
-#: woocommerce/myaccount/my-orders.php:55 woocommerce/myaccount/orders.php:51
-msgctxt "hash before order number"
-msgid "#"
-msgstr "#"
-
-#: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:61
-#, php-format
-msgid "%s for %s item"
-msgid_plural "%s for %s items"
-msgstr[0] "%s für %s Artikel"
-msgstr[1] "%s für %s Artikel"
-
-#: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:68
-msgid "Pay"
-msgstr "Bezahlen"
-
-#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:72
-msgid "View"
-msgstr "Ansehen"
-
-#: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:76
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: woocommerce/myaccount/orders.php:107
-msgid "Previous"
-msgstr "Vorherige"
-
-#: woocommerce/myaccount/orders.php:111
-msgid "Next"
-msgstr "Nächste"
-
-#: woocommerce/myaccount/orders.php:119 woocommerce/myaccount/downloads.php:98
-msgid "Go Shop"
-msgstr "In den Shop"
-
-#: woocommerce/myaccount/orders.php:121
-msgid "No order has been made yet."
-msgstr "Es wurde bisher keine Bestellung vorgenommen."
-
-#: woocommerce/myaccount/form-edit-address.php:23
-msgid "Billing Address"
-msgstr "Rechnungsadresse"
-
-#: woocommerce/myaccount/form-edit-address.php:23
-msgid "Shipping Address"
-msgstr "Lieferadresse"
-
-#: woocommerce/myaccount/form-edit-address.php:46
-msgid "Save Address"
-msgstr "Adresse speichern"
-
-#: woocommerce/myaccount/form-reset-password.php:27
-msgid "Enter a new password below."
-msgstr "Gib unten ein neues Passwort ein."
-
-#: woocommerce/myaccount/form-reset-password.php:30
-msgid "New password"
-msgstr "Neues Passwort"
-
-#: woocommerce/myaccount/form-reset-password.php:34
-msgid "Re-enter new password"
-msgstr "Wiederhole das Passwort"
-
-#: woocommerce/myaccount/form-reset-password.php:47
-msgid "Save"
-msgstr "Speichern"
-
-#: woocommerce/myaccount/downloads.php:59
-msgid "&infin;"
-msgstr "&infin;"
-
-#: woocommerce/myaccount/downloads.php:67
-msgid "Never"
-msgstr "Niemals"
-
-#: woocommerce/myaccount/downloads.php:75
-msgid "Download"
-msgstr "Download"
-
-#: woocommerce/myaccount/downloads.php:100
-msgid "No downloads available yet."
-msgstr "Noch keine Downloads verfügbar."
-
-#: woocommerce/single-product/review-rating.php:28
-#, php-format
-msgid "Rated %d out of 5"
-msgstr "Bewertet mit %d von 5"
-
-#: woocommerce/single-product/review-rating.php:29
-msgid "out of 5"
-msgstr "von 5"
-
-#: woocommerce/single-product/rating.php:36
-#, php-format
-msgid "Rated %s out of 5"
-msgstr "Bewertet mit %s von 5"
-
-#: woocommerce/single-product/rating.php:38
-#, php-format
-msgid "out of %s5%s"
-msgstr "von %s5%s"
+#. Theme Name of the theme
+msgid "Understrap"
+msgstr "Understrap"
+
+#. Theme URI of the theme
+#: inc/hooks.php:40
+msgid "https://understrap.com"
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
@@ -426,371 +69,445 @@ msgstr ""
 "vieles mehr, was du für die Erstellung einer einfachen Website benötigst. "
 "WICHTIG: Alle Abhängigkeiten der Entwicklertools sind in diesem Paket nicht "
 "enthalten! Lade die ZIP-Datei herunter, entpacke sie und führe \"npm install"
-"\" sowie \"gulp copy-assets\" in der Konsole im entpackten UnderStrap-Ordner "
+"\" sowie \"gulp copy-assets\" in der Konsole im entpackten Understrap-Ordner "
 "aus."
 
-#: search.php:29
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
+#. Author of the theme
+msgid "the Understrap Authors"
+msgstr ""
 
-#: header.php:34
-msgid "Skip to content"
-msgstr "Zum Inhalt springen"
+#. Author URI of the theme
+msgid "https://github.com/understrap/understrap/graphs/contributors"
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
-#: 404.php:24
+#: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oooops! Diese Seite konnte nicht gefunden werden."
+msgstr "Die Seite konnte leider nicht gefunden werden."
 
-#: 404.php:31
+#: 404.php:36
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchtest du eine "
+"Suche starten?"
+
+#: 404.php:46
+msgid "Most Used Categories"
+msgstr "Oft verwendete Kategorien"
+
+#. translators: %1$s: smiley
+#: 404.php:69
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Versuchs mit einem Blick in die monatlichen Archive. %1$s"
+
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Profilbild von %s"
+
+#: author.php:52
+msgid "Website"
+msgstr "Webseite"
+
+#. translators: %s: author name
+#: author.php:63
+msgid "About %s"
+msgstr "Über %s"
+
+#. translators: %s: author name
+#: author.php:77
+msgid "Posts by %s"
+msgstr "Beiträge von %s"
+
+#. translators: %s: post title
+#: comments.php:36
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:43
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "Direkt zum Inhalt wechseln"
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr ""
+
+#: header.php:63
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr ""
+
+#: inc/custom-comments.php:102
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: inc/custom-header.php:54
+msgid "Default Header Image"
+msgstr "Standard-Header-Bild"
+
+#: inc/customizer.php:42
+msgid "Theme Layout Settings"
+msgstr "Theme Layout Einstellungen"
+
+#: inc/customizer.php:44
+msgid "Container width and sidebar defaults"
+msgstr "Container-Breite und Seitenleisten-Einstellungen"
+
+#: inc/customizer.php:84
+msgid "Container Width"
+msgstr "Container-Breite"
+
+#: inc/customizer.php:85
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "Wähle zwischen dem Bootstrap container und container-fluid aus"
+
+#: inc/customizer.php:90
+msgid "Fixed width container"
+msgstr "Container mit fester Breite"
+
+#: inc/customizer.php:91
+msgid "Full width container"
+msgstr "Container mit voller Seitenbreite"
+
+#: inc/customizer.php:113
+msgid "Sidebar Positioning"
+msgstr "Seitenleisten-Positionierung"
+
+#: inc/customizer.php:114
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "Right sidebar"
+msgstr "Rechte Seitenleiste"
+
+#: inc/customizer.php:124
+msgid "Left sidebar"
+msgstr "Linke Seitenleiste"
+
+#: inc/customizer.php:125
+msgid "Left & Right sidebars"
+msgstr "Linke und rechte Seitenleiste"
+
+#: inc/customizer.php:126
+msgid "No sidebar"
+msgstr "Keine Seitenleiste"
+
+#: inc/deprecated.php:80
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Es scheint dass hier nichts gefunden wurde. Vielleicht solltest du einen der "
-"Links unten oder die Suche verwenden?"
 
-#: 404.php:42
-msgid "Most Used Categories"
-msgstr "Meistgenutzte Kategorien"
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:62
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Versuch es einmal im monatlichen Archiv. %1$s"
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
 
-#: author.php:34
+#: inc/deprecated.php:83
 msgid "About:"
-msgstr "Über:"
+msgstr ""
 
-#: author.php:42 inc/custom-comments.php:30
-msgid "Website"
-msgstr "Webseite"
-
-#: author.php:49
+#: inc/deprecated.php:84
 msgid "Profile"
-msgstr "Profil"
+msgstr ""
 
-#: author.php:54
+#: inc/deprecated.php:85
 msgid "Posts by"
-msgstr "Artikel von"
+msgstr ""
 
-#: author.php:68
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
 msgid "in"
-msgstr "in"
+msgstr ""
 
-#: comments.php:28
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Ein Gedanke zu  &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s Gedanken zu &ldquo;%2$s&rdquo;"
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
 
-#: comments.php:36 comments.php:59
-msgid "Comment navigation"
-msgstr "Kommentarnavigation"
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
 
-#: comments.php:38 comments.php:61
-msgid "&larr; Older Comments"
-msgstr "&larr; Ältere Kommentare"
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
 
-#: comments.php:42 comments.php:65
-msgid "Newer Comments &rarr;"
-msgstr "Neuere Kommentare &rarr;"
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
 
-#: comments.php:78
-msgid "Comments are closed."
-msgstr "Kommentare sind geschlossen."
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
 
-#: footer.php:27
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org/"
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
 
-#: footer.php:28
-#, php-format
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Weiterlesen..."
+
+#: inc/hooks.php:30
+msgid "https://wordpress.org/"
+msgstr "https://de.wordpress.org/"
+
+#. translators: WordPress
+#: inc/hooks.php:33
 msgid "Proudly powered by %s"
 msgstr "Stolz angetrieben durch %s"
 
-#: footer.php:31
-#, php-format
+#. translators: 1: Theme name, 2: Theme author
+#: inc/hooks.php:38
 msgid "Theme: %1$s by %2$s."
 msgstr "Theme: %1$s von %2$s."
 
-#: footer.php:33
-#, php-format
+#. translators: Theme version
+#: inc/hooks.php:44
 msgid "Version: %1$s"
 msgstr "Version: %1$s"
 
-#: searchform.php:10 searchform.php:16
-msgid "Search"
-msgstr "Suche"
-
-#: searchform.php:13
-msgid "Search &hellip;"
-msgstr "Suche &hellip;"
-
-#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
-#: loop-templates/content.php:37 loop-templates/content-single.php:31
-#: loop-templates/content-verticalpage.php:28
-msgid "Pages:"
-msgstr "Seiten:"
-
-#: loop-templates/content-page.php:34
-#: loop-templates/content-verticalpage.php:37
-msgid "Edit"
-msgstr "Editieren"
-
-#: loop-templates/content-none.php:15
-msgid "Nothing Found"
-msgstr "Nichts gefunden"
-
-#: loop-templates/content-none.php:23
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: inc/pagination.php:53
+msgid "&laquo;"
 msgstr ""
-"Bereit deinen ersten Artikel zu veröffentlichen? <a href=\"%1$s\">Dann fang "
-"hier an</a>."
 
-#: loop-templates/content-none.php:28
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+#: inc/pagination.php:54
+msgid "&raquo;"
 msgstr ""
-"Entschuldigung, aber leider wurde nichts zu deinem Suchbegriff gefunden. "
-"Versuche es erneut mit einem anderen Suchbegriff."
 
-#: loop-templates/content-none.php:34
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+#: inc/pagination.php:57
+msgid "Posts navigation"
 msgstr ""
-"Leider konnten wir nicht das finden wonach du gesucht hast. Vielleicht kann "
-"dir die Suche helfen."
 
-#. Name of the template
-msgid "Blank Page Template"
-msgstr "Komplett leere Seiten-Vorlage"
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "Hauptmenü"
 
-#. Name of the template
-msgid "Left and Right Sidebar Layout"
-msgstr "Linke und rechte Seitenspalte"
-
-#. Name of the template
-msgid "Empty Page Template"
-msgstr "Leere Seiten-Vorlage"
-
-#. Name of the template
-msgid "Full Width Page"
-msgstr "Seite mit voller Breite"
-
-#. Name of the template
-msgid "Left Sidebar Layout"
-msgstr "Layout mit linker Seitenleiste"
-
-#. Name of the template
-msgid "Vertical One Page"
-msgstr "Vertikales \"One Pager\" Layout"
-
-#: inc/template-tags.php:18
-#, php-format
-msgid " Edited %4$s"
-msgstr " Bearbeitet %4$s"
-
-#: inc/template-tags.php:29
-#, php-format
+#: inc/template-tags.php:33
 msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Veröffentlicht am %s"
+msgid "Posted on"
+msgstr ""
 
-#: inc/template-tags.php:34
-#, php-format
+#: inc/template-tags.php:42
 msgctxt "post author"
-msgid "by %s"
-msgstr "von %s"
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "Posted by"
+msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:51 inc/template-tags.php:57
+#: inc/template-tags.php:59 inc/template-tags.php:65
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:53
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Veröffentlicht in  %1$s"
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:62
+msgid "Posted in %s"
+msgstr ""
 
-#: inc/template-tags.php:59
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Verschlagwortet mit  %1$s"
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:68
+msgid "Tagged %s"
+msgstr ""
 
-#: inc/template-tags.php:65
+#: inc/template-tags.php:73
 msgid "Leave a comment"
 msgstr "Kommentar hinterlassen"
 
-#: inc/template-tags.php:65
+#: inc/template-tags.php:73
 msgid "1 Comment"
 msgstr "1 Kommentar"
 
-#: inc/template-tags.php:65
+#: inc/template-tags.php:73
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:72
-#, php-format
-msgid "Edit %s"
-msgstr "Editiere %s"
+#: inc/template-tags.php:167
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
 
-#: inc/template-tags.php:143
+#: inc/template-tags.php:171
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: inc/template-tags.php:177
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "%s bearbeiten"
+
+#: inc/template-tags.php:216
 msgid "Post navigation"
 msgstr "Beitrags-Navigation"
 
-#: inc/template-tags.php:148
+#: inc/template-tags.php:220
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:223
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: inc/setup.php:51
-msgid "Primary Menu"
-msgstr "Hauptmenü"
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Seiten:"
 
-#: inc/setup.php:122
-msgid "Read More..."
-msgstr "Weiterlesen..."
-
-#: inc/widgets.php:14
+#: inc/widgets.php:103
 msgid "Right Sidebar"
 msgstr "Rechte Seitenleiste"
 
-#: inc/widgets.php:24
+#: inc/widgets.php:105
+msgid "Right sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:115
 msgid "Left Sidebar"
 msgstr "Linke Seitenleiste"
 
-#: inc/widgets.php:34
+#: inc/widgets.php:117
+msgid "Left sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:127
 msgid "Hero Slider"
 msgstr "\"Bühnen\"-Slider"
 
-#: inc/widgets.php:44
-msgid "Hero Static"
-msgstr "Statische \"Bühne\""
+#: inc/widgets.php:129
+msgid "Hero slider area. Place two or more widgets here and they will slide!"
+msgstr ""
 
-#: inc/widgets.php:54
+#: inc/widgets.php:139
+msgid "Hero Canvas"
+msgstr ""
+
+#: inc/widgets.php:141
+msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
+msgstr ""
+
+#: inc/widgets.php:151
+msgid "Top Full"
+msgstr ""
+
+#: inc/widgets.php:153
+msgid "Full top widget with dynamic grid"
+msgstr ""
+
+#: inc/widgets.php:163
 msgid "Footer Full"
 msgstr "Fußbereich"
 
-#: inc/custom-comments.php:24
-msgid "Name"
-msgstr "Name"
-
-#: inc/custom-comments.php:27
-msgid "Email"
-msgstr "E-Mail"
-
-#: inc/custom-comments.php:49
-msgctxt "noun"
-msgid "Comment"
-msgstr "Kommentare"
-
-#: inc/customizer.php:36
-msgid "Slider Settings"
-msgstr "Slider-Einstellungen"
-
-#: inc/customizer.php:45
-msgid "Number of slides displaying at once"
-msgstr "Anzahl der Slides die auf einmal angezeigt werden"
-
-#: inc/customizer.php:57
-msgid "Slider Time (in ms)"
-msgstr "Zeit von Slide zu Slide (in ms)"
-
-#: inc/customizer.php:69
-msgid "Loop Slider Content"
-msgstr "Soll der Slider von vorne anfangen?"
-
-#: inc/customizer.php:81
-msgid "Theme Layout Settings"
-msgstr "Theme Layout Einstellungen"
-
-#: inc/customizer.php:83
-msgid "Container width and sidebar defaults"
-msgstr "Container-Breite und Seitenleisten-Einstellungen"
-
-#: inc/customizer.php:98
-msgid "Container Width"
-msgstr "Container-Breite"
-
-#: inc/customizer.php:104
-msgid "Fixed width container"
-msgstr "Container mit fester Breite"
-
-#: inc/customizer.php:105
-msgid "Full width container"
-msgstr "Container mit voller Seitenbreite"
-
-#: inc/customizer.php:122
-msgid "Sidebar Positioning"
-msgstr "Seitenleisten-Positionierung"
-
-#: inc/customizer.php:123
-msgid "Set sidebar's position. Can either be: right, left, both or none"
+#: inc/widgets.php:165
+msgid "Full sized footer widget with dynamic grid"
 msgstr ""
-"Stelle die Standard-Position der Seitenleiste ein. Zur Auswahl stehen: "
-"Rechts, links, beide oder keine."
 
-#: inc/customizer.php:129
-msgid "Right sidebar"
-msgstr "Rechte Seitenleiste"
+#: loop-templates/content-none.php:18
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
 
-#: inc/customizer.php:130
-msgid "Left sidebar"
-msgstr "Linke Seitenleiste"
+#. translators: 1: Link to WP admin new post page.
+#: loop-templates/content-none.php:30
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit, deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starte "
+"hier</a>."
 
-#: inc/customizer.php:131
-msgid "Left & Right sidebars"
-msgstr "Linke und rechte Seitenleiste"
+#: loop-templates/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Leider gibt es keine Übereinstimmung mit deinen Suchbegriffen. Bitte "
+"versuche es nochmal mit einigen anderen Begriffen."
 
-#: inc/customizer.php:132
-msgid "No sidebar"
-msgstr "Keine Seitenleiste"
+#: loop-templates/content-none.php:46
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht "
+"hast. Möglicherweise hilft eine Suche."
 
-#: inc/customizer.php:150
-msgid "Posts Index Style"
-msgstr "Layout der Beiträge auf der Startseite"
+#. Template Name of the theme
+msgid "Blank Page Template"
+msgstr "Komplett leere Seiten-Vorlage"
 
-#: woocommerce/single-product/rating.php:39
-#, php-format
-msgid "based on %s customer rating"
-msgid_plural "based on %s customer ratings"
-msgstr[0] "basierend auf %s Kundenbewertungen"
-msgstr[1] "basierend auf %s Kundenbewertungen"
+#. Template Name of the theme
+msgid "Left and Right Sidebar Layout"
+msgstr "Linke und rechte Seitenspalte"
 
-#: woocommerce/single-product/rating.php:42
-#, php-format
-msgid "%s customer review"
-msgid_plural "%s customer reviews"
-msgstr[0] "%s Kundenbewertung"
-msgstr[1] "%s Kunden Bewertungen"
+#. Template Name of the theme
+msgid "Empty Page Template"
+msgstr "Leere Seiten-Vorlage"
 
-#. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+#. Template Name of the theme
+msgid "Full Width Page"
+msgstr "Seite mit voller Breite"
 
-#. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+#. Template Name of the theme
+msgid "Left Sidebar Layout"
+msgstr "Layout mit linker Seitenleiste"
 
-#. Author of the theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenemann"
+#. Template Name of the theme
+msgid "Right Sidebar Layout"
+msgstr ""
 
-#. Author URI of the theme
-msgid "http://www.holgerkoenemann.de"
-msgstr "http://www.holgerkoenemann.de"
+#. translators: %s: query term
+#: search.php:36
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Suche&#160;&hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Suche"
+
+#: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
+msgid "Previous"
+msgstr "Vorherige"
+
+#: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
+msgid "Next"
+msgstr "Nächste"

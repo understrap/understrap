@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
@@ -28,6 +28,26 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 		// Adds a class of hfeed to non-singular pages.
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
+		}
+
+		// Adds a body class based on the presence of a sidebar.
+		$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+		if ( is_page_template( 'page-templates/fullwidthpage.php' ) ) {
+			$classes[] = 'understrap-no-sidebar';
+		} elseif (
+			is_page_template(
+				array(
+					'page-templates/both-sidebarspage.php',
+					'page-templates/left-sidebarpage.php',
+					'page-templates/right-sidebarpage.php',
+				)
+			)
+		) {
+			$classes[] = 'understrap-has-sidebar';
+		} elseif ( 'none' !== $sidebar_pos ) {
+			$classes[] = 'understrap-has-sidebar';
+		} else {
+			$classes[] = 'understrap-no-sidebar';
 		}
 
 		return $classes;
@@ -60,36 +80,6 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
 
 		return $html;
-	}
-}
-
-if ( ! function_exists( 'understrap_post_nav' ) ) {
-	/**
-	 * Display navigation to next/previous post when applicable.
-	 */
-	function understrap_post_nav() {
-		// Don't print empty markup if there's nowhere to navigate.
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-		$next     = get_adjacent_post( false, '', false );
-
-		if ( ! $next && ! $previous ) {
-			return;
-		}
-		?>
-		<nav class="container navigation post-navigation">
-			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
-			<div class="row nav-links justify-content-between">
-				<?php
-				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
-				}
-				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
-				}
-				?>
-			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
-		<?php
 	}
 }
 
@@ -236,3 +226,59 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 		return wp_kses( $data, $allowed_tags );
 	}
 } // End of if function_exists( 'understrap_kses_title' ).
+
+if ( ! function_exists( 'understrap_hide_posted_by' ) ) {
+	/**
+	 * Hides the posted by markup in `understrap_posted_on()`.
+	 *
+	 * @param string $byline Posted by HTML markup.
+	 * @return string Maybe filtered posted by HTML markup.
+	 */
+	function understrap_hide_posted_by( $byline ) {
+		if ( is_author() ) {
+			return '';
+		}
+		return $byline;
+	}
+}
+add_filter( 'understrap_posted_by', 'understrap_hide_posted_by' );
+
+
+add_filter( 'excerpt_more', 'understrap_custom_excerpt_more' );
+
+if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
+	/**
+	 * Removes the ... from the excerpt read more link
+	 *
+	 * @param string $more The excerpt.
+	 *
+	 * @return string
+	 */
+	function understrap_custom_excerpt_more( $more ) {
+		if ( ! is_admin() ) {
+			$more = '';
+		}
+		return $more;
+	}
+}
+
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+
+if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
+	/**
+	 * Adds a custom read more link to all excerpts, manually or automatically generated
+	 *
+	 * @param string $post_excerpt Posts's excerpt.
+	 *
+	 * @return string
+	 */
+	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+		if ( ! is_admin() ) {
+			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
+				'Read More...',
+				'understrap'
+			) . '</a></p>';
+		}
+		return $post_excerpt;
+	}
+}

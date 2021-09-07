@@ -1,0 +1,22 @@
+@each $name, $color in $colors {
+
+	.has-#{$name}-color,
+	.has-#{$name}-color:visited {
+		color: $color;
+	}
+	.has-#{$name}-background-color {
+		background-color: $color;
+		border-color: $color;
+	}
+}
+@each $name, $color in $theme-colors {
+
+	.has-#{$name}-color,
+	.has-#{$name}-color:visited {
+		color: $color;
+	}
+	.has-#{$name}-background-color {
+		background-color: $color;
+		border-color: $color;
+	}
+}

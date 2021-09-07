@@ -1,13 +1,26 @@
 {
   "name": "understrap",
-  "version": "0.9.6",
+  "version": "1.0.0",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gulp copy-assets"
+    "bs": "browser-sync start --config src/build/browser-sync.config.js",
+    "css": "npm-run-all css-compile css-postcss css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet src/sass/theme.scss:css/theme.css src/sass/custom-editor-style.scss:css/custom-editor-style.css",
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\"",
+    "css-postcss": "postcss --config src/build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "js": "npm-run-all js-compile js-minify",
+    "js-compile": "rollup --config src/build/rollup.config.js --sourcemap",
+    "js-minify": "terser  --config-file src/build/terser.config.json --output js/theme.min.js js/theme.js",
+    "watch": "npm-run-all --parallel watch-run-*",
+    "watch-bs": "npm-run-all --parallel bs watch-run-*",
+    "watch-run-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\"",
+    "watch-run-js": "nodemon --watch src/js/ --ext js --exec \"npm-run-all js\"",
+    "copy-assets": "node src/build/copy-assets.js",
+    "dist": "npm-run-all --parallel css js"
   },
   "engines": {
-    "node": "^10 || ^12 || >=14"
+    "node": "^12 || >=14"
   },
   "repository": {
     "type": "git",
@@ -26,26 +39,31 @@
     "url": "https://github.com/understrap/understrap/issues"
   },
   "homepage": "https://understrap.com",
-  "dependencies": {},
+  "dependencies": {
+    "terser": "^5.7.1"
+  },
   "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "autoprefixer": "^10.2.5",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-multi-entry": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "autoprefixer": "^10.3.2",
     "bootstrap": "^4.6.0",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.5",
+    "browserslist": "^4.16.8",
+    "caniuse-lite": "^1.0.30001251",
+    "clean-css-cli": "^5.3.3",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^9.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
-    "postcss": "^8.2.9"
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-understrap-palette-generator": "git+https://github.com/bacoords/postcss-understrap-palette-generator.git",
+    "rollup": "^2.56.2",
+    "sass": "^1.38.1"
   }
 }

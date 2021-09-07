@@ -2,7 +2,7 @@
 /**
  * Rest in peace
  *
- * @package UnderStrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
@@ -68,4 +68,23 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 			return $widget_classes;
 		endif;
 	}
+}
+
+/**
+ * This function has never existed in any of the templates. It serves to extract
+ * strings for translations which have been removed or changed and may still be
+ * be present in child themes. The corresponding translations are not maintained.
+ */
+function deprecated_translations() {
+	array(
+		__( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ),
+		__( 'Previous', 'understrap' ),
+		__( 'Next', 'understrap' ),
+		__( 'About:', 'understrap' ),
+		__( 'Profile', 'understrap' ),
+		__( 'Posts by', 'understrap' ),
+		__( 'Permanent Link:', 'understrap' ),
+		__( 'in', 'understrap' ),
+		__( 'Edit', 'understrap' ),
+	);
 }

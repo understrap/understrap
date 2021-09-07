@@ -1,0 +1,89 @@
+  // Tables
+.wp-block-table table {
+	@extend .table;
+	@extend .table-bordered;
+}
+
+// Block Quotes
+.wp-block-quote {
+	@extend .blockquote;
+	cite {
+		@extend .blockquote-footer;
+	}
+}
+
+// Image captions
+figure.wp-block-image {
+	@extend .figure;
+	display: block;
+	img {
+		@extend .figure-img;
+	}
+	figcaption {
+		@extend .figure-caption;
+	}
+}
+
+// Alternate/classic editor image captions.
+.wp-block-image > figure{
+	@extend .figure;
+	display: block;
+	img {
+		@extend .figure-img;
+	}
+	figcaption {
+		@extend .figure-caption;
+	}
+}
+
+
+// Wide alignments and covers.
+body.understrap-no-sidebar{
+	.alignwide, 
+	.alignfull, 
+	.wp-block-cover.alignwide,
+	.wp-block-cover.alignfull {
+		margin: 0px calc(50% - 50vw);
+		max-width: 100vw;
+		width: 100vw;
+	
+		.wp-block-cover__inner-container {
+			@include make-container();
+			@include make-container-max-widths();
+		}
+	}
+	
+	.alignwide,
+	.wp-block-cover.alignwide{
+		margin: 0px calc(50% - 45vw);
+		max-width: 90vw;
+		width: 100vw;
+	
+		.wp-block-cover__inner-container {
+			@include make-container();
+			@include make-container-max-widths();
+		}
+	}
+	
+	
+	@media (max-width: 920px) {
+		.alignwide,
+		.wp-block-cover.alignwide {
+			margin: 0px calc(50% - 48vw);
+			max-width: 96vw;
+			width: 100vw;
+		}
+	}
+}
+
+// Buttons
+.wp-block-buttons {
+	.wp-block-button {
+		.wp-block-button__link {
+			@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+		}
+		&:not(.is-style-outline) .wp-block-button__link {
+			border: $btn-border-width solid transparent;
+		}
+	}
+}

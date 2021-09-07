@@ -1,38 +1,30 @@
 /*
-Theme Name: UnderStrap
+Theme Name: Understrap
 Theme URI: https://understrap.com
-Author: the Understrap Authors
-Author URI: https://github.com/understrap/understrap/graphs/contributors
+Author: Howard Development &amp; Consulting
+Author URI: https://howarddc.com
 GitHub Theme URI: https://github.com/understrap/understrap
-Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as a parent theme. It is up to you. Including Font Awesome support, built-in widget slider and much more you need for basic websites. IMPORTANT: All developer dependencies are not bundled with this install file. Just download the .zip, extract it and run "npm install" and "gulp copy-assets" inside the extracted /understrap folder.
-That downloads everything and moves it in place so that you can recompile your CSS and JS files;
-A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/understrap/understrap
-A child theme is available on Github, too: https://github.com/understrap/understrap-child;
-Version: 0.9.6
-Tested up to: 5.7.2
+Description: The renowned WordPress starter theme framework that combined Underscores and Bootstrap. Trusted by more than 100,000 developers for building handcrafted, custom WordPress sites.
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 5.8
 Requires PHP: 5.2
-License: UnderStrap WordPress Theme, Copyright 2013-2021 Howard Development &amp; Consulting
-UnderStrap is distributed under the terms of the GNU GPL version 2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: understrap
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, theme-options, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-UnderStrap is based on Underscores https://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Understrap WordPress Theme, (C) 2021 Howard Development & Consulting, LLC
+Understrap is distributed under the terms of the GNU GPL.
 
 Resource Licenses:
-Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
-and of course
-jQuery: https://jquery.org | (Code licensed under MIT)
-WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+Understrap is based on Underscores https://underscores.me/, (C) Automattic, Inc.
+Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
+Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
+WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/twittem/wp-bootstrap-navwalker (GNU GPLv3)
 */
 
 /*
-This file is just used to identify the theme in WordPress.
-The compiled CSS output can be found in /css/theme.css
-The SASS sources for it can be found in /sass/
-The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
-
-...and now go out and play!
+Do not modify the parent Understrap theme. Instead, download a copy of the Understrap Child starter theme and do all your development within the child theme.
+Full developer documentation: https://docs.understrap.com
 */

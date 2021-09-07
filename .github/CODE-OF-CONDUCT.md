@@ -1,51 +1,57 @@
-# Code of Conduct v2.0
+# Contributor Bill of Rights & Responsibilities
 
-This code of conduct outlines our expectations for participants within the [UnderStrap](https://github.com/understrap/) community, as well as steps to reporting unacceptable behavior. We are committed to providing a welcoming and inspiring community for all and expect our code of conduct to be honored. Anyone who violates this code of conduct may be banned from the community.
+Welcome to the Understrap Contributor Bill of Rights & Responsibilities, and thanks for being part of the Understrap community!
 
-Our open source community strives to:
+**To submit questions or report violations anonymously, use this form: https://forms.gle/uNnkKPakeuae4kiX7**
 
-* **Be friendly and patient.**
-* **Be welcoming**: We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to members of any race, ethnicity, culture, national origin, colour, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
-* **Be considerate**: Your work will be used by other people, and you in turn will depend on the work of others. Any decision you take will affect users and colleagues, and you should take those consequences into account when making decisions. Remember that we're a world-wide community, so you might not be communicating in someone else's primary language.
-* **Be respectful**:  Not all of us will agree all the time, but disagreement is no excuse for poor behavior and poor manners. We might all experience some frustration now and then, but we cannot allow that frustration to turn into a personal attack. It’s important to remember that a community where people feel uncomfortable or threatened is not a productive one.
-* **Be careful in the words that you choose**: we are a community of professionals, and we conduct ourselves professionally. Be kind to others. Do not insult or put down other participants. Harassment and other exclusionary behavior aren't acceptable. This includes, but is not limited to:
-  * Violent threats or language directed against another person.
-  * Discriminatory jokes and language.
-  * Posting sexually explicit or violent material.
-  * Posting (or threatening to post) other people's personally identifying information ("doxing").
-  * Personal insults, especially those using racist or sexist terms.
-  * Unwelcome sexual attention.
-  * Advocating for, or encouraging, any of the above behavior.
-  * Repeated harassment of others. In general, if someone asks you to stop, then stop.
-* **When we disagree, try to understand why**: Disagreements, both social and technical, happen all the time. It is important that we resolve disagreements and differing views constructively. Remember that we’re different. The strength of our community comes from its diversity, people from a wide range of backgrounds. Different people have different perspectives on issues. Being unable to understand why someone holds a viewpoint doesn’t mean that they’re wrong. Don’t forget that it is human to err and blaming each other doesn’t get us anywhere. Instead, focus on helping to resolve issues and learning from mistakes.
+You can also e-mail us at support@understrap.com with any questions. We will not publicly share any information you submit without your permission.
 
-This code is not exhaustive or complete. It serves to distill our common understanding of a collaborative, shared environment, and goals. We expect it to be followed in spirit as much as in the letter.
+The Understrap project is owned and maintained by Howard Development & Consulting, LLC, a Denver-based web development firm.
 
-### Diversity Statement
+This document outlines your rights and responsibilities as a participant in the Understrap community and applies equally to every participant.
 
-We encourage everyone to participate and are committed to building a community for all. Although we may not be able to satisfy everyone, we all agree that everyone is equal. Whenever a participant has made a mistake, we expect them to take responsibility for it. If someone has been harmed or offended, it is our responsibility to listen carefully and respectfully, and do our best to right the wrong.
+## You have the right to...
 
-Although this list cannot be exhaustive, we explicitly honor diversity in age, gender, gender identity or expression, culture, ethnicity, language, national origin, political beliefs, profession, race, religion, sexual orientation, socioeconomic status, and technical ability. We will not tolerate discrimination based on any of the protected
-characteristics above, including participants with disabilities.
+**You have a right to a community that is a harassment-free experience for everyone,** regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
 
-### Reporting Issues
+**You have a right to a clear, predictable process if a moderator believes you have violated the community guidelines.** For the vast majority of violations, this process will include:
 
-If you experience or witness unacceptable behavior—or have any other concerns—please report it by contacting us via [thomas@tarcgn.de](mailto:thomas@tarcgn.de). All reports will be handled with discretion. In your report please include:
+* We will minimize the comment in GitHub. The author may receive a notification from GitHub with a brief reason for the action, depending on notification settings. If you are unsure why your comment was minimized, please ask us at support@understrap.com or use the form linked above. This protects your privacy and ensures the thread doesn’t go off topic.
+* If the same user repeats a similar violation, we may start a new public discussion thread to further clarify the issue for the user and make a record of the issue for the full community to refer to and discuss.
+* If a user repeatedly violates the Contributor Bill of Rights & Responsibilities, we will institute a 7-day temporary “cool down” ban.
+* If a user who’s already been temporarily banned returns and commits an additional violation, we reserve the right to permanently ban that user.
+* For extreme situations, such as doxxing or hate speech, we will immediately delete the comments and institute, at the minimum, a temporary ban. We reserve the right to immediately, permanently ban users who commit extreme violations.
+* If you have a question or want to appeal a decision, please email us at support@understrap.com or use the form linked above. Public discussion threads are always acceptable as well, provided they don’t expose private personal information without permission.
 
-- Your contact information.
-- Names (real, nicknames, or pseudonyms) of any individuals involved. If there are additional witnesses, please include them as well. Your account of what occurred, and if you believe the incident is ongoing. If there is a publicly available record (e.g. a mailing list archive or a public IRC logger), please include a link.
-- Any additional information that may be helpful.
+We also acknowledge that there's an inevitable gray area in any code of conduct. Most similar documents are written with vague guidelines that grant effectively unlimited discretion to moderators, which makes disagreements about the interpretation of the rules common. Our goal here is to provide very specific guidelines, while also reserving the right for moderators to act quickly and decisively in extreme situations.
 
-After filing a report, a representative will contact you personally. If the person who is harassing you is part of the response team, they will recuse themselves from handling your incident. A representative will then review the incident, follow up with any additional questions, and make a decision as to how to respond. We will respect confidentiality requests for the purpose of protecting victims of abuse.
+**You have a right to speak your mind in this community,** provided that you do not violate the specific guidelines we’ve laid out in this document. We do not have a blanket policy of talking “only about work” here. As long as everyone treats each other with dignity and respect, we encourage discussion of the many social and political issues that intersect with our work in technology. We don’t expect everyone to agree, but we believe we can have civil and valuable conversations here.
 
-Anyone asked to stop unacceptable behavior is expected to comply immediately. If an individual engages in unacceptable behavior, the representative may take any action they deem appropriate, up to and including a permanent ban from our community without warning.
+## You have the responsibility to...
 
-## Thanks
+**You have a responsibility to act and interact** in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
 
-**The UnderStrap Team**
+**You have a responsibility to treat the Understrap community as a professional workplace.** Because Understrap is an important part of our business and the businesses of the thousands of developers who build sites with Understrap, we encourage you to think of the GitHub projects as an extension of a professional workplace. Everything you post here is public, and we want everyone to put their best foot forward. If you wouldn’t say or do something in front of everyone you work with, you shouldn’t say or do it here. Don’t think of this as a social or informal space like Twitter or Reddit; think of it as an office meeting where you’re collaborating with teammates.
 
+We’ve never had an extreme incident (e.g. hate speech) in this community and hope never to have one. That said, we believe those situations are typically flagrant enough that most observers agree a moderator needs to take quick and decisive action.
 
+The more common and nuanced situation is speech that doesn’t rise to the level of a threat, but still comes off as rude or inappropriate for an office setting. There’s a lot of gray area here, so we’ll offer some specific examples of behavior that we view as inappropriate for GitHub:
 
-This code of conduct is based on the [Open Code of Conduct](https://github.com/todogroup/opencodeofconduct) from the [TODOGroup](http://todogroup.org). 
+* Any profanity that you couldn’t say on the radio in the United States. Please note that obscuring a letter or two with a symbol like an asterisk doesn’t make it any less readable, and thus it still counts as profanity for our purposes. We understand that there is a gray area here, including words that have different meanings in different cultures and contexts. We’ll be as clear as possible on our reasoning if we believe there has been a profanity violation in the community.
+* Sarcasm, mockery or ad hominem attacks. Focus on the code, not the person. And even if you’re criticizing code, avoid harsh or profane language.
+* The use of sexualized language or imagery, and sexual attention or advances of any kind.
+* Publishing others’ private information, such as a physical address, without their explicit permission.
+* Hate speech; defined as abusive or threatening speech or writing targeting an individual or group on the basis of of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
+* Public or private harassment, threats of physical violence, or behavior that a moderator reasonably believes could be a violation of U.S. law or put other people in harm’s way.
 
-We are thankful for their work and all the communities who have paved the way with code of conducts.
+We understand that everyone has different standards for office-appropriate conduct, and we’ll take into account neurodiversity, cultural differences and other mitigating factors any time we act on a violation. Generally, we will start small (by hiding your comment) so you have the opportunity to privately discuss the reasoning behind the decision with us, if you’d like to.
+
+If your comment is minimized or you receive a warning, it does not mean we intend to ban you or hold any hard feelings. We all make mistakes and want to treat every community member with grace and empathy, and we also recognize that our standards here are higher than in some other similar communities. We’re very hesitant to issue a permanent ban in all but the most extreme cases, and we want to encourage you to express yourself, while also asking you to do your best to maintain office-appropriate decorum in the GitHub community.
+
+We are very strong proponents of free expression, and we don’t want you to shy away from difficult conversations. We encourage all our employees to speak freely at work about any topic, and we think that philosophy should carry over to our GitHub community as well. We don’t institute blanket bans on subject matter here; we simply ask that you do your best to be respectful in all your interactions with others on this platform.
+
+Also note that we have not included a “catch-all” violation, such as “any behavior deemed inappropriate.” These catch-all clauses exist in most other codes of conduct, but they are so broad that they basically leave everything up to the opinion of the moderator and thus make the code of conduct much less useful for community members. Our goal is to write a Contributor Bill of Rights & Responsibilities that can be applied consistently by all moderators, leaving minimal room for arbitrary judgement calls. We’ll do our best to keep the Contributor Bill of Rights & Responsibilities up to date with specific rules, rather than broad or vague guidelines.
+
+**If you have any questions or want to report a violation, e-mail us at support@understrap.com or use this anonymous form: https://forms.gle/uNnkKPakeuae4kiX7**
+
+Parts of this document are based on the [Contributor Covenant](https://www.contributor-covenant.org/). This document is released under the [CC BY 4.0 License](https://github.com/EthicalSource/contributor_covenant/blob/release/LICENSE.md).

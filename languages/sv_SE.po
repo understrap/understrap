@@ -1,21 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2016-11-23 20:21+0200\n"
-"PO-Revision-Date: 2017-02-20 13:19+0000\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:34+0200\n"
 "Last-Translator: Filip Wessman <filip@effektid.com>\n"
 "Language-Team: Swedish (Swedish)\n"
-"Language: sv-SE\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Loco-Source-Locale: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco - https://localise.biz/\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -44,354 +42,459 @@ msgstr ""
 "X-Poedit-SearchPath-19: functions.php\n"
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc\n"
-"X-Loco-Parser: loco_parse_po"
 
-#: ../comments.php:28
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "En tanke kring &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s tankar kring &ldquo;%2$s&rdquo;"
-msgstr[2] "&ldquo;%2$s&rdquo;: %1$s комментариев"
-
-#: ../comments.php:35 ../comments.php:56
-msgid "Comment navigation"
-msgstr "Kommentars navigering"
-
-#: ../comments.php:37 ../comments.php:58
-msgid "&larr; Older Comments"
-msgstr "&larr; Äldre kommentarer"
-
-#: ../comments.php:40 ../comments.php:61
-msgid "Newer Comments &rarr;"
-msgstr "Nyare kommentarer &rarr;"
-
-#: ../comments.php:72
-msgid "Comments are closed."
-msgstr "Kommentarsfältet är avstängt."
-
-#: ../author.php:27
-msgid "About:"
-msgstr "Om:"
-
-#: ../author.php:32 ../inc/custom-comments.php:16
-msgid "Website"
-msgstr "Website"
-
-#: ../author.php:34
-msgid "Profile"
-msgstr "Profil"
-
-#: ../author.php:38
-msgid "Posts by"
-msgstr "Inlägg av "
-
-#: ../footer.php:24
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org/"
-
-#: ../footer.php:24
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Drivs av %s"
-
-#: ../footer.php:26
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "tema av: %1$s by %2$s."
-
-#: ../header.php:30
-msgid "Skip to content"
-msgstr "Hoppa till innehållet"
-
-#: ../search.php:23
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Sök resultat för: %s"
-
-#: ../404.php:22
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Sidan verkar inte finnas."
-
-#: ../404.php:27
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Här verkar det inte finnas något. Du kan prova någon an länkarna "
-"nedan eller söka efter det?"
-
-#: ../404.php:37
-msgid "Most Used Categories"
-msgstr "Most Used Categories"
-
-#. translators: %1$s: smiley
-#: ../404.php:57
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Try looking in the monthly archives. %1$s"
-
-#: ../searchform.php:9 ../searchform.php:13
-msgid "Search"
-msgstr "Sök"
-
-#: ../searchform.php:11
-msgid "Search &hellip;"
-msgstr "Sök &hellip;"
-
-#. Name of the template
-msgid "Full Width Page"
-msgstr "Full Width Page"
-
-#. Name of the template
-msgid "Empty Page Template"
-msgstr "Empty Page Template"
-
-#: ../inc/widgets.php:10
-msgid "Sidebar"
-msgstr "Sidebar"
-
-#: ../inc/widgets.php:20
-msgid "Hero Slider"
-msgstr "Hero Slider"
-
-#: ../inc/widgets.php:30
-msgid "Hero Static"
-msgstr "Hero Static"
-
-#: ../inc/widgets.php:40
-msgid "Footer Full"
-msgstr "Sidfot"
-
-#: ../inc/customizer.php:24
-msgid "Slider Settings"
-msgstr "Slider Inställningar"
-
-#: ../inc/customizer.php:33
-msgid "Number of slides displaying at once"
-msgstr "Antal slides som visas samtidigt"
-
-#: ../inc/customizer.php:45
-msgid "Slider Time (in ms)"
-msgstr "Slider tid (i ms)"
-
-#: ../inc/customizer.php:57
-msgid "Loop Slider Content"
-msgstr "Loop Slider Innehåll"
-
-#: ../inc/template-tags.php:18
-#, php-format
-msgid " Edited %4$s"
-msgstr " Redigerat %4$s"
-
-#: ../inc/template-tags.php:29
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Publicerat den %s"
-
-#: ../inc/template-tags.php:34
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "av %s"
-
-#. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
-msgid ", "
-msgstr ", "
-
-#: ../inc/template-tags.php:53
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Publicerat i %1$s"
-
-#: ../inc/template-tags.php:59
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Taggad %1$s"
-
-#: ../inc/template-tags.php:65
-msgid "Leave a comment"
-msgstr "Kommentera"
-
-#: ../inc/template-tags.php:65
-msgid "1 Comment"
-msgstr "1 Kommentar"
-
-#: ../inc/template-tags.php:65
-#, php-format
-msgid "% Comments"
-msgstr "% Kommentarer"
-
-#. translators: %s: Name of current post
-#: ../inc/template-tags.php:72
-#, php-format
-msgid "Edit %s"
-msgstr "Ändra %s"
-
-#: ../inc/setup.php:48
-msgid "Primary Menu"
-msgstr "Huvud meny"
-
-#: ../inc/setup.php:98
-msgid "Read More..."
-msgstr "Läs mer"
-
-#: ../inc/custom-comments.php:12
-msgid "Name"
-msgstr "Namn"
-
-#: ../inc/custom-comments.php:14
-msgid "Email"
-msgstr "E-post"
-
-#: ../inc/custom-comments.php:25
-msgctxt "noun"
-msgid "Comment"
-msgstr "Kommentarer"
-
-#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
-#: loop-templates/content-page.php:25
-msgid "Pages:"
-msgstr "Sidor:"
-
-#: ../loop-templates/content-none.php:16
-msgid "Nothing Found"
-msgstr "Inget hittades"
-
-#: ../loop-templates/content-none.php:24
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Redo att skriv ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
-
-#: ../loop-templates/content-none.php:28
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Tyvärr fick din sökning inga träffar. Du kan prova igen med nya nyckelord."
-
-#: ../loop-templates/content-none.php:33
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "Vi verkar inte hitta det du söker, Det kanske hjälper att söka."
-
-#: ../loop-templates/content-page.php:34
-msgid "Edit"
-msgstr "Ändra"
-
-#: ../woocommerce/myaccount/form-edit-address.php
-msgid "Save Address"
-msgstr "Spara adress"
-
-#: ../woocommerce/myaccount/my-orders.php
-msgid "%s for %s item"
-msgstr "%s för %s vara"
-
-#: ../woocommerce/myaccount/my-orders.php
-msgid "Pay"
-msgstr "Betala"
-
-#: ../woocommerce/myaccount/my-orders.php
-msgid "View"
-msgstr "Visa"
-
-#: ../woocommerce/myaccount/my-orders.php
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Login"
-msgstr "Login"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Password"
-msgstr "Lösenord"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Username or email address"
-msgstr "Användarnamn eller E-post adress"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Lost your password?"
-msgstr "Glömt ditt lösenord?"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Username"
-msgstr "Användarnamn"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Email address"
-msgstr "E-post adress"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Register"
-msgstr "Registrera"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Remember me"
-msgstr "Kom ihåg mig"
-
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "First name"
-msgstr "Förnamn"
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Last name"
-msgstr "Efternamn"
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Email adress"
-msgstr "E-post adress"
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Current Password (leave blank to leave unchanged)"
-msgstr "Nuvarande lösenord (lämna tomt för att inte ändra)"
-
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "New Password (leave blank to leave unchanged)"
-msgstr "Nytt lösenord (lämna tomt för att inte ändra)"
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Confirm New Password"
-msgstr "Bekräfta nytt lösenord"
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Password Change"
-msgstr "Byt lösenord"
-
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Save changes"
-msgstr "Spara ändringar"
-
-#. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+#. Theme Name of the theme
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+#: inc/hooks.php:40
+msgid "https://understrap.com"
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
 "Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
 "starting point for your next theme project and WordPress website. Use it as "
-"starter theme or as parent theme. It is up to you."
+"starter theme or as a parent theme. It is up to you. Including Font Awesome "
+"support, built-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
-"En kombination av Automattic´s _s tema och Bootstrap 4. Gjort som en bas för "
-"ditt nästa tema eller WordPress webbplats. Använd det som en grund eller som "
-"ett förälder tema. Det är upp till dig."
 
 #. Author of the theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenemann"
+msgid "the Understrap Authors"
+msgstr ""
 
 #. Author URI of the theme
-msgid "http://www.holgerkoenemann.de"
-msgstr "http://www.holgerkoenemann.de"
+msgid "https://github.com/understrap/understrap/graphs/contributors"
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
+
+#: 404.php:30
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hoppsan! Den sidan kan inte hittas."
+
+#: 404.php:36
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Det verkar som om inget hittades på denna plats. Kanske prova en sökning?"
+
+#: 404.php:46
+msgid "Most Used Categories"
+msgstr "Mest använda kategorier"
+
+#. translators: %1$s: smiley
+#: 404.php:69
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Prova att leta i månadsarkiven. %1$s"
+
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "Profilbild för %s"
+
+#: author.php:52
+msgid "Website"
+msgstr "Webbplats"
+
+#. translators: %s: author name
+#: author.php:63
+msgid "About %s"
+msgstr "Om %s"
+
+#. translators: %s: author name
+#: author.php:77
+msgid "Posts by %s"
+msgstr "Inlägg av %s"
+
+#. translators: %s: post title
+#: comments.php:36
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:43
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "Gå till innehåll"
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr ""
+
+#: header.php:63
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr ""
+
+#: inc/custom-comments.php:102
+msgid "Comments are closed."
+msgstr "Kommentarer inaktiverade."
+
+#: inc/custom-header.php:54
+msgid "Default Header Image"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Theme Layout Settings"
+msgstr ""
+
+#: inc/customizer.php:44
+msgid "Container width and sidebar defaults"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Container Width"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Fixed width container"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Full width container"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Sidebar Positioning"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "Left & Right sidebars"
+msgstr ""
+
+#: inc/customizer.php:126
+msgid "No sidebar"
+msgstr ""
+
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
+
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr ""
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr ""
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "Läs mer"
+
+#: inc/hooks.php:30
+msgid "https://wordpress.org/"
+msgstr "https://sv.wordpress.org/"
+
+#. translators: WordPress
+#: inc/hooks.php:33
+msgid "Proudly powered by %s"
+msgstr "Drivs av %s"
+
+#. translators: 1: Theme name, 2: Theme author
+#: inc/hooks.php:38
+msgid "Theme: %1$s by %2$s."
+msgstr "tema av: %1$s by %2$s."
+
+#. translators: Theme version
+#: inc/hooks.php:44
+msgid "Version: %1$s"
+msgstr ""
+
+#: inc/pagination.php:53
+msgid "&laquo;"
+msgstr ""
+
+#: inc/pagination.php:54
+msgid "&raquo;"
+msgstr ""
+
+#: inc/pagination.php:57
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "Huvud meny"
+
+#: inc/template-tags.php:33
+msgctxt "post date"
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "Posted by"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59 inc/template-tags.php:65
+msgid ", "
+msgstr ", "
+
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:62
+msgid "Posted in %s"
+msgstr ""
+
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:68
+msgid "Tagged %s"
+msgstr ""
+
+#: inc/template-tags.php:73
+msgid "Leave a comment"
+msgstr "Kommentera"
+
+#: inc/template-tags.php:73
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: inc/template-tags.php:73
+msgid "% Comments"
+msgstr "% Kommentarer"
+
+#: inc/template-tags.php:167
+msgid "Comment navigation"
+msgstr "Kommentars navigering"
+
+#: inc/template-tags.php:171
+msgid "&larr; Older Comments"
+msgstr "&larr; Äldre kommentarer"
+
+#: inc/template-tags.php:177
+msgid "Newer Comments &rarr;"
+msgstr "Nyare kommentarer &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "Redigera %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr ""
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: inc/widgets.php:103
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/widgets.php:105
+msgid "Right sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:115
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/widgets.php:117
+msgid "Left sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:127
+msgid "Hero Slider"
+msgstr "Hero Slider"
+
+#: inc/widgets.php:129
+msgid "Hero slider area. Place two or more widgets here and they will slide!"
+msgstr ""
+
+#: inc/widgets.php:139
+msgid "Hero Canvas"
+msgstr ""
+
+#: inc/widgets.php:141
+msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
+msgstr ""
+
+#: inc/widgets.php:151
+msgid "Top Full"
+msgstr ""
+
+#: inc/widgets.php:153
+msgid "Full top widget with dynamic grid"
+msgstr ""
+
+#: inc/widgets.php:163
+msgid "Footer Full"
+msgstr "Sidfot"
+
+#: inc/widgets.php:165
+msgid "Full sized footer widget with dynamic grid"
+msgstr ""
+
+#: loop-templates/content-none.php:18
+msgid "Nothing Found"
+msgstr "Inget hittades"
+
+#. translators: 1: Link to WP admin new post page.
+#: loop-templates/content-none.php:30
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Är du redo att publicera ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
+
+#: loop-templates/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Inget matchade dina söktermer. Försök igen med några andra nyckelord."
+
+#: loop-templates/content-none.php:46
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Det verkar inte som om vi kan hitta det du letar efter. Kanske kan en "
+"sökning hjälpa."
+
+#. Template Name of the theme
+msgid "Blank Page Template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Left and Right Sidebar Layout"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Empty Page Template"
+msgstr "Empty Page Template"
+
+#. Template Name of the theme
+msgid "Full Width Page"
+msgstr "Full Width Page"
+
+#. Template Name of the theme
+msgid "Left Sidebar Layout"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Right Sidebar Layout"
+msgstr ""
+
+#. translators: %s: query term
+#: search.php:36
+msgid "Search Results for: %s"
+msgstr "Sökresultat för: %s"
+
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "Sök efter:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Sök &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "Sök"
+
+#: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
+msgid "Previous"
+msgstr ""
+
+#: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
+msgid "Next"
+msgstr ""

@@ -1,19 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2015-09-01 21:23+0200\n"
-"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"PO-Revision-Date: 2016-11-06 15:16+0000\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2021-08-20 02:35+0200\n"
 "Last-Translator: idpokute <mike.sayhi@gmail.com>\n"
 "Language-Team: Korean\n"
-"Language: ko-KR\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco - https://localise.biz/\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
@@ -41,263 +41,459 @@ msgstr ""
 "X-Poedit-SearchPath-18: page.php\n"
 "X-Poedit-SearchPath-19: functions.php\n"
 "X-Poedit-SearchPath-20: page-templates\n"
-"X-Poedit-SearchPath-21: inc"
+"X-Poedit-SearchPath-21: inc\n"
 
-#: ../comments.php:28
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%2$s 의 댓글"
-msgstr[1] ""
-
-#: ../comments.php:35 ../comments.php:56
-msgid "Comment navigation"
-msgstr "댓글 네비게이션"
-
-#: ../author.php:27
-msgid "About:"
-msgstr "About:"
-
-#: ../footer.php:24
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org"
-
-#: ../footer.php:24
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Proudly powered by %s"
-
-#: ../footer.php:26
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "테마: %1$s by %2$s."
-
-#: ../header.php:30
-msgid "Skip to content"
-msgstr "본문가기"
-
-#: ../search.php:23
-#, php-format
-msgid "Search Results for: %s"
-msgstr "%s 검색결과"
-
-#: ../404.php:27
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr "검색 결과가 없습니다. 아래의 링크 중의 하나, 혹은 검색을 이용해주세요."
-
-#: ../404.php:37
-msgid "Most Used Categories"
-msgstr "자주 사용된 카테고리"
-
-#. translators: %1$s: smiley
-#: ../404.php:57
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "월별 아카이브를 "
-
-#: ../inc/widgets.php:10
-msgid "Sidebar"
-msgstr "사이드바"
-
-#: ../inc/widgets.php:20
-msgid "Hero Slider"
-msgstr "Hero 슬라이더"
-
-#: ../inc/widgets.php:30
-msgid "Hero Static"
-msgstr "Hero Static"
-
-#: ../inc/widgets.php:40
-msgid "Footer Full"
-msgstr "풋터 Full"
-
-#: ../inc/customizer.php:24
-msgid "Slider Settings"
-msgstr "슬라이더 설정"
-
-#: ../inc/customizer.php:33
-msgid "Number of slides displaying at once"
-msgstr "한번에 보여줄 슬라이드 갯수"
-
-#: ../inc/customizer.php:45
-msgid "Slider Time (in ms)"
-msgstr "슬라이더 타임 (밀리세컨드)"
-
-#: ../inc/customizer.php:57
-msgid "Loop Slider Content"
-msgstr "슬라이드 반복"
-
-#: ../inc/template-tags.php:18
-#, php-format
-msgid " Edited %4$s"
-msgstr " %4$s 수정됨"
-
-#: ../inc/template-tags.php:29
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "작성일 %s"
-
-#: ../inc/template-tags.php:34
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "by %s"
-
-#. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
-msgid ", "
-msgstr ","
-
-#: ../inc/template-tags.php:53
-#, php-format
-msgid "Posted in %1$s"
-msgstr "%1$s 에 게재"
-
-#: ../inc/template-tags.php:59
-#, php-format
-msgid "Tagged %1$s"
-msgstr "태그된 %1$s"
-
-#: ../loop-templates/content-none.php:28
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr "죄송합니다만 일치하는 검색 Term이 없습니다. 다른 키워드를 사용해서 다시 시도해주세요."
-
-#: ../loop-templates/content-none.php:33
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "원하시는 것을 찾을 수가 없습니다. 검색이 도움이 될 수도 있습니다."
-
-#. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+#. Theme Name of the theme
+msgid "Understrap"
+msgstr "Understrap"
 
 #. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+#: inc/hooks.php:40
+msgid "https://understrap.com"
+msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
 "Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
 "starting point for your next theme project and WordPress website. Use it as "
-"starter theme or as parent theme. It is up to you."
+"starter theme or as a parent theme. It is up to you. Including Font Awesome "
+"support, built-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
 msgstr ""
-"Automattic 사의 _s 테마와 부트스트랩 4의 결합. 당신의 다음 테마 제작과 워드프레스 사이트 제작의 시작점을 위해 "
-"제작되었습니다. 스타터 테마나 부모 테마로 사용하세요."
 
 #. Author of the theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenemann"
+msgid "the Understrap Authors"
+msgstr ""
 
 #. Author URI of the theme
-msgid "http://www.holgerkoenemann.de"
-msgstr "http://www.holgerkoenemann.de"
+msgid "https://github.com/understrap/understrap/graphs/contributors"
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
 
-#: ../comments.php:37 ../comments.php:58
-msgid "&larr; Older Comments"
-msgstr "<이전 댓글"
+#: 404.php:30
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "이런! 해당 페이지를 찾을 수 없습니다."
 
-#: ../comments.php:40 ../comments.php:61
-msgid "Newer Comments &rarr;"
-msgstr "신규 댓글>"
+#: 404.php:36
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"이 위치에서 아무것도 발견하지 못한것으로 보이네요. 검색해보시는 것을 어떨까"
+"요?"
 
-#: ../comments.php:72
-msgid "Comments are closed."
-msgstr "댓글 기능이 꺼져있습니다."
+#: 404.php:46
+msgid "Most Used Categories"
+msgstr "가장 많이 사용된 카테고리"
 
-#: ../author.php:32 ../inc/custom-comments.php:16
+#. translators: %1$s: smiley
+#: 404.php:69
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "월간 보관물을 확인해보세요. %1$s"
+
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "%s의 프로필 사진"
+
+#: author.php:52
 msgid "Website"
 msgstr "웹사이트"
 
-#: ../author.php:34
+#. translators: %s: author name
+#: author.php:63
+msgid "About %s"
+msgstr "%s에 대하여"
+
+#. translators: %s: author name
+#: author.php:77
+msgid "Posts by %s"
+msgstr "%s 작성 글"
+
+#. translators: %s: post title
+#: comments.php:36
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:43
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "콘텐츠로 바로가기"
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr ""
+
+#: header.php:63
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr ""
+
+#: inc/custom-comments.php:102
+msgid "Comments are closed."
+msgstr "댓글이 닫혀있습니다."
+
+#: inc/custom-header.php:54
+msgid "Default Header Image"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Theme Layout Settings"
+msgstr ""
+
+#: inc/customizer.php:44
+msgid "Container width and sidebar defaults"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Container Width"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Fixed width container"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Full width container"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Sidebar Positioning"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+
+#: inc/customizer.php:123
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "Left & Right sidebars"
+msgstr ""
+
+#: inc/customizer.php:126
+msgid "No sidebar"
+msgstr ""
+
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr ""
+
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr ""
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr ""
+
+#: inc/deprecated.php:84
 msgid "Profile"
-msgstr "프로필"
+msgstr ""
 
-#: ../author.php:38
+#: inc/deprecated.php:85
 msgid "Posts by"
-msgstr "작성자 :"
+msgstr ""
 
-#: ../404.php:22
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "페이지를 찾을 수 없습니다."
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr ""
 
-#: ../searchform.php:9 ../searchform.php:13
-msgid "Search"
-msgstr "검색"
+#: inc/deprecated.php:87
+msgid "in"
+msgstr ""
 
-#: ../searchform.php:11
-msgid "Search &hellip;"
-msgstr "검색 ..."
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr ""
 
-#. Name of the template
-msgid "Full Width Page"
-msgstr "너비 페이지"
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr ""
 
-#. Name of the template
-msgid "Empty Page Template"
-msgstr "빈 페이지 템플릿"
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
 
-#: ../inc/template-tags.php:65
-msgid "Leave a comment"
-msgstr "댓글 남기기"
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr ""
 
-#: ../inc/template-tags.php:65
-msgid "1 Comment"
-msgstr "1 댓글"
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr ""
 
-#: ../inc/template-tags.php:65
-#, php-format
-msgid "% Comments"
-msgstr "% 댓글"
+#: inc/editor.php:72
+msgid "Cite"
+msgstr ""
 
-#. translators: %s: Name of current post
-#: ../inc/template-tags.php:72
-#, php-format
-msgid "Edit %s"
-msgstr "%s 수정 "
-
-#: ../inc/setup.php:48
-msgid "Primary Menu"
-msgstr "주 메뉴"
-
-#: ../inc/setup.php:98
+#: inc/extras.php:277
 msgid "Read More..."
 msgstr "더보기..."
 
-#: ../inc/custom-comments.php:12
-msgid "Name"
-msgstr "이름"
+#: inc/hooks.php:30
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
 
-#: ../inc/custom-comments.php:14
-msgid "Email"
-msgstr "이메일"
+#. translators: WordPress
+#: inc/hooks.php:33
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
 
-#: ../inc/custom-comments.php:25
-msgctxt "noun"
-msgid "Comment"
-msgstr "댓글"
+#. translators: 1: Theme name, 2: Theme author
+#: inc/hooks.php:38
+msgid "Theme: %1$s by %2$s."
+msgstr "테마: %1$s by %2$s."
 
-#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
-#: loop-templates/content-page.php:25
+#. translators: Theme version
+#: inc/hooks.php:44
+msgid "Version: %1$s"
+msgstr ""
+
+#: inc/pagination.php:53
+msgid "&laquo;"
+msgstr ""
+
+#: inc/pagination.php:54
+msgid "&raquo;"
+msgstr ""
+
+#: inc/pagination.php:57
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "주 메뉴"
+
+#: inc/template-tags.php:33
+msgctxt "post date"
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "Posted by"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59 inc/template-tags.php:65
+msgid ", "
+msgstr ","
+
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:62
+msgid "Posted in %s"
+msgstr ""
+
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:68
+msgid "Tagged %s"
+msgstr ""
+
+#: inc/template-tags.php:73
+msgid "Leave a comment"
+msgstr "댓글 남기기"
+
+#: inc/template-tags.php:73
+msgid "1 Comment"
+msgstr "1 댓글"
+
+#: inc/template-tags.php:73
+msgid "% Comments"
+msgstr "% 댓글"
+
+#: inc/template-tags.php:167
+msgid "Comment navigation"
+msgstr "댓글 네비게이션"
+
+#: inc/template-tags.php:171
+msgid "&larr; Older Comments"
+msgstr "<이전 댓글"
+
+#: inc/template-tags.php:177
+msgid "Newer Comments &rarr;"
+msgstr "신규 댓글>"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "%s 편집"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr ""
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: inc/template-tags.php:244
 msgid "Pages:"
 msgstr "페이지:"
 
-#: ../loop-templates/content-none.php:16
-msgid "Nothing Found"
-msgstr "찾을수가 없습니다"
+#: inc/widgets.php:103
+msgid "Right Sidebar"
+msgstr ""
 
-#: ../loop-templates/content-none.php:24
-#, php-format
+#: inc/widgets.php:105
+msgid "Right sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:115
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/widgets.php:117
+msgid "Left sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:127
+msgid "Hero Slider"
+msgstr "Hero 슬라이더"
+
+#: inc/widgets.php:129
+msgid "Hero slider area. Place two or more widgets here and they will slide!"
+msgstr ""
+
+#: inc/widgets.php:139
+msgid "Hero Canvas"
+msgstr ""
+
+#: inc/widgets.php:141
+msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
+msgstr ""
+
+#: inc/widgets.php:151
+msgid "Top Full"
+msgstr ""
+
+#: inc/widgets.php:153
+msgid "Full top widget with dynamic grid"
+msgstr ""
+
+#: inc/widgets.php:163
+msgid "Footer Full"
+msgstr "풋터 Full"
+
+#: inc/widgets.php:165
+msgid "Full sized footer widget with dynamic grid"
+msgstr ""
+
+#: loop-templates/content-none.php:18
+msgid "Nothing Found"
+msgstr "찾을 수 없습니다"
+
+#. translators: 1: Link to WP admin new post page.
+#: loop-templates/content-none.php:30
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "첫 포스트를 등록할 준비가 되었나요? <a href=\"%1$s\">작성하기</a>"
+msgstr ""
+"첫 글을 발행할 준비가 되었나요? <a href=\"%1$s\">여기에서 시작하세요</a>."
 
-#: ../loop-templates/content-page.php:34
-msgid "Edit"
-msgstr "수정"
+#: loop-templates/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"죄송하지만, 검색어에 일치하는 것이 없습니다. 다른 키워드로 다시 시도하세요."
+
+#: loop-templates/content-none.php:46
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "찾는 것이 없는 것 같습니다. 검색이 도움이 될 수도 있습니다."
+
+#. Template Name of the theme
+msgid "Blank Page Template"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Left and Right Sidebar Layout"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Empty Page Template"
+msgstr "빈 페이지 템플릿"
+
+#. Template Name of the theme
+msgid "Full Width Page"
+msgstr "너비 페이지"
+
+#. Template Name of the theme
+msgid "Left Sidebar Layout"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Right Sidebar Layout"
+msgstr ""
+
+#. translators: %s: query term
+#: search.php:36
+msgid "Search Results for: %s"
+msgstr "검색 결과: %s"
+
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "검색어:"
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "검색 &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "검색"
+
+#: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
+msgid "Previous"
+msgstr ""
+
+#: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
+msgid "Next"
+msgstr ""
