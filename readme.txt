@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-The renowned WordPress starter theme framework that combined Underscores and Bootstrap. Trusted by more than 100,000 developers for building handcrafted, custom WordPress sites.
+The renowned WordPress starter theme framework that combines Underscores and Bootstrap. Trusted by more than 100,000 developers for building handcrafted, custom WordPress sites.
 
 Website: [https://understrap.com](https://understrap.com)
 
