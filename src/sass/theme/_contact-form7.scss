@@ -50,7 +50,7 @@
 
     // set paragraphs to behave like divs with class .form-group
     p {
-      @extend .form-group;
+      @extend .form-group !optional;
     }
 
     // let labels be 100%

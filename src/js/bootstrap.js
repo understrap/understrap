@@ -1,4 +1,3 @@
-import Popper from 'popper.js/src/index'
 import Alert from 'bootstrap/js/src/alert'
 import Button from 'bootstrap/js/src/button'
 import Carousel from 'bootstrap/js/src/carousel'
@@ -10,11 +9,8 @@ import Scrollspy from 'bootstrap/js/src/scrollspy'
 import Tab from 'bootstrap/js/src/tab'
 import Toast from 'bootstrap/js/src/toast'
 import Tooltip from 'bootstrap/js/src/tooltip'
-import Util from 'bootstrap/js/src/util'
 
 export {
-	Popper,
-	Util,
 	Alert,
 	Button,
 	Carousel,

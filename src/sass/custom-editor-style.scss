@@ -4,18 +4,18 @@
 @import "theme/theme_variables";
 
 // Grab a few bootstrap assets so we can use mixins, variables, etc
-@import "assets/bootstrap4/functions";
-@import "assets/bootstrap4/variables";
-@import "assets/bootstrap4/mixins";
-@import "assets/bootstrap4/reboot";
-@import "assets/bootstrap4/root";
-@import "assets/bootstrap4/tables";
-@import "assets/bootstrap4/images";
+@import "assets/bootstrap5/functions";
+@import "assets/bootstrap5/variables";
+@import "assets/bootstrap5/mixins";
+@import "assets/bootstrap5/reboot";
+@import "assets/bootstrap5/root";
+@import "assets/bootstrap5/tables";
+@import "assets/bootstrap5/images";
 
 // Set up basic typography
-@import "assets/bootstrap4/type";
+@import "assets/bootstrap5/type";
 
-// Start bringing in colors and styles. 
+// Start bringing in colors and styles.
 @import "theme/colors";
 @import "theme/blocks";
 

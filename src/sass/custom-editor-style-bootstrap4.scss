@@ -1,0 +1,33 @@
+//Add your own editor styles here or import additional files
+
+// Grab our child theme variables
+@import "theme/theme_variables";
+
+// Grab a few bootstrap assets so we can use mixins, variables, etc
+@import "assets/bootstrap4/functions";
+@import "assets/bootstrap4/variables";
+@import "assets/bootstrap4/mixins";
+@import "assets/bootstrap4/reboot";
+@import "assets/bootstrap4/root";
+@import "assets/bootstrap4/tables";
+@import "assets/bootstrap4/images";
+
+// Set up basic typography
+@import "assets/bootstrap4/type";
+
+// Start bringing in colors and styles.
+@import "theme/colors";
+@import "theme/blocks-bootstrap4";
+
+
+
+// Fixes Gutenberg's cover block color picker.
+.components-circular-option-picker__option {
+	border-radius: 50%;
+}
+
+// Matches the page title font weight.
+.editor-post-title .editor-post-title__input{
+	font-size: $h1-font-size;
+	font-weight: $headings-font-weight;
+}
