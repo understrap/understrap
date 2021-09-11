@@ -12985,7 +12985,7 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 }
 
 /*
-* Use existing Bootstrap 4 classes and
+* Use existing Bootstrap 4/5 classes and
 * variables to extend - override CF7 style
 *
 * Useful CF7 classes:
@@ -13000,6 +13000,9 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 .wpcf7 {
   max-width: 600px;
   margin: 0 auto !important;
+}
+.wpcf7 .wpcf7-form p {
+  margin-bottom: 1rem;
 }
 .wpcf7 .wpcf7-form label {
   width: 100%;

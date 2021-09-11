@@ -29,7 +29,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
 	function understrap_bootstrap_comment_form_fields( $fields ) {
 
 		$replace = array(
-			'<p class="' => '<div class="form-group ',
+			'<p class="' => '<div class="form-group mb-3',
 			'<input'     => '<input class="form-control" ',
 			'</p>'       => '</div>',
 		);
@@ -45,7 +45,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
 		}
 
 		$replace = array(
-			'<p class="' => '<div class="form-group form-check ',
+			'<p class="' => '<div class="form-group mb-3 form-check ',
 			'<input'     => '<input class="form-check-input" ',
 			'<label'     => '<label class="form-check-label" ',
 			'</p>'       => '</div>',
@@ -71,7 +71,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
 	 */
 	function understrap_bootstrap_comment_form( $args ) {
 		$replace = array(
-			'<p class="' => '<div class="form-group ',
+			'<p class="' => '<div class="form-group mb-3 ',
 			'<textarea'  => '<textarea class="form-control" ',
 			'</p>'       => '</div>',
 		);
