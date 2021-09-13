@@ -125,6 +125,39 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting(
+			'understrap_navbar_type',
+			array(
+				'default'           => 'collapse',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_navbar_type',
+				array(
+					'label'             => __( 'Responsive Navigation Type', 'understrap' ),
+					'description'       => __(
+						'Choose between an expanding and collapsing navbar or an offcanvas drawer.',
+						'understrap'
+					),
+					'section'           => 'understrap_theme_layout_options',
+					'settings'          => 'understrap_navbar_type',
+					'type'              => 'select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'choices'           => array(
+						'collapse'  => __( 'Collapse', 'understrap' ),
+						'offcanvas' => __( 'Offcanvas', 'understrap' ),
+					),
+					'priority'          => apply_filters( 'understrap_navbar_type_priority', 20 ),
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
 			'understrap_sidebar_position',
 			array(
 				'default'           => 'right',
@@ -206,3 +239,42 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	}
 }
 add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
+
+/**
+ * Loads javascript for conditionally showing customizer controls.
+ */
+if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
+	/**
+	 * Setup JS integration for live previewing.
+	 */
+	function understrap_customize_controls_js() {
+		wp_enqueue_script(
+			'understrap_customizer',
+			get_template_directory_uri() . '/js/customizer-controls.js',
+			array( 'customize-preview' ),
+			'20130508',
+			true
+		);
+	}
+}
+add_action( 'customize_controls_enqueue_scripts', 'understrap_customize_controls_js' );
+
+
+
+if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
+	/**
+	 * Overrides the responsive navbar type for Bootstrap 4
+	 *
+	 * @param string $current_mod
+	 * @return string
+	 */
+	function understrap_default_navbar_type( $current_mod ) {
+
+		if ( 'bootstrap5' !== get_theme_mod( 'understrap_bootstrap_version' ) ) {
+			$current_mod = 'collapse';
+		}
+
+		return $current_mod;
+	}
+}
+add_filter( 'theme_mod_understrap_navbar_type', 'understrap_default_navbar_type', 20 );
