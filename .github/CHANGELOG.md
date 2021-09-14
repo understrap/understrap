@@ -8,6 +8,17 @@
 
   -
 
+## Release 1.1.0-beta
+
+** Enhancements **
+
+  - Now supports Bootstrap 5 in addition to Bootstrap 4. Update your site in the Customizer. (If using a child theme, please check with your child theme author before updating.)
+  - New Feature: Offcanvas responsive menu support (Bootstrap 5 only)
+
+** Fixes **
+
+  -
+
 ##  Release 1.0.0 August 26th 2021
 
 ** Enhancements **

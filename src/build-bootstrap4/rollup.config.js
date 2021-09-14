@@ -4,7 +4,7 @@ const path = require('path')
 const { babel } = require('@rollup/plugin-babel')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 import multi from '@rollup/plugin-multi-entry'
-const banner = require('../build/banner.js')
+const banner = require('./banner.js')
 
 let fileDest = 'theme-bootstrap4.js'
 const external = ['jquery']
