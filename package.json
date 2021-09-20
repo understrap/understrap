@@ -40,7 +40,7 @@
   },
   "homepage": "https://understrap.com",
   "dependencies": {
-    "terser": "^5.7.1"
+    "terser": "^5.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
