@@ -52,7 +52,7 @@
     "autoprefixer": "^10.3.2",
     "bootstrap": "^4.6.0",
     "browser-sync": "^2.27.5",
-    "browserslist": "^4.16.8",
+    "browserslist": "^4.17.2",
     "caniuse-lite": "^1.0.30001251",
     "clean-css-cli": "^5.3.3",
     "del": "^6.0.0",
