@@ -17,13 +17,14 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		$the_theme         = wp_get_theme();
 		$theme_version     = $the_theme->get( 'Version' );
 		$bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
+		$suffix            = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		// Grab asset urls.
-		$theme_styles  = '/css/theme.min.css';
-		$theme_scripts = '/js/theme.min.js';
+		$theme_styles  = "/css/theme{$suffix}.css";
+		$theme_scripts = "/js/theme{$suffix}.js";
 		if ( 'bootstrap4' === $bootstrap_version ) {
-			$theme_styles  = '/css/theme-bootstrap4.min.css';
-			$theme_scripts = '/js/theme-bootstrap4.min.js';
+			$theme_styles  = "/css/theme-bootstrap4{$suffix}.cs";
+			$theme_scripts = "/js/theme-bootstrap4{$suffix}.js";
 		}
 
 		$css_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_styles );
