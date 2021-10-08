@@ -13046,6 +13046,10 @@ figure.woocommerce-product-gallery__wrapper {
 .woocommerce-info {
   padding: 1em 2em 1em 3.5em;
 }
+.woocommerce form .form-row .required {
+  color: #b30000;
+}
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
