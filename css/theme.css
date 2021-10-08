@@ -12658,6 +12658,10 @@ a.skip-link {
   display: block;
 }
 
+h2.sr-only, h2.screen-reader-text {
+  background-color: #ffffff;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #007bff;
