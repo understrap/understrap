@@ -2,6 +2,10 @@ body {
 	overflow-x: hidden; // Fix for Windows Chrome horizontal scrollbar.
 }
 
+.entry-content a {
+	text-decoration: underline; //Requirement for "Accessibility Ready" tag - WP Theme
+}
+
 // Some basic padding for all wrappers
 .wrapper {
 	padding: $grid-gutter-width 0;
