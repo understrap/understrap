@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Sidebar - hero setup
  *
@@ -13,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- ******************* The Hero Widget Area ******************* -->
 
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
 
 		<div class="carousel-inner" role="listbox">
 
@@ -40,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
 	</div><!-- .carousel -->
 
 	<script>
-	jQuery( ".carousel-item" ).first().addClass( "active" );
+		jQuery(".carousel-item").first().addClass("active");
 	</script>
 
 	<?php

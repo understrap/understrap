@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WP Bootstrap Navwalker
  *
@@ -30,6 +31,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 	 * @extends Walker_Nav_Menu
 	 */
 	class Understrap_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+	
 
 		/**
 		 * Starts the list before the elements are added.
@@ -79,7 +81,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				// build a string to use as aria-labelledby.
 				$labelledby = 'aria-labelledby="' . end( $matches[2] ) . '"';
 			}
-			$output .= "{$n}{$indent}<ul$class_names $labelledby role=\"menu\">{$n}";
+			$output .= "{$n}{$indent}<ul$class_names $labelledby >{$n}";
 		}
 
 		/**
@@ -300,7 +302,6 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 * END appending the internal item contents to the output.
 			 */
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-
 		}
 
 		/**
@@ -326,11 +327,13 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 		 */
 		public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
 			if ( ! $element ) {
-				return; }
+				return;
+			}
 			$id_field = $this->db_fields['id'];
 			// Display this element.
 			if ( is_object( $args[0] ) ) {
-				$args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] ); }
+				$args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
+			}
 			parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 		}
 
@@ -369,9 +372,11 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				}
 				$fallback_output .= '<ul';
 				if ( $menu_id ) {
-					$fallback_output .= ' id="' . esc_attr( $menu_id ) . '"'; }
+					$fallback_output .= ' id="' . esc_attr( $menu_id ) . '"';
+				}
 				if ( $menu_class ) {
-					$fallback_output .= ' class="' . esc_attr( $menu_class ) . '"'; }
+					$fallback_output .= ' class="' . esc_attr( $menu_class ) . '"';
+				}
 				$fallback_output .= '>';
 				$fallback_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="' . esc_attr__( 'Add a menu', 'understrap' ) . '">' . esc_html__( 'Add a menu', 'understrap' ) . '</a></li>';
 				$fallback_output .= '</ul>';

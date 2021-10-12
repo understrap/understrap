@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom functions that act independently of the theme templates
  *
@@ -100,7 +101,7 @@ if ( ! function_exists( 'understrap_mobile_web_app_meta' ) ) {
 	 * Add mobile-web-app meta.
 	 */
 	function understrap_mobile_web_app_meta() {
-		echo '<meta name="mobile-web-app-capable" content="yes">' . "\n";
+		 echo '<meta name="mobile-web-app-capable" content="yes">' . "\n";
 		echo '<meta name="apple-mobile-web-app-capable" content="yes">' . "\n";
 		echo '<meta name="apple-mobile-web-app-title" content="' . esc_attr( get_bloginfo( 'name' ) ) . ' - ' . esc_attr( get_bloginfo( 'description' ) ) . '">' . "\n";
 	}
@@ -274,10 +275,11 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
+			global $post;
 			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
 				'Read More...',
 				'understrap'
-			) . '</a></p>';
+			) . '</a><span class="screen-reader-text">  ' . $post->post_title . '</span></p>';
 		}
 		return $post_excerpt;
 	}

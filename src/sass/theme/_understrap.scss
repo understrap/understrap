@@ -2,6 +2,9 @@ body {
 	overflow-x: hidden; // Fix for Windows Chrome horizontal scrollbar.
 }
 
+.entry-content a {
+	text-decoration: underline; //Requirement for "Accessibility Ready" tag - WP Theme
+}
 
 // Some basic padding for all wrappers
 .wrapper {
@@ -165,10 +168,14 @@ a.skip-link {
 
 	@for $i from 2 through 9 {
 		.gallery-columns-#{$i} & {
-			max-width: floor( percentage( 1 / $i ) * 100 ) / 100;
+			max-width: floor(percentage(1 / $i) * 100) / 100;
 		}
 	}
 }
 .gallery-caption {
 	display: block;
+}
+
+h2.sr-only {
+	background-color: #ffffff;
 }

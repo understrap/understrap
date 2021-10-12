@@ -9,7 +9,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 // Fix coupon code input width for cart, apply only to the cart as it will break the checkout field width
-@media(min-width: 768px) {
+@media (min-width: 768px) {
 	.woocommerce-cart #coupon_code.input-text {
 		width: 110px !important;
 	}
@@ -57,4 +57,8 @@ figure.woocommerce-product-gallery__wrapper {
 		@extend .btn;
 		@extend .btn-info;
 	}
+}
+//Accessibility - update color for required class
+.woocommerce form .form-row .required {
+	color: #b30000;
 }
