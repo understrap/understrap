@@ -1,7 +1,7 @@
 ---
 name:      'Bug report'
 about:     'Create a report to help us improve'
-title:     ''
+title:     'Please provide a short summary of the bug (approx. 50 characters)'
 labels:    'bug'
 assignees: ''
 

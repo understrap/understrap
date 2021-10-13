@@ -1,4 +1,4 @@
-import Popper from 'popper.js/src/index'
+import Popper from 'popper.js/dist/popper.js'	// Needs to be included for tooltips and popover
 import Alert from 'bootstrap/js/src/alert'
 import Button from 'bootstrap/js/src/button'
 import Carousel from 'bootstrap/js/src/carousel'

@@ -8,7 +8,13 @@
 
   -
 
-##  Release 1.0.0beta August 26th 2021
+##  Release 1.0.1 October 7th 2021
+
+** Fixes **
+
+  - Updates the Popper.js dependency import that was failing on some browsers.
+
+##  Release 1.0.0 August 26th 2021
 
 ** Enhancements **
 

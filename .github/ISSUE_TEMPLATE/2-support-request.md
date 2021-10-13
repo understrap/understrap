@@ -1,7 +1,7 @@
 ---
 name:      'Support request'
 about:     'Ask for help'
-title:     ''
+title:     'Please provide a short summary of the problem (approx. 50 characters)'
 labels:    'Help wanted!'
 assignees: ''
 
