@@ -61,7 +61,7 @@
     "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
     "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
+    "postcss-cli": "^9.0.1",
     "postcss-understrap-palette-generator": "git+https://github.com/bacoords/postcss-understrap-palette-generator.git",
     "rollup": "^2.56.2",
     "sass": "^1.38.1"
