@@ -47,6 +47,10 @@ body {
 	@extend .sr-only;
 }
 
+h2.sr-only {
+	background-color: #ffffff;
+}
+
 .alignleft {
 	display: inline;
 	float: left;
@@ -176,6 +180,17 @@ a.skip-link {
 	display: block;
 }
 
-h2.sr-only {
-	background-color: #ffffff;
+//Accessibility requirement for content links
+.entry-content a {
+	text-decoration: underline;
+}
+
+//Accessibility requirement for color contrast
+code {
+	color:#A81559;
+}
+
+//Accessibility requirement for color contrast
+.woocommerce ul.products li.product .price {
+	color:#456039;
 }

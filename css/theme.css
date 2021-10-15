@@ -12538,6 +12538,10 @@ body {
   font-size: inherit;
 }
 
+h2.sr-only, h2.screen-reader-text {
+  background-color: #ffffff;
+}
+
 .alignleft {
   display: inline;
   float: left;
@@ -12662,8 +12666,16 @@ a.skip-link {
   display: block;
 }
 
-h2.sr-only, h2.screen-reader-text {
-  background-color: #ffffff;
+.entry-content a {
+  text-decoration: underline;
+}
+
+code {
+  color: #A81559;
+}
+
+.woocommerce ul.products li.product .price {
+  color: #456039;
 }
 
 .has-blue-color,
