@@ -179,5 +179,15 @@ a.skip-link {
 
 //Accessibility requirement for content links
 .entry-content a {
-	text-decoration: underline; //Requirement for "Accessibility Ready" tag - WP Theme
+	text-decoration: underline;
+}
+
+//Accessibility requirement for color contrast
+code {
+	color:#A81559;
+}
+
+//Accessibility requirement for color contrast
+.woocommerce ul.products li.product .price {
+	color:#456039;
 }
