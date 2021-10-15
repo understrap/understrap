@@ -44,6 +44,10 @@ body {
 	@extend .sr-only;
 }
 
+h2.sr-only {
+	background-color: #ffffff;
+}
+
 .alignleft {
 	display: inline;
 	float: left;
@@ -171,4 +175,9 @@ a.skip-link {
 }
 .gallery-caption {
 	display: block;
+}
+
+//Accessibility requirement for content links
+.entry-content a {
+	text-decoration: underline; //Requirement for "Accessibility Ready" tag - WP Theme
 }
