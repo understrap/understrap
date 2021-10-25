@@ -44,6 +44,7 @@ body {
 	@extend .sr-only;
 }
 
+//Accessibility requirement for color contrast.
 h2.sr-only {
 	background-color: #ffffff;
 }

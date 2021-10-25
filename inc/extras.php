@@ -274,11 +274,10 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			global $post;
 			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
 				'Read More...',
 				'understrap'
-			) . '</a><span class="screen-reader-text"> ' . $post->post_title . '</span></p>';
+			) . '</a><span class="screen-reader-text"> ' . get_the_title( get_the_ID() ) . '</span></p>'; //Accessibility requirement for screen reader
 		}
 		return $post_excerpt;
 	}
