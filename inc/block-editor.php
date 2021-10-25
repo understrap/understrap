@@ -12,7 +12,6 @@ if ( ! function_exists( 'understrap_block_editor_setup' ) ) {
 
 	/**
 	 * Sets up our default theme support for the WordPress block editor.
-	 *
 	 */
 	function understrap_block_editor_setup() {
 

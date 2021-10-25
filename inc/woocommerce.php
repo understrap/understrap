@@ -73,7 +73,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 *
 	 * @return mixed
 	 */
-    function understrap_wc_form_field_args( $args, $key, $value = null ) {
+	function understrap_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
 			// Targets all select input type elements, except the country and state select input types.
