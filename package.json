@@ -59,7 +59,7 @@
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
-    "autoprefixer": "^10.3.2",
+    "autoprefixer": "^10.4.0",
     "bootstrap": "^5.1.1",
     "bootstrap4": "npm:bootstrap@^4.6.0",
     "browser-sync": "^2.27.5",
