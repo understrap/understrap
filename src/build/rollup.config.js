@@ -3,6 +3,7 @@
 const path = require('path')
 const { babel } = require('@rollup/plugin-babel')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
+import commonjs from "@rollup/plugin-commonjs";
 import multi from '@rollup/plugin-multi-entry'
 const banner = require('./banner.js')
 
@@ -16,6 +17,7 @@ const plugins = [
     babelHelpers: 'bundled'
   }),
   nodeResolve(),
+  commonjs(),
   multi()
 ]
 const globals = {
