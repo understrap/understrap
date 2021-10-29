@@ -90,11 +90,6 @@ a.skip-link {
 	right: 0px;
 }
 
-// Reset Jumbotron default margin
-.jumbotron {
-	margin-bottom: 0px;
-}
-
 // Dropdown translation
 .navbar-dark .navbar-nav .dropdown-menu .nav-link {
 	display: block;
@@ -108,7 +103,8 @@ a.skip-link {
 	background: none; // For `<button>`s
 	border: 0; // For `<button>`s
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $dropdown-link-hover-color !important;
 		text-decoration: none;
 		background-color: $dropdown-link-hover-bg;
@@ -136,7 +132,8 @@ a.skip-link {
 .navbar-light .navbar-brand a {
 	color: $navbar-light-active-color;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $navbar-light-active-color;
 	}
 }
@@ -144,7 +141,8 @@ a.skip-link {
 .navbar-dark .navbar-brand a {
 	color: $navbar-dark-active-color;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $navbar-dark-active-color;
 	}
 }
