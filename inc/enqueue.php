@@ -23,7 +23,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		$theme_styles  = "/css/theme{$suffix}.css";
 		$theme_scripts = "/js/theme{$suffix}.js";
 		if ( 'bootstrap4' === $bootstrap_version ) {
-			$theme_styles  = "/css/theme-bootstrap4{$suffix}.cs";
+			$theme_styles  = "/css/theme-bootstrap4{$suffix}.css";
 			$theme_scripts = "/js/theme-bootstrap4{$suffix}.js";
 		}
 
