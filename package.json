@@ -52,13 +52,13 @@
     "terser": "^5.9.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "@popperjs/core": "^2.10.1",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-multi-entry": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-node-resolve": "^13.0.6",
     "autoprefixer": "^10.3.2",
     "bootstrap": "^5.1.1",
     "bootstrap4": "npm:bootstrap@^4.6.0",
@@ -74,7 +74,7 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "postcss-understrap-palette-generator": "git+https://github.com/bacoords/postcss-understrap-palette-generator.git",
-    "rollup": "^2.56.2",
+    "rollup": "^2.58.3",
     "sass": "^1.38.1"
   }
 }
