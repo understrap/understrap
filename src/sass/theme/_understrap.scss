@@ -41,12 +41,7 @@ body {
 }
 
 .screen-reader-text {
-	@extend .sr-only;
-}
-
-// Accessibility requirement for color contrast.
-h2.sr-only {
-	background-color: transparent;
+	@include visually-hidden();
 }
 
 .alignleft {
