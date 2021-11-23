@@ -58,3 +58,8 @@ figure.woocommerce-product-gallery__wrapper {
 		@extend .btn-info;
 	}
 }
+
+//Accessibility - update color for required class
+.woocommerce form .form-row .required {
+	color: #b30000;
+}

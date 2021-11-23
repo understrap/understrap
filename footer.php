@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<footer class="wrapper" id="wrapper-footer">
+<div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- container end -->
 
-</footer><!-- wrapper end -->
+</div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
 
