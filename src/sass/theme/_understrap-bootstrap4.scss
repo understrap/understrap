@@ -172,3 +172,8 @@ a.skip-link {
 .gallery-caption {
 	display: block;
 }
+
+// Accessibility requirement for content links.
+.entry-content p a:not(.btn) {
+	text-decoration: underline;
+}
