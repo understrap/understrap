@@ -194,6 +194,14 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 			'del'              => array(
 				'datetime' => true,
 			),
+			'img'              => array(
+				'src'    => true,
+				'alt'    => true,
+				'width'  => true,
+				'height' => true,
+				'class'  => true,
+				'style'  => true,
+			),
 			'ins'              => array(
 				'datetime' => true,
 				'cite'     => true,
