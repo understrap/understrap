@@ -13628,8 +13628,8 @@ body {
   font-size: inherit;
 }
 
-h2.sr-only, h2.screen-reader-text {
-  background-color: #ffffff;
+h2.sr-only, .sr-only.h2, h2.screen-reader-text, .h2.screen-reader-text {
+  background-color: transparent;
 }
 
 .alignleft {
@@ -13752,16 +13752,18 @@ a.skip-link {
   display: block;
 }
 
-.entry-content a {
+.entry-content p a {
   text-decoration: underline;
 }
 
-code {
-  color: #A81559;
-}
-
-.woocommerce ul.products li.product .price {
-  color: #456039;
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce div.product .stock,
+.woocommerce ul.products li.product .price,
+#add_payment_method .cart-collaterals .cart_totals .discount td,
+.woocommerce-cart .cart-collaterals .cart_totals .discount td,
+.woocommerce-checkout .cart-collaterals .cart_totals .discount td {
+  color: #198754;
 }
 
 .has-blue-color,

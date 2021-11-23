@@ -44,9 +44,9 @@ body {
 	@extend .sr-only;
 }
 
-//Accessibility requirement for color contrast.
+// Accessibility requirement for color contrast.
 h2.sr-only {
-	background-color: #ffffff;
+	background-color: transparent;
 }
 
 .alignleft {
@@ -176,17 +176,18 @@ a.skip-link {
 	display: block;
 }
 
-//Accessibility requirement for content links
-.entry-content a {
+// Accessibility requirement for content links
+.entry-content p a {
 	text-decoration: underline;
 }
 
 //Accessibility requirement for color contrast
-code {
-	color:#A81559;
-}
-
-//Accessibility requirement for color contrast
-.woocommerce ul.products li.product .price {
-	color:#456039;
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce div.product .stock,
+.woocommerce ul.products li.product .price,
+#add_payment_method .cart-collaterals .cart_totals .discount td,
+.woocommerce-cart .cart-collaterals .cart_totals .discount td,
+.woocommerce-checkout .cart-collaterals .cart_totals .discount td {
+	color: $green;
 }
