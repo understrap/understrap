@@ -21,7 +21,7 @@
     "js-minify-bs4": "terser  --config-file src/build-bootstrap4/terser.config.json --output js/theme-bootstrap4.min.js js/theme-bootstrap4.js",
     "watch": "npm-run-all --parallel watch-run-*",
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
-    "watch-run-css": "nodemon --watch sass/ --ext scss --exec \"npm-run-all css\"",
+    "watch-run-css": "nodemon --watch src/sass/ --ext scss --exec \"npm-run-all css\"",
     "watch-run-js": "nodemon --watch src/js/ --ext js --exec \"npm-run-all js\"",
     "copy-assets": "node src/build/copy-assets.js",
     "dist": "npm-run-all --parallel css js css-bs4 js-bs4",
@@ -48,9 +48,7 @@
     "url": "https://github.com/understrap/understrap/issues"
   },
   "homepage": "https://understrap.com",
-  "dependencies": {
-    "terser": "^5.9.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
@@ -59,6 +57,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-replace": "^3.0.0",
     "autoprefixer": "^10.4.0",
     "bootstrap": "^5.1.3",
     "bootstrap4": "npm:bootstrap@^4.6.0",
@@ -75,6 +74,7 @@
     "postcss-cli": "^8.3.1",
     "postcss-understrap-palette-generator": "git+https://github.com/bacoords/postcss-understrap-palette-generator.git",
     "rollup": "^2.58.3",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "terser": "^5.10.0"
   }
 }
