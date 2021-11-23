@@ -39,33 +39,41 @@ figure.wp-block-image {
 
 // Wide alignments and covers.
 body.understrap-no-sidebar{
-	.alignwide, 
-	.alignfull, 
+	.alignwide,
+	.alignfull,
 	.wp-block-cover.alignwide,
 	.wp-block-cover.alignfull {
 		margin: 0px calc(50% - 50vw);
 		max-width: 100vw;
 		width: 100vw;
-	
+
 		.wp-block-cover__inner-container {
 			@include make-container();
-			@include make-container-max-widths();
+			@each $breakpoint, $container-max-width in $container-max-widths {
+				@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+					max-width: $container-max-width;
+				}
+			}
 		}
 	}
-	
+
 	.alignwide,
 	.wp-block-cover.alignwide{
 		margin: 0px calc(50% - 45vw);
 		max-width: 90vw;
 		width: 100vw;
-	
+
 		.wp-block-cover__inner-container {
 			@include make-container();
-			@include make-container-max-widths();
+			@each $breakpoint, $container-max-width in $container-max-widths {
+				@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+					max-width: $container-max-width;
+				}
+			}
 		}
 	}
-	
-	
+
+
 	@media (max-width: 920px) {
 		.alignwide,
 		.wp-block-cover.alignwide {
@@ -80,7 +88,7 @@ body.understrap-no-sidebar{
 .wp-block-buttons {
 	.wp-block-button {
 		.wp-block-button__link {
-			@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+			@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
 		}
 		&:not(.is-style-outline) .wp-block-button__link {
 			border: $btn-border-width solid transparent;

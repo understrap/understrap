@@ -214,7 +214,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 		?>
 		<nav class="container navigation post-navigation">
 			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
-			<div class="row nav-links justify-content-between">
+			<div class="d-flex nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
 					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
