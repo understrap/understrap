@@ -72,7 +72,7 @@
     "popper.js": "^1.16.1",
     "postcss": "^8.3.11",
     "postcss-cli": "^8.3.1",
-    "postcss-understrap-palette-generator": "git+https://github.com/bacoords/postcss-understrap-palette-generator.git",
+    "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
     "rollup": "^2.58.3",
     "sass": "^1.43.4",
     "terser": "^5.10.0"
