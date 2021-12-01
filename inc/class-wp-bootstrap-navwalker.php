@@ -79,7 +79,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				// build a string to use as aria-labelledby.
 				$labelledby = 'aria-labelledby="' . end( $matches[2] ) . '"';
 			}
-			$output .= "{$n}{$indent}<ul$class_names $labelledby role=\"menu\">{$n}";
+			$output .= "{$n}{$indent}<ul$class_names $labelledby >{$n}";
 		}
 
 		/**
@@ -190,12 +190,13 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && 1 !== $args->depth ) {
-				$atts['href']          = '#';
-				$atts['data-toggle']   = 'dropdown';
-				$atts['aria-haspopup'] = 'true';
-				$atts['aria-expanded'] = 'false';
-				$atts['class']         = 'dropdown-toggle nav-link';
-				$atts['id']            = 'menu-item-dropdown-' . $item->ID;
+				$atts['href']           = '#';
+				$atts['data-toggle']    = 'dropdown';
+				$atts['data-bs-toggle'] = 'dropdown';
+				$atts['aria-haspopup']  = 'true';
+				$atts['aria-expanded']  = 'false';
+				$atts['class']          = 'dropdown-toggle nav-link';
+				$atts['id']             = 'menu-item-dropdown-' . $item->ID;
 			} else {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 				// Items in dropdowns use .dropdown-item instead of .nav-link.
@@ -510,7 +511,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 		 */
 		private function wrap_for_screen_reader( $text = '' ) {
 			if ( $text ) {
-				$text = '<span class="sr-only">' . $text . '</span>';
+				$text = '<span class="screen-reader-text">' . $text . '</span>';
 			}
 			return $text;
 		}

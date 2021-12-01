@@ -164,7 +164,7 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 		?>
 		<nav class="comment-navigation" id="<?php echo esc_attr( $nav_id ); ?>">
 
-			<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
 
 			<?php if ( get_previous_comments_link() ) { ?>
 				<div class="nav-previous">
@@ -192,7 +192,7 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 			sprintf(
 				/* translators: %s: Name of current post */
 				esc_html__( 'Edit %s', 'understrap' ),
-				the_title( '<span class="sr-only">"', '"</span>', false )
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
 			'<span class="edit-link">',
 			'</span>'
@@ -213,8 +213,8 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 		}
 		?>
 		<nav class="container navigation post-navigation">
-			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
-			<div class="row nav-links justify-content-between">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+			<div class="d-flex nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
 					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );

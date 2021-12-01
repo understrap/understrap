@@ -8,6 +8,19 @@
 
   -
 
+## Release 1.1.0 December 1st 2021
+
+** Enhancements **
+
+  - Now supports Bootstrap 5 in addition to Bootstrap 4. Update your site by using the setting in the Customizer. (If using an existing child theme, please check with your child theme author before changing this setting. If starting a new child theme, the Understrap starter child theme now supports Bootstrap 5.)
+  - New Feature: Offcanvas responsive menu support (Bootstrap 5 only)
+  - If `SCRIPT_DEBUG` is set to true, Understrap will load the non-minified version of the stylesheets and scripts.
+
+** Fixes **
+
+  - Numerous accessibility updates throughout, including new semantic markup, color contrast changes, additional screen reader text, and updates to core Bootstrap components.
+  - Fixes an issue with WPML flag icons not appearing in navigation.
+
 ##  Release 1.0.1 October 7th 2021
 
 ** Fixes **

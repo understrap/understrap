@@ -1,0 +1,14 @@
+@import "theme/theme_variables";  // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or Understrap variables here
+@import "assets/bootstrap4/bootstrap";      // <-------- Loads Bootstrap4
+@import "theme/understrap-bootstrap4";  // <-------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
+@import "theme/colors";           // <-------- This creates the necessary bootstrap color classes.
+@import "theme/blocks-bootstrap4";           // <-------- This adds Bootstrap styles to blocks.
+@import "theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+@import "theme/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+// Optional files - If you dont use the corresponding scripts/fonts comment em out
+@import "assets/fontawesome/font-awesome";    // <-------- Font Awesome Icon font
+
+// Any additional imported files //
+@import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
+

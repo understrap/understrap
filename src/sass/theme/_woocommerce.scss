@@ -58,3 +58,20 @@ figure.woocommerce-product-gallery__wrapper {
 		@extend .btn-info;
 	}
 }
+
+// Accessibility - update color for required class
+.woocommerce form .form-row .required {
+	color: $danger;
+}
+
+
+// Accessibility requirement for color contrast
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce div.product .stock,
+.woocommerce ul.products li.product .price,
+#add_payment_method .cart-collaterals .cart_totals .discount td,
+.woocommerce-cart .cart-collaterals .cart_totals .discount td,
+.woocommerce-checkout .cart-collaterals .cart_totals .discount td {
+	color: $green;
+}

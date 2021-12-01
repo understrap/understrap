@@ -34,7 +34,7 @@ Full documentation for this theme is available at [docs.understrap.com](https://
 ## Basic Features
 
 - Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
-- Comes with Bootstrap (v4) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
+- Comes with Bootstrap (v4 and/or v5) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single minified CSS file for all the basic stuff.
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.7.0)
 - Jetpack ready
@@ -106,12 +106,25 @@ module.exports = {
 };
 ```
 
-then run: 
+then run:
 
 ```bash
 npm run watch-bs
 ```
 
+## Bootstrap 4 Legacy Build Process
+
+Some of our build tasks have been duplicated to support both Bootstrap 4 and Boostrap 5 asset generation. The *default* version of tasks will generate v5 assets.
+
+**CSS Tasks** `npm run css` will generate v5 assets, while `npm run css-bs4` will generate necessary assets for v4.
+
+**JS Tasks** `npm run js` will generate v5 assets, while `npm run js-bs4` will generate necessary assets for v4.
+
+**Watch Tasks** `npm run watch` and `npm run watch-bs` will only generate for v5. Once complete, run `npm run dist` to update v4.
+
+**Dist Task** `npm run dist` will generate both v4 & v5 assets.
+
+**Other Assets** This theme also includes a few additional files directories to support Bootstrap 4 in `/src/build-bootstrap4/`, `/src/sass/assets/bootstrap4/`, and `/src/js/bootstrap4.js`
 
 ## Block Editor (Gutenberg) Support
 
@@ -148,7 +161,7 @@ The theme also includes a number of templates for enabling the right and left si
 
 ### Full Width Template
 
-The `fullwidthpage.php` template has full width layout without a sidebar. 
+The `fullwidthpage.php` template has full width layout without a sidebar.
 
 
 Licenses & Credits

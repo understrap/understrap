@@ -194,6 +194,14 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 			'del'              => array(
 				'datetime' => true,
 			),
+			'img'              => array(
+				'src'    => true,
+				'alt'    => true,
+				'width'  => true,
+				'height' => true,
+				'class'  => true,
+				'style'  => true,
+			),
 			'ins'              => array(
 				'datetime' => true,
 				'cite'     => true,
@@ -277,7 +285,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
 				'Read More...',
 				'understrap'
-			) . '</a></p>';
+			) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
 		}
 		return $post_excerpt;
 	}
