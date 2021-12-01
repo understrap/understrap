@@ -1023,7 +1023,6 @@ body.understrap-no-sidebar .alignwide,
 body.understrap-no-sidebar .alignfull,
 body.understrap-no-sidebar .wp-block-cover.alignwide,
 body.understrap-no-sidebar .wp-block-cover.alignfull {
-  margin: 0px -webkit-calc(50% - 50vw);
   margin: 0px calc(50% - 50vw);
   max-width: 100vw;
   width: 100vw;
@@ -1072,7 +1071,6 @@ body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-cont
 }
 body.understrap-no-sidebar .alignwide,
 body.understrap-no-sidebar .wp-block-cover.alignwide {
-  margin: 0px -webkit-calc(50% - 45vw);
   margin: 0px calc(50% - 45vw);
   max-width: 90vw;
   width: 100vw;
@@ -1112,7 +1110,6 @@ body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-cont
 @media (max-width: 920px) {
   body.understrap-no-sidebar .alignwide,
 body.understrap-no-sidebar .wp-block-cover.alignwide {
-    margin: 0px -webkit-calc(50% - 48vw);
     margin: 0px calc(50% - 48vw);
     max-width: 96vw;
     width: 100vw;

@@ -44,7 +44,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: -webkit-calc(1.375rem + 1.5vw);
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
@@ -54,7 +53,6 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: -webkit-calc(1.325rem + 0.9vw);
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
@@ -64,7 +62,6 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: -webkit-calc(1.3rem + 0.6vw);
   font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
@@ -74,7 +71,6 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: -webkit-calc(1.275rem + 0.3vw);
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
@@ -345,7 +341,6 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 0.5rem;
-  font-size: -webkit-calc(1.275rem + 0.3vw);
   font-size: calc(1.275rem + 0.3vw);
   line-height: inherit;
 }
@@ -711,7 +706,6 @@ progress {
 }
 
 .display-1 {
-  font-size: -webkit-calc(1.625rem + 4.5vw);
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
   line-height: 1.2;
@@ -723,7 +717,6 @@ progress {
 }
 
 .display-2 {
-  font-size: -webkit-calc(1.575rem + 3.9vw);
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
   line-height: 1.2;
@@ -735,7 +728,6 @@ progress {
 }
 
 .display-3 {
-  font-size: -webkit-calc(1.525rem + 3.3vw);
   font-size: calc(1.525rem + 3.3vw);
   font-weight: 300;
   line-height: 1.2;
@@ -747,7 +739,6 @@ progress {
 }
 
 .display-4 {
-  font-size: -webkit-calc(1.475rem + 2.7vw);
   font-size: calc(1.475rem + 2.7vw);
   font-weight: 300;
   line-height: 1.2;
@@ -759,7 +750,6 @@ progress {
 }
 
 .display-5 {
-  font-size: -webkit-calc(1.425rem + 2.1vw);
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
   line-height: 1.2;
@@ -771,7 +761,6 @@ progress {
 }
 
 .display-6 {
-  font-size: -webkit-calc(1.375rem + 1.5vw);
   font-size: calc(1.375rem + 1.5vw);
   font-weight: 300;
   line-height: 1.2;
@@ -1042,7 +1031,6 @@ body.understrap-no-sidebar .alignwide,
 body.understrap-no-sidebar .alignfull,
 body.understrap-no-sidebar .wp-block-cover.alignwide,
 body.understrap-no-sidebar .wp-block-cover.alignfull {
-  margin: 0px -webkit-calc(50% - 50vw);
   margin: 0px calc(50% - 50vw);
   max-width: 100vw;
   width: 100vw;
@@ -1099,7 +1087,6 @@ body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-cont
 }
 body.understrap-no-sidebar .alignwide,
 body.understrap-no-sidebar .wp-block-cover.alignwide {
-  margin: 0px -webkit-calc(50% - 45vw);
   margin: 0px calc(50% - 45vw);
   max-width: 90vw;
   width: 100vw;
@@ -1145,7 +1132,6 @@ body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-cont
 @media (max-width: 920px) {
   body.understrap-no-sidebar .alignwide,
 body.understrap-no-sidebar .wp-block-cover.alignwide {
-    margin: 0px -webkit-calc(50% - 48vw);
     margin: 0px calc(50% - 48vw);
     max-width: 96vw;
     width: 100vw;
@@ -1169,4 +1155,5 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   font-size: 2.5rem;
   font-weight: 500;
 }
+
 /*# sourceMappingURL=custom-editor-style.css.map */
