@@ -8,7 +8,7 @@
 
   -
 
-## Release 1.1.0-beta
+## Release 1.1.0 December 1st 2021
 
 ** Enhancements **
 
@@ -19,6 +19,7 @@
 ** Fixes **
 
   - Numerous accessibility updates throughout, including new semantic markup, color contrast changes, additional screen reader text, and updates to core Bootstrap components.
+  - Fixes an issue with WPML flag icons not appearing in navigation.
 
 ##  Release 1.0.1 October 7th 2021
 
