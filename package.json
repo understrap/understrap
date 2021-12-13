@@ -64,7 +64,7 @@
     "browser-sync": "^2.27.7",
     "browserslist": "^4.18.1",
     "caniuse-lite": "^1.0.30001283",
-    "clean-css-cli": "^5.4.2",
+    "clean-css-cli": "^5.5.0",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",
     "nodemon": "^2.0.15",
