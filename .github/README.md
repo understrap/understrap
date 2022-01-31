@@ -26,13 +26,6 @@ Full documentation for this theme is available at [docs.understrap.com](https://
 
 For support requests and bugs, we recommend browsing our [issues](https://github.com/understrap/understrap/issues) and opening a new issue if necessary. For more broad discussion, like questions about the roadmap, visit our [discussion board](https://github.com/understrap/understrap/discussions).
 
-## License
-
-Copyright 2021 [Howard Development & Consulting, LLC](https://howarddc.com)
-Understrap is distributed under the terms of the GNU GPL version 2
-
-http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-
 ## Changelog
 See [changelog](CHANGELOG.md)
 
@@ -47,6 +40,17 @@ See [changelog](CHANGELOG.md)
 - Contact Form 7 support
 - [Child Theme](https://github.com/understrap/understrap-child) ready
 - Translation ready
+
+## Understrap Academy
+
+[Become an Understrap Expert.](https://www.understrapacademy.com) Presented by the team behind the Understrap Theme Framework, Understrap Academy is a collection of online courses that will help you speed up your development process, make your projects more profitable, and become an Understrap expert in record time.
+
+## License
+
+Copyright 2021 [Howard Development & Consulting, LLC](https://howarddc.com)
+Understrap is distributed under the terms of the GNU GPL version 2
+
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Credits
 - Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
