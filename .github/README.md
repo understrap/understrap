@@ -1,3 +1,6 @@
+
+<p align="center"><img src="https://understrap.com/wp-content/uploads/2022/02/Understrap_Logo_Color.svg" width="320" height="auto"></p>
+
 [![Build Status](https://api.travis-ci.org/understrap/understrap.svg?branch=master)](https://travis-ci.org/understrap/understrap)
 [![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/understrap.svg)](https://wordpress.org/themes/understrap)
 [![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/understrap.svg)](https://wordpress.org/themes/understrap/)
@@ -47,7 +50,7 @@ See [changelog](CHANGELOG.md)
 
 ## License
 
-Copyright 2021 [Howard Development & Consulting, LLC](https://howarddc.com)
+Copyright 2022 [Howard Development & Consulting, LLC](https://howarddc.com).
 Understrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
