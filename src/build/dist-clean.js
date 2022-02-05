@@ -15,6 +15,6 @@ rm( dir, { recursive: true }, ( error ) => {
 	if ( error ) {
 		console.error( error.name + ': ' + error.message + '\n' );
 	} else {
-		console.log( dir + ' is deleted!' );
+		console.log( dir + ' is deleted!\n' );
 	}
 } );
