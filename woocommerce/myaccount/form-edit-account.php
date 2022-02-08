@@ -28,29 +28,29 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
     </div>
     <div class="col-md-6">
         <label for="account_last_name" class="form-label"><?php esc_html_e( 'Last name', 'woocommerce' ); ?></label>
-		<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" autocomplete="family-name" value="<?php echo esc_attr( $user->last_name ); ?>" />
+	<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" autocomplete="family-name" value="<?php echo esc_attr( $user->last_name ); ?>" />
     </div>
     <div class="col-md-12">
         <label for="account_display_name" class="form-label"><?php esc_html_e( 'Display name', 'woocommerce' ); ?></label>
-		<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" value="<?php echo esc_attr( $user->display_name ); ?>" />
+	<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" value="<?php echo esc_attr( $user->display_name ); ?>" />
         <div id="account_display_name" class="form-text"><?php esc_html_e( 'This will be how your name will be displayed in the account section and in reviews', 'woocommerce' ); ?></div>
     </div>
     <div class="col-md-12 mb-3">
         <label for="account_email" class="form-label"><?php esc_html_e( 'Email address', 'woocommerce' ); ?></label>
-		<input type="email" class="form-control woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" />
+	<input type="email" class="form-control woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" />
     </div>
     <legend><?php esc_html_e( 'Password change', 'woocommerce' ); ?></legend>
     <div class="col">
         <label for="password_current" class="form-label"><?php esc_html_e( 'Current password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-		<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="off" />
+	<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="off" />
     </div>
     <div class="col-md-12">
         <label for="password_1" class="form-label"><?php esc_html_e( 'New password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-		<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" />       
+	<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" />       
     </div>
     <div class="col-md-12">
         <label for="password_2" class="form-label"><?php esc_html_e( 'Confirm new password', 'woocommerce' ); ?></label>
-		<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />        
+        <input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />        
     </div>
     <?php do_action( 'woocommerce_edit_account_form' ); ?>
     <div class="col-12">
