@@ -12789,6 +12789,10 @@ a.skip-link {
   border-color: #343a40;
 }
 
+.has-white-background-color.wp-block-button__link:hover {
+  color: #6c757d;
+}
+
 figure.wp-block-image {
   display: block;
 }
