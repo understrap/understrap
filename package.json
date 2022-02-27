@@ -28,6 +28,9 @@
     "dist-build": "node src/build/dist-build.js",
     "dist-clean": "node src/build/dist-clean.js"
   },
+  "babel": {
+		"extends": "./src/build/babel.config.js"
+	},
   "engines": {
     "node": ">=16"
   },

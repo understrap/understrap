@@ -20,6 +20,7 @@
 *~
 ._*
 # but track
+!.babelrc.js
 !.browserslist
 !.editorconfig
 !.gitattributes
