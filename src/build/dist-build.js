@@ -1,5 +1,6 @@
 const { promises: fs } = require("fs")
 const path = require("path")
+const pkg = require('../../package.json')
 
 async function copyDir(src, dest) {
     await fs.mkdir(dest, { recursive: true });
@@ -21,7 +22,7 @@ async function copyDir(src, dest) {
 		'package.json',
 		'package-lock.json',
 		'phpcs.xml.dist',
-		'readme.txt'
+		'.git'
 	];
 
     for (let entry of entries) {
@@ -37,4 +38,4 @@ async function copyDir(src, dest) {
     }
 }
 
-copyDir('./', './dist');
+copyDir('./', `./dist/${pkg.name}-${pkg.version}`);
