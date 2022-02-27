@@ -15,6 +15,9 @@
 // Set up basic typography
 @import "assets/bootstrap4/type";
 
+// Set up bootstrap utilities
+@import "assets/bootstrap4/utilities";
+
 // Start bringing in colors and styles.
 @import "theme/colors";
 @import "theme/blocks-bootstrap4";
