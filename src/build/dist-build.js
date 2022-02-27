@@ -9,6 +9,7 @@ async function copyDir( src, dest ) {
 		'node_modules',
 		'dist',
 		'src',
+		'vendor',
 		'.github',
 		'.browserslistrc',
 		'.editorconfig',
