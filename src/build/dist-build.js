@@ -1,11 +1,11 @@
-const { promises: fs } = require("fs")
-const path = require("path")
-const pkg = require('../../package.json')
+const { promises: fs } = require( 'fs' );
+const path = require( 'path' );
+const pkg = require( '../../package.json' );
 
-async function copyDir(src, dest) {
-    await fs.mkdir(dest, { recursive: true });
-    let entries = await fs.readdir(src, { withFileTypes: true });
-	let ignore = [
+async function copyDir( src, dest ) {
+	await fs.mkdir( dest, { recursive: true } );
+	const entries = await fs.readdir( src, { withFileTypes: true } );
+	const ignore = [
 		'node_modules',
 		'dist',
 		'src',
@@ -22,20 +22,20 @@ async function copyDir(src, dest) {
 		'package.json',
 		'package-lock.json',
 		'phpcs.xml.dist',
-		'.git'
+		'.git',
 	];
 
-    for (let entry of entries) {
+	for ( let entry of entries ) {
 		if ( ignore.indexOf( entry.name ) != -1 ) {
 			continue;
 		}
-        let srcPath = path.join(src, entry.name);
-        let destPath = path.join(dest, entry.name);
+		let srcPath = path.join( src, entry.name );
+		let destPath = path.join( dest, entry.name );
 
-        entry.isDirectory() ?
-            await copyDir(srcPath, destPath) :
-            await fs.copyFile(srcPath, destPath);
-    }
+		entry.isDirectory()
+			? await copyDir( srcPath, destPath )
+			: await fs.copyFile( srcPath, destPath );
+	}
 }
 
-copyDir('./', `./dist/${pkg.name}-${pkg.version}`);
+copyDir( './', `./dist/${ pkg.name }-${ pkg.version }` );
