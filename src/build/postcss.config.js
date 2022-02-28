@@ -1,5 +1,26 @@
 'use strict';
 
+const process = require( 'process' );
+
+const colors = [
+	'blue',
+	'indigo',
+	'purple',
+	'pink',
+	'red',
+	'orange',
+	'yellow',
+	'green',
+	'teal',
+	'cyan',
+	'white',
+	'gray',
+	'gray-dark',
+];
+
+const BS4 = process.argv[ process.argv.length - 1 ] === 'BS4';
+const colorInfix = BS4 ? '' : 'bs-';
+
 module.exports = ( ctx ) => {
 	return {
 		map: {
@@ -10,24 +31,10 @@ module.exports = ( ctx ) => {
 		plugins: {
 			autoprefixer: {
 				cascade: false,
-				env: 'bs5',
+				env:  BS4 ? 'bs4' : 'bs5',
 			},
 			'postcss-understrap-palette-generator': {
-				colors: [
-					'--bs-blue',
-					'--bs-indigo',
-					'--bs-purple',
-					'--bs-pink',
-					'--bs-red',
-					'--bs-orange',
-					'--bs-yellow',
-					'--bs-green',
-					'--bs-teal',
-					'--bs-cyan',
-					'--bs-white',
-					'--bs-gray',
-					'--bs-gray-dark',
-				],
+				colors: colors.map( ( x ) => `--${ colorInfix }${ x }` ),
 			},
 		},
 	};

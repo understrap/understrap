@@ -12,7 +12,7 @@
     "css-bs4": "npm-run-all css-compile-bs4 css-postcss-bs4 css-minify-bs4",
     "css-compile-bs4": "sass --style expanded --source-map --embed-sources --no-error-css --quiet src/sass/theme-bootstrap4.scss:css/theme-bootstrap4.css src/sass/custom-editor-style-bootstrap4.scss:css/custom-editor-style-bootstrap4.css",
     "css-minify-bs4": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\"",
-    "css-postcss-bs4": "postcss --config src/build-bootstrap4/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\"",
+    "css-postcss-bs4": "postcss --config src/build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\" -- BS4",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "rollup --config src/build/rollup.config.js --sourcemap",
     "js-minify": "terser  --config-file src/build/terser.config.json --output js/theme.min.js js/theme.js",
