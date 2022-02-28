@@ -31,7 +31,7 @@ module.exports = ( ctx ) => {
 		plugins: {
 			autoprefixer: {
 				cascade: false,
-				env:  BS4 ? 'bs4' : 'bs5',
+				env: BS4 ? 'bs4' : 'bs5',
 			},
 			'postcss-understrap-palette-generator': {
 				colors: colors.map( ( x ) => `--${ colorInfix }${ x }` ),
