@@ -27,7 +27,7 @@ let globals = {
 	'@popperjs/core': 'Popper',
 };
 if ( BS4 ) {
-	// Adjustmets for Bootstrap version 4.
+	// Adjustments for Bootstrap version 4.
 	bsVersion = 4;
 	bsSrcFile = 'bootstrap4.js';
 	fileDest = 'theme-bootstrap4.js';
