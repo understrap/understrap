@@ -25,7 +25,7 @@ figure.wp-block-image {
 }
 
 // Alternate/classic editor image captions.
-.wp-block-image > figure{
+.wp-block-image > figure {
 	@extend .figure;
 	display: block;
 	img {
@@ -38,7 +38,7 @@ figure.wp-block-image {
 
 
 // Wide alignments and covers.
-body.understrap-no-sidebar{
+body.understrap-no-sidebar {
 	.alignwide,
 	.alignfull,
 	.wp-block-cover.alignwide,
@@ -54,17 +54,11 @@ body.understrap-no-sidebar{
 	}
 
 	.alignwide,
-	.wp-block-cover.alignwide{
+	.wp-block-cover.alignwide {
 		margin: 0px calc(50% - 45vw);
 		max-width: 90vw;
 		width: 100vw;
-
-		.wp-block-cover__inner-container {
-			@include make-container();
-			@include make-container-max-widths();
-		}
 	}
-
 
 	@media (max-width: 920px) {
 		.alignwide,
