@@ -13635,6 +13635,11 @@ a.skip-link {
   display: block;
 }
 
+@media (max-width: 767.98px) {
+  body.admin-bar .offcanvas-end {
+    margin-top: 46px;
+  }
+}
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

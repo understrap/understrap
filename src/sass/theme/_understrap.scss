@@ -170,3 +170,10 @@ a.skip-link {
 .gallery-caption {
 	display: block;
 }
+
+// Fixing Off-canvas close icon is hidden behind admin bar
+@include media-breakpoint-down(md) {
+	body.admin-bar .offcanvas-end {
+		margin-top: 46px;
+	}
+}
