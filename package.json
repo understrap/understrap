@@ -18,7 +18,7 @@
     "js-minify": "terser  --config-file src/build/terser.config.json --output js/theme.min.js js/theme.js",
     "js-bs4": "npm-run-all js-compile-bs4 js-minify-bs4",
     "js-compile-bs4": "npm run js-compile -- BS4",
-    "js-minify-bs4": "terser  --config-file src/build-bootstrap4/terser.config.json --output js/theme-bootstrap4.min.js js/theme-bootstrap4.js",
+    "js-minify-bs4": "terser  --config-file src/build/terser.config-bs4.json --output js/theme-bootstrap4.min.js js/theme-bootstrap4.js",
     "watch": "npm-run-all --parallel watch-run-*",
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
     "watch-run-css": "nodemon --watch src/sass/ --ext scss --exec \"npm-run-all css\"",
