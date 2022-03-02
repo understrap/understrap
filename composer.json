@@ -24,7 +24,7 @@
 	"scripts": {
 		"check:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs"],
 		"fix:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"],
-		"lint:php": ["@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."]
+		"lint:php": ["@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude dist ."]
 	},
 	"support": {
 		"issues": "https://github.com/understrap/understrap/issues",
