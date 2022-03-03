@@ -1,3 +1,14 @@
+:root {
+	--understrap-spacer: #{$spacer};
+	--understrap-border-radius: #{$border-radius};
+	--understrap-link-color: #{$link-color};
+	--understrap-fs1: #{$h1-font-size};
+	--understrap-fs2: #{$h2-font-size};          --understrap-fs3: #{$h3-font-size};
+	--understrap-fs4: #{$h4-font-size};
+	--understrap-fs5: #{$h5-font-size};
+	--understrap-fs6: #{$h6-font-size};
+}
+
 body {
 	overflow-x: hidden; // Fix for Windows Chrome horizontal scrollbar.
 }
