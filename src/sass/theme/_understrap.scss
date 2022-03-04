@@ -170,3 +170,28 @@ a.skip-link {
 .gallery-caption {
 	display: block;
 }
+
+/* Search Widget */
+.wp-block-search {
+    .wp-block-search__label {
+        @extend .screen-reader-text;
+    }
+
+    .wp-block-search__inside-wrapper {
+        @extend .input-group;
+
+        .wp-block-search__input {
+            @extend .form-control;
+        }
+
+        .wp-block-search__button {
+            border-radius: $border-radius;
+
+            &:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+                margin-left: 0;
+            }            
+
+            @extend .btn-primary;
+        }
+    }
+}
