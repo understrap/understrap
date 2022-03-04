@@ -18,7 +18,7 @@
     "mangle": {
     },
     "sourceMap": {
-        "filename": "js/theme-bootstrap4.js.map",
-        "url": "theme-bootstrap4.min.js.map"
+        "filename": "theme-bootstrap4.js.map",
+        "url": "js/"
     }
 }
