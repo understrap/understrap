@@ -235,6 +235,23 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 	}
 } // End of if function_exists( 'understrap_kses_title' ).
 
+// Add the 'data' protocol to the array of allowed protocols
+add_filter( 'kses_allowed_protocols' , 'upderstrap_allow_data_protocol' );
+
+if ( ! function_exists( 'upderstrap_allow_data_protocol' ) ) {
+	/**
+	 * Add 'data' protocol to the array of allowed protocols
+	 * 
+	 * @param string[] Array of allowed protocols e.g. 'http', 'ftp', 'tel', and more.
+	 * @return Filters the list of protocols allowed in HTML attributes.
+	 */
+	function upderstrap_allow_data_protocol( $protocols ) {
+		array_push( $protocols, 'data' );
+
+		return $protocols;
+	}
+} // End of if function_exists( 'upderstrap_allow_data_protocol' ).
+
 if ( ! function_exists( 'understrap_hide_posted_by' ) ) {
 	/**
 	 * Hides the posted by markup in `understrap_posted_on()`.
