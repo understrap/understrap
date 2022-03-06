@@ -21,7 +21,7 @@ const BS4 = process.argv[ process.argv.length - 1 ] === 'BS4';
 // Populate Bootstrap version specific variables.
 let bsVersion = 5;
 let bsSrcFile = 'bootstrap.js';
-let fileDest = 'theme.js';
+let fileDest = 'theme';
 let globals = {
 	jquery: 'jQuery', // Ensure we use jQuery which is always available even in noConflict mode
 	'@popperjs/core': 'Popper',
@@ -30,7 +30,7 @@ if ( BS4 ) {
 	// Adjustments for Bootstrap version 4.
 	bsVersion = 4;
 	bsSrcFile = 'bootstrap4.js';
-	fileDest = 'theme-bootstrap4.js';
+	fileDest = 'theme-bootstrap4';
 	delete globals[ '@popperjs/core' ];
 	Object.assign( globals, { 'popper.js': 'Popper' } );
 }
@@ -58,13 +58,22 @@ module.exports = {
 		path.resolve( __dirname, '../js/skip-link-focus-fix.js' ),
 		path.resolve( __dirname, '../js/custom-javascript.js' ),
 	],
-	output: {
-		banner,
-		file: path.resolve( __dirname, `../../js/${ fileDest }` ),
-		format: 'umd',
-		globals,
-		name: 'understrap',
-	},
+	output: [
+		{
+			banner,
+			file: path.resolve( __dirname, `../../js/${ fileDest }.js` ),
+			format: 'umd',
+			globals,
+			name: 'understrap',
+		},
+		{
+			banner,
+			file: path.resolve( __dirname, `../../js/${ fileDest }.min.js` ),
+			format: 'umd',
+			globals,
+			name: 'understrap',
+		},
+	],
 	external,
 	plugins,
 };
