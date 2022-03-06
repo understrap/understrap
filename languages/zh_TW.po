@@ -1,0 +1,502 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: understrap\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
+"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
+"PO-Revision-Date: 2022-03-06 15:13+0800\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: header.php\n"
+"X-Poedit-SearchPath-2: index.php\n"
+"X-Poedit-SearchPath-3: statichero.php\n"
+"X-Poedit-SearchPath-4: 404.php\n"
+"X-Poedit-SearchPath-5: archive.php\n"
+"X-Poedit-SearchPath-6: search.php\n"
+"X-Poedit-SearchPath-7: sticky.php\n"
+"X-Poedit-SearchPath-8: single.php\n"
+"X-Poedit-SearchPath-9: sidebar.php\n"
+"X-Poedit-SearchPath-10: comment-form.php\n"
+"X-Poedit-SearchPath-11: comments.php\n"
+"X-Poedit-SearchPath-12: content-none.php\n"
+"X-Poedit-SearchPath-13: content-page.php\n"
+"X-Poedit-SearchPath-14: content-search.php\n"
+"X-Poedit-SearchPath-15: content-single.php\n"
+"X-Poedit-SearchPath-16: content.php\n"
+"X-Poedit-SearchPath-17: hero.php\n"
+"X-Poedit-SearchPath-18: page.php\n"
+"X-Poedit-SearchPath-19: functions.php\n"
+"X-Poedit-SearchPath-20: page-templates\n"
+"X-Poedit-SearchPath-21: inc\n"
+
+#. Theme Name of the theme
+msgid "Understrap"
+msgstr "Understrap"
+
+#. Theme URI of the theme
+#: inc/hooks.php:40
+msgid "https://understrap.com"
+msgstr "https://understrap.com"
+
+#. Description of the theme
+msgid ""
+"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
+"starting point for your next theme project and WordPress website. Use it as "
+"starter theme or as a parent theme. It is up to you. Including Font Awesome "
+"support, built-in widget slider and much more you need for basic websites. "
+"IMPORTANT: All developer dependencies are not bundled with this install "
+"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
+"copy-assets\" inside the extracted /understrap folder."
+msgstr ""
+"Automattic 的 _s 主題和 Bootstrap 4 的結合。作為您下一個主題項目和 WordPress "
+"網站的堅實起點。 將其用作入門主題或父主題。 它是由你決定。 包括 Font Awesome "
+"支持、內置小部件滑塊以及基本網站所需的更多功能。 重要提示：所有開發人員依賴項"
+"均未與此安裝文件捆綁在一起。 只需下載 .zip，解壓縮並在解壓縮的 /understrap 文"
+"件夾中運行 \"npm install\" 和 \"gulp copy-assets\"。"
+
+#. Author of the theme
+msgid "the Understrap Authors"
+msgstr "Understrap的作者"
+
+#. Author URI of the theme
+msgid "https://github.com/understrap/understrap/graphs/contributors"
+msgstr "https://github.com/understrap/understrap/graphs/contributors"
+
+#: 404.php:30
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "喔不！找不到這個網頁。"
+
+#: 404.php:36
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "看起來在這個位置沒有找到任何東西。 也許嘗試搜尋？"
+
+#: 404.php:46
+msgid "Most Used Categories"
+msgstr "最常用的類別"
+
+#. translators: %1$s: smiley
+#: 404.php:69
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "嘗試查看每月封存。 %1$s"
+
+#. translators: %s: author name
+#: author.php:42
+msgctxt "Avatar alt"
+msgid "Profile picture of %s"
+msgstr "%s 的頭像"
+
+#: author.php:52
+msgid "Website"
+msgstr "網站"
+
+#. translators: %s: author name
+#: author.php:63
+msgid "About %s"
+msgstr "關於 %s"
+
+#. translators: %s: author name
+#: author.php:77
+msgid "Posts by %s"
+msgstr "發布者 %s"
+
+#. translators: %s: post title
+#: comments.php:36
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "關於 &ldquo;%s&rdquo; 的一個想法"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:43
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s 想到了 &ldquo;%2$s&rdquo;"
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "跳到內容"
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr "主導航"
+
+#: header.php:63
+msgid "Toggle navigation"
+msgstr "切換導航"
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr "新增一個菜單"
+
+#: inc/custom-comments.php:102
+msgid "Comments are closed."
+msgstr "留言功能已被關閉。"
+
+#: inc/custom-header.php:54
+msgid "Default Header Image"
+msgstr "預設頭像"
+
+#: inc/customizer.php:42
+msgid "Theme Layout Settings"
+msgstr "主題布局設定"
+
+#: inc/customizer.php:44
+msgid "Container width and sidebar defaults"
+msgstr "容器寬度和側邊欄預設值"
+
+#: inc/customizer.php:84
+msgid "Container Width"
+msgstr "容器寬度"
+
+#: inc/customizer.php:85
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "在 Bootstrap 的容器和容器流體之間進行選擇"
+
+#: inc/customizer.php:90
+msgid "Fixed width container"
+msgstr "固定寬度容器"
+
+#: inc/customizer.php:91
+msgid "Full width container"
+msgstr "全寬容器"
+
+#: inc/customizer.php:113
+msgid "Sidebar Positioning"
+msgstr "側邊欄定位"
+
+#: inc/customizer.php:114
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+"設定側邊欄的預設位置。 可以是：右、左、兩者或無。 注意：這可以在單個頁面上被"
+"覆蓋。"
+
+#: inc/customizer.php:123
+msgid "Right sidebar"
+msgstr "右側欄"
+
+#: inc/customizer.php:124
+msgid "Left sidebar"
+msgstr "左側欄"
+
+#: inc/customizer.php:125
+msgid "Left & Right sidebars"
+msgstr "左右側欄"
+
+#: inc/customizer.php:126
+msgid "No sidebar"
+msgstr "沒有側欄"
+
+#: inc/deprecated.php:80
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "看起來這個位置找不到任何東西，或許可以嘗試下方的連結之一或是搜尋？"
+
+#: inc/deprecated.php:81
+msgid "Previous"
+msgstr "上一個"
+
+#: inc/deprecated.php:82
+msgid "Next"
+msgstr "下一個"
+
+#: inc/deprecated.php:83
+msgid "About:"
+msgstr "關於："
+
+#: inc/deprecated.php:84
+msgid "Profile"
+msgstr "個人檔案"
+
+#: inc/deprecated.php:85
+msgid "Posts by"
+msgstr "發布者"
+
+#: inc/deprecated.php:86
+msgid "Permanent Link:"
+msgstr "永久連結："
+
+#: inc/deprecated.php:87
+msgid "in"
+msgstr "在"
+
+#: inc/deprecated.php:88
+msgid "Edit"
+msgstr "編輯"
+
+#: inc/editor.php:50
+msgid "Lead Paragraph"
+msgstr "前導段落"
+
+#: inc/editor.php:56
+msgctxt "Font size name"
+msgid "Small"
+msgstr "小"
+
+#: inc/editor.php:60
+msgid "Blockquote"
+msgstr "塊引用"
+
+#: inc/editor.php:66
+msgid "Blockquote Footer"
+msgstr "塊引用頁尾"
+
+#: inc/editor.php:72
+msgid "Cite"
+msgstr "引用"
+
+#: inc/extras.php:277
+msgid "Read More..."
+msgstr "閱讀更多..."
+
+#: inc/hooks.php:30
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#. translators: WordPress
+#: inc/hooks.php:33
+msgid "Proudly powered by %s"
+msgstr "自豪地由 %s 提供"
+
+#. translators: 1: Theme name, 2: Theme author
+#: inc/hooks.php:38
+msgid "Theme: %1$s by %2$s."
+msgstr "主題樣式： %1$s 由 %2$s."
+
+#. translators: Theme version
+#: inc/hooks.php:44
+msgid "Version: %1$s"
+msgstr "版本：%1$s"
+
+#: inc/pagination.php:53
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/pagination.php:54
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: inc/pagination.php:57
+msgid "Posts navigation"
+msgstr "貼文導航"
+
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "主要菜單"
+
+#: inc/template-tags.php:33
+msgctxt "post date"
+msgid "Posted on"
+msgstr "發表於"
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "by"
+msgstr "藉由"
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "Posted by"
+msgstr "發布者"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59 inc/template-tags.php:65
+msgid ", "
+msgstr "， "
+
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:62
+msgid "Posted in %s"
+msgstr "發表在 %s"
+
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:68
+msgid "Tagged %s"
+msgstr "已標記 %s"
+
+#: inc/template-tags.php:73
+msgid "Leave a comment"
+msgstr "留言"
+
+#: inc/template-tags.php:73
+msgid "1 Comment"
+msgstr "1 個留言"
+
+#: inc/template-tags.php:73
+msgid "% Comments"
+msgstr "% 個留言"
+
+#: inc/template-tags.php:167
+msgid "Comment navigation"
+msgstr "註解導航"
+
+#: inc/template-tags.php:171
+msgid "&larr; Older Comments"
+msgstr "&larr; 較早的評論"
+
+#: inc/template-tags.php:177
+msgid "Newer Comments &rarr;"
+msgstr "較新的評論 &rarr;"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:194
+msgid "Edit %s"
+msgstr "編輯 %s"
+
+#: inc/template-tags.php:216
+msgid "Post navigation"
+msgstr "貼文導航"
+
+#: inc/template-tags.php:220
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/template-tags.php:223
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/template-tags.php:244
+msgid "Pages:"
+msgstr "頁數："
+
+#: inc/widgets.php:103
+msgid "Right Sidebar"
+msgstr "右側邊欄"
+
+#: inc/widgets.php:105
+msgid "Right sidebar widget area"
+msgstr "右側邊欄小工具區域"
+
+#: inc/widgets.php:115
+msgid "Left Sidebar"
+msgstr "左側欄"
+
+#: inc/widgets.php:117
+msgid "Left sidebar widget area"
+msgstr "左側欄小工具區域"
+
+#: inc/widgets.php:127
+msgid "Hero Slider"
+msgstr "英雄滑塊"
+
+#: inc/widgets.php:129
+msgid "Hero slider area. Place two or more widgets here and they will slide!"
+msgstr "英雄滑塊區域。 在此處放置兩個或更多小工具，它們將滑動！"
+
+#: inc/widgets.php:139
+msgid "Hero Canvas"
+msgstr "英雄畫布"
+
+#: inc/widgets.php:141
+msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
+msgstr "用於 Bootstrap 和其他自定義 HTML 標記的全尺寸畫布英雄區域"
+
+#: inc/widgets.php:151
+msgid "Top Full"
+msgstr "頁首全滿"
+
+#: inc/widgets.php:153
+msgid "Full top widget with dynamic grid"
+msgstr "帶有動態網格的完整頂部小工具"
+
+#: inc/widgets.php:163
+msgid "Footer Full"
+msgstr "頁尾全滿"
+
+#: inc/widgets.php:165
+msgid "Full sized footer widget with dynamic grid"
+msgstr "具有動態網格的全尺寸頁尾小功季"
+
+#: loop-templates/content-none.php:18
+msgid "Nothing Found"
+msgstr "什麼都沒找到"
+
+#. translators: 1: Link to WP admin new post page.
+#: loop-templates/content-none.php:30
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "準備好發布您第一篇文章？<a href=\"%1$s\">從這裡開始吧</a>。"
+
+#: loop-templates/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "抱歉，沒有任何內容符合您的搜尋條件。 請使用一些不同的關鍵字重試。"
+
+#: loop-templates/content-none.php:46
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "似乎我們找不到您想找的。可能搜尋有幫助。"
+
+#. Template Name of the theme
+msgid "Blank Page Template"
+msgstr "空白頁模板"
+
+#. Template Name of the theme
+msgid "Left and Right Sidebar Layout"
+msgstr "左右側邊欄佈局"
+
+#. Template Name of the theme
+msgid "Empty Page Template"
+msgstr "空頁面模板"
+
+#. Template Name of the theme
+msgid "Full Width Page"
+msgstr "全寬頁面"
+
+#. Template Name of the theme
+msgid "Left Sidebar Layout"
+msgstr "左側邊欄佈局"
+
+#. Template Name of the theme
+msgid "Right Sidebar Layout"
+msgstr "右側邊欄佈局"
+
+#. translators: %s: query term
+#: search.php:36
+msgid "Search Results for: %s"
+msgstr "搜尋結果：%s"
+
+#: searchform.php:20
+msgctxt "label"
+msgid "Search for:"
+msgstr "搜尋："
+
+#: searchform.php:22
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "搜尋 &hellip;"
+
+#: searchform.php:24
+msgctxt "submit button"
+msgid "Search"
+msgstr "搜尋"
+
+#: sidebar-templates/sidebar-hero.php:28
+msgctxt "carousel control"
+msgid "Previous"
+msgstr "前一個"
+
+#: sidebar-templates/sidebar-hero.php:36
+msgctxt "carousel control"
+msgid "Next"
+msgstr "下一個"
