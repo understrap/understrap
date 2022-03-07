@@ -26,9 +26,6 @@
 !.gitattributes
 !.github
 !.gitignore
-!.jscsrc
-!.jshintignore
-!.travis.yml
 
 # Ignore all files with .lock extentions
 *.lock
