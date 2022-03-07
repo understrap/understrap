@@ -4,26 +4,26 @@ const pkg = require( '../../package.json' );
 
 async function copyDir( src, dest ) {
 	await fs.mkdir( dest, { recursive: true } );
-	const entries = await fs.readdir( src, { withFileTypes: true } );
+	let entries = await fs.readdir( src, { withFileTypes: true } );
+	// Exclude all dot files and directories.
+	entries = entries.filter( dirent => ! dirent.name.startsWith('.') );
 	const ignore = [
-		'node_modules',
 		'dist',
+		'node_modules',
 		'src',
 		'vendor',
-		'.github',
-		'.browserslistrc',
-		'.editorconfig',
-		'.gitattributes',
-		'.gitignore',
 		'composer.json',
 		'composer.lock',
 		'package.json',
 		'package-lock.json',
 		'phpcs.xml.dist',
-		'.git',
+		'phpmd.baseline.xml',
+		'phpmd.xml',
+		'phpstan-baseline.neon',
+		'phpstan.neon.dist',
 	];
 
-	for ( let entry of entries ) {
+	for ( const entry of entries ) {
 		if ( ignore.indexOf( entry.name ) != -1 ) {
 			continue;
 		}
