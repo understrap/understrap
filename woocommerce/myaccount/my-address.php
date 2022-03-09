@@ -14,8 +14,8 @@
  * @package WooCommerce/Templates
  * @version 2.6.0
  */
-// Exit if accessed directly.
 
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 $customer_id = get_current_user_id();
