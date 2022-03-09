@@ -11,6 +11,7 @@ parameters:
 	excludePaths:
 		- inc/deprecated.php
 		- inc/class-wp-bootstrap-navwalker.php
+	tmpDir: .phpstan-cache
 	ignoreErrors:
 		- '#Function understrap_block_editor_setup\(\) has no return type specified.#'
 		- '#Function understrap_custom_header_setup\(\) has no return type specified.#'
