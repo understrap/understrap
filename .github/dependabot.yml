@@ -1,14 +1,23 @@
-# Set up for npm and Composer
+# Set up for GitHub Actions, npm and Composer
 
 version: 2
 updates:
 
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    labels:
+    - "dependencies"
+    open-pull-requests-limit: 10
+    rebase-strategy: auto
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
-    ignore:
-      - dependency-name: "bootstrap"
-        versions: "5.x"
     labels:
     - "dependencies"
     open-pull-requests-limit: 10
