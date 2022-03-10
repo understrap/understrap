@@ -144,7 +144,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: ${{ env.php-version }}
         tools: composer, cs2pr
         coverage: none
 
