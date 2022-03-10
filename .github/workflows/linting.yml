@@ -70,6 +70,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ env.php-version }}
+        tools: composer, cs2pr
+        coverage: none
+
     - name: Get Composer cache directory
       id: composer-cache
       uses: actions/cache@v2
