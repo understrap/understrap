@@ -5,7 +5,6 @@
  * @package Understrap
  */
 
-
 add_action( 'after_setup_theme', 'understrap_block_editor_setup' );
 
 if ( ! function_exists( 'understrap_block_editor_setup' ) ) {
