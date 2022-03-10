@@ -7622,7 +7622,8 @@ textarea.form-control-lg {
 }
 
 .visually-hidden,
-.visually-hidden-focusable:not(:focus):not(:focus-within) {
+.visually-hidden-focusable:not(:focus):not(:focus-within),
+a.skip-link:not(:focus):not(:focus-within) {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -12375,13 +12376,6 @@ article img,
 #secondary img {
   max-width: 100%;
   height: auto;
-}
-
-a.skip-link {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  right: 0;
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link {
