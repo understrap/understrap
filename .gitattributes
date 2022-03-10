@@ -7,8 +7,6 @@
 .editorconfig   text
 .gitattributes  text
 .gitignore      text
-.jscsrc         text
-.jshintignore   text
 *.css           text
 *.js            text
 *.json          text

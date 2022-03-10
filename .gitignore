@@ -20,14 +20,12 @@
 *~
 ._*
 # but track
+!.babelrc.js
 !.browserslist
 !.editorconfig
 !.gitattributes
 !.github
 !.gitignore
-!.jscsrc
-!.jshintignore
-!.travis.yml
 
 # Ignore all files with .lock extentions
 *.lock

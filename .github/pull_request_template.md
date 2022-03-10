@@ -27,8 +27,10 @@
 - [ ] \(Optional) I have updated the documentation accordingly.
 - [ ] \(Optional) My change requires a change to the translations.
 - [ ] \(Optional) I have updated the translations accordingly.
-- [ ] `composer cs:check` has passed locally.
-- [ ] `composer lint:php` has passed locally.
+- [ ] `composer phpcs` has passed locally.
+- [ ] `composer php-lint` has passed locally.
+- [ ] `composer phpmd` has passed locally.
+- [ ] `composer phpstan` has passed locally.
 - [ ] I have read the **[CONTRIBUTING](https://github.com/understrap/understrap/blob/main/.github/CONTRIBUTING.md)** document.
 
 ## Related Issues or Roadmap requests

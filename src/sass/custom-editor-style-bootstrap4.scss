@@ -1,4 +1,6 @@
-//Add your own editor styles here or import additional files
+$bootstrap4: true;                           // <--- Do not delete this variable. It is used in theme/_blocks.scss and theme/_understrap.scss.
+
+// Add your own editor styles here or import additional files
 
 // Grab our child theme variables
 @import "theme/theme_variables";
@@ -15,9 +17,12 @@
 // Set up basic typography
 @import "assets/bootstrap4/type";
 
+// Set up bootstrap utilities
+@import "assets/bootstrap4/utilities";
+
 // Start bringing in colors and styles.
 @import "theme/colors";
-@import "theme/blocks-bootstrap4";
+@import "theme/blocks";
 
 
 

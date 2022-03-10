@@ -1,0 +1,267 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: inc/block-editor.php
+
+		-
+			message: "#^Function understrap_generate_color_palette\\(\\) never returns bool so it can be removed from the return type\\.$#"
+			count: 1
+			path: inc/block-editor.php
+
+		-
+			message: "#^Function understrap_generate_color_palette\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/block-editor.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, mixed given\\.$#"
+			count: 1
+			path: inc/block-editor.php
+
+		-
+			message: "#^Function understrap_bootstrap_comment_form_fields\\(\\) has parameter \\$fields with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/custom-comments.php
+
+		-
+			message: "#^Function understrap_bootstrap_comment_form_fields\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/custom-comments.php
+
+		-
+			message: "#^Parameter \\#1 \\$post_type of function post_type_supports expects string, string\\|false given\\.$#"
+			count: 1
+			path: inc/custom-comments.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:get_setting\\(\\)\\.$#"
+			count: 3
+			path: inc/customizer.php
+
+		-
+			message: "#^Cannot access property \\$choices on void\\|WP_Customize_Control\\.$#"
+			count: 1
+			path: inc/customizer.php
+
+		-
+			message: "#^Inner named functions are not supported by PHPStan\\. Consider refactoring to an anonymous function, class method, or a top\\-level\\-defined function\\. See issue \\#165 \\(https\\://github\\.com/phpstan/phpstan/issues/165\\) for more details\\.$#"
+			count: 1
+			path: inc/customizer.php
+
+		-
+			message: "#^Parameter \\#3 \\$args of class WP_Customize_Control constructor expects array\\{instance_number\\?\\: int, manager\\?\\: WP_Customize_Manager, id\\?\\: string, settings\\?\\: array, setting\\?\\: string, capability\\?\\: string, priority\\?\\: int, section\\?\\: string, \\.\\.\\.\\}, array\\{label\\: string, description\\: string, section\\: 'understrap_theme…', settings\\: 'understrap_navbar…', type\\: 'select', sanitize_callback\\: 'understrap_theme…', choices\\: array\\{collapse\\: string, offcanvas\\: string\\}, priority\\: mixed\\} given\\.$#"
+			count: 1
+			path: inc/customizer.php
+
+		-
+			message: "#^Parameter \\#3 \\$args of class WP_Customize_Control constructor expects array\\{instance_number\\?\\: int, manager\\?\\: WP_Customize_Manager, id\\?\\: string, settings\\?\\: array, setting\\?\\: string, capability\\?\\: string, priority\\?\\: int, section\\?\\: string, \\.\\.\\.\\}, array\\{label\\: string, description\\: string, section\\: 'understrap_theme…', settings\\: 'understrap_sidebar…', type\\: 'select', sanitize_callback\\: 'understrap_theme…', choices\\: array\\{right\\: string, left\\: string, both\\: string, none\\: string\\}, priority\\: mixed\\} given\\.$#"
+			count: 1
+			path: inc/customizer.php
+
+		-
+			message: "#^Parameter \\#3 \\$args of class WP_Customize_Control constructor expects array\\{instance_number\\?\\: int, manager\\?\\: WP_Customize_Manager, id\\?\\: string, settings\\?\\: array, setting\\?\\: string, capability\\?\\: string, priority\\?\\: int, section\\?\\: string, \\.\\.\\.\\}, array\\{label\\: string, description\\: string, section\\: 'understrap_theme…', settings\\: 'understrap_site…', type\\: 'textarea', priority\\: 20\\} given\\.$#"
+			count: 1
+			path: inc/customizer.php
+
+		-
+			message: "#^Parameter \\#3 \\$args of class WP_Customize_Control constructor expects array\\{instance_number\\?\\: int, manager\\?\\: WP_Customize_Manager, id\\?\\: string, settings\\?\\: array, setting\\?\\: string, capability\\?\\: string, priority\\?\\: int, section\\?\\: string, \\.\\.\\.\\}, array\\{label\\: string, description\\: string, section\\: 'understrap_theme…', settings\\: 'understrap…', type\\: 'select', choices\\: array\\{bootstrap4\\: string, bootstrap5\\: string\\}, priority\\: mixed\\} given\\.$#"
+			count: 1
+			path: inc/customizer.php
+
+		-
+			message: "#^Parameter \\#3 \\$args of class WP_Customize_Control constructor expects array\\{instance_number\\?\\: int, manager\\?\\: WP_Customize_Manager, id\\?\\: string, settings\\?\\: array, setting\\?\\: string, capability\\?\\: string, priority\\?\\: int, section\\?\\: string, \\.\\.\\.\\}, array\\{label\\: string, description\\: string, section\\: 'understrap_theme…', settings\\: 'understrap…', type\\: 'select', choices\\: array\\{container\\: string, container\\-fluid\\: string\\}, priority\\: mixed\\} given\\.$#"
+			count: 1
+			path: inc/customizer.php
+
+		-
+			message: "#^Function understrap_tiny_mce_before_init\\(\\) has parameter \\$settings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_before_init\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_blockquote_button\\(\\) has parameter \\$buttons with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_blockquote_button\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_style_formats\\(\\) has parameter \\$buttons with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_style_formats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Parameter \\#1 \\$arr1 of function array_merge expects array, mixed given\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Binary operation \"\\.\" between array\\|string\\|false and '\\.' results in an error\\.$#"
+			count: 2
+			path: inc/enqueue.php
+
+		-
+			message: "#^Function understrap_body_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Function understrap_body_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Function understrap_default_body_attributes\\(\\) has parameter \\$atts with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Function understrap_default_body_attributes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Parameter \\#1 \\$post of function get_permalink expects int\\|WP_Post, int\\|false given\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Parameter \\#1 \\$post of function get_the_title expects int\\|WP_Post, int\\|false given\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Parameter \\#1 \\$url of function esc_url expects string, string\\|false given\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Parameter \\#2 \\$callback of function add_filter expects callable\\(\\)\\: mixed, 'understrap_adjust…' given\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\|string\\|false given\\.$#"
+			count: 2
+			path: inc/hooks.php
+
+		-
+			message: "#^Parameter \\#2 \\$name of function get_template_part expects string\\|null, string\\|false given\\.$#"
+			count: 1
+			path: inc/jetpack.php
+
+		-
+			message: "#^Argument of an invalid type array\\|string\\|void supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: inc/pagination.php
+
+		-
+			message: "#^Cannot assign offset 'total' to array\\|string\\.$#"
+			count: 1
+			path: inc/pagination.php
+
+		-
+			message: "#^Function understrap_pagination\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/pagination.php
+
+		-
+			message: "#^Cannot access property \\$post_parent on WP_Post\\|null\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#1 \\$author_id of function get_author_posts_url expects int, string given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of function esc_attr expects string, int\\|string\\|false given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of function esc_attr expects string, string\\|false given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of function esc_html expects string, int\\|string\\|false given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of function esc_html expects string, string\\|false given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of function esc_html expects string, string\\|null given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#1 \\$url of function esc_url expects string, string\\|false given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function printf expects bool\\|float\\|int\\|string\\|null, string\\|WP_Error given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, string\\|void given\\.$#"
+			count: 1
+			path: inc/template-tags.php
+
+		-
+			message: "#^Function understrap_get_theme_default_settings\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/theme-settings.php
+
+		-
+			message: "#^Function understrap_widget_classes\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_widget_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_quantity_input_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Function understrap_quantity_input_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Offset 'type' does not exist on string\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of function esc_attr expects string, mixed given\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
