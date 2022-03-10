@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ develop ]
   workflow_dispatch:
-    branches: [ develop ]
 
 env:
   php-version: '7.4'
