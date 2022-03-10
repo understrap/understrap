@@ -81,10 +81,12 @@ article img,
 
 // Skip to content link
 a.skip-link {
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	right: 0;
+	@if variable-exists('bootstrap4') {
+		@extend .sr-only;
+		@extend .sr-only-focusable;
+	} @else {
+		@extend .visually-hidden-focusable;
+	}
 }
 
 // Dropdown translation
