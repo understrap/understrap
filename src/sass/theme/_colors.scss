@@ -12,10 +12,13 @@ $merged-colors: map.merge($colors, $theme-colors);
 		background-color: $color;
 		border-color: $color;
 	}
-}
 
-.has-white-background-color {
-	&.wp-block-button__link {
-		color: $gray-600;
+
+	.wp-block-button:hover{
+		.wp-block-button__link.has-white-background-color.has-#{$name}-color {
+			& {
+				color: $color;
+			}
+		}
 	}
 }

@@ -12689,6 +12689,10 @@ a.skip-link {
   border-color: #007bff;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-blue-color {
+  color: #007bff;
+}
+
 .has-indigo-color,
 .has-indigo-color:visited {
   color: #6610f2;
@@ -12697,6 +12701,10 @@ a.skip-link {
 .has-indigo-background-color {
   background-color: #6610f2;
   border-color: #6610f2;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-indigo-color {
+  color: #6610f2;
 }
 
 .has-purple-color,
@@ -12709,6 +12717,10 @@ a.skip-link {
   border-color: #5533ff;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-purple-color {
+  color: #5533ff;
+}
+
 .has-pink-color,
 .has-pink-color:visited {
   color: #e83e8c;
@@ -12717,6 +12729,10 @@ a.skip-link {
 .has-pink-background-color {
   background-color: #e83e8c;
   border-color: #e83e8c;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-pink-color {
+  color: #e83e8c;
 }
 
 .has-red-color,
@@ -12729,6 +12745,10 @@ a.skip-link {
   border-color: #dc3545;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-red-color {
+  color: #dc3545;
+}
+
 .has-orange-color,
 .has-orange-color:visited {
   color: #fd7e14;
@@ -12737,6 +12757,10 @@ a.skip-link {
 .has-orange-background-color {
   background-color: #fd7e14;
   border-color: #fd7e14;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-orange-color {
+  color: #fd7e14;
 }
 
 .has-yellow-color,
@@ -12749,6 +12773,10 @@ a.skip-link {
   border-color: #ffc107;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-yellow-color {
+  color: #ffc107;
+}
+
 .has-green-color,
 .has-green-color:visited {
   color: #28a745;
@@ -12757,6 +12785,10 @@ a.skip-link {
 .has-green-background-color {
   background-color: #28a745;
   border-color: #28a745;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-green-color {
+  color: #28a745;
 }
 
 .has-teal-color,
@@ -12769,6 +12801,10 @@ a.skip-link {
   border-color: #20c997;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-teal-color {
+  color: #20c997;
+}
+
 .has-cyan-color,
 .has-cyan-color:visited {
   color: #17a2b8;
@@ -12777,6 +12813,10 @@ a.skip-link {
 .has-cyan-background-color {
   background-color: #17a2b8;
   border-color: #17a2b8;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-cyan-color {
+  color: #17a2b8;
 }
 
 .has-white-color,
@@ -12789,6 +12829,10 @@ a.skip-link {
   border-color: #fff;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-white-color {
+  color: #fff;
+}
+
 .has-gray-color,
 .has-gray-color:visited {
   color: #6c757d;
@@ -12797,6 +12841,10 @@ a.skip-link {
 .has-gray-background-color {
   background-color: #6c757d;
   border-color: #6c757d;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-gray-color {
+  color: #6c757d;
 }
 
 .has-gray-dark-color,
@@ -12809,6 +12857,10 @@ a.skip-link {
   border-color: #343a40;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-gray-dark-color {
+  color: #343a40;
+}
+
 .has-primary-color,
 .has-primary-color:visited {
   color: #5533ff;
@@ -12817,6 +12869,10 @@ a.skip-link {
 .has-primary-background-color {
   background-color: #5533ff;
   border-color: #5533ff;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-primary-color {
+  color: #5533ff;
 }
 
 .has-secondary-color,
@@ -12829,6 +12885,10 @@ a.skip-link {
   border-color: #6c757d;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-secondary-color {
+  color: #6c757d;
+}
+
 .has-success-color,
 .has-success-color:visited {
   color: #28a745;
@@ -12837,6 +12897,10 @@ a.skip-link {
 .has-success-background-color {
   background-color: #28a745;
   border-color: #28a745;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-success-color {
+  color: #28a745;
 }
 
 .has-info-color,
@@ -12849,6 +12913,10 @@ a.skip-link {
   border-color: #17a2b8;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-info-color {
+  color: #17a2b8;
+}
+
 .has-warning-color,
 .has-warning-color:visited {
   color: #ffc107;
@@ -12857,6 +12925,10 @@ a.skip-link {
 .has-warning-background-color {
   background-color: #ffc107;
   border-color: #ffc107;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-warning-color {
+  color: #ffc107;
 }
 
 .has-danger-color,
@@ -12869,6 +12941,10 @@ a.skip-link {
   border-color: #dc3545;
 }
 
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-danger-color {
+  color: #dc3545;
+}
+
 .has-light-color,
 .has-light-color:visited {
   color: #f8f9fa;
@@ -12877,6 +12953,10 @@ a.skip-link {
 .has-light-background-color {
   background-color: #f8f9fa;
   border-color: #f8f9fa;
+}
+
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-light-color {
+  color: #f8f9fa;
 }
 
 .has-dark-color,
@@ -12889,8 +12969,8 @@ a.skip-link {
   border-color: #343a40;
 }
 
-.has-white-background-color.wp-block-button__link {
-  color: #6c757d;
+.wp-block-button:hover .wp-block-button__link.has-white-background-color.has-dark-color {
+  color: #343a40;
 }
 
 figure.wp-block-image {
