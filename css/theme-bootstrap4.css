@@ -2619,7 +2619,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
   height: auto;
 }
 
-.form-group, .wpcf7 .wpcf7-form p {
+.form-group {
   margin-bottom: 1rem;
 }
 
@@ -3157,7 +3157,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
     justify-content: center;
     margin-bottom: 0;
   }
-  .form-inline .form-group, .form-inline .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .form-inline p {
+  .form-inline .form-group {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
