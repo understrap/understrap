@@ -259,13 +259,11 @@ if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_customize_controls_js' );
 
-
-
 if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
 	/**
-	 * Overrides the responsive navbar type for Bootstrap 4
+	 * Overrides the responsive navbar type for Bootstrap 4.
 	 *
-	 * @param string $current_mod
+	 * @param string $current_mod Current navbar type.
 	 * @return string
 	 */
 	function understrap_default_navbar_type( $current_mod ) {
