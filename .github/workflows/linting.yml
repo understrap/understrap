@@ -3,10 +3,13 @@ name: Lint
 on:
   push:
     branches: [ develop ]
+    paths:
+      - '**.php'
   pull_request:
     branches: [ develop ]
+    paths:
+      - '**.php'
   workflow_dispatch:
-    branches: [ develop ]
 
 env:
   php-version: '7.4'
@@ -33,8 +36,6 @@ jobs:
 
     - name: Get Composer cache  directory
       id: composer-cache
-      run: |
-        echo "::set-output name=dir::$(composer config cache-files-dir)"
     - uses: actions/cache@v2
       with:
         path: vendor
@@ -68,6 +69,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ env.php-version }}
+        tools: composer, cs2pr
+        coverage: none
 
     - name: Get Composer cache directory
       id: composer-cache
@@ -141,7 +149,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: ${{ env.php-version }}
         tools: composer, cs2pr
         coverage: none
 
