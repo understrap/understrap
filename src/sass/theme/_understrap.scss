@@ -170,10 +170,14 @@ a.skip-link {
 	display: block;
 }
 
-/* Search Widget */
+// New Search Widget in Block Editor
 .wp-block-search {
     .wp-block-search__label {
-        @extend .screen-reader-text;
+		@if variable-exists('bootstrap4') {
+			@include sr-only();
+		} @else {
+			@include visually-hidden();
+		}
     }
 
     .wp-block-search__inside-wrapper {
@@ -190,10 +194,17 @@ a.skip-link {
                 margin-left: 0;
             }
 
-            @extend .btn-primary;
+			@if variable-exists('bootstrap4') {
+				@include button-variant( $primary, $primary );
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+			} @else {
+				@include button-variant( $primary, $primary );
+			}
         }
     }
 }
+
 // Fixing Off-canvas close icon is hidden behind admin bar
 @include media-breakpoint-down(md) {
 	body.admin-bar .offcanvas-end {
