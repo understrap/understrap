@@ -12664,6 +12664,11 @@ article img,
   display: block;
 }
 
+@media (max-width: 991.98px) {
+  body.admin-bar .offcanvas-end {
+    margin-top: 46px;
+  }
+}
 .jumbotron {
   margin-bottom: 0;
 }
