@@ -1,4 +1,4 @@
-//Add your own editor styles here or import additional files
+// Add your own editor styles here or import additional files
 
 // Grab our child theme variables
 @import "theme/theme_variables";
@@ -14,6 +14,9 @@
 
 // Set up basic typography
 @import "assets/bootstrap5/type";
+
+// Set up bootstrap utilities
+@import "assets/bootstrap5/bootstrap-utilities";
 
 // Start bringing in colors and styles.
 @import "theme/colors";

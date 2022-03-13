@@ -10,13 +10,15 @@ body {
 
 // Reset hero wrapper padding to 0
 #wrapper-hero {
-	padding: 0px !important;
+	padding: 0 !important;
 }
 
 // Adding basic WordPress classes to pass the WordPress.org tests
 .sticky,
 .gallery-caption,
-.bypostauthor {
+.bypostauthor,
+.wp-caption,
+.wp-caption-text {
 	font-size: inherit;
 }
 
@@ -31,17 +33,12 @@ body {
 	background-color: $gray-200;
 }
 
-// Necessary WP classes
-.wp-caption {
-	font-size: inherit;
-}
-
-.wp-caption-text {
-	font-size: inherit;
-}
-
 .screen-reader-text {
-	@include visually-hidden();
+	@if variable-exists('bootstrap4') {
+		@include sr-only();
+	} @else {
+		@include visually-hidden();
+	}
 }
 
 .alignleft {
@@ -73,10 +70,10 @@ body {
 	padding-right: 10px;
 }
 
-img.wp-post-image,
-article img,
 figure,
 img,
+img.wp-post-image,
+article img,
 #secondary img {
 	max-width: 100%;
 	height: auto;
@@ -84,10 +81,12 @@ img,
 
 // Skip to content link
 a.skip-link {
-	position: fixed;
-	z-index: 1000;
-	top: 0px;
-	right: 0px;
+	@if variable-exists('bootstrap4') {
+		@extend .sr-only;
+		@extend .sr-only-focusable;
+	} @else {
+		@extend .visually-hidden-focusable;
+	}
 }
 
 // Dropdown translation
@@ -175,5 +174,18 @@ a.skip-link {
 @include media-breakpoint-down(md) {
 	body.admin-bar .offcanvas-end {
 		margin-top: 46px;
+	}
+}
+
+@if variable-exists('bootstrap4') {
+
+	// Reset Jumbotron default margin
+	.jumbotron {
+		margin-bottom: 0;
+	}
+
+	// Accessibility requirement for content links.
+	.entry-content p a:not(.btn) {
+		text-decoration: underline;
 	}
 }

@@ -1,7 +1,0 @@
-js/**.min.js
-src/**/*.js
-js/popper.js
-js/theme.js
-gulpfile.js
-node_modules
-vendor
