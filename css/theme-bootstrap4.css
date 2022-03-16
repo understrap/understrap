@@ -2340,8 +2340,7 @@ pre code {
 .wpcf7 input[type=file],
 .wpcf7 input[type=submit],
 .wpcf7 select,
-.wpcf7 textarea, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input, .widget_categories select,
-.widget_archive select {
+.wpcf7 textarea, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input, .widget_archive select {
   display: block;
   width: 100%;
   height: -webkit-calc(1.5em + 0.75rem + 2px);
@@ -2376,8 +2375,7 @@ pre code {
 .wpcf7 input[type=file],
 .wpcf7 input[type=submit],
 .wpcf7 select,
-.wpcf7 textarea, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input, .widget_categories select,
-.widget_archive select {
+.wpcf7 textarea, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input, .widget_archive select {
     -webkit-transition: none;
     transition: none;
   }
@@ -2399,8 +2397,7 @@ pre code {
 .wpcf7 input[type=file]::-ms-expand,
 .wpcf7 input[type=submit]::-ms-expand,
 .wpcf7 select::-ms-expand,
-.wpcf7 textarea::-ms-expand, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-ms-expand, .widget_categories select::-ms-expand,
-.widget_archive select::-ms-expand {
+.wpcf7 textarea::-ms-expand, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-ms-expand, .widget_archive select::-ms-expand {
   background-color: transparent;
   border: 0;
 }
@@ -2421,27 +2418,26 @@ pre code {
 .wpcf7 input[type=file]:focus,
 .wpcf7 input[type=submit]:focus,
 .wpcf7 select:focus,
-.wpcf7 textarea:focus, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:focus, .widget_categories select:focus,
-.widget_archive select:focus {
+.wpcf7 textarea:focus, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:focus, .widget_archive select:focus {
   color: #495057;
   background-color: #fff;
   border-color: #bfb3ff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(85, 51, 255, 0.25);
 }
-.form-control::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder, .wpcf7 input[type=search]::-webkit-input-placeholder, .wpcf7 input[type=url]::-webkit-input-placeholder, .wpcf7 input[type=tel]::-webkit-input-placeholder, .wpcf7 input[type=number]::-webkit-input-placeholder, .wpcf7 input[type=range]::-webkit-input-placeholder, .wpcf7 input[type=date]::-webkit-input-placeholder, .wpcf7 input[type=month]::-webkit-input-placeholder, .wpcf7 input[type=week]::-webkit-input-placeholder, .wpcf7 input[type=time]::-webkit-input-placeholder, .wpcf7 input[type=datetime]::-webkit-input-placeholder, .wpcf7 input[type=datetime-local]::-webkit-input-placeholder, .wpcf7 input[type=color]::-webkit-input-placeholder, .wpcf7 input[type=email]::-webkit-input-placeholder, .wpcf7 input[type=file]::-webkit-input-placeholder, .wpcf7 input[type=submit]::-webkit-input-placeholder, .wpcf7 select::-webkit-input-placeholder, .wpcf7 textarea::-webkit-input-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-webkit-input-placeholder, .widget_categories select::-webkit-input-placeholder, .widget_archive select::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder, .wpcf7 input[type=search]::-webkit-input-placeholder, .wpcf7 input[type=url]::-webkit-input-placeholder, .wpcf7 input[type=tel]::-webkit-input-placeholder, .wpcf7 input[type=number]::-webkit-input-placeholder, .wpcf7 input[type=range]::-webkit-input-placeholder, .wpcf7 input[type=date]::-webkit-input-placeholder, .wpcf7 input[type=month]::-webkit-input-placeholder, .wpcf7 input[type=week]::-webkit-input-placeholder, .wpcf7 input[type=time]::-webkit-input-placeholder, .wpcf7 input[type=datetime]::-webkit-input-placeholder, .wpcf7 input[type=datetime-local]::-webkit-input-placeholder, .wpcf7 input[type=color]::-webkit-input-placeholder, .wpcf7 input[type=email]::-webkit-input-placeholder, .wpcf7 input[type=file]::-webkit-input-placeholder, .wpcf7 input[type=submit]::-webkit-input-placeholder, .wpcf7 select::-webkit-input-placeholder, .wpcf7 textarea::-webkit-input-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-webkit-input-placeholder, .widget_archive select::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder, .wpcf7 input[type=search]::-moz-placeholder, .wpcf7 input[type=url]::-moz-placeholder, .wpcf7 input[type=tel]::-moz-placeholder, .wpcf7 input[type=number]::-moz-placeholder, .wpcf7 input[type=range]::-moz-placeholder, .wpcf7 input[type=date]::-moz-placeholder, .wpcf7 input[type=month]::-moz-placeholder, .wpcf7 input[type=week]::-moz-placeholder, .wpcf7 input[type=time]::-moz-placeholder, .wpcf7 input[type=datetime]::-moz-placeholder, .wpcf7 input[type=datetime-local]::-moz-placeholder, .wpcf7 input[type=color]::-moz-placeholder, .wpcf7 input[type=email]::-moz-placeholder, .wpcf7 input[type=file]::-moz-placeholder, .wpcf7 input[type=submit]::-moz-placeholder, .wpcf7 select::-moz-placeholder, .wpcf7 textarea::-moz-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-moz-placeholder, .widget_categories select::-moz-placeholder, .widget_archive select::-moz-placeholder {
+.form-control::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder, .wpcf7 input[type=search]::-moz-placeholder, .wpcf7 input[type=url]::-moz-placeholder, .wpcf7 input[type=tel]::-moz-placeholder, .wpcf7 input[type=number]::-moz-placeholder, .wpcf7 input[type=range]::-moz-placeholder, .wpcf7 input[type=date]::-moz-placeholder, .wpcf7 input[type=month]::-moz-placeholder, .wpcf7 input[type=week]::-moz-placeholder, .wpcf7 input[type=time]::-moz-placeholder, .wpcf7 input[type=datetime]::-moz-placeholder, .wpcf7 input[type=datetime-local]::-moz-placeholder, .wpcf7 input[type=color]::-moz-placeholder, .wpcf7 input[type=email]::-moz-placeholder, .wpcf7 input[type=file]::-moz-placeholder, .wpcf7 input[type=submit]::-moz-placeholder, .wpcf7 select::-moz-placeholder, .wpcf7 textarea::-moz-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-moz-placeholder, .widget_archive select::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder, .wpcf7 input[type=search]:-ms-input-placeholder, .wpcf7 input[type=url]:-ms-input-placeholder, .wpcf7 input[type=tel]:-ms-input-placeholder, .wpcf7 input[type=number]:-ms-input-placeholder, .wpcf7 input[type=range]:-ms-input-placeholder, .wpcf7 input[type=date]:-ms-input-placeholder, .wpcf7 input[type=month]:-ms-input-placeholder, .wpcf7 input[type=week]:-ms-input-placeholder, .wpcf7 input[type=time]:-ms-input-placeholder, .wpcf7 input[type=datetime]:-ms-input-placeholder, .wpcf7 input[type=datetime-local]:-ms-input-placeholder, .wpcf7 input[type=color]:-ms-input-placeholder, .wpcf7 input[type=email]:-ms-input-placeholder, .wpcf7 input[type=file]:-ms-input-placeholder, .wpcf7 input[type=submit]:-ms-input-placeholder, .wpcf7 select:-ms-input-placeholder, .wpcf7 textarea:-ms-input-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:-ms-input-placeholder, .widget_categories select:-ms-input-placeholder, .widget_archive select:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder, .wpcf7 input[type=search]:-ms-input-placeholder, .wpcf7 input[type=url]:-ms-input-placeholder, .wpcf7 input[type=tel]:-ms-input-placeholder, .wpcf7 input[type=number]:-ms-input-placeholder, .wpcf7 input[type=range]:-ms-input-placeholder, .wpcf7 input[type=date]:-ms-input-placeholder, .wpcf7 input[type=month]:-ms-input-placeholder, .wpcf7 input[type=week]:-ms-input-placeholder, .wpcf7 input[type=time]:-ms-input-placeholder, .wpcf7 input[type=datetime]:-ms-input-placeholder, .wpcf7 input[type=datetime-local]:-ms-input-placeholder, .wpcf7 input[type=color]:-ms-input-placeholder, .wpcf7 input[type=email]:-ms-input-placeholder, .wpcf7 input[type=file]:-ms-input-placeholder, .wpcf7 input[type=submit]:-ms-input-placeholder, .wpcf7 select:-ms-input-placeholder, .wpcf7 textarea:-ms-input-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:-ms-input-placeholder, .widget_archive select:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder, .wpcf7 input[type=search]::-ms-input-placeholder, .wpcf7 input[type=url]::-ms-input-placeholder, .wpcf7 input[type=tel]::-ms-input-placeholder, .wpcf7 input[type=number]::-ms-input-placeholder, .wpcf7 input[type=range]::-ms-input-placeholder, .wpcf7 input[type=date]::-ms-input-placeholder, .wpcf7 input[type=month]::-ms-input-placeholder, .wpcf7 input[type=week]::-ms-input-placeholder, .wpcf7 input[type=time]::-ms-input-placeholder, .wpcf7 input[type=datetime]::-ms-input-placeholder, .wpcf7 input[type=datetime-local]::-ms-input-placeholder, .wpcf7 input[type=color]::-ms-input-placeholder, .wpcf7 input[type=email]::-ms-input-placeholder, .wpcf7 input[type=file]::-ms-input-placeholder, .wpcf7 input[type=submit]::-ms-input-placeholder, .wpcf7 select::-ms-input-placeholder, .wpcf7 textarea::-ms-input-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-ms-input-placeholder, .widget_categories select::-ms-input-placeholder, .widget_archive select::-ms-input-placeholder {
+.form-control::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder, .wpcf7 input[type=search]::-ms-input-placeholder, .wpcf7 input[type=url]::-ms-input-placeholder, .wpcf7 input[type=tel]::-ms-input-placeholder, .wpcf7 input[type=number]::-ms-input-placeholder, .wpcf7 input[type=range]::-ms-input-placeholder, .wpcf7 input[type=date]::-ms-input-placeholder, .wpcf7 input[type=month]::-ms-input-placeholder, .wpcf7 input[type=week]::-ms-input-placeholder, .wpcf7 input[type=time]::-ms-input-placeholder, .wpcf7 input[type=datetime]::-ms-input-placeholder, .wpcf7 input[type=datetime-local]::-ms-input-placeholder, .wpcf7 input[type=color]::-ms-input-placeholder, .wpcf7 input[type=email]::-ms-input-placeholder, .wpcf7 input[type=file]::-ms-input-placeholder, .wpcf7 input[type=submit]::-ms-input-placeholder, .wpcf7 select::-ms-input-placeholder, .wpcf7 textarea::-ms-input-placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::-ms-input-placeholder, .widget_archive select::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
@@ -2462,8 +2458,7 @@ pre code {
 .wpcf7 input[type=file]::placeholder,
 .wpcf7 input[type=submit]::placeholder,
 .wpcf7 select::placeholder,
-.wpcf7 textarea::placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::placeholder, .widget_categories select::placeholder,
-.widget_archive select::placeholder {
+.wpcf7 textarea::placeholder, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input::placeholder, .widget_archive select::placeholder {
   color: #6c757d;
   opacity: 1;
 }
@@ -2484,8 +2479,7 @@ pre code {
 .wpcf7 input[type=file]:disabled,
 .wpcf7 input[type=submit]:disabled,
 .wpcf7 select:disabled,
-.wpcf7 textarea:disabled, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:disabled, .widget_categories select:disabled,
-.widget_archive select:disabled, .form-control[readonly], .wpcf7 [readonly].wpcf7-validation-errors, .wpcf7 input[readonly][type=text],
+.wpcf7 textarea:disabled, .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:disabled, .widget_archive select:disabled, .form-control[readonly], .wpcf7 [readonly].wpcf7-validation-errors, .wpcf7 input[readonly][type=text],
 .wpcf7 input[readonly][type=search],
 .wpcf7 input[readonly][type=url],
 .wpcf7 input[readonly][type=tel],
@@ -2502,8 +2496,7 @@ pre code {
 .wpcf7 input[readonly][type=file],
 .wpcf7 input[readonly][type=submit],
 .wpcf7 select[readonly],
-.wpcf7 textarea[readonly], .wp-block-search .wp-block-search__inside-wrapper [readonly].wp-block-search__input, .widget_categories select[readonly],
-.widget_archive select[readonly] {
+.wpcf7 textarea[readonly], .wp-block-search .wp-block-search__inside-wrapper [readonly].wp-block-search__input, .widget_archive select[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
@@ -2525,14 +2518,12 @@ input[type=month].form-control,
 }
 
 select.form-control:-moz-focusring,
-.wpcf7 select:-moz-focusring, .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:-moz-focusring, .widget_categories select:-moz-focusring,
-.widget_archive select:-moz-focusring {
+.wpcf7 select:-moz-focusring, .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:-moz-focusring, .widget_archive select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #495057;
 }
 select.form-control:focus::-ms-value,
-.wpcf7 select:focus::-ms-value, .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:focus::-ms-value, .widget_categories select:focus::-ms-value,
-.widget_archive select:focus::-ms-value {
+.wpcf7 select:focus::-ms-value, .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:focus::-ms-value, .widget_archive select:focus::-ms-value {
   color: #495057;
   background-color: #fff;
 }
@@ -2607,10 +2598,8 @@ select.form-control:focus::-ms-value,
 }
 
 select.form-control[size],
-.wpcf7 select[size], .wp-block-search .wp-block-search__inside-wrapper select[size].wp-block-search__input, .widget_categories select[size],
-.widget_archive select[size], select.form-control[multiple],
-.wpcf7 select[multiple], .wp-block-search .wp-block-search__inside-wrapper select[multiple].wp-block-search__input, .widget_categories select[multiple],
-.widget_archive select[multiple] {
+.wpcf7 select[size], .wp-block-search .wp-block-search__inside-wrapper select[size].wp-block-search__input, .widget_archive select[size], select.form-control[multiple],
+.wpcf7 select[multiple], .wp-block-search .wp-block-search__inside-wrapper select[multiple].wp-block-search__input, .widget_archive select[multiple] {
   height: auto;
 }
 
@@ -2748,9 +2737,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:valid,
 .wpcf7 .was-validated select:valid,
 .was-validated .wpcf7 textarea:valid,
-.wpcf7 .was-validated textarea:valid, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:valid, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:valid, .was-validated .widget_categories select:valid, .widget_categories .was-validated select:valid,
-.was-validated .widget_archive select:valid,
-.widget_archive .was-validated select:valid, .form-control.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, .wpcf7 input.is-valid[type=text],
+.wpcf7 .was-validated textarea:valid, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:valid, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:valid, .was-validated .widget_archive select:valid, .widget_archive .was-validated select:valid, .form-control.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, .wpcf7 input.is-valid[type=text],
 .wpcf7 input.is-valid[type=search],
 .wpcf7 input.is-valid[type=url],
 .wpcf7 input.is-valid[type=tel],
@@ -2767,8 +2754,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-valid[type=file],
 .wpcf7 input.is-valid[type=submit],
 .wpcf7 select.is-valid,
-.wpcf7 textarea.is-valid, .wp-block-search .wp-block-search__inside-wrapper .is-valid.wp-block-search__input, .widget_categories select.is-valid,
-.widget_archive select.is-valid {
+.wpcf7 textarea.is-valid, .wp-block-search .wp-block-search__inside-wrapper .is-valid.wp-block-search__input, .widget_archive select.is-valid {
   border-color: #28a745;
   padding-right: -webkit-calc(1.5em + 0.75rem) !important;
   padding-right: calc(1.5em + 0.75rem) !important;
@@ -2813,9 +2799,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:valid:focus,
 .wpcf7 .was-validated select:valid:focus,
 .was-validated .wpcf7 textarea:valid:focus,
-.wpcf7 .was-validated textarea:valid:focus, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:valid:focus, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:valid:focus, .was-validated .widget_categories select:valid:focus, .widget_categories .was-validated select:valid:focus,
-.was-validated .widget_archive select:valid:focus,
-.widget_archive .was-validated select:valid:focus, .form-control.is-valid:focus, .wpcf7 .is-valid.wpcf7-validation-errors:focus, .wpcf7 input.is-valid[type=text]:focus,
+.wpcf7 .was-validated textarea:valid:focus, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:valid:focus, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:valid:focus, .was-validated .widget_archive select:valid:focus, .widget_archive .was-validated select:valid:focus, .form-control.is-valid:focus, .wpcf7 .is-valid.wpcf7-validation-errors:focus, .wpcf7 input.is-valid[type=text]:focus,
 .wpcf7 input.is-valid[type=search]:focus,
 .wpcf7 input.is-valid[type=url]:focus,
 .wpcf7 input.is-valid[type=tel]:focus,
@@ -2832,19 +2816,15 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-valid[type=file]:focus,
 .wpcf7 input.is-valid[type=submit]:focus,
 .wpcf7 select.is-valid:focus,
-.wpcf7 textarea.is-valid:focus, .wp-block-search .wp-block-search__inside-wrapper .is-valid.wp-block-search__input:focus, .widget_categories select.is-valid:focus,
-.widget_archive select.is-valid:focus {
+.wpcf7 textarea.is-valid:focus, .wp-block-search .wp-block-search__inside-wrapper .is-valid.wp-block-search__input:focus, .widget_archive select.is-valid:focus {
   border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 .was-validated select.form-control:valid,
 .was-validated .wpcf7 select:valid,
-.wpcf7 .was-validated select:valid, .was-validated .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:valid, .wp-block-search .wp-block-search__inside-wrapper .was-validated select.wp-block-search__input:valid, .was-validated .widget_categories select:valid, .widget_categories .was-validated select:valid,
-.was-validated .widget_archive select:valid,
-.widget_archive .was-validated select:valid, select.form-control.is-valid,
-.wpcf7 select.is-valid, .wp-block-search .wp-block-search__inside-wrapper select.is-valid.wp-block-search__input, .widget_categories select.is-valid,
-.widget_archive select.is-valid {
+.wpcf7 .was-validated select:valid, .was-validated .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:valid, .wp-block-search .wp-block-search__inside-wrapper .was-validated select.wp-block-search__input:valid, .was-validated .widget_archive select:valid, .widget_archive .was-validated select:valid, select.form-control.is-valid,
+.wpcf7 select.is-valid, .wp-block-search .wp-block-search__inside-wrapper select.is-valid.wp-block-search__input, .widget_archive select.is-valid {
   padding-right: 3rem !important;
   background-position: right 1.5rem center;
 }
@@ -2973,9 +2953,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:invalid,
 .wpcf7 .was-validated select:invalid,
 .was-validated .wpcf7 textarea:invalid,
-.wpcf7 .was-validated textarea:invalid, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:invalid, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:invalid, .was-validated .widget_categories select:invalid, .widget_categories .was-validated select:invalid,
-.was-validated .widget_archive select:invalid,
-.widget_archive .was-validated select:invalid, .form-control.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, .wpcf7 input.is-invalid[type=text],
+.wpcf7 .was-validated textarea:invalid, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:invalid, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:invalid, .was-validated .widget_archive select:invalid, .widget_archive .was-validated select:invalid, .form-control.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, .wpcf7 input.is-invalid[type=text],
 .wpcf7 input.is-invalid[type=search],
 .wpcf7 input.is-invalid[type=url],
 .wpcf7 input.is-invalid[type=tel],
@@ -2992,8 +2970,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-invalid[type=file],
 .wpcf7 input.is-invalid[type=submit],
 .wpcf7 select.is-invalid,
-.wpcf7 textarea.is-invalid, .wp-block-search .wp-block-search__inside-wrapper .is-invalid.wp-block-search__input, .widget_categories select.is-invalid,
-.widget_archive select.is-invalid {
+.wpcf7 textarea.is-invalid, .wp-block-search .wp-block-search__inside-wrapper .is-invalid.wp-block-search__input, .widget_archive select.is-invalid {
   border-color: #dc3545;
   padding-right: -webkit-calc(1.5em + 0.75rem) !important;
   padding-right: calc(1.5em + 0.75rem) !important;
@@ -3038,9 +3015,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:invalid:focus,
 .wpcf7 .was-validated select:invalid:focus,
 .was-validated .wpcf7 textarea:invalid:focus,
-.wpcf7 .was-validated textarea:invalid:focus, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:invalid:focus, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:invalid:focus, .was-validated .widget_categories select:invalid:focus, .widget_categories .was-validated select:invalid:focus,
-.was-validated .widget_archive select:invalid:focus,
-.widget_archive .was-validated select:invalid:focus, .form-control.is-invalid:focus, .wpcf7 .is-invalid.wpcf7-validation-errors:focus, .wpcf7 input.is-invalid[type=text]:focus,
+.wpcf7 .was-validated textarea:invalid:focus, .was-validated .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input:invalid:focus, .wp-block-search .wp-block-search__inside-wrapper .was-validated .wp-block-search__input:invalid:focus, .was-validated .widget_archive select:invalid:focus, .widget_archive .was-validated select:invalid:focus, .form-control.is-invalid:focus, .wpcf7 .is-invalid.wpcf7-validation-errors:focus, .wpcf7 input.is-invalid[type=text]:focus,
 .wpcf7 input.is-invalid[type=search]:focus,
 .wpcf7 input.is-invalid[type=url]:focus,
 .wpcf7 input.is-invalid[type=tel]:focus,
@@ -3057,19 +3032,15 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-invalid[type=file]:focus,
 .wpcf7 input.is-invalid[type=submit]:focus,
 .wpcf7 select.is-invalid:focus,
-.wpcf7 textarea.is-invalid:focus, .wp-block-search .wp-block-search__inside-wrapper .is-invalid.wp-block-search__input:focus, .widget_categories select.is-invalid:focus,
-.widget_archive select.is-invalid:focus {
+.wpcf7 textarea.is-invalid:focus, .wp-block-search .wp-block-search__inside-wrapper .is-invalid.wp-block-search__input:focus, .widget_archive select.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 .was-validated select.form-control:invalid,
 .was-validated .wpcf7 select:invalid,
-.wpcf7 .was-validated select:invalid, .was-validated .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:invalid, .wp-block-search .wp-block-search__inside-wrapper .was-validated select.wp-block-search__input:invalid, .was-validated .widget_categories select:invalid, .widget_categories .was-validated select:invalid,
-.was-validated .widget_archive select:invalid,
-.widget_archive .was-validated select:invalid, select.form-control.is-invalid,
-.wpcf7 select.is-invalid, .wp-block-search .wp-block-search__inside-wrapper select.is-invalid.wp-block-search__input, .widget_categories select.is-invalid,
-.widget_archive select.is-invalid {
+.wpcf7 .was-validated select:invalid, .was-validated .wp-block-search .wp-block-search__inside-wrapper select.wp-block-search__input:invalid, .wp-block-search .wp-block-search__inside-wrapper .was-validated select.wp-block-search__input:invalid, .was-validated .widget_archive select:invalid, .widget_archive .was-validated select:invalid, select.form-control.is-invalid,
+.wpcf7 select.is-invalid, .wp-block-search .wp-block-search__inside-wrapper select.is-invalid.wp-block-search__input, .widget_archive select.is-invalid {
   padding-right: 3rem !important;
   background-position: right 1.5rem center;
 }
@@ -3206,9 +3177,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .form-inline .wpcf7 select,
 .wpcf7 .form-inline select,
 .form-inline .wpcf7 textarea,
-.wpcf7 .form-inline textarea, .form-inline .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input, .wp-block-search .wp-block-search__inside-wrapper .form-inline .wp-block-search__input, .form-inline .widget_categories select, .widget_categories .form-inline select,
-.form-inline .widget_archive select,
-.widget_archive .form-inline select {
+.wpcf7 .form-inline textarea, .form-inline .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input, .wp-block-search .wp-block-search__inside-wrapper .form-inline .wp-block-search__input, .form-inline .widget_archive select, .widget_archive .form-inline select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -4270,10 +4239,7 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > select,
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea,
-.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea, .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input, .widget_categories .input-group > select, .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select, .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select,
-.widget_archive .input-group > select,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > select,
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > select,
+.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea, .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input, .widget_archive .input-group > select, .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select, .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select,
 .input-group > .form-control-plaintext,
 .wp-block-search .wp-block-search__inside-wrapper > .form-control-plaintext,
 .input-group > .custom-select,
@@ -5597,114 +5563,7 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + .wp-block-search__input,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > select + .wp-block-search__input,
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea + .wp-block-search__input,
-.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea + .wp-block-search__input, .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input + .wp-block-search__input, .widget_categories .input-group > select + .form-control, .widget_categories .wpcf7 .input-group > select + .wpcf7-validation-errors, .wpcf7 .widget_categories .input-group > select + .wpcf7-validation-errors, .widget_categories .wpcf7 .input-group > select + input[type=text], .wpcf7 .widget_categories .input-group > select + input[type=text],
-.widget_categories .wpcf7 .input-group > select + input[type=search],
-.wpcf7 .widget_categories .input-group > select + input[type=search],
-.widget_categories .wpcf7 .input-group > select + input[type=url],
-.wpcf7 .widget_categories .input-group > select + input[type=url],
-.widget_categories .wpcf7 .input-group > select + input[type=tel],
-.wpcf7 .widget_categories .input-group > select + input[type=tel],
-.widget_categories .wpcf7 .input-group > select + input[type=number],
-.wpcf7 .widget_categories .input-group > select + input[type=number],
-.widget_categories .wpcf7 .input-group > select + input[type=range],
-.wpcf7 .widget_categories .input-group > select + input[type=range],
-.widget_categories .wpcf7 .input-group > select + input[type=date],
-.wpcf7 .widget_categories .input-group > select + input[type=date],
-.widget_categories .wpcf7 .input-group > select + input[type=month],
-.wpcf7 .widget_categories .input-group > select + input[type=month],
-.widget_categories .wpcf7 .input-group > select + input[type=week],
-.wpcf7 .widget_categories .input-group > select + input[type=week],
-.widget_categories .wpcf7 .input-group > select + input[type=time],
-.wpcf7 .widget_categories .input-group > select + input[type=time],
-.widget_categories .wpcf7 .input-group > select + input[type=datetime],
-.wpcf7 .widget_categories .input-group > select + input[type=datetime],
-.widget_categories .wpcf7 .input-group > select + input[type=datetime-local],
-.wpcf7 .widget_categories .input-group > select + input[type=datetime-local],
-.widget_categories .wpcf7 .input-group > select + input[type=color],
-.wpcf7 .widget_categories .input-group > select + input[type=color],
-.widget_categories .wpcf7 .input-group > select + input[type=email],
-.wpcf7 .widget_categories .input-group > select + input[type=email],
-.widget_categories .wpcf7 .input-group > select + input[type=file],
-.wpcf7 .widget_categories .input-group > select + input[type=file],
-.widget_categories .wpcf7 .input-group > select + input[type=submit],
-.wpcf7 .widget_categories .input-group > select + input[type=submit],
-.widget_categories .wpcf7 .input-group > select + select,
-.wpcf7 .widget_categories .input-group > select + select,
-.widget_categories .wpcf7 .input-group > select + textarea,
-.wpcf7 .widget_categories .input-group > select + textarea, .widget_categories .wp-block-search .wp-block-search__inside-wrapper .input-group > select + .wp-block-search__input, .wp-block-search .wp-block-search__inside-wrapper .widget_categories .input-group > select + .wp-block-search__input, .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + .form-control, .widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=text], .wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=text],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=search],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=search],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=url],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=url],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=tel],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=tel],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=number],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=number],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=range],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=range],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=date],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=date],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=month],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=month],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=week],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=week],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=time],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=time],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=datetime],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=datetime],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=datetime-local],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=datetime-local],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=color],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=color],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=email],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=email],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=file],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=file],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=submit],
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + input[type=submit],
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + textarea,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + textarea, .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + .wp-block-search__input, .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + .form-control, .wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=text], .wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=text],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=search],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=search],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=url],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=url],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=tel],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=tel],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=number],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=number],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=range],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=range],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=date],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=date],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=month],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=month],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=week],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=week],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=time],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=time],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=datetime],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=datetime],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=datetime-local],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=datetime-local],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=color],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=color],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=email],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=email],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=file],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=file],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + input[type=submit],
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + input[type=submit],
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + textarea,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + textarea, .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + .wp-block-search__input,
-.widget_archive .input-group > select + .form-control,
-.widget_archive .wpcf7 .input-group > select + .wpcf7-validation-errors,
-.wpcf7 .widget_archive .input-group > select + .wpcf7-validation-errors,
-.widget_archive .wpcf7 .input-group > select + input[type=text],
-.wpcf7 .widget_archive .input-group > select + input[type=text],
+.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea + .wp-block-search__input, .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input + .wp-block-search__input, .widget_archive .input-group > select + .form-control, .widget_archive .wpcf7 .input-group > select + .wpcf7-validation-errors, .wpcf7 .widget_archive .input-group > select + .wpcf7-validation-errors, .widget_archive .wpcf7 .input-group > select + input[type=text], .wpcf7 .widget_archive .input-group > select + input[type=text],
 .widget_archive .wpcf7 .input-group > select + input[type=search],
 .wpcf7 .widget_archive .input-group > select + input[type=search],
 .widget_archive .wpcf7 .input-group > select + input[type=url],
@@ -5738,14 +5597,7 @@ input[type=button].btn-block {
 .widget_archive .wpcf7 .input-group > select + select,
 .wpcf7 .widget_archive .input-group > select + select,
 .widget_archive .wpcf7 .input-group > select + textarea,
-.wpcf7 .widget_archive .input-group > select + textarea,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper .input-group > select + .wp-block-search__input,
-.wp-block-search .wp-block-search__inside-wrapper .widget_archive .input-group > select + .wp-block-search__input,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .form-control,
-.widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors,
-.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors,
-.widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=text],
-.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + input[type=text],
+.wpcf7 .widget_archive .input-group > select + textarea, .widget_archive .wp-block-search .wp-block-search__inside-wrapper .input-group > select + .wp-block-search__input, .wp-block-search .wp-block-search__inside-wrapper .widget_archive .input-group > select + .wp-block-search__input, .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .form-control, .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=text], .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + input[type=text],
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=search],
 .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + input[type=search],
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + input[type=url],
@@ -5779,13 +5631,7 @@ input[type=button].btn-block {
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + select,
 .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + select,
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + textarea,
-.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + textarea,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .wp-block-search__input,
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .form-control,
-.wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors,
-.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors,
-.wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + input[type=text],
-.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + input[type=text],
+.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + textarea, .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .wp-block-search__input, .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .form-control, .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .wpcf7-validation-errors, .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + input[type=text], .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + input[type=text],
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + input[type=search],
 .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + input[type=search],
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + input[type=url],
@@ -5819,115 +5665,7 @@ input[type=button].btn-block {
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + select,
 .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + select,
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + textarea,
-.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + textarea,
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .wp-block-search__input, .widget_categories .input-group > .form-control + select, .widget_categories .wpcf7 .input-group > .wpcf7-validation-errors + select, .wpcf7 .widget_categories .input-group > .wpcf7-validation-errors + select, .widget_categories .wpcf7 .input-group > input[type=text] + select, .wpcf7 .widget_categories .input-group > input[type=text] + select,
-.widget_categories .wpcf7 .input-group > input[type=search] + select,
-.wpcf7 .widget_categories .input-group > input[type=search] + select,
-.widget_categories .wpcf7 .input-group > input[type=url] + select,
-.wpcf7 .widget_categories .input-group > input[type=url] + select,
-.widget_categories .wpcf7 .input-group > input[type=tel] + select,
-.wpcf7 .widget_categories .input-group > input[type=tel] + select,
-.widget_categories .wpcf7 .input-group > input[type=number] + select,
-.wpcf7 .widget_categories .input-group > input[type=number] + select,
-.widget_categories .wpcf7 .input-group > input[type=range] + select,
-.wpcf7 .widget_categories .input-group > input[type=range] + select,
-.widget_categories .wpcf7 .input-group > input[type=date] + select,
-.wpcf7 .widget_categories .input-group > input[type=date] + select,
-.widget_categories .wpcf7 .input-group > input[type=month] + select,
-.wpcf7 .widget_categories .input-group > input[type=month] + select,
-.widget_categories .wpcf7 .input-group > input[type=week] + select,
-.wpcf7 .widget_categories .input-group > input[type=week] + select,
-.widget_categories .wpcf7 .input-group > input[type=time] + select,
-.wpcf7 .widget_categories .input-group > input[type=time] + select,
-.widget_categories .wpcf7 .input-group > input[type=datetime] + select,
-.wpcf7 .widget_categories .input-group > input[type=datetime] + select,
-.widget_categories .wpcf7 .input-group > input[type=datetime-local] + select,
-.wpcf7 .widget_categories .input-group > input[type=datetime-local] + select,
-.widget_categories .wpcf7 .input-group > input[type=color] + select,
-.wpcf7 .widget_categories .input-group > input[type=color] + select,
-.widget_categories .wpcf7 .input-group > input[type=email] + select,
-.wpcf7 .widget_categories .input-group > input[type=email] + select,
-.widget_categories .wpcf7 .input-group > input[type=file] + select,
-.wpcf7 .widget_categories .input-group > input[type=file] + select,
-.widget_categories .wpcf7 .input-group > input[type=submit] + select,
-.wpcf7 .widget_categories .input-group > input[type=submit] + select,
-.widget_categories .wpcf7 .input-group > select + select,
-.wpcf7 .widget_categories .input-group > select + select,
-.widget_categories .wpcf7 .input-group > textarea + select,
-.wpcf7 .widget_categories .input-group > textarea + select, .widget_categories .wp-block-search .wp-block-search__inside-wrapper .input-group > .wp-block-search__input + select, .wp-block-search .wp-block-search__inside-wrapper .widget_categories .input-group > .wp-block-search__input + select, .widget_categories .wp-block-search .wp-block-search__inside-wrapper > .form-control + select, .widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=text] + select, .wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=text] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=search] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=search] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=url] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=url] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=tel] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=tel] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=number] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=number] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=range] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=range] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=date] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=date] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=month] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=month] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=week] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=week] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=time] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=time] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=datetime] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=datetime] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=datetime-local] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=datetime-local] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=color] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=color] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=email] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=email] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=file] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=file] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=submit] + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > input[type=submit] + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + select,
-.widget_categories .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea + select,
-.wpcf7 .widget_categories .wp-block-search .wp-block-search__inside-wrapper > textarea + select, .widget_categories .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input + select, .wp-block-search .widget_categories .wp-block-search__inside-wrapper > .form-control + select, .wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=text] + select, .wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=text] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=search] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=search] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=url] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=url] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=tel] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=tel] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=number] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=number] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=range] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=range] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=date] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=date] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=month] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=month] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=week] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=week] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=time] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=time] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=datetime] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=datetime] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=datetime-local] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=datetime-local] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=color] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=color] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=email] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=email] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=file] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=file] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > input[type=submit] + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > input[type=submit] + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > select + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + select,
-.wp-block-search .widget_categories .wpcf7 .wp-block-search__inside-wrapper > textarea + select,
-.wpcf7 .wp-block-search .widget_categories .wp-block-search__inside-wrapper > textarea + select, .wp-block-search .widget_categories .wp-block-search__inside-wrapper > .wp-block-search__input + select, .widget_categories .input-group > select + select, .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + select, .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + select,
-.widget_archive .input-group > .form-control + select,
-.widget_archive .wpcf7 .input-group > .wpcf7-validation-errors + select,
-.wpcf7 .widget_archive .input-group > .wpcf7-validation-errors + select,
-.widget_archive .wpcf7 .input-group > input[type=text] + select,
-.wpcf7 .widget_archive .input-group > input[type=text] + select,
+.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + textarea, .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .wp-block-search__input, .widget_archive .input-group > .form-control + select, .widget_archive .wpcf7 .input-group > .wpcf7-validation-errors + select, .wpcf7 .widget_archive .input-group > .wpcf7-validation-errors + select, .widget_archive .wpcf7 .input-group > input[type=text] + select, .wpcf7 .widget_archive .input-group > input[type=text] + select,
 .widget_archive .wpcf7 .input-group > input[type=search] + select,
 .wpcf7 .widget_archive .input-group > input[type=search] + select,
 .widget_archive .wpcf7 .input-group > input[type=url] + select,
@@ -5961,14 +5699,7 @@ input[type=button].btn-block {
 .widget_archive .wpcf7 .input-group > select + select,
 .wpcf7 .widget_archive .input-group > select + select,
 .widget_archive .wpcf7 .input-group > textarea + select,
-.wpcf7 .widget_archive .input-group > textarea + select,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper .input-group > .wp-block-search__input + select,
-.wp-block-search .wp-block-search__inside-wrapper .widget_archive .input-group > .wp-block-search__input + select,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > .form-control + select,
-.widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select,
-.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select,
-.widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=text] + select,
-.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > input[type=text] + select,
+.wpcf7 .widget_archive .input-group > textarea + select, .widget_archive .wp-block-search .wp-block-search__inside-wrapper .input-group > .wp-block-search__input + select, .wp-block-search .wp-block-search__inside-wrapper .widget_archive .input-group > .wp-block-search__input + select, .widget_archive .wp-block-search .wp-block-search__inside-wrapper > .form-control + select, .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=text] + select, .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > input[type=text] + select,
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=search] + select,
 .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > input[type=search] + select,
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > input[type=url] + select,
@@ -6002,13 +5733,7 @@ input[type=button].btn-block {
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select + select,
 .wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + select,
 .widget_archive .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea + select,
-.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > textarea + select,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input + select,
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > .form-control + select,
-.wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select,
-.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select,
-.wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > input[type=text] + select,
-.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > input[type=text] + select,
+.wpcf7 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > textarea + select, .widget_archive .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input + select, .wp-block-search .widget_archive .wp-block-search__inside-wrapper > .form-control + select, .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > .wpcf7-validation-errors + select, .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > input[type=text] + select, .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > input[type=text] + select,
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > input[type=search] + select,
 .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > input[type=search] + select,
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > input[type=url] + select,
@@ -6042,11 +5767,7 @@ input[type=button].btn-block {
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > select + select,
 .wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + select,
 .wp-block-search .widget_archive .wpcf7 .wp-block-search__inside-wrapper > textarea + select,
-.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > textarea + select,
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > .wp-block-search__input + select,
-.widget_archive .input-group > select + select,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + select,
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + select,
+.wpcf7 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > textarea + select, .wp-block-search .widget_archive .wp-block-search__inside-wrapper > .wp-block-search__input + select, .widget_archive .input-group > select + select, .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + select, .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + select,
 .input-group > .form-control + .custom-select,
 .wpcf7 .input-group > .wpcf7-validation-errors + .custom-select,
 .wpcf7 .input-group > input[type=text] + .custom-select,
@@ -6108,9 +5829,6 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea + .custom-select,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea + .custom-select,
 .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input + .custom-select,
-.widget_categories .input-group > select + .custom-select,
-.widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + .custom-select,
-.wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + .custom-select,
 .widget_archive .input-group > select + .custom-select,
 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .custom-select,
 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .custom-select,
@@ -6175,9 +5893,6 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea + .custom-file,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea + .custom-file,
 .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input + .custom-file,
-.widget_categories .input-group > select + .custom-file,
-.widget_categories .wp-block-search .wp-block-search__inside-wrapper > select + .custom-file,
-.wp-block-search .widget_categories .wp-block-search__inside-wrapper > select + .custom-file,
 .widget_archive .input-group > select + .custom-file,
 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select + .custom-file,
 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select + .custom-file,
@@ -6242,9 +5957,6 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > .form-control-plaintext + textarea,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > .form-control-plaintext + textarea,
 .wp-block-search .wp-block-search__inside-wrapper > .form-control-plaintext + .wp-block-search__input,
-.widget_categories .input-group > .form-control-plaintext + select,
-.widget_categories .wp-block-search .wp-block-search__inside-wrapper > .form-control-plaintext + select,
-.wp-block-search .widget_categories .wp-block-search__inside-wrapper > .form-control-plaintext + select,
 .widget_archive .input-group > .form-control-plaintext + select,
 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > .form-control-plaintext + select,
 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > .form-control-plaintext + select,
@@ -6313,9 +6025,6 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > .custom-select + textarea,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > .custom-select + textarea,
 .wp-block-search .wp-block-search__inside-wrapper > .custom-select + .wp-block-search__input,
-.widget_categories .input-group > .custom-select + select,
-.widget_categories .wp-block-search .wp-block-search__inside-wrapper > .custom-select + select,
-.wp-block-search .widget_categories .wp-block-search__inside-wrapper > .custom-select + select,
 .widget_archive .input-group > .custom-select + select,
 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > .custom-select + select,
 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > .custom-select + select,
@@ -6384,9 +6093,6 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > .custom-file + textarea,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > .custom-file + textarea,
 .wp-block-search .wp-block-search__inside-wrapper > .custom-file + .wp-block-search__input,
-.widget_categories .input-group > .custom-file + select,
-.widget_categories .wp-block-search .wp-block-search__inside-wrapper > .custom-file + select,
-.wp-block-search .widget_categories .wp-block-search__inside-wrapper > .custom-file + select,
 .widget_archive .input-group > .custom-file + select,
 .widget_archive .wp-block-search .wp-block-search__inside-wrapper > .custom-file + select,
 .wp-block-search .widget_archive .wp-block-search__inside-wrapper > .custom-file + select,
@@ -6447,10 +6153,7 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select:focus,
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > select:focus,
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea:focus,
-.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea:focus, .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input:focus, .widget_categories .input-group > select:focus, .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select:focus, .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select:focus,
-.widget_archive .input-group > select:focus,
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > select:focus,
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > select:focus,
+.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea:focus, .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input:focus, .widget_archive .input-group > select:focus, .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select:focus, .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select:focus,
 .input-group > .custom-select:focus,
 .wp-block-search .wp-block-search__inside-wrapper > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label,
@@ -6511,10 +6214,7 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > select:not(:first-child),
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper > select:not(:first-child),
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper > textarea:not(:first-child),
-.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea:not(:first-child), .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input:not(:first-child), .widget_categories .input-group > select:not(:first-child), .widget_categories .wp-block-search .wp-block-search__inside-wrapper > select:not(:first-child), .wp-block-search .widget_categories .wp-block-search__inside-wrapper > select:not(:first-child),
-.widget_archive .input-group > select:not(:first-child),
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper > select:not(:first-child),
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper > select:not(:first-child),
+.wpcf7 .wp-block-search .wp-block-search__inside-wrapper > textarea:not(:first-child), .wp-block-search .wp-block-search__inside-wrapper > .wp-block-search__input:not(:first-child), .widget_archive .input-group > select:not(:first-child), .widget_archive .wp-block-search .wp-block-search__inside-wrapper > select:not(:first-child), .wp-block-search .widget_archive .wp-block-search__inside-wrapper > select:not(:first-child),
 .input-group > .custom-select:not(:first-child),
 .wp-block-search .wp-block-search__inside-wrapper > .custom-select:not(:first-child) {
   border-top-left-radius: 0;
@@ -6587,10 +6287,7 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child),
 .wpcf7 .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child),
 .wp-block-search .wpcf7 .wp-block-search__inside-wrapper:not(.has-validation) > textarea:not(:last-child),
-.wpcf7 .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > textarea:not(:last-child), .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > .wp-block-search__input:not(:last-child), .widget_categories .input-group:not(.has-validation) > select:not(:last-child), .widget_categories .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child), .wp-block-search .widget_categories .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child),
-.widget_archive .input-group:not(.has-validation) > select:not(:last-child),
-.widget_archive .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child),
-.wp-block-search .widget_archive .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child),
+.wpcf7 .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > textarea:not(:last-child), .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > .wp-block-search__input:not(:last-child), .widget_archive .input-group:not(.has-validation) > select:not(:last-child), .widget_archive .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child), .wp-block-search .widget_archive .wp-block-search__inside-wrapper:not(.has-validation) > select:not(:last-child),
 .input-group:not(.has-validation) > .custom-select:not(:last-child),
 .wp-block-search .wp-block-search__inside-wrapper:not(.has-validation) > .custom-select:not(:last-child),
 .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label,
@@ -6651,10 +6348,7 @@ input[type=button].btn-block {
 .wp-block-search .wpcf7 .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3),
 .wpcf7 .wp-block-search .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3),
 .wp-block-search .wpcf7 .has-validation.wp-block-search__inside-wrapper > textarea:nth-last-child(n+3),
-.wpcf7 .wp-block-search .has-validation.wp-block-search__inside-wrapper > textarea:nth-last-child(n+3), .wp-block-search .has-validation.wp-block-search__inside-wrapper > .wp-block-search__input:nth-last-child(n+3), .widget_categories .input-group.has-validation > select:nth-last-child(n+3), .widget_categories .wp-block-search .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3), .wp-block-search .widget_categories .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3),
-.widget_archive .input-group.has-validation > select:nth-last-child(n+3),
-.widget_archive .wp-block-search .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3),
-.wp-block-search .widget_archive .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3),
+.wpcf7 .wp-block-search .has-validation.wp-block-search__inside-wrapper > textarea:nth-last-child(n+3), .wp-block-search .has-validation.wp-block-search__inside-wrapper > .wp-block-search__input:nth-last-child(n+3), .widget_archive .input-group.has-validation > select:nth-last-child(n+3), .widget_archive .wp-block-search .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3), .wp-block-search .widget_archive .has-validation.wp-block-search__inside-wrapper > select:nth-last-child(n+3),
 .input-group.has-validation > .custom-select:nth-last-child(n+3),
 .wp-block-search .has-validation.wp-block-search__inside-wrapper > .custom-select:nth-last-child(n+3),
 .input-group.has-validation > .custom-file:nth-last-child(n+3) .custom-file-label,
@@ -6818,8 +6512,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-lg > input[type=file]:not(textarea),
 .wpcf7 .input-group-lg > input[type=submit]:not(textarea),
 .wpcf7 .input-group-lg > select:not(textarea),
-.wpcf7 .input-group-lg > textarea:not(textarea), .wp-block-search .wp-block-search__inside-wrapper .input-group-lg > .wp-block-search__input:not(textarea), .widget_categories .input-group-lg > select:not(textarea),
-.widget_archive .input-group-lg > select:not(textarea),
+.wpcf7 .input-group-lg > textarea:not(textarea), .wp-block-search .wp-block-search__inside-wrapper .input-group-lg > .wp-block-search__input:not(textarea), .widget_archive .input-group-lg > select:not(textarea),
 .input-group-lg > .custom-select {
   height: -webkit-calc(1.5em + 1rem + 2px);
   height: calc(1.5em + 1rem + 2px);
@@ -6842,8 +6535,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-lg > input[type=file],
 .wpcf7 .input-group-lg > input[type=submit],
 .wpcf7 .input-group-lg > select,
-.wpcf7 .input-group-lg > textarea, .wp-block-search .wp-block-search__inside-wrapper .input-group-lg > .wp-block-search__input, .widget_categories .input-group-lg > select,
-.widget_archive .input-group-lg > select,
+.wpcf7 .input-group-lg > textarea, .wp-block-search .wp-block-search__inside-wrapper .input-group-lg > .wp-block-search__input, .widget_archive .input-group-lg > select,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
@@ -6878,8 +6570,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-sm > input[type=file]:not(textarea),
 .wpcf7 .input-group-sm > input[type=submit]:not(textarea),
 .wpcf7 .input-group-sm > select:not(textarea),
-.wpcf7 .input-group-sm > textarea:not(textarea), .wp-block-search .wp-block-search__inside-wrapper .input-group-sm > .wp-block-search__input:not(textarea), .widget_categories .input-group-sm > select:not(textarea),
-.widget_archive .input-group-sm > select:not(textarea),
+.wpcf7 .input-group-sm > textarea:not(textarea), .wp-block-search .wp-block-search__inside-wrapper .input-group-sm > .wp-block-search__input:not(textarea), .widget_archive .input-group-sm > select:not(textarea),
 .input-group-sm > .custom-select {
   height: -webkit-calc(1.5em + 0.5rem + 2px);
   height: calc(1.5em + 0.5rem + 2px);
@@ -6902,8 +6593,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-sm > input[type=file],
 .wpcf7 .input-group-sm > input[type=submit],
 .wpcf7 .input-group-sm > select,
-.wpcf7 .input-group-sm > textarea, .wp-block-search .wp-block-search__inside-wrapper .input-group-sm > .wp-block-search__input, .widget_categories .input-group-sm > select,
-.widget_archive .input-group-sm > select,
+.wpcf7 .input-group-sm > textarea, .wp-block-search .wp-block-search__inside-wrapper .input-group-sm > .wp-block-search__input, .widget_archive .input-group-sm > select,
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
@@ -14352,7 +14042,6 @@ article img,
   display: block;
 }
 
-/* Search Widget */
 .wp-block-search .wp-block-search__label {
   position: absolute;
   width: 1px;
