@@ -9,6 +9,29 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Adds Bootstrap class to select tag in the categories widget.
+ *
+ * @param array $cat_args An array of Categories widget drop-down arguments.
+ * @return array The filtered array of Categories widget drop-down arguments.
+ */
+function understap_add_widget_categories_class( $cat_args ) {
+
+	$class = 'form-select';
+	if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+		$class = 'form-control';
+	}
+
+	if ( isset( $cat_args['class'] ) ) {
+		$cat_args['class'] .= " {$class}";
+	} else {
+		$cat_args['class'] = $class;
+	}
+
+	return $cat_args;
+}
+add_filter( 'widget_categories_dropdown_args', 'understap_add_widget_categories_class' );
+
+/**
  * Add filter to the parameters passed to a widget's display callback.
  * The filter is evaluated on both the front and the back end!
  *
