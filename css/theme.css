@@ -607,16 +607,19 @@ progress {
   height: auto;
 }
 
-.figure, .wp-block-image > figure, figure.wp-block-image {
+.figure, figure.wp-block-image,
+.wp-block-image > figure {
   display: inline-block;
 }
 
-.figure-img, .wp-block-image > figure img, figure.wp-block-image img {
+.figure-img, figure.wp-block-image img,
+.wp-block-image > figure img {
   margin-bottom: 0.5rem;
   line-height: 1;
 }
 
-.figure-caption, .wp-block-image > figure figcaption, figure.wp-block-image figcaption {
+.figure-caption, figure.wp-block-image figcaption,
+.wp-block-image > figure figcaption {
   font-size: 0.875em;
   color: #6c757d;
 }
@@ -12987,7 +12990,6 @@ article img,
   display: block;
 }
 
-/* Search Widget */
 .wp-block-search .wp-block-search__label {
   position: absolute !important;
   width: 1px !important;
@@ -13332,9 +13334,7 @@ article img,
   color: #212529;
 }
 
-figure.wp-block-image {
-  display: block;
-}
+figure.wp-block-image,
 .wp-block-image > figure {
   display: block;
 }
