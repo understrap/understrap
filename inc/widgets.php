@@ -40,9 +40,7 @@ function understap_add_block_widget_search_classes( $block_content, $block ) {
 		}
 	}
 
-	$block_content = str_replace( $search, $replace, $block_content );
-
-	return $block_content;
+	return str_replace( $search, $replace, $block_content );
 }
 add_filter( 'render_block_core/search', 'understap_add_block_widget_search_classes', 10, 2 );
 
