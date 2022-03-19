@@ -8,57 +8,61 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-/**
- * Adds Bootstrap class to select tag in the Categories widget.
- *
- * @param array $cat_args An array of Categories widget drop-down arguments.
- * @return array The filtered array of Categories widget drop-down arguments.
- */
-function understrap_add_widget_categories_class( $cat_args ) {
+if ( ! function_exists( 'understrap_add_widget_categories_class' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories widget.
+	 *
+	 * @param array $cat_args An array of Categories widget drop-down arguments.
+	 * @return array The filtered array of Categories widget drop-down arguments.
+	 */
+	function understrap_add_widget_categories_class( $cat_args ) {
 
-	$class = 'form-select';
-	if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-		$class = 'form-control';
+		$class = 'form-select';
+		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			$class = 'form-control';
+		}
+
+		if ( isset( $cat_args['class'] ) ) {
+			$cat_args['class'] .= " {$class}";
+		} else {
+			$cat_args['class'] = $class;
+		}
+
+		return $cat_args;
 	}
-
-	if ( isset( $cat_args['class'] ) ) {
-		$cat_args['class'] .= " {$class}";
-	} else {
-		$cat_args['class'] = $class;
-	}
-
-	return $cat_args;
 }
 add_filter( 'widget_categories_dropdown_args', 'understrap_add_widget_categories_class' );
 
-/**
- * Adds Bootstrap class to select tag in the Categories block widget.
- *
- * @param string $output      The taxonomy drop-down HTML output.
- * @param array  $parsed_args Arguments used to build the drop-down.
- * @return array The filtered taxonomy drop-down HTML output.
- */
-function understrap_add_block_widget_categories_class( $output, $parsed_args ) {
-	$class = 'form-select';
-	if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-		$class = 'form-control';
-	}
+if ( ! function_exists( 'understrap_add_block_widget_categories_class' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories block widget.
+	 *
+	 * @param string $output      The taxonomy drop-down HTML output.
+	 * @param array  $parsed_args Arguments used to build the drop-down.
+	 * @return array The filtered taxonomy drop-down HTML output.
+	 */
+	function understrap_add_block_widget_categories_class( $output, $parsed_args ) {
+		$class = 'form-select';
+		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			$class = 'form-control';
+		}
 
-	if ( isset( $parsed_args['class'] ) && ! empty( $parsed_args['class'] ) ) {
-		$search  = array(
-			"class=\"{$parsed_args['class']}\"",
-			"class='{$parsed_args['class']}'",
-		);
-		$replace = array(
-			"class=\"{$parsed_args['class']} {$class}\"",
-			"class=\"{$parsed_args['class']} {$class}\"",
-		);
-	} else {
-		$search  = '<select';
-		$replace = "<select class=\"{$class}\"";
-	}
+		if ( isset( $parsed_args['class'] ) && ! empty( $parsed_args['class'] ) ) {
+			$search  = array(
+				"class=\"{$parsed_args['class']}\"",
+				"class='{$parsed_args['class']}'",
+			);
+			$replace = array(
+				"class=\"{$parsed_args['class']} {$class}\"",
+				"class=\"{$parsed_args['class']} {$class}\"",
+			);
+		} else {
+			$search  = '<select';
+			$replace = "<select class=\"{$class}\"";
+		}
 
-	return str_replace( $search, $replace, $output );
+		return str_replace( $search, $replace, $output );
+	}
 }
 add_filter( 'wp_dropdown_cats', 'understrap_add_block_widget_categories_class', 10, 2 );
 
