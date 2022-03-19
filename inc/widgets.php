@@ -17,15 +17,10 @@ if ( ! function_exists( 'understrap_add_widget_categories_class' ) ) {
 	 */
 	function understrap_add_widget_categories_class( $cat_args ) {
 
-		$class = 'form-select';
-		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-			$class = 'form-control';
-		}
-
 		if ( isset( $cat_args['class'] ) ) {
-			$cat_args['class'] .= " {$class}";
+			$cat_args['class'] .= ' ' . understrap_get_select_control_class();
 		} else {
-			$cat_args['class'] = $class;
+			$cat_args['class'] = understrap_get_select_control_class();
 		}
 
 		return $cat_args;
@@ -42,10 +37,7 @@ if ( ! function_exists( 'understrap_add_block_widget_categories_class' ) ) {
 	 * @return array The filtered taxonomy drop-down HTML output.
 	 */
 	function understrap_add_block_widget_categories_class( $output, $parsed_args ) {
-		$class = 'form-select';
-		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-			$class = 'form-control';
-		}
+		$class = understrap_get_select_control_class();
 
 		if ( isset( $parsed_args['class'] ) && ! empty( $parsed_args['class'] ) ) {
 			$search  = array(
