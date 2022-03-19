@@ -59,34 +59,77 @@ body {
 }
 
 .widget_archive {
+
 	select {
 		display: block;
 		width: 100%;
-		height: $input-height;
-		padding: $input-padding-y $input-padding-x;
-		font-family: $input-font-family;
-		@include font-size($input-font-size);
-		font-weight: $input-font-weight;
-		line-height: $input-line-height;
-		color: $input-color;
-		background-color: $input-bg;
-		background-clip: padding-box;
-		border: $input-border-width solid $input-border-color;
 
-		// Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-		@include border-radius($input-border-radius, 0);
+		@if variable-exists("bootstrap4") { // replicates relevant parts of .form-control
+			height: $input-height;
+			padding: $input-padding-y $input-padding-x;
+			font-family: $input-font-family;
 
-		@include box-shadow($input-box-shadow);
-		@include transition($input-transition);
+			@include font-size($input-font-size);
+			font-weight: $input-font-weight;
+			line-height: $input-line-height;
+			color: $input-color;
+			background-color: $input-bg;
+			background-clip: padding-box;
+			border: $input-border-width solid $input-border-color;
 
-		// Unstyle the caret on `<select>`s in IE10+.
-		&::-ms-expand {
-			background-color: transparent;
-			border: 0;
+			// Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+			@include border-radius($input-border-radius, 0);
+			@include box-shadow($input-box-shadow);
+			@include transition($input-transition);
+
+			// Unstyle the caret on `<select>`s in IE10+.
+			&::-ms-expand {
+				background-color: transparent;
+				border: 0;
+			}
+
+			// Customize the `:focus` state to imitate native WebKit styles.
+			@include form-control-focus($ignore-warning: true);
+		} @else { // replicates relevant parts of .form-select
+			padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
+			-moz-padding-start: subtract($form-select-padding-x, 3px);
+			font-family: $form-select-font-family;
+
+			@include font-size($form-select-font-size);
+			font-weight: $form-select-font-weight;
+			line-height: $form-select-line-height;
+			color: $form-select-color;
+			background-color: $form-select-bg;
+			background-image: escape-svg($form-select-indicator);
+			background-repeat: no-repeat;
+			background-position: $form-select-bg-position;
+			background-size: $form-select-bg-size;
+			border: $form-select-border-width solid $form-select-border-color;
+
+			@include border-radius($form-select-border-radius, 0);
+			@include box-shadow($form-select-box-shadow);
+			@include transition($form-select-transition);
+			appearance: none;
+
+			&:focus {
+				border-color: $form-select-focus-border-color;
+				outline: 0;
+
+				@if $enable-shadows {
+
+					@include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+				} @else {
+					// Avoid using mixin so we can pass custom focus shadow properly
+					box-shadow: $form-select-focus-box-shadow;
+				}
+			}
+
+			// Remove outline from select box in FF
+			&:-moz-focusring {
+				color: transparent;
+				text-shadow: 0 0 0 $form-select-color;
+			}
 		}
-
-		// Customize the `:focus` state to imitate native WebKit styles.
-		@include form-control-focus($ignore-warning: true);
 	}
 }
 
