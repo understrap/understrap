@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * @param array  $block         The full block, including name and attributes.
  * @return string The filtered block content.
  */
-function understap_add_block_widget_search_classes( $block_content, $block ) {
+function understrap_add_block_widget_search_classes( $block_content, $block ) {
 
 	$search  = array(
 		'wp-block-search__input ',
@@ -42,7 +42,7 @@ function understap_add_block_widget_search_classes( $block_content, $block ) {
 
 	return str_replace( $search, $replace, $block_content );
 }
-add_filter( 'render_block_core/search', 'understap_add_block_widget_search_classes', 10, 2 );
+add_filter( 'render_block_core/search', 'understrap_add_block_widget_search_classes', 10, 2 );
 
 /**
  * Add filter to the parameters passed to a widget's display callback.
