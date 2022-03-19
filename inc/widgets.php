@@ -8,6 +8,28 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_add_block_widget_archives_classes' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories widget.
+	 *
+	 * @param string $block_content The block content.
+	 * @param array  $block         The full block, including name and attributes.
+	 * @return string The filtered block content.
+	 */
+	function understrap_add_block_widget_archives_classes( $block_content, $block ) {
+
+		if ( isset( $block['attrs']['displayAsDropdown'] ) && true === $block['attrs']['displayAsDropdown'] ) {
+			return str_replace(
+				'<select',
+				'<select class="' . understrap_get_select_control_class() . '"',
+				$block_content
+			);
+		}
+		return $block_content;
+	}
+}
+add_filter( 'render_block_core/archives', 'understrap_add_block_widget_archives_classes', 10, 2 );
+
 /**
  * Add filter to the parameters passed to a widget's display callback.
  * The filter is evaluated on both the front and the back end!
