@@ -31,7 +31,7 @@
 		"wptrt/wpthemereview": "^0.2.1"
 	},
 	"scripts": {
-		"php-lint": "@php ./vendor/php-parallel-lint/php-parallel-lint/parallel-lint --exclude vendor --exclude dist --exclude node_modules --exclude .git .",
+		"php-lint": "@php ./vendor/php-parallel-lint/php-parallel-lint/parallel-lint --exclude vendor --exclude node_modules --exclude dist --exclude .git --exclude .phpstan-cache .",
 		"phpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p",
 		"phpcs-ga": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -n --report=checkstyle",
 		"phpcs-fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
