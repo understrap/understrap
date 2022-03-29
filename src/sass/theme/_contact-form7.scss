@@ -15,60 +15,61 @@
 // keep a max width in case it is just the form and nothing else
 // we do not want a form spanning whole page
 .wpcf7 {
-  max-width: 600px;
-  margin: 0 auto !important;
+	max-width: 600px;
+	margin: 0 auto !important;
 
-  // all inputs except radios and checkboxes inherit from form-control
-  input[type=text],
-  input[type=search],
-  input[type=url],
-  input[type=tel],
-  input[type=number],
-  input[type=range],
-  input[type=date],
-  input[type=month],
-  input[type=week],
-  input[type=time],
-  input[type=datetime],
-  input[type=datetime-local],
-  input[type=color],
-  input[type=email],
-  input[type=file],
-  input[type=submit],
-  select,
-  textarea {
-    @extend .form-control;
-  }
+	// all inputs except radios and checkboxes inherit from form-control
+	input[type="text"],
+	input[type="search"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	input[type="email"],
+	input[type="file"],
+	input[type="submit"],
+	select,
+	textarea {
+		@extend .form-control;
+	}
 
-  // submit button, inherit .btn and .btn-outline-primary classes.
-  input[type=submit] {
-    @extend .btn;
-    @extend .btn-outline-primary;
-  }
+	// submit button, inherit .btn and .btn-outline-primary classes.
+	input[type="submit"] {
+		@include button-outline-variant($primary);
+	}
 
-  .wpcf7-form {
+	.wpcf7-form {
+		// set paragraphs to behave like divs with class .form-group
+		p {
+			@if variable-exists("bootstrap4") {
+				margin-bottom: $form-group-margin-bottom;
+			} @else {
+				margin-bottom: $spacer; // Replicates the .form-group functionality in BS5.
+			}
+		}
 
-    // set paragraphs to behave like divs with class .form-group
-    p {
-      @extend .form-group !optional;
-	  margin-bottom: $spacer; // Replicates the .form-group functionality in BS5.
-    }
+		// let labels be 100%
+		label {
+			width: 100%;
+		}
+	}
 
-    // let labels be 100%
-    label {
-      width: 100%;
-    }
-  }
+	// not valid tip for each control
+	.wpcf7-not-valid-tip {
+		color: theme-color("danger");
+	}
 
-  // not valid tip for each control
-  .wpcf7-not-valid-tip {
-    color: theme-color("danger");
-  }
-
-  // validation errors ourput bottom of form
-  .wpcf7-validation-errors {
-    @extend .form-control;
-    color: theme-color("danger");
-    border: 1px solid $gray-200;
-  }
+	// validation errors ourput bottom of form
+	.wpcf7-validation-errors {
+		@extend .form-control;
+		color: theme-color("danger");
+		border: 1px solid $gray-200;
+	}
 }
