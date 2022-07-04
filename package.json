@@ -64,7 +64,7 @@
     "bootstrap": "^5.1.3",
     "bootstrap4": "npm:bootstrap@^4.6.1",
     "browser-sync": "^2.27.7",
-    "browserslist": "^4.20.0",
+    "browserslist": "^4.21.1",
     "caniuse-lite": "^1.0.30001313",
     "clean-css-cli": "^5.5.2",
     "font-awesome": "^4.7.0",
