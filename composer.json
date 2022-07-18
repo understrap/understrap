@@ -25,7 +25,7 @@
 		"phpmd/phpmd": "^2.11.1",
 		"phpstan/phpstan": "^1.8.1",
 		"roave/security-advisories": "dev-master",
-		"squizlabs/php_codesniffer": "^3.6.2",
+		"squizlabs/php_codesniffer": "^3.7.1",
 		"szepeviktor/phpstan-wordpress": "^1.0.3",
 		"wp-coding-standards/wpcs": "^2.3.0",
 		"wptrt/wpthemereview": "^0.2.1"
