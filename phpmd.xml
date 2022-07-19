@@ -21,6 +21,7 @@
 	<exclude-pattern>*/fonts/*</exclude-pattern>
 	<exclude-pattern>*/dist/*</exclude-pattern>
 	<exclude-pattern>*/css/*</exclude-pattern>
+	<exclude-pattern>*/.phpstan-cache/*</exclude-pattern>
 	<exclude-pattern>*-templates/*</exclude-pattern>
 
 	<!-- Windows exclude patterns -->
@@ -33,6 +34,7 @@
 	<exclude-pattern>*\fonts\*</exclude-pattern>
 	<exclude-pattern>*\dist\*</exclude-pattern>
 	<exclude-pattern>*\css\*</exclude-pattern>
+	<exclude-pattern>*\.phpstan-cache\*</exclude-pattern>
 	<exclude-pattern>*-templates\*</exclude-pattern>
 
 	<!-- Common exclude patterns -->
