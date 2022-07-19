@@ -22,9 +22,10 @@
 	<exclude-pattern>/vendor/*</exclude-pattern>
 	<exclude-pattern>/node_modules/*</exclude-pattern>
 	<exclude-pattern>/languages/*</exclude-pattern>
+	<exclude-pattern>/inc/deprecated.php</exclude-pattern>
 	<exclude-pattern>/fonts/*</exclude-pattern>
 	<exclude-pattern>/dist/*</exclude-pattern>
-	<exclude-pattern>/inc/deprecated.php</exclude-pattern>
+	<exclude-pattern>/.phpstan-cache/*</exclude-pattern>
 	<exclude-pattern>*.min.(js|css)</exclude-pattern>
 	<exclude-pattern>/\.*</exclude-pattern>
 
