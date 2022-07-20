@@ -8,16 +8,11 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-/**
- * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
 if ( ! function_exists( 'understrap_customize_register' ) ) {
 	/**
-	 * Register basic customizer support.
+	 * Register basic support (site title, description, header text color) for the Theme Customizer.
 	 *
-	 * @param object $wp_customize Customizer reference.
+	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
 	function understrap_customize_register( $wp_customize ) {
 		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';

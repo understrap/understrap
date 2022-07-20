@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	/**
 	 * Displays the navigation to next/previous set of posts.
 	 *
-	 * @param string|array $args {
+	 * @param array $args {
 	 *     (Optional) Array of arguments for generating paginated links for archives.
 	 *
 	 *     @type string $base               Base of the paginated url. Default empty.

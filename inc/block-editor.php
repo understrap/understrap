@@ -32,7 +32,7 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 	/**
 	 * Checks for our JSON file of color values. If exists, creates a color palette array.
 	 *
-	 * @return array|bool
+	 * @return array
 	 */
 	function understrap_generate_color_palette() {
 		$color_palette = array();
