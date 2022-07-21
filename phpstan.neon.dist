@@ -3,6 +3,7 @@
 includes:
 	- vendor/phpstan/phpstan/conf/bleedingEdge.neon
 	- vendor/szepeviktor/phpstan-wordpress/extension.neon
+	- src/phpstan/extension.neon
 	- phpstan-baseline.neon
 parameters:
 	level: max
