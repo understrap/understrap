@@ -15,9 +15,13 @@ if ( ! function_exists( 'understrap_customize_register' ) ) {
 	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
 	function understrap_customize_register( $wp_customize ) {
-		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+		$settings = array( 'blogname', 'blogdescription', 'header_textcolor' );
+		foreach ( $settings as $setting ) {
+			$get_setting = $wp_customize->get_setting( $setting );
+			if ( $get_setting instanceof WP_Customize_Setting ) {
+				$get_setting->transport = 'postMessage';
+			}
+		}
 	}
 }
 add_action( 'customize_register', 'understrap_customize_register' );
