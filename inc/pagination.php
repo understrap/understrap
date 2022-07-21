@@ -52,14 +52,20 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 				'prev_next'          => true,
 				'prev_text'          => __( '&laquo;', 'understrap' ),
 				'next_text'          => __( '&raquo;', 'understrap' ),
-				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 				'screen_reader_text' => __( 'Posts navigation', 'understrap' ),
 			)
 		);
 
+		// Make sure we always get an array.
+		$args['type'] = 'array';
+
+		/**
+		 * Array of paginated links.
+		 * @var array<int,string>
+		 */
 		$links = paginate_links( $args );
-		if ( ! $links ) {
+		if ( empty( $links ) ) {
 			return;
 		}
 
