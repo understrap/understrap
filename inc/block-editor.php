@@ -53,7 +53,7 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 		}
 
 		/**
-		 * Filters the default bootstrap color palette so it can be overriden by child themes or plugins when we add theme support for editor-color-palette. This array can also be generated via gulp.
+		 * Filters the default bootstrap color palette so it can be overriden by child themes or plugins when we add theme support for editor-color-palette.
 		 *
 		 * @param array $color_palette An array of color options for the editor-color-palette setting.
 		 */
