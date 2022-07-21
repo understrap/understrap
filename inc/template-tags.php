@@ -63,7 +63,7 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
-			if ( $tags_list ) {
+			if ( $tags_list && ! is_wp_error( $tags_list ) ) {
 				/* translators: %s: Tags of current post */
 				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
