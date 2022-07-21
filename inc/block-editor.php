@@ -44,6 +44,9 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 			$color_palette_json = json_decode( $color_palette_json, true );
 			if ( is_array( $color_palette_json ) ) {
 				foreach ( $color_palette_json as $key => $value ) {
+					if ( ! is_string( $key ) ) {
+						continue;
+					}
 					$key             = str_replace( array( '--bs-', '--' ), '', $key );
 					$color_palette[] = array(
 						'name'  => $key,

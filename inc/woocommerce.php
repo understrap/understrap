@@ -41,6 +41,10 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 	 */
 	function understrap_woocommerce_wrapper_start() {
 		$container = get_theme_mod( 'understrap_container_type' );
+		if ( false === $container ) {
+			$container = '';
+		}
+
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
