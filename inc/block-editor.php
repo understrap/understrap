@@ -42,13 +42,15 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 
 		if ( $color_palette_json ) {
 			$color_palette_json = json_decode( $color_palette_json, true );
-			foreach ( $color_palette_json as $key => $value ) {
-				$key             = str_replace( array( '--bs-', '--' ), '', $key );
-				$color_palette[] = array(
-					'name'  => $key,
-					'slug'  => $key,
-					'color' => $value,
-				);
+			if ( is_array( $color_palette_json ) ) {
+				foreach ( $color_palette_json as $key => $value ) {
+					$key             = str_replace( array( '--bs-', '--' ), '', $key );
+					$color_palette[] = array(
+						'name'  => $key,
+						'slug'  => $key,
+						'color' => $value,
+					);
+				}
 			}
 		}
 
