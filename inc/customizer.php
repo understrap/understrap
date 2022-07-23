@@ -63,7 +63,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'label'       => __( 'Bootstrap Version', 'understrap' ),
 					'description' => __( 'Choose between Bootstrap 4 or Bootstrap 5', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_bootstrap_version',
 					'type'        => 'select',
 					'choices'     => array(
 						'bootstrap4' => __( 'Bootstrap 4', 'understrap' ),
@@ -92,7 +91,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'label'       => __( 'Container Width', 'understrap' ),
 					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_container_type',
 					'type'        => 'select',
 					'choices'     => array(
 						'container'       => __( 'Fixed width container', 'understrap' ),
@@ -124,7 +122,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'understrap'
 					),
 					'section'           => 'understrap_theme_layout_options',
-					'settings'          => 'understrap_navbar_type',
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
 					'choices'           => array(
@@ -157,7 +154,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'understrap'
 					),
 					'section'           => 'understrap_theme_layout_options',
-					'settings'          => 'understrap_sidebar_position',
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
 					'choices'           => array(
@@ -189,7 +185,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'label'       => __( 'Footer Site Info', 'understrap' ),
 					'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_site_info_override',
 					'type'        => 'textarea',
 					'priority'    => 20,
 				)
