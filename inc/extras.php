@@ -111,8 +111,8 @@ if ( ! function_exists( 'understrap_default_body_attributes' ) ) {
 	/**
 	 * Adds schema markup to the body element.
 	 *
-	 * @param array $atts An associative array of attributes.
-	 * @return array
+	 * @param array<string,string> $atts An associative array of attributes.
+	 * @return array<string,string>
 	 */
 	function understrap_default_body_attributes( $atts ) {
 		$atts['itemscope'] = '';
