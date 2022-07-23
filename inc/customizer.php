@@ -206,15 +206,21 @@ if ( ! function_exists( 'understrap_theme_slug_sanitize_select') ) {
 	 *
 	 * @param string               $input   Slug to sanitize.
 	 * @param WP_Customize_Setting $setting Setting instance.
-	 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
+	 * @return string|bool Sanitized slug if it is a valid choice; the setting default for
+	 *                     invalid choices and false in all other cases.
 	 */
 	function understrap_theme_slug_sanitize_select( $input, $setting ) {
 
 		// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
 		$input = sanitize_key( $input );
 
+		$control = $setting->manager->get_control( $setting->id );
+		if ( ! $control instanceof WP_Customize_Control ) {
+			return false;
+		}
+
 		// Get the list of possible select options.
-		$choices = $setting->manager->get_control( $setting->id )->choices;
+		$choices = $control->choices;
 
 		// If the input is a valid key, return it; otherwise, return the default.
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
