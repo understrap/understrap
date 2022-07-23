@@ -195,7 +195,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
 
-if ( ! function_exists( 'understrap_theme_slug_sanitize_select') ) {
+if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
 	 *

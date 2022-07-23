@@ -34,7 +34,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 			esc_html( get_the_modified_date() ) // @phpstan-ignore-line -- post exists
 		);
 
-		$posted_on   = apply_filters(
+		$posted_on = apply_filters(
 			'understrap_posted_on',
 			sprintf(
 				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
@@ -48,7 +48,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 		if ( 0 === $author_id ) {
 			$byline = '';
 		} else {
-			$byline    = apply_filters(
+			$byline = apply_filters(
 				'understrap_posted_by',
 				sprintf(
 					'<span class="byline"> %1$s<span class="author vcard"> <a class="url fn n" href="%2$s">%3$s</a></span></span>',

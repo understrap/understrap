@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	/**
 	 * Displays the navigation to next/previous set of posts.
 	 *
-	 * @param array $args {
+	 * @param array  $args {
 	 *     (Optional) Array of arguments for generating paginated links for archives.
 	 *
 	 *     @type string $base               Base of the paginated url. Default empty.
@@ -37,7 +37,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	 *     @type string $after_page_number  A string to append after the page number. Default empty.
 	 *     @type string $screen_reader_text Screen reader text for the nav element. Default 'Posts navigation'.
 	 * }
-	 * @param string       $class           (Optional) Classes to be added to the <ul> element. Default 'pagination'.
+	 * @param string $class                 (Optional) Classes to be added to the <ul> element. Default 'pagination'.
 	 */
 	function understrap_pagination( $args = array(), $class = 'pagination' ) {
 
@@ -62,6 +62,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 
 		/**
 		 * Array of paginated links.
+		 *
 		 * @var array<int,string>
 		 */
 		$links = paginate_links( $args );
