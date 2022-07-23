@@ -218,10 +218,17 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 if ( ! function_exists( 'understrap_post_nav' ) ) {
 	/**
 	 * Display navigation to next/previous post when applicable.
+	 *
+	 * @global WP_Post|null $post The current post.
 	 */
 	function understrap_post_nav() {
+		global $post;
+		if ( ! $post ) {
+			return;
+		}
+
 		// Don't print empty markup if there's nowhere to navigate.
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
 		$next     = get_adjacent_post( false, '', false );
 		if ( ! $next && ! $previous ) {
 			return;
