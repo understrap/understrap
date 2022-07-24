@@ -14,6 +14,10 @@ parameters:
 		- inc/class-wp-bootstrap-navwalker.php
 	tmpDir: .phpstan-cache
 	ignoreErrors:
+		# no value type specified in iterable type:
+		#- "#Function [a-zA-Z0-9\\()_]+ return type has no value type specified in iterable type array#"
+		#- "#Function [a-zA-Z0-9\\()_]+ has parameter \\$[a-zA-Z0-9_]+ with no value type specified in iterable type array#"
+		# has no return type specified:
 		- '#Function understrap_block_editor_setup\(\) has no return type specified.#'
 		- '#Function understrap_custom_header_setup\(\) has no return type specified.#'
 		- '#Function understrap_comment_form_comments_closed\(\) has no return type specified.#'
