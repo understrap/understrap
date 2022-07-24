@@ -153,14 +153,19 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		if ( ! is_array( $atts ) || empty( $atts ) ) {
 			return;
 		}
+
 		$attributes = '';
 		foreach ( $atts as $name => $value ) {
 			if ( $value ) {
+				if ( ! is_string( $value ) ) {
+					continue;
+				}
 				$attributes .= sanitize_key( $name ) . '="' . esc_attr( $value ) . '" ';
 			} else {
 				$attributes .= sanitize_key( $name ) . ' ';
 			}
 		}
+
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
