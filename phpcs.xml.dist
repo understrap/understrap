@@ -26,9 +26,9 @@
 	<exclude-pattern>/inc/deprecated.php</exclude-pattern>
 	<exclude-pattern>/fonts/*</exclude-pattern>
 	<exclude-pattern>/dist/*</exclude-pattern>
-	<exclude-pattern>/.git*</exclude-pattern>
 	<exclude-pattern>/.phpstan-cache/*</exclude-pattern>
 	<exclude-pattern>*.min.(js|css)</exclude-pattern>
+	<exclude-pattern>/\.*</exclude-pattern>
 
 	<!-- Use the WordPress Ruleset -->
 	<rule ref="WordPress">
