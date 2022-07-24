@@ -41,7 +41,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	 */
 	function understrap_pagination( $args = array(), $class = 'pagination' ) {
 
-		if ( ! isset( $args['total'] ) && $GLOBALS['wp_query']->max_num_pages <= 1 ) {
+		if ( ! $GLOBALS['wp_query'] instanceof WP_Query || ( ! isset( $args['total'] ) && $GLOBALS['wp_query']->max_num_pages <= 1 ) ) {
 			return;
 		}
 
