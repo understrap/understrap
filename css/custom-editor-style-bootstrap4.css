@@ -757,7 +757,7 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 0.875em;
   font-weight: 400;
 }
 
@@ -796,7 +796,7 @@ mark,
 
 .blockquote-footer, .wp-block-quote cite {
   display: block;
-  font-size: 80%;
+  font-size: 0.875em;
   color: #6c757d;
 }
 .blockquote-footer::before, .wp-block-quote cite::before {
