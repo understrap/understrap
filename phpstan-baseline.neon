@@ -86,6 +86,26 @@ parameters:
 			path: inc/theme-settings.php
 
 		-
+			message: "#^Function understrap_add_block_widget_archives_classes\\(\\) has parameter \\$block with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_block_widget_categories_class\\(\\) has parameter \\$parsed_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) has parameter \\$cat_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
 			message: "#^Function understrap_widget_classes\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/widgets.php
@@ -109,4 +129,3 @@ parameters:
 			message: "#^Function understrap_quantity_input_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/woocommerce.php
-
