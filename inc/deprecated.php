@@ -18,15 +18,7 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	 * @link https://github.com/twbs/bootstrap/issues/20939
 	 */
 	function understrap_adjust_body_class( $classes ) {
-
-		foreach ( $classes as $key => $value ) {
-			if ( 'tag' == $value ) {
-				unset( $classes[ $key ] );
-			}
-		}
-
-		return $classes;
-
+		_deprecated_function( 'understrap_adjust_body_class', '0.9.4' );
 	}
 }
 
@@ -39,6 +31,9 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 	 * @deprecated 0.8.9
 	 */
 	function understrap_slbd_count_widgets( $sidebar_id ) {
+
+		_deprecated_function( 'understrap_slbd_count_widgets', '0.8.9', 'understrap_widget_classes' );
+
 		// If loading from front page, consult $_wp_sidebars_widgets rather than options
 		// to see if wp_convert_widget_settings() has made manipulations in memory.
 		global $_wp_sidebars_widgets;
