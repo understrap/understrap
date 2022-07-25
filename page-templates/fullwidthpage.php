@@ -16,9 +16,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 if ( is_front_page() ) {
 	get_template_part( 'global-templates/hero' );
 }
+
+$wrapper_id = 'full-width-page-wrapper';
+if ( is_page_template( 'page-templates/no-title.php' ) ) {
+	$wrapper_id = 'no-title-page-wrapper';
+}
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper" id="<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?>">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
