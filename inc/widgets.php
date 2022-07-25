@@ -34,7 +34,7 @@ if ( ! function_exists( 'understrap_add_block_widget_categories_class' ) ) {
 	 *
 	 * @param string $output      The taxonomy drop-down HTML output.
 	 * @param array  $parsed_args Arguments used to build the drop-down.
-	 * @return array The filtered taxonomy drop-down HTML output.
+	 * @return string The filtered taxonomy drop-down HTML output.
 	 */
 	function understrap_add_block_widget_categories_class( $output, $parsed_args ) {
 		$class = understrap_get_select_control_class();
