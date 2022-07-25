@@ -47,11 +47,15 @@ if ( ! function_exists( 'understrap_components_infinite_scroll_render' ) ) {
 	function understrap_components_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
-			if ( is_search() ) :
+			if ( is_search() ) {
 				get_template_part( 'loop-templates/content', 'search' );
-			else :
-				get_template_part( 'loop-templates/content', get_post_format() );
-			endif;
+			} else {
+				$post_format = get_post_format();
+				if ( false === $post_format ) {
+					$post_format = '';
+				}
+				get_template_part( 'loop-templates/content', $post_format );
+			}
 		}
 	}
 }

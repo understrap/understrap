@@ -111,8 +111,8 @@ if ( ! function_exists( 'understrap_default_body_attributes' ) ) {
 	/**
 	 * Adds schema markup to the body element.
 	 *
-	 * @param array $atts An associative array of attributes.
-	 * @return array
+	 * @param array<string,string> $atts An associative array of attributes.
+	 * @return array<string,string>
 	 */
 	function understrap_default_body_attributes( $atts ) {
 		$atts['itemscope'] = '';
@@ -281,12 +281,16 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 * @return string
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
-		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
-				'Read More...',
-				'understrap'
-			) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
+		if ( is_admin() || ! get_the_ID() ) {
+			return $post_excerpt;
 		}
-		return $post_excerpt;
+
+		$permalink = esc_url( get_permalink( (int) get_the_ID() ) ); // @phpstan-ignore-line -- post exists
+
+		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . $permalink . '">' . __(
+			'Read More...',
+			'understrap'
+		) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
+
 	}
 }

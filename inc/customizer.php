@@ -8,21 +8,20 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-/**
- * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
 if ( ! function_exists( 'understrap_customize_register' ) ) {
 	/**
-	 * Register basic customizer support.
+	 * Register basic support (site title, description, header text color) for the Theme Customizer.
 	 *
-	 * @param object $wp_customize Customizer reference.
+	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
 	function understrap_customize_register( $wp_customize ) {
-		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+		$settings = array( 'blogname', 'blogdescription', 'header_textcolor' );
+		foreach ( $settings as $setting ) {
+			$get_setting = $wp_customize->get_setting( $setting );
+			if ( $get_setting instanceof WP_Customize_Setting ) {
+				$get_setting->transport = 'postMessage';
+			}
+		}
 	}
 }
 add_action( 'customize_register', 'understrap_customize_register' );
@@ -46,26 +45,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 
-		/**
-		 * Select sanitization function
-		 *
-		 * @param string               $input   Slug to sanitize.
-		 * @param WP_Customize_Setting $setting Setting instance.
-		 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
-		 */
-		function understrap_theme_slug_sanitize_select( $input, $setting ) {
-
-			// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
-			$input = sanitize_key( $input );
-
-			// Get the list of possible select options.
-			$choices = $setting->manager->get_control( $setting->id )->choices;
-
-			// If the input is a valid key, return it; otherwise, return the default.
-			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-
-		}
-
 		$wp_customize->add_setting(
 			'understrap_bootstrap_version',
 			array(
@@ -84,7 +63,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'label'       => __( 'Bootstrap Version', 'understrap' ),
 					'description' => __( 'Choose between Bootstrap 4 or Bootstrap 5', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_bootstrap_version',
 					'type'        => 'select',
 					'choices'     => array(
 						'bootstrap4' => __( 'Bootstrap 4', 'understrap' ),
@@ -113,7 +91,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'label'       => __( 'Container Width', 'understrap' ),
 					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_container_type',
 					'type'        => 'select',
 					'choices'     => array(
 						'container'       => __( 'Fixed width container', 'understrap' ),
@@ -145,7 +122,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'understrap'
 					),
 					'section'           => 'understrap_theme_layout_options',
-					'settings'          => 'understrap_navbar_type',
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
 					'choices'           => array(
@@ -178,7 +154,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'understrap'
 					),
 					'section'           => 'understrap_theme_layout_options',
-					'settings'          => 'understrap_sidebar_position',
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
 					'choices'           => array(
@@ -210,7 +185,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'label'       => __( 'Footer Site Info', 'understrap' ),
 					'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
-					'settings'    => 'understrap_site_info_override',
 					'type'        => 'textarea',
 					'priority'    => 20,
 				)
@@ -220,6 +194,34 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
+
+if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
+	/**
+	 * Sanitize select.
+	 *
+	 * @param string               $input   Slug to sanitize.
+	 * @param WP_Customize_Setting $setting Setting instance.
+	 * @return string|bool Sanitized slug if it is a valid choice; the setting default for
+	 *                     invalid choices and false in all other cases.
+	 */
+	function understrap_theme_slug_sanitize_select( $input, $setting ) {
+
+		// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
+		$input = sanitize_key( $input );
+
+		$control = $setting->manager->get_control( $setting->id );
+		if ( ! $control instanceof WP_Customize_Control ) {
+			return false;
+		}
+
+		// Get the list of possible select options.
+		$choices = $control->choices;
+
+		// If the input is a valid key, return it; otherwise, return the default.
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
+	}
+}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

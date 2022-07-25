@@ -31,16 +31,16 @@
 		"wptrt/wpthemereview": "^0.2.1"
 	},
 	"scripts": {
-		"php-lint": "@php ./vendor/php-parallel-lint/php-parallel-lint/parallel-lint --exclude vendor --exclude dist --exclude node_modules --exclude .git .",
+		"php-lint": "@php ./vendor/php-parallel-lint/php-parallel-lint/parallel-lint --exclude vendor --exclude node_modules --exclude dist --exclude .git --exclude .phpstan-cache .",
 		"phpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p",
 		"phpcs-ga": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -n --report=checkstyle",
 		"phpcs-fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
 		"phpcs-config-set" : "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --config-set installed_paths ../../phpcompatibility/php-compatibility,../../phpcompatibility/phpcompatibility-paragonie,../../phpcompatibility/phpcompatibility-wp,../../wp-coding-standards/wpcs,../../wptrt/wpthemereview",
-		"phpmd": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . ansi phpmd.xml --exclude vendor,src,node_modules,languages,js,fonts,css,.phpstan-cache,.github,.git,class-wp-bootstrap-navwalker.php,inc/deprecated.php",
+		"phpmd": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . ansi phpmd.xml",
 		"phpmd-baseline": "@phpmd -- --generate-baseline",
-		"phpmd-ga": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . github phpmd.xml --exclude vendor,src,node_modules,languages,js,fonts,css,.github,.git,class-wp-bootstrap-navwalker.php,inc/deprecated.php",
-		"phpstan": "@php ./vendor/phpstan/phpstan/phpstan analyse",
-		"phpstan-baseline": "@php ./vendor/phpstan/phpstan/phpstan analyse --generate-baseline",
+		"phpmd-ga": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . github phpmd.xml",
+		"phpstan": "@php ./vendor/phpstan/phpstan/phpstan analyse -a src/phpstan/autoload.php",
+		"phpstan-baseline": "@php ./vendor/phpstan/phpstan/phpstan analyse -a src/phpstan/autoload.php --generate-baseline",
 		"post-install-cmd": "@phpcs-config-set",
 		"post-update-cmd": "@phpcs-config-set"
 	},
