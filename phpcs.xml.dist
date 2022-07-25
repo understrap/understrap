@@ -20,6 +20,7 @@
 
 	<!-- Directories and third party library exclusions. -->
 	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/src/phpstan/*</exclude-pattern>
 	<exclude-pattern>/node_modules/*</exclude-pattern>
 	<exclude-pattern>/languages/*</exclude-pattern>
 	<exclude-pattern>/inc/deprecated.php</exclude-pattern>

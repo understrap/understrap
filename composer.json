@@ -39,8 +39,8 @@
 		"phpmd": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . ansi phpmd.xml",
 		"phpmd-baseline": "@phpmd -- --generate-baseline",
 		"phpmd-ga": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . github phpmd.xml",
-		"phpstan": "@php ./vendor/phpstan/phpstan/phpstan analyse",
-		"phpstan-baseline": "@php ./vendor/phpstan/phpstan/phpstan analyse --generate-baseline",
+		"phpstan": "@php ./vendor/phpstan/phpstan/phpstan analyse -a src/phpstan/autoload.php",
+		"phpstan-baseline": "@php ./vendor/phpstan/phpstan/phpstan analyse -a src/phpstan/autoload.php --generate-baseline",
 		"post-install-cmd": "@phpcs-config-set",
 		"post-update-cmd": "@phpcs-config-set"
 	},

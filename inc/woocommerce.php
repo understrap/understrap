@@ -41,6 +41,10 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 	 */
 	function understrap_woocommerce_wrapper_start() {
 		$container = get_theme_mod( 'understrap_container_type' );
+		if ( false === $container ) {
+			$container = '';
+		}
+
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
@@ -67,11 +71,11 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 * Filter hook function monkey patching form classes
 	 * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
 	 *
-	 * @param string $args Form attributes.
-	 * @param string $key Not in use.
-	 * @param null   $value Not in use.
+	 * @param array<string,mixed> $args  Form field arguments.
+	 * @param string              $key   Value of the fields name attribute.
+	 * @param string|null         $value Value of <select> option.
 	 *
-	 * @return mixed
+	 * @return array<string,mixed> Form field arguments.
 	 */
 	function understrap_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
