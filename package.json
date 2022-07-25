@@ -29,8 +29,8 @@
     "dist-clean": "node src/build/dist-clean.js"
   },
   "babel": {
-		"extends": "./src/build/babel.config.js"
-	},
+    "extends": "./src/build/babel.config.js"
+  },
   "engines": {
     "node": ">=16"
   },
@@ -52,30 +52,30 @@
   },
   "homepage": "https://understrap.com",
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
-    "@popperjs/core": "^2.11.2",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@popperjs/core": "^2.11.5",
     "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-multi-entry": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
-    "autoprefixer": "^10.4.2",
-    "bootstrap": "^5.1.3",
-    "bootstrap4": "npm:bootstrap@^4.6.1",
-    "browser-sync": "^2.27.7",
-    "browserslist": "^4.20.0",
-    "caniuse-lite": "^1.0.30001313",
-    "clean-css-cli": "^5.5.2",
+    "autoprefixer": "^10.4.7",
+    "bootstrap": "^5.2.0",
+    "bootstrap4": "npm:bootstrap@^4.6.2",
+    "browser-sync": "^2.27.10",
+    "browserslist": "^4.21.2",
+    "caniuse-lite": "^1.0.30001367",
+    "clean-css-cli": "^5.6.1",
     "font-awesome": "^4.7.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.19",
     "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
-    "postcss": "^8.4.8",
-    "postcss-cli": "^9.1.0",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^2.69.2",
-    "sass": "^1.49.9",
-    "terser": "^5.12.0"
+    "rollup": "^2.77.0",
+    "sass": "^1.53.0",
+    "terser": "^5.14.2"
   }
 }

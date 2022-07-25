@@ -15,7 +15,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): util.js
+   * Bootstrap (v4.6.2): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -197,7 +197,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): alert.js
+   * Bootstrap (v4.6.2): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -206,7 +206,7 @@
    */
 
   const NAME$a = 'alert';
-  const VERSION$a = '4.6.1';
+  const VERSION$a = '4.6.2';
   const DATA_KEY$a = 'bs.alert';
   const EVENT_KEY$a = `.${DATA_KEY$a}`;
   const DATA_API_KEY$7 = '.data-api';
@@ -341,7 +341,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): button.js
+   * Bootstrap (v4.6.2): button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -350,7 +350,7 @@
    */
 
   const NAME$9 = 'button';
-  const VERSION$9 = '4.6.1';
+  const VERSION$9 = '4.6.2';
   const DATA_KEY$9 = 'bs.button';
   const EVENT_KEY$9 = `.${DATA_KEY$9}`;
   const DATA_API_KEY$6 = '.data-api';
@@ -532,7 +532,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): carousel.js
+   * Bootstrap (v4.6.2): carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -541,7 +541,7 @@
    */
 
   const NAME$8 = 'carousel';
-  const VERSION$8 = '4.6.1';
+  const VERSION$8 = '4.6.2';
   const DATA_KEY$8 = 'bs.carousel';
   const EVENT_KEY$8 = `.${DATA_KEY$8}`;
   const DATA_API_KEY$5 = '.data-api';
@@ -1092,7 +1092,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): collapse.js
+   * Bootstrap (v4.6.2): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1101,7 +1101,7 @@
    */
 
   const NAME$7 = 'collapse';
-  const VERSION$7 = '4.6.1';
+  const VERSION$7 = '4.6.2';
   const DATA_KEY$7 = 'bs.collapse';
   const EVENT_KEY$7 = `.${DATA_KEY$7}`;
   const DATA_API_KEY$4 = '.data-api';
@@ -4037,11 +4037,10 @@
   Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
   Popper.placements = placements;
   Popper.Defaults = Defaults;
-  var Popper$1 = Popper;
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): dropdown.js
+   * Bootstrap (v4.6.2): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4050,7 +4049,7 @@
    */
 
   const NAME$6 = 'dropdown';
-  const VERSION$6 = '4.6.1';
+  const VERSION$6 = '4.6.2';
   const DATA_KEY$6 = 'bs.dropdown';
   const EVENT_KEY$6 = `.${DATA_KEY$6}`;
   const DATA_API_KEY$3 = '.data-api';
@@ -4176,7 +4175,7 @@
 
       if (!this._inNavbar && usePopper) {
         // Check for Popper dependency
-        if (typeof Popper$1 === 'undefined') {
+        if (typeof Popper === 'undefined') {
           throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
         }
 
@@ -4199,7 +4198,7 @@
           $__default["default"](parent).addClass(CLASS_NAME_POSITION_STATIC);
         }
 
-        this._popper = new Popper$1(referenceElement, this._menu, this._getPopperConfig());
+        this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
       } // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
@@ -4538,7 +4537,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): modal.js
+   * Bootstrap (v4.6.2): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4547,7 +4546,7 @@
    */
 
   const NAME$5 = 'modal';
-  const VERSION$5 = '4.6.1';
+  const VERSION$5 = '4.6.2';
   const DATA_KEY$5 = 'bs.modal';
   const EVENT_KEY$5 = `.${DATA_KEY$5}`;
   const DATA_API_KEY$2 = '.data-api';
@@ -5116,7 +5115,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): tools/sanitizer.js
+   * Bootstrap (v4.6.2): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5230,7 +5229,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): tooltip.js
+   * Bootstrap (v4.6.2): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5239,7 +5238,7 @@
    */
 
   const NAME$4 = 'tooltip';
-  const VERSION$4 = '4.6.1';
+  const VERSION$4 = '4.6.2';
   const DATA_KEY$4 = 'bs.tooltip';
   const EVENT_KEY$4 = `.${DATA_KEY$4}`;
   const JQUERY_NO_CONFLICT$4 = $__default["default"].fn[NAME$4];
@@ -5319,7 +5318,7 @@
 
   class Tooltip {
     constructor(element, config) {
-      if (typeof Popper$1 === 'undefined') {
+      if (typeof Popper === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
       } // Private
 
@@ -5477,7 +5476,7 @@
         }
 
         $__default["default"](this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper$1(this.element, tip, this._getPopperConfig(attachment));
+        this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
         $__default["default"](tip).addClass(CLASS_NAME_SHOW$3);
         $__default["default"](tip).addClass(this.config.customClass); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
@@ -5922,7 +5921,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): popover.js
+   * Bootstrap (v4.6.2): popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5931,7 +5930,7 @@
    */
 
   const NAME$3 = 'popover';
-  const VERSION$3 = '4.6.1';
+  const VERSION$3 = '4.6.2';
   const DATA_KEY$3 = 'bs.popover';
   const EVENT_KEY$3 = `.${DATA_KEY$3}`;
   const JQUERY_NO_CONFLICT$3 = $__default["default"].fn[NAME$3];
@@ -6081,7 +6080,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): scrollspy.js
+   * Bootstrap (v4.6.2): scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6090,7 +6089,7 @@
    */
 
   const NAME$2 = 'scrollspy';
-  const VERSION$2 = '4.6.1';
+  const VERSION$2 = '4.6.2';
   const DATA_KEY$2 = 'bs.scrollspy';
   const EVENT_KEY$2 = `.${DATA_KEY$2}`;
   const DATA_API_KEY$1 = '.data-api';
@@ -6176,7 +6175,7 @@
         }
 
         return null;
-      }).filter(item => item).sort((a, b) => a[0] - b[0]).forEach(item => {
+      }).filter(Boolean).sort((a, b) => a[0] - b[0]).forEach(item => {
         this._offsets.push(item[0]);
 
         this._targets.push(item[1]);
@@ -6350,7 +6349,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): tab.js
+   * Bootstrap (v4.6.2): tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6359,7 +6358,7 @@
    */
 
   const NAME$1 = 'tab';
-  const VERSION$1 = '4.6.1';
+  const VERSION$1 = '4.6.2';
   const DATA_KEY$1 = 'bs.tab';
   const EVENT_KEY$1 = `.${DATA_KEY$1}`;
   const DATA_API_KEY = '.data-api';
@@ -6397,7 +6396,7 @@
 
 
     show() {
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED) || this._element.hasAttribute('disabled')) {
         return;
       }
 
@@ -6568,7 +6567,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): toast.js
+   * Bootstrap (v4.6.2): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -6577,7 +6576,7 @@
    */
 
   const NAME = 'toast';
-  const VERSION = '4.6.1';
+  const VERSION = '4.6.2';
   const DATA_KEY = 'bs.toast';
   const EVENT_KEY = `.${DATA_KEY}`;
   const JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
