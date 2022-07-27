@@ -8,6 +8,25 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
+	/**
+	 * Sanitize select.
+	 *
+	 * @param string               $input   Slug to sanitize.
+	 * @param WP_Customize_Setting $setting Setting instance.
+	 * @return string|bool Sanitized slug if it is a valid choice; the setting default for
+	 *                     invalid choices and false in all other cases.
+	 */
+	function understrap_theme_slug_sanitize_select( $input, $setting ) {
+		_deprecated_function(
+			'understrap_theme_slug_sanitize_select',
+			'1.2.0',
+			'understrap_customize_sanitize_select'
+		);
+		return understrap_customize_sanitize_select( $input, $setting );
+	}
+}
+
 if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	/**
 	 * Setup body classes.
