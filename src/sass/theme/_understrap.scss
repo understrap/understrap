@@ -238,39 +238,35 @@ a.skip-link {
 	display: block;
 }
 
-// New Search Widget in Block Editor
+// Search Block Widget
 .wp-block-search {
-    .wp-block-search__label {
-		@if variable-exists('bootstrap4') {
-			@include sr-only();
+
+	.wp-block-search__button {
+
+		@if variable-exists("bootstrap4") {
+			margin-left: $form-grid-gutter-width;
 		} @else {
-			@include visually-hidden();
+			margin-left: $grid-gutter-width * 0.5;
 		}
-    }
+	}
 
-    .wp-block-search__inside-wrapper {
-        @extend .input-group;
+	&.wp-block-search__button-inside {
 
-        .wp-block-search__input {
-            @extend .form-control;
-        }
+		.wp-block-search__inside-wrapper {
+			border: none;
+			padding: 0;
 
-        .wp-block-search__button {
-            border-radius: $border-radius;
-
-            &:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-                margin-left: 0;
-            }
-
-			@if variable-exists('bootstrap4') {
-				@include button-variant( $primary, $primary );
-				border-top-left-radius: 0px;
-				border-bottom-left-radius: 0px;
-			} @else {
-				@include button-variant( $primary, $primary );
+			.wp-block-search__input {
+				border-radius: $input-border-radius;
+				border: $input-border-width solid $input-border-color;
+				padding: $input-padding-y $input-padding-x;
 			}
-        }
-    }
+		}
+
+		.wp-block-search__button {
+			margin-left: 0;
+		}
+	}
 }
 
 // Fixing Off-canvas close icon is hidden behind admin bar

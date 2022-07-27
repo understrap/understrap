@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div id="carouselExampleControls" class="carousel slide" data-interval="false" data-bs-ride="false">
 
-		<div class="carousel-inner" role="listbox">
+		<div class="carousel-inner">
 
 			<?php dynamic_sidebar( 'hero' ); ?>
 

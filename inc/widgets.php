@@ -80,6 +80,44 @@ if ( ! function_exists( 'understrap_add_block_widget_archives_classes' ) ) {
 }
 add_filter( 'render_block_core/archives', 'understrap_add_block_widget_archives_classes', 10, 2 );
 
+if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
+	/**
+	 * Adds Bootstrap classes to search block widget.
+	 *
+	 * @param string $block_content The block content.
+	 * @param array  $block         The full block, including name and attributes.
+	 * @return string The filtered block content.
+	 */
+	function understrap_add_block_widget_search_classes( $block_content, $block ) {
+
+		$search  = array(
+			'wp-block-search__input ',
+			'wp-block-search__input"',
+			'wp-block-search__button ',
+		);
+		$replace = array(
+			'wp-block-search__input form-control ',
+			'wp-block-search__input form-control"',
+			'wp-block-search__button btn btn-primary ',
+		);
+
+		if ( isset( $block['attrs']['buttonPosition'] ) && 'button-inside' === $block['attrs']['buttonPosition'] ) {
+			$search[]  = 'wp-block-search__inside-wrapper';
+			$replace[] = 'wp-block-search__inside-wrapper input-group';
+
+			if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+				$search[]  = '<button';
+				$search[]  = '</button>';
+				$replace[] = '<div class="input-group-append"><button';
+				$replace[] = '</button></div>';
+			}
+		}
+
+		return str_replace( $search, $replace, $block_content );
+	}
+}
+add_filter( 'render_block_core/search', 'understrap_add_block_widget_search_classes', 10, 2 );
+
 /**
  * Add filter to the parameters passed to a widget's display callback.
  * The filter is evaluated on both the front and the back end!
