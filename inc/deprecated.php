@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 	/*
 	 * Throw a deprecation notice if the function is not defined but used by
 	 * the child theme.
-     */
+	 */
 
 	/**
 	 * Sanitizes data for allowed HTML tags for post title.
