@@ -66,6 +66,11 @@ parameters:
 			path: inc/extras.php
 
 		-
+			message: "#^Parameter \\#2 \\$callback of function add_filter expects callable\\(\\)\\: mixed, 'understrap_kses…' given\\.$#"
+			count: 2
+			path: inc/extras.php
+
+		-
 			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\|string\\|false given\\.$#"
 			count: 2
 			path: inc/hooks.php
