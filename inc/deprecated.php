@@ -8,6 +8,35 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_kses_title' ) ) {
+	/*
+	 * Throw a deprecation notice if the function is not defined but used by
+	 * the child theme.
+     */
+
+	/**
+	 * Sanitizes data for allowed HTML tags for post title.
+	 *
+	 * @param string $data Post title to filter.
+	 * @return string Filtered post title with allowed HTML tags and attributes intact.
+	 *
+	 * @deprecated 1.2.0 Replaced with `wp_kses_post()`.
+	 */
+	function understrap_kses_title( $data ) {
+
+		_deprecated_function( 'understrap_kses_title', '1.2.0' );
+
+		global $allowedposttags;
+		if ( is_array( $allowedposttags ) ) {
+			$allowed_tags = apply_filters_deprecated( 'understrap_kses_title', $allowedposttags, '1.2.0' );
+			return wp_kses( $data, $allowed_tags );
+		}
+
+
+		return wp_kses_post( $data );
+	}
+} // End of if function_exists( 'understrap_kses_title' ).
+
 if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	/**
 	 * Setup body classes.
