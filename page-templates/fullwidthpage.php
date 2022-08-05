@@ -53,7 +53,7 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 
 	</div><!-- #content -->
 
-</div><!-- #full-width-page-wrapper -->
+</div><!-- #<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?> -->
 
 <?php
 get_footer();
