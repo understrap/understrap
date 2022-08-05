@@ -70,25 +70,67 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 	function understrap_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
-			if ( $categories_list && understrap_categorized_blog() ) {
-				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
-			if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
+			understrap_categories_tags_list();
 		}
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'understrap' ), esc_html__( '1 Comment', 'understrap' ), esc_html__( '% Comments', 'understrap' ) );
-			echo '</span>';
-		}
+		understrap_comments_popup_link();
 		understrap_edit_post_link();
+	}
+}
+
+if ( ! function_exists( 'understrap_categories_tags_list' ) ) {
+	/**
+	 * Displays a list of categories and a list of tags.
+	 */
+	function understrap_categories_tags_list() {
+		understrap_categories_list();
+		understrap_tags_list();
+	}
+}
+
+if ( ! function_exists( 'understrap_categories_list' ) ) {
+	/**
+	 * Displays a list of categories.
+	 */
+	function understrap_categories_list() {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
+		if ( $categories_list && understrap_categorized_blog() ) {
+			/* translators: %s: Categories of current post */
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
+
+if ( ! function_exists( 'understrap_tags_list' ) ) {
+	/**
+	 * Displays a list of tags.
+	 */
+	function understrap_tags_list() {
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
+		if ( $tags_list && ! is_wp_error( $tags_list ) ) {
+			/* translators: %s: Tags of current post */
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
+
+if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
+	/**
+	 * Displays the link to the comments for the current post.
+	 */
+	function understrap_comments_popup_link() {
+		if ( is_single() || post_password_required() || ! comments_open() || 0 === absint( get_comments_number() ) ) {
+			return;
+		}
+
+		echo '<span class="comments-link">';
+		comments_popup_link(
+			esc_html__( 'Leave a comment', 'understrap' ),
+			esc_html__( '1 Comment', 'understrap' ),
+			esc_html__( '% Comments', 'understrap' )
+		);
+		echo '</span>';
 	}
 }
 
