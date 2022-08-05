@@ -50,3 +50,7 @@ parameters:
 		- '#Function understrap_woocommerce_wrapper_end\(\) has no return type specified.#'
 		- '#Function understrap_wpcom_setup\(\) has no return type specified.#'
 		- '#Function understrap_wpcom_styles\(\) has no return type specified.#'
+		- '#Function understrap_categories_tags_list\(\) has no return type specified.#'
+		- '#Function understrap_categories_list\(\) has no return type specified.#'
+		- '#Function understrap_tags_list\(\) has no return type specified.#'
+		- '#Function understrap_comments_popup_link\(\) has no return type specified.#'
