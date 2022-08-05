@@ -39,9 +39,5 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .carousel -->
 
-	<script>
-	jQuery( ".carousel-item" ).first().addClass( "active" );
-	</script>
-
 	<?php
 endif;

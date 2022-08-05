@@ -47,6 +47,61 @@ if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
 add_filter( 'render_block_core/search', 'understrap_add_block_widget_search_classes', 10, 2 );
 
 /**
+ * Add active class of first item of carousel hero widget area.
+ *
+ * @param array $params {
+ *     Parameters passed to a widget’s display callback.
+ *
+ *     @type array $args  {
+ *         An array of widget display arguments.
+ *
+ *         @type string $name          Name of the sidebar the widget is assigned to.
+ *         @type string $id            ID of the sidebar the widget is assigned to.
+ *         @type string $description   The sidebar description.
+ *         @type string $class         CSS class applied to the sidebar container.
+ *         @type string $before_widget HTML markup to prepend to each widget in the sidebar.
+ *         @type string $after_widget  HTML markup to append to each widget in the sidebar.
+ *         @type string $before_title  HTML markup to prepend to the widget title when displayed.
+ *         @type string $after_title   HTML markup to append to the widget title when displayed.
+ *         @type string $widget_id     ID of the widget.
+ *         @type string $widget_name   Name of the widget.
+ *     }
+ *     @type array $widget_args {
+ *         An array of multi-widget arguments.
+ *
+ *         @type int $number Number increment used for multiples of the same widget.
+ *     }
+ * }
+ * @return array Maybe filtered parameters.
+ */
+function understrap_hero_active_carousel_item( $params ) {
+	if (
+		! isset( $params[0] )
+		|| ! isset( $params[0]['id'] )
+		|| 'hero' !== $params[0]['id']
+	) {
+		return $params;
+	}
+
+	static $item_number = 1;
+	if (
+		1 === $item_number
+		&& isset( $params[0]['before_widget'] )
+		&& is_string( $params[0]['before_widget'] )
+	) {
+		$params[0]['before_widget'] = str_replace(
+			'carousel-item',
+			'carousel-item active',
+			$params[0]['before_widget']
+		);
+	}
+	$item_number++;
+
+	return $params;
+}
+add_filter( 'dynamic_sidebar_params', 'understrap_hero_active_carousel_item' );
+
+/**
  * Add filter to the parameters passed to a widget's display callback.
  * The filter is evaluated on both the front and the back end!
  *
@@ -85,7 +140,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 	 *         @type int $number Number increment used for multiples of the same widget.
 	 *     }
 	 * }
-	 * @return array $params
+	 * @return array Maybe filtered parameters.
 	 */
 	function understrap_widget_classes( $params ) {
 
