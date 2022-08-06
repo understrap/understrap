@@ -78,7 +78,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			array(
 				'default'           => 'container',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				'sanitize_callback' => 'understrap_customize_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -123,7 +123,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					),
 					'section'           => 'understrap_theme_layout_options',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'sanitize_callback' => 'understrap_customize_sanitize_select',
 					'choices'           => array(
 						'collapse'  => __( 'Collapse', 'understrap' ),
 						'offcanvas' => __( 'Offcanvas', 'understrap' ),
@@ -155,7 +155,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					),
 					'section'           => 'understrap_theme_layout_options',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'sanitize_callback' => 'understrap_customize_sanitize_select',
 					'choices'           => array(
 						'right' => __( 'Right sidebar', 'understrap' ),
 						'left'  => __( 'Left sidebar', 'understrap' ),
@@ -195,7 +195,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
 
-if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
+if ( ! function_exists( 'understrap_customize_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
 	 *
@@ -204,7 +204,7 @@ if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	 * @return string|bool Sanitized slug if it is a valid choice; the setting default for
 	 *                     invalid choices and false in all other cases.
 	 */
-	function understrap_theme_slug_sanitize_select( $input, $setting ) {
+	function understrap_customize_sanitize_select( $input, $setting ) {
 
 		// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
 		$input = sanitize_key( $input );
