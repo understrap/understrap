@@ -101,6 +101,16 @@ parameters:
 			path: inc/widgets.php
 
 		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) has parameter \\$cat_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
 			message: "#^Function understrap_hero_active_carousel_item\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/widgets.php
