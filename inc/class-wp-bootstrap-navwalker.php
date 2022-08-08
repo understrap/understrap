@@ -182,10 +182,12 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			}
 
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-			if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/understrap/understrap/issues/973.
+			if ( property_exists( $item, 'target' ) && '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/understrap/understrap/issues/973.
 				$atts['rel'] = 'noopener noreferrer';
 			} else {
-				$atts['rel'] = $item->xfn;
+			    if ( property_exists( $item, 'xfn' ) ) {
+			        $atts['rel'] = $item->xfn;
+			    }
 			}
 
 			// If item has_children add atts to <a>.
