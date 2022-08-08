@@ -307,13 +307,26 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 	 * @return void|string Formatted output in HTML.
 	 */
 	function understrap_link_pages() {
-		$args = apply_filters(
+
+		$deprecated_args = apply_filters_deprecated(
 			'understrap_link_pages_args',
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
+			array( array() ),
+			'1.2.0',
+			'wp_link_pages_args'
 		);
+
+		$div_open = '<div class="page-links">';
+		$ul_open  = '<ul class="pagination">';
+
+		$args = array(
+			'before' => $div_open . esc_html__( 'Pages:', 'understrap' ) . $ul_open,
+			'after'  => '</ul></div>',
+		);
+
+		if ( ! empty( $deprecated_args ) ) {
+			$args = wp_parse_args( $deprecated_args, $args );
+		}
+
 		wp_link_pages( $args );
 	}
 }
