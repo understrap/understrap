@@ -40,11 +40,11 @@ if ( is_front_page() ) {
 					}
 					?>
 
-				</main><!-- #main -->
+				</main>
 
 			</div><!-- #primary -->
 
-		</div><!-- .row end -->
+		</div><!-- .row -->
 
 	</div><!-- #content -->
 

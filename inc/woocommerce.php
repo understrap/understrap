@@ -58,11 +58,11 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 	 * Display the theme specific end of the page wrapper.
 	 */
 	function understrap_woocommerce_wrapper_end() {
-		echo '</main><!-- #main -->';
+		echo '</main>';
 		get_template_part( 'global-templates/right-sidebar-check' );
 		echo '</div><!-- .row -->';
-		echo '</div><!-- Container end -->';
-		echo '</div><!-- Wrapper end -->';
+		echo '</div><!-- .container(-fluid) -->';
+		echo '</div><!-- #woocommerce-wrapper -->';
 	}
 }
 
