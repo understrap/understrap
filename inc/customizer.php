@@ -22,6 +22,11 @@ if ( ! function_exists( 'understrap_customize_register' ) ) {
 				$get_setting->transport = 'postMessage';
 			}
 		}
+
+		$custom_logo = $wp_customize->get_setting( 'custom_logo' );
+		if ( $custom_logo instanceof WP_Customize_Setting ) {
+			$custom_logo->transport = 'refresh';
+		}
 	}
 }
 add_action( 'customize_register', 'understrap_customize_register' );
@@ -191,6 +196,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 
+		$understrap_site_info = $wp_customize->get_setting( 'understrap_site_info_override' );
+		if ( $understrap_site_info instanceof WP_Customize_Setting ) {
+			$understrap_site_info->transport = 'postMessage';
+		}
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
@@ -231,11 +240,17 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	 * Setup JS integration for live previewing.
 	 */
 	function understrap_customize_preview_js() {
+		$file    = '/js/customizer.js';
+		$version = filemtime( get_template_directory() . $file );
+		if ( false === $version ) {
+			$version = time();
+		}
+
 		wp_enqueue_script(
 			'understrap_customizer',
-			get_template_directory_uri() . '/js/customizer.js',
+			get_template_directory_uri() . $file,
 			array( 'customize-preview' ),
-			'20130508',
+			(string) $version,
 			true
 		);
 	}
@@ -250,11 +265,17 @@ if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
 	 * Setup JS integration for live previewing.
 	 */
 	function understrap_customize_controls_js() {
+		$file    = '/js/customizer-controls.js';
+		$version = filemtime( get_template_directory() . $file );
+		if ( false === $version ) {
+			$version = time();
+		}
+
 		wp_enqueue_script(
 			'understrap_customizer',
-			get_template_directory_uri() . '/js/customizer-controls.js',
+			get_template_directory_uri() . $file,
 			array( 'customize-preview' ),
-			'20130508',
+			(string) $version,
 			true
 		);
 	}
