@@ -8,7 +8,6 @@
 
  ( function () {
 	let anchor = document.querySelector( '.navbar-brand' );
-	console.log(anchor.tagName);
 	if ( 'H1' === anchor.tagName ) {
 		anchor = anchor.firstChild;
 	}
