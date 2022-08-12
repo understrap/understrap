@@ -126,9 +126,7 @@ if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 
 		echo '<span class="comments-link">';
 		comments_popup_link(
-			esc_html__( 'Leave a comment', 'understrap' ),
-			esc_html__( '1 Comment', 'understrap' ),
-			esc_html__( '% Comments', 'understrap' )
+			esc_html__( 'Leave a comment', 'understrap' )
 		);
 		echo '</span>';
 	}
