@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-08-14T22:53:08+00:00\n"
-"PO-Revision-Date: 2022-08-15 12:53+0200\n"
+"PO-Revision-Date: 2022-08-15 19:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -37,11 +37,11 @@ msgstr ""
 
 #. Author of the theme
 msgid "Howard Development &amp; Consulting"
-msgstr ""
+msgstr "Howard Development &amp; Consulting"
 
 #. Author URI of the theme
 msgid "https://howarddc.com"
-msgstr ""
+msgstr "https://howarddc.com"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -60,7 +60,7 @@ msgstr "Categorie più utilizzate"
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Provare a consultare gli archivi mensili. %1$s"
+msgstr "Prova a guardare nell'archivio mensile. %1$s"
 
 #. translators: %s: author name
 #: author.php:42
@@ -86,27 +86,27 @@ msgstr "Articoli scritti da %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "Un commento su &ldquo;%s&rdquo;"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s commento su &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s commenti su &ldquo;%2$s&rdquo;"
 
 #: global-templates/navbar-collapse-bootstrap4.php:17
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr ""
+msgstr "Navigazione principale"
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Attiva/disattiva la navigazione"
 
 #: header.php:32
 msgid "Skip to content"
@@ -114,7 +114,7 @@ msgstr "Vai al contenuto"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "Aggiungi un menu"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -122,51 +122,51 @@ msgstr "I commenti sono chiusi."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
-msgstr ""
+msgstr "Immagine dell'header predefinita"
 
 #: inc/customizer.php:41
 msgid "Theme Layout Settings"
-msgstr ""
+msgstr "Impostazioni del layout del tema"
 
 #: inc/customizer.php:43
 msgid "Container width and sidebar defaults"
-msgstr ""
+msgstr "Barra lateral"
 
 #: inc/customizer.php:63
 msgid "Bootstrap Version"
-msgstr ""
+msgstr "Versione di Bootstrap"
 
 #: inc/customizer.php:64
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
-msgstr ""
+msgstr "Scegli tra la versione 4 e la versione 5 di Bootstrap"
 
 #: inc/customizer.php:68
 msgid "Bootstrap 4"
-msgstr ""
+msgstr "Bootstrap 4"
 
 #: inc/customizer.php:69
 msgid "Bootstrap 5"
-msgstr ""
+msgstr "Bootstrap 5"
 
 #: inc/customizer.php:91
 msgid "Container Width"
-msgstr ""
+msgstr "Larghezza container"
 
 #: inc/customizer.php:92
 msgid "Choose between Bootstrap's container and container-fluid"
-msgstr ""
+msgstr "Scegli tra il container e il container-fluid di Bootstrap"
 
 #: inc/customizer.php:96
 msgid "Fixed width container"
-msgstr ""
+msgstr "Container a larghezza fissa"
 
 #: inc/customizer.php:97
 msgid "Full width container"
-msgstr ""
+msgstr "Container a larghezza intera"
 
 #: inc/customizer.php:119
 msgid "Responsive Navigation Type"
-msgstr ""
+msgstr "Tipo di navigazione responsive"
 
 #: inc/customizer.php:120
 msgid ""
@@ -183,29 +183,32 @@ msgstr ""
 
 #: inc/customizer.php:151
 msgid "Sidebar Positioning"
-msgstr ""
+msgstr "Posizione barra laterale"
 
 #: inc/customizer.php:152
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
+"Imposta la posizione di default della barra laterale. Può essere: destra, "
+"sinistra, entrambe o nessuna. Nota: questa impostazione può essere "
+"sovrascritta individualmente in ogni pagina."
 
 #: inc/customizer.php:160
 msgid "Right sidebar"
-msgstr ""
+msgstr "Barra laterale destra"
 
 #: inc/customizer.php:161
 msgid "Left sidebar"
-msgstr ""
+msgstr "Barra laterale sinistra"
 
 #: inc/customizer.php:162
 msgid "Left & Right sidebars"
-msgstr ""
+msgstr "Barra laterale sinistra & destra"
 
 #: inc/customizer.php:163
 msgid "No sidebar"
-msgstr ""
+msgstr "Nessuna barra laterale"
 
 #: inc/customizer.php:185
 msgid "Footer Site Info"
@@ -223,11 +226,11 @@ msgstr ""
 
 #: inc/deprecated.php:95
 msgid "Previous"
-msgstr ""
+msgstr "Precedente"
 
 #: inc/deprecated.php:96
 msgid "Next"
-msgstr ""
+msgstr "Successivo"
 
 #: inc/deprecated.php:97
 msgid "About:"
@@ -235,23 +238,23 @@ msgstr ""
 
 #: inc/deprecated.php:98
 msgid "Profile"
-msgstr ""
+msgstr "Profilo"
 
 #: inc/deprecated.php:99
 msgid "Posts by"
-msgstr ""
+msgstr "Articoli scritti da"
 
 #: inc/deprecated.php:100
 msgid "Permanent Link:"
-msgstr ""
+msgstr "Link permanente:"
 
 #: inc/deprecated.php:101
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: inc/deprecated.php:102
 msgid "Edit"
-msgstr ""
+msgstr "Modifica"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -260,11 +263,11 @@ msgstr ""
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "Piccolo"
 
 #: inc/editor.php:60
 msgid "Blockquote"
-msgstr ""
+msgstr "Citazione"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
@@ -276,7 +279,7 @@ msgstr ""
 
 #: inc/extras.php:290
 msgid "Read More..."
-msgstr "Leggi tutto..."
+msgstr "Leggi di più..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -295,19 +298,19 @@ msgstr "Tema: %1$s di %2$s."
 #. translators: Theme version
 #: inc/hooks.php:44
 msgid "Version: %1$s"
-msgstr ""
+msgstr "Versione: %1$s"
 
 #: inc/pagination.php:53
 msgid "&laquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: inc/pagination.php:54
 msgid "&raquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
-msgstr ""
+msgstr "Navigazione articoli"
 
 #: inc/setup.php:49
 msgid "Primary Menu"
@@ -316,17 +319,17 @@ msgstr "Menù Principale"
 #: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
-msgstr ""
+msgstr "Pubblicato il"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "by"
-msgstr ""
+msgstr "di"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "Posted by"
-msgstr ""
+msgstr "Pubblicato da"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:96 inc/template-tags.php:110
@@ -336,20 +339,20 @@ msgstr ", "
 #. translators: %s: Categories of current post
 #: inc/template-tags.php:99
 msgid "Posted in %s"
-msgstr ""
+msgstr "Pubblicato in %s"
 
 #. translators: %s: Tags of current post
 #: inc/template-tags.php:113
 msgid "Tagged %s"
-msgstr ""
+msgstr "Taggato %s"
 
 #: inc/template-tags.php:129
 msgid "Leave a comment"
-msgstr "Commenta"
+msgstr "Lascia un commento"
 
 #: inc/template-tags.php:130
 msgid "1 Comment"
-msgstr "1 Commento"
+msgstr "1 commento"
 
 #: inc/template-tags.php:131
 msgid "% Comments"
@@ -374,17 +377,17 @@ msgstr "Modifica %s"
 
 #: inc/template-tags.php:285
 msgid "Post navigation"
-msgstr ""
+msgstr "Navigazione articoli"
 
 #: inc/template-tags.php:289
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr ""
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
 #: inc/template-tags.php:292
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr ""
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/template-tags.php:313
 msgid "Pages:"
@@ -392,23 +395,23 @@ msgstr "Pagine:"
 
 #: inc/widgets.php:196
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Barra laterale destra"
 
 #: inc/widgets.php:198
 msgid "Right sidebar widget area"
-msgstr ""
+msgstr "Area widget barra laterale destra"
 
 #: inc/widgets.php:208
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Barra laterale sinistra"
 
 #: inc/widgets.php:210
 msgid "Left sidebar widget area"
-msgstr ""
+msgstr "Area widget barra laterale sinistra"
 
 #: inc/widgets.php:220
 msgid "Hero Slider"
-msgstr "Blocco Iniziale con Carosello "
+msgstr "Blocco Iniziale con Carosello"
 
 #: inc/widgets.php:222
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
@@ -428,7 +431,7 @@ msgstr ""
 
 #: inc/widgets.php:246
 msgid "Full top widget with dynamic grid"
-msgstr ""
+msgstr "Widget alto a tutta larghezza con griglia dinamica"
 
 #: inc/widgets.php:256
 msgid "Footer Full"
@@ -436,7 +439,7 @@ msgstr "Piè di pagina Larghezza Intera"
 
 #: inc/widgets.php:258
 msgid "Full sized footer widget with dynamic grid"
-msgstr ""
+msgstr "Widget del footer a tutta larghezza con griglia dinamica"
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
@@ -447,7 +450,7 @@ msgstr "Nessun risultato"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Pronto per pubblicare il tuo primo articolo? <a href=\"%1$s\">Inizia da qui</"
+"Pronto a pubblicare il tuo primo articolo? <a href=\"%1$s\">Inizia da qui</"
 "a>."
 
 #: loop-templates/content-none.php:38
@@ -468,11 +471,11 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Blank Page Template"
-msgstr ""
+msgstr "Template di pagina vuoto"
 
 #. Template Name of the theme
 msgid "Left and Right Sidebar Layout"
-msgstr ""
+msgstr "Layout barra laterale a sinitra e destra"
 
 #. Template Name of the theme
 msgid "Empty Page Template"
@@ -480,15 +483,15 @@ msgstr "Template Pagina Vuota"
 
 #. Template Name of the theme
 msgid "Full Width Page"
-msgstr "Pagina a Larghezza Intera"
+msgstr "Pagina larghezza intera"
 
 #. Template Name of the theme
 msgid "Left Sidebar Layout"
-msgstr ""
+msgstr "Layout barra laterale a sinistra"
 
 #. Template Name of the theme
 msgid "Right Sidebar Layout"
-msgstr ""
+msgstr "Layout barra laterale a destra"
 
 #. translators: %s: query term
 #: search.php:36
@@ -513,9 +516,9 @@ msgstr "Cerca"
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr ""
+msgstr "Precedente"
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"
 msgid "Next"
-msgstr ""
+msgstr "Successivo"
