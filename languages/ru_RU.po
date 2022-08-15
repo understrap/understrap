@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
-"PO-Revision-Date: 2022-08-15 20:16+0200\n"
+"POT-Creation-Date: 2022-08-21T09:20:07+00:00\n"
+"PO-Revision-Date: 2022-08-21 11:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -103,13 +103,13 @@ msgstr[2] ""
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr ""
+msgstr "Меню навигации"
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Переключить навигацию"
 
 #: header.php:32
 msgid "Skip to content"
@@ -117,7 +117,7 @@ msgstr "Перейти к содержимому"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "Добавить меню"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -230,11 +230,11 @@ msgstr ""
 
 #: inc/deprecated.php:96
 msgid "Previous"
-msgstr ""
+msgstr "Ранее"
 
 #: inc/deprecated.php:97
 msgid "Next"
-msgstr ""
+msgstr "Далее"
 
 #: inc/deprecated.php:98
 msgid "About:"
@@ -259,6 +259,14 @@ msgstr ""
 #: inc/deprecated.php:103
 msgid "Edit"
 msgstr ""
+
+#: inc/deprecated.php:104
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/deprecated.php:105
+msgid "&raquo;"
+msgstr "&laquo;"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -305,12 +313,14 @@ msgid "Version: %1$s"
 msgstr "Версия: %1$s"
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
@@ -318,7 +328,7 @@ msgstr "Навигация по записям"
 
 #: inc/setup.php:49
 msgid "Primary Menu"
-msgstr "Главное меню"
+msgstr "Основное меню"
 
 #: inc/template-tags.php:41
 msgctxt "post date"
@@ -368,11 +378,11 @@ msgstr "Навигация по комментариям"
 
 #: inc/template-tags.php:233
 msgid "&larr; Older Comments"
-msgstr "&larr; Старые комментарии"
+msgstr "&larr; Предыдущие комментарии"
 
 #: inc/template-tags.php:239
 msgid "Newer Comments &rarr;"
-msgstr "Свежие комментарии &rarr;"
+msgstr "Более новые комментарии &rarr;"
 
 #. translators: %s: Name of current post
 #: inc/template-tags.php:256
@@ -519,7 +529,7 @@ msgstr "Поиск"
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr "Назад"
+msgstr "Ранее"
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"

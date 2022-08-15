@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
-"PO-Revision-Date: 2022-08-15 19:26+0200\n"
+"POT-Creation-Date: 2022-08-21T09:20:07+00:00\n"
+"PO-Revision-Date: 2022-08-21 11:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: stef.kariotidis@gmail.com\n"
 "Language: el_GR\n"
@@ -227,11 +227,11 @@ msgstr ""
 
 #: inc/deprecated.php:96
 msgid "Previous"
-msgstr ""
+msgstr "Προηγούμενη"
 
 #: inc/deprecated.php:97
 msgid "Next"
-msgstr ""
+msgstr "Επόμενη"
 
 #: inc/deprecated.php:98
 msgid "About:"
@@ -256,6 +256,14 @@ msgstr ""
 #: inc/deprecated.php:103
 msgid "Edit"
 msgstr ""
+
+#: inc/deprecated.php:104
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/deprecated.php:105
+msgid "&raquo;"
+msgstr "&raquo;"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -302,12 +310,14 @@ msgid "Version: %1$s"
 msgstr "Έκδοση: %1$s"
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
 msgstr "&laquo;"
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
-msgstr "&laquo;"
+msgstr "&raquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
@@ -315,7 +325,7 @@ msgstr "Πλοήγηση άρθρων"
 
 #: inc/setup.php:49
 msgid "Primary Menu"
-msgstr "Κυρίως Μενού"
+msgstr "Κύριο Μενού"
 
 #: inc/template-tags.php:41
 msgctxt "post date"
@@ -365,7 +375,7 @@ msgstr "Πλοήγηση στα σχόλια"
 
 #: inc/template-tags.php:233
 msgid "&larr; Older Comments"
-msgstr "&larr; Παλαιότερα Σχόλια"
+msgstr "&larr; Παλιότερα Σχόλια"
 
 #: inc/template-tags.php:239
 msgid "Newer Comments &rarr;"
@@ -515,9 +525,9 @@ msgstr "Αναζήτηση"
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr "Προηγούμενο"
+msgstr "Προηγούμενη"
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"
 msgid "Next"
-msgstr "Επόμενο"
+msgstr "Επόμενη"

@@ -101,5 +101,7 @@ function deprecated_translations() {
 		__( 'Permanent Link:', 'understrap' ),
 		__( 'in', 'understrap' ),
 		__( 'Edit', 'understrap' ),
+		__( '&laquo;', 'understrap' ),
+		__( '&raquo;', 'understrap' ),
 	);
 }

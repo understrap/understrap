@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
-"PO-Revision-Date: 2022-08-15 20:00+0200\n"
+"POT-Creation-Date: 2022-08-21T09:20:07+00:00\n"
+"PO-Revision-Date: 2022-08-21 11:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -99,13 +99,13 @@ msgstr[1] ""
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr ""
+msgstr "Hovednavigasjon"
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Veksle navigasjon"
 
 #: header.php:32
 msgid "Skip to content"
@@ -113,7 +113,7 @@ msgstr "Hopp til innhold"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "Legg til meny"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -230,7 +230,7 @@ msgstr "Forrige"
 
 #: inc/deprecated.php:97
 msgid "Next"
-msgstr ""
+msgstr "Neste"
 
 #: inc/deprecated.php:98
 msgid "About:"
@@ -255,6 +255,14 @@ msgstr ""
 #: inc/deprecated.php:103
 msgid "Edit"
 msgstr ""
+
+#: inc/deprecated.php:104
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/deprecated.php:105
+msgid "&raquo;"
+msgstr "&raquo;"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -301,12 +309,14 @@ msgid "Version: %1$s"
 msgstr "Versjon: %1$s"
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
@@ -516,7 +526,7 @@ msgstr "Søk"
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr ""
+msgstr "Forrige"
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
-"PO-Revision-Date: 2022-08-15 20:22+0200\n"
+"POT-Creation-Date: 2022-08-21T09:20:07+00:00\n"
+"PO-Revision-Date: 2022-08-21 11:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sl_SI\n"
@@ -103,14 +103,15 @@ msgstr[3] ""
 #: global-templates/navbar-collapse-bootstrap4.php:17
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
+#, fuzzy
 msgid "Main Navigation"
-msgstr ""
+msgstr "Glavna navigacija"
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Preklopi navigacijo"
 
 #: header.php:32
 msgid "Skip to content"
@@ -118,7 +119,7 @@ msgstr "Preskoči na vsebino"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "Doda meni"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -233,11 +234,11 @@ msgstr ""
 
 #: inc/deprecated.php:96
 msgid "Previous"
-msgstr ""
+msgstr "Nazaj"
 
 #: inc/deprecated.php:97
 msgid "Next"
-msgstr ""
+msgstr "Naprej"
 
 #: inc/deprecated.php:98
 msgid "About:"
@@ -262,6 +263,14 @@ msgstr ""
 #: inc/deprecated.php:103
 msgid "Edit"
 msgstr ""
+
+#: inc/deprecated.php:104
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/deprecated.php:105
+msgid "&raquo;"
+msgstr "&raquo;"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -308,12 +317,14 @@ msgid "Version: %1$s"
 msgstr "Verzija: %1$s"
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
@@ -522,9 +533,9 @@ msgstr "Išči"
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr "Prejšnji"
+msgstr "Nazaj"
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"
 msgid "Next"
-msgstr "Naslednji"
+msgstr "Naprej"
