@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-08-14T22:53:08+00:00\n"
-"PO-Revision-Date: 2022-08-15 12:52+0200\n"
+"PO-Revision-Date: 2022-08-15 17:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -34,6 +34,9 @@ msgid ""
 "Bootstrap. Trusted by more than 100,000 developers for building handcrafted, "
 "custom WordPress sites."
 msgstr ""
+"Le célèbre starter thème WordPress qui combine Underscores et Bootstrap. "
+"Utilisé par plus de 100 000 développeurs et développeuses pour créer des "
+"sites WordPress sur mesure et personnalisés."
 
 #. Author of the theme
 msgid "Howard Development &amp; Consulting"
@@ -51,7 +54,7 @@ msgstr "Aïe ! Cette page est introuvable."
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une "
-"recherche ?"
+"recherche ?"
 
 #: 404.php:46
 msgid "Most Used Categories"
@@ -66,7 +69,7 @@ msgstr "Essayez de voir du côté des archives mensuelles. %1$s"
 #: author.php:42
 msgctxt "Avatar alt"
 msgid "Profile picture of %s"
-msgstr "Illustration du profil de %s"
+msgstr "Photo de profil de %s"
 
 #: author.php:52
 msgid "Website"
@@ -75,7 +78,7 @@ msgstr "Site web"
 #. translators: %s: author name
 #: author.php:63
 msgid "About %s"
-msgstr "A propos %s"
+msgstr "À propos de %s"
 
 #. translators: %s: author name
 #: author.php:77
@@ -86,15 +89,15 @@ msgstr "Articles par %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr "Une réflexion sur « %s »"
+msgstr "Un commentaire sur « %s »"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s réflexion sur « %2$s »"
-msgstr[1] "%1$s réflexions sur « %2$s »"
+msgstr[0] "%1$s commentaire sur « %2$s »"
+msgstr[1] "%1$s commentaires sur « %2$s »"
 
 #: global-templates/navbar-collapse-bootstrap4.php:17
 #: global-templates/navbar-collapse-bootstrap5.php:17
@@ -106,7 +109,7 @@ msgstr "Navigation principale"
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr "Permuter la navigation"
+msgstr "Afficher/masquer la navigation"
 
 #: header.php:32
 msgid "Skip to content"
@@ -118,7 +121,7 @@ msgstr "Ajouter un menu"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
-msgstr "Les commentaires sont fermés."
+msgstr "Les commentaires sont désactivés."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
@@ -126,19 +129,19 @@ msgstr "Image d’en-tête par défaut"
 
 #: inc/customizer.php:41
 msgid "Theme Layout Settings"
-msgstr "Paramètres du layout"
+msgstr "Réglages de la mise en page du thème"
 
 #: inc/customizer.php:43
 msgid "Container width and sidebar defaults"
-msgstr "Paramètrage du conteneur"
+msgstr "Largeur du conteneur et colonne latérale par défaut"
 
 #: inc/customizer.php:63
 msgid "Bootstrap Version"
-msgstr "Bootstrap Version"
+msgstr "Version de Bootstrap"
 
 #: inc/customizer.php:64
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
-msgstr ""
+msgstr "Choisissez entre Bootstrap 4 ou Bootstrap 5"
 
 #: inc/customizer.php:68
 msgid "Bootstrap 4"
@@ -154,42 +157,47 @@ msgstr "Largeur du conteneur"
 
 #: inc/customizer.php:92
 msgid "Choose between Bootstrap's container and container-fluid"
-msgstr "Choisir entre le conteneur Bootstrap ou 'container-fluid'"
+msgstr "Choisissez entre le conteneur de Bootstrap et le conteneur-fluide"
 
 #: inc/customizer.php:96
 msgid "Fixed width container"
-msgstr "Conteneur de largeur fixe"
+msgstr "Largeur de conteneur fixe"
 
 #: inc/customizer.php:97
 msgid "Full width container"
-msgstr "Conteneur de pleine largeur"
+msgstr "Conteneur en pleine largeur"
 
 #: inc/customizer.php:119
 msgid "Responsive Navigation Type"
-msgstr ""
+msgstr "Type de navigation responsive"
 
 #: inc/customizer.php:120
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
+"Choisissez entre une barre de navigation extensible et rétractable ou un "
+"tiroir hors canevas."
 
 #: inc/customizer.php:128
 msgid "Collapse"
-msgstr ""
+msgstr "Replier"
 
 #: inc/customizer.php:129
 msgid "Offcanvas"
-msgstr ""
+msgstr "Hors champ"
 
 #: inc/customizer.php:151
 msgid "Sidebar Positioning"
-msgstr "Positionnement des sidebars"
+msgstr "Position de la colonne latérale"
 
 #: inc/customizer.php:152
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
+"Définissez la position par défaut de la colonne latérale. Elle peut être : à "
+"droite, à gauche, des deux cotés ou inexistante. Note : ceci peut être "
+"surclassé sur les pages individuelles."
 
 #: inc/customizer.php:160
 msgid "Right sidebar"
@@ -201,57 +209,60 @@ msgstr "Colonne latérale gauche"
 
 #: inc/customizer.php:162
 msgid "Left & Right sidebars"
-msgstr "Colonne latérale gauche et droite"
+msgstr "Colonnes latérales gauche et droite"
 
 #: inc/customizer.php:163
 msgid "No sidebar"
-msgstr "Pas de sidebar"
+msgstr "Aucune colonne latérale"
 
 #: inc/customizer.php:185
 msgid "Footer Site Info"
-msgstr ""
+msgstr "Information sur le pied de page du site"
 
 #: inc/customizer.php:186
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
+"Modifier les informations du site d’Understrap localisé dans le pied de page."
 
 #: inc/deprecated.php:94
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Il semble que rien n’ait été trouvé à cet emplacement. Essayez peut-être "
+"l’un des liens ci-dessous ou une recherche ?"
 
 #: inc/deprecated.php:95
 msgid "Previous"
-msgstr ""
+msgstr "Précédent"
 
 #: inc/deprecated.php:96
 msgid "Next"
-msgstr ""
+msgstr "Suivant"
 
 #: inc/deprecated.php:97
 msgid "About:"
-msgstr ""
+msgstr "À propos :"
 
 #: inc/deprecated.php:98
 msgid "Profile"
-msgstr ""
+msgstr "Profil"
 
 #: inc/deprecated.php:99
 msgid "Posts by"
-msgstr ""
+msgstr "Articles par"
 
 #: inc/deprecated.php:100
 msgid "Permanent Link:"
-msgstr ""
+msgstr "Lien permanent :"
 
 #: inc/deprecated.php:101
 msgid "in"
-msgstr ""
+msgstr "dans"
 
 #: inc/deprecated.php:102
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -260,7 +271,7 @@ msgstr ""
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "Petite"
 
 #: inc/editor.php:60
 msgid "Blockquote"
@@ -272,11 +283,11 @@ msgstr ""
 
 #: inc/editor.php:72
 msgid "Cite"
-msgstr ""
+msgstr "Citation"
 
 #: inc/extras.php:290
 msgid "Read More..."
-msgstr "Lire la suite..."
+msgstr "Lire la suite…"
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
@@ -285,25 +296,25 @@ msgstr "https://fr.wordpress.org/"
 #. translators: WordPress
 #: inc/hooks.php:33
 msgid "Proudly powered by %s"
-msgstr "Propulsé par %s"
+msgstr "Fièrement propulsé par %s"
 
 #. translators: 1: Theme name, 2: Theme author
 #: inc/hooks.php:38
 msgid "Theme: %1$s by %2$s."
-msgstr "Thème: %1$s par %2$s."
+msgstr "Thème : %1$s par %2$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
 msgid "Version: %1$s"
-msgstr "Version: %1$s"
+msgstr "Version : %1$s"
 
 #: inc/pagination.php:53
 msgid "&laquo;"
-msgstr "« "
+msgstr "&laquo;"
 
 #: inc/pagination.php:54
 msgid "&raquo;"
-msgstr " »"
+msgstr "&raquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
@@ -316,17 +327,17 @@ msgstr "Menu principal"
 #: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
-msgstr ""
+msgstr "Publié le"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "by"
-msgstr ""
+msgstr "par"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "Posted by"
-msgstr ""
+msgstr "Publié par"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:96 inc/template-tags.php:110
@@ -345,19 +356,19 @@ msgstr "Étiqueté %s"
 
 #: inc/template-tags.php:129
 msgid "Leave a comment"
-msgstr "Réagir"
+msgstr "Laisser un commentaire"
 
 #: inc/template-tags.php:130
 msgid "1 Comment"
-msgstr "1 Commentaire"
+msgstr "Un commentaire"
 
 #: inc/template-tags.php:131
 msgid "% Comments"
-msgstr "% Commentaires"
+msgstr "% commentaires"
 
 #: inc/template-tags.php:229
 msgid "Comment navigation"
-msgstr "Naviguer dans les commentaires"
+msgstr "Navigation des commentaires"
 
 #: inc/template-tags.php:233
 msgid "&larr; Older Comments"
@@ -365,7 +376,7 @@ msgstr "&larr; Commentaire moins récent"
 
 #: inc/template-tags.php:239
 msgid "Newer Comments &rarr;"
-msgstr "Commentaire plus récent &rarr;"
+msgstr "Commentaires plus récents &rarr;"
 
 #. translators: %s: Name of current post
 #: inc/template-tags.php:256
@@ -374,7 +385,7 @@ msgstr "Modifier %s"
 
 #: inc/template-tags.php:285
 msgid "Post navigation"
-msgstr "Navigation"
+msgstr "Navigation des articles"
 
 #: inc/template-tags.php:289
 msgctxt "Previous post link"
@@ -408,46 +419,49 @@ msgstr ""
 
 #: inc/widgets.php:220
 msgid "Hero Slider"
-msgstr "Héro dynamique"
+msgstr "Diaporama Hero"
 
 #: inc/widgets.php:222
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
+"Zone de diaporama Hero. Placez deux widgets ou plus et ils défileront !"
 
 #: inc/widgets.php:232
 msgid "Hero Canvas"
-msgstr ""
+msgstr "Canvas du Hero"
 
 #: inc/widgets.php:234
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
+"Zone Hero en pleine largeur pour Bootstrap et d‘autres balises HTML "
+"personnalisées"
 
 #: inc/widgets.php:244
 msgid "Top Full"
-msgstr ""
+msgstr "Haut pleine largeur"
 
 #: inc/widgets.php:246
 msgid "Full top widget with dynamic grid"
-msgstr ""
+msgstr "Widget d‘en-tête en pleine taille avec une grille dynamique"
 
 #: inc/widgets.php:256
 msgid "Footer Full"
-msgstr "Pied pleine page"
+msgstr "Pied de page entier"
 
 #: inc/widgets.php:258
 msgid "Full sized footer widget with dynamic grid"
-msgstr ""
+msgstr "Widget de pied de page pleine taille avec une grille dynamique"
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
-msgstr "Rien de trouvé"
+msgstr "Rien n’a été trouvé"
 
 #. translators: 1: Link to WP admin new post page.
 #: loop-templates/content-none.php:30
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt·e à publier votre premier article ? <a href=\"%1$s\">Lancez-vous ici</"
+"Prêt·e à publier votre premier article ? <a href=\"%1$s\">Lancez-vous ici</"
 "a>."
 
 #: loop-templates/content-none.php:38
@@ -463,16 +477,16 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. "
-"Essayez en lançant une recherche."
+"Il semblerait que nous ne pouvons trouver ce que vous cherchez. Une "
+"recherche pourrait vous être utile."
 
 #. Template Name of the theme
 msgid "Blank Page Template"
-msgstr "Modèle sans formattage"
+msgstr "Modèle de page blanche"
 
 #. Template Name of the theme
 msgid "Left and Right Sidebar Layout"
-msgstr "Colonnes à gauche et à droite"
+msgstr ""
 
 #. Template Name of the theme
 msgid "Empty Page Template"
@@ -480,7 +494,7 @@ msgstr "Modèle de page vide"
 
 #. Template Name of the theme
 msgid "Full Width Page"
-msgstr "Page pleine largeur"
+msgstr "Page en pleine largeur"
 
 #. Template Name of the theme
 msgid "Left Sidebar Layout"
@@ -493,7 +507,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour : %s"
+msgstr "Résultats de recherche pour : %s"
 
 #: searchform.php:21
 msgctxt "label"
@@ -518,4 +532,4 @@ msgstr "Précédent"
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"
 msgid "Next"
-msgstr "Prochain"
+msgstr "Suivant"
