@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-08-14T22:53:08+00:00\n"
-"PO-Revision-Date: 2022-08-15 12:53+0200\n"
+"PO-Revision-Date: 2022-08-15 19:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://howarddc.com"
-msgstr ""
+msgstr "https://howarddc.com"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -98,13 +98,13 @@ msgstr[1] "מחשבות על &ldquo;%2$s&rdquo;"
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr ""
+msgstr "ניווט ראשי"
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr ""
+msgstr "לשנות את הניווט"
 
 #: header.php:32
 msgid "Skip to content"
@@ -112,7 +112,7 @@ msgstr "לדלג לתוכן"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "תפריט חדש"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -260,11 +260,11 @@ msgstr ""
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "קטן"
 
 #: inc/editor.php:60
 msgid "Blockquote"
-msgstr ""
+msgstr "ציטוט"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
@@ -295,19 +295,19 @@ msgstr "ערכת עיצוב: %1$s מבוסס  %2$s."
 #. translators: Theme version
 #: inc/hooks.php:44
 msgid "Version: %1$s"
-msgstr "גירסה:% 1"
+msgstr "גירסה: %1$s"
 
 #: inc/pagination.php:53
 msgid "&laquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: inc/pagination.php:54
 msgid "&raquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
-msgstr ""
+msgstr "ניווט"
 
 #: inc/setup.php:49
 msgid "Primary Menu"
@@ -331,17 +331,17 @@ msgstr ""
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:96 inc/template-tags.php:110
 msgid ", "
-msgstr ","
+msgstr ", "
 
 #. translators: %s: Categories of current post
 #: inc/template-tags.php:99
 msgid "Posted in %s"
-msgstr ""
+msgstr "פורסם ב: %1$s"
 
 #. translators: %s: Tags of current post
 #: inc/template-tags.php:113
 msgid "Tagged %s"
-msgstr ""
+msgstr "תוייג %s"
 
 #: inc/template-tags.php:129
 msgid "Leave a comment"
@@ -379,13 +379,12 @@ msgstr "ניווט בפרסומים"
 #: inc/template-tags.php:289
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/template-tags.php:292
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr ""
-"Read More&nbsp;<i class=\\\"dashicons dashicons-arrow-right-alt\\\"></i>"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
 #: inc/template-tags.php:313
 msgid "Pages:"
