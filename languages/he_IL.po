@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
-"PO-Revision-Date: 2022-08-15 19:29+0200\n"
+"PO-Revision-Date: 2022-08-15 19:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -378,7 +378,7 @@ msgstr "ערוך את %s"
 
 #: inc/template-tags.php:285
 msgid "Post navigation"
-msgstr "ניווט בפרסומים"
+msgstr "ניווט"
 
 #: inc/template-tags.php:289
 msgctxt "Previous post link"
