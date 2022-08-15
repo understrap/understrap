@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-14T22:53:08+00:00\n"
-"PO-Revision-Date: 2022-08-15 16:26+0200\n"
+"POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
+"PO-Revision-Date: 2022-08-15 19:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -225,6 +225,10 @@ msgstr ""
 "Anula la información del sitio de Understrap ubicada en el pie de página."
 
 #: inc/deprecated.php:94
+msgid "Comment navigation"
+msgstr "Navegación de comentarios"
+
+#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -232,35 +236,35 @@ msgstr ""
 "Parece que no se ha encontrado nada en esta ubicación. ¿Por qué no pruebas "
 "con uno de estos enlaces o haciendo una búsqueda?"
 
-#: inc/deprecated.php:95
+#: inc/deprecated.php:96
 msgid "Previous"
 msgstr "Anterior"
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:97
 msgid "Next"
 msgstr "Siguiente"
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:98
 msgid "About:"
 msgstr "Acerca de:"
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:99
 msgid "Profile"
 msgstr "Perfil"
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:100
 msgid "Posts by"
 msgstr "Entradas de"
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:101
 msgid "Permanent Link:"
 msgstr "Enlace permanente:"
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:102
 msgid "in"
 msgstr "en"
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:103
 msgid "Edit"
 msgstr "Editar"
 
@@ -367,7 +371,7 @@ msgid "% Comments"
 msgstr "% comentarios"
 
 #: inc/template-tags.php:229
-msgid "Comment navigation"
+msgid "Comments navigation"
 msgstr "Navegación de comentarios"
 
 #: inc/template-tags.php:233
@@ -518,7 +522,7 @@ msgstr "Buscar:"
 #: searchform.php:23
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr "Buscar..."
+msgstr "Buscar &hellip;"
 
 #: searchform.php:25 searchform.php:28
 msgctxt "submit button"

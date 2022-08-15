@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-14T22:53:08+00:00\n"
-"PO-Revision-Date: 2022-08-15 17:04+0200\n"
+"POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
+"PO-Revision-Date: 2022-08-15 19:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -225,6 +225,10 @@ msgstr ""
 "Modifier les informations du site d’Understrap localisé dans le pied de page."
 
 #: inc/deprecated.php:94
+msgid "Comment navigation"
+msgstr "Navigation des commentaires"
+
+#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -232,35 +236,35 @@ msgstr ""
 "Il semble que rien n’ait été trouvé à cet emplacement. Essayez peut-être "
 "l’un des liens ci-dessous ou une recherche ?"
 
-#: inc/deprecated.php:95
+#: inc/deprecated.php:96
 msgid "Previous"
 msgstr "Précédent"
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:97
 msgid "Next"
 msgstr "Suivant"
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:98
 msgid "About:"
 msgstr "À propos :"
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:99
 msgid "Profile"
 msgstr "Profil"
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:100
 msgid "Posts by"
 msgstr "Articles par"
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:101
 msgid "Permanent Link:"
 msgstr "Lien permanent :"
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:102
 msgid "in"
 msgstr "dans"
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:103
 msgid "Edit"
 msgstr "Modifier"
 
@@ -367,7 +371,7 @@ msgid "% Comments"
 msgstr "% commentaires"
 
 #: inc/template-tags.php:229
-msgid "Comment navigation"
+msgid "Comments navigation"
 msgstr "Navigation des commentaires"
 
 #: inc/template-tags.php:233

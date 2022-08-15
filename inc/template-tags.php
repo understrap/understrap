@@ -226,7 +226,7 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 		?>
 		<nav class="comment-navigation" id="<?php echo esc_attr( $nav_id ); ?>">
 
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Comments navigation', 'understrap' ); ?></h1>
 
 			<?php if ( get_previous_comments_link() ) { ?>
 				<div class="nav-previous">

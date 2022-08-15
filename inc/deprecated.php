@@ -91,6 +91,7 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
  */
 function deprecated_translations() {
 	array(
+		__( 'Comment navigation', 'understrap' ),
 		__( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ),
 		__( 'Previous', 'understrap' ),
 		__( 'Next', 'understrap' ),

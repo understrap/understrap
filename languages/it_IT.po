@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-14T22:53:08+00:00\n"
-"PO-Revision-Date: 2022-08-15 19:01+0200\n"
+"POT-Creation-Date: 2022-08-15T17:24:38+00:00\n"
+"PO-Revision-Date: 2022-08-15 19:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -219,40 +219,44 @@ msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
+msgid "Comment navigation"
+msgstr "Navigazione commenti"
+
+#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:95
+#: inc/deprecated.php:96
 msgid "Previous"
 msgstr "Precedente"
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:97
 msgid "Next"
 msgstr "Successivo"
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:98
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:99
 msgid "Profile"
 msgstr "Profilo"
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:100
 msgid "Posts by"
 msgstr "Articoli scritti da"
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:101
 msgid "Permanent Link:"
 msgstr "Link permanente:"
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:102
 msgid "in"
 msgstr "in"
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:103
 msgid "Edit"
 msgstr "Modifica"
 
@@ -359,7 +363,7 @@ msgid "% Comments"
 msgstr "% Commenti"
 
 #: inc/template-tags.php:229
-msgid "Comment navigation"
+msgid "Comments navigation"
 msgstr "Navigazione commenti"
 
 #: inc/template-tags.php:233
