@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-08-14T22:53:08+00:00\n"
-"PO-Revision-Date: 2022-08-15 01:24+0200\n"
+"PO-Revision-Date: 2022-08-15 02:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: stef.kariotidis@gmail.com\n"
 "Language: el_GR\n"
@@ -62,11 +62,11 @@ msgstr ""
 
 #. Author of the theme
 msgid "Howard Development &amp; Consulting"
-msgstr ""
+msgstr "Howard Development &amp; Consulting"
 
 #. Author URI of the theme
 msgid "https://howarddc.com"
-msgstr ""
+msgstr "https://howarddc.com"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -111,27 +111,27 @@ msgstr "Άρθρα του/της %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "Μια σκέψη στο &ldquo;%s&rdquo;"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s σκέψη σχετικά μέ το &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s σκέψεις σχετικά με το &ldquo;%2$s&rdquo;"
 
 #: global-templates/navbar-collapse-bootstrap4.php:17
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr ""
+msgstr "Κύριο μενού πλοήγησης"
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Εναλλαγή πλοήγησης"
 
 #: header.php:32
 msgid "Skip to content"
@@ -139,7 +139,7 @@ msgstr "Μετάβαση στο περιεχόμενο"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "Προσθήκη μενού"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -159,7 +159,7 @@ msgstr "Πλάτος Διάταξης και Προεπιλογές Εργαλε
 
 #: inc/customizer.php:63
 msgid "Bootstrap Version"
-msgstr ""
+msgstr "Έκδοση Bootstrap"
 
 #: inc/customizer.php:64
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
@@ -167,11 +167,11 @@ msgstr ""
 
 #: inc/customizer.php:68
 msgid "Bootstrap 4"
-msgstr ""
+msgstr "Bootstrap 4"
 
 #: inc/customizer.php:69
 msgid "Bootstrap 5"
-msgstr ""
+msgstr "Bootstrap 5"
 
 #: inc/customizer.php:91
 msgid "Container Width"
@@ -285,11 +285,11 @@ msgstr ""
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "Μικρό"
 
 #: inc/editor.php:60
 msgid "Blockquote"
-msgstr ""
+msgstr "Παράθεμα"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
@@ -324,15 +324,15 @@ msgstr "Έκδοση: %1$s"
 
 #: inc/pagination.php:53
 msgid "&laquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:54
 msgid "&raquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
-msgstr ""
+msgstr "Πλοήγηση άρθρων"
 
 #: inc/setup.php:49
 msgid "Primary Menu"
@@ -361,12 +361,12 @@ msgstr ", "
 #. translators: %s: Categories of current post
 #: inc/template-tags.php:99
 msgid "Posted in %s"
-msgstr ""
+msgstr "Αναρτήθηκε σε %s"
 
 #. translators: %s: Tags of current post
 #: inc/template-tags.php:113
 msgid "Tagged %s"
-msgstr ""
+msgstr "Με ετικέτα: %s"
 
 #: inc/template-tags.php:129
 msgid "Leave a comment"
@@ -399,7 +399,7 @@ msgstr "Επεξεργασία %s"
 
 #: inc/template-tags.php:285
 msgid "Post navigation"
-msgstr "Πλοήγηση στα Άρθρα"
+msgstr "Πλοήγηση άρθρων"
 
 #: inc/template-tags.php:289
 msgctxt "Previous post link"
