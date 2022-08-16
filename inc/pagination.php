@@ -80,7 +80,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			<ul class="<?php echo esc_attr( $class ); ?>">
 
 				<?php
-				foreach ( $links as $key => $link ) {
+				foreach ( $links as $link ) {
 					?>
 					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
 						<?php
