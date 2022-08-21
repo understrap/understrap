@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-08-21T09:20:07+00:00\n"
-"PO-Revision-Date: 2022-08-21 11:25+0200\n"
+"PO-Revision-Date: 2022-08-21 23:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
@@ -350,7 +350,7 @@ msgstr ", "
 #. translators: %s: Categories of current post
 #: inc/template-tags.php:99
 msgid "Posted in %s"
-msgstr "פורסם ב: %1$s"
+msgstr "פורסם תחת %s"
 
 #. translators: %s: Tags of current post
 #: inc/template-tags.php:113
