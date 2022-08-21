@@ -312,6 +312,11 @@ msgstr "Тема: %1$s за авторством %2$s."
 msgid "Version: %1$s"
 msgstr "Версия: %1$s"
 
+#. translators: Theme version
+#: inc/hooks.php:44
+msgid "Version: %s"
+msgstr "Версия: %s"
+
 #: inc/pagination.php:53
 msgctxt "previous set of posts"
 msgid "&laquo;"

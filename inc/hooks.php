@@ -41,7 +41,7 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators: Theme version */
-				esc_html__( 'Version: %1$s', 'understrap' ),
+				esc_html__( 'Version: %s', 'understrap' ),
 				$the_theme->get( 'Version' )
 			)
 		);

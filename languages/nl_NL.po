@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-21T09:20:07+00:00\n"
-"PO-Revision-Date: 2022-08-21 23:36+0200\n"
+"POT-Creation-Date: 2022-08-21T22:08:31+00:00\n"
+"PO-Revision-Date: 2022-08-22 00:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -265,6 +265,10 @@ msgstr "&laquo;"
 msgid "&raquo;"
 msgstr "&raquo;"
 
+#: inc/deprecated.php:106
+msgid "Version: %1$s"
+msgstr "Versie: %1$s"
+
 #: inc/editor.php:50
 msgid "Lead Paragraph"
 msgstr ""
@@ -306,8 +310,8 @@ msgstr "Thema: %1$s van %2$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %1$s"
-msgstr "Versie: %1$s"
+msgid "Version: %s"
+msgstr "Versie: %s"
 
 #: inc/pagination.php:53
 msgctxt "previous set of posts"
