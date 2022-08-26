@@ -12,8 +12,10 @@
 	}
 }
 
-// Image captions
-figure.wp-block-image {
+
+figure.wp-block-image, // Image captions
+.wp-block-image > figure // Alternate/classic editor image captions
+{
 	@extend .figure;
 	display: block;
 	img {
@@ -23,19 +25,6 @@ figure.wp-block-image {
 		@extend .figure-caption;
 	}
 }
-
-// Alternate/classic editor image captions.
-.wp-block-image > figure {
-	@extend .figure;
-	display: block;
-	img {
-		@extend .figure-img;
-	}
-	figcaption {
-		@extend .figure-caption;
-	}
-}
-
 
 // Wide alignments and covers.
 body.understrap-no-sidebar {

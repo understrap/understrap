@@ -120,7 +120,7 @@ if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 	 * Displays the link to the comments for the current post.
 	 */
 	function understrap_comments_popup_link() {
-		if ( is_single() || post_password_required() || ! comments_open() || 0 === absint( get_comments_number() ) ) {
+		if ( is_single() || post_password_required() || ( ! comments_open() && 0 === absint( get_comments_number() ) ) ) {
 			return;
 		}
 

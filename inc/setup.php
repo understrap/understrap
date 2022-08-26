@@ -70,7 +70,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		/*
 		 * Adding Thumbnail basic support
 		 */
-		add_theme_support( 'post-thumbnails', true );
+		add_theme_support( 'post-thumbnails', array() );
 
 		/*
 		 * Adding support for Widget edit icons in customizer
