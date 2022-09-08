@@ -58,9 +58,7 @@
 	<rule ref="rulesets/naming.xml" />
 
 	<!-- Import the unused code rule set -->
-	<rule ref="rulesets/unusedcode.xml">
-		<exclude name="UnusedLocalVariable" />
-	</rule>
+	<rule ref="rulesets/unusedcode.xml" />
 
 	<!-- Some customizations. -->
 	<rule ref="rulesets/codesize.xml/ExcessiveMethodLength">
@@ -72,13 +70,6 @@
 	<rule ref="rulesets/codesize.xml/ExcessiveParameterList">
 		<properties>
 			<property name="minimum" value="4"/>
-		</properties>
-	</rule>
-
-	<!-- Allow unused variables in foreach statement -->
-	<rule ref="rulesets/unusedcode.xml/UnusedLocalVariable">
-		<properties>
-			<property name="allow-unused-foreach-variables" value="true" />
 		</properties>
 	</rule>
 
