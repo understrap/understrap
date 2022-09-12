@@ -60,7 +60,7 @@
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.0.0",
     "@rollup/plugin-replace": "^4.0.0",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.9",
     "bootstrap": "^5.2.1",
     "bootstrap4": "npm:bootstrap@^4.6.2",
     "browser-sync": "^2.27.10",
