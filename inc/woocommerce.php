@@ -28,6 +28,7 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 
 		// Add markup.
 		add_filter( 'woocommerce_loop_add_to_cart_link', 'understrap_loop_add_to_cart_link' );
+		add_filter( 'woocommerce_account_menu_item_classes', 'understrap_account_menu_item_classes' );
 	}
 }
 
@@ -224,5 +225,22 @@ if ( ! function_exists( 'understrap_loop_add_to_cart_args' ) ) {
 		}
 
 		return $args;
+	}
+}
+
+if ( ! function_exists( 'understrap_account_menu_item_classes' ) ) {
+	/**
+	 * Add Bootstrap classes to the
+	 *
+	 * @param string[] $classes Array of classes added to the account menu items.
+	 * @return string[] Array of classes added to the account menu items.
+	 */
+	function understrap_account_menu_item_classes( $classes ) {
+		$classes[] = 'list-group-item';
+		$classes[] = 'list-group-item-action';
+		if ( in_array( 'is-active', $classes, true ) ) {
+			$classes[] = 'active';
+		}
+		return $classes;
 	}
 }
