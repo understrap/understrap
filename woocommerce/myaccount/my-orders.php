@@ -2,7 +2,7 @@
 /**
  * My Orders - Deprecated
  *
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @deprecated 2.6.0 this template file is no longer used. My Account shortcode uses orders.php.
  */
 
