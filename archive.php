@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<?php
-			// Do the right sidebar check and open div#primary.
+			// Do the left sidebar check and open div#primary.
 			get_template_part( 'global-templates/left-sidebar-check' );
 			?>
 
