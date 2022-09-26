@@ -124,12 +124,16 @@ if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 			return;
 		}
 
-		echo '<span class="comments-link">';
-		comments_popup_link(
-			esc_html__( 'Leave a comment', 'understrap' ),
-			esc_html__( '1 Comment', 'understrap' ),
-			esc_html__( '% Comments', 'understrap' )
+		$post_title    = get_the_title();
+		$leave_comment = sprintf(
+			/* translators: %s post title */
+			__( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'understrap' ),
+			$post_title
 		);
+		$leave_comment = wp_kses( $leave_comment, array( 'span' => array( 'class' => true ) ) );
+
+		echo '<span class="comments-link">';
+		comments_popup_link( $leave_comment );
 		echo '</span>';
 	}
 }
