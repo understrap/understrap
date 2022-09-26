@@ -169,8 +169,10 @@ if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 	}
 }
 
-add_action( 'edit_category', 'understrap_category_transient_flusher' );
+add_action( 'delete_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post', 'understrap_category_transient_flusher' );
+add_action( 'trashed_post', 'understrap_category_transient_flusher' );
+add_action( 'deleted_post', 'understrap_category_transient_flusher' );
 
 if ( ! function_exists( 'understrap_category_transient_flusher' ) ) {
 	/**
