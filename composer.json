@@ -22,11 +22,11 @@
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "^1.3.2",
 		"phpcompatibility/phpcompatibility-wp": "^2.1.3",
-		"phpmd/phpmd": "^2.12.0",
-		"phpstan/phpstan": "^1.8.5",
+		"phpmd/phpmd": "^2.13.0",
+		"phpstan/phpstan": "^1.8.6",
 		"roave/security-advisories": "dev-master",
 		"squizlabs/php_codesniffer": "^3.7.1",
-		"szepeviktor/phpstan-wordpress": "^1.1.2",
+		"szepeviktor/phpstan-wordpress": "^1.1.3",
 		"wp-coding-standards/wpcs": "^2.3.0",
 		"wptrt/wpthemereview": "^0.2.1"
 	},
