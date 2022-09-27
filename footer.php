@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</div><!-- .row -->
 
-	</div><!-- .container(fluid) -->
+	</div><!-- .container(-fluid) -->
 
 </div><!-- #wrapper-footer -->
 
