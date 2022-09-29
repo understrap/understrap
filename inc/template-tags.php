@@ -92,8 +92,7 @@ if ( ! function_exists( 'understrap_categories_list' ) ) {
 	 * Displays a list of categories.
 	 */
 	function understrap_categories_list() {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
+		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
 		if ( $categories_list && understrap_categorized_blog() ) {
 			/* translators: %s: Categories of current post */
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -106,8 +105,7 @@ if ( ! function_exists( 'understrap_tags_list' ) ) {
 	 * Displays a list of tags.
 	 */
 	function understrap_tags_list() {
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
+		$tags_list = get_the_tag_list( '', understrap_get_list_item_separator() );
 		if ( $tags_list && ! is_wp_error( $tags_list ) ) {
 			/* translators: %s: Tags of current post */
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -120,16 +118,20 @@ if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 	 * Displays the link to the comments for the current post.
 	 */
 	function understrap_comments_popup_link() {
-		if ( is_single() || post_password_required() || ! comments_open() || 0 === absint( get_comments_number() ) ) {
+		if ( is_single() || post_password_required() || ( ! comments_open() && 0 === absint( get_comments_number() ) ) ) {
 			return;
 		}
 
-		echo '<span class="comments-link">';
-		comments_popup_link(
-			esc_html__( 'Leave a comment', 'understrap' ),
-			esc_html__( '1 Comment', 'understrap' ),
-			esc_html__( '% Comments', 'understrap' )
+		$post_title    = get_the_title();
+		$leave_comment = sprintf(
+			/* translators: %s post title */
+			__( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'understrap' ),
+			$post_title
 		);
+		$leave_comment = wp_kses( $leave_comment, array( 'span' => array( 'class' => true ) ) );
+
+		echo '<span class="comments-link">';
+		comments_popup_link( $leave_comment );
 		echo '</span>';
 	}
 }
@@ -165,8 +167,10 @@ if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 	}
 }
 
-add_action( 'edit_category', 'understrap_category_transient_flusher' );
+add_action( 'delete_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post', 'understrap_category_transient_flusher' );
+add_action( 'trashed_post', 'understrap_category_transient_flusher' );
+add_action( 'deleted_post', 'understrap_category_transient_flusher' );
 
 if ( ! function_exists( 'understrap_category_transient_flusher' ) ) {
 	/**
@@ -293,7 +297,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 				}
 				?>
 			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
+		</nav><!-- .post-navigation -->
 		<?php
 	}
 }
@@ -370,5 +374,23 @@ if ( ! function_exists( 'understrap_remove_hero_lazy_load' ) ) {
 			return $html;
 		}
 		return str_replace( array( '<html>', '</html>' ), '', $saved_html );
+	}
+}
+
+if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
+	/**
+	 * Retrieves the localized list item separator.
+	 *
+	 * `wp_get_list_item_separator()` has been introduced in WP 6.0.0. For WP
+	 * versions lower than 6.0.0 we have to use a custom translation.
+	 *
+	 * @return string Localized list item separator.
+	 */
+	function understrap_get_list_item_separator() {
+		if ( function_exists( 'wp_get_list_item_separator' ) ) {
+			return esc_html( wp_get_list_item_separator() );
+		}
+		/* translators: used between list items, there is a space after the comma */
+		return esc_html__( ', ', 'understrap' );
 	}
 }

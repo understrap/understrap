@@ -40,4 +40,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</footer><!-- .entry-footer -->
 
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->

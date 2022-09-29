@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
-"PO-Revision-Date: 2021-08-20 02:35+0200\n"
+"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
+"PO-Revision-Date: 2022-08-13 01:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -33,22 +33,18 @@ msgstr "https://understrap.com"
 
 #. Description of the theme
 msgid ""
-"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
-"starting point for your next theme project and WordPress website. Use it as "
-"starter theme or as a parent theme. It is up to you. Including Font Awesome "
-"support, built-in widget slider and much more you need for basic websites. "
-"IMPORTANT: All developer dependencies are not bundled with this install "
-"file. Just download the .zip, extract it and run \"npm install\" and \"gulp "
-"copy-assets\" inside the extracted /understrap folder."
+"The renowned WordPress starter theme framework that combined Underscores and "
+"Bootstrap. Trusted by more than 100,000 developers for building handcrafted, "
+"custom WordPress sites."
 msgstr ""
 
 #. Author of the theme
-msgid "the Understrap Authors"
+msgid "Howard Development &amp; Consulting"
 msgstr ""
 
 #. Author URI of the theme
-msgid "https://github.com/understrap/understrap/graphs/contributors"
-msgstr "https://github.com/understrap/understrap/graphs/contributors"
+msgid "https://howarddc.com"
+msgstr ""
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -101,23 +97,27 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "מחשבה אחת על &ldquo;%2$s&rdquo;"
 msgstr[1] "מחשבות על &ldquo;%2$s&rdquo;"
 
-#: header.php:31
-msgid "Skip to content"
-msgstr "לדלג לתוכן"
-
-#: header.php:36
+#: global-templates/navbar-collapse-bootstrap4.php:17
+#: global-templates/navbar-collapse-bootstrap5.php:17
+#: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
 msgstr ""
 
-#: header.php:63
+#: global-templates/navbar-collapse-bootstrap4.php:45
+#: global-templates/navbar-collapse-bootstrap5.php:43
+#: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
 msgstr ""
 
-#: inc/class-wp-bootstrap-navwalker.php:376
+#: header.php:32
+msgid "Skip to content"
+msgstr "לדלג לתוכן"
+
+#: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
 msgstr ""
 
-#: inc/custom-comments.php:102
+#: inc/custom-comments.php:106
 msgid "Comments are closed."
 msgstr "סגור לתגובות."
 
@@ -125,35 +125,68 @@ msgstr "סגור לתגובות."
 msgid "Default Header Image"
 msgstr "תמונת כותרת כללית"
 
-#: inc/customizer.php:42
+#: inc/customizer.php:41
 msgid "Theme Layout Settings"
 msgstr "הגדרות מערך"
 
-#: inc/customizer.php:44
+#: inc/customizer.php:43
 msgid "Container width and sidebar defaults"
 msgstr "ברירות מחדל, רוחב ותיבה, מיכל"
 
-#: inc/customizer.php:84
+#: inc/customizer.php:63
+msgid "Bootstrap Version"
+msgstr ""
+
+#: inc/customizer.php:64
+msgid "Choose between Bootstrap 4 or Bootstrap 5"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "Bootstrap 4"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Bootstrap 5"
+msgstr ""
+
+#: inc/customizer.php:91
 msgid "Container Width"
 msgstr "רוחב המיכל"
 
-#: inc/customizer.php:85
+#: inc/customizer.php:92
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr "בחר בין מיכל למיכל מלא של בוטסטראפ"
 
-#: inc/customizer.php:90
+#: inc/customizer.php:96
 msgid "Fixed width container"
 msgstr "קונטיינר רוחב קבוע"
 
-#: inc/customizer.php:91
+#: inc/customizer.php:97
 msgid "Full width container"
 msgstr "קונטיינר רוחב מלא"
 
-#: inc/customizer.php:113
+#: inc/customizer.php:119
+msgid "Responsive Navigation Type"
+msgstr ""
+
+#: inc/customizer.php:120
+msgid ""
+"Choose between an expanding and collapsing navbar or an offcanvas drawer."
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "Collapse"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "Offcanvas"
+msgstr ""
+
+#: inc/customizer.php:151
 msgid "Sidebar Positioning"
 msgstr "מיקום סרגל צדדי"
 
-#: inc/customizer.php:114
+#: inc/customizer.php:152
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
@@ -161,59 +194,75 @@ msgstr ""
 "הגדר את מיקום ברירת המחדל של הסרגל הצידי. יכול גם להיות: ימין, שמאל, שניהם "
 "או אף אחד. הערה: זה יכול להתבטל בעמודים נפרדים."
 
-#: inc/customizer.php:123
+#: inc/customizer.php:160
 msgid "Right sidebar"
 msgstr "סרגל צדדי ימני"
 
-#: inc/customizer.php:124
+#: inc/customizer.php:161
 msgid "Left sidebar"
 msgstr "סרגל צדדי שמאלי"
 
-#: inc/customizer.php:125
+#: inc/customizer.php:162
 msgid "Left & Right sidebars"
 msgstr "סרגלים צידיים שמאלה וימינה"
 
-#: inc/customizer.php:126
+#: inc/customizer.php:163
 msgid "No sidebar"
 msgstr "ללא סרגל צדדי"
 
-#: inc/deprecated.php:80
+#: inc/customizer.php:185
+msgid "Footer Site Info"
+msgstr ""
+
+#: inc/customizer.php:186
+msgid "Override Understrap's site info located at the footer of the page."
+msgstr ""
+
+#: inc/deprecated.php:94
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:81
+#: inc/deprecated.php:95
 msgid "Previous"
 msgstr ""
 
-#: inc/deprecated.php:82
+#: inc/deprecated.php:96
 msgid "Next"
 msgstr ""
 
-#: inc/deprecated.php:83
+#: inc/deprecated.php:97
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:84
+#: inc/deprecated.php:98
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:85
+#: inc/deprecated.php:99
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:86
+#: inc/deprecated.php:100
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:87
+#: inc/deprecated.php:101
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:88
+#: inc/deprecated.php:102
 msgid "Edit"
 msgstr ""
+
+#: inc/deprecated.php:103
+msgid "1 Comment"
+msgstr "תגובה 1"
+
+#: inc/deprecated.php:104
+msgid "% Comments"
+msgstr "% תגובות"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -236,7 +285,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:277
+#: inc/extras.php:290
 msgid "Read More..."
 msgstr "קרא עוד..."
 
@@ -267,7 +316,7 @@ msgstr ""
 msgid "&raquo;"
 msgstr ""
 
-#: inc/pagination.php:57
+#: inc/pagination.php:56
 msgid "Posts navigation"
 msgstr ""
 
@@ -275,129 +324,122 @@ msgstr ""
 msgid "Primary Menu"
 msgstr "תפריט ראשי"
 
-#: inc/template-tags.php:33
+#: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
 msgstr ""
 
-#: inc/template-tags.php:42
+#: inc/template-tags.php:55
 msgctxt "post author"
 msgid "by"
 msgstr ""
 
-#: inc/template-tags.php:42
+#: inc/template-tags.php:55
 msgctxt "post author"
 msgid "Posted by"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:59 inc/template-tags.php:65
+#: inc/template-tags.php:96 inc/template-tags.php:110
 msgid ", "
-msgstr ","
+msgstr ", "
 
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:62
+#: inc/template-tags.php:99
 msgid "Posted in %s"
 msgstr ""
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:68
+#: inc/template-tags.php:113
 msgid "Tagged %s"
 msgstr ""
 
-#: inc/template-tags.php:73
-msgid "Leave a comment"
-msgstr "השאר תגובה"
+#. translators: %s post title
+#: inc/template-tags.php:130
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "השאר תגובה<span class=\"screen-reader-text\"> על %s</span>"
 
-#: inc/template-tags.php:73
-msgid "1 Comment"
-msgstr "תגובה 1"
-
-#: inc/template-tags.php:73
-msgid "% Comments"
-msgstr "% תגובות"
-
-#: inc/template-tags.php:167
+#: inc/template-tags.php:233
 msgid "Comment navigation"
 msgstr "ניווט תגובות"
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:237
 msgid "&larr; Older Comments"
 msgstr "&larr;  תגובות קודמות"
 
-#: inc/template-tags.php:177
+#: inc/template-tags.php:243
 msgid "Newer Comments &rarr;"
 msgstr "תגובות חדשות יותר &rarr;"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:194
+#: inc/template-tags.php:260
 msgid "Edit %s"
 msgstr "ערוך את %s"
 
-#: inc/template-tags.php:216
+#: inc/template-tags.php:289
 msgid "Post navigation"
 msgstr "ניווט בפרסומים"
 
-#: inc/template-tags.php:220
+#: inc/template-tags.php:293
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:223
+#: inc/template-tags.php:296
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 "Read More&nbsp;<i class=\\\"dashicons dashicons-arrow-right-alt\\\"></i>"
 
-#: inc/template-tags.php:244
+#: inc/template-tags.php:317
 msgid "Pages:"
 msgstr "עמודים:"
 
-#: inc/widgets.php:103
+#: inc/widgets.php:196
 msgid "Right Sidebar"
 msgstr "סרגל צדדי ימני"
 
-#: inc/widgets.php:105
+#: inc/widgets.php:198
 msgid "Right sidebar widget area"
 msgstr ""
 
-#: inc/widgets.php:115
+#: inc/widgets.php:208
 msgid "Left Sidebar"
 msgstr "סרגל צדדי שמאלי"
 
-#: inc/widgets.php:117
+#: inc/widgets.php:210
 msgid "Left sidebar widget area"
 msgstr ""
 
-#: inc/widgets.php:127
+#: inc/widgets.php:220
 msgid "Hero Slider"
 msgstr "סליידר"
 
-#: inc/widgets.php:129
+#: inc/widgets.php:222
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 
-#: inc/widgets.php:139
+#: inc/widgets.php:232
 msgid "Hero Canvas"
 msgstr ""
 
-#: inc/widgets.php:141
+#: inc/widgets.php:234
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 
-#: inc/widgets.php:151
+#: inc/widgets.php:244
 msgid "Top Full"
 msgstr ""
 
-#: inc/widgets.php:153
+#: inc/widgets.php:246
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: inc/widgets.php:163
+#: inc/widgets.php:256
 msgid "Footer Full"
 msgstr "כותרת תחתונה"
 
-#: inc/widgets.php:165
+#: inc/widgets.php:258
 msgid "Full sized footer widget with dynamic grid"
 msgstr ""
 
@@ -454,17 +496,17 @@ msgstr "סרגל צדדי ימני"
 msgid "Search Results for: %s"
 msgstr "תוצאות חיפוש עבור: %s"
 
-#: searchform.php:20
+#: searchform.php:21
 msgctxt "label"
 msgid "Search for:"
 msgstr "חיפוש:"
 
-#: searchform.php:22
+#: searchform.php:23
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "חיפוש &hellip;"
 
-#: searchform.php:24
+#: searchform.php:25 searchform.php:28
 msgctxt "submit button"
 msgid "Search"
 msgstr "חיפוש"
