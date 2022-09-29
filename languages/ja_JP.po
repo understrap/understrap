@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-09-29T10:58:57+00:00\n"
-"PO-Revision-Date: 2022-09-29 13:04+0200\n"
+"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
+"PO-Revision-Date: 2022-08-13 02:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -85,22 +85,22 @@ msgid "Try looking in the monthly archives. %1$s"
 msgstr "月別アーカイブを探してみてください %1$s"
 
 #. translators: %s: author name
-#: author.php:44
+#: author.php:42
 msgctxt "Avatar alt"
 msgid "Profile picture of %s"
 msgstr "%s さんのプロフィール写真"
 
-#: author.php:54
+#: author.php:52
 msgid "Website"
 msgstr "サイト"
 
 #. translators: %s: author name
-#: author.php:65
+#: author.php:63
 msgid "About %s"
 msgstr "%s について"
 
 #. translators: %s: author name
-#: author.php:79
+#: author.php:77
 msgid "Posts by %s"
 msgstr "%s の投稿"
 
@@ -123,9 +123,9 @@ msgstr[0] ""
 msgid "Main Navigation"
 msgstr ""
 
-#: global-templates/navbar-collapse-bootstrap4.php:27
-#: global-templates/navbar-collapse-bootstrap5.php:26
-#: global-templates/navbar-offcanvas-bootstrap5.php:26
+#: global-templates/navbar-collapse-bootstrap4.php:45
+#: global-templates/navbar-collapse-bootstrap5.php:43
+#: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
 msgstr ""
 
@@ -145,158 +145,141 @@ msgstr "コメントは受け付けていません。"
 msgid "Default Header Image"
 msgstr ""
 
-#: inc/customizer.php:67
+#: inc/customizer.php:41
 msgid "Theme Layout Settings"
 msgstr "テーマのレイアウト設定"
 
-#: inc/customizer.php:69
+#: inc/customizer.php:43
 msgid "Container width and sidebar defaults"
 msgstr "コンテナの幅とサイドバーのデフォルト"
 
-#: inc/customizer.php:89
+#: inc/customizer.php:63
 msgid "Bootstrap Version"
 msgstr ""
 
-#: inc/customizer.php:90
+#: inc/customizer.php:64
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:94
+#: inc/customizer.php:68
 msgid "Bootstrap 4"
 msgstr ""
 
-#: inc/customizer.php:95
+#: inc/customizer.php:69
 msgid "Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:117
+#: inc/customizer.php:91
 msgid "Container Width"
 msgstr "コンテナーの幅"
 
-#: inc/customizer.php:118
+#: inc/customizer.php:92
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr "Bootstrapの固定幅コンテナと全幅コンテナを選択してください"
 
-#: inc/customizer.php:122
+#: inc/customizer.php:96
 msgid "Fixed width container"
 msgstr "固定幅コンテナ"
 
-#: inc/customizer.php:123
+#: inc/customizer.php:97
 msgid "Full width container"
 msgstr "全幅コンテナ"
 
-#: inc/customizer.php:145
+#: inc/customizer.php:119
 msgid "Responsive Navigation Type"
 msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:120
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:128
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:129
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:151
 msgid "Sidebar Positioning"
 msgstr "サイドバーポジショニング"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:152
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:160
 msgid "Right sidebar"
 msgstr "右サイドバー"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:161
 msgid "Left sidebar"
 msgstr "左サイドバー"
 
-#: inc/customizer.php:188
+#: inc/customizer.php:162
 msgid "Left & Right sidebars"
 msgstr "左右サイドバー"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:163
 msgid "No sidebar"
 msgstr "サイドバーなし"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:185
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:186
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
-msgid "Comment navigation"
-msgstr "コメントナビゲーション"
-
-#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:95
 msgid "Previous"
 msgstr "前"
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:96
 msgid "Next"
 msgstr ""
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:97
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:98
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:99
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:100
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:101
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:103
+#: inc/deprecated.php:102
 msgid "Edit"
 msgstr ""
 
-#: inc/deprecated.php:104
-msgid "&laquo;"
-msgstr ""
-
-#: inc/deprecated.php:105
-msgid "&raquo;"
-msgstr ""
-
-#. translators: Theme version
-#: inc/deprecated.php:107
-msgid "Version: %1$s"
-msgstr "バージョン: %1$s"
-
-#: inc/deprecated.php:108
+#: inc/deprecated.php:103
 msgid "1 Comment"
 msgstr "1件のコメント"
 
 # Are you mistaking the formatter?
-#: inc/deprecated.php:109
+#: inc/deprecated.php:104
 msgid "% Comments"
 msgstr "% 件のコメント"
 
@@ -321,7 +304,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:295
+#: inc/extras.php:290
 msgid "Read More..."
 msgstr "続きを読む..."
 
@@ -341,16 +324,14 @@ msgstr "テーマ: %1$s は %2$s によって作られました."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %s"
-msgstr ""
+msgid "Version: %1$s"
+msgstr "バージョン: %1$s"
 
 #: inc/pagination.php:53
-msgctxt "previous set of posts"
 msgid "&laquo;"
 msgstr ""
 
 #: inc/pagination.php:54
-msgctxt "next set of posts"
 msgid "&raquo;"
 msgstr ""
 
@@ -377,24 +358,29 @@ msgctxt "post author"
 msgid "Posted by"
 msgstr ""
 
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:96 inc/template-tags.php:110
+msgid ", "
+msgstr "、 "
+
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:98
+#: inc/template-tags.php:99
 msgid "Posted in %s"
 msgstr ""
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:111
+#: inc/template-tags.php:113
 msgid "Tagged %s"
 msgstr ""
 
 #. translators: %s post title
-#: inc/template-tags.php:128
+#: inc/template-tags.php:130
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\">%s への</span>コメントする"
 
 #: inc/template-tags.php:233
-msgid "Comments navigation"
-msgstr ""
+msgid "Comment navigation"
+msgstr "コメントナビゲーション"
 
 #: inc/template-tags.php:237
 msgid "&larr; Older Comments"
@@ -426,11 +412,6 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 #: inc/template-tags.php:317
 msgid "Pages:"
 msgstr "ページ:"
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:339
-msgid ", "
-msgstr "、 "
 
 #: inc/widgets.php:196
 msgid "Right Sidebar"
@@ -527,15 +508,11 @@ msgid "Left Sidebar Layout"
 msgstr "左スライダーのレイアウト"
 
 #. Template Name of the theme
-msgid "No Title, Full Width Page"
-msgstr ""
-
-#. Template Name of the theme
 msgid "Right Sidebar Layout"
 msgstr ""
 
 #. translators: %s: query term
-#: search.php:38
+#: search.php:36
 msgid "Search Results for: %s"
 msgstr "「%s」の検索結果"
 

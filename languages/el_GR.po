@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-09-29T10:58:57+00:00\n"
-"PO-Revision-Date: 2022-09-29 13:02+0200\n"
+"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
+"PO-Revision-Date: 2022-08-13 01:24+0200\n"
 "Last-Translator: \n"
 "Language-Team: stef.kariotidis@gmail.com\n"
 "Language: el_GR\n"
@@ -88,22 +88,22 @@ msgid "Try looking in the monthly archives. %1$s"
 msgstr "Δοκιμάστε να αναζητήσετε στα μηνιαία αρχεία. %1$s"
 
 #. translators: %s: author name
-#: author.php:44
+#: author.php:42
 msgctxt "Avatar alt"
 msgid "Profile picture of %s"
 msgstr "Εικόνα προφίλ του %s"
 
-#: author.php:54
+#: author.php:52
 msgid "Website"
 msgstr "Ιστότοπος"
 
 #. translators: %s: author name
-#: author.php:65
+#: author.php:63
 msgid "About %s"
 msgstr "Σχετικά με %s"
 
 #. translators: %s: author name
-#: author.php:79
+#: author.php:77
 msgid "Posts by %s"
 msgstr "Άρθρα του/της %s"
 
@@ -127,9 +127,9 @@ msgstr[1] ""
 msgid "Main Navigation"
 msgstr ""
 
-#: global-templates/navbar-collapse-bootstrap4.php:27
-#: global-templates/navbar-collapse-bootstrap5.php:26
-#: global-templates/navbar-offcanvas-bootstrap5.php:26
+#: global-templates/navbar-collapse-bootstrap4.php:45
+#: global-templates/navbar-collapse-bootstrap5.php:43
+#: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
 msgstr ""
 
@@ -149,157 +149,140 @@ msgstr "Τα σχόλια είναι απενεργοποιημένα."
 msgid "Default Header Image"
 msgstr ""
 
-#: inc/customizer.php:67
+#: inc/customizer.php:41
 msgid "Theme Layout Settings"
 msgstr "Ρυθμίσεις Διάταξης Θέματος"
 
-#: inc/customizer.php:69
+#: inc/customizer.php:43
 msgid "Container width and sidebar defaults"
 msgstr "Πλάτος Διάταξης και Προεπιλογές Εργαλειοθήκης"
 
-#: inc/customizer.php:89
+#: inc/customizer.php:63
 msgid "Bootstrap Version"
 msgstr ""
 
-#: inc/customizer.php:90
+#: inc/customizer.php:64
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:94
+#: inc/customizer.php:68
 msgid "Bootstrap 4"
 msgstr ""
 
-#: inc/customizer.php:95
+#: inc/customizer.php:69
 msgid "Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:117
+#: inc/customizer.php:91
 msgid "Container Width"
 msgstr "Πλάτος Διάταξης"
 
-#: inc/customizer.php:118
+#: inc/customizer.php:92
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr "Επιλογή  μεταξύ πλήρους ή μη πλάτους"
 
-#: inc/customizer.php:122
+#: inc/customizer.php:96
 msgid "Fixed width container"
 msgstr "Περιορισμένου πλάτους διάταξη"
 
-#: inc/customizer.php:123
+#: inc/customizer.php:97
 msgid "Full width container"
 msgstr "Πλήρους πλάτους διάταξη"
 
-#: inc/customizer.php:145
+#: inc/customizer.php:119
 msgid "Responsive Navigation Type"
 msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:120
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:128
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:129
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:151
 msgid "Sidebar Positioning"
 msgstr "Τοποθέτηση Εργαλειοθήκης"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:152
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:160
 msgid "Right sidebar"
 msgstr "Εργαλειοθήκη δεξιά"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:161
 msgid "Left sidebar"
 msgstr "Εργαλειοθήκη αριστερά"
 
-#: inc/customizer.php:188
+#: inc/customizer.php:162
 msgid "Left & Right sidebars"
 msgstr "Εργαλειοθήκες αριστερά & δεξιά"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:163
 msgid "No sidebar"
 msgstr "Χωρίς εργαλειοθήκη"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:185
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:186
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
-msgid "Comment navigation"
-msgstr "Πλοήγηση στα σχόλια"
-
-#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:95
 msgid "Previous"
 msgstr ""
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:96
 msgid "Next"
 msgstr ""
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:97
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:98
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:99
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:100
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:101
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:103
+#: inc/deprecated.php:102
 msgid "Edit"
 msgstr ""
 
-#: inc/deprecated.php:104
-msgid "&laquo;"
-msgstr ""
-
-#: inc/deprecated.php:105
-msgid "&raquo;"
-msgstr ""
-
-#. translators: Theme version
-#: inc/deprecated.php:107
-msgid "Version: %1$s"
-msgstr "Έκδοση: %1$s"
-
-#: inc/deprecated.php:108
+#: inc/deprecated.php:103
 msgid "1 Comment"
 msgstr "1 Σχόλιο"
 
-#: inc/deprecated.php:109
+#: inc/deprecated.php:104
 msgid "% Comments"
 msgstr "% Σχόλια"
 
@@ -324,7 +307,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:295
+#: inc/extras.php:290
 msgid "Read More..."
 msgstr "Διαβάστε Περισσότερα..."
 
@@ -344,16 +327,14 @@ msgstr "Θέμα %1$s από %2$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %s"
-msgstr ""
+msgid "Version: %1$s"
+msgstr "Έκδοση: %1$s"
 
 #: inc/pagination.php:53
-msgctxt "previous set of posts"
 msgid "&laquo;"
 msgstr ""
 
 #: inc/pagination.php:54
-msgctxt "next set of posts"
 msgid "&raquo;"
 msgstr ""
 
@@ -380,24 +361,29 @@ msgctxt "post author"
 msgid "Posted by"
 msgstr ""
 
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:96 inc/template-tags.php:110
+msgid ", "
+msgstr ", "
+
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:98
+#: inc/template-tags.php:99
 msgid "Posted in %s"
 msgstr ""
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:111
+#: inc/template-tags.php:113
 msgid "Tagged %s"
 msgstr ""
 
 #. translators: %s post title
-#: inc/template-tags.php:128
+#: inc/template-tags.php:130
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Αφήστε σχόλιο<span class=\"screen-reader-text\"> στο %s</span>"
 
 #: inc/template-tags.php:233
-msgid "Comments navigation"
-msgstr ""
+msgid "Comment navigation"
+msgstr "Πλοήγηση στα σχόλια"
 
 #: inc/template-tags.php:237
 msgid "&larr; Older Comments"
@@ -429,11 +415,6 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 #: inc/template-tags.php:317
 msgid "Pages:"
 msgstr "Σελίδες:"
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:339
-msgid ", "
-msgstr ", "
 
 #: inc/widgets.php:196
 msgid "Right Sidebar"
@@ -530,15 +511,11 @@ msgid "Left Sidebar Layout"
 msgstr "Διάταξη με Αριστερή Εργαλειοθήκη"
 
 #. Template Name of the theme
-msgid "No Title, Full Width Page"
-msgstr ""
-
-#. Template Name of the theme
 msgid "Right Sidebar Layout"
 msgstr ""
 
 #. translators: %s: query term
-#: search.php:38
+#: search.php:36
 msgid "Search Results for: %s"
 msgstr "Αποτελέσματα αναζήτησης για : %s"
 
