@@ -24,6 +24,13 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 		// Add Bootstrap classes to form fields.
 		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
 		add_filter( 'woocommerce_quantity_input_classes', 'understrap_quantity_input_classes' );
+		add_filter( 'woocommerce_loop_add_to_cart_args', 'understrap_loop_add_to_cart_args' );
+
+		// Wrap the add-to-cart link in `div.add-to-cart-container`.
+		add_filter( 'woocommerce_loop_add_to_cart_link', 'understrap_loop_add_to_cart_link' );
+
+		// Add Bootstrap classes to account navigation.
+		add_filter( 'woocommerce_account_menu_item_classes', 'understrap_account_menu_item_classes' );
 	}
 }
 
@@ -174,6 +181,68 @@ if ( ! function_exists( 'understrap_quantity_input_classes' ) ) {
 	 */
 	function understrap_quantity_input_classes( $classes ) {
 		$classes[] = 'form-control';
+		return $classes;
+	}
+}
+
+if ( ! function_exists( 'understrap_loop_add_to_cart_link' ) ) {
+	/**
+	 * Wrap add to cart link in container.
+	 *
+	 * @param string $html Add to cart link HTML.
+	 * @return string Add to cart link HTML.
+	 */
+	function understrap_loop_add_to_cart_link( $html ) {
+		return '<div class="add-to-cart-container">' . $html . '</div>';
+	}
+}
+
+if ( ! function_exists( 'understrap_loop_add_to_cart_args' ) ) {
+	/**
+	 * Add Bootstrap button classes to add to cart link.
+	 *
+	 * @param array<string,mixed> $args Array of add to cart link arguments.
+	 * @return array<string,mixed> Array of add to cart link arguments.
+	 */
+	function understrap_loop_add_to_cart_args( $args ) {
+		if ( isset( $args['class'] ) && ! empty( $args['class'] ) ) {
+			if ( ! is_string( $args['class'] ) ) {
+				return $args;
+			}
+
+			// Remove the `button` class if it exists.
+			if ( false !== strpos( $args['class'], 'button' ) ) {
+				$args['class'] = explode( ' ', $args['class'] );
+				$args['class'] = array_diff( $args['class'], array( 'button' ) );
+				$args['class'] = implode( ' ', $args['class'] );
+			}
+
+			$args['class'] .= ' btn btn-outline-primary';
+		} else {
+			$args['class'] = 'btn btn-outline-primary';
+		}
+
+		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			$args['class'] .= ' btn-block';
+		}
+
+		return $args;
+	}
+}
+
+if ( ! function_exists( 'understrap_account_menu_item_classes' ) ) {
+	/**
+	 * Add Bootstrap classes to the
+	 *
+	 * @param string[] $classes Array of classes added to the account menu items.
+	 * @return string[] Array of classes added to the account menu items.
+	 */
+	function understrap_account_menu_item_classes( $classes ) {
+		$classes[] = 'list-group-item';
+		$classes[] = 'list-group-item-action';
+		if ( in_array( 'is-active', $classes, true ) ) {
+			$classes[] = 'active';
+		}
 		return $classes;
 	}
 }
