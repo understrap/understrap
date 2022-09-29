@@ -92,8 +92,7 @@ if ( ! function_exists( 'understrap_categories_list' ) ) {
 	 * Displays a list of categories.
 	 */
 	function understrap_categories_list() {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
+		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
 		if ( $categories_list && understrap_categorized_blog() ) {
 			/* translators: %s: Categories of current post */
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -106,8 +105,7 @@ if ( ! function_exists( 'understrap_tags_list' ) ) {
 	 * Displays a list of tags.
 	 */
 	function understrap_tags_list() {
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
+		$tags_list = get_the_tag_list( '', understrap_get_list_item_separator() );
 		if ( $tags_list && ! is_wp_error( $tags_list ) ) {
 			/* translators: %s: Tags of current post */
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -299,7 +297,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 				}
 				?>
 			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
+		</nav><!-- .post-navigation -->
 		<?php
 	}
 }
@@ -335,5 +333,23 @@ if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
 			return 'form-control';
 		}
 		return 'from-select';
+	}
+}
+
+if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
+	/**
+	 * Retrieves the localized list item separator.
+	 *
+	 * `wp_get_list_item_separator()` has been introduced in WP 6.0.0. For WP
+	 * versions lower than 6.0.0 we have to use a custom translation.
+	 *
+	 * @return string Localized list item separator.
+	 */
+	function understrap_get_list_item_separator() {
+		if ( function_exists( 'wp_get_list_item_separator' ) ) {
+			return esc_html( wp_get_list_item_separator() );
+		}
+		/* translators: used between list items, there is a space after the comma */
+		return esc_html__( ', ', 'understrap' );
 	}
 }

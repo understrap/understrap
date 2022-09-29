@@ -45,11 +45,11 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 					}
 					?>
 
-				</main><!-- #main -->
+				</main>
 
 			</div><!-- #primary -->
 
-		</div><!-- .row end -->
+		</div><!-- .row -->
 
 	</div><!-- #content -->
 

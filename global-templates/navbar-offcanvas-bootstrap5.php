@@ -52,4 +52,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- .container(-fluid) -->
 
-</nav><!-- .site-navigation -->
+</nav><!-- #main-nav -->
