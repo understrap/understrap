@@ -332,7 +332,7 @@ if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
 		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap 4' ) ) {
 			return 'form-control';
 		}
-		return 'from-select';
+		return 'form-select';
 	}
 }
 
