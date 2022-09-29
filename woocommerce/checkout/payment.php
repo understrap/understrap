@@ -11,13 +11,13 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @version 3.5.3
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! is_ajax() ) {
+if ( ! wp_doing_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
@@ -56,6 +56,6 @@ if ( ! is_ajax() ) {
 	</div>
 </div>
 <?php
-if ( ! is_ajax() ) {
+if ( ! wp_doing_ajax() ) {
 	do_action( 'woocommerce_review_order_after_payment' );
 }
