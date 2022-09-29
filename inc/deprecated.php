@@ -103,6 +103,8 @@ function deprecated_translations() {
 		__( 'Edit', 'understrap' ),
 		__( '&laquo;', 'understrap' ),
 		__( '&raquo;', 'understrap' ),
-		__( 'Version: %1$s', 'understrap' )
+		__( 'Version: %1$s', 'understrap' ),
+		__( '1 Comment', 'understrap' ),
+		__( '% Comments', 'understrap' ),
 	);
 }

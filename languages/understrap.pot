@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-08-21T22:08:31+00:00\n"
+"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: understrap\n"
@@ -203,55 +203,47 @@ msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
-msgid "Comment navigation"
-msgstr ""
-
-#: inc/deprecated.php:95
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:95
 msgid "Previous"
 msgstr ""
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:96
 msgid "Next"
 msgstr ""
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:97
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:98
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:99
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:100
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:101
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:103
+#: inc/deprecated.php:102
 msgid "Edit"
 msgstr ""
 
+#: inc/deprecated.php:103
+msgid "1 Comment"
+msgstr ""
+
 #: inc/deprecated.php:104
-msgid "&laquo;"
-msgstr ""
-
-#: inc/deprecated.php:105
-msgid "&raquo;"
-msgstr ""
-
-#: inc/deprecated.php:106
-msgid "Version: %1$s"
+msgid "% Comments"
 msgstr ""
 
 #: inc/editor.php:50
@@ -295,16 +287,14 @@ msgstr ""
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %s"
+msgid "Version: %1$s"
 msgstr ""
 
 #: inc/pagination.php:53
-msgctxt "previous set of posts"
 msgid "&laquo;"
 msgstr ""
 
 #: inc/pagination.php:54
-msgctxt "next set of posts"
 msgid "&raquo;"
 msgstr ""
 
@@ -347,50 +337,43 @@ msgstr ""
 msgid "Tagged %s"
 msgstr ""
 
-#: inc/template-tags.php:129
-msgid "Leave a comment"
-msgstr ""
-
+#. translators: %s post title
 #: inc/template-tags.php:130
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:131
-msgid "% Comments"
-msgstr ""
-
-#: inc/template-tags.php:229
-msgid "Comments navigation"
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #: inc/template-tags.php:233
+msgid "Comment navigation"
+msgstr ""
+
+#: inc/template-tags.php:237
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: inc/template-tags.php:239
+#: inc/template-tags.php:243
 msgid "Newer Comments &rarr;"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:256
+#: inc/template-tags.php:260
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:285
+#: inc/template-tags.php:289
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:293
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr ""
 
-#: inc/template-tags.php:292
+#: inc/template-tags.php:296
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/template-tags.php:313
+#: inc/template-tags.php:317
 msgid "Pages:"
 msgstr ""
 

@@ -1,23 +1,20 @@
-# Translation of Understrap in Dutch
-# This file is distributed under the same license as the Understrap package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Understrap\n"
+"Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-21T22:08:31+00:00\n"
-"PO-Revision-Date: 2022-08-22 00:17+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: nl\n"
+"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
+"PO-Revision-Date: 2022-08-13 02:15+0200\n"
+"Last-Translator: vincent <v.vanbergen@gmail.com>\n"
+"Language-Team: Nederlands\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.1.1\n"
-"X-Poedit-KeywordsList: __:1;_e:1;_n:1,2;_n_noop:1,2;_x:1,2c;_ex:1,2c;"
-"_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;"
-"esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;translate:1;"
-"translate_nooped_plural\n"
+"X-Loco-Source-Locale: en-NL\n"
+"X-Loco-Project-Id: 19218\n"
+"X-Loco-Api-Version: 1.0.15 20161122-1\n"
 
 #. Theme Name of the theme
 msgid "Understrap"
@@ -100,13 +97,13 @@ msgstr[1] ""
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr "Hoofdnavigatie"
+msgstr ""
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr "Toggle navigatie"
+msgstr ""
 
 #: header.php:32
 msgid "Skip to content"
@@ -114,7 +111,7 @@ msgstr "Ga naar de inhoud"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr "Menu toevoegen"
+msgstr ""
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -216,58 +213,50 @@ msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
-msgid "Comment navigation"
-msgstr "Reactienavigatie"
-
-#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:95
 msgid "Previous"
-msgstr "Vorige"
+msgstr ""
+
+#: inc/deprecated.php:96
+msgid "Next"
+msgstr ""
 
 #: inc/deprecated.php:97
-msgid "Next"
-msgstr "Volgende"
-
-#: inc/deprecated.php:98
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:98
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:99
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:100
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:101
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:103
+#: inc/deprecated.php:102
 msgid "Edit"
 msgstr ""
 
+#: inc/deprecated.php:103
+msgid "1 Comment"
+msgstr "1 Reactie"
+
 #: inc/deprecated.php:104
-msgid "&laquo;"
-msgstr "&laquo;"
-
-#: inc/deprecated.php:105
-msgid "&raquo;"
-msgstr "&raquo;"
-
-#: inc/deprecated.php:106
-msgid "Version: %1$s"
-msgstr "Versie: %1$s"
+msgid "% Comments"
+msgstr "% Reacties"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -310,26 +299,24 @@ msgstr "Thema: %1$s van %2$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %s"
-msgstr "Versie: %s"
+msgid "Version: %1$s"
+msgstr "Versie: %1$s"
 
 #: inc/pagination.php:53
-msgctxt "previous set of posts"
 msgid "&laquo;"
-msgstr "&laquo;"
+msgstr ""
 
 #: inc/pagination.php:54
-msgctxt "next set of posts"
 msgid "&raquo;"
-msgstr "&raquo;"
+msgstr ""
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
-msgstr "Berichtnavigatie"
+msgstr ""
 
 #: inc/setup.php:49
 msgid "Primary Menu"
-msgstr "Primair menu"
+msgstr "Hoofdmenu"
 
 #: inc/template-tags.php:41
 msgctxt "post date"
@@ -354,57 +341,50 @@ msgstr ", "
 #. translators: %s: Categories of current post
 #: inc/template-tags.php:99
 msgid "Posted in %s"
-msgstr "Geplaatst in %s"
+msgstr ""
 
 #. translators: %s: Tags of current post
 #: inc/template-tags.php:113
 msgid "Tagged %s"
-msgstr "Getagged %s"
+msgstr ""
 
-#: inc/template-tags.php:129
-msgid "Leave a comment"
-msgstr "Plaats een reactie"
-
+#. translators: %s post title
 #: inc/template-tags.php:130
-msgid "1 Comment"
-msgstr "1 Reactie"
-
-#: inc/template-tags.php:131
-msgid "% Comments"
-msgstr "% Reacties"
-
-#: inc/template-tags.php:229
-msgid "Comments navigation"
-msgstr "Reactienavigatie"
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Een reactie plaatsen<span class=\"screen-reader-text\"> op %s</span>"
 
 #: inc/template-tags.php:233
+msgid "Comment navigation"
+msgstr "Reactienavigatie"
+
+#: inc/template-tags.php:237
 msgid "&larr; Older Comments"
 msgstr "&larr; Oudere reacties"
 
-#: inc/template-tags.php:239
+#: inc/template-tags.php:243
 msgid "Newer Comments &rarr;"
 msgstr "Nieuwere reacties &rarr;"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:256
+#: inc/template-tags.php:260
 msgid "Edit %s"
 msgstr "Bewerk %s"
 
-#: inc/template-tags.php:285
-msgid "Post navigation"
-msgstr "Berichtnavigatie"
-
 #: inc/template-tags.php:289
+msgid "Post navigation"
+msgstr "Bericht Navigatie"
+
+#: inc/template-tags.php:293
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr ""
 
-#: inc/template-tags.php:292
+#: inc/template-tags.php:296
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/template-tags.php:313
+#: inc/template-tags.php:317
 msgid "Pages:"
 msgstr "Pagina's:"
 
