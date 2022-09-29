@@ -26,8 +26,10 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 		add_filter( 'woocommerce_quantity_input_classes', 'understrap_quantity_input_classes' );
 		add_filter( 'woocommerce_loop_add_to_cart_args', 'understrap_loop_add_to_cart_args' );
 
-		// Add markup.
+		// Wrap the add-to-cart link in `div.add-to-cart-container`.
 		add_filter( 'woocommerce_loop_add_to_cart_link', 'understrap_loop_add_to_cart_link' );
+
+		// Add Bootstrap classes to account navigation.
 		add_filter( 'woocommerce_account_menu_item_classes', 'understrap_account_menu_item_classes' );
 	}
 }
