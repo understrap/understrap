@@ -18,7 +18,6 @@
 // The dropdown menu
 .dropdown-menu {
   // scss-docs-start dropdown-css-vars
-  --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
   --#{$prefix}dropdown-min-width: #{$dropdown-min-width};
   --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x};
   --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
@@ -47,7 +46,7 @@
   // scss-docs-end dropdown-css-vars
 
   position: absolute;
-  z-index: var(--#{$prefix}dropdown-zindex);
+  z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   min-width: var(--#{$prefix}dropdown-min-width);
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-x);

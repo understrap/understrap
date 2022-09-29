@@ -20,10 +20,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<?php
-			// Do the left sidebar check and open div#primary.
-			get_template_part( 'global-templates/left-sidebar-check' );
-			?>
+			<!-- Do the left sidebar check and opens the primary div -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
 
@@ -63,15 +61,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php endif; ?>
 
-			</main>
+			</main><!-- #main -->
 
-			<?php
-			// Display the pagination component.
-			understrap_pagination();
+			<!-- The pagination component -->
+			<?php understrap_pagination(); ?>
 
-			// Do the right sidebar check and close div#primary.
-			get_template_part( 'global-templates/right-sidebar-check' );
-			?>
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 

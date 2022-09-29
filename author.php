@@ -20,10 +20,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<?php
-			// Do the left sidebar check and open div#primary.
-			get_template_part( 'global-templates/left-sidebar-check' );
-			?>
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
 
@@ -84,8 +82,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</header><!-- .page-header -->
 
+				<!-- The Loop -->
 				<?php
-				// Start the loop.
 				if ( have_posts() ) {
 					while ( have_posts() ) {
 						the_post();
@@ -95,17 +93,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					get_template_part( 'loop-templates/content', 'none' );
 				}
 				?>
+				<!-- End Loop -->
 
-			</main>
+			</main><!-- #main -->
 
+			<!-- The pagination component -->
+			<?php understrap_pagination(); ?>
 
-			<?php
-			// Display the pagination component.
-			understrap_pagination();
-
-			// Do the right sidebar check and close div#primary.
-			get_template_part( 'global-templates/right-sidebar-check' );
-			?>
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div> <!-- .row -->
 

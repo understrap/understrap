@@ -48,4 +48,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- .container -->
 <?php endif; ?>
 
-</nav><!-- #main-nav -->
+</nav><!-- .site-navigation -->

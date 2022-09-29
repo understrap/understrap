@@ -75,7 +75,6 @@
 				<element value="get_the_title"/>
 				<element value="get_the_archive_title"/>
 				<element value="get_the_archive_description"/>
-				<element value="understrap_get_list_item_separator"/>
 			</property>
 		</properties>
 	</rule>

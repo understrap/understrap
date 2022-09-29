@@ -46,6 +46,11 @@ parameters:
 			path: inc/editor.php
 
 		-
+			message: "#^Binary operation \"\\.\" between array\\|string\\|false and '\\.' results in an error\\.$#"
+			count: 2
+			path: inc/enqueue.php
+
+		-
 			message: "#^Function understrap_body_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/extras.php
@@ -61,9 +66,19 @@ parameters:
 			path: inc/extras.php
 
 		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\|string\\|false given\\.$#"
+			count: 2
+			path: inc/hooks.php
+
+		-
 			message: "#^Function understrap_pagination\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/pagination.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, string\\|void given\\.$#"
+			count: 1
+			path: inc/template-tags.php
 
 		-
 			message: "#^Function understrap_get_theme_default_settings\\(\\) return type has no value type specified in iterable type array\\.$#"

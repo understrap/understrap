@@ -37,4 +37,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</footer><!-- .entry-footer -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post-## -->

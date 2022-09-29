@@ -10,47 +10,21 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists( 'understrap_customize_register' ) ) {
 	/**
-	 * Register basic support (site title, header text color) for the Theme Customizer.
+	 * Register basic support (site title, description, header text color) for the Theme Customizer.
 	 *
 	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
 	function understrap_customize_register( $wp_customize ) {
-		$settings = array( 'blogname', 'header_textcolor' );
+		$settings = array( 'blogname', 'blogdescription', 'header_textcolor' );
 		foreach ( $settings as $setting ) {
 			$get_setting = $wp_customize->get_setting( $setting );
 			if ( $get_setting instanceof WP_Customize_Setting ) {
 				$get_setting->transport = 'postMessage';
 			}
 		}
-
-		// Override default partial for custom logo.
-		$wp_customize->selective_refresh->add_partial(
-			'custom_logo',
-			array(
-				'settings'            => array( 'custom_logo' ),
-				'selector'            => '.custom-logo-link',
-				'render_callback'     => 'understrap_customize_partial_custom_logo',
-				'container_inclusive' => false,
-			)
-		);
 	}
 }
 add_action( 'customize_register', 'understrap_customize_register' );
-
-if ( ! function_exists( 'understrap_customize_partial_custom_logo' ) ) {
-	/**
-	 * Callback for rendering the custom logo, used in the custom_logo partial.
-	 *
-	 * @return string The custom logo markup or the site title.
-	 */
-	function understrap_customize_partial_custom_logo() {
-		if ( has_custom_logo() ) {
-			return get_custom_logo();
-		} else {
-			return get_bloginfo( 'name' );
-		}
-	}
-}
 
 if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 	/**
@@ -217,10 +191,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 
-		$understrap_site_info = $wp_customize->get_setting( 'understrap_site_info_override' );
-		if ( $understrap_site_info instanceof WP_Customize_Setting ) {
-			$understrap_site_info->transport = 'postMessage';
-		}
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
@@ -261,17 +231,11 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	 * Setup JS integration for live previewing.
 	 */
 	function understrap_customize_preview_js() {
-		$file    = '/js/customizer.js';
-		$version = filemtime( get_template_directory() . $file );
-		if ( false === $version ) {
-			$version = time();
-		}
-
 		wp_enqueue_script(
 			'understrap_customizer',
-			get_template_directory_uri() . $file,
+			get_template_directory_uri() . '/js/customizer.js',
 			array( 'customize-preview' ),
-			(string) $version,
+			'20130508',
 			true
 		);
 	}
@@ -286,17 +250,11 @@ if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
 	 * Setup JS integration for live previewing.
 	 */
 	function understrap_customize_controls_js() {
-		$file    = '/js/customizer-controls.js';
-		$version = filemtime( get_template_directory() . $file );
-		if ( false === $version ) {
-			$version = time();
-		}
-
 		wp_enqueue_script(
 			'understrap_customizer',
-			get_template_directory_uri() . $file,
+			get_template_directory_uri() . '/js/customizer-controls.js',
 			array( 'customize-preview' ),
-			(string) $version,
+			'20130508',
 			true
 		);
 	}

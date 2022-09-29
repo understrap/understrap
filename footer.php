@@ -33,16 +33,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</footer><!-- #colophon -->
 
-			</div><!-- col -->
+			</div><!--col end -->
 
-		</div><!-- .row -->
+		</div><!-- row end -->
 
-	</div><!-- .container(-fluid) -->
+	</div><!-- container end -->
 
-</div><!-- #wrapper-footer -->
+</div><!-- wrapper end -->
 
-<?php // Closing div#page from header.php. ?>
-</div><!-- #page -->
+</div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
 

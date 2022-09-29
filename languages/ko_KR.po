@@ -1,47 +1,23 @@
+# Translation of Understrap in Korean
+# This file is distributed under the same license as the Understrap package.
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
-"PO-Revision-Date: 2022-08-13 02:09+0200\n"
-"Last-Translator: idpokute <mike.sayhi@gmail.com>\n"
-"Language-Team: Korean\n"
+"POT-Creation-Date: 2022-08-21T22:08:31+00:00\n"
+"PO-Revision-Date: 2022-08-22 00:14+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 3.1.1\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SearchPath-0: footer.php\n"
-"X-Poedit-SearchPath-1: header.php\n"
-"X-Poedit-SearchPath-2: index.php\n"
-"X-Poedit-SearchPath-3: statichero.php\n"
-"X-Poedit-SearchPath-4: 404.php\n"
-"X-Poedit-SearchPath-5: archive.php\n"
-"X-Poedit-SearchPath-6: search.php\n"
-"X-Poedit-SearchPath-7: sticky.php\n"
-"X-Poedit-SearchPath-8: single.php\n"
-"X-Poedit-SearchPath-9: sidebar.php\n"
-"X-Poedit-SearchPath-10: comment-form.php\n"
-"X-Poedit-SearchPath-11: comments.php\n"
-"X-Poedit-SearchPath-12: content-none.php\n"
-"X-Poedit-SearchPath-13: content-page.php\n"
-"X-Poedit-SearchPath-14: content-search.php\n"
-"X-Poedit-SearchPath-15: content-single.php\n"
-"X-Poedit-SearchPath-16: content.php\n"
-"X-Poedit-SearchPath-17: hero.php\n"
-"X-Poedit-SearchPath-18: page.php\n"
-"X-Poedit-SearchPath-19: functions.php\n"
-"X-Poedit-SearchPath-20: page-templates\n"
-"X-Poedit-SearchPath-21: inc\n"
+"X-Poedit-KeywordsList: __:1;_e:1;_n:1,2;_n_noop:1,2;_x:1,2c;_ex:1,2c;"
+"_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;"
+"esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;translate:1;"
+"translate_nooped_plural\n"
 
 #. Theme Name of the theme
 msgid "Understrap"
@@ -123,13 +99,13 @@ msgstr[0] ""
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr ""
+msgstr "메인 내비게이션"
 
 #: global-templates/navbar-collapse-bootstrap4.php:45
 #: global-templates/navbar-collapse-bootstrap5.php:43
 #: global-templates/navbar-offcanvas-bootstrap5.php:43
 msgid "Toggle navigation"
-msgstr ""
+msgstr "내비게이션 토글"
 
 #: header.php:32
 msgid "Skip to content"
@@ -137,7 +113,7 @@ msgstr "콘텐츠로 바로가기"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "메뉴 추가하기"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -239,50 +215,58 @@ msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
+msgid "Comment navigation"
+msgstr "댓글 내비게이션"
+
+#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:95
-msgid "Previous"
-msgstr ""
-
 #: inc/deprecated.php:96
-msgid "Next"
-msgstr ""
+msgid "Previous"
+msgstr "이전"
 
 #: inc/deprecated.php:97
+msgid "Next"
+msgstr "다음"
+
+#: inc/deprecated.php:98
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:99
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:100
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:101
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:102
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:103
 msgid "Edit"
 msgstr ""
 
-#: inc/deprecated.php:103
-msgid "1 Comment"
-msgstr "1 댓글"
-
 #: inc/deprecated.php:104
-msgid "% Comments"
-msgstr "% 댓글"
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/deprecated.php:105
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: inc/deprecated.php:106
+msgid "Version: %1$s"
+msgstr "버전: %1$s"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -325,24 +309,26 @@ msgstr "테마: %1$s by %2$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %1$s"
-msgstr ""
+msgid "Version: %s"
+msgstr "버전: %s"
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
-msgstr ""
+msgstr "글 내비게이션"
 
 #: inc/setup.php:49
 msgid "Primary Menu"
-msgstr "주 메뉴"
+msgstr "기본 메뉴"
 
 #: inc/template-tags.php:41
 msgctxt "post date"
@@ -367,50 +353,57 @@ msgstr ","
 #. translators: %s: Categories of current post
 #: inc/template-tags.php:99
 msgid "Posted in %s"
-msgstr ""
+msgstr "에 배치하는 %s"
 
 #. translators: %s: Tags of current post
 #: inc/template-tags.php:113
 msgid "Tagged %s"
-msgstr ""
+msgstr "태그 %s"
 
-#. translators: %s post title
+#: inc/template-tags.php:129
+msgid "Leave a comment"
+msgstr "댓글 남기기"
+
 #: inc/template-tags.php:130
-msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "<span class=\"screen-reader-text\">%s에</span> 댓글 남기기"
+msgid "1 Comment"
+msgstr "1 댓글"
+
+#: inc/template-tags.php:131
+msgid "% Comments"
+msgstr "% 댓글"
+
+#: inc/template-tags.php:229
+msgid "Comments navigation"
+msgstr "댓글 내비게이션"
 
 #: inc/template-tags.php:233
-msgid "Comment navigation"
-msgstr "댓글 네비게이션"
-
-#: inc/template-tags.php:237
 msgid "&larr; Older Comments"
 msgstr "<이전 댓글"
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:239
 msgid "Newer Comments &rarr;"
 msgstr "신규 댓글>"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:260
+#: inc/template-tags.php:256
 msgid "Edit %s"
 msgstr "%s 편집"
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:285
 msgid "Post navigation"
-msgstr ""
+msgstr "글 내비게이션"
 
-#: inc/template-tags.php:293
+#: inc/template-tags.php:289
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr ""
 
-#: inc/template-tags.php:296
+#: inc/template-tags.php:292
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:313
 msgid "Pages:"
 msgstr "페이지:"
 
@@ -533,9 +526,9 @@ msgstr "검색"
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr ""
+msgstr "이전"
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"
 msgid "Next"
-msgstr ""
+msgstr "다음"
