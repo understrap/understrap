@@ -297,7 +297,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 				}
 				?>
 			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
+		</nav><!-- .post-navigation -->
 		<?php
 	}
 }

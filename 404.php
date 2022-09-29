@@ -76,7 +76,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					</section><!-- .error-404 -->
 
-				</main><!-- #main -->
+				</main>
 
 			</div><!-- #primary -->
 
