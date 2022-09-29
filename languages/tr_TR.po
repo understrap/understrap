@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
-"PO-Revision-Date: 2022-08-13 02:36+0200\n"
+"POT-Creation-Date: 2022-09-29T10:58:57+00:00\n"
+"PO-Revision-Date: 2022-09-29 13:03+0200\n"
 "Last-Translator: Tanju Yıldız <ben@tanjuyildiz.com>\n"
 "Language-Team: \n"
 "Language: tr_TR\n"
@@ -85,22 +85,22 @@ msgid "Try looking in the monthly archives. %1$s"
 msgstr "Aylık arşivlere bakmayı deneyin. %1$s"
 
 #. translators: %s: author name
-#: author.php:42
+#: author.php:44
 msgctxt "Avatar alt"
 msgid "Profile picture of %s"
 msgstr "%s profil fotoğrafı"
 
-#: author.php:52
+#: author.php:54
 msgid "Website"
 msgstr "İnternet sitesi"
 
 #. translators: %s: author name
-#: author.php:63
+#: author.php:65
 msgid "About %s"
 msgstr "%s hakkında"
 
 #. translators: %s: author name
-#: author.php:77
+#: author.php:79
 msgid "Posts by %s"
 msgstr "%s tarafından yazılan yazılar"
 
@@ -124,9 +124,9 @@ msgstr[1] ""
 msgid "Main Navigation"
 msgstr ""
 
-#: global-templates/navbar-collapse-bootstrap4.php:45
-#: global-templates/navbar-collapse-bootstrap5.php:43
-#: global-templates/navbar-offcanvas-bootstrap5.php:43
+#: global-templates/navbar-collapse-bootstrap4.php:27
+#: global-templates/navbar-collapse-bootstrap5.php:26
+#: global-templates/navbar-offcanvas-bootstrap5.php:26
 msgid "Toggle navigation"
 msgstr ""
 
@@ -146,140 +146,157 @@ msgstr "Yorumlar kapatıldı."
 msgid "Default Header Image"
 msgstr ""
 
-#: inc/customizer.php:41
+#: inc/customizer.php:67
 msgid "Theme Layout Settings"
 msgstr "Tema Düzen Ayarları"
 
-#: inc/customizer.php:43
+#: inc/customizer.php:69
 msgid "Container width and sidebar defaults"
 msgstr "Kapsayıcı genişliği ve kenar çubuğu varsayılanları"
 
-#: inc/customizer.php:63
+#: inc/customizer.php:89
 msgid "Bootstrap Version"
 msgstr ""
 
-#: inc/customizer.php:64
+#: inc/customizer.php:90
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:68
+#: inc/customizer.php:94
 msgid "Bootstrap 4"
 msgstr ""
 
-#: inc/customizer.php:69
+#: inc/customizer.php:95
 msgid "Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:91
+#: inc/customizer.php:117
 msgid "Container Width"
 msgstr "Kapsayıcı Genişliği"
 
-#: inc/customizer.php:92
+#: inc/customizer.php:118
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr "Bootstrap’ın “container” ve “container-fluid” arasından seçim yapın"
 
-#: inc/customizer.php:96
+#: inc/customizer.php:122
 msgid "Fixed width container"
 msgstr "Sabit genişlikli kapsayıcı"
 
-#: inc/customizer.php:97
+#: inc/customizer.php:123
 msgid "Full width container"
 msgstr "Tam genişlikli kapsayıcı"
 
-#: inc/customizer.php:119
+#: inc/customizer.php:145
 msgid "Responsive Navigation Type"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:146
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:154
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:155
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:151
+#: inc/customizer.php:177
 msgid "Sidebar Positioning"
 msgstr "Kenar Çubuğu Konumlandırması"
 
-#: inc/customizer.php:152
+#: inc/customizer.php:178
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:186
 msgid "Right sidebar"
 msgstr "Sağ kenar çubuğu"
 
-#: inc/customizer.php:161
+#: inc/customizer.php:187
 msgid "Left sidebar"
 msgstr "Sol kenar çubuğu"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:188
 msgid "Left & Right sidebars"
 msgstr "Sol & Sağ kenar çubukları"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:189
 msgid "No sidebar"
 msgstr "Kenar çubuğu yok"
 
-#: inc/customizer.php:185
+#: inc/customizer.php:211
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:212
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
+msgid "Comment navigation"
+msgstr "Yorum dolaşımı"
+
+#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:95
+#: inc/deprecated.php:96
 msgid "Previous"
 msgstr "Önceki"
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:97
 msgid "Next"
 msgstr ""
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:98
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:99
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:100
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:101
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:102
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:103
 msgid "Edit"
 msgstr ""
 
-#: inc/deprecated.php:103
+#: inc/deprecated.php:104
+msgid "&laquo;"
+msgstr ""
+
+#: inc/deprecated.php:105
+msgid "&raquo;"
+msgstr ""
+
+#. translators: Theme version
+#: inc/deprecated.php:107
+msgid "Version: %1$s"
+msgstr "Sürüm: %1$s"
+
+#: inc/deprecated.php:108
 msgid "1 Comment"
 msgstr "1 Yorum"
 
-#: inc/deprecated.php:104
+#: inc/deprecated.php:109
 msgid "% Comments"
 msgstr "% Yorum"
 
@@ -304,7 +321,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:290
+#: inc/extras.php:295
 msgid "Read More..."
 msgstr "Daha fazlasını oku…"
 
@@ -324,14 +341,16 @@ msgstr "Tema: %2$s tarafından %1$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %1$s"
-msgstr "Sürüm: %1$s"
+msgid "Version: %s"
+msgstr ""
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
 msgstr ""
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
 msgstr ""
 
@@ -358,29 +377,24 @@ msgctxt "post author"
 msgid "Posted by"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:96 inc/template-tags.php:110
-msgid ", "
-msgstr ", "
-
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:99
+#: inc/template-tags.php:98
 msgid "Posted in %s"
 msgstr ""
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:113
+#: inc/template-tags.php:111
 msgid "Tagged %s"
 msgstr ""
 
 #. translators: %s post title
-#: inc/template-tags.php:130
+#: inc/template-tags.php:128
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Yorum yapın<span class=\"screen-reader-text\"> %s</span>"
 
 #: inc/template-tags.php:233
-msgid "Comment navigation"
-msgstr "Yorum dolaşımı"
+msgid "Comments navigation"
+msgstr ""
 
 #: inc/template-tags.php:237
 msgid "&larr; Older Comments"
@@ -412,6 +426,11 @@ msgstr "%title&nbsp;<i class=“fa fa-angle-right”></i>"
 #: inc/template-tags.php:317
 msgid "Pages:"
 msgstr "Sayfalar:"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:339
+msgid ", "
+msgstr ", "
 
 #: inc/widgets.php:196
 msgid "Right Sidebar"
@@ -509,11 +528,15 @@ msgid "Left Sidebar Layout"
 msgstr "Sol Kenar Çubuğu Düzeni"
 
 #. Template Name of the theme
+msgid "No Title, Full Width Page"
+msgstr ""
+
+#. Template Name of the theme
 msgid "Right Sidebar Layout"
 msgstr ""
 
 #. translators: %s: query term
-#: search.php:36
+#: search.php:38
 msgid "Search Results for: %s"
 msgstr "%s için arama sonuçları"
 

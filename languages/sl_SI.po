@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
-"PO-Revision-Date: 2022-08-13 02:33+0200\n"
+"POT-Creation-Date: 2022-09-29T10:58:57+00:00\n"
+"PO-Revision-Date: 2022-09-29 13:03+0200\n"
 "Last-Translator: Davor Lonzaric <info@fatshape.com>\n"
 "Language-Team: \n"
 "Language: sl_SI\n"
@@ -89,22 +89,22 @@ msgid "Try looking in the monthly archives. %1$s"
 msgstr "Poskusite pogledati v mesečne arhive. %1$s"
 
 #. translators: %s: author name
-#: author.php:42
+#: author.php:44
 msgctxt "Avatar alt"
 msgid "Profile picture of %s"
 msgstr "Profilna slika od %s"
 
-#: author.php:52
+#: author.php:54
 msgid "Website"
 msgstr "Spletišče"
 
 #. translators: %s: author name
-#: author.php:63
+#: author.php:65
 msgid "About %s"
 msgstr "O %s"
 
 #. translators: %s: author name
-#: author.php:77
+#: author.php:79
 msgid "Posts by %s"
 msgstr "Prispevki od %s"
 
@@ -130,9 +130,9 @@ msgstr[3] ""
 msgid "Main Navigation"
 msgstr ""
 
-#: global-templates/navbar-collapse-bootstrap4.php:45
-#: global-templates/navbar-collapse-bootstrap5.php:43
-#: global-templates/navbar-offcanvas-bootstrap5.php:43
+#: global-templates/navbar-collapse-bootstrap4.php:27
+#: global-templates/navbar-collapse-bootstrap5.php:26
+#: global-templates/navbar-offcanvas-bootstrap5.php:26
 msgid "Toggle navigation"
 msgstr ""
 
@@ -152,142 +152,159 @@ msgstr "Komentarji so onemogočeni."
 msgid "Default Header Image"
 msgstr ""
 
-#: inc/customizer.php:41
+#: inc/customizer.php:67
 msgid "Theme Layout Settings"
 msgstr "Nastavitve razporeditev v temi"
 
-#: inc/customizer.php:43
+#: inc/customizer.php:69
 msgid "Container width and sidebar defaults"
 msgstr "Privzeta širina kontejnerja in stranskih pasic"
 
-#: inc/customizer.php:63
+#: inc/customizer.php:89
 msgid "Bootstrap Version"
 msgstr ""
 
-#: inc/customizer.php:64
+#: inc/customizer.php:90
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:68
+#: inc/customizer.php:94
 msgid "Bootstrap 4"
 msgstr ""
 
-#: inc/customizer.php:69
+#: inc/customizer.php:95
 msgid "Bootstrap 5"
 msgstr ""
 
-#: inc/customizer.php:91
+#: inc/customizer.php:117
 msgid "Container Width"
 msgstr "Širina kontejnerja"
 
-#: inc/customizer.php:92
+#: inc/customizer.php:118
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr ""
 "Izberite med Bootstrap \"container\" (omejen) ali \"container-fluid"
 "\" (razpotegnjen)"
 
-#: inc/customizer.php:96
+#: inc/customizer.php:122
 msgid "Fixed width container"
 msgstr "Stran s fiksno širino"
 
-#: inc/customizer.php:97
+#: inc/customizer.php:123
 msgid "Full width container"
 msgstr "Čez celo širino"
 
-#: inc/customizer.php:119
+#: inc/customizer.php:145
 msgid "Responsive Navigation Type"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:146
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:154
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:155
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:151
+#: inc/customizer.php:177
 msgid "Sidebar Positioning"
 msgstr "Pozicija stranske pasice"
 
-#: inc/customizer.php:152
+#: inc/customizer.php:178
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:186
 msgid "Right sidebar"
 msgstr "Desna stranska pasica"
 
-#: inc/customizer.php:161
+#: inc/customizer.php:187
 msgid "Left sidebar"
 msgstr "Leva stranska pasica"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:188
 msgid "Left & Right sidebars"
 msgstr "Leva in desna stranska pasica"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:189
 msgid "No sidebar"
 msgstr "Brez stranske pasica"
 
-#: inc/customizer.php:185
+#: inc/customizer.php:211
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:212
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
 #: inc/deprecated.php:94
+msgid "Comment navigation"
+msgstr "Navigacija komentarjev"
+
+#: inc/deprecated.php:95
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: inc/deprecated.php:95
+#: inc/deprecated.php:96
 msgid "Previous"
 msgstr ""
 
-#: inc/deprecated.php:96
+#: inc/deprecated.php:97
 msgid "Next"
 msgstr ""
 
-#: inc/deprecated.php:97
+#: inc/deprecated.php:98
 msgid "About:"
 msgstr ""
 
-#: inc/deprecated.php:98
+#: inc/deprecated.php:99
 msgid "Profile"
 msgstr ""
 
-#: inc/deprecated.php:99
+#: inc/deprecated.php:100
 msgid "Posts by"
 msgstr ""
 
-#: inc/deprecated.php:100
+#: inc/deprecated.php:101
 msgid "Permanent Link:"
 msgstr ""
 
-#: inc/deprecated.php:101
+#: inc/deprecated.php:102
 msgid "in"
 msgstr ""
 
-#: inc/deprecated.php:102
+#: inc/deprecated.php:103
 msgid "Edit"
 msgstr ""
 
-#: inc/deprecated.php:103
+#: inc/deprecated.php:104
+msgid "&laquo;"
+msgstr ""
+
+#: inc/deprecated.php:105
+msgid "&raquo;"
+msgstr ""
+
+#. translators: Theme version
+#: inc/deprecated.php:107
+msgid "Version: %1$s"
+msgstr "Verzija: %1$s"
+
+#: inc/deprecated.php:108
 msgid "1 Comment"
 msgstr "1 Komentar"
 
-#: inc/deprecated.php:104
+#: inc/deprecated.php:109
 msgid "% Comments"
 msgstr "% komentarjev"
 
@@ -312,7 +329,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:290
+#: inc/extras.php:295
 msgid "Read More..."
 msgstr "Preberi več..."
 
@@ -332,14 +349,16 @@ msgstr "Tema: %1$s od %2$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %1$s"
-msgstr "Verzija: %1$s"
+msgid "Version: %s"
+msgstr ""
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
 msgstr ""
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
 msgstr ""
 
@@ -366,29 +385,24 @@ msgctxt "post author"
 msgid "Posted by"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:96 inc/template-tags.php:110
-msgid ", "
-msgstr ", "
-
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:99
+#: inc/template-tags.php:98
 msgid "Posted in %s"
 msgstr ""
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:113
+#: inc/template-tags.php:111
 msgid "Tagged %s"
 msgstr ""
 
 #. translators: %s post title
-#: inc/template-tags.php:130
+#: inc/template-tags.php:128
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Komentiraj<span class=\"screen-reader-text\"> na %s</span>"
 
 #: inc/template-tags.php:233
-msgid "Comment navigation"
-msgstr "Navigacija komentarjev"
+msgid "Comments navigation"
+msgstr ""
 
 #: inc/template-tags.php:237
 msgid "&larr; Older Comments"
@@ -420,6 +434,11 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 #: inc/template-tags.php:317
 msgid "Pages:"
 msgstr "Strani:"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:339
+msgid ", "
+msgstr ", "
 
 #: inc/widgets.php:196
 msgid "Right Sidebar"
@@ -517,11 +536,15 @@ msgid "Left Sidebar Layout"
 msgstr "Razporeditev za levo stransko pasico"
 
 #. Template Name of the theme
+msgid "No Title, Full Width Page"
+msgstr ""
+
+#. Template Name of the theme
 msgid "Right Sidebar Layout"
 msgstr ""
 
 #. translators: %s: query term
-#: search.php:36
+#: search.php:38
 msgid "Search Results for: %s"
 msgstr "Rezultati iskanja za: %s"
 
