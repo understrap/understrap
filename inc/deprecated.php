@@ -103,5 +103,7 @@ function deprecated_translations() {
 		__( '1 Comment', 'understrap' ),
 		__( '% Comments', 'understrap' ),
 		__( 'Comment navigation', 'understrap' ),
+		__( '&laquo;', 'understrap' ),
+		__( '&raquo;', 'understrap' ),
 	);
 }
