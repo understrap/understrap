@@ -102,5 +102,6 @@ function deprecated_translations() {
 		__( 'Edit', 'understrap' ),
 		__( '1 Comment', 'understrap' ),
 		__( '% Comments', 'understrap' ),
+		__( 'Comment navigation', 'understrap' ),
 	);
 }
