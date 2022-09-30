@@ -1,47 +1,23 @@
+# Translation of Understrap in German
+# This file is distributed under the same license as the Understrap package.
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-08-12T23:04:51+00:00\n"
-"PO-Revision-Date: 2022-08-13 01:16+0200\n"
-"Last-Translator: Thomas A. Reinert | TAR MediaDesign <thomas@tarcgn.de>\n"
-"Language-Team: German\n"
+"POT-Creation-Date: 2022-09-30T17:24:22+00:00\n"
+"PO-Revision-Date: 2022-09-30 19:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 3.1.1\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SearchPath-0: footer.php\n"
-"X-Poedit-SearchPath-1: header.php\n"
-"X-Poedit-SearchPath-2: index.php\n"
-"X-Poedit-SearchPath-3: statichero.php\n"
-"X-Poedit-SearchPath-4: 404.php\n"
-"X-Poedit-SearchPath-5: archive.php\n"
-"X-Poedit-SearchPath-6: search.php\n"
-"X-Poedit-SearchPath-7: sticky.php\n"
-"X-Poedit-SearchPath-8: single.php\n"
-"X-Poedit-SearchPath-9: sidebar.php\n"
-"X-Poedit-SearchPath-10: comment-form.php\n"
-"X-Poedit-SearchPath-11: comments.php\n"
-"X-Poedit-SearchPath-12: content-none.php\n"
-"X-Poedit-SearchPath-13: content-page.php\n"
-"X-Poedit-SearchPath-14: content-search.php\n"
-"X-Poedit-SearchPath-15: content-single.php\n"
-"X-Poedit-SearchPath-16: content.php\n"
-"X-Poedit-SearchPath-17: hero.php\n"
-"X-Poedit-SearchPath-18: page.php\n"
-"X-Poedit-SearchPath-19: functions.php\n"
-"X-Poedit-SearchPath-20: page-templates\n"
-"X-Poedit-SearchPath-21: inc\n"
+"X-Poedit-KeywordsList: __:1;_e:1;_n:1,2;_n_noop:1,2;_x:1,2c;_ex:1,2c;"
+"_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;"
+"esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;translate:1;"
+"translate_nooped_plural\n"
 
 #. Theme Name of the theme
 msgid "Understrap"
@@ -87,22 +63,22 @@ msgid "Try looking in the monthly archives. %1$s"
 msgstr "Versuchs mit einem Blick in die monatlichen Archive. %1$s"
 
 #. translators: %s: author name
-#: author.php:42
+#: author.php:44
 msgctxt "Avatar alt"
 msgid "Profile picture of %s"
 msgstr "Profilbild von %s"
 
-#: author.php:52
+#: author.php:54
 msgid "Website"
 msgstr "Webseite"
 
 #. translators: %s: author name
-#: author.php:63
+#: author.php:65
 msgid "About %s"
 msgstr "Über %s"
 
 #. translators: %s: author name
-#: author.php:77
+#: author.php:79
 msgid "Posts by %s"
 msgstr "Beiträge von %s"
 
@@ -110,27 +86,27 @@ msgstr "Beiträge von %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "Ein Gedanke zu &#8222;%2$s&#8220;"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ein Gedanke zu &#8222;%2$s&#8220;"
+msgstr[1] "%1$s Gedanken zu &#8222;%2$s&#8220;"
 
 #: global-templates/navbar-collapse-bootstrap4.php:17
 #: global-templates/navbar-collapse-bootstrap5.php:17
 #: global-templates/navbar-offcanvas-bootstrap5.php:17
 msgid "Main Navigation"
-msgstr ""
+msgstr "Hauptnavigation"
 
-#: global-templates/navbar-collapse-bootstrap4.php:45
-#: global-templates/navbar-collapse-bootstrap5.php:43
-#: global-templates/navbar-offcanvas-bootstrap5.php:43
+#: global-templates/navbar-collapse-bootstrap4.php:27
+#: global-templates/navbar-collapse-bootstrap5.php:26
+#: global-templates/navbar-offcanvas-bootstrap5.php:26
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Navigation umschalten"
 
 #: header.php:32
 msgid "Skip to content"
@@ -138,7 +114,7 @@ msgstr "Direkt zum Inhalt wechseln"
 
 #: inc/class-wp-bootstrap-navwalker.php:377
 msgid "Add a menu"
-msgstr ""
+msgstr "Menü hinzufügen"
 
 #: inc/custom-comments.php:106
 msgid "Comments are closed."
@@ -148,94 +124,94 @@ msgstr "Kommentare sind geschlossen."
 msgid "Default Header Image"
 msgstr "Standard-Header-Bild"
 
-#: inc/customizer.php:41
+#: inc/customizer.php:67
 msgid "Theme Layout Settings"
 msgstr "Theme Layout Einstellungen"
 
-#: inc/customizer.php:43
+#: inc/customizer.php:69
 msgid "Container width and sidebar defaults"
 msgstr "Container-Breite und Seitenleisten-Einstellungen"
 
-#: inc/customizer.php:63
+#: inc/customizer.php:89
 msgid "Bootstrap Version"
-msgstr ""
+msgstr "Bootstrap-Version"
 
-#: inc/customizer.php:64
+#: inc/customizer.php:90
 msgid "Choose between Bootstrap 4 or Bootstrap 5"
-msgstr ""
+msgstr "Zwischen Bootstrap 4 und Bootstrap 5 wählen"
 
-#: inc/customizer.php:68
+#: inc/customizer.php:94
 msgid "Bootstrap 4"
-msgstr ""
+msgstr "Bootstrap 4"
 
-#: inc/customizer.php:69
+#: inc/customizer.php:95
 msgid "Bootstrap 5"
-msgstr ""
+msgstr "Bootstrap 5"
 
-#: inc/customizer.php:91
+#: inc/customizer.php:117
 msgid "Container Width"
 msgstr "Container-Breite"
 
-#: inc/customizer.php:92
+#: inc/customizer.php:118
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr "Wähle zwischen dem Bootstrap container und container-fluid aus"
 
-#: inc/customizer.php:96
+#: inc/customizer.php:122
 msgid "Fixed width container"
 msgstr "Container mit fester Breite"
 
-#: inc/customizer.php:97
+#: inc/customizer.php:123
 msgid "Full width container"
 msgstr "Container mit voller Seitenbreite"
 
-#: inc/customizer.php:119
+#: inc/customizer.php:145
 msgid "Responsive Navigation Type"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:146
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:154
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:155
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:151
+#: inc/customizer.php:177
 msgid "Sidebar Positioning"
 msgstr "Seitenleisten-Positionierung"
 
-#: inc/customizer.php:152
+#: inc/customizer.php:178
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:186
 msgid "Right sidebar"
 msgstr "Rechte Seitenleiste"
 
-#: inc/customizer.php:161
+#: inc/customizer.php:187
 msgid "Left sidebar"
 msgstr "Linke Seitenleiste"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:188
 msgid "Left & Right sidebars"
 msgstr "Linke und rechte Seitenleiste"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:189
 msgid "No sidebar"
 msgstr "Keine Seitenleiste"
 
-#: inc/customizer.php:185
+#: inc/customizer.php:211
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:212
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
@@ -247,23 +223,23 @@ msgstr ""
 
 #: inc/deprecated.php:95
 msgid "Previous"
-msgstr ""
+msgstr "Zurück"
 
 #: inc/deprecated.php:96
 msgid "Next"
-msgstr ""
+msgstr "Weiter"
 
 #: inc/deprecated.php:97
 msgid "About:"
-msgstr ""
+msgstr "Über:"
 
 #: inc/deprecated.php:98
 msgid "Profile"
-msgstr ""
+msgstr "Profil"
 
 #: inc/deprecated.php:99
 msgid "Posts by"
-msgstr ""
+msgstr "Beiträge von"
 
 #: inc/deprecated.php:100
 msgid "Permanent Link:"
@@ -271,11 +247,11 @@ msgstr ""
 
 #: inc/deprecated.php:101
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: inc/deprecated.php:102
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 #: inc/deprecated.php:103
 msgid "1 Comment"
@@ -285,18 +261,35 @@ msgstr "1 Kommentar"
 msgid "% Comments"
 msgstr "% Kommentare"
 
+#: inc/deprecated.php:105
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+#: inc/deprecated.php:106
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/deprecated.php:107
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#. translators: Theme version
+#: inc/deprecated.php:109
+msgid "Version: %1$s"
+msgstr "Version: %1$s"
+
 #: inc/editor.php:50
 msgid "Lead Paragraph"
-msgstr ""
+msgstr "Vorspann"
 
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "Klein"
 
 #: inc/editor.php:60
 msgid "Blockquote"
-msgstr ""
+msgstr "Zitat"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
@@ -306,7 +299,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:290
+#: inc/extras.php:245
 msgid "Read More..."
 msgstr "Weiterlesen..."
 
@@ -326,20 +319,22 @@ msgstr "Theme: %1$s von %2$s."
 
 #. translators: Theme version
 #: inc/hooks.php:44
-msgid "Version: %1$s"
-msgstr "Version: %1$s"
+msgid "Version: %s"
+msgstr "Version: %s"
 
 #: inc/pagination.php:53
+msgctxt "previous set of posts"
 msgid "&laquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: inc/pagination.php:54
+msgctxt "next set of posts"
 msgid "&raquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: inc/pagination.php:56
 msgid "Posts navigation"
-msgstr ""
+msgstr "Beitrags-Navigation"
 
 #: inc/setup.php:49
 msgid "Primary Menu"
@@ -348,40 +343,35 @@ msgstr "Hauptmenü"
 #: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
-msgstr ""
+msgstr "Veröffentlicht am"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "by"
-msgstr ""
+msgstr "von"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "Posted by"
-msgstr ""
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:96 inc/template-tags.php:110
-msgid ", "
-msgstr ", "
+msgstr "Veröffentlicht von"
 
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:99
+#: inc/template-tags.php:98
 msgid "Posted in %s"
-msgstr ""
+msgstr "Veröffentlicht in %s"
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:113
+#: inc/template-tags.php:111
 msgid "Tagged %s"
-msgstr ""
+msgstr "Verschlagwortet mit %s"
 
 #. translators: %s post title
-#: inc/template-tags.php:130
+#: inc/template-tags.php:128
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "Kommentar hinterlassen<span class=\"screen-reader-text\"> zu %s</span>"
+msgstr ""
 
 #: inc/template-tags.php:233
-msgid "Comment navigation"
+msgid "Comments navigation"
 msgstr "Kommentarnavigation"
 
 #: inc/template-tags.php:237
@@ -414,6 +404,11 @@ msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 #: inc/template-tags.php:317
 msgid "Pages:"
 msgstr "Seiten:"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:339
+msgid ", "
+msgstr ", "
 
 #: inc/widgets.php:196
 msgid "Right Sidebar"
@@ -512,11 +507,15 @@ msgid "Left Sidebar Layout"
 msgstr "Layout mit linker Seitenleiste"
 
 #. Template Name of the theme
-msgid "Right Sidebar Layout"
+msgid "No Title, Full Width Page"
 msgstr ""
 
+#. Template Name of the theme
+msgid "Right Sidebar Layout"
+msgstr "Layout mit rechter Seitenleiste"
+
 #. translators: %s: query term
-#: search.php:36
+#: search.php:38
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
@@ -538,9 +537,12 @@ msgstr "Suche"
 #: sidebar-templates/sidebar-hero.php:28
 msgctxt "carousel control"
 msgid "Previous"
-msgstr "Vorherige"
+msgstr "Zurück"
 
 #: sidebar-templates/sidebar-hero.php:36
 msgctxt "carousel control"
 msgid "Next"
-msgstr "Nächste"
+msgstr "Weiter"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Kommentar hinterlassen"
