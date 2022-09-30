@@ -105,5 +105,7 @@ function deprecated_translations() {
 		__( 'Comment navigation', 'understrap' ),
 		__( '&laquo;', 'understrap' ),
 		__( '&raquo;', 'understrap' ),
+		/* translators: Theme version */
+		__( 'Version: %1$s', 'understrap' ),
 	);
 }
