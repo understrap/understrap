@@ -91,16 +91,16 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
  */
 function deprecated_translations() {
 	array(
-		esc_html__( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ),
-		esc_html__( 'Previous', 'understrap' ),
-		esc_html__( 'Next', 'understrap' ),
-		esc_html__( 'About:', 'understrap' ),
-		esc_html__( 'Profile', 'understrap' ),
-		esc_html__( 'Posts by', 'understrap' ),
-		esc_html__( 'Permanent Link:', 'understrap' ),
-		esc_html__( 'in', 'understrap' ),
-		esc_html__( 'Edit', 'understrap' ),
-		esc_html__( '1 Comment', 'understrap' ),
-		esc_html__( '% Comments', 'understrap' ),
+		__( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ),
+		__( 'Previous', 'understrap' ),
+		__( 'Next', 'understrap' ),
+		__( 'About:', 'understrap' ),
+		__( 'Profile', 'understrap' ),
+		__( 'Posts by', 'understrap' ),
+		__( 'Permanent Link:', 'understrap' ),
+		__( 'in', 'understrap' ),
+		__( 'Edit', 'understrap' ),
+		__( '1 Comment', 'understrap' ),
+		__( '% Comments', 'understrap' ),
 	);
 }
