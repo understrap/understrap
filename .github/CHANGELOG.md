@@ -8,6 +8,34 @@
 
   -
 
+## Release 1.2.0-beta1 October 5th 2022
+
+** Enhancements **
+
+  - Updates Bootstrap 5.1.3 to Bootstrap 5.2.0
+  - Updates Bootstrap 4.6.1 to Bootstrap 4.6.2
+  - Updates WooCommerce Templates
+  - Adds a new 'Full Width Landing Page' page template
+  - Imports more Bootstrap utility classes into the block editor
+  - HTML comments have been cleaned up and/or moved into PHP when appropriate
+  - Enhancements to multiple theme template tags
+  - Developers: PHP linting and testing has been overhauled
+  - Developers: Removes the need for jQuery for sites running Bootstrap 5 (doesn't remove jQuery itself, though)
+
+** Fixes **
+
+  - Fixes issues with flags not showing up in the navigation for WPML and Polylang users
+  - Fixes styles for the select tag in the Categories and Archives widgets and block widgets
+  - Fixes styles for the search block widget
+  - Fixes styles for pagination
+  - Fixes block editor buttons on hover
+  - Fixes skip to content link for Bootstrap 5
+  - Fixes the offfcanvas close icon that was hidden behind the admin bar
+  - Fixes issues with the Customizer preview
+  - Fixes the category transient flush
+  - Accessibility: aria role fixes for the carousel and footer widgets area
+
+
 ## Release 1.1.0 December 1st 2021
 
 ** Enhancements **
