@@ -8,6 +8,78 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_add_widget_categories_class' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories widget.
+	 *
+	 * @param array $cat_args An array of Categories widget drop-down arguments.
+	 * @return array The filtered array of Categories widget drop-down arguments.
+	 */
+	function understrap_add_widget_categories_class( $cat_args ) {
+
+		if ( isset( $cat_args['class'] ) ) {
+			$cat_args['class'] .= ' ' . understrap_get_select_control_class();
+		} else {
+			$cat_args['class'] = understrap_get_select_control_class();
+		}
+
+		return $cat_args;
+	}
+}
+add_filter( 'widget_categories_dropdown_args', 'understrap_add_widget_categories_class' );
+
+if ( ! function_exists( 'understrap_add_block_widget_categories_class' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories block widget.
+	 *
+	 * @param string $output      The taxonomy drop-down HTML output.
+	 * @param array  $parsed_args Arguments used to build the drop-down.
+	 * @return string The filtered taxonomy drop-down HTML output.
+	 */
+	function understrap_add_block_widget_categories_class( $output, $parsed_args ) {
+		$class = understrap_get_select_control_class();
+
+		if ( isset( $parsed_args['class'] ) && ! empty( $parsed_args['class'] ) ) {
+			$search  = array(
+				"class=\"{$parsed_args['class']}\"",
+				"class='{$parsed_args['class']}'",
+			);
+			$replace = array(
+				"class=\"{$parsed_args['class']} {$class}\"",
+				"class=\"{$parsed_args['class']} {$class}\"",
+			);
+		} else {
+			$search  = '<select';
+			$replace = "<select class=\"{$class}\"";
+		}
+
+		return str_replace( $search, $replace, $output );
+	}
+}
+add_filter( 'wp_dropdown_cats', 'understrap_add_block_widget_categories_class', 10, 2 );
+
+if ( ! function_exists( 'understrap_add_block_widget_archives_classes' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories widget.
+	 *
+	 * @param string $block_content The block content.
+	 * @param array  $block         The full block, including name and attributes.
+	 * @return string The filtered block content.
+	 */
+	function understrap_add_block_widget_archives_classes( $block_content, $block ) {
+
+		if ( isset( $block['attrs']['displayAsDropdown'] ) && true === $block['attrs']['displayAsDropdown'] ) {
+			return str_replace(
+				'<select',
+				'<select class="' . understrap_get_select_control_class() . '"',
+				$block_content
+			);
+		}
+		return $block_content;
+	}
+}
+add_filter( 'render_block_core/archives', 'understrap_add_block_widget_archives_classes', 10, 2 );
+
 if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
 	/**
 	 * Adds Bootstrap classes to search block widget.
