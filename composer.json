@@ -2,7 +2,7 @@
 	"name": "understrap/understrap",
 	"description": "Combines Automattic's Underscores Starter Theme and Bootstrap",
 	"type": "wordpress-theme",
-	"license": "GPL-2.0-only",
+	"license": "GPL-3.0",
 	"minimum-stability": "stable",
 	"keywords": [
 		"wordpress",
