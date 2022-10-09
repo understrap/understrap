@@ -85,15 +85,18 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 * @return array<string,mixed> Form field arguments.
 	 */
 	function understrap_wc_form_field_args( $args, $key, $value = null ) {
+		$bootstrap4 = 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
+
+		// Add margin to each form field's html element wrapper (<p></p>).
+		if ( $bootstrap4 ) {
+			$args['class'][] = 'form-group';
+		}
+		$args['class'][] = 'mb-3';
+
 		// Start field type switch case.
 		switch ( $args['type'] ) {
 			// Targets all select input type elements, except the country and state select input types.
 			case 'select':
-				/*
-				 * Add a class to the field's html element wrapper - woocommerce
-				 * input types (fields) are often wrapped within a <p></p> tag.
-				 */
-				$args['class'][] = 'form-group mb-3';
 				// Add a class to the form input itself.
 				$args['input_class'][] = 'form-control';
 				// Add custom data attributes to the form input itself.
@@ -109,7 +112,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 			 * defined for this specific input type targets only the country select element.
 			 */
 			case 'country':
-				$args['class'][] = 'form-group mb-3 single-country';
+				$args['class'][] = 'single-country';
 				break;
 
 			/*
@@ -117,7 +120,6 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 			 * for this specific input type targets only the country select element.
 			 */
 			case 'state':
-				$args['class'][]           = 'form-group mb-3';
 				$args['custom_attributes'] = array(
 					'data-plugin'      => 'select2',
 					'data-allow-clear' => 'true',
@@ -128,7 +130,6 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				$args['input_class'][] = 'form-control';
 				break;
 			case 'checkbox':
-					$args['class'][] = 'form-group mb-3';
 					// Wrap the label in <span> tag.
 					$args['label'] = isset( $args['label'] ) ? '<span class="custom-control-label">' . $args['label'] . '<span>' : '';
 					// Add a class to the form input's <label> tag.
@@ -140,7 +141,6 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				$args['input_class'][] = 'custom-control-input';
 				break;
 			default:
-				$args['class'][]       = 'form-group mb-3';
 				$args['input_class'][] = 'form-control';
 				break;
 		} // End of switch ( $args ).
