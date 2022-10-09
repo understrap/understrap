@@ -116,11 +116,28 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				);
 				break;
 			case 'checkbox':
+				/*
+				 * WooCommerce checkbox markup differs from Bootstrap checkbox
+				 * markup. We apply Bootstrap classes such that the WooCommerce
+				 * checkbox look matches the Bootstrap checkbox look.
+				 */
+
+				// Get Bootstrap version specific CSS class base.
+				$base = $bootstrap4 ? 'custom-control' : 'form-check';
+
+				if ( isset( $args['label'] ) ) {
 					// Wrap the label in <span> tag.
-					$args['label'] = isset( $args['label'] ) ? '<span class="custom-control-label">' . $args['label'] . '<span>' : '';
-					// Add a class to the form input's <label> tag.
-					$args['label_class'][] = 'custom-control custom-checkbox';
-					$args['input_class'][] = 'custom-control-input';
+					$args['label'] = "<span class=\"{$base}-label\">{$args['label']}</span>";
+				}
+
+				// Add a class to the form input's <label> tag.
+				$args['label_class'][] = $base;
+				if ( $bootstrap4 ) {
+					$args['label_class'][] = 'custom-checkbox';
+				}
+
+				// Add a class to the form input itself.
+				$args['input_class'][] = $base . '-input';
 				break;
 				// Targets all select input type elements, except the country and state select input types.
 			case 'select':
@@ -134,6 +151,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				);
 				break;
 			case 'radio':
+				// Get Bootstrap version specific CSS class base.
 				$base = $bootstrap4 ? 'custom-control' : 'form-check';
 
 				$args['label_class'][] = $base . '-label';
