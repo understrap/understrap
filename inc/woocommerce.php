@@ -87,7 +87,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 *
 	 * @return array<string,mixed> Form field arguments.
 	 */
-	function understrap_wc_form_field_args( $args, $key, $value = null ) {
+	function understrap_wc_form_field_args( $args, $key, $value ) {
 		$bootstrap4 = 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
 
 		// Add margin to each form field's html element wrapper (<p></p>).
