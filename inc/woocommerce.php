@@ -139,16 +139,18 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				// Add a class to the form input itself.
 				$args['input_class'][] = $base . '-input';
 				break;
-				// Targets all select input type elements, except the country and state select input types.
 			case 'select':
+				/*
+				 * Targets all <select> elements, except the <select> elements
+				 * of type country or of type state.
+				 */
+
 				// Add a class to the form input itself.
-				$args['input_class'][] = 'form-control';
+				$args['input_class'][] = $bootstrap4 ? 'form-control' : 'form-select';
+
 				// Add custom data attributes to the form input itself.
-				$args['custom_attributes'] = array(
-					'data-plugin'      => 'select2',
-					'data-allow-clear' => 'true',
-					'aria-hidden'      => 'true',
-				);
+				$args['custom_attributes']['data-plugin']      = 'select2';
+				$args['custom_attributes']['data-allow-clear'] = 'true';
 				break;
 			case 'radio':
 				// Get Bootstrap version specific CSS class base.
