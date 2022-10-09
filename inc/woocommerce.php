@@ -23,6 +23,7 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 
 		// Add Bootstrap classes to form fields.
 		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
+		add_filter( 'woocommerce_form_field_radio', 'understrap_wc_form_field_radio', 10, 4 );
 		add_filter( 'woocommerce_quantity_input_classes', 'understrap_quantity_input_classes' );
 		add_filter( 'woocommerce_loop_add_to_cart_args', 'understrap_loop_add_to_cart_args' );
 
@@ -133,14 +134,71 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				);
 				break;
 			case 'radio':
-				$args['label_class'][] = 'custom-control custom-radio';
-				$args['input_class'][] = 'custom-control-input';
+				$base = $bootstrap4 ? 'custom-control' : 'form-check';
+
+				$args['label_class'][] = $base . '-label';
+				$args['input_class'][] = $base . '-input';
 				break;
 			default:
 				$args['input_class'][] = 'form-control';
 				break;
 		} // End of switch ( $args ).
 		return $args;
+	}
+}
+
+if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
+	/**
+	 * Adjust the WooCommerce checkout/address radio fields to match the look of
+	 * Bootstrap radio fields.
+	 *
+	 * Wraps the radio field(s) in a `.from-check`.
+	 *
+	 * If `$args['label']` is set a `<label>` tag is prepended to the radio
+	 * fields. `$args['label_class']` is used for the class attribute of this
+	 * tag and the class attribute of the actual input labels. Hence, we must
+	 * remove the first occurance of the label class added via
+	 * `understrap_wc_form_field_args()` that is meant for input labels only.
+	 *
+	 * @param string              $field The field's HTML incl. the wrapper element.
+	 * @param string              $key   The wrapper element's id attribute value.
+	 * @param array<string|mixed> $args  An array of field arguments.
+	 * @param string|null         $value The field's value.
+	 * @return string
+	 */
+	function understrap_wc_form_field_radio( $field, $key, $args, $value ) {
+
+		// Set up Bootstrap version specific variables.
+		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			$wrapper_classes = 'custom-control custom-radio';
+			$label_class     = 'custom-control-label';
+		} else {
+			$wrapper_classes = 'form-check';
+			$label_class     = 'form-check-label';
+		}
+
+		// Remove the first occurance of the label class if neccessary.
+		if ( isset( $args['label'] ) && isset( $args['label_class'] ) ) {
+			$strpos = strpos( $field, $label_class );
+			if ( false !== $strpos ) {
+				$field = substr_replace( $field, '', $strpos, strlen( $label_class ) );
+
+				/*
+				 * If $label_class was the only class in $args['label_class']
+				 * then there is an empty class attribute now. Let's remove it.
+				 */
+				$field = str_replace( 'class=""', '', $field );
+			}
+		}
+
+		// Add radio field wrapper class to the WooCommerce radio field wrapper.
+		$field = str_replace(
+			'woocommerce-input-wrapper',
+			'woocommerce-input-wrapper ' . $wrapper_classes,
+			$field
+		);
+
+		return $field;
 	}
 }
 
