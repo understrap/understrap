@@ -27,6 +27,7 @@ Child Theme Project: [https://github.com/understrap/understrap-child](https://gi
 
 == Changelog ==
 
+See https://github.com/understrap/understrap/blob/main/.github/CHANGELOG.md
 
 == Copyright ==
 
