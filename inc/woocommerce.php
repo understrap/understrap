@@ -95,18 +95,6 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 
 		// Start field type switch case.
 		switch ( $args['type'] ) {
-			// Targets all select input type elements, except the country and state select input types.
-			case 'select':
-				// Add a class to the form input itself.
-				$args['input_class'][] = 'form-control';
-				// Add custom data attributes to the form input itself.
-				$args['custom_attributes'] = array(
-					'data-plugin'      => 'select2',
-					'data-allow-clear' => 'true',
-					'aria-hidden'      => 'true',
-				);
-				break;
-
 			/*
 			 * By default WooCommerce will populate a select with the country names - $args
 			 * defined for this specific input type targets only the country select element.
@@ -132,6 +120,17 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 					// Add a class to the form input's <label> tag.
 					$args['label_class'][] = 'custom-control custom-checkbox';
 					$args['input_class'][] = 'custom-control-input';
+				break;
+				// Targets all select input type elements, except the country and state select input types.
+			case 'select':
+				// Add a class to the form input itself.
+				$args['input_class'][] = 'form-control';
+				// Add custom data attributes to the form input itself.
+				$args['custom_attributes'] = array(
+					'data-plugin'      => 'select2',
+					'data-allow-clear' => 'true',
+					'aria-hidden'      => 'true',
+				);
 				break;
 			case 'radio':
 				$args['label_class'][] = 'custom-control custom-radio';
