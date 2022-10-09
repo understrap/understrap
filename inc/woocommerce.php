@@ -176,7 +176,7 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 	 * Adjust the WooCommerce checkout/address radio fields to match the look of
 	 * Bootstrap radio fields.
 	 *
-	 * Wraps the radio field(s) in a `.from-check`.
+	 * Wraps each radio field (`<input>`+`<label>`) in a `.from-check`.
 	 *
 	 * If `$args['label']` is set a `<label>` tag is prepended to the radio
 	 * fields. `$args['label_class']` is used for the class attribute of this
@@ -215,12 +215,14 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 			}
 		}
 
-		// Add radio field wrapper class to the WooCommerce radio field wrapper.
-		$field = str_replace(
-			'woocommerce-input-wrapper',
-			'woocommerce-input-wrapper ' . $wrapper_classes,
-			$field
-		);
+		// Wrap each radio in a <span.from-check>.
+		$field = str_replace( '<input', "<span class=\"{$wrapper_classes}\"><input", $field );
+		$field = str_replace( '</label>', '</label></span>', $field );
+		if ( isset( $args['label'] ) ) {
+			// Remove the closing span tag from the first <label> element.
+			$strpos = strpos( $field, '</label>' ) + strlen( '</label>' );
+			$field  = substr_replace( $field, '', $strpos, strlen( '</span>' ) );
+		}
 
 		return $field;
 	}
