@@ -96,24 +96,26 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 
 		// Start field type switch case.
 		switch ( $args['type'] ) {
-			/*
-			 * By default WooCommerce will populate a select with the country names - $args
-			 * defined for this specific input type targets only the country select element.
-			 */
 			case 'country':
+				/*
+				 * WooCommerce will populate a <select> element of type 'country'
+				 * with the country names. $args defined for this specific input
+				 * type targets only the country <select> element.
+				 */
+
 				$args['class'][] = 'single-country';
 				break;
-
-			/*
-			 * By default WooCommerce will populate a select with state names - $args defined
-			 * for this specific input type targets only the country select element.
-			 */
 			case 'state':
-				$args['custom_attributes'] = array(
-					'data-plugin'      => 'select2',
-					'data-allow-clear' => 'true',
-					'aria-hidden'      => 'true',
-				);
+				/*
+				 * WooCommerce will populate a <select> element of type 'state'
+				 * with the state names. $args defined for this specific input
+				 * type targets only the state <select> element.
+				 */
+
+				// Add custom data attributes to the form input itself.
+				$args['custom_attributes']['data-plugin']      = 'select2';
+				$args['custom_attributes']['data-allow-clear'] = 'true';
+				$args['custom_attributes']['aria-hidden']      = 'true';
 				break;
 			case 'checkbox':
 				/*
