@@ -76,8 +76,10 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 
 if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	/**
-	 * Filter hook function monkey patching form classes
-	 * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
+	 * Modifies the form field's arguments by input type. The arguments are used
+	 * in `woocommerce_form_field()` to build the form fields.
+	 *
+	 * @see https://woocommerce.github.io/code-reference/namespaces/default.html#function_woocommerce_form_field
 	 *
 	 * @param array<string,mixed> $args  Form field arguments.
 	 * @param string              $key   Value of the fields name attribute.
