@@ -126,9 +126,6 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 					'aria-hidden'      => 'true',
 				);
 				break;
-			case 'textarea':
-				$args['input_class'][] = 'form-control';
-				break;
 			case 'checkbox':
 					// Wrap the label in <span> tag.
 					$args['label'] = isset( $args['label'] ) ? '<span class="custom-control-label">' . $args['label'] . '<span>' : '';
