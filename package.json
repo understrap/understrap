@@ -76,6 +76,6 @@
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
     "rollup": "^2.79.1",
     "sass": "^1.55.0",
-    "terser": "^5.15.0"
+    "terser": "^5.15.1"
   }
 }
