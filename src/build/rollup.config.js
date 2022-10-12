@@ -60,14 +60,14 @@ module.exports = {
 	],
 	output: [
 		{
-			banner,
+			banner: banner(''),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.js` ),
 			format: 'umd',
 			globals,
 			name: 'understrap',
 		},
 		{
-			banner,
+			banner: banner(''),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.min.js` ),
 			format: 'umd',
 			globals,
