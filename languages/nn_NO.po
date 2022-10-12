@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-09-30T17:24:22+00:00\n"
-"PO-Revision-Date: 2022-09-30 19:37+0200\n"
+"POT-Creation-Date: 2022-10-12T15:11:14+00:00\n"
+"PO-Revision-Date: 2022-10-12 17:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nn_NO\n"
@@ -214,69 +214,6 @@ msgstr ""
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
-#: inc/deprecated.php:94
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: inc/deprecated.php:95
-msgid "Previous"
-msgstr "Førre"
-
-#: inc/deprecated.php:96
-msgid "Next"
-msgstr "Neste"
-
-#: inc/deprecated.php:97
-msgid "About:"
-msgstr ""
-
-#: inc/deprecated.php:98
-msgid "Profile"
-msgstr ""
-
-#: inc/deprecated.php:99
-msgid "Posts by"
-msgstr ""
-
-#: inc/deprecated.php:100
-msgid "Permanent Link:"
-msgstr ""
-
-#: inc/deprecated.php:101
-msgid "in"
-msgstr ""
-
-#: inc/deprecated.php:102
-msgid "Edit"
-msgstr ""
-
-#: inc/deprecated.php:103
-msgid "1 Comment"
-msgstr "1 kommentar"
-
-#: inc/deprecated.php:104
-msgid "% Comments"
-msgstr "% kommentarer"
-
-#: inc/deprecated.php:105
-msgid "Comment navigation"
-msgstr "Finn fram i kommentarar"
-
-#: inc/deprecated.php:106
-msgid "&laquo;"
-msgstr "&laquo;"
-
-#: inc/deprecated.php:107
-msgid "&raquo;"
-msgstr "&raquo;"
-
-#. translators: Theme version
-#: inc/deprecated.php:109
-msgid "Version: %1$s"
-msgstr "Versjon: %1$s"
-
 #: inc/editor.php:50
 msgid "Lead Paragraph"
 msgstr ""
@@ -405,55 +342,55 @@ msgid "Pages:"
 msgstr "Sider:"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:339
+#: inc/template-tags.php:353
 msgid ", "
 msgstr ", "
 
-#: inc/widgets.php:196
+#: inc/widgets.php:268
 msgid "Right Sidebar"
 msgstr "Høgre sidekolonne"
 
-#: inc/widgets.php:198
+#: inc/widgets.php:270
 msgid "Right sidebar widget area"
 msgstr ""
 
-#: inc/widgets.php:208
+#: inc/widgets.php:280
 msgid "Left Sidebar"
 msgstr "Venstre sidekolonne"
 
-#: inc/widgets.php:210
+#: inc/widgets.php:282
 msgid "Left sidebar widget area"
 msgstr ""
 
-#: inc/widgets.php:220
+#: inc/widgets.php:292
 msgid "Hero Slider"
 msgstr "Hero Slider"
 
-#: inc/widgets.php:222
+#: inc/widgets.php:294
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 
-#: inc/widgets.php:232
+#: inc/widgets.php:304
 msgid "Hero Canvas"
 msgstr ""
 
-#: inc/widgets.php:234
+#: inc/widgets.php:306
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 
-#: inc/widgets.php:244
+#: inc/widgets.php:316
 msgid "Top Full"
 msgstr ""
 
-#: inc/widgets.php:246
+#: inc/widgets.php:318
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: inc/widgets.php:256
+#: inc/widgets.php:328
 msgid "Footer Full"
 msgstr "Bunntekst full"
 
-#: inc/widgets.php:258
+#: inc/widgets.php:330
 msgid "Full sized footer widget with dynamic grid"
 msgstr ""
 
@@ -540,6 +477,3 @@ msgstr "Førre"
 msgctxt "carousel control"
 msgid "Next"
 msgstr "Neste"
-
-#~ msgid "Leave a comment"
-#~ msgstr "Legg igjen ein kommentar"

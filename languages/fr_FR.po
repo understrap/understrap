@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-09-30T17:24:22+00:00\n"
-"PO-Revision-Date: 2022-09-30 19:36+0200\n"
+"POT-Creation-Date: 2022-10-12T15:11:14+00:00\n"
+"PO-Revision-Date: 2022-10-12 17:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -224,71 +224,6 @@ msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 "Modifier les informations du site d’Understrap localisé dans le pied de page."
 
-#: inc/deprecated.php:94
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Il semble que rien n’ait été trouvé à cet emplacement. Essayez peut-être "
-"l’un des liens ci-dessous ou une recherche ?"
-
-#: inc/deprecated.php:95
-msgid "Previous"
-msgstr "Précédent"
-
-#: inc/deprecated.php:96
-msgid "Next"
-msgstr "Suivant"
-
-#: inc/deprecated.php:97
-msgid "About:"
-msgstr "À propos :"
-
-#: inc/deprecated.php:98
-msgid "Profile"
-msgstr "Profil"
-
-#: inc/deprecated.php:99
-msgid "Posts by"
-msgstr "Articles par"
-
-#: inc/deprecated.php:100
-msgid "Permanent Link:"
-msgstr "Lien permanent :"
-
-#: inc/deprecated.php:101
-msgid "in"
-msgstr "dans"
-
-#: inc/deprecated.php:102
-msgid "Edit"
-msgstr "Modifier"
-
-#: inc/deprecated.php:103
-msgid "1 Comment"
-msgstr "Un commentaire"
-
-#: inc/deprecated.php:104
-msgid "% Comments"
-msgstr "% commentaires"
-
-#: inc/deprecated.php:105
-msgid "Comment navigation"
-msgstr "Navigation des commentaires"
-
-#: inc/deprecated.php:106
-msgid "&laquo;"
-msgstr "&laquo;"
-
-#: inc/deprecated.php:107
-msgid "&raquo;"
-msgstr "&raquo;"
-
-#. translators: Theme version
-#: inc/deprecated.php:109
-msgid "Version: %1$s"
-msgstr "Version : %1$s"
-
 #: inc/editor.php:50
 msgid "Lead Paragraph"
 msgstr ""
@@ -417,58 +352,58 @@ msgid "Pages:"
 msgstr "Pages :"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:339
+#: inc/template-tags.php:353
 msgid ", "
 msgstr ", "
 
-#: inc/widgets.php:196
+#: inc/widgets.php:268
 msgid "Right Sidebar"
 msgstr "Colonne latérale droite"
 
-#: inc/widgets.php:198
+#: inc/widgets.php:270
 msgid "Right sidebar widget area"
 msgstr ""
 
-#: inc/widgets.php:208
+#: inc/widgets.php:280
 msgid "Left Sidebar"
 msgstr "Colonne latérale gauche"
 
-#: inc/widgets.php:210
+#: inc/widgets.php:282
 msgid "Left sidebar widget area"
 msgstr ""
 
-#: inc/widgets.php:220
+#: inc/widgets.php:292
 msgid "Hero Slider"
 msgstr "Diaporama Hero"
 
-#: inc/widgets.php:222
+#: inc/widgets.php:294
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 "Zone de diaporama Hero. Placez deux widgets ou plus et ils défileront !"
 
-#: inc/widgets.php:232
+#: inc/widgets.php:304
 msgid "Hero Canvas"
 msgstr "Canvas du Hero"
 
-#: inc/widgets.php:234
+#: inc/widgets.php:306
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 "Zone Hero en pleine largeur pour Bootstrap et d‘autres balises HTML "
 "personnalisées"
 
-#: inc/widgets.php:244
+#: inc/widgets.php:316
 msgid "Top Full"
 msgstr "Haut pleine largeur"
 
-#: inc/widgets.php:246
+#: inc/widgets.php:318
 msgid "Full top widget with dynamic grid"
 msgstr "Widget d‘en-tête en pleine taille avec une grille dynamique"
 
-#: inc/widgets.php:256
+#: inc/widgets.php:328
 msgid "Footer Full"
 msgstr "Pied de page entier"
 
-#: inc/widgets.php:258
+#: inc/widgets.php:330
 msgid "Full sized footer widget with dynamic grid"
 msgstr "Widget de pied de page pleine taille avec une grille dynamique"
 
@@ -557,6 +492,3 @@ msgstr "Précédent"
 msgctxt "carousel control"
 msgid "Next"
 msgstr "Suivant"
-
-#~ msgid "Leave a comment"
-#~ msgstr "Laisser un commentaire"
