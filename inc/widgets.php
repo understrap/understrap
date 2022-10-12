@@ -60,7 +60,7 @@ add_filter( 'wp_dropdown_cats', 'understrap_add_block_widget_categories_class', 
 
 if ( ! function_exists( 'understrap_add_block_widget_archives_classes' ) ) {
 	/**
-	 * Adds Bootstrap class to select tag in the Categories widget.
+	 * Adds Bootstrap class to select tag in the Archives widget.
 	 *
 	 * @param string $block_content The block content.
 	 * @param array  $block         The full block, including name and attributes.
