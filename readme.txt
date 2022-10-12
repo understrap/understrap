@@ -24,9 +24,11 @@ Child Theme Project: [https://github.com/understrap/understrap-child](https://gi
 
 == Privacy ==
 
+Understrap does not collect any user data and does not use cookies.
 
 == Changelog ==
 
+See https://github.com/understrap/understrap/blob/main/.github/CHANGELOG.md
 
 == Copyright ==
 

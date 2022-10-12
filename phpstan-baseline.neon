@@ -71,7 +71,27 @@ parameters:
 			path: inc/theme-settings.php
 
 		-
+			message: "#^Function understrap_add_block_widget_archives_classes\\(\\) has parameter \\$block with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_block_widget_categories_class\\(\\) has parameter \\$parsed_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
 			message: "#^Function understrap_add_block_widget_search_classes\\(\\) has parameter \\$block with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) has parameter \\$cat_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/widgets.php
 
