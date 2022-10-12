@@ -169,8 +169,8 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 		$allowed_tags      = wp_kses_allowed_html( 'post' );
 		$allowed_protocols = wp_allowed_protocols();
 		if (
-			in_array( 'polylang/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )
-			|| in_array( 'polylang-pro/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )
+			in_array( 'polylang/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true )
+			|| in_array( 'polylang-pro/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true )
 		) {
 			if ( ! in_array( 'data', $allowed_protocols, true ) ) {
 				$allowed_protocols[] = 'data';
