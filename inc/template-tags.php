@@ -377,6 +377,20 @@ if ( ! function_exists( 'understrap_remove_hero_lazy_load' ) ) {
 	}
 }
 
+if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
+	/**
+	 * Retrieves the Bootstrap CSS class for the select tag.
+	 *
+	 * @return string Bootstrap CSS class for the select tag.
+	 */
+	function understrap_get_select_control_class() {
+		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			return 'form-control';
+		}
+		return 'form-select';
+	}
+}
+
 if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
 	/**
 	 * Retrieves the localized list item separator.
