@@ -3,7 +3,7 @@
 
 [![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/understrap.svg)](https://wordpress.org/themes/understrap)
 [![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/understrap.svg)](https://wordpress.org/themes/understrap/)
-[![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap)](https://github.com/understrap/understrap/commits/master)
+[![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap/develop)](https://github.com/understrap/understrap/commits/develop)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 #### See: [Official Demo](https://understrap.com) | Read: [Official Docs Page](https://docs.understrap.com/)
