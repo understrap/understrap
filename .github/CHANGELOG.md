@@ -12,7 +12,7 @@
 
 ** Enhancements **
 
-  - Updates Bootstrap 5.1.3 to Bootstrap 5.2.0
+  - Updates Bootstrap 5.1.3 to Bootstrap 5.2.2
   - Updates Bootstrap 4.6.1 to Bootstrap 4.6.2
   - Updates WooCommerce Templates
   - Adds a new 'Full Width Landing Page' page template
