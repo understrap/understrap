@@ -11634,6 +11634,10 @@ figure.woocommerce-product-gallery__wrapper {
   color: #dc3545;
 }
 
+.woocommerce form .form-row label.custom-control-label {
+  line-height: inherit;
+}
+
 .woocommerce div.product p.price,
 .woocommerce div.product span.price,
 .woocommerce div.product .stock,
