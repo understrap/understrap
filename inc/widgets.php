@@ -119,7 +119,7 @@ if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
 add_filter( 'render_block_core/search', 'understrap_add_block_widget_search_classes', 10, 2 );
 
 /**
- * Add active class of first item of carousel hero widget area.
+ * Add active class to first item of carousel hero widget area.
  *
  * @param array $params {
  *     Parameters passed to a widget’s display callback.

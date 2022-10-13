@@ -83,24 +83,3 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 		endif;
 	}
 }
-
-/**
- * This function has never existed in any of the templates. It serves to extract
- * strings for translations which have been removed or changed and may still be
- * be present in child themes. The corresponding translations are not maintained.
- */
-function deprecated_translations() {
-	array(
-		esc_html__( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ),
-		esc_html__( 'Previous', 'understrap' ),
-		esc_html__( 'Next', 'understrap' ),
-		esc_html__( 'About:', 'understrap' ),
-		esc_html__( 'Profile', 'understrap' ),
-		esc_html__( 'Posts by', 'understrap' ),
-		esc_html__( 'Permanent Link:', 'understrap' ),
-		esc_html__( 'in', 'understrap' ),
-		esc_html__( 'Edit', 'understrap' ),
-		esc_html__( '1 Comment', 'understrap' ),
-		esc_html__( '% Comments', 'understrap' ),
-	);
-}
