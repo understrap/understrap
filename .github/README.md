@@ -4,7 +4,7 @@
 [![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/understrap.svg)](https://wordpress.org/themes/understrap)
 [![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/understrap.svg)](https://wordpress.org/themes/understrap/)
 [![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap/develop)](https://github.com/understrap/understrap/commits/develop)
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 #### See: [Official Demo](https://understrap.com) | Read: [Official Docs Page](https://docs.understrap.com/)
 
@@ -50,11 +50,11 @@ See [changelog](CHANGELOG.md)
 ## License
 
 Copyright 2022 [Howard Development & Consulting, LLC](https://howarddc.com).
-Understrap is distributed under the terms of the GNU GPL version 2
+Understrap is distributed under the terms of the GNU GPL version 3
 
-http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+https://www.gnu.org/licenses/gpl-3.0.en.html
 
 ## Credits
 - Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
-- Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
+- Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/main/LICENSE (MIT)
 - WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
