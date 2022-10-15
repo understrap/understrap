@@ -312,7 +312,7 @@ if ( ! function_exists( 'understrap_loop_add_to_cart_args' ) ) {
 
 if ( ! function_exists( 'understrap_account_menu_item_classes' ) ) {
 	/**
-	 * Add Bootstrap classes to the
+	 * Add Bootstrap classes to the account navigation.
 	 *
 	 * @param string[] $classes Array of classes added to the account menu items.
 	 * @return string[] Array of classes added to the account menu items.
