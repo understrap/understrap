@@ -6,12 +6,12 @@ parameters:
 			path: inc/block-editor.php
 
 		-
-			message: "#^Function understrap_bootstrap_comment_form_fields\\(\\) has parameter \\$fields with no value type specified in iterable type array\\.$#"
+			message: "#^Function understrap_comment_form_fields\\(\\) has parameter \\$fields with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/custom-comments.php
 
 		-
-			message: "#^Function understrap_bootstrap_comment_form_fields\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Function understrap_comment_form_fields\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/custom-comments.php
 
