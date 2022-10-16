@@ -15,6 +15,8 @@ if ( ! function_exists( 'understrap_comment_form_fields' ) ) {
 	/**
 	 * Add Bootstrap classes to WP's comment form default fields.
 	 *
+	 * @since 1.2.0
+	 *
 	 * @param array $fields {
 	 *     Default comment fields.
 	 *
@@ -23,7 +25,6 @@ if ( ! function_exists( 'understrap_comment_form_fields' ) ) {
 	 *     @type string $url     Comment author URL field HTML.
 	 *     @type string $cookies Comment cookie opt-in field HTML.
 	 * }
-	 *
 	 * @return array
 	 */
 	function understrap_comment_form_fields( $fields ) {
@@ -65,8 +66,9 @@ if ( ! function_exists( 'understrap_comment_form' ) ) {
 	/**
 	 * Adds Bootstrap classes to comment form submit button and comment field.
 	 *
-	 * @param string[] $args Comment form arguments and fields.
+	 * @since 1.2.0
 	 *
+	 * @param string[] $args Comment form arguments and fields.
 	 * @return string[]
 	 */
 	function understrap_comment_form( $args ) {
