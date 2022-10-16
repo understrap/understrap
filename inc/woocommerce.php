@@ -24,14 +24,14 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 		// Add Bootstrap classes to form fields.
 		add_filter( 'woocommerce_form_field_args', 'understrap_wc_form_field_args', 10, 3 );
 		add_filter( 'woocommerce_form_field_radio', 'understrap_wc_form_field_radio', 10, 4 );
-		add_filter( 'woocommerce_quantity_input_classes', 'understrap_quantity_input_classes' );
-		add_filter( 'woocommerce_loop_add_to_cart_args', 'understrap_loop_add_to_cart_args' );
+		add_filter( 'woocommerce_quantity_input_classes', 'understrap_wc_quantity_input_classes' );
+		add_filter( 'woocommerce_loop_add_to_cart_args', 'understrap_wc_loop_add_to_cart_args' );
 
 		// Wrap the add-to-cart link in `div.add-to-cart-container`.
-		add_filter( 'woocommerce_loop_add_to_cart_link', 'understrap_loop_add_to_cart_link' );
+		add_filter( 'woocommerce_loop_add_to_cart_link', 'understrap_wc_loop_add_to_cart_link' );
 
 		// Add Bootstrap classes to account navigation.
-		add_filter( 'woocommerce_account_menu_item_classes', 'understrap_account_menu_item_classes' );
+		add_filter( 'woocommerce_account_menu_item_classes', 'understrap_wc_account_menu_item_classes' );
 	}
 }
 
@@ -46,6 +46,8 @@ add_action( 'woocommerce_after_main_content', 'understrap_woocommerce_wrapper_en
 if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 	/**
 	 * Display the theme specific start of the page wrapper.
+	 *
+	 * @since 0.8.2
 	 */
 	function understrap_woocommerce_wrapper_start() {
 		$container = get_theme_mod( 'understrap_container_type' );
@@ -64,6 +66,8 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 	/**
 	 * Display the theme specific end of the page wrapper.
+	 *
+	 * @since 0.8.2
 	 */
 	function understrap_woocommerce_wrapper_end() {
 		echo '</main>';
@@ -252,39 +256,45 @@ if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 	}
 }
 
-if ( ! function_exists( 'understrap_quantity_input_classes' ) ) {
+if ( ! function_exists( 'understrap_wc_quantity_input_classes' ) ) {
 	/**
 	 * Add Bootstrap class to quantity input field.
+	 *
+	 * @since 1.2.0
 	 *
 	 * @param array $classes Array of quantity input classes.
 	 * @return array
 	 */
-	function understrap_quantity_input_classes( $classes ) {
+	function understrap_wc_quantity_input_classes( $classes ) {
 		$classes[] = 'form-control';
 		return $classes;
 	}
 }
 
-if ( ! function_exists( 'understrap_loop_add_to_cart_link' ) ) {
+if ( ! function_exists( 'understrap_wc_loop_add_to_cart_link' ) ) {
 	/**
 	 * Wrap add to cart link in container.
+	 *
+	 * @since 1.2.0
 	 *
 	 * @param string $html Add to cart link HTML.
 	 * @return string Add to cart link HTML.
 	 */
-	function understrap_loop_add_to_cart_link( $html ) {
+	function understrap_wc_loop_add_to_cart_link( $html ) {
 		return '<div class="add-to-cart-container">' . $html . '</div>';
 	}
 }
 
-if ( ! function_exists( 'understrap_loop_add_to_cart_args' ) ) {
+if ( ! function_exists( 'understrap_wc_loop_add_to_cart_args' ) ) {
 	/**
 	 * Add Bootstrap button classes to add to cart link.
+	 *
+	 * @since 1.2.0
 	 *
 	 * @param array<string,mixed> $args Array of add to cart link arguments.
 	 * @return array<string,mixed> Array of add to cart link arguments.
 	 */
-	function understrap_loop_add_to_cart_args( $args ) {
+	function understrap_wc_loop_add_to_cart_args( $args ) {
 		if ( isset( $args['class'] ) && ! empty( $args['class'] ) ) {
 			if ( ! is_string( $args['class'] ) ) {
 				return $args;
@@ -310,14 +320,16 @@ if ( ! function_exists( 'understrap_loop_add_to_cart_args' ) ) {
 	}
 }
 
-if ( ! function_exists( 'understrap_account_menu_item_classes' ) ) {
+if ( ! function_exists( 'understrap_wc_account_menu_item_classes' ) ) {
 	/**
 	 * Add Bootstrap classes to the
+	 *
+	 * @since 1.2.0
 	 *
 	 * @param string[] $classes Array of classes added to the account menu items.
 	 * @return string[] Array of classes added to the account menu items.
 	 */
-	function understrap_account_menu_item_classes( $classes ) {
+	function understrap_wc_account_menu_item_classes( $classes ) {
 		$classes[] = 'list-group-item';
 		$classes[] = 'list-group-item-action';
 		if ( in_array( 'is-active', $classes, true ) ) {
