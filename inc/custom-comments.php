@@ -9,9 +9,9 @@
 defined( 'ABSPATH' ) || exit;
 
 // Add Bootstrap classes to comment form fields.
-add_filter( 'comment_form_default_fields', 'understrap_bootstrap_comment_form_fields' );
+add_filter( 'comment_form_default_fields', 'understrap_comment_form_fields' );
 
-if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
+if ( ! function_exists( 'understrap_comment_form_fields' ) ) {
 	/**
 	 * Add Bootstrap classes to WP's comment form default fields.
 	 *
@@ -26,7 +26,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
 	 *
 	 * @return array
 	 */
-	function understrap_bootstrap_comment_form_fields( $fields ) {
+	function understrap_comment_form_fields( $fields ) {
 
 		$replace = array(
 			'<p class="' => '<div class="form-group mb-3',
@@ -56,12 +56,12 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
 
 		return $fields;
 	}
-} // End of if function_exists( 'understrap_bootstrap_comment_form_fields' )
+} // End of if function_exists( 'understrap_comment_form_fields' )
 
 // Add Bootstrap classes to comment form submit button and comment field.
-add_filter( 'comment_form_defaults', 'understrap_bootstrap_comment_form' );
+add_filter( 'comment_form_defaults', 'understrap_comment_form' );
 
-if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
+if ( ! function_exists( 'understrap_comment_form' ) ) {
 	/**
 	 * Adds Bootstrap classes to comment form submit button and comment field.
 	 *
@@ -69,7 +69,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
 	 *
 	 * @return string[]
 	 */
-	function understrap_bootstrap_comment_form( $args ) {
+	function understrap_comment_form( $args ) {
 		$replace = array(
 			'<p class="' => '<div class="form-group mb-3 ',
 			'<textarea'  => '<textarea class="form-control" ',
@@ -86,7 +86,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
 
 		return $args;
 	}
-} // End of if function_exists( 'understrap_bootstrap_comment_form' ).
+} // End of if function_exists( 'understrap_comment_form' ).
 
 
 // Add note if comments are closed.
