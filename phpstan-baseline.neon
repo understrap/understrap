@@ -61,21 +61,6 @@ parameters:
 			path: inc/extras.php
 
 		-
-			message: "#^Function understrap_jetpack_infinite_scroll_render\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: inc/jetpack.php
-
-		-
-			message: "#^Function understrap_jetpack_setup\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: inc/jetpack.php
-
-		-
-			message: "#^Function understrap_jetpack_social_menu\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: inc/jetpack.php
-
-		-
 			message: "#^Function understrap_pagination\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/pagination.php
