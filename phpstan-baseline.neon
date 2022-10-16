@@ -146,11 +146,6 @@ parameters:
 			path: inc/woocommerce.php
 
 		-
-			message: "#^Parameter \\#2 \\$callback of function add_filter expects callable\\(\\)\\: mixed, 'understrap_quantity…' given\\.$#"
-			count: 1
-			path: inc/woocommerce.php
-
-		-
 			message: "#^Part \\$args\\['label'\\] \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
 			count: 1
 			path: inc/woocommerce.php
