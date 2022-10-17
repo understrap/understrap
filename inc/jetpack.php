@@ -49,7 +49,7 @@ if ( ! function_exists( 'understrap_jetpack_infinite_scroll_render' ) ) {
 	/**
 	 * Custom render function for Jetpack's Infinite Scroll feature.
 	 *
-	 * @since 1.2.0
+	 * @since 1.2.0 Renamed from understrap_components_infinite_scroll_render()
 	 */
 	function understrap_jetpack_infinite_scroll_render() {
 		while ( have_posts() ) {
@@ -71,7 +71,7 @@ if ( ! function_exists( 'understrap_jetpack_social_menu' ) ) {
 	/**
 	 * Display Jetpack's social menu if available.
 	 *
-	 * @since 1.2.0
+	 * @since 1.2.0 Renamed from understrap_components_social_menu()
 	 */
 	function understrap_jetpack_social_menu() {
 		if ( ! function_exists( 'jetpack_social_menu' ) ) {
