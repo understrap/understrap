@@ -260,7 +260,7 @@ if ( ! function_exists( 'understrap_wc_quantity_input_classes' ) ) {
 	/**
 	 * Add Bootstrap class to quantity input field.
 	 *
-	 * @since 1.2.0
+	 * @since 1.2.0 Renamed from understrap_quantity_input_classes()
 	 *
 	 * @param array $classes Array of quantity input classes.
 	 * @return array
