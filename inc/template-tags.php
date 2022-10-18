@@ -331,7 +331,7 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 			'understrap_link_pages_args',
 			array( $args ),
 			'1.2.0',
-			'wp_link_pages_args',
+			'wp_link_pages_args'
 		);
 
 		wp_link_pages( $args );
