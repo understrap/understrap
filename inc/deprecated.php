@@ -38,7 +38,6 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	 */
 	function understrap_adjust_body_class( $classes ) {
 		_deprecated_function( 'understrap_adjust_body_class', '0.9.4' );
-		return $classes;
 	}
 }
 
