@@ -3,6 +3,7 @@
  * Header Navbar (bootstrap4)
  *
  * @package Understrap
+ * @since 1.1.0
  */
 
 // Exit if accessed directly.

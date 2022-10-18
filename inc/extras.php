@@ -194,6 +194,8 @@ if ( ! function_exists( 'understrap_hide_posted_by' ) ) {
 	/**
 	 * Hides the posted by markup in `understrap_posted_on()`.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @param string $byline Posted by HTML markup.
 	 * @return string Maybe filtered posted by HTML markup.
 	 */
