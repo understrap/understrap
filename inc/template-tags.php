@@ -308,16 +308,29 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 	 * `<!--nextpage-->` Quicktag one or more times). This tag must be
 	 * within The Loop. Default: echo.
 	 *
+	 * @since 1.0.0
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/wp_link_pages/
+	 *
 	 * @return void|string Formatted output in HTML.
 	 */
 	function understrap_link_pages() {
-		$args = apply_filters(
-			'understrap_link_pages_args',
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
+		$args = array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
+			'after'  => '</div>',
 		);
+
+		/**
+		 * Filters the arguments used in retrieving page links for paginated posts.
+		 *
+		 * Runs before the 'wp_link_pages_args' hook.
+		 *
+		 * @since 1.0.0
+		 */
+		$args = apply_filters_deprecated(
+			'understrap_link_pages_args', array( $args ), '1.2.0', 'wp_link_pages_args'
+		);
+
 		wp_link_pages( $args );
 	}
 }
