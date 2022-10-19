@@ -1,7 +1,7 @@
 /*!
  * Understrap v1.2.0-beta1 (https://understrap.com)
  * Copyright 2013-2022 The UnderStrap Authors (https://github.com/understrap/understrap/graphs/contributors)
- * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+ * Licensed under GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
