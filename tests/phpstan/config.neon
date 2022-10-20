@@ -4,7 +4,7 @@ includes:
 	- ../../vendor/phpstan/phpstan/conf/bleedingEdge.neon
 	- ../../vendor/szepeviktor/phpstan-wordpress/extension.neon
 	- extension.neon
-	- ../../tests/phpstan/baseline.neon
+	- baseline.neon
 parameters:
 	level: max
 	paths:
