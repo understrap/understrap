@@ -26,6 +26,9 @@
 !.gitattributes
 !.github
 !.gitignore
+!.phpcs.xml.dist
+!.phpmd.baseline.xml
+!.phpmd.xml
 
 # Ignore all files with .lock extentions
 *.lock

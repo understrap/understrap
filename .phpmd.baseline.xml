@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<phpmd-baseline>
+  <violation rule="PHPMD\Rule\Design\LongMethod" file="inc/customizer.php"/>
+  <violation rule="PHPMD\Rule\Naming\LongVariable" file="inc/widgets.php"/>
+  <violation rule="PHPMD\Rule\CyclomaticComplexity" file="inc/woocommerce.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="inc/woocommerce.php"/>
+  <violation rule="PHPMD\Rule\Design\LongParameterList" file="inc/woocommerce.php"/>
+</phpmd-baseline>

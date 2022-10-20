@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<ruleset name="Understrap Coding Standards">
+
+	<description>Apply WordPress Coding Standards to Understrap</description>
+
+	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
+	<arg name="cache" value=".phpcs-cache"/>
+
+	<!-- Strip the filepaths down to the relevant bit. -->
+	<arg name="basepath" value="./"/>
+
+	<!-- Show colors in console -->
+	<arg name="colors"/>
+
+	<!-- Show sniff codes in all reports -->
+	<arg value="s"/>
+
+	<!-- Scan these files -->
+	<file>.</file>
+
+	<!-- Directories and third party library exclusions. -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/deprecated.php</exclude-pattern>
+	<exclude-pattern>*/fonts/*</exclude-pattern>
+	<exclude-pattern>*/dist/*</exclude-pattern>
+	<exclude-pattern>*/build/*</exclude-pattern>
+	<exclude-pattern>/.phpstan-cache/*</exclude-pattern>
+	<exclude-pattern>*.min.(js|css)</exclude-pattern>
+	<exclude-pattern>/\.*</exclude-pattern>
+
+	<!-- Use the WordPress Ruleset -->
+	<rule ref="WordPress">
+		<include-pattern>*\.php$</include-pattern>
+	</rule>
+
+	<!--
+		Verify that the text_domain is set to the desired text-domain.
+		Multiple valid text domains can be provided as a comma-delimited list.
+	-->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="understrap"/>
+				<element value="woocommerce"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!--
+		Allow for theme specific exceptions to the file name rules based
+		on the theme hierarchy.
+	-->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="is_theme" value="true"/>
+		</properties>
+	</rule>
+
+	<!-- Assignments in while conditions are a valid method of looping over iterables. -->
+	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">
+		<exclude-pattern>*</exclude-pattern>
+	</rule>
+
+	<!-- Exclude incorrectly named files that won't be renamed. -->
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>/inc/class-wp-bootstrap-navwalker\.php</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.Security.EscapeOutput">
+		<!-- Exclude functions which are escaped in inc/extras.php -->
+		<properties>
+			<property name="customAutoEscapedFunctions" type="array">
+				<element value="get_the_title"/>
+				<element value="get_the_archive_title"/>
+				<element value="get_the_archive_description"/>
+				<element value="understrap_get_list_item_separator"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!--
+		Exclude checking of line endings when reporting errors, but fix them
+		when running phpcbf.
+	-->
+	<rule ref="Generic.Files.LineEndings">
+		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
+	</rule>
+
+	<!-- Use the WPThemeReview Ruleset -->
+	<rule ref="WPThemeReview" />
+
+	<!--
+		Exclude checking for shortened URLs in Bootstrap's js. files.
+		Also exlude theme.js which includes bootstrap.js.
+	-->
+	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
+		<exclude-pattern>/js/theme*\.js</exclude-pattern>
+	</rule>
+</ruleset>
