@@ -8,19 +8,16 @@ async function copyDir( src, dest ) {
 	// Exclude all dot files and directories.
 	entries = entries.filter( dirent => ! dirent.name.startsWith('.') );
 	const ignore = [
+		'build',
 		'dist',
 		'node_modules',
 		'src',
+		'tests',
 		'vendor',
 		'composer.json',
 		'composer.lock',
 		'package.json',
 		'package-lock.json',
-		'phpcs.xml.dist',
-		'phpmd.baseline.xml',
-		'phpmd.xml',
-		'phpstan-baseline.neon',
-		'phpstan.neon.dist',
 	];
 
 	for ( const entry of entries ) {

@@ -1,18 +1,18 @@
 #$ vendor/bin/phpstan analyze
 
 includes:
-	- vendor/phpstan/phpstan/conf/bleedingEdge.neon
-	- vendor/szepeviktor/phpstan-wordpress/extension.neon
-	- src/phpstan/extension.neon
-	- phpstan-baseline.neon
+	- ../../vendor/phpstan/phpstan/conf/bleedingEdge.neon
+	- ../../vendor/szepeviktor/phpstan-wordpress/extension.neon
+	- extension.neon
+	- ../../tests/phpstan/baseline.neon
 parameters:
 	level: max
 	paths:
-		- inc/
+		- ../../inc/
 	excludePaths:
-		- inc/deprecated.php
-		- inc/class-wp-bootstrap-navwalker.php
-	tmpDir: .phpstan-cache
+		- ../../inc/deprecated.php
+		- ../../inc/class-wp-bootstrap-navwalker.php
+	tmpDir: ../../.phpstan-cache
 	ignoreErrors:
 		# no value type specified in iterable type:
 		#- "#Function [a-zA-Z0-9\\()_]+ return type has no value type specified in iterable type array#"

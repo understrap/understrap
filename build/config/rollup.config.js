@@ -13,7 +13,7 @@ const replace = require( '@rollup/plugin-replace' );
 /**
  * Internal dependencies
  */
-const banner = require( './banner.js' );
+const banner = require( '../scripts/banner.js' );
 
 // Determine if we want to build for Bootstrap v4 or v5.
 const BS4 = process.argv[ process.argv.length - 1 ] === 'BS4';
@@ -54,9 +54,9 @@ const plugins = [
 
 module.exports = {
 	input: [
-		path.resolve( __dirname, `../js/${ bsSrcFile }` ),
-		path.resolve( __dirname, '../js/skip-link-focus-fix.js' ),
-		path.resolve( __dirname, '../js/custom-javascript.js' ),
+		path.resolve( __dirname, `../../src/js/${ bsSrcFile }` ),
+		path.resolve( __dirname, '../../src/js/skip-link-focus-fix.js' ),
+		path.resolve( __dirname, '../../src/js/custom-javascript.js' ),
 	],
 	output: [
 		{
