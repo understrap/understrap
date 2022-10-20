@@ -29,7 +29,7 @@
 	<!-- Windows exclude patterns -->
 	<exclude-pattern>*\woocommerce\*</exclude-pattern>
 	<exclude-pattern>*\vendor\*</exclude-pattern>
-	<exclude-pattern>*\woocommerce\*</exclude-pattern>
+	<exclude-pattern>*\test\*</exclude-pattern>
 	<exclude-pattern>*\src\*</exclude-pattern>
 	<exclude-pattern>*\node_modules\*</exclude-pattern>
 	<exclude-pattern>*\languages\*</exclude-pattern>
