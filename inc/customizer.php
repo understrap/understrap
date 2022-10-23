@@ -155,6 +155,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'offcanvas' => __( 'Offcanvas', 'understrap' ),
 					),
 					'priority'          => apply_filters( 'understrap_navbar_type_priority', 20 ),
+					'active_callback'   => 'understrap_customize_bs5_active_cb',
 				)
 			)
 		);
@@ -253,6 +254,26 @@ if ( ! function_exists( 'understrap_customize_sanitize_select' ) ) {
 	}
 }
 
+if ( ! function_exists( 'understrap_customize_bs5_active_cb' ) ) {
+	/**
+	 * Detmerines whether to show a control based on the Bootstrap version
+	 * set in the Customizer.
+	 *
+	 * @since x.x.x
+	 *
+	 * @global WP_Customize_Manager $wp_customize WP_Customize_Manager instance.
+	 *
+	 * @return bool True if Bootstrap 5 is set, false otherwise.
+	 */
+	function understrap_customize_bs5_active_cb() {
+		global $wp_customize;
+		if ( 'bootstrap5' === $wp_customize->get_setting( 'understrap_bootstrap_version' )->value() ) {
+			return true;
+		}
+		return false;
+	}
+}
+
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
@@ -277,31 +298,6 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	}
 }
 add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
-
-/**
- * Loads javascript for conditionally showing customizer controls.
- */
-if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
-	/**
-	 * Setup JS integration for live previewing.
-	 */
-	function understrap_customize_controls_js() {
-		$file    = '/js/customizer-controls.js';
-		$version = filemtime( get_template_directory() . $file );
-		if ( false === $version ) {
-			$version = time();
-		}
-
-		wp_enqueue_script(
-			'understrap_customizer',
-			get_template_directory_uri() . $file,
-			array( 'customize-preview' ),
-			(string) $version,
-			true
-		);
-	}
-}
-add_action( 'customize_controls_enqueue_scripts', 'understrap_customize_controls_js' );
 
 if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
 	/**
