@@ -142,18 +142,18 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_navbar_type',
 				array(
-					'label'             => __( 'Responsive Navigation Type', 'understrap' ),
-					'description'       => __(
+					'label'       => __( 'Responsive Navigation Type', 'understrap' ),
+					'description' => __(
 						'Choose between an expanding and collapsing navbar or an offcanvas drawer.',
 						'understrap'
 					),
-					'section'           => 'understrap_theme_layout_options',
-					'type'              => 'select',
-					'choices'           => array(
+					'section'     => 'understrap_theme_layout_options',
+					'type'        => 'select',
+					'choices'     => array(
 						'collapse'  => __( 'Collapse', 'understrap' ),
 						'offcanvas' => __( 'Offcanvas', 'understrap' ),
 					),
-					'priority'          => apply_filters( 'understrap_navbar_type_priority', 20 ),
+					'priority'    => apply_filters( 'understrap_navbar_type_priority', 20 ),
 				)
 			)
 		);
@@ -173,20 +173,20 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_sidebar_position',
 				array(
-					'label'             => __( 'Sidebar Positioning', 'understrap' ),
-					'description'       => __(
+					'label'       => __( 'Sidebar Positioning', 'understrap' ),
+					'description' => __(
 						'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
 						'understrap'
 					),
-					'section'           => 'understrap_theme_layout_options',
-					'type'              => 'select',
-					'choices'           => array(
+					'section'     => 'understrap_theme_layout_options',
+					'type'        => 'select',
+					'choices'     => array(
 						'right' => __( 'Right sidebar', 'understrap' ),
 						'left'  => __( 'Left sidebar', 'understrap' ),
 						'both'  => __( 'Left & Right sidebars', 'understrap' ),
 						'none'  => __( 'No sidebar', 'understrap' ),
 					),
-					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 20 ),
+					'priority'    => apply_filters( 'understrap_sidebar_position_priority', 20 ),
 				)
 			)
 		);
