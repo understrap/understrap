@@ -132,7 +132,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			array(
 				'default'           => 'collapse',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'understrap_customize_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -149,7 +149,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					),
 					'section'           => 'understrap_theme_layout_options',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_customize_sanitize_select',
 					'choices'           => array(
 						'collapse'  => __( 'Collapse', 'understrap' ),
 						'offcanvas' => __( 'Offcanvas', 'understrap' ),
@@ -164,7 +163,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			array(
 				'default'           => 'right',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'understrap_customize_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -181,7 +180,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					),
 					'section'           => 'understrap_theme_layout_options',
 					'type'              => 'select',
-					'sanitize_callback' => 'understrap_customize_sanitize_select',
 					'choices'           => array(
 						'right' => __( 'Right sidebar', 'understrap' ),
 						'left'  => __( 'Left sidebar', 'understrap' ),
