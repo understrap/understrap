@@ -59,7 +59,7 @@
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-multi-entry": "^5.0.1",
     "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-replace": "^5.0.0",
+    "@rollup/plugin-replace": "^5.0.1",
     "autoprefixer": "^10.4.12",
     "bootstrap": "^5.2.2",
     "bootstrap4": "npm:bootstrap@^4.6.2",
