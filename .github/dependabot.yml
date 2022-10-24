@@ -11,9 +11,7 @@ updates:
     open-pull-requests-limit: 10
     rebase-strategy: auto
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
+      interval: "monthly"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
@@ -23,9 +21,7 @@ updates:
     open-pull-requests-limit: 10
     rebase-strategy: auto
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
+      interval: "monthly"
     target-branch: "develop"
     versioning-strategy: increase
 
@@ -40,8 +36,6 @@ updates:
     open-pull-requests-limit: 10
     rebase-strategy: auto
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
+      interval: "monthly"
     target-branch: "develop"
     versioning-strategy: increase
