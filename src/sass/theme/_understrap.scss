@@ -157,45 +157,6 @@ a.skip-link {
 	}
 }
 
-// Dropdown translation
-.navbar-dark .navbar-nav .dropdown-menu .nav-link {
-	display: block;
-	width: 100%; // For `<button>`s
-	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-	clear: both;
-	font-weight: $font-weight-normal;
-	color: $dropdown-link-color !important;
-	text-align: inherit; // For `<button>`s
-	white-space: nowrap; // prevent links from randomly breaking onto new lines
-	background: none; // For `<button>`s
-	border: 0; // For `<button>`s
-
-	&:hover,
-	&:focus {
-		color: $dropdown-link-hover-color !important;
-		text-decoration: none;
-		background-color: $dropdown-link-hover-bg;
-	}
-
-	&.active,
-	&:active {
-		color: $dropdown-link-active-color !important;
-		text-decoration: none;
-		background-color: $dropdown-link-active-bg;
-	}
-
-	&.disabled,
-	&:disabled {
-		color: $dropdown-link-disabled-color !important;
-		background-color: transparent;
-
-		// Remove CSS gradients if they're enabled
-		@if $enable-gradients {
-			background-image: none;
-		}
-	}
-}
-
 .navbar-light .navbar-brand a {
 	color: $navbar-light-active-color;
 
