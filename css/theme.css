@@ -11821,20 +11821,6 @@ article img,
   background-color: transparent;
 }
 
-.navbar-light .navbar-brand a {
-  color: rgba(0, 0, 0, 0.9);
-}
-.navbar-light .navbar-brand a:hover, .navbar-light .navbar-brand a:focus {
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.navbar-dark .navbar-brand a {
-  color: #fff;
-}
-.navbar-dark .navbar-brand a:hover, .navbar-dark .navbar-brand a:focus {
-  color: #fff;
-}
-
 .navbar h1, .navbar .h1 {
   font-weight: 400;
 }
