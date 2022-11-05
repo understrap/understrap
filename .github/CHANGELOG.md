@@ -8,7 +8,7 @@
 
   -
 
-## Release 1.2.0-beta1 October 5th 2022
+## Release 1.2.0-beta2 October 5th 2022
 
 ** Enhancements **
 
@@ -34,6 +34,7 @@
   - Fixes issues with the Customizer preview
   - Fixes the category transient flush
   - Accessibility: aria role fixes for the carousel and footer widgets area
+  - Translations: Makes aria-labels translatable
 
 
 ## Release 1.1.0 December 1st 2021
