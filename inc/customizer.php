@@ -229,6 +229,8 @@ if ( ! function_exists( 'understrap_customize_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
 	 *
+	 * @since 1.2.0 Renamed from understrap_theme_slug_sanitize_select()
+	 *
 	 * @param string               $input   Slug to sanitize.
 	 * @param WP_Customize_Setting $setting Setting instance.
 	 * @return string|bool Sanitized slug if it is a valid choice; the setting default for
@@ -284,6 +286,8 @@ add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
 if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
 	/**
 	 * Setup JS integration for live previewing.
+	 *
+	 * @since 1.1.0
 	 */
 	function understrap_customize_controls_js() {
 		$file    = '/js/customizer-controls.js';
@@ -307,8 +311,10 @@ if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
 	/**
 	 * Overrides the responsive navbar type for Bootstrap 4.
 	 *
+	 * @since 1.1.0
+	 *
 	 * @param string $current_mod Current navbar type.
-	 * @return string
+	 * @return string Maybe filtered navbar type.
 	 */
 	function understrap_default_navbar_type( $current_mod ) {
 

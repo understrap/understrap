@@ -52,6 +52,8 @@ if ( ! function_exists( 'understrap_offcanvas_admin_bar_inline_styles' ) ) {
 	 * Add inline styles for the offcanvas component if the admin bar is visibile.
 	 *
 	 * Fixes that the offcanvas close icon is hidden behind the admin bar.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_offcanvas_admin_bar_inline_styles() {
 		$navbar_type = get_theme_mod( 'understrap_navbar_type', 'collapse' );
