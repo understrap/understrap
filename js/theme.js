@@ -3283,11 +3283,59 @@
       return instance;
     };
   }
+  var createPopper$2 = /*#__PURE__*/popperGenerator(); // eslint-disable-next-line import/no-unused-modules
+
+  var defaultModifiers$1 = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1];
+  var createPopper$1 = /*#__PURE__*/popperGenerator({
+    defaultModifiers: defaultModifiers$1
+  }); // eslint-disable-next-line import/no-unused-modules
 
   var defaultModifiers = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1, offset$1, flip$1, preventOverflow$1, arrow$1, hide$1];
   var createPopper = /*#__PURE__*/popperGenerator({
     defaultModifiers: defaultModifiers
   }); // eslint-disable-next-line import/no-unused-modules
+
+  var Popper = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    popperGenerator: popperGenerator,
+    detectOverflow: detectOverflow,
+    createPopperBase: createPopper$2,
+    createPopper: createPopper,
+    createPopperLite: createPopper$1,
+    top: top,
+    bottom: bottom,
+    right: right,
+    left: left,
+    auto: auto,
+    basePlacements: basePlacements,
+    start: start,
+    end: end,
+    clippingParents: clippingParents,
+    viewport: viewport,
+    popper: popper,
+    reference: reference,
+    variationPlacements: variationPlacements,
+    placements: placements,
+    beforeRead: beforeRead,
+    read: read,
+    afterRead: afterRead,
+    beforeMain: beforeMain,
+    main: main,
+    afterMain: afterMain,
+    beforeWrite: beforeWrite,
+    write: write,
+    afterWrite: afterWrite,
+    modifierPhases: modifierPhases,
+    applyStyles: applyStyles$1,
+    arrow: arrow$1,
+    computeStyles: computeStyles$1,
+    eventListeners: eventListeners,
+    flip: flip$1,
+    hide: hide$1,
+    offset: offset$1,
+    popperOffsets: popperOffsets$1,
+    preventOverflow: preventOverflow$1
+  });
 
   /**
    * --------------------------------------------------------------------------
@@ -3465,6 +3513,9 @@
       return config;
     }
     _createPopper() {
+      if (typeof Popper === 'undefined') {
+        throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
+      }
       let referenceElement = this._element;
       if (this._config.reference === 'parent') {
         referenceElement = this._parent;
@@ -4823,6 +4874,9 @@
 
   class Tooltip extends BaseComponent {
     constructor(element, config) {
+      if (typeof Popper === 'undefined') {
+        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
+      }
       super(element, config);
 
       // Private
