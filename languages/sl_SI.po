@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-10-12T15:11:14+00:00\n"
-"PO-Revision-Date: 2022-10-12 17:17+0200\n"
+"POT-Creation-Date: 2022-10-26T09:38:35+00:00\n"
+"PO-Revision-Date: 2022-10-26 14:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sl_SI\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : "
 "((n % 100 == 3 || n % 100 == 4) ? 2 : 3));\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 "X-Poedit-KeywordsList: __:1;_e:1;_n:1,2;_n_noop:1,2;_x:1,2c;_ex:1,2c;"
 "_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;"
 "esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;translate:1;"
@@ -107,11 +107,18 @@ msgstr[3] ""
 msgid "Main Navigation"
 msgstr "Glavna navigacija"
 
-#: global-templates/navbar-collapse-bootstrap4.php:27
-#: global-templates/navbar-collapse-bootstrap5.php:26
-#: global-templates/navbar-offcanvas-bootstrap5.php:26
+#: global-templates/navbar-collapse-bootstrap4.php:34
+#: global-templates/navbar-collapse-bootstrap5.php:33
 msgid "Toggle navigation"
 msgstr "Preklopi navigacijo"
+
+#: global-templates/navbar-offcanvas-bootstrap5.php:33
+msgid "Open menu"
+msgstr "Odpri meni"
+
+#: global-templates/navbar-offcanvas-bootstrap5.php:45
+msgid "Close menu"
+msgstr "Zapri meni"
 
 #: header.php:32
 msgid "Skip to content"
