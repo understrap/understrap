@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-10-26T09:38:35+00:00\n"
-"PO-Revision-Date: 2022-10-26 14:32+0200\n"
+"POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
+"PO-Revision-Date: 2022-11-06 00:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nn_NO\n"
@@ -37,11 +37,11 @@ msgstr ""
 
 #. Author of the theme
 msgid "Howard Development &amp; Consulting"
-msgstr ""
+msgstr "Howard Development &amp; Consulting"
 
 #. Author URI of the theme
 msgid "https://howarddc.com"
-msgstr ""
+msgstr "https://howarddc.com"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -85,32 +85,32 @@ msgstr "Innlegg av %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "Eitt innspel til &laquo;%s&raquo;"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ein tanke om &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s sine tankar om &ldquo;%2$s&rdquo;"
 
-#: global-templates/navbar-collapse-bootstrap4.php:17
-#: global-templates/navbar-collapse-bootstrap5.php:17
-#: global-templates/navbar-offcanvas-bootstrap5.php:17
+#: global-templates/navbar-collapse-bootstrap4.php:18
+#: global-templates/navbar-collapse-bootstrap5.php:18
+#: global-templates/navbar-offcanvas-bootstrap5.php:18
 msgid "Main Navigation"
 msgstr ""
 
-#: global-templates/navbar-collapse-bootstrap4.php:34
-#: global-templates/navbar-collapse-bootstrap5.php:33
+#: global-templates/navbar-collapse-bootstrap4.php:35
+#: global-templates/navbar-collapse-bootstrap5.php:34
 msgid "Toggle navigation"
 msgstr ""
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:33
+#: global-templates/navbar-offcanvas-bootstrap5.php:34
 msgid "Open menu"
 msgstr ""
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:45
+#: global-templates/navbar-offcanvas-bootstrap5.php:46
 msgid "Close menu"
 msgstr ""
 
@@ -128,7 +128,7 @@ msgstr "Stengt for kommentarar."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
-msgstr ""
+msgstr "Standard toppbilete"
 
 #: inc/customizer.php:67
 msgid "Theme Layout Settings"
@@ -140,19 +140,19 @@ msgstr "Container-bredde og sidekolonne-standardinnstillinger"
 
 #: inc/customizer.php:89
 msgid "Bootstrap Version"
-msgstr ""
+msgstr "Bootstrap versjon"
 
 #: inc/customizer.php:90
-msgid "Choose between Bootstrap 4 or Bootstrap 5"
+msgid "Choose between Bootstrap 4 and Bootstrap 5"
 msgstr ""
 
 #: inc/customizer.php:94
 msgid "Bootstrap 4"
-msgstr ""
+msgstr "Bootstrap 4"
 
 #: inc/customizer.php:95
 msgid "Bootstrap 5"
-msgstr ""
+msgstr "Bootstrap 4"
 
 #: inc/customizer.php:117
 msgid "Container Width"
@@ -179,45 +179,45 @@ msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:153
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:154
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:176
 msgid "Sidebar Positioning"
 msgstr "Sidekolonne-posisjonering"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:177
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:184
 msgid "Right sidebar"
 msgstr "Høyre sidekolonne"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:185
 msgid "Left sidebar"
 msgstr "Venstre sidekolonne"
 
-#: inc/customizer.php:188
+#: inc/customizer.php:186
 msgid "Left & Right sidebars"
 msgstr "Venstre og høgre sidekolonner"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:187
 msgid "No sidebar"
 msgstr "Ingen sidekolonne"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:209
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
@@ -228,11 +228,11 @@ msgstr ""
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "Liten"
 
 #: inc/editor.php:60
 msgid "Blockquote"
-msgstr ""
+msgstr "Blokksitat"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
@@ -242,13 +242,13 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:245
+#: inc/extras.php:247
 msgid "Read More..."
 msgstr "Les meir..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr "https://wordpress.org/"
+msgstr "https://nn.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -286,12 +286,12 @@ msgstr "Hovudmeny"
 #: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
-msgstr ""
+msgstr "Posta"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "by"
-msgstr ""
+msgstr "av"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
@@ -299,105 +299,114 @@ msgid "Posted by"
 msgstr ""
 
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:98
+#: inc/template-tags.php:102
 msgid "Posted in %s"
 msgstr "Posta under %s"
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:111
+#: inc/template-tags.php:117
 msgid "Tagged %s"
 msgstr "Merkte %s"
 
 #. translators: %s post title
-#: inc/template-tags.php:128
+#: inc/template-tags.php:136
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
+"Legg att ein kommentar<span class=\"screen-reader-text\"> til %s</span>"
 
-#: inc/template-tags.php:233
+#: inc/template-tags.php:243
 msgid "Comments navigation"
 msgstr "Finn fram i kommentarar"
 
-#: inc/template-tags.php:237
+#: inc/template-tags.php:247
 msgid "&larr; Older Comments"
 msgstr "&larr; Eldre kommentarar"
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:253
 msgid "Newer Comments &rarr;"
 msgstr "Nyare kommentarar &rarr;"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:260
+#: inc/template-tags.php:272
 msgid "Edit %s"
 msgstr "Rediger %s"
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:301
 msgid "Post navigation"
 msgstr "Innleggsnavigering"
 
-#: inc/template-tags.php:293
+#: inc/template-tags.php:305
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:296
+#: inc/template-tags.php:308
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:331
 msgid "Pages:"
 msgstr "Sider:"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:353
+#: inc/template-tags.php:371
 msgid ", "
 msgstr ", "
 
-#: inc/widgets.php:268
+#. translators: Widget area title
+#: inc/widgets.php:279
 msgid "Right Sidebar"
 msgstr "Høgre sidekolonne"
 
-#: inc/widgets.php:270
+#: inc/widgets.php:281
+#, fuzzy
 msgid "Right sidebar widget area"
-msgstr ""
+msgstr "Høgre sidekolonne"
 
-#: inc/widgets.php:280
+#. translators: Widget area title
+#: inc/widgets.php:292
 msgid "Left Sidebar"
 msgstr "Venstre sidekolonne"
 
-#: inc/widgets.php:282
+#: inc/widgets.php:294
+#, fuzzy
 msgid "Left sidebar widget area"
-msgstr ""
+msgstr "Venstre sidekolonne"
 
-#: inc/widgets.php:292
+#. translators: Widget area title
+#: inc/widgets.php:305
 msgid "Hero Slider"
 msgstr "Hero Slider"
 
-#: inc/widgets.php:294
+#: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 
-#: inc/widgets.php:304
+#. translators: Widget area title
+#: inc/widgets.php:318
 msgid "Hero Canvas"
 msgstr ""
 
-#: inc/widgets.php:306
+#: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 
-#: inc/widgets.php:316
+#. translators: Widget area title
+#: inc/widgets.php:331
 msgid "Top Full"
 msgstr ""
 
-#: inc/widgets.php:318
+#: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: inc/widgets.php:328
+#. translators: Widget area title
+#: inc/widgets.php:344
 msgid "Footer Full"
 msgstr "Bunntekst full"
 
-#: inc/widgets.php:330
+#: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
 msgstr ""
 
@@ -448,11 +457,11 @@ msgstr "Venstre sidekolonne-oppsett"
 
 #. Template Name of the theme
 msgid "No Title, Full Width Page"
-msgstr ""
+msgstr "Ingen tittel, full bredde side"
 
 #. Template Name of the theme
 msgid "Right Sidebar Layout"
-msgstr ""
+msgstr "Høgre sidekolonne-oppsett"
 
 #. translators: %s: query term
 #: search.php:38

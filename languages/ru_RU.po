@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-10-26T09:38:35+00:00\n"
-"PO-Revision-Date: 2022-10-26 14:41+0200\n"
+"POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
+"PO-Revision-Date: 2022-11-06 01:12+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -42,7 +42,7 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://howarddc.com"
-msgstr ""
+msgstr "https://howarddc.com"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
@@ -88,33 +88,33 @@ msgstr "Записи %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "%s: 1 комментарий"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%2$s: %1$s комментарий"
+msgstr[1] "%2$s: %1$s комментария"
+msgstr[2] "%2$s: %1$s комментариев"
 
-#: global-templates/navbar-collapse-bootstrap4.php:17
-#: global-templates/navbar-collapse-bootstrap5.php:17
-#: global-templates/navbar-offcanvas-bootstrap5.php:17
+#: global-templates/navbar-collapse-bootstrap4.php:18
+#: global-templates/navbar-collapse-bootstrap5.php:18
+#: global-templates/navbar-offcanvas-bootstrap5.php:18
 msgid "Main Navigation"
 msgstr "Меню навигации"
 
-#: global-templates/navbar-collapse-bootstrap4.php:34
-#: global-templates/navbar-collapse-bootstrap5.php:33
+#: global-templates/navbar-collapse-bootstrap4.php:35
+#: global-templates/navbar-collapse-bootstrap5.php:34
 msgid "Toggle navigation"
 msgstr "Переключить навигацию"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:33
+#: global-templates/navbar-offcanvas-bootstrap5.php:34
 msgid "Open menu"
 msgstr "Открыть меню"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:45
+#: global-templates/navbar-offcanvas-bootstrap5.php:46
 msgid "Close menu"
 msgstr "Закрыть меню"
 
@@ -132,7 +132,7 @@ msgstr "Обсуждение закрыто."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
-msgstr ""
+msgstr "Изображение заголовка по умолчанию"
 
 #: inc/customizer.php:67
 msgid "Theme Layout Settings"
@@ -144,19 +144,19 @@ msgstr "Ширина контейнера и боковая панель по у
 
 #: inc/customizer.php:89
 msgid "Bootstrap Version"
-msgstr ""
+msgstr "Версия Bootstrap"
 
 #: inc/customizer.php:90
-msgid "Choose between Bootstrap 4 or Bootstrap 5"
+msgid "Choose between Bootstrap 4 and Bootstrap 5"
 msgstr ""
 
 #: inc/customizer.php:94
 msgid "Bootstrap 4"
-msgstr ""
+msgstr "Bootstrap 4"
 
 #: inc/customizer.php:95
 msgid "Bootstrap 5"
-msgstr ""
+msgstr "Bootstrap 5"
 
 #: inc/customizer.php:117
 msgid "Container Width"
@@ -183,45 +183,45 @@ msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:153
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:154
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:176
 msgid "Sidebar Positioning"
 msgstr "Расположение боковой панели"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:177
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:184
 msgid "Right sidebar"
 msgstr "Правая боковая панель"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:185
 msgid "Left sidebar"
 msgstr "Левая боковая панель"
 
-#: inc/customizer.php:188
+#: inc/customizer.php:186
 msgid "Left & Right sidebars"
 msgstr "Левая и правая боковые панели"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:187
 msgid "No sidebar"
 msgstr "Без боковой панели"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:209
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
@@ -232,11 +232,11 @@ msgstr ""
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "Маленький"
 
 #: inc/editor.php:60
 msgid "Blockquote"
-msgstr ""
+msgstr "Цитата"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
@@ -246,7 +246,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:245
+#: inc/extras.php:247
 msgid "Read More..."
 msgstr "Читать далее..."
 
@@ -290,118 +290,127 @@ msgstr "Основное меню"
 #: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
-msgstr ""
+msgstr "Опубликовано"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "by"
-msgstr ""
+msgstr "от"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "Posted by"
-msgstr ""
+msgstr "Написано автором"
 
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:98
+#: inc/template-tags.php:102
 msgid "Posted in %s"
 msgstr "Опубликовано в %s"
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:111
+#: inc/template-tags.php:117
 msgid "Tagged %s"
 msgstr "Отмечено %s"
 
 #. translators: %s post title
-#: inc/template-tags.php:128
+#: inc/template-tags.php:136
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
+"Добавить комментарий<span class=\"screen-reader-text\"> к записи %s</span>"
 
-#: inc/template-tags.php:233
+#: inc/template-tags.php:243
 msgid "Comments navigation"
 msgstr "Навигация по комментариям"
 
-#: inc/template-tags.php:237
+#: inc/template-tags.php:247
 msgid "&larr; Older Comments"
 msgstr "&larr; Предыдущие комментарии"
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:253
 msgid "Newer Comments &rarr;"
 msgstr "Более новые комментарии &rarr;"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:260
+#: inc/template-tags.php:272
 msgid "Edit %s"
 msgstr "Изменить %s"
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:301
 msgid "Post navigation"
 msgstr "Навигация по записям"
 
-#: inc/template-tags.php:293
+#: inc/template-tags.php:305
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:296
+#: inc/template-tags.php:308
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:331
 msgid "Pages:"
-msgstr "Страницы"
+msgstr "Страницы:"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:353
+#: inc/template-tags.php:371
 msgid ", "
 msgstr ", "
 
-#: inc/widgets.php:268
+#. translators: Widget area title
+#: inc/widgets.php:279
 msgid "Right Sidebar"
 msgstr "Правая боковая панель"
 
-#: inc/widgets.php:270
+#: inc/widgets.php:281
+#, fuzzy
 msgid "Right sidebar widget area"
-msgstr ""
+msgstr "Правая боковая панель"
 
-#: inc/widgets.php:280
+#. translators: Widget area title
+#: inc/widgets.php:292
 msgid "Left Sidebar"
 msgstr "Левая боковая панель"
 
-#: inc/widgets.php:282
+#: inc/widgets.php:294
+#, fuzzy
 msgid "Left sidebar widget area"
-msgstr ""
+msgstr "Левая боковая панель"
 
-#: inc/widgets.php:292
+#. translators: Widget area title
+#: inc/widgets.php:305
 msgid "Hero Slider"
 msgstr "Слайдер Hero"
 
-#: inc/widgets.php:294
+#: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 
-#: inc/widgets.php:304
+#. translators: Widget area title
+#: inc/widgets.php:318
 msgid "Hero Canvas"
 msgstr ""
 
-#: inc/widgets.php:306
+#: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 
-#: inc/widgets.php:316
+#. translators: Widget area title
+#: inc/widgets.php:331
 msgid "Top Full"
 msgstr ""
 
-#: inc/widgets.php:318
+#: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: inc/widgets.php:328
+#. translators: Widget area title
+#: inc/widgets.php:344
 msgid "Footer Full"
 msgstr "Подвал"
 
-#: inc/widgets.php:330
+#: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
 msgstr ""
 
@@ -454,11 +463,11 @@ msgstr "Компоновка левой боковой панели"
 
 #. Template Name of the theme
 msgid "No Title, Full Width Page"
-msgstr ""
+msgstr "Без заголовка, Страница во всю ширину"
 
 #. Template Name of the theme
 msgid "Right Sidebar Layout"
-msgstr ""
+msgstr "Правая боковая панель"
 
 #. translators: %s: query term
 #: search.php:38

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-10-26T09:38:35+00:00\n"
-"PO-Revision-Date: 2022-10-26 14:28+0200\n"
+"POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
+"PO-Revision-Date: 2022-11-06 00:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -41,13 +41,14 @@ msgstr ""
 
 #. Author URI of the theme
 msgid "https://howarddc.com"
-msgstr ""
+msgstr "https://howarddc.com"
 
 #: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "お探しのページが見つかりません。"
 
 #: 404.php:36
+#, fuzzy
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "こちらには何もありません。検索をお試しください。"
 
@@ -84,31 +85,31 @@ msgstr "%s の投稿"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "「%s」への1件のフィードバック"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
+msgstr[0] "「%2$s」への%1$s件のフィードバック"
 
-#: global-templates/navbar-collapse-bootstrap4.php:17
-#: global-templates/navbar-collapse-bootstrap5.php:17
-#: global-templates/navbar-offcanvas-bootstrap5.php:17
+#: global-templates/navbar-collapse-bootstrap4.php:18
+#: global-templates/navbar-collapse-bootstrap5.php:18
+#: global-templates/navbar-offcanvas-bootstrap5.php:18
 msgid "Main Navigation"
 msgstr "メインナビゲーション"
 
-#: global-templates/navbar-collapse-bootstrap4.php:34
-#: global-templates/navbar-collapse-bootstrap5.php:33
+#: global-templates/navbar-collapse-bootstrap4.php:35
+#: global-templates/navbar-collapse-bootstrap5.php:34
 msgid "Toggle navigation"
 msgstr "ナビゲーションを切り替え"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:33
+#: global-templates/navbar-offcanvas-bootstrap5.php:34
 msgid "Open menu"
 msgstr "メニューを開く"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:45
+#: global-templates/navbar-offcanvas-bootstrap5.php:46
 msgid "Close menu"
 msgstr "メニューを閉じる"
 
@@ -126,7 +127,7 @@ msgstr "コメントは受け付けていません。"
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
-msgstr ""
+msgstr "デフォルトのヘッダー画像"
 
 #: inc/customizer.php:67
 msgid "Theme Layout Settings"
@@ -138,19 +139,19 @@ msgstr "コンテナの幅とサイドバーのデフォルト"
 
 #: inc/customizer.php:89
 msgid "Bootstrap Version"
-msgstr ""
+msgstr "Bootstrap バーション"
 
 #: inc/customizer.php:90
-msgid "Choose between Bootstrap 4 or Bootstrap 5"
-msgstr ""
+msgid "Choose between Bootstrap 4 and Bootstrap 5"
+msgstr "Bootstrap 4とBootstrap 5のどちらを選ぶか"
 
 #: inc/customizer.php:94
 msgid "Bootstrap 4"
-msgstr ""
+msgstr "Bootstrap 4"
 
 #: inc/customizer.php:95
 msgid "Bootstrap 5"
-msgstr ""
+msgstr "Bootstrap 5"
 
 #: inc/customizer.php:117
 msgid "Container Width"
@@ -177,45 +178,45 @@ msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:153
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:154
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:176
 msgid "Sidebar Positioning"
 msgstr "サイドバーポジショニング"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:177
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:184
 msgid "Right sidebar"
 msgstr "右サイドバー"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:185
 msgid "Left sidebar"
 msgstr "左サイドバー"
 
-#: inc/customizer.php:188
+#: inc/customizer.php:186
 msgid "Left & Right sidebars"
 msgstr "左右サイドバー"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:187
 msgid "No sidebar"
 msgstr "サイドバーなし"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:209
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
@@ -226,11 +227,11 @@ msgstr ""
 #: inc/editor.php:56
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "小"
 
 #: inc/editor.php:60
 msgid "Blockquote"
-msgstr ""
+msgstr "引用"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
@@ -240,7 +241,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:245
+#: inc/extras.php:247
 msgid "Read More..."
 msgstr "続きを読む..."
 
@@ -284,7 +285,7 @@ msgstr "メインメニュー"
 #: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
-msgstr ""
+msgstr "投稿日"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
@@ -294,108 +295,115 @@ msgstr ""
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "Posted by"
-msgstr ""
+msgstr "投稿者"
 
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:98
+#: inc/template-tags.php:102
 msgid "Posted in %s"
 msgstr "カテゴリー: %s"
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:111
+#: inc/template-tags.php:117
 msgid "Tagged %s"
 msgstr "タグ: %s"
 
 #. translators: %s post title
-#: inc/template-tags.php:128
+#: inc/template-tags.php:136
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "<span class=\"screen-reader-text\">%s への</span>コメントする"
 
-#: inc/template-tags.php:233
+#: inc/template-tags.php:243
 msgid "Comments navigation"
 msgstr "コメントナビゲーション"
 
-#: inc/template-tags.php:237
+#: inc/template-tags.php:247
 msgid "&larr; Older Comments"
 msgstr "&larr; 古いコメント"
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:253
 msgid "Newer Comments &rarr;"
 msgstr "新しいコメント &rarr;"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:260
+#: inc/template-tags.php:272
 msgid "Edit %s"
 msgstr "%s を編集する"
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:301
 msgid "Post navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:293
+#: inc/template-tags.php:305
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:296
+#: inc/template-tags.php:308
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:331
 msgid "Pages:"
 msgstr "ページ:"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:353
+#: inc/template-tags.php:371
 msgid ", "
 msgstr "、 "
 
-#: inc/widgets.php:268
+#. translators: Widget area title
+#: inc/widgets.php:279
 msgid "Right Sidebar"
 msgstr "右サイドバー"
 
-#: inc/widgets.php:270
+#: inc/widgets.php:281
 msgid "Right sidebar widget area"
-msgstr ""
+msgstr "右サイドバー"
 
-#: inc/widgets.php:280
+#. translators: Widget area title
+#: inc/widgets.php:292
 msgid "Left Sidebar"
 msgstr "左サイドバー"
 
-#: inc/widgets.php:282
+#: inc/widgets.php:294
+#, fuzzy
 msgid "Left sidebar widget area"
-msgstr ""
+msgstr "左サイドバー"
 
-#: inc/widgets.php:292
+#. translators: Widget area title
+#: inc/widgets.php:305
 msgid "Hero Slider"
 msgstr "ヒーロースライダー"
 
-#: inc/widgets.php:294
+#: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 
-#: inc/widgets.php:304
+#. translators: Widget area title
+#: inc/widgets.php:318
 msgid "Hero Canvas"
 msgstr ""
 
-#: inc/widgets.php:306
+#: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 
-#: inc/widgets.php:316
+#. translators: Widget area title
+#: inc/widgets.php:331
 msgid "Top Full"
 msgstr ""
 
-#: inc/widgets.php:318
+#: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: inc/widgets.php:328
+#. translators: Widget area title
+#: inc/widgets.php:344
 msgid "Footer Full"
 msgstr "全幅フッター"
 
-#: inc/widgets.php:330
+#: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
 msgstr ""
 
@@ -420,6 +428,7 @@ msgstr ""
 "てください。"
 
 #: loop-templates/content-none.php:46
+#, fuzzy
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -447,11 +456,12 @@ msgstr "左スライダーのレイアウト"
 
 #. Template Name of the theme
 msgid "No Title, Full Width Page"
-msgstr ""
+msgstr "タイトルなし、全幅ページ"
 
 #. Template Name of the theme
+#, fuzzy
 msgid "Right Sidebar Layout"
-msgstr ""
+msgstr "右サイドバー"
 
 #. translators: %s: query term
 #: search.php:38

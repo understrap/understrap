@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-10-26T09:38:35+00:00\n"
-"PO-Revision-Date: 2022-10-26 14:18+0200\n"
+"POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
+"PO-Revision-Date: 2022-11-06 00:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: stef.kariotidis@gmail.com\n"
 "Language: el_GR\n"
@@ -96,22 +96,22 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s σκέψη σχετικά μέ το &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s σκέψεις σχετικά με το &ldquo;%2$s&rdquo;"
 
-#: global-templates/navbar-collapse-bootstrap4.php:17
-#: global-templates/navbar-collapse-bootstrap5.php:17
-#: global-templates/navbar-offcanvas-bootstrap5.php:17
+#: global-templates/navbar-collapse-bootstrap4.php:18
+#: global-templates/navbar-collapse-bootstrap5.php:18
+#: global-templates/navbar-offcanvas-bootstrap5.php:18
 msgid "Main Navigation"
 msgstr "Κύριο μενού πλοήγησης"
 
-#: global-templates/navbar-collapse-bootstrap4.php:34
-#: global-templates/navbar-collapse-bootstrap5.php:33
+#: global-templates/navbar-collapse-bootstrap4.php:35
+#: global-templates/navbar-collapse-bootstrap5.php:34
 msgid "Toggle navigation"
 msgstr "Εναλλαγή πλοήγησης"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:33
+#: global-templates/navbar-offcanvas-bootstrap5.php:34
 msgid "Open menu"
 msgstr "Άνοιγμα μενού"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:45
+#: global-templates/navbar-offcanvas-bootstrap5.php:46
 msgid "Close menu"
 msgstr "Κλείσιμο Μενού"
 
@@ -129,7 +129,7 @@ msgstr "Τα σχόλια είναι απενεργοποιημένα."
 
 #: inc/custom-header.php:54
 msgid "Default Header Image"
-msgstr ""
+msgstr "Προεπιλεγμένη Εικόνα Κεφαλίδας"
 
 #: inc/customizer.php:67
 msgid "Theme Layout Settings"
@@ -144,8 +144,8 @@ msgid "Bootstrap Version"
 msgstr "Έκδοση Bootstrap"
 
 #: inc/customizer.php:90
-msgid "Choose between Bootstrap 4 or Bootstrap 5"
-msgstr ""
+msgid "Choose between Bootstrap 4 and Bootstrap 5"
+msgstr "Επιλέξτε μεταξύ Bootstrap 4 και Bootstrap 5"
 
 #: inc/customizer.php:94
 msgid "Bootstrap 4"
@@ -161,7 +161,7 @@ msgstr "Πλάτος Διάταξης"
 
 #: inc/customizer.php:118
 msgid "Choose between Bootstrap's container and container-fluid"
-msgstr "Επιλογή  μεταξύ πλήρους ή μη πλάτους"
+msgstr "Επιλογή μεταξύ πλήρους ή μη πλάτους"
 
 #: inc/customizer.php:122
 msgid "Fixed width container"
@@ -180,45 +180,45 @@ msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:153
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:154
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:176
 msgid "Sidebar Positioning"
 msgstr "Τοποθέτηση Εργαλειοθήκης"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:177
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:184
 msgid "Right sidebar"
-msgstr "Εργαλειοθήκη δεξιά"
+msgstr "Δεξιά πλευρική στήλη"
+
+#: inc/customizer.php:185
+msgid "Left sidebar"
+msgstr "Αριστερή πλευρική στήλη"
+
+#: inc/customizer.php:186
+msgid "Left & Right sidebars"
+msgstr "Αριστερή και δεξιά πλευρική στήλη"
 
 #: inc/customizer.php:187
-msgid "Left sidebar"
-msgstr "Εργαλειοθήκη αριστερά"
-
-#: inc/customizer.php:188
-msgid "Left & Right sidebars"
-msgstr "Εργαλειοθήκες αριστερά & δεξιά"
-
-#: inc/customizer.php:189
 msgid "No sidebar"
 msgstr "Χωρίς εργαλειοθήκη"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:209
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
@@ -243,13 +243,13 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:245
+#: inc/extras.php:247
 msgid "Read More..."
 msgstr "Διαβάστε Περισσότερα..."
 
 #: inc/hooks.php:30
 msgid "https://wordpress.org/"
-msgstr "https://wordpress.org"
+msgstr "https://el.wordpress.org/"
 
 #. translators: WordPress
 #: inc/hooks.php:33
@@ -287,118 +287,126 @@ msgstr "Κύριο Μενού"
 #: inc/template-tags.php:41
 msgctxt "post date"
 msgid "Posted on"
-msgstr ""
+msgstr "Δημοσιεύτηκε στο"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "by"
-msgstr ""
+msgstr "από"
 
 #: inc/template-tags.php:55
 msgctxt "post author"
 msgid "Posted by"
-msgstr ""
+msgstr "Συντάχθηκε από"
 
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:98
+#: inc/template-tags.php:102
 msgid "Posted in %s"
 msgstr "Αναρτήθηκε στις %s"
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:111
+#: inc/template-tags.php:117
 msgid "Tagged %s"
 msgstr "Με ετικέτα: %s"
 
 #. translators: %s post title
-#: inc/template-tags.php:128
+#: inc/template-tags.php:136
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "Σχολιάστε<span class=\"screen-reader-text\"> στο %s</span>"
 
-#: inc/template-tags.php:233
+#: inc/template-tags.php:243
 msgid "Comments navigation"
 msgstr "Πλοήγηση στα σχόλια"
 
-#: inc/template-tags.php:237
+#: inc/template-tags.php:247
 msgid "&larr; Older Comments"
 msgstr "&larr; Παλιότερα Σχόλια"
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:253
 msgid "Newer Comments &rarr;"
 msgstr "Νεότερα Σχόλια &rarr;"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:260
+#: inc/template-tags.php:272
 msgid "Edit %s"
 msgstr "Επεξεργασία %s"
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:301
 msgid "Post navigation"
 msgstr "Πλοήγηση άρθρων"
 
-#: inc/template-tags.php:293
+#: inc/template-tags.php:305
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:296
+#: inc/template-tags.php:308
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:331
 msgid "Pages:"
 msgstr "Σελίδες:"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:353
+#: inc/template-tags.php:371
 msgid ", "
 msgstr ", "
 
-#: inc/widgets.php:268
+#. translators: Widget area title
+#: inc/widgets.php:279
 msgid "Right Sidebar"
-msgstr "Δεξιά Εργαλειοθήκη"
+msgstr "Δεξιά πλευρική στήλη"
 
-#: inc/widgets.php:270
+#: inc/widgets.php:281
+#, fuzzy
 msgid "Right sidebar widget area"
-msgstr ""
+msgstr "Δεξιά πλευρική στήλη"
 
-#: inc/widgets.php:280
-msgid "Left Sidebar"
-msgstr "Αριστερή Εργαλειοθήκη"
-
-#: inc/widgets.php:282
-msgid "Left sidebar widget area"
-msgstr ""
-
+#. translators: Widget area title
 #: inc/widgets.php:292
+msgid "Left Sidebar"
+msgstr "Αριστερή πλευρική στήλη"
+
+#: inc/widgets.php:294
+#, fuzzy
+msgid "Left sidebar widget area"
+msgstr "Αριστερή πλευρική στήλη"
+
+#. translators: Widget area title
+#: inc/widgets.php:305
 msgid "Hero Slider"
 msgstr "Ολισθητής Hero"
 
-#: inc/widgets.php:294
+#: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 
-#: inc/widgets.php:304
+#. translators: Widget area title
+#: inc/widgets.php:318
 msgid "Hero Canvas"
 msgstr ""
 
-#: inc/widgets.php:306
+#: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 
-#: inc/widgets.php:316
+#. translators: Widget area title
+#: inc/widgets.php:331
 msgid "Top Full"
 msgstr ""
 
-#: inc/widgets.php:318
+#: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: inc/widgets.php:328
+#. translators: Widget area title
+#: inc/widgets.php:344
 msgid "Footer Full"
 msgstr "Υποσέλιδο Πλήρες"
 
-#: inc/widgets.php:330
+#: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
 msgstr ""
 
@@ -434,7 +442,7 @@ msgstr "Υπόδειγμα Κενής Σελίδας"
 
 #. Template Name of the theme
 msgid "Left and Right Sidebar Layout"
-msgstr "Διάταξη με Αριστερή και Δεξιά Εργαλειοθήκη"
+msgstr "Διάταξη με αριστερή και δεξιά πλευρική στήλη"
 
 #. Template Name of the theme
 msgid "Empty Page Template"
@@ -446,15 +454,15 @@ msgstr "Σελίδα Πλήρους Πλάτους"
 
 #. Template Name of the theme
 msgid "Left Sidebar Layout"
-msgstr "Διάταξη με Αριστερή Εργαλειοθήκη"
+msgstr "Διάταξη με αριστερή πλευρική στήλη"
 
 #. Template Name of the theme
 msgid "No Title, Full Width Page"
-msgstr ""
+msgstr "Χωρίς τίτλο, Σελίδα πλήρους πλάτους"
 
 #. Template Name of the theme
 msgid "Right Sidebar Layout"
-msgstr ""
+msgstr "Διάταξη με δεξιά πλευρική στήλη"
 
 #. translators: %s: query term
 #: search.php:38

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-10-26T09:38:35+00:00\n"
-"PO-Revision-Date: 2022-10-26 14:17+0200\n"
+"POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
+"PO-Revision-Date: 2022-11-06 00:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -86,32 +86,32 @@ msgstr "Beiträge von %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr "Ein Gedanke zu &#8222;%s&#8220;"
+msgstr "Ein Gedanke zu &bdquo;%2$s&ldquo;"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Ein Gedanke zu &#8222;%2$s&#8220;"
-msgstr[1] "%1$s Gedanken zu &#8222;%2$s&#8220;"
+msgstr[0] "Ein Gedanke zu &bdquo;%2$s&ldquo;"
+msgstr[1] "%1$s Gedanken zu &bdquo;%2$s&ldquo;"
 
-#: global-templates/navbar-collapse-bootstrap4.php:17
-#: global-templates/navbar-collapse-bootstrap5.php:17
-#: global-templates/navbar-offcanvas-bootstrap5.php:17
+#: global-templates/navbar-collapse-bootstrap4.php:18
+#: global-templates/navbar-collapse-bootstrap5.php:18
+#: global-templates/navbar-offcanvas-bootstrap5.php:18
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: global-templates/navbar-collapse-bootstrap4.php:34
-#: global-templates/navbar-collapse-bootstrap5.php:33
+#: global-templates/navbar-collapse-bootstrap4.php:35
+#: global-templates/navbar-collapse-bootstrap5.php:34
 msgid "Toggle navigation"
 msgstr "Navigation umschalten"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:33
+#: global-templates/navbar-offcanvas-bootstrap5.php:34
 msgid "Open menu"
 msgstr "Menü öffnen"
 
-#: global-templates/navbar-offcanvas-bootstrap5.php:45
+#: global-templates/navbar-offcanvas-bootstrap5.php:46
 msgid "Close menu"
 msgstr "Menü schließen"
 
@@ -144,7 +144,7 @@ msgid "Bootstrap Version"
 msgstr "Bootstrap-Version"
 
 #: inc/customizer.php:90
-msgid "Choose between Bootstrap 4 or Bootstrap 5"
+msgid "Choose between Bootstrap 4 and Bootstrap 5"
 msgstr "Zwischen Bootstrap 4 und Bootstrap 5 wählen"
 
 #: inc/customizer.php:94
@@ -173,52 +173,57 @@ msgstr "Container mit voller Seitenbreite"
 
 #: inc/customizer.php:145
 msgid "Responsive Navigation Type"
-msgstr ""
+msgstr "Responsiver Navigationstyp"
 
 #: inc/customizer.php:146
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
+"Zwischen einer aus- und einklappenden und einer sich in den Viewport "
+"schiebenden Navigationsleiste auswählen."
 
-#: inc/customizer.php:154
+#: inc/customizer.php:153
 msgid "Collapse"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:154
 msgid "Offcanvas"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:176
 msgid "Sidebar Positioning"
 msgstr "Seitenleisten-Positionierung"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:177
 msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
+"Standard-Position der Seitenleiste festlegen. Kann entweder rechts, links, "
+"beidseitig oder keine sein. Hinweis: Die Position kann auf den einzelnen "
+"Seiten seitenspezifisch geändert werden."
 
-#: inc/customizer.php:186
+#: inc/customizer.php:184
 msgid "Right sidebar"
 msgstr "Rechte Seitenleiste"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:185
 msgid "Left sidebar"
 msgstr "Linke Seitenleiste"
 
-#: inc/customizer.php:188
+#: inc/customizer.php:186
 msgid "Left & Right sidebars"
-msgstr "Linke und rechte Seitenleiste"
+msgstr "Linke & rechte Seitenleiste"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:187
 msgid "No sidebar"
 msgstr "Keine Seitenleiste"
 
-#: inc/customizer.php:211
+#: inc/customizer.php:209
 msgid "Footer Site Info"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
 
@@ -243,7 +248,7 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:245
+#: inc/extras.php:247
 msgid "Read More..."
 msgstr "Weiterlesen..."
 
@@ -300,105 +305,111 @@ msgid "Posted by"
 msgstr "Veröffentlicht von"
 
 #. translators: %s: Categories of current post
-#: inc/template-tags.php:98
+#: inc/template-tags.php:102
 msgid "Posted in %s"
 msgstr "Veröffentlicht in %s"
 
 #. translators: %s: Tags of current post
-#: inc/template-tags.php:111
+#: inc/template-tags.php:117
 msgid "Tagged %s"
 msgstr "Verschlagwortet mit %s"
 
 #. translators: %s post title
-#: inc/template-tags.php:128
+#: inc/template-tags.php:136
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "Kommentar hinterlassen<span class=\"screen-reader-text\"> zu %s</span>"
 
-#: inc/template-tags.php:233
+#: inc/template-tags.php:243
 msgid "Comments navigation"
 msgstr "Kommentarnavigation"
 
-#: inc/template-tags.php:237
+#: inc/template-tags.php:247
 msgid "&larr; Older Comments"
 msgstr "&larr; Ältere Kommentare"
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:253
 msgid "Newer Comments &rarr;"
 msgstr "Neuere Kommentare &rarr;"
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:260
+#: inc/template-tags.php:272
 msgid "Edit %s"
 msgstr "%s bearbeiten"
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:301
 msgid "Post navigation"
 msgstr "Beitrags-Navigation"
 
-#: inc/template-tags.php:293
+#: inc/template-tags.php:305
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:296
+#: inc/template-tags.php:308
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: inc/template-tags.php:317
+#: inc/template-tags.php:331
 msgid "Pages:"
 msgstr "Seiten:"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:353
+#: inc/template-tags.php:371
 msgid ", "
 msgstr ", "
 
-#: inc/widgets.php:268
+#. translators: Widget area title
+#: inc/widgets.php:279
 msgid "Right Sidebar"
 msgstr "Rechte Seitenleiste"
 
-#: inc/widgets.php:270
+#: inc/widgets.php:281
 msgid "Right sidebar widget area"
-msgstr ""
+msgstr "Widgetbereich der rechten Seitenleiste"
 
-#: inc/widgets.php:280
+#. translators: Widget area title
+#: inc/widgets.php:292
 msgid "Left Sidebar"
 msgstr "Linke Seitenleiste"
 
-#: inc/widgets.php:282
+#: inc/widgets.php:294
 msgid "Left sidebar widget area"
-msgstr ""
+msgstr "Widgetbereich der linken Seitenleiste"
 
-#: inc/widgets.php:292
+#. translators: Widget area title
+#: inc/widgets.php:305
 msgid "Hero Slider"
 msgstr "\"Bühnen\"-Slider"
 
-#: inc/widgets.php:294
+#: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
 
-#: inc/widgets.php:304
+#. translators: Widget area title
+#: inc/widgets.php:318
 msgid "Hero Canvas"
 msgstr ""
 
-#: inc/widgets.php:306
+#: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
 
-#: inc/widgets.php:316
+#. translators: Widget area title
+#: inc/widgets.php:331
 msgid "Top Full"
 msgstr ""
 
-#: inc/widgets.php:318
+#: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
 msgstr ""
 
-#: inc/widgets.php:328
+#. translators: Widget area title
+#: inc/widgets.php:344
 msgid "Footer Full"
 msgstr "Fußbereich"
 
-#: inc/widgets.php:330
+#: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
 msgstr ""
 
@@ -436,7 +447,7 @@ msgstr "Komplett leere Seiten-Vorlage"
 
 #. Template Name of the theme
 msgid "Left and Right Sidebar Layout"
-msgstr "Linke und rechte Seitenspalte"
+msgstr "Layout mit linker und rechter Seitenleiste"
 
 #. Template Name of the theme
 msgid "Empty Page Template"
@@ -452,7 +463,7 @@ msgstr "Layout mit linker Seitenleiste"
 
 #. Template Name of the theme
 msgid "No Title, Full Width Page"
-msgstr ""
+msgstr "Kein Titel, Seite mit voller Breite"
 
 #. Template Name of the theme
 msgid "Right Sidebar Layout"
@@ -471,7 +482,7 @@ msgstr "Suche nach:"
 #: searchform.php:23
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr "Suche&#160;&hellip;"
+msgstr "Suche &hellip;"
 
 #: searchform.php:25 searchform.php:28
 msgctxt "submit button"
