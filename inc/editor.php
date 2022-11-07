@@ -95,6 +95,8 @@ if ( ! function_exists( 'understrap_tiny_mce_blockquote_button' ) ) {
 	 * We provide the blockquote via the style formats. Using the style formats
 	 * blockquote receives the proper Bootstrap classes.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @see understrap_tiny_mce_before_init()
 	 *
 	 * @param array $buttons TinyMCE buttons array.

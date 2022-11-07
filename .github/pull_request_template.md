@@ -12,6 +12,10 @@
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to change)
+- [ ] Refactoring (a code change that neither fixes a bug nor adds a feature)
+- [ ] Styling (changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc))
+- [ ] Development (changes that affect the build system or external dependencies)
+- [ ] Documentation (changes that affect existing inline documentation)
 
 ## Checklist:
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->

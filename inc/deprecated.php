@@ -26,17 +26,18 @@ if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
 	 *
+	 * @deprecated 1.2.0 Use understrap_customize_sanitize_select()
+	 * @see understrap_customize_sanitize_select()
+	 *
+	 * @since 0.6.11
+	 *
 	 * @param string               $input   Slug to sanitize.
 	 * @param WP_Customize_Setting $setting Setting instance.
 	 * @return string|bool Sanitized slug if it is a valid choice; the setting default for
 	 *                     invalid choices and false in all other cases.
 	 */
 	function understrap_theme_slug_sanitize_select( $input, $setting ) {
-		_deprecated_function(
-			'understrap_theme_slug_sanitize_select',
-			'1.2.0',
-			'understrap_customize_sanitize_select'
-		);
+		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_customize_sanitize_select' );
 		return understrap_customize_sanitize_select( $input, $setting );
 	}
 }
@@ -52,6 +53,7 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	 */
 	function understrap_adjust_body_class( $classes ) {
 		_deprecated_function( 'understrap_adjust_body_class', '0.9.4' );
+		return $classes;
 	}
 }
 
