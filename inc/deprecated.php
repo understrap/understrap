@@ -19,7 +19,7 @@ if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
 		_deprecated_function( __FUNCTION__, 'x.x.x' );
 	}
 } else {
-	add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
+	add_action( 'customize_preview_init', 'understrap_customize_controls_js' );
 }
 
 if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
