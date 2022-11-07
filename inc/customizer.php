@@ -142,14 +142,14 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_navbar_type',
 				array(
-					'label'       => __( 'Responsive Navigation Type', 'understrap' ),
-					'description' => __(
+					'label'           => __( 'Responsive Navigation Type', 'understrap' ),
+					'description'     => __(
 						'Choose between an expanding and collapsing navbar or an offcanvas drawer.',
 						'understrap'
 					),
-					'section'     => 'understrap_theme_layout_options',
-					'type'        => 'select',
-					'choices'     => array(
+					'section'         => 'understrap_theme_layout_options',
+					'type'            => 'select',
+					'choices'         => array(
 						'collapse'  => __( 'Collapse', 'understrap' ),
 						'offcanvas' => __( 'Offcanvas', 'understrap' ),
 					),
