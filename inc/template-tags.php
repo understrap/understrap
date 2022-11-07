@@ -80,6 +80,8 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 if ( ! function_exists( 'understrap_categories_tags_list' ) ) {
 	/**
 	 * Displays a list of categories and a list of tags.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_categories_tags_list() {
 		understrap_categories_list();
@@ -90,6 +92,8 @@ if ( ! function_exists( 'understrap_categories_tags_list' ) ) {
 if ( ! function_exists( 'understrap_categories_list' ) ) {
 	/**
 	 * Displays a list of categories.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_categories_list() {
 		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
@@ -103,6 +107,8 @@ if ( ! function_exists( 'understrap_categories_list' ) ) {
 if ( ! function_exists( 'understrap_tags_list' ) ) {
 	/**
 	 * Displays a list of tags.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_tags_list() {
 		$tags_list = get_the_tag_list( '', understrap_get_list_item_separator() );
@@ -116,6 +122,8 @@ if ( ! function_exists( 'understrap_tags_list' ) ) {
 if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 	/**
 	 * Displays the link to the comments for the current post.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_comments_popup_link() {
 		if ( is_single() || post_password_required() || ( ! comments_open() && 0 === absint( get_comments_number() ) ) ) {
@@ -220,6 +228,8 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 	/**
 	 * Displays the comment navigation.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @param string $nav_id The ID of the comment navigation.
 	 */
 	function understrap_comment_navigation( $nav_id ) {
@@ -252,6 +262,8 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 	/**
 	 * Displays the edit post link for post.
+	 *
+	 * @since 1.0.0
 	 */
 	function understrap_edit_post_link() {
 		edit_post_link(
@@ -342,6 +354,8 @@ if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
 	/**
 	 * Retrieves the Bootstrap CSS class for the select tag.
 	 *
+	 * @since 1.2.0
+	 *
 	 * @return string Bootstrap CSS class for the select tag.
 	 */
 	function understrap_get_select_control_class() {
@@ -358,6 +372,8 @@ if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
 	 *
 	 * `wp_get_list_item_separator()` has been introduced in WP 6.0.0. For WP
 	 * versions lower than 6.0.0 we have to use a custom translation.
+	 *
+	 * @since 1.2.0
 	 *
 	 * @return string Localized list item separator.
 	 */
