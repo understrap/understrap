@@ -3,6 +3,7 @@
  * Block editor (gutenberg) specific functionality
  *
  * @package Understrap
+ * @since 1.0.0
  */
 
 add_action( 'after_setup_theme', 'understrap_block_editor_setup' );
@@ -11,6 +12,8 @@ if ( ! function_exists( 'understrap_block_editor_setup' ) ) {
 
 	/**
 	 * Sets up our default theme support for the WordPress block editor.
+	 *
+	 * @since 1.0.0
 	 */
 	function understrap_block_editor_setup() {
 
@@ -31,6 +34,8 @@ if ( ! function_exists( 'understrap_block_editor_setup' ) ) {
 if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 	/**
 	 * Checks for our JSON file of color values. If exists, creates a color palette array.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return array
 	 */
@@ -59,6 +64,8 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 
 		/**
 		 * Filters the default bootstrap color palette so it can be overriden by child themes or plugins when we add theme support for editor-color-palette.
+		 *
+		 * @since 1.0.0
 		 *
 		 * @param array $color_palette An array of color options for the editor-color-palette setting.
 		 */
