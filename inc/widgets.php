@@ -12,6 +12,8 @@ if ( ! function_exists( 'understrap_add_widget_categories_class' ) ) {
 	/**
 	 * Adds Bootstrap class to select tag in the Categories widget.
 	 *
+	 * @since 1.2.0
+	 *
 	 * @param array $cat_args An array of Categories widget drop-down arguments.
 	 * @return array The filtered array of Categories widget drop-down arguments.
 	 */
@@ -31,6 +33,8 @@ add_filter( 'widget_categories_dropdown_args', 'understrap_add_widget_categories
 if ( ! function_exists( 'understrap_add_block_widget_categories_class' ) ) {
 	/**
 	 * Adds Bootstrap class to select tag in the Categories block widget.
+	 *
+	 * @since 1.2.0
 	 *
 	 * @param string $output      The taxonomy drop-down HTML output.
 	 * @param array  $parsed_args Arguments used to build the drop-down.
@@ -62,6 +66,8 @@ if ( ! function_exists( 'understrap_add_block_widget_archives_classes' ) ) {
 	/**
 	 * Adds Bootstrap class to select tag in the Archives widget.
 	 *
+	 * @since 1.2.0
+	 *
 	 * @param string $block_content The block content.
 	 * @param array  $block         The full block, including name and attributes.
 	 * @return string The filtered block content.
@@ -83,6 +89,8 @@ add_filter( 'render_block_core/archives', 'understrap_add_block_widget_archives_
 if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
 	/**
 	 * Adds Bootstrap classes to search block widget.
+	 *
+	 * @since 1.2.0
 	 *
 	 * @param string $block_content The block content.
 	 * @param array  $block         The full block, including name and attributes.
@@ -120,6 +128,8 @@ add_filter( 'render_block_core/search', 'understrap_add_block_widget_search_clas
 
 /**
  * Add active class to first item of carousel hero widget area.
+ *
+ * @since 1.2.0
  *
  * @param array $params {
  *     Parameters passed to a widget’s display callback.
