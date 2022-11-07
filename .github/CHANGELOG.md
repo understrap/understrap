@@ -8,11 +8,11 @@
 
   -
 
-## Release 1.2.0-beta1 October 5th 2022
+## Release 1.2.0-beta2 October 5th 2022
 
 ** Enhancements **
 
-  - Updates Bootstrap 5.1.3 to Bootstrap 5.2.0
+  - Updates Bootstrap 5.1.3 to Bootstrap 5.2.2
   - Updates Bootstrap 4.6.1 to Bootstrap 4.6.2
   - Updates WooCommerce Templates
   - Adds a new 'Full Width Landing Page' page template
@@ -34,6 +34,7 @@
   - Fixes issues with the Customizer preview
   - Fixes the category transient flush
   - Accessibility: aria role fixes for the carousel and footer widgets area
+  - Translations: Makes aria-labels translatable
 
 
 ## Release 1.1.0 December 1st 2021

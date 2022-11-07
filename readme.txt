@@ -5,7 +5,7 @@ Requires at least: 5.0
 Tested up to: 5.7.2
 Requires PHP: 5.2
 License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
@@ -49,5 +49,5 @@ This theme bundles the following third-party resources:
 
 * Underscores: https://github.com/Automattic/_s/blob/master/LICENSE (GNU GPLv2)
 * Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
-* Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
+* Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
 * WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
