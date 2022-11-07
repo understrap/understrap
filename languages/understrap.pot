@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-10-12T15:11:14+00:00\n"
+"POT-Creation-Date: 2022-10-26T09:38:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: understrap\n"
@@ -92,10 +92,17 @@ msgstr[1] ""
 msgid "Main Navigation"
 msgstr ""
 
-#: global-templates/navbar-collapse-bootstrap4.php:27
-#: global-templates/navbar-collapse-bootstrap5.php:26
-#: global-templates/navbar-offcanvas-bootstrap5.php:26
+#: global-templates/navbar-collapse-bootstrap4.php:34
+#: global-templates/navbar-collapse-bootstrap5.php:33
 msgid "Toggle navigation"
+msgstr ""
+
+#: global-templates/navbar-offcanvas-bootstrap5.php:33
+msgid "Open menu"
+msgstr ""
+
+#: global-templates/navbar-offcanvas-bootstrap5.php:45
+msgid "Close menu"
 msgstr ""
 
 #: header.php:32

@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "1.2.0-beta1",
+  "version": "1.2.0-beta2",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -47,25 +47,26 @@
   ],
   "author": "The UnderStrap Authors (https://github.com/understrap/understrap/graphs/contributors)",
   "license": "GPL-3.0",
+  "licenseUrl": "https://www.gnu.org/licenses/gpl-3.0.html",
   "bugs": {
     "url": "https://github.com/understrap/understrap/issues"
   },
   "homepage": "https://understrap.com",
   "devDependencies": {
-    "@babel/core": "^7.19.3",
+    "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
     "@popperjs/core": "^2.11.6",
-    "@rollup/plugin-babel": "^6.0.0",
-    "@rollup/plugin-commonjs": "^23.0.0",
-    "@rollup/plugin-multi-entry": "^5.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-replace": "^5.0.0",
-    "autoprefixer": "^10.4.12",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-multi-entry": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-replace": "^5.0.1",
+    "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.2",
     "bootstrap4": "npm:bootstrap@^4.6.2",
     "browser-sync": "^2.27.10",
     "browserslist": "^4.21.4",
-    "caniuse-lite": "^1.0.30001418",
+    "caniuse-lite": "^1.0.30001430",
     "clean-css-cli": "^5.6.1",
     "font-awesome": "^4.7.0",
     "nodemon": "^2.0.20",
@@ -74,8 +75,8 @@
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^3.1.0",
-    "sass": "^1.55.0",
+    "rollup": "^3.2.5",
+    "sass": "^1.56.0",
     "terser": "^5.15.1"
   }
 }
