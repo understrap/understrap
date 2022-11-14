@@ -9,6 +9,8 @@ const { nodeResolve } = require( '@rollup/plugin-node-resolve' );
 const commonjs = require( '@rollup/plugin-commonjs' );
 const multi = require( '@rollup/plugin-multi-entry' );
 const replace = require( '@rollup/plugin-replace' );
+const terser = require( '@rollup/plugin-terser' );
+const terserOptions = require( './terser.config' );
 
 /**
  * Internal dependencies
@@ -23,7 +25,7 @@ const BS4 = process.argv[ process.argv.length - 1 ] === 'BS4';
 let bsVersion = 5;
 let bsSrcFile = 'bootstrap.js';
 let fileDest = 'theme';
-let globals = {
+const globals = {
 	jquery: 'jQuery', // Ensure we use jQuery which is always available even in noConflict mode
 	'@popperjs/core': 'Popper',
 };
@@ -62,18 +64,19 @@ module.exports = {
 	],
 	output: [
 		{
-			banner: banner(''),
+			banner: banner( '' ),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.js` ),
 			format: 'umd',
 			globals,
 			name: 'understrap',
 		},
 		{
-			banner: banner(''),
+			banner: banner( '' ),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.min.js` ),
 			format: 'umd',
 			globals,
 			name: 'understrap',
+			plugins: [ terser( terserOptions ) ],
 		},
 	],
 	external,
