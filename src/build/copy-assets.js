@@ -5,9 +5,9 @@ async function copyDir( src, dest ) {
 	await fs.mkdir( dest, { recursive: true } );
 	const entries = await fs.readdir( src, { withFileTypes: true } );
 
-	for ( let entry of entries ) {
-		let srcPath = path.join( src, entry.name );
-		let destPath = path.join( dest, entry.name );
+	for ( const entry of entries ) {
+		const srcPath = path.join( src, entry.name );
+		const destPath = path.join( dest, entry.name );
 
 		entry.isDirectory()
 			? await copyDir( srcPath, destPath )

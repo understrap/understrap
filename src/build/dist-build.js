@@ -27,8 +27,8 @@ async function copyDir( src, dest ) {
 		if ( ignore.indexOf( entry.name ) != -1 ) {
 			continue;
 		}
-		let srcPath = path.join( src, entry.name );
-		let destPath = path.join( dest, entry.name );
+		const srcPath = path.join( src, entry.name );
+		const destPath = path.join( dest, entry.name );
 
 		entry.isDirectory()
 			? await copyDir( srcPath, destPath )
