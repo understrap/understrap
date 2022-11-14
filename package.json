@@ -13,12 +13,8 @@
     "css-compile-bs4": "sass --style expanded --source-map --embed-sources --no-error-css --quiet src/sass/theme-bootstrap4.scss:css/theme-bootstrap4.css src/sass/custom-editor-style-bootstrap4.scss:css/custom-editor-style-bootstrap4.css",
     "css-minify-bs4": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\"",
     "css-postcss-bs4": "postcss --config src/build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\" -- BS4",
-    "js": "npm-run-all js-compile js-minify",
-    "js-compile": "rollup --config src/build/rollup.config.js --sourcemap",
-    "js-minify": "terser js/theme.min.js --config-file src/build/terser.config.json --source-map \"content=js/theme.js.map,url=theme.min.js.map,filename=theme.min.js\" --output js/theme.min.js",
-    "js-bs4": "npm-run-all js-compile-bs4 js-minify-bs4",
-    "js-compile-bs4": "npm run js-compile -- BS4",
-    "js-minify-bs4": "terser js/theme-bootstrap4.min.js --config-file src/build/terser.config.json --source-map \"content=js/theme-bootstrap4.js.map,url=theme-bootstrap4.min.js.map,filename=theme-bootstrap4.min.js\" --output js/theme-bootstrap4.min.js",
+    "js": "rollup --config src/build/rollup.config.js --sourcemap",
+    "js-bs4": "npm run js -- BS4",
     "watch": "npm-run-all --parallel watch-run-*",
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
     "watch-run-css": "nodemon --watch src/sass/ --ext scss --exec \"npm-run-all css\"",
@@ -61,6 +57,7 @@
     "@rollup/plugin-multi-entry": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.1",
+    "@rollup/plugin-terser": "^0.1.0",
     "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.2",
     "bootstrap4": "npm:bootstrap@^4.6.2",
@@ -76,7 +73,6 @@
     "postcss-cli": "^10.0.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
     "rollup": "^3.3.0",
-    "sass": "^1.56.1",
-    "terser": "^5.15.1"
+    "sass": "^1.56.1"
   }
 }
