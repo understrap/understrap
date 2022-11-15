@@ -70,7 +70,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		/*
 		 * Adding Thumbnail basic support
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'post-thumbnails', array() );
 
 		/*
 		 * Adding support for Widget edit icons in customizer
@@ -79,7 +79,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 
 		/*
 		 * Enable support for Post Formats.
-		 * See http://codex.wordpress.org/Post_Formats
+		 * See https://wordpress.org/support/article/post-formats/
 		 */
 		add_theme_support(
 			'post-formats',

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<ruleset name="UnderStrap Coding Standards">
+<ruleset name="Understrap Coding Standards">
 
-	<description>Apply WordPress Coding Standards to UnderStrap</description>
+	<description>Apply WordPress Coding Standards to Understrap</description>
 
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
 	<arg name="cache" value=".phpcs-cache"/>
@@ -15,20 +15,20 @@
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
 
-	<!-- Don't show warnings -->
-	<arg value="n"/>
-
-	<!-- Show progress of the run -->
-	<arg value="p"/>
-
 	<!-- Scan these files -->
 	<file>.</file>
 
 	<!-- Directories and third party library exclusions. -->
 	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/src/phpstan/*</exclude-pattern>
 	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/languages/*</exclude-pattern>
+	<exclude-pattern>/inc/deprecated.php</exclude-pattern>
+	<exclude-pattern>/fonts/*</exclude-pattern>
 	<exclude-pattern>/dist/*</exclude-pattern>
-	<exclude-pattern>/dist-product/*</exclude-pattern>
+	<exclude-pattern>/.phpstan-cache/*</exclude-pattern>
+	<exclude-pattern>*.min.(js|css)</exclude-pattern>
+	<exclude-pattern>/\.*</exclude-pattern>
 
 	<!-- Use the WordPress Ruleset -->
 	<rule ref="WordPress">
@@ -75,11 +75,12 @@
 				<element value="get_the_title"/>
 				<element value="get_the_archive_title"/>
 				<element value="get_the_archive_description"/>
+				<element value="understrap_get_list_item_separator"/>
 			</property>
 		</properties>
 	</rule>
 
-	<!-- 
+	<!--
 		Exclude checking of line endings when reporting errors, but fix them
 		when running phpcbf.
 	-->
@@ -90,12 +91,11 @@
 	<!-- Use the WPThemeReview Ruleset -->
 	<rule ref="WPThemeReview" />
 
-	<!-- 
+	<!--
 		Exclude checking for shortened URLs in Bootstrap's js. files.
 		Also exlude theme.js which includes bootstrap.js.
 	-->
 	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
-		<exclude-pattern>/src/js/bootstrap4/bootstrap\.*js</exclude-pattern>
-		<exclude-pattern>/js/theme\.js</exclude-pattern>
+		<exclude-pattern>/js/theme*\.js</exclude-pattern>
 	</rule>
 </ruleset>

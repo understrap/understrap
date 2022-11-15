@@ -1,8 +1,8 @@
 {
 	"name": "understrap/understrap",
-	"description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
+	"description": "Combines Automattic's Underscores Starter Theme and Bootstrap",
 	"type": "wordpress-theme",
-	"license": "GPL-2.0-only",
+	"license": "GPL-3.0",
 	"minimum-stability": "stable",
 	"keywords": [
 		"wordpress",
@@ -10,21 +10,39 @@
 		"bootstrap"
 	],
 	"homepage": "https://github.com/understrap/understrap",
+	"authors": [
+		{
+			"name": "Contributors",
+			"homepage": "https://github.com/understrap/understrap/contributors.md"
+		}
+	],
 	"require": {
-		"composer/installers": "^1.12",
 		"php": ">=5.6"
 	},
 	"require-dev": {
+		"php-parallel-lint/php-parallel-lint": "^1.3.2",
+		"phpcompatibility/phpcompatibility-wp": "^2.1.4",
+		"phpmd/phpmd": "^2.13.0",
+		"phpstan/phpstan": "^1.9.0",
 		"roave/security-advisories": "dev-master",
-		"wp-coding-standards/wpcs": "^2.3",
-		"wptrt/wpthemereview": "*",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-		"php-parallel-lint/php-parallel-lint": "^1.3"
+		"squizlabs/php_codesniffer": "^3.7.1",
+		"szepeviktor/phpstan-wordpress": "^1.1.3",
+		"wp-coding-standards/wpcs": "^2.3.0",
+		"wptrt/wpthemereview": "^0.2.1"
 	},
 	"scripts": {
-		"check:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcs"],
-		"fix:cs": ["@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"],
-		"lint:php": ["@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."]
+		"php-lint": "@php ./vendor/php-parallel-lint/php-parallel-lint/parallel-lint --exclude vendor --exclude node_modules --exclude dist --exclude .git --exclude .phpstan-cache .",
+		"phpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -p",
+		"phpcs-ga": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -n --report=checkstyle",
+		"phpcs-fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+		"phpcs-config-set" : "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --config-set installed_paths ../../phpcompatibility/php-compatibility,../../phpcompatibility/phpcompatibility-paragonie,../../phpcompatibility/phpcompatibility-wp,../../wp-coding-standards/wpcs,../../wptrt/wpthemereview",
+		"phpmd": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . ansi phpmd.xml",
+		"phpmd-baseline": "@phpmd -- --generate-baseline",
+		"phpmd-ga": "@php ./vendor/phpmd/phpmd/src/bin/phpmd . github phpmd.xml",
+		"phpstan": "@php ./vendor/phpstan/phpstan/phpstan analyse -a src/phpstan/autoload.php",
+		"phpstan-baseline": "@php ./vendor/phpstan/phpstan/phpstan analyse -a src/phpstan/autoload.php --generate-baseline",
+		"post-install-cmd": "@phpcs-config-set",
+		"post-update-cmd": "@phpcs-config-set"
 	},
 	"support": {
 		"issues": "https://github.com/understrap/understrap/issues",

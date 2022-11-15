@@ -8,6 +8,181 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_add_widget_categories_class' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories widget.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @param array $cat_args An array of Categories widget drop-down arguments.
+	 * @return array The filtered array of Categories widget drop-down arguments.
+	 */
+	function understrap_add_widget_categories_class( $cat_args ) {
+
+		if ( isset( $cat_args['class'] ) ) {
+			$cat_args['class'] .= ' ' . understrap_get_select_control_class();
+		} else {
+			$cat_args['class'] = understrap_get_select_control_class();
+		}
+
+		return $cat_args;
+	}
+}
+add_filter( 'widget_categories_dropdown_args', 'understrap_add_widget_categories_class' );
+
+if ( ! function_exists( 'understrap_add_block_widget_categories_class' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Categories block widget.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @param string $output      The taxonomy drop-down HTML output.
+	 * @param array  $parsed_args Arguments used to build the drop-down.
+	 * @return string The filtered taxonomy drop-down HTML output.
+	 */
+	function understrap_add_block_widget_categories_class( $output, $parsed_args ) {
+		$class = understrap_get_select_control_class();
+
+		if ( isset( $parsed_args['class'] ) && ! empty( $parsed_args['class'] ) ) {
+			$search  = array(
+				"class=\"{$parsed_args['class']}\"",
+				"class='{$parsed_args['class']}'",
+			);
+			$replace = array(
+				"class=\"{$parsed_args['class']} {$class}\"",
+				"class=\"{$parsed_args['class']} {$class}\"",
+			);
+		} else {
+			$search  = '<select';
+			$replace = "<select class=\"{$class}\"";
+		}
+
+		return str_replace( $search, $replace, $output );
+	}
+}
+add_filter( 'wp_dropdown_cats', 'understrap_add_block_widget_categories_class', 10, 2 );
+
+if ( ! function_exists( 'understrap_add_block_widget_archives_classes' ) ) {
+	/**
+	 * Adds Bootstrap class to select tag in the Archives widget.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @param string $block_content The block content.
+	 * @param array  $block         The full block, including name and attributes.
+	 * @return string The filtered block content.
+	 */
+	function understrap_add_block_widget_archives_classes( $block_content, $block ) {
+
+		if ( isset( $block['attrs']['displayAsDropdown'] ) && true === $block['attrs']['displayAsDropdown'] ) {
+			return str_replace(
+				'<select',
+				'<select class="' . understrap_get_select_control_class() . '"',
+				$block_content
+			);
+		}
+		return $block_content;
+	}
+}
+add_filter( 'render_block_core/archives', 'understrap_add_block_widget_archives_classes', 10, 2 );
+
+if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
+	/**
+	 * Adds Bootstrap classes to search block widget.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @param string $block_content The block content.
+	 * @param array  $block         The full block, including name and attributes.
+	 * @return string The filtered block content.
+	 */
+	function understrap_add_block_widget_search_classes( $block_content, $block ) {
+
+		$search  = array(
+			'wp-block-search__input ',
+			'wp-block-search__input"',
+			'wp-block-search__button ',
+		);
+		$replace = array(
+			'wp-block-search__input form-control ',
+			'wp-block-search__input form-control"',
+			'wp-block-search__button btn btn-primary ',
+		);
+
+		if ( isset( $block['attrs']['buttonPosition'] ) && 'button-inside' === $block['attrs']['buttonPosition'] ) {
+			$search[]  = 'wp-block-search__inside-wrapper';
+			$replace[] = 'wp-block-search__inside-wrapper input-group';
+
+			if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+				$search[]  = '<button';
+				$search[]  = '</button>';
+				$replace[] = '<div class="input-group-append"><button';
+				$replace[] = '</button></div>';
+			}
+		}
+
+		return str_replace( $search, $replace, $block_content );
+	}
+}
+add_filter( 'render_block_core/search', 'understrap_add_block_widget_search_classes', 10, 2 );
+
+/**
+ * Add active class to first item of carousel hero widget area.
+ *
+ * @since 1.2.0
+ *
+ * @param array $params {
+ *     Parameters passed to a widget’s display callback.
+ *
+ *     @type array $args  {
+ *         An array of widget display arguments.
+ *
+ *         @type string $name          Name of the sidebar the widget is assigned to.
+ *         @type string $id            ID of the sidebar the widget is assigned to.
+ *         @type string $description   The sidebar description.
+ *         @type string $class         CSS class applied to the sidebar container.
+ *         @type string $before_widget HTML markup to prepend to each widget in the sidebar.
+ *         @type string $after_widget  HTML markup to append to each widget in the sidebar.
+ *         @type string $before_title  HTML markup to prepend to the widget title when displayed.
+ *         @type string $after_title   HTML markup to append to the widget title when displayed.
+ *         @type string $widget_id     ID of the widget.
+ *         @type string $widget_name   Name of the widget.
+ *     }
+ *     @type array $widget_args {
+ *         An array of multi-widget arguments.
+ *
+ *         @type int $number Number increment used for multiples of the same widget.
+ *     }
+ * }
+ * @return array Maybe filtered parameters.
+ */
+function understrap_hero_active_carousel_item( $params ) {
+	if (
+		! isset( $params[0] )
+		|| ! isset( $params[0]['id'] )
+		|| 'hero' !== $params[0]['id']
+	) {
+		return $params;
+	}
+
+	static $item_number = 1;
+	if (
+		1 === $item_number
+		&& isset( $params[0]['before_widget'] )
+		&& is_string( $params[0]['before_widget'] )
+	) {
+		$params[0]['before_widget'] = str_replace(
+			'carousel-item',
+			'carousel-item active',
+			$params[0]['before_widget']
+		);
+	}
+	$item_number++;
+
+	return $params;
+}
+add_filter( 'dynamic_sidebar_params', 'understrap_hero_active_carousel_item' );
+
 /**
  * Add filter to the parameters passed to a widget's display callback.
  * The filter is evaluated on both the front and the back end!
@@ -47,7 +222,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 	 *         @type int $number Number increment used for multiples of the same widget.
 	 *     }
 	 * }
-	 * @return array $params
+	 * @return array Maybe filtered parameters.
 	 */
 	function understrap_widget_classes( $params ) {
 

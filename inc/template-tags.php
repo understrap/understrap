@@ -15,35 +15,50 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
 	function understrap_posted_on() {
+		$post = get_post();
+		if ( ! $post ) {
+			return;
+		}
+
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
 		}
+
 		$time_string = sprintf(
 			$time_string,
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
+			esc_attr( get_the_date( 'c' ) ), // @phpstan-ignore-line -- post exists
+			esc_html( get_the_date() ), // @phpstan-ignore-line -- post exists
+			esc_attr( get_the_modified_date( 'c' ) ), // @phpstan-ignore-line -- post exists
+			esc_html( get_the_modified_date() ) // @phpstan-ignore-line -- post exists
 		);
-		$posted_on   = apply_filters(
+
+		$posted_on = apply_filters(
 			'understrap_posted_on',
 			sprintf(
 				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
 				esc_html_x( 'Posted on', 'post date', 'understrap' ),
-				esc_url( get_permalink() ),
+				esc_url( get_permalink() ), // @phpstan-ignore-line -- post exists
 				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
 		);
-		$byline      = apply_filters(
-			'understrap_posted_by',
-			sprintf(
-				'<span class="byline"> %1$s<span class="author vcard"> <a class="url fn n" href="%2$s">%3$s</a></span></span>',
-				$posted_on ? esc_html_x( 'by', 'post author', 'understrap' ) : esc_html_x( 'Posted by', 'post author', 'understrap' ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_html( get_the_author() )
-			)
-		);
+
+		$author_id = (int) get_the_author_meta( 'ID' );
+		if ( 0 === $author_id ) {
+			$byline = '';
+		} else {
+			$byline = apply_filters(
+				'understrap_posted_by',
+				sprintf(
+					'<span class="byline"> %1$s<span class="author vcard"> <a class="url fn n" href="%2$s">%3$s</a></span></span>',
+					$posted_on ? esc_html_x( 'by', 'post author', 'understrap' ) : esc_html_x( 'Posted by', 'post author', 'understrap' ),
+					esc_url( get_author_posts_url( $author_id ) ),
+					esc_html( get_the_author_meta( 'display_name', $author_id ) )
+				)
+			);
+		}
+
 		echo $posted_on . $byline; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
@@ -55,25 +70,77 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 	function understrap_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
-			if ( $categories_list && understrap_categorized_blog() ) {
-				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
-			if ( $tags_list ) {
-				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
+			understrap_categories_tags_list();
 		}
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'understrap' ), esc_html__( '1 Comment', 'understrap' ), esc_html__( '% Comments', 'understrap' ) );
-			echo '</span>';
-		}
+		understrap_comments_popup_link();
 		understrap_edit_post_link();
+	}
+}
+
+if ( ! function_exists( 'understrap_categories_tags_list' ) ) {
+	/**
+	 * Displays a list of categories and a list of tags.
+	 *
+	 * @since 1.2.0
+	 */
+	function understrap_categories_tags_list() {
+		understrap_categories_list();
+		understrap_tags_list();
+	}
+}
+
+if ( ! function_exists( 'understrap_categories_list' ) ) {
+	/**
+	 * Displays a list of categories.
+	 *
+	 * @since 1.2.0
+	 */
+	function understrap_categories_list() {
+		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
+		if ( $categories_list && understrap_categorized_blog() ) {
+			/* translators: %s: Categories of current post */
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
+
+if ( ! function_exists( 'understrap_tags_list' ) ) {
+	/**
+	 * Displays a list of tags.
+	 *
+	 * @since 1.2.0
+	 */
+	function understrap_tags_list() {
+		$tags_list = get_the_tag_list( '', understrap_get_list_item_separator() );
+		if ( $tags_list && ! is_wp_error( $tags_list ) ) {
+			/* translators: %s: Tags of current post */
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
+
+if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
+	/**
+	 * Displays the link to the comments for the current post.
+	 *
+	 * @since 1.2.0
+	 */
+	function understrap_comments_popup_link() {
+		if ( is_single() || post_password_required() || ( ! comments_open() && 0 === absint( get_comments_number() ) ) ) {
+			return;
+		}
+
+		$post_title    = get_the_title();
+		$leave_comment = sprintf(
+			/* translators: %s post title */
+			__( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'understrap' ),
+			$post_title
+		);
+		$leave_comment = wp_kses( $leave_comment, array( 'span' => array( 'class' => true ) ) );
+
+		echo '<span class="comments-link">';
+		comments_popup_link( $leave_comment );
+		echo '</span>';
 	}
 }
 
@@ -108,8 +175,10 @@ if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 	}
 }
 
-add_action( 'edit_category', 'understrap_category_transient_flusher' );
+add_action( 'delete_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post', 'understrap_category_transient_flusher' );
+add_action( 'trashed_post', 'understrap_category_transient_flusher' );
+add_action( 'deleted_post', 'understrap_category_transient_flusher' );
 
 if ( ! function_exists( 'understrap_category_transient_flusher' ) ) {
 	/**
@@ -138,14 +207,19 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		if ( ! is_array( $atts ) || empty( $atts ) ) {
 			return;
 		}
+
 		$attributes = '';
 		foreach ( $atts as $name => $value ) {
 			if ( $value ) {
+				if ( ! is_string( $value ) ) {
+					continue;
+				}
 				$attributes .= sanitize_key( $name ) . '="' . esc_attr( $value ) . '" ';
 			} else {
 				$attributes .= sanitize_key( $name ) . ' ';
 			}
 		}
+
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
@@ -153,6 +227,8 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 	/**
 	 * Displays the comment navigation.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @param string $nav_id The ID of the comment navigation.
 	 */
@@ -164,7 +240,7 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 		?>
 		<nav class="comment-navigation" id="<?php echo esc_attr( $nav_id ); ?>">
 
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Comments navigation', 'understrap' ); ?></h1>
 
 			<?php if ( get_previous_comments_link() ) { ?>
 				<div class="nav-previous">
@@ -186,6 +262,8 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 	/**
 	 * Displays the edit post link for post.
+	 *
+	 * @since 1.0.0
 	 */
 	function understrap_edit_post_link() {
 		edit_post_link(
@@ -203,10 +281,17 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 if ( ! function_exists( 'understrap_post_nav' ) ) {
 	/**
 	 * Display navigation to next/previous post when applicable.
+	 *
+	 * @global WP_Post|null $post The current post.
 	 */
 	function understrap_post_nav() {
+		global $post;
+		if ( ! $post ) {
+			return;
+		}
+
 		// Don't print empty markup if there's nowhere to navigate.
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
 		$next     = get_adjacent_post( false, '', false );
 		if ( ! $next && ! $previous ) {
 			return;
@@ -224,7 +309,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 				}
 				?>
 			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
+		</nav><!-- .post-navigation -->
 		<?php
 	}
 }
@@ -234,6 +319,8 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 	 * Displays/retrieves page links for paginated posts (i.e. including the
 	 * `<!--nextpage-->` Quicktag one or more times). This tag must be
 	 * within The Loop. Default: echo.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return void|string Formatted output in HTML.
 	 */
@@ -246,5 +333,41 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 			)
 		);
 		wp_link_pages( $args );
+	}
+}
+
+if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
+	/**
+	 * Retrieves the Bootstrap CSS class for the select tag.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @return string Bootstrap CSS class for the select tag.
+	 */
+	function understrap_get_select_control_class() {
+		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			return 'form-control';
+		}
+		return 'form-select';
+	}
+}
+
+if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
+	/**
+	 * Retrieves the localized list item separator.
+	 *
+	 * `wp_get_list_item_separator()` has been introduced in WP 6.0.0. For WP
+	 * versions lower than 6.0.0 we have to use a custom translation.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @return string Localized list item separator.
+	 */
+	function understrap_get_list_item_separator() {
+		if ( function_exists( 'wp_get_list_item_separator' ) ) {
+			return esc_html( wp_get_list_item_separator() );
+		}
+		/* translators: used between list items, there is a space after the comma */
+		return esc_html__( ', ', 'understrap' );
 	}
 }

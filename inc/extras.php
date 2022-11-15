@@ -32,7 +32,12 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 
 		// Adds a body class based on the presence of a sidebar.
 		$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
-		if ( is_page_template( 'page-templates/fullwidthpage.php' ) ) {
+		if ( is_page_template(
+			array(
+				'page-templates/fullwidthpage.php',
+				'page-templates/no-title.php',
+			)
+		) ) {
 			$classes[] = 'understrap-no-sidebar';
 		} elseif (
 			is_page_template(
@@ -111,8 +116,8 @@ if ( ! function_exists( 'understrap_default_body_attributes' ) ) {
 	/**
 	 * Adds schema markup to the body element.
 	 *
-	 * @param array $atts An associative array of attributes.
-	 * @return array
+	 * @param array<string,string> $atts An associative array of attributes.
+	 * @return array<string,string>
 	 */
 	function understrap_default_body_attributes( $atts ) {
 		$atts['itemscope'] = '';
@@ -153,91 +158,43 @@ add_filter( 'get_the_archive_title', 'understrap_kses_title' );
 
 if ( ! function_exists( 'understrap_kses_title' ) ) {
 	/**
-	 * Sanitizes data for allowed HTML tags for post title.
+	 * Sanitizes data for allowed HTML tags for titles.
 	 *
-	 * @param string $data Post title to filter.
-	 * @return string Filtered post title with allowed HTML tags and attributes intact.
+	 * @param string $data Title to filter.
+	 * @return string Filtered title with allowed HTML tags and attributes intact.
 	 */
 	function understrap_kses_title( $data ) {
-		// Tags not supported in HTML5 are not allowed.
-		$allowed_tags = array(
-			'abbr'             => array(),
-			'aria-describedby' => true,
-			'aria-details'     => true,
-			'aria-label'       => true,
-			'aria-labelledby'  => true,
-			'aria-hidden'      => true,
-			'b'                => array(),
-			'bdo'              => array(
-				'dir' => true,
-			),
-			'blockquote'       => array(
-				'cite'     => true,
-				'lang'     => true,
-				'xml:lang' => true,
-			),
-			'cite'             => array(
-				'dir'  => true,
-				'lang' => true,
-			),
-			'dfn'              => array(),
-			'em'               => array(),
-			'i'                => array(
-				'aria-describedby' => true,
-				'aria-details'     => true,
-				'aria-label'       => true,
-				'aria-labelledby'  => true,
-				'aria-hidden'      => true,
-				'class'            => true,
-			),
-			'code'             => array(),
-			'del'              => array(
-				'datetime' => true,
-			),
-			'img'              => array(
-				'src'    => true,
-				'alt'    => true,
-				'width'  => true,
-				'height' => true,
-				'class'  => true,
-				'style'  => true,
-			),
-			'ins'              => array(
-				'datetime' => true,
-				'cite'     => true,
-			),
-			'kbd'              => array(),
-			'mark'             => array(),
-			'pre'              => array(
-				'width' => true,
-			),
-			'q'                => array(
-				'cite' => true,
-			),
-			's'                => array(),
-			'samp'             => array(),
-			'span'             => array(
-				'dir'      => true,
-				'align'    => true,
-				'lang'     => true,
-				'xml:lang' => true,
-			),
-			'small'            => array(),
-			'strong'           => array(),
-			'sub'              => array(),
-			'sup'              => array(),
-			'u'                => array(),
-			'var'              => array(),
-		);
-		$allowed_tags = apply_filters( 'understrap_kses_title', $allowed_tags );
 
-		return wp_kses( $data, $allowed_tags );
+		// Get allowed tags and protocols.
+		$allowed_tags      = wp_kses_allowed_html( 'post' );
+		$allowed_protocols = wp_allowed_protocols();
+		if (
+			in_array( 'polylang/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true )
+			|| in_array( 'polylang-pro/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true )
+		) {
+			if ( ! in_array( 'data', $allowed_protocols, true ) ) {
+				$allowed_protocols[] = 'data';
+			}
+		}
+
+		if ( has_filter( 'understrap_kses_title' ) ) {
+			/**
+			 * Filters the allowed HTML tags and attributes in titles.
+			 *
+			 * @param array<string,array<string,bool>> $allowed_tags Allowed HTML tags and attributes in titles.
+			 */
+			$allowed_tags = apply_filters_deprecated( 'understrap_kses_title', array( $allowed_tags ), '1.2.0' );
+		}
+
+		return wp_kses( $data, $allowed_tags, $allowed_protocols );
 	}
 } // End of if function_exists( 'understrap_kses_title' ).
 
 if ( ! function_exists( 'understrap_hide_posted_by' ) ) {
 	/**
 	 * Hides the posted by markup in `understrap_posted_on()`.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @param string $byline Posted by HTML markup.
 	 * @return string Maybe filtered posted by HTML markup.
@@ -281,12 +238,16 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 * @return string
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
-		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
-				'Read More...',
-				'understrap'
-			) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
+		if ( is_admin() || ! get_the_ID() ) {
+			return $post_excerpt;
 		}
-		return $post_excerpt;
+
+		$permalink = esc_url( get_permalink( (int) get_the_ID() ) ); // @phpstan-ignore-line -- post exists
+
+		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . $permalink . '">' . __(
+			'Read More...',
+			'understrap'
+		) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
+
 	}
 }

@@ -1,0 +1,5 @@
+services:
+  -
+    class: Understrap\PHPStan\GetThemeModReturnType
+    tags:
+      - phpstan.broker.dynamicFunctionReturnTypeExtension

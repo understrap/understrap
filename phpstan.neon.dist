@@ -1,0 +1,57 @@
+#$ vendor/bin/phpstan analyze
+
+includes:
+	- vendor/phpstan/phpstan/conf/bleedingEdge.neon
+	- vendor/szepeviktor/phpstan-wordpress/extension.neon
+	- src/phpstan/extension.neon
+	- phpstan-baseline.neon
+parameters:
+	level: max
+	paths:
+		- inc/
+	excludePaths:
+		- inc/deprecated.php
+		- inc/class-wp-bootstrap-navwalker.php
+	tmpDir: .phpstan-cache
+	ignoreErrors:
+		# no value type specified in iterable type:
+		#- "#Function [a-zA-Z0-9\\()_]+ return type has no value type specified in iterable type array#"
+		#- "#Function [a-zA-Z0-9\\()_]+ has parameter \\$[a-zA-Z0-9_]+ with no value type specified in iterable type array#"
+		# has no return type specified:
+		- '#Function understrap_block_editor_setup\(\) has no return type specified.#'
+		- '#Function understrap_custom_header_setup\(\) has no return type specified.#'
+		- '#Function understrap_comment_form_comments_closed\(\) has no return type specified.#'
+		- '#Function understrap_customize_register\(\) has no return type specified.#'
+		- '#Function understrap_theme_customize_register\(\) has no return type specified.#'
+		- '#Function understrap_customize_preview_js\(\) has no return type specified.#'
+		- '#Function understrap_customize_controls_js\(\) has no return type specified.#'
+		- '#Function understrap_wpdocs_theme_add_editor_styles\(\) has no return type specified.#'
+		- '#Function understrap_scripts\(\) has no return type specified.#'
+		- '#Function understrap_pingback\(\) has no return type specified.#'
+		- '#Function understrap_mobile_web_app_meta\(\) has no return type specified.#'
+		- '#Function understrap_add_site_info\(\) has no return type specified.#'
+		- '#Function understrap_site_info\(\) has no return type specified.#'
+		- '#Function understrap_components_jetpack_setup\(\) has no return type specified.#'
+		- '#Function understrap_components_infinite_scroll_render\(\) has no return type specified.#'
+		- '#Function understrap_components_social_menu\(\) has no return type specified.#'
+		- '#Function understrap_pagination\(\) has no return type specified.#'
+		- '#Function understrap_setup\(\) has no return type specified.#'
+		- '#Function understrap_posted_on\(\) has no return type specified.#'
+		- '#Function understrap_entry_footer\(\) has no return type specified.#'
+		- '#Function understrap_category_transient_flusher\(\) has no return type specified.#'
+		- '#Function understrap_body_attributes\(\) has no return type specified.#'
+		- '#Function understrap_comment_navigation\(\) has no return type specified.#'
+		- '#Function understrap_edit_post_link\(\) has no return type specified.#'
+		- '#Function understrap_post_nav\(\) has no return type specified.#'
+		- '#Function understrap_setup_theme_default_settings\(\) has no return type specified.#'
+		- '#Function understrap_widgets_init\(\) has no return type specified.#'
+		- '#Function understrap_woocommerce_support\(\) has no return type specified.#'
+		- '#Function understrap_woocommerce_wrapper_start\(\) has no return type specified.#'
+		- '#Function understrap_woocommerce_wrapper_end\(\) has no return type specified.#'
+		- '#Function understrap_wpcom_setup\(\) has no return type specified.#'
+		- '#Function understrap_wpcom_styles\(\) has no return type specified.#'
+		- '#Function understrap_categories_tags_list\(\) has no return type specified.#'
+		- '#Function understrap_categories_list\(\) has no return type specified.#'
+		- '#Function understrap_tags_list\(\) has no return type specified.#'
+		- '#Function understrap_comments_popup_link\(\) has no return type specified.#'
+		- '#Function understrap_offcanvas_admin_bar_inline_styles\(\) has no return type specified.#'

@@ -33,16 +33,16 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 				esc_html__( 'Proudly powered by %s', 'understrap' ),
 				'WordPress'
 			),
-			sprintf( // WPCS: XSS ok.
+			sprintf(
 				/* translators: 1: Theme name, 2: Theme author */
 				esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ),
-				$the_theme->get( 'Name' ),
+				$the_theme->get( 'Name' ), // @phpstan-ignore-line -- theme exists
 				'<a href="' . esc_url( __( 'https://understrap.com', 'understrap' ) ) . '">understrap.com</a>'
 			),
-			sprintf( // WPCS: XSS ok.
+			sprintf(
 				/* translators: Theme version */
-				esc_html__( 'Version: %1$s', 'understrap' ),
-				$the_theme->get( 'Version' )
+				esc_html__( 'Version: %s', 'understrap' ),
+				$the_theme->get( 'Version' ) // @phpstan-ignore-line -- theme exists
 			)
 		);
 

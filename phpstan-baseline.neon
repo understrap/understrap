@@ -1,0 +1,151 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function understrap_generate_color_palette\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/block-editor.php
+
+		-
+			message: "#^Function understrap_bootstrap_comment_form_fields\\(\\) has parameter \\$fields with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/custom-comments.php
+
+		-
+			message: "#^Function understrap_bootstrap_comment_form_fields\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/custom-comments.php
+
+		-
+			message: "#^Function understrap_tiny_mce_before_init\\(\\) has parameter \\$settings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_before_init\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_blockquote_button\\(\\) has parameter \\$buttons with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_blockquote_button\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_style_formats\\(\\) has parameter \\$buttons with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_tiny_mce_style_formats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/editor.php
+
+		-
+			message: "#^Function understrap_body_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Function understrap_body_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Parameter \\#2 \\$callback of function add_filter expects callable\\(\\)\\: mixed, 'understrap_adjust…' given\\.$#"
+			count: 1
+			path: inc/extras.php
+
+		-
+			message: "#^Function understrap_pagination\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/pagination.php
+
+		-
+			message: "#^Function understrap_get_theme_default_settings\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/theme-settings.php
+
+		-
+			message: "#^Function understrap_add_block_widget_archives_classes\\(\\) has parameter \\$block with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_block_widget_categories_class\\(\\) has parameter \\$parsed_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_block_widget_search_classes\\(\\) has parameter \\$block with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) has parameter \\$cat_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_hero_active_carousel_item\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_hero_active_carousel_item\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_widget_classes\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_widget_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Cannot access an offset on mixed\\.$#"
+			count: 10
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'aria\\-hidden' on mixed\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'data\\-allow\\-clear' on mixed\\.$#"
+			count: 2
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'data\\-plugin' on mixed\\.$#"
+			count: 2
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Function understrap_quantity_input_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Function understrap_quantity_input_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Part \\$args\\['label'\\] \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
+			count: 1
+			path: inc/woocommerce.php

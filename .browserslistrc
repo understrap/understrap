@@ -1,17 +1,27 @@
 # Please see https://github.com/browserslist/browserslist for more info
 # These settings can be changed depending on what browsers your project is supporting
 
+
+#
+# BOOTSTRAP 4
+#
+
+[bs4]
+
 # General rules
 last 2 major version and not dead
 >= 0.01%
 
 # Explicit inclusions
 # See https://getbootstrap.com/docs/4.6/getting-started/browsers-devices/
+>= 1%
+last 1 major version
+not dead
 Chrome >= 45
-Firefox >= 38
 Firefox ESR
-Explorer >= 10
+Firefox >= 38
 Edge >= 12
+Explorer >= 10
 iOS >= 9
 Safari >= 9
 Android >= 4.4
@@ -28,3 +38,19 @@ not Safari < 8         # no support for flex-shrink
 not Opera < 12.1       # no flexbox support
 not OperaMobile < 12.1 # no flexbox support
 not Android < 4.4      # no flexbox support
+
+#
+# BOOTSTRAP 5
+# See https://getbootstrap.com/docs/5.1/getting-started/browsers-devices/
+#
+
+[bs5]
+>= 0.5%
+last 2 major versions
+not dead
+Chrome >= 60
+Firefox >= 60
+Firefox ESR
+iOS >= 12
+Safari >= 12
+not Explorer <= 11

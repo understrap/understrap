@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<ruleset name="PHPMD rule set"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                             http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                             http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+	<description>
+		PHPMD rule set for Understrap
+	</description>
+
+	<!-- Unix exclude patterns -->
+	<exclude-pattern>*/woocommerce/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/src/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/js/*</exclude-pattern>
+	<exclude-pattern>*/fonts/*</exclude-pattern>
+	<exclude-pattern>*/dist/*</exclude-pattern>
+	<exclude-pattern>*/css/*</exclude-pattern>
+	<exclude-pattern>*/.phpstan-cache/*</exclude-pattern>
+	<exclude-pattern>*-templates/*</exclude-pattern>
+
+	<!-- Windows exclude patterns -->
+	<exclude-pattern>*\woocommerce\*</exclude-pattern>
+	<exclude-pattern>*\vendor\*</exclude-pattern>
+	<exclude-pattern>*\src\*</exclude-pattern>
+	<exclude-pattern>*\node_modules\*</exclude-pattern>
+	<exclude-pattern>*\languages\*</exclude-pattern>
+	<exclude-pattern>*\js\*</exclude-pattern>
+	<exclude-pattern>*\fonts\*</exclude-pattern>
+	<exclude-pattern>*\dist\*</exclude-pattern>
+	<exclude-pattern>*\css\*</exclude-pattern>
+	<exclude-pattern>*\.phpstan-cache\*</exclude-pattern>
+	<exclude-pattern>*-templates\*</exclude-pattern>
+
+	<!-- Common exclude patterns -->
+	<exclude-pattern>*deprecated.php*</exclude-pattern>
+	<exclude-pattern>*class-wp-bootstrap-navwalker.php*</exclude-pattern>
+	<exclude-pattern>\.*</exclude-pattern>
+
+	<!-- Import the codesize rule set -->
+	<rule ref="rulesets/codesize.xml">
+		<exclude name="ExcessiveMethodLength" />
+		<exclude name="ExcessiveParameterList" />
+	</rule>
+
+	<!-- Do not import the controversial rule set -->
+	<!-- <rule ref="rulesets/controversial.xml" /> -->
+
+	<!-- Import the entire design rule set -->
+	<rule ref="rulesets/design.xml" />
+
+	<!-- Import entire naming rule set and exclude rules -->
+	<rule ref="rulesets/naming.xml" />
+
+	<!-- Import the unused code rule set -->
+	<rule ref="rulesets/unusedcode.xml" />
+
+	<!-- Some customizations. -->
+	<rule ref="rulesets/codesize.xml/ExcessiveMethodLength">
+		<properties>
+			<property name="ignore-whitespace" value="true"/>
+		</properties>
+	</rule>
+
+	<rule ref="rulesets/codesize.xml/ExcessiveParameterList">
+		<properties>
+			<property name="minimum" value="4"/>
+		</properties>
+	</rule>
+
+</ruleset>

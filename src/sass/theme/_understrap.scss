@@ -10,13 +10,15 @@ body {
 
 // Reset hero wrapper padding to 0
 #wrapper-hero {
-	padding: 0px !important;
+	padding: 0 !important;
 }
 
 // Adding basic WordPress classes to pass the WordPress.org tests
 .sticky,
 .gallery-caption,
-.bypostauthor {
+.bypostauthor,
+.wp-caption,
+.wp-caption-text {
 	font-size: inherit;
 }
 
@@ -31,17 +33,12 @@ body {
 	background-color: $gray-200;
 }
 
-// Necessary WP classes
-.wp-caption {
-	font-size: inherit;
-}
-
-.wp-caption-text {
-	font-size: inherit;
-}
-
 .screen-reader-text {
-	@include visually-hidden();
+	@if variable-exists('bootstrap4') {
+		@include sr-only();
+	} @else {
+		@include visually-hidden();
+	}
 }
 
 .alignleft {
@@ -61,10 +58,78 @@ body {
 	display: block;
 }
 
-.widget_categories,
 .widget_archive {
+
 	select {
-		@extend .form-control;
+		display: block;
+		width: 100%;
+
+		@if variable-exists("bootstrap4") { // replicates relevant parts of .form-control
+			height: $input-height;
+			padding: $input-padding-y $input-padding-x;
+			font-family: $input-font-family;
+
+			@include font-size($input-font-size);
+			font-weight: $input-font-weight;
+			line-height: $input-line-height;
+			color: $input-color;
+			background-color: $input-bg;
+			background-clip: padding-box;
+			border: $input-border-width solid $input-border-color;
+
+			// Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+			@include border-radius($input-border-radius, 0);
+			@include box-shadow($input-box-shadow);
+			@include transition($input-transition);
+
+			// Unstyle the caret on `<select>`s in IE10+.
+			&::-ms-expand {
+				background-color: transparent;
+				border: 0;
+			}
+
+			// Customize the `:focus` state to imitate native WebKit styles.
+			@include form-control-focus($ignore-warning: true);
+		} @else { // replicates relevant parts of .form-select
+			padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
+			-moz-padding-start: subtract($form-select-padding-x, 3px);
+			font-family: $form-select-font-family;
+
+			@include font-size($form-select-font-size);
+			font-weight: $form-select-font-weight;
+			line-height: $form-select-line-height;
+			color: $form-select-color;
+			background-color: $form-select-bg;
+			background-image: escape-svg($form-select-indicator);
+			background-repeat: no-repeat;
+			background-position: $form-select-bg-position;
+			background-size: $form-select-bg-size;
+			border: $form-select-border-width solid $form-select-border-color;
+
+			@include border-radius($form-select-border-radius, 0);
+			@include box-shadow($form-select-box-shadow);
+			@include transition($form-select-transition);
+			appearance: none;
+
+			&:focus {
+				border-color: $form-select-focus-border-color;
+				outline: 0;
+
+				@if $enable-shadows {
+
+					@include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+				} @else {
+					// Avoid using mixin so we can pass custom focus shadow properly
+					box-shadow: $form-select-focus-box-shadow;
+				}
+			}
+
+			// Remove outline from select box in FF
+			&:-moz-focusring {
+				color: transparent;
+				text-shadow: 0 0 0 $form-select-color;
+			}
+		}
 	}
 }
 
@@ -73,10 +138,10 @@ body {
 	padding-right: 10px;
 }
 
-img.wp-post-image,
-article img,
 figure,
 img,
+img.wp-post-image,
+article img,
 #secondary img {
 	max-width: 100%;
 	height: auto;
@@ -84,10 +149,12 @@ img,
 
 // Skip to content link
 a.skip-link {
-	position: fixed;
-	z-index: 1000;
-	top: 0px;
-	right: 0px;
+	@if variable-exists('bootstrap4') {
+		@extend .sr-only;
+		@extend .sr-only-focusable;
+	} @else {
+		@extend .visually-hidden-focusable;
+	}
 }
 
 // Dropdown translation
@@ -169,4 +236,48 @@ a.skip-link {
 }
 .gallery-caption {
 	display: block;
+}
+
+// Search Block Widget
+.wp-block-search {
+
+	.wp-block-search__button {
+
+		@if variable-exists("bootstrap4") {
+			margin-left: $form-grid-gutter-width;
+		} @else {
+			margin-left: $grid-gutter-width * 0.5;
+		}
+	}
+
+	&.wp-block-search__button-inside {
+
+		.wp-block-search__inside-wrapper {
+			border: none;
+			padding: 0;
+
+			.wp-block-search__input {
+				border-radius: $input-border-radius;
+				border: $input-border-width solid $input-border-color;
+				padding: $input-padding-y $input-padding-x;
+			}
+		}
+
+		.wp-block-search__button {
+			margin-left: 0;
+		}
+	}
+}
+
+@if variable-exists('bootstrap4') {
+
+	// Reset Jumbotron default margin
+	.jumbotron {
+		margin-bottom: 0;
+	}
+
+	// Accessibility requirement for content links.
+	.entry-content p a:not(.btn) {
+		text-decoration: underline;
+	}
 }

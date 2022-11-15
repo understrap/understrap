@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	/**
 	 * Displays the navigation to next/previous set of posts.
 	 *
-	 * @param string|array $args {
+	 * @param array  $args {
 	 *     (Optional) Array of arguments for generating paginated links for archives.
 	 *
 	 *     @type string $base               Base of the paginated url. Default empty.
@@ -37,11 +37,11 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	 *     @type string $after_page_number  A string to append after the page number. Default empty.
 	 *     @type string $screen_reader_text Screen reader text for the nav element. Default 'Posts navigation'.
 	 * }
-	 * @param string       $class           (Optional) Classes to be added to the <ul> element. Default 'pagination'.
+	 * @param string $class                 (Optional) Classes to be added to the <ul> element. Default 'pagination'.
 	 */
 	function understrap_pagination( $args = array(), $class = 'pagination' ) {
 
-		if ( ! isset( $args['total'] ) && $GLOBALS['wp_query']->max_num_pages <= 1 ) {
+		if ( ! $GLOBALS['wp_query'] instanceof WP_Query || ( ! isset( $args['total'] ) && $GLOBALS['wp_query']->max_num_pages <= 1 ) ) {
 			return;
 		}
 
@@ -50,21 +50,28 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'understrap' ),
-				'next_text'          => __( '&raquo;', 'understrap' ),
-				'type'               => 'array',
+				'prev_text'          => _x( '&laquo;', 'previous set of posts', 'understrap' ),
+				'next_text'          => _x( '&raquo;', 'next set of posts', 'understrap' ),
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 				'screen_reader_text' => __( 'Posts navigation', 'understrap' ),
 			)
 		);
 
+		// Make sure we always get an array.
+		$args['type'] = 'array';
+
+		/**
+		 * Array of paginated links.
+		 *
+		 * @var array<int,string>
+		 */
 		$links = paginate_links( $args );
-		if ( ! $links ) {
+		if ( empty( $links ) ) {
 			return;
 		}
-
 		?>
 
+		<!-- The pagination component -->
 		<nav aria-labelledby="posts-nav-label">
 
 			<h2 id="posts-nav-label" class="screen-reader-text">
@@ -74,10 +81,14 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			<ul class="<?php echo esc_attr( $class ); ?>">
 
 				<?php
-				foreach ( $links as $key => $link ) {
+				foreach ( $links as $link ) {
 					?>
 					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
-						<?php echo str_replace( 'page-numbers', 'page-link', $link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php
+						$search  = array( 'page-numbers', 'dots' );
+						$replace = array( 'page-link', 'disabled dots' );
+						echo str_replace( $search, $replace, $link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						?>
 					</li>
 					<?php
 				}

@@ -11,11 +11,11 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @version 2.6.0
  */
-// Exit if accessed directly.
 
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 $customer_id = get_current_user_id();
@@ -53,16 +53,17 @@ $col    = 1;
 
 <?php foreach ( $get_addresses as $name => $address_title ) : ?>
 
+	<?php $address = wc_get_account_formatted_address( $name ); ?>
+
 	<div class="u-column woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo esc_html( $address_title ); ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php esc_html_e( 'Edit', 'woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php echo $address ? esc_html__( 'Edit', 'woocommerce' ) : esc_html__( 'Add', 'woocommerce' ); ?></a>
 		</header>
 		<address>
-		<?php
-			$address = wc_get_account_formatted_address( $name );
-			echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
-		?>
+			<?php
+				echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
+			?>
 		</address>
 	</div>
 

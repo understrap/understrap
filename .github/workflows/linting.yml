@@ -1,0 +1,179 @@
+name: Lint
+
+on:
+  push:
+    branches: [ develop ]
+    paths:
+      - '**.php'
+  pull_request:
+    branches: [ develop ]
+    paths:
+      - '**.php'
+  workflow_dispatch:
+
+env:
+  php-version: '7.4'
+
+jobs:
+
+  phpcs:
+
+    name: 'Coding Standards with PHP CodeSniffer'
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.php-version }}
+          tools: composer, cs2pr
+          coverage: none
+
+      - name: Get Composer cache  directory
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --prefer-dist --no-progress
+
+      - name: Auto fix coding standards
+        run: composer phpcs-fix
+        continue-on-error: true
+
+      - name: Commit coding standards fixes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Fix coding standards with phpcbf
+          branch: ${{ github.head_ref }}
+
+      - name: Check coding standards
+        run: composer phpcs-ga | cs2pr
+
+  php-lint:
+
+    name: 'Syntax with PHP Parallel Lint'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.php-version }}
+          tools: composer, cs2pr
+          coverage: none
+
+      - name: Get Composer cache directory
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --prefer-dist --no-progress
+
+      - name: Check syntax
+        run: composer php-lint
+
+  phpstan:
+
+    name: 'Static Analysis with PHPStan'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.php-version }}
+          tools: composer, cs2pr
+          coverage: none
+
+      - name: Get Composer cache directory
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --prefer-dist --no-progress
+
+      - name: Static Analysis
+        id: phpstan
+        run: composer phpstan -- --error-format=github
+
+      - name: Update basefile
+        run: composer phpstan-baseline
+
+      - name: Commit updated basefile
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update PHPStan basefile
+          branch: ${{ github.head_ref }}
+
+  phpmd:
+
+    name: 'Mess Detection with PHPMD'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.php-version }}
+          tools: composer, cs2pr
+          coverage: none
+
+      - name: Get Composer cache directory
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --prefer-dist --no-progress
+
+      - name: Detect mess
+        run: composer phpmd-ga
+
+      - name: Update basefile
+        run: composer phpmd-baseline
+
+      - name: Commit updated basefile
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update PHPMD basefile
+          branch: ${{ github.head_ref }}
