@@ -8,7 +8,7 @@
 
   -
 
-## Release 1.2.0-beta2 October 5th 2022
+## Release 1.2.0 November 15th 2022
 
 ** Enhancements **
 
