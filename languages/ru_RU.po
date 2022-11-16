@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
-"PO-Revision-Date: 2022-11-16 10:00+0100\n"
+"PO-Revision-Date: 2022-11-16 10:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -35,10 +35,13 @@ msgid ""
 "Bootstrap. Trusted by more than 100,000 developers for building handcrafted, "
 "custom WordPress sites."
 msgstr ""
+"Знаменитый фреймворк для стартовых тем WordPress, сочетающий в себе "
+"Underscores и Bootstrap. Нам доверяют более 100 000 разработчиков для "
+"создания на заказ сайтов WordPress."
 
 #. Author of the theme
 msgid "Howard Development &amp; Consulting"
-msgstr ""
+msgstr "Howard Development &amp; Consulting"
 
 #. Author URI of the theme
 msgid "https://howarddc.com"
@@ -60,9 +63,8 @@ msgstr "Часто используемые рубрики"
 
 #. translators: %1$s: smiley
 #: 404.php:69
-#, fuzzy
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Загляните в архивы по месяцам %1$s"
+msgstr "Загляните в архивы по месяцам. %1$s"
 
 #. translators: %s: author name
 #: author.php:44
@@ -95,8 +97,8 @@ msgstr "%s: 1 комментарий"
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%2$s: %1$s комментарий"
-msgstr[1] "%2$s: %1$s комментария"
+msgstr[0] "1$s комментарий к &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s комментариев к &ldquo;%2$s&rdquo;"
 msgstr[2] "%2$s: %1$s комментариев"
 
 #: global-templates/navbar-collapse-bootstrap4.php:18
@@ -164,7 +166,7 @@ msgstr "Ширина контейнера"
 
 #: inc/customizer.php:118
 msgid "Choose between Bootstrap's container and container-fluid"
-msgstr "Выберите контейнер"
+msgstr "Выберите между контейнером Bootstrap и container-fluid"
 
 #: inc/customizer.php:122
 msgid "Fixed width container"
@@ -200,6 +202,9 @@ msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
+"Установите положение боковой панели по умолчанию. Она может быть справа, "
+"слева, с обеих сторон или отключена. Примечание: это можно переопределить "
+"для отдельных страниц."
 
 #: inc/customizer.php:184
 msgid "Right sidebar"
@@ -219,15 +224,16 @@ msgstr "Без боковой панели"
 
 #: inc/customizer.php:209
 msgid "Footer Site Info"
-msgstr ""
+msgstr "Информация в подвале сайта"
 
 #: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
+"Переопределить информацию о сайте Understrap, расположенную в подвале сайта."
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
-msgstr ""
+msgstr "Заглавный параграф"
 
 #: inc/editor.php:56
 msgctxt "Font size name"
@@ -240,11 +246,11 @@ msgstr "Цитата"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
-msgstr ""
+msgstr "Подвал цитаты"
 
 #: inc/editor.php:72
 msgid "Cite"
-msgstr ""
+msgstr "Цитировать"
 
 #: inc/extras.php:247
 msgid "Read More..."
@@ -364,9 +370,8 @@ msgid "Right Sidebar"
 msgstr "Правая боковая панель"
 
 #: inc/widgets.php:281
-#, fuzzy
 msgid "Right sidebar widget area"
-msgstr "Правая боковая панель"
+msgstr "Область виджетов правой боковой панели"
 
 #. translators: Widget area title
 #: inc/widgets.php:292
@@ -374,45 +379,48 @@ msgid "Left Sidebar"
 msgstr "Левая боковая панель"
 
 #: inc/widgets.php:294
-#, fuzzy
 msgid "Left sidebar widget area"
-msgstr "Левая боковая панель"
+msgstr "Область виджетов левой боковой панели"
 
 #. translators: Widget area title
 #: inc/widgets.php:305
 msgid "Hero Slider"
-msgstr "Слайдер Hero"
+msgstr "Главный слайдер"
 
 #: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
+"Область основного слайдера. Разместите здесь два или больше виджетов, и они "
+"будут скользить!"
 
 #. translators: Widget area title
 #: inc/widgets.php:318
 msgid "Hero Canvas"
-msgstr ""
+msgstr "\tГлавный canvas"
 
 #: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
+"Полноразмерная область canvas для Bootstrap и другой пользовательской HTML-"
+"разметки"
 
 #. translators: Widget area title
 #: inc/widgets.php:331
 msgid "Top Full"
-msgstr ""
+msgstr "Верхний полноразмерный"
 
 #: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
-msgstr ""
+msgstr "Верхний виджет с динамической сеткой"
 
 #. translators: Widget area title
 #: inc/widgets.php:344
 msgid "Footer Full"
-msgstr "Подвал"
+msgstr "Подвал полностью"
 
 #: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
-msgstr ""
+msgstr "Полноразмерный виджет подвала с динамической сеткой"
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
@@ -447,7 +455,7 @@ msgstr "Чистая страница"
 
 #. Template Name of the theme
 msgid "Left and Right Sidebar Layout"
-msgstr "Компоновка левой и правой боковых панелей"
+msgstr "Разметка левой и правой боковых панелей"
 
 #. Template Name of the theme
 msgid "Empty Page Template"
@@ -459,7 +467,7 @@ msgstr "Страница во всю ширину"
 
 #. Template Name of the theme
 msgid "Left Sidebar Layout"
-msgstr "Компоновка левой боковой панели"
+msgstr "Разметка левой боковой панели"
 
 #. Template Name of the theme
 msgid "No Title, Full Width Page"
@@ -467,7 +475,7 @@ msgstr "Без заголовка, Страница во всю ширину"
 
 #. Template Name of the theme
 msgid "Right Sidebar Layout"
-msgstr "Правая боковая панель"
+msgstr "Разметка правой боковой панели"
 
 #. translators: %s: query term
 #: search.php:38
