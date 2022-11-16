@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
-"PO-Revision-Date: 2022-11-06 00:44+0100\n"
+"PO-Revision-Date: 2022-11-16 10:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -246,11 +246,11 @@ msgstr "Cita"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
-msgstr ""
+msgstr "Cita del pie de página"
 
 #: inc/editor.php:72
 msgid "Cite"
-msgstr ""
+msgstr "Cita"
 
 #: inc/extras.php:247
 msgid "Read More..."
