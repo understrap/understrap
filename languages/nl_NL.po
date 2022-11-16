@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
-"PO-Revision-Date: 2022-11-06 00:57+0100\n"
+"PO-Revision-Date: 2022-11-16 09:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -34,6 +34,9 @@ msgid ""
 "Bootstrap. Trusted by more than 100,000 developers for building handcrafted, "
 "custom WordPress sites."
 msgstr ""
+"Het vermaarde WordPress starter thema framework dat Underscores en Bootstrap "
+"combineerde. Vertrouwd door meer dan 100.000 ontwikkelaars voor het bouwen "
+"van handgemaakte, aangepaste WordPress sites."
 
 #. Author of the theme
 msgid "Howard Development &amp; Consulting"
@@ -145,7 +148,7 @@ msgstr "Bootstrap versie"
 
 #: inc/customizer.php:90
 msgid "Choose between Bootstrap 4 and Bootstrap 5"
-msgstr ""
+msgstr "Kies tussen Bootstrap 4 of Bootstrap 5"
 
 #: inc/customizer.php:94
 msgid "Bootstrap 4"
@@ -173,20 +176,22 @@ msgstr "Container met vollege breedte"
 
 #: inc/customizer.php:145
 msgid "Responsive Navigation Type"
-msgstr ""
+msgstr "Responsief navigatietype"
 
 #: inc/customizer.php:146
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
+"Kies tussen een uitvouwbare en invouwbare navigatiebalk of een off-canvas "
+"lade."
 
 #: inc/customizer.php:153
 msgid "Collapse"
-msgstr ""
+msgstr "Samenvouwen"
 
 #: inc/customizer.php:154
 msgid "Offcanvas"
-msgstr ""
+msgstr "Off-canvas"
 
 #: inc/customizer.php:176
 msgid "Sidebar Positioning"
@@ -197,6 +202,8 @@ msgid ""
 "Set sidebar's default position. Can either be: right, left, both or none. "
 "Note: this can be overridden on individual pages."
 msgstr ""
+"Stel de standaardpositie van de zijbalk in. Kan zijn: rechts, links, beide "
+"of geen. Let op: dit kan op individuele pagina's worden overschreven."
 
 #: inc/customizer.php:184
 msgid "Right sidebar"
@@ -208,7 +215,7 @@ msgstr "Linker zijbalk"
 
 #: inc/customizer.php:186
 msgid "Left & Right sidebars"
-msgstr "Linker & Rechter zijbalken"
+msgstr "Linker & rechter zijbalken"
 
 #: inc/customizer.php:187
 msgid "No sidebar"
@@ -216,15 +223,16 @@ msgstr "Geen zijbalk"
 
 #: inc/customizer.php:209
 msgid "Footer Site Info"
-msgstr ""
+msgstr "Footer site info"
 
 #: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
+"Overschrijf Understrap's site info die in de footer van de pagina staat."
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
-msgstr ""
+msgstr "Hoofdalinea"
 
 #: inc/editor.php:56
 msgctxt "Font size name"
@@ -237,11 +245,11 @@ msgstr "Blockquote"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
-msgstr ""
+msgstr "Blockquote footer"
 
 #: inc/editor.php:72
 msgid "Cite"
-msgstr ""
+msgstr "Citeer"
 
 #: inc/extras.php:247
 msgid "Read More..."
@@ -338,12 +346,12 @@ msgstr "Berichtnavigatie"
 #: inc/template-tags.php:305
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr ""
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
 #: inc/template-tags.php:308
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr ""
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
 #: inc/template-tags.php:331
 msgid "Pages:"
@@ -360,9 +368,8 @@ msgid "Right Sidebar"
 msgstr "Rechter zijbalk"
 
 #: inc/widgets.php:281
-#, fuzzy
 msgid "Right sidebar widget area"
-msgstr "Rechter zijbalk"
+msgstr "Widget gebied in de rechter zijbalk"
 
 #. translators: Widget area title
 #: inc/widgets.php:292
@@ -370,9 +377,8 @@ msgid "Left Sidebar"
 msgstr "Linkel zijbalk"
 
 #: inc/widgets.php:294
-#, fuzzy
 msgid "Left sidebar widget area"
-msgstr "Linkel zijbalk"
+msgstr "Widget gebied aan de linker zijbalk"
 
 #. translators: Widget area title
 #: inc/widgets.php:305
@@ -382,24 +388,27 @@ msgstr "Hero Slider"
 #: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
+"Hero slider gebied. Plaats hier twee of meer widgets en ze zullen sliden!"
 
 #. translators: Widget area title
 #: inc/widgets.php:318
 msgid "Hero Canvas"
-msgstr ""
+msgstr "Hero canvas"
 
 #: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
+"Canvas hero gebied op volledig formaat voor Bootstrap en andere aangepaste "
+"HTML-markeringen"
 
 #. translators: Widget area title
 #: inc/widgets.php:331
 msgid "Top Full"
-msgstr ""
+msgstr "Top vol"
 
 #: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
-msgstr ""
+msgstr "Volledige top widget met dynamisch raster"
 
 #. translators: Widget area title
 #: inc/widgets.php:344
@@ -408,7 +417,7 @@ msgstr "Footer (volledige breedte)"
 
 #: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
-msgstr ""
+msgstr "Footer widget op volledige grootte met dynamisch raster"
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
@@ -443,7 +452,7 @@ msgstr "Blank Pagina Sjabloon"
 
 #. Template Name of the theme
 msgid "Left and Right Sidebar Layout"
-msgstr "Linker en Rechter Zijbalk"
+msgstr "Lay-out linker en rechter zijbalk"
 
 #. Template Name of the theme
 msgid "Empty Page Template"
@@ -455,16 +464,15 @@ msgstr "Pagina in volledige breedte"
 
 #. Template Name of the theme
 msgid "Left Sidebar Layout"
-msgstr "Linker Zijbalk"
+msgstr "Linker zijbalk lay-out"
 
 #. Template Name of the theme
 msgid "No Title, Full Width Page"
-msgstr "Geen titel, pagina in volledige breedte"
+msgstr "Geen titel, volledige breedte pagina"
 
 #. Template Name of the theme
-#, fuzzy
 msgid "Right Sidebar Layout"
-msgstr "Rechter zijbalk"
+msgstr "Rechter zijbalk lay-out"
 
 #. translators: %s: query term
 #: search.php:38
