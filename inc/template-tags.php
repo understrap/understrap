@@ -371,3 +371,22 @@ if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
 		return esc_html__( ', ', 'understrap' );
 	}
 }
+
+if ( ! function_exists( 'understrap_the_post_thumbnail' ) ) {
+	/**
+	 * Displays the post thumbnail if the Post Featured Image Block is not used
+	 * for a given post.
+	 *
+	 * @param string|int[]                     $size Image size.
+	 * @param string|array<string,string|bool> $attr Query string or array of attributes.
+	 */
+	function understrap_the_post_thumbnail( $size = 'post-thumbnail', $attr = '' ) {
+		global $wp_version;
+		if (
+			version_compare( $wp_version, '5.8' ) === -1 ||
+			! has_block( 'core/post-featured-image' )
+		) {
+			the_post_thumbnail( $size, $attr );
+		}
+	}
+}

@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php understrap_the_post_thumbnail( 'large' ); ?>
 
 	<div class="entry-content">
 

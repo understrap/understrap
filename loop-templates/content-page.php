@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 		);
 	}
 
-	echo get_the_post_thumbnail( $post->ID, 'large' );
+	understrap_the_post_thumbnail( 'large' );
 	?>
 
 	<div class="entry-content">
