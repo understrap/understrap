@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
-"PO-Revision-Date: 2022-11-06 00:39+0100\n"
+"PO-Revision-Date: 2022-11-18 14:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -86,7 +86,7 @@ msgstr "Beiträge von %s"
 #: comments.php:36
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
-msgstr "Ein Gedanke zu &bdquo;%2$s&ldquo;"
+msgstr "Ein Gedanke zu &bdquo;%s&ldquo;"
 
 #. translators: 1: number of comments, 2: post title
 #: comments.php:43
