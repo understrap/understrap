@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
-"PO-Revision-Date: 2022-11-18 14:34+0100\n"
+"PO-Revision-Date: 2022-11-19 16:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -34,6 +34,10 @@ msgid ""
 "Bootstrap. Trusted by more than 100,000 developers for building handcrafted, "
 "custom WordPress sites."
 msgstr ""
+"Das renommierte WordPress-Einsteiger-Theme-Framework, das Underscores und "
+"Bootstrap kombiniert. Mehr als 100.000 Entwicklerinnen und Entwickler "
+"vertrauen darauf, um handgefertigte, individuelle WordPress-Websites zu "
+"erstellen."
 
 #. Author of the theme
 msgid "Howard Development &amp; Consulting"
@@ -55,12 +59,12 @@ msgstr ""
 
 #: 404.php:46
 msgid "Most Used Categories"
-msgstr "Oft verwendete Kategorien"
+msgstr "Meistgenutzte Kategorien"
 
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Versuchs mit einem Blick in die monatlichen Archive. %1$s"
+msgstr "Versuche es mit einem Blick in die monatlichen Archive. %1$s"
 
 #. translators: %s: author name
 #: author.php:44
@@ -70,7 +74,7 @@ msgstr "Profilbild von %s"
 
 #: author.php:54
 msgid "Website"
-msgstr "Webseite"
+msgstr "Website"
 
 #. translators: %s: author name
 #: author.php:65
@@ -93,7 +97,7 @@ msgstr "Ein Gedanke zu &bdquo;%s&ldquo;"
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Ein Gedanke zu &bdquo;%2$s&ldquo;"
+msgstr[0] "%1$s Gedanke zu &bdquo;%2$s&ldquo;"
 msgstr[1] "%1$s Gedanken zu &bdquo;%2$s&ldquo;"
 
 #: global-templates/navbar-collapse-bootstrap4.php:18
@@ -133,11 +137,11 @@ msgstr "Standard-Header-Bild"
 
 #: inc/customizer.php:67
 msgid "Theme Layout Settings"
-msgstr "Theme Layout Einstellungen"
+msgstr "Theme-Layout-Einstellungen"
 
 #: inc/customizer.php:69
 msgid "Container width and sidebar defaults"
-msgstr "Container-Breite und Seitenleisten-Einstellungen"
+msgstr "Container-Breite und Standard-Einstellungen der Seitenleiste"
 
 #: inc/customizer.php:89
 msgid "Bootstrap Version"
@@ -145,7 +149,7 @@ msgstr "Bootstrap-Version"
 
 #: inc/customizer.php:90
 msgid "Choose between Bootstrap 4 and Bootstrap 5"
-msgstr "Zwischen Bootstrap 4 und Bootstrap 5 wählen"
+msgstr "Zwischen Bootstrap 4 und Bootstrap 5 auswählen"
 
 #: inc/customizer.php:94
 msgid "Bootstrap 4"
@@ -161,7 +165,7 @@ msgstr "Container-Breite"
 
 #: inc/customizer.php:118
 msgid "Choose between Bootstrap's container and container-fluid"
-msgstr "Wähle zwischen dem Bootstrap container und container-fluid aus"
+msgstr "Zwischen Bootstraps container und container-fluid auswählen"
 
 #: inc/customizer.php:122
 msgid "Fixed width container"
@@ -173,22 +177,22 @@ msgstr "Container mit voller Seitenbreite"
 
 #: inc/customizer.php:145
 msgid "Responsive Navigation Type"
-msgstr "Responsiver Navigationstyp"
+msgstr "Art der responsiven Navigation"
 
 #: inc/customizer.php:146
 msgid ""
 "Choose between an expanding and collapsing navbar or an offcanvas drawer."
 msgstr ""
-"Zwischen einer aus- und einklappenden und einer sich in den Viewport "
-"schiebenden Navigationsleiste auswählen."
+"Zwischen einer aus- und einklappenden Navigationsleiste und einer Off-Canvas-"
+"Navigationsleiste auswählen."
 
 #: inc/customizer.php:153
 msgid "Collapse"
-msgstr ""
+msgstr "Einklappen"
 
 #: inc/customizer.php:154
 msgid "Offcanvas"
-msgstr ""
+msgstr "Off-Canvas"
 
 #: inc/customizer.php:176
 msgid "Sidebar Positioning"
@@ -221,11 +225,13 @@ msgstr "Keine Seitenleiste"
 
 #: inc/customizer.php:209
 msgid "Footer Site Info"
-msgstr ""
+msgstr "Website-Information im Footer"
 
 #: inc/customizer.php:210
 msgid "Override Understrap's site info located at the footer of the page."
 msgstr ""
+"Understraps Website-Information überschreiben, die sich im Footer der Seite "
+"befindet."
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -242,7 +248,7 @@ msgstr "Zitat"
 
 #: inc/editor.php:66
 msgid "Blockquote Footer"
-msgstr ""
+msgstr "Zitat-Footer"
 
 #: inc/editor.php:72
 msgid "Cite"
@@ -321,7 +327,7 @@ msgstr "Kommentar hinterlassen<span class=\"screen-reader-text\"> zu %s</span>"
 
 #: inc/template-tags.php:243
 msgid "Comments navigation"
-msgstr "Kommentarnavigation"
+msgstr "Kommentar-Navigation"
 
 #: inc/template-tags.php:247
 msgid "&larr; Older Comments"
@@ -380,11 +386,13 @@ msgstr "Widgetbereich der linken Seitenleiste"
 #. translators: Widget area title
 #: inc/widgets.php:305
 msgid "Hero Slider"
-msgstr "\"Bühnen\"-Slider"
+msgstr "Hero-Slider"
 
 #: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr ""
+"Hero-Slider-Bereich. Zwei oder mehr Widgets hier platzieren und sie werden "
+"durchlaufen!"
 
 #. translators: Widget area title
 #: inc/widgets.php:318
@@ -394,6 +402,7 @@ msgstr ""
 #: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr ""
+"Hero-Bereich in voller Breite für Bootstrap- oder individuelles HTML-Markup"
 
 #. translators: Widget area title
 #: inc/widgets.php:331
@@ -411,7 +420,7 @@ msgstr "Fußbereich"
 
 #: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
-msgstr ""
+msgstr "Footer-Widgetbereich in voller Breite mit dynamischem Grid"
 
 #: loop-templates/content-none.php:18
 msgid "Nothing Found"
@@ -431,15 +440,15 @@ msgid ""
 "different keywords."
 msgstr ""
 "Leider gibt es keine Übereinstimmung mit deinen Suchbegriffen. Bitte "
-"versuche es nochmal mit einigen anderen Begriffen."
+"versuche es nochmal mit anderen Begriffen."
 
 #: loop-templates/content-none.php:46
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht "
-"hast. Möglicherweise hilft eine Suche."
+"Es sieht so aus, als ob wir nicht finden konnten, wonach du gesucht hast. "
+"Möglicherweise hilft eine Suche."
 
 #. Template Name of the theme
 msgid "Blank Page Template"
