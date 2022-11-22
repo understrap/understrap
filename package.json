@@ -59,11 +59,11 @@
     "@rollup/plugin-replace": "^5.0.1",
     "@rollup/plugin-terser": "^0.1.0",
     "autoprefixer": "^10.4.13",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "bootstrap4": "npm:bootstrap@^4.6.2",
     "browser-sync": "^2.27.10",
     "browserslist": "^4.21.4",
-    "caniuse-lite": "^1.0.30001431",
+    "caniuse-lite": "^1.0.30001434",
     "clean-css-cli": "^5.6.1",
     "font-awesome": "^4.7.0",
     "nodemon": "^2.0.20",
@@ -72,7 +72,7 @@
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^3.3.0",
+    "rollup": "^3.4.0",
     "sass": "^1.56.1"
   }
 }
