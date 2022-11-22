@@ -50,7 +50,9 @@ if ( ! function_exists( 'understrap_wpcf7_get_input_class_map' ) ) {
 			'email'          => 'form-control',
 			'textarea'       => 'form-control',
 			'url'            => 'form-control',
+			'tel'            => 'form-control',
 			'date'           => 'form-control',
+			'number'         => 'form-control',
 			'quiz'           => 'form-control',
 			'file'           => 'form-control',
 			'submit'         => understrap_wpcf7_get_submit_classes(),
@@ -58,8 +60,6 @@ if ( ! function_exists( 'understrap_wpcf7_get_input_class_map' ) ) {
 			'range'          => 'form-range',
 			// Non standard input types.
 			'search'         => 'form-control',
-			'tel'            => 'form-control',
-			'number'         => 'form-control',
 			'datetime-local' => 'form-control',
 			'week'           => 'form-control',
 			'month'          => 'form-control',
