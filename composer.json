@@ -17,12 +17,12 @@
 		}
 	],
 	"repositories":[
-        {
-            "type":"composer",
-            "url":"https://wpackagist.org",
-            "only": [ "packagist-plugin/*" ]
-        }
-    ],
+		{
+			"type":"composer",
+			"url":"https://wpackagist.org",
+			"only": [ "packagist-plugin/*" ]
+		}
+	],
 	"require": {
 		"php": ">=5.6"
 	},
@@ -53,12 +53,12 @@
 		"post-update-cmd": "@phpcs-config-set"
 	},
 	"extra": {
-        "installer-paths": {
-            "vendor/wp-plugins/{$name}/": [
-                "type:wordpress-plugin"
-            ]
-        }
-    },
+		"installer-paths": {
+			"vendor/wp-plugins/{$name}/": [
+				"type:wordpress-plugin"
+			]
+		}
+	},
 	"support": {
 		"issues": "https://github.com/understrap/understrap/issues",
 		"source": "https://github.com/understrap/understrap"
