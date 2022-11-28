@@ -19,12 +19,12 @@ use \WPCF7_Pipes;
  */
 class WPCF7FormTagArrayType extends ConstantArrayType
 {
-    public function describe(VerbosityLevel $level): string
-    {
-        return 'wpcf7-form-tag-array';
-    }
+	public function describe(VerbosityLevel $level): string
+	{
+		return 'wpcf7-form-tag-array';
+	}
 
-    public function __construct()
+	public function __construct()
 	{
 		$keyTypes = [
 			new ConstantStringType('type'),

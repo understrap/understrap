@@ -15,12 +15,12 @@ use PHPStan\Type\Type;
  */
 class WPCF7FormTagArrayTypeNodeResolver implements TypeNodeResolverExtension
 {
-    public function resolve(TypeNode $typeNode, NameScope $nameScope): ?Type
-    {
-        if ($typeNode instanceof IdentifierTypeNode && $typeNode->__toString() === 'wpcf7-form-tag-array') {
-            return new WPCF7FormTagArrayType();
-        }
+	public function resolve(TypeNode $typeNode, NameScope $nameScope): ?Type
+	{
+		if ($typeNode instanceof IdentifierTypeNode && $typeNode->__toString() === 'wpcf7-form-tag-array') {
+			return new WPCF7FormTagArrayType();
+		}
 
-        return null;
-    }
+		return null;
+	}
 }
