@@ -52,8 +52,8 @@
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@popperjs/core": "^2.11.6",
-    "@rollup/plugin-babel": "^6.0.2",
-    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^23.0.3",
     "@rollup/plugin-multi-entry": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.1",
@@ -72,7 +72,7 @@
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^3.4.0",
+    "rollup": "^3.5.0",
     "sass": "^1.56.1",
     "terser": "^5.16.0"
   }
