@@ -371,3 +371,20 @@ if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
 		return esc_html__( ', ', 'understrap' );
 	}
 }
+
+if ( ! function_exists( 'understrap_get_screen_reader_class' ) ) {
+	/**
+	 * Retrieves Bootstrap's screen reader text class.
+	 *
+	 * @param bool $focusable (Optional) Whether to make the screen reader text
+	 *                        visually focusable. Default: false.
+	 * @return string Bootstrap's screen reader text class.
+	 */
+	function understrap_get_screen_reader_class( $focusable = false ) {
+		$bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
+		if ( 'bootstrap4' === $bootstrap_version ) {
+			return $focusable ? 'sr-only sr-only-focusable' : 'sr-only';
+		}
+		return $focusable ? 'visually-hidden-focusable' : 'visually-hidden';
+	}
+}
