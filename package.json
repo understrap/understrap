@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
