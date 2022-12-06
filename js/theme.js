@@ -1,5 +1,5 @@
 /*!
- * Understrap v1.2.0-beta2 (https://understrap.com)
+ * Understrap v1.2.1 (https://understrap.com)
  * Copyright 2013-2022 The UnderStrap Authors (https://github.com/understrap/understrap/graphs/contributors)
  * Licensed under GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
  */

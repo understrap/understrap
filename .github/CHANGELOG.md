@@ -8,7 +8,13 @@
 
   -
 
-## Release 1.2.0-beta2 October 5th 2022
+## Release 1.2.1 November 17th 2022
+
+** Fixes **
+
+  - Fixes an issue with post thumbnails not being editable
+
+## Release 1.2.0 November 15th 2022
 
 ** Enhancements **
 
@@ -35,7 +41,6 @@
   - Fixes the category transient flush
   - Accessibility: aria role fixes for the carousel and footer widgets area
   - Translations: Makes aria-labels translatable
-
 
 ## Release 1.1.0 December 1st 2021
 

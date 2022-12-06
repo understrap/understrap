@@ -150,10 +150,10 @@ article img,
 // Skip to content link
 a.skip-link {
 	@if variable-exists('bootstrap4') {
-		@extend .sr-only;
-		@extend .sr-only-focusable;
+		@include sr-only();
+		@include sr-only-focusable();
 	} @else {
-		@extend .visually-hidden-focusable;
+		@include visually-hidden-focusable();
 	}
 }
 
