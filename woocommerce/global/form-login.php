@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.6.0
+ * @version 7.0.1
  */
 
 // Exit if accessed directly.
@@ -35,7 +35,7 @@ if ( is_user_logged_in() ) {
 	</p>
 	<p class="form-row form-row-last">
 		<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input class="input-text form-control" type="password" name="password" id="password" autocomplete="current-password" />
+		<input class="input-text woocommerce-Input form-control" type="password" name="password" id="password" autocomplete="current-password" />
 	</p>
 	<div class="clear"></div>
 
