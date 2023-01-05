@@ -8,6 +8,12 @@
 
   -
 
+## Release 1.2.2-beta1 December 7th 2022
+
+** Fixes **
+
+  - Updates WooCommerce templates as of 7.1.0
+
 ## Release 1.2.1 November 17th 2022
 
 ** Fixes **
