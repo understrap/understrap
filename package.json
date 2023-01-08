@@ -57,7 +57,7 @@
     "@rollup/plugin-multi-entry": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
-    "@rollup/plugin-terser": "^0.1.0",
+    "@rollup/plugin-terser": "^0.3.0",
     "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.3",
     "bootstrap4": "npm:bootstrap@^4.6.2",
