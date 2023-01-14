@@ -24,7 +24,7 @@
 		"phpcompatibility/phpcompatibility-wp": "^2.1.4",
 		"phpmd/phpmd": "^2.13.0",
 		"phpstan/phpstan": "^1.9.11",
-		"roave/security-advisories": "dev-master",
+		"roave/security-advisories": "dev-latest",
 		"squizlabs/php_codesniffer": "^3.7.1",
 		"szepeviktor/phpstan-wordpress": "^1.1.6",
 		"wp-coding-standards/wpcs": "^2.3.0",
