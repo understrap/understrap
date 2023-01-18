@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "1.2.2-beta1",
+  "version": "1.2.2",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -63,7 +63,7 @@
     "bootstrap4": "npm:bootstrap@^4.6.2",
     "browser-sync": "^2.27.11",
     "browserslist": "^4.21.4",
-    "caniuse-lite": "^1.0.30001442",
+    "caniuse-lite": "^1.0.30001445",
     "clean-css-cli": "^5.6.1",
     "font-awesome": "^4.7.0",
     "nodemon": "^2.0.20",
@@ -72,7 +72,7 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^3.9.1",
+    "rollup": "^3.10.0",
     "sass": "^1.57.1",
     "terser": "^5.16.1"
   }
