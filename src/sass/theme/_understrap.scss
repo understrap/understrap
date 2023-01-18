@@ -196,24 +196,6 @@ a.skip-link {
 	}
 }
 
-.navbar-light .navbar-brand a {
-	color: $navbar-light-active-color;
-
-	&:hover,
-	&:focus {
-		color: $navbar-light-active-color;
-	}
-}
-
-.navbar-dark .navbar-brand a {
-	color: $navbar-dark-active-color;
-
-	&:hover,
-	&:focus {
-		color: $navbar-dark-active-color;
-	}
-}
-
 .navbar h1 {
 	font-weight: $font-weight-normal;
 }
