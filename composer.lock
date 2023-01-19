@@ -725,12 +725,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "7868bedd3ec39dc3efe827e0be27cf88c0f6ecaf"
+                "reference": "3fb5c587e6f149553b51f1f9a1e8dd1e2b4dd6e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/7868bedd3ec39dc3efe827e0be27cf88c0f6ecaf",
-                "reference": "7868bedd3ec39dc3efe827e0be27cf88c0f6ecaf",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3fb5c587e6f149553b51f1f9a1e8dd1e2b4dd6e9",
+                "reference": "3fb5c587e6f149553b51f1f9a1e8dd1e2b4dd6e9",
                 "shasum": ""
             },
             "conflict": {
@@ -873,7 +873,7 @@
                 "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
                 "friendsoftypo3/mediace": ">=7.6.2,<7.6.5",
                 "froala/wysiwyg-editor": "<3.2.7",
-                "froxlor/froxlor": "<0.10.39|>=2-beta.0,<2-beta.1",
+                "froxlor/froxlor": "<2.0.8",
                 "fuel/core": "<1.8.1",
                 "gaoming13/wechat-php-sdk": "<=1.10.2",
                 "genix/cms": "<=1.1.11",
@@ -1163,7 +1163,7 @@
                 "thelia/thelia": ">=2.1-beta.1,<2.1.3",
                 "theonedemon/phpwhois": "<=4.2.5",
                 "thinkcmf/thinkcmf": "<=5.1.7",
-                "thorsten/phpmyfaq": "<3.1.9",
+                "thorsten/phpmyfaq": "<3.1.10",
                 "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
                 "titon/framework": ">=0,<9.9.99",
                 "tobiasbg/tablepress": "<= 2.0-RC1",
@@ -1282,7 +1282,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-18T00:15:17+00:00"
+            "time": "2023-01-19T12:05:41+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
