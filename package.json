@@ -32,7 +32,8 @@
     "extends": "./src/build/babel.config.js"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16",
+    "npm": ">=7.1.0"
   },
   "repository": {
     "type": "git",
