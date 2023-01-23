@@ -725,12 +725,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "3fb5c587e6f149553b51f1f9a1e8dd1e2b4dd6e9"
+                "reference": "3c4c1cc9bc3eed8e57f63780161896336c455de1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3fb5c587e6f149553b51f1f9a1e8dd1e2b4dd6e9",
-                "reference": "3fb5c587e6f149553b51f1f9a1e8dd1e2b4dd6e9",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3c4c1cc9bc3eed8e57f63780161896336c455de1",
+                "reference": "3c4c1cc9bc3eed8e57f63780161896336c455de1",
                 "shasum": ""
             },
             "conflict": {
@@ -778,7 +778,7 @@
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
                 "bytefury/crater": "<6.0.2",
                 "cachethq/cachet": "<2.5.1",
-                "cakephp/cakephp": "<3.10.3|= 1.3.7|>=4,<4.0.10|>=4.1,<4.1.4",
+                "cakephp/cakephp": "<3.10.3|>=4,<4.0.10|>=4.2,<4.2.12|>=4.3,<4.3.11|>=4.4,<4.4.10|= 1.3.7|>=4.1,<4.1.4",
                 "cardgate/magento2": "<2.0.33",
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
                 "cartalyst/sentry": "<=2.1.6",
@@ -1032,7 +1032,7 @@
                 "phpxmlrpc/extras": "<0.6.1",
                 "phpxmlrpc/phpxmlrpc": "<4.9.2",
                 "pimcore/data-hub": "<1.2.4",
-                "pimcore/pimcore": "<10.5.9",
+                "pimcore/pimcore": "<10.5.14",
                 "pocketmine/bedrock-protocol": "<8.0.2",
                 "pocketmine/pocketmine-mp": "<4.12.5|>= 4.0.0-BETA5, < 4.4.2",
                 "pressbooks/pressbooks": "<5.18",
@@ -1282,7 +1282,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-19T12:05:41+00:00"
+            "time": "2023-01-20T18:04:36+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
