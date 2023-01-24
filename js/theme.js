@@ -6119,6 +6119,125 @@
     }
   })();
 
+  /**
+   * Utilities
+   */
+
+  /**
+   * Selectors representing focusable elements if visible and not disabled.
+   *
+   * @type {string[]}
+   */
+  const focusableTags = ['a[href]', 'button', 'input', 'select', 'textarea', '[tabindex]', '[contenteditable]'];
+
+  /**
+   * Determines whether an element is focusable without adding tabindex.
+   *
+   * Also sets the attribute `data-focusable` with value '1' for focusable
+   * elements and '2' for elements that are focusable after setting the attribute
+   * `tabindex`.
+   *
+   * @param {HTMLElement} element     The element to check for focusability.
+   * @param {?boolean}    setDataAttr Whether to set `data-focusable`. Default: true.
+   * @return {?number} 1 if `element` is focusable, 2 if `element` needs tabindex
+   *                    to be focusable, false if `element` is not focusable.
+   */
+  const isFocusable = (element, setDataAttr) => {
+    setDataAttr = setDataAttr || true;
+
+    // Disabled or invisible elements must not receive focus.
+    // Do not focus elements that are removed from the accessibility tree.
+    if (isDisabled(element) || !isVisible(element) || element.ariaHidden === 'true') {
+      return null;
+    }
+
+    // Element is already focusable.
+    if (element.matches(focusableTags.toString())) {
+      if (setDataAttr) {
+        element.dataset.focusable = 1;
+      }
+      return 1;
+    }
+
+    // Element can be made focusable by setting tabindex.
+    if (setDataAttr) {
+      element.dataset.focusable = 2;
+    }
+    return 2;
+  };
+
+  /**
+   * Offcanvas: Fix for links pointing to anchors in the same document.
+   *
+   * Unfixed behavior:
+   * - Offcanvas does not close when the link is clicked, page scrolls to anchor.
+   * - Manually closing the icon sets the focus on the offcanvas toggle, the page
+   *   scrolls to the toggler.
+   */
+
+  /**
+   * Hides the offcanvas component when clicking an anchor link within the
+   * offcanvas and sets focus on the destination anchor.
+   *
+   * @param {HTMLElement} offcanvasEl The offcanvas element.
+   */
+  const offcanvasFix = offcanvasEl => {
+    const toggler = document.querySelector(`[data-bs-target="#${offcanvasEl.id}"]`);
+    offcanvasEl.querySelectorAll('[href^="#"]:not([href="#"])').forEach(link => {
+      link.addEventListener('click', () => {
+        const goto = document.getElementById(link.hash.slice(1));
+        if (!isFocusable(goto)) {
+          return;
+        }
+
+        // Temporarily set tabindex=-1 if the destination anchor is not
+        // focusable yet.
+        if (goto.dataset.focusable === '2') {
+          goto.tabIndex = '-1';
+        }
+
+        // Remove a temporarly added tabindex=-1 as soon as the
+        // destination anchor no longer has focus.
+        goto.addEventListener('focus', () => {
+          goto.addEventListener('blur', () => {
+            if (goto.dataset.focusable === '2') {
+              goto.removeAttribute('tabindex');
+            }
+          });
+        });
+
+        // Re-enable the offcanvas toggler.
+        offcanvasEl.addEventListener('hide.bs.offcanvas', () => {
+          toggler.disabled = true;
+        }, {
+          once: true
+        });
+
+        // Prevent the offcanvas toggler from receiving focus by setting
+        // the disabled attribute and set focus on the destination anchor.
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+          toggler.disabled = false;
+          goto.focus();
+        }, {
+          once: true
+        });
+
+        // Close the offcanvas.
+        Offcanvas.getOrCreateInstance(offcanvasEl).hide();
+      });
+    });
+  };
+
+  /**
+   * Adds the offcanvas fix to all offcanvas components in the document.
+   */
+  const addOffcanvasFix = () => {
+    document.querySelectorAll('.offcanvas').forEach(offcanvasEl => {
+      offcanvasFix(offcanvasEl);
+    });
+  };
+  addOffcanvasFix();
+
   exports.Alert = Alert;
   exports.Button = Button;
   exports.Carousel = Carousel;
@@ -6131,6 +6250,7 @@
   exports.Tab = Tab;
   exports.Toast = Toast;
   exports.Tooltip = Tooltip;
+  exports.offcanvasFix = offcanvasFix;
 
 }));
 //# sourceMappingURL=theme.js.map
