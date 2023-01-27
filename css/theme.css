@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap  v5.2.2 (https://getbootstrap.com/)
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -6672,7 +6672,6 @@ textarea.form-control-lg {
   display: block;
 }
 
-/* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   transform: translateX(100%);
@@ -6683,7 +6682,6 @@ textarea.form-control-lg {
   transform: translateX(-100%);
 }
 
-/* rtl:end:ignore */
 .carousel-fade .carousel-item {
   opacity: 0;
   transition-property: opacity;
@@ -7748,8 +7746,7 @@ textarea.form-control-lg {
 }
 
 .visually-hidden,
-.visually-hidden-focusable:not(:focus):not(:focus-within),
-a.skip-link:not(:focus):not(:focus-within) {
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -11792,6 +11789,18 @@ article img,
 #secondary img {
   max-width: 100%;
   height: auto;
+}
+
+a.skip-link:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link {
