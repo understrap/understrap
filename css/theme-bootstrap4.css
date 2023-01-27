@@ -11214,6 +11214,10 @@ a.skip-link:active, a.skip-link:focus {
   text-decoration: underline;
 }
 
+a[data-toggle=tooltip] {
+  white-space: nowrap;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #007bff;
