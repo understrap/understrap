@@ -65,7 +65,7 @@
     "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.3",
     "bootstrap4": "npm:bootstrap@^4.6.2",
-    "browser-sync": "^2.28.1",
+    "browser-sync": "^2.28.3",
     "browserslist": "^4.21.5",
     "caniuse-lite": "^1.0.30001459",
     "clean-css-cli": "^5.6.2",
