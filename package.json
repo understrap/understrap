@@ -77,7 +77,7 @@
     "postcss-cli": "^10.1.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
     "rollup": "^3.19.1",
-    "sass": "^1.58.3",
+    "sass": "^1.59.2",
     "terser": "^5.16.6"
   }
 }
