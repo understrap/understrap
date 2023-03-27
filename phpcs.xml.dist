@@ -89,6 +89,11 @@
 		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
 	</rule>
 
+	<!-- Ignore mixed line-endings warnings -->
+	<rule ref="Internal.LineEndings.Mixed">
+		<severity>0</severity>
+	</rule>
+
 	<!-- Use the WPThemeReview Ruleset -->
 	<rule ref="WPThemeReview" />
 
