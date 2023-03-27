@@ -1821,7 +1821,7 @@
 
   function getUAString() {
     var uaData = navigator.userAgentData;
-    if (uaData != null && uaData.brands) {
+    if (uaData != null && uaData.brands && Array.isArray(uaData.brands)) {
       return uaData.brands.map(function (item) {
         return item.brand + "/" + item.version;
       }).join(' ');
@@ -2108,10 +2108,9 @@
   // Zooming can change the DPR, but it seems to report a value that will
   // cleanly divide the values into the appropriate subpixels.
 
-  function roundOffsetsByDPR(_ref) {
+  function roundOffsetsByDPR(_ref, win) {
     var x = _ref.x,
       y = _ref.y;
-    var win = window;
     var dpr = win.devicePixelRatio || 1;
     return {
       x: round(x * dpr) / dpr || 0,
@@ -2184,7 +2183,7 @@
     var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
       x: x,
       y: y
-    }) : {
+    }, getWindow(popper)) : {
       x: x,
       y: y
     };
