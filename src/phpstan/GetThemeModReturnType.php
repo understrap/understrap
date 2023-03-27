@@ -54,14 +54,20 @@ class GetThemeModReturnType implements DynamicFunctionReturnTypeExtension {
 			$functionReflection->getVariants()
 		)->getReturnType();
 
-		if (!$argType instanceof ConstantStringType) {
-			return $defaultType;
+		if (count($argType->getConstantStrings()) === 0) {
+			return null;
 		}
 
-		// Return the default value if it is not an Understrap specific theme mod.
-		if (!in_array($argType->getValue(), self::$themeMods, true)) {
-			return $defaultType;
+		$returnType = [];
+		foreach ($argType->getConstantStrings() as $constantString) {
+			if (in_array($constantString->getValue(), self::$themeMods, true)) {
+				$returnType[] = new StringType();
+			} else {
+				$returnType[] = $defaultType;
+			}
 		}
+		$returnType = TypeCombinator::union(...$returnType);
+
 
 		// Without second argument the default value is false, but can be filtered.
 		$defaultType = new MixedType();
@@ -69,6 +75,6 @@ class GetThemeModReturnType implements DynamicFunctionReturnTypeExtension {
 			$defaultType = $scope->getType($functionCall->getArgs()[1]->value);
 		}
 
-		return TypeCombinator::union(new StringType(), $defaultType);
+		return TypeCombinator::union($returnType, $defaultType);
 	}
 }
