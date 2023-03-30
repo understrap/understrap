@@ -4,32 +4,32 @@
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
-    "bs": "browser-sync start --config src/build/browser-sync.config.js",
+    "bs": "browser-sync start --config build/config/browser-sync.config.js",
     "css": "npm-run-all css-compile css-postcss css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet src/sass/theme.scss:css/theme.css src/sass/custom-editor-style.scss:css/custom-editor-style.css",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\" \"!css/*-bootstrap4.css\"",
-    "css-postcss": "postcss --config src/build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\" \"!css/*-bootstrap4.css\"",
+    "css-postcss": "postcss --config build/config/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\" \"!css/*-bootstrap4.css\"",
     "css-bs4": "npm-run-all css-compile-bs4 css-postcss-bs4 css-minify-bs4",
     "css-compile-bs4": "sass --style expanded --source-map --embed-sources --no-error-css --quiet src/sass/theme-bootstrap4.scss:css/theme-bootstrap4.css src/sass/custom-editor-style-bootstrap4.scss:css/custom-editor-style-bootstrap4.css",
     "css-minify-bs4": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\"",
-    "css-postcss-bs4": "postcss --config src/build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\" -- BS4",
+    "css-postcss-bs4": "postcss --config build/config/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\" \"!css/theme.css\" \"!css/custom-editor-style.css\" -- BS4",
     "js": "npm-run-all js-compile js-minify",
-    "js-compile": "rollup --config src/build/rollup.config.js --sourcemap",
-    "js-minify": "terser js/theme.min.js --config-file src/build/terser.config.json --source-map \"content=js/theme.js.map,url=theme.min.js.map,filename=theme.min.js\" --output js/theme.min.js",
+    "js-compile": "rollup --config build/config/rollup.config.js --sourcemap",
+    "js-minify": "terser js/theme.min.js --config-file build/config/terser.config.json --source-map \"content=js/theme.js.map,url=theme.min.js.map,filename=theme.min.js\" --output js/theme.min.js",
     "js-bs4": "npm-run-all js-compile-bs4 js-minify-bs4",
     "js-compile-bs4": "npm run js-compile -- BS4",
-    "js-minify-bs4": "terser js/theme-bootstrap4.min.js --config-file src/build/terser.config.json --source-map \"content=js/theme-bootstrap4.js.map,url=theme-bootstrap4.min.js.map,filename=theme-bootstrap4.min.js\" --output js/theme-bootstrap4.min.js",
+    "js-minify-bs4": "terser js/theme-bootstrap4.min.js --config-file build/config/terser.config.json --source-map \"content=js/theme-bootstrap4.js.map,url=theme-bootstrap4.min.js.map,filename=theme-bootstrap4.min.js\" --output js/theme-bootstrap4.min.js",
     "watch": "npm-run-all --parallel watch-run-*",
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
     "watch-run-css": "nodemon --watch src/sass/ --ext scss --exec \"npm-run-all css\"",
     "watch-run-js": "nodemon --watch src/js/ --ext js --exec \"npm-run-all js\"",
-    "copy-assets": "node src/build/copy-assets.js",
+    "copy-assets": "node build/scripts/copy-assets.js",
     "dist": "npm-run-all --parallel css js css-bs4 js-bs4",
-    "dist-build": "node src/build/dist-build.js",
-    "dist-clean": "node src/build/dist-clean.js"
+    "dist-build": "node build/scripts/dist-build.js",
+    "dist-clean": "node build/scripts/dist-clean.js"
   },
   "babel": {
-    "extends": "./src/build/babel.config.js"
+    "extends": "./build/config/babel.config.js"
   },
   "engines": {
     "node": ">=16"
