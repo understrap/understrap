@@ -260,16 +260,16 @@
         },
         {
             "name": "php-stubs/wordpress-stubs",
-            "version": "v6.1.1",
+            "version": "v6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-stubs/wordpress-stubs.git",
-                "reference": "601c429ba8d91ef50a2a1bec05a7cd38b88064ff"
+                "reference": "3c9a59c94f3c31b5dad744a8bf42ee1eef058471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/601c429ba8d91ef50a2a1bec05a7cd38b88064ff",
-                "reference": "601c429ba8d91ef50a2a1bec05a7cd38b88064ff",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/3c9a59c94f3c31b5dad744a8bf42ee1eef058471",
+                "reference": "3c9a59c94f3c31b5dad744a8bf42ee1eef058471",
                 "shasum": ""
             },
             "require-dev": {
@@ -277,7 +277,7 @@
                 "php": "~7.3 || ~8.0",
                 "php-stubs/generator": "^0.8.3",
                 "phpdocumentor/reflection-docblock": "^5.3",
-                "phpstan/phpstan": "^1.2"
+                "phpstan/phpstan": "^1.9"
             },
             "suggest": {
                 "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
@@ -298,9 +298,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.1.1"
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.2.0"
             },
-            "time": "2023-02-09T11:10:35+00:00"
+            "time": "2023-03-30T16:04:53+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
