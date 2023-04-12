@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68cf4cab3ccc26002929c15cfd7ba0a9",
+    "content-hash": "7773ec842bb1c4ee07b3722ca9e8c24a",
     "packages": [],
     "packages-dev": [
         {
@@ -264,12 +264,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-stubs/wordpress-stubs.git",
-                "reference": "3c9a59c94f3c31b5dad744a8bf42ee1eef058471"
+                "reference": "b73fe99eadf9fb56363619dac0343b6d19907dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/3c9a59c94f3c31b5dad744a8bf42ee1eef058471",
-                "reference": "3c9a59c94f3c31b5dad744a8bf42ee1eef058471",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/b73fe99eadf9fb56363619dac0343b6d19907dce",
+                "reference": "b73fe99eadf9fb56363619dac0343b6d19907dce",
                 "shasum": ""
             },
             "require-dev": {
@@ -300,7 +300,7 @@
                 "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
                 "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.2.0"
             },
-            "time": "2023-03-30T16:04:53+00:00"
+            "time": "2023-03-31T09:48:52+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
@@ -2161,22 +2161,22 @@
         },
         {
             "name": "szepeviktor/phpstan-wordpress",
-            "version": "v1.1.7",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/szepeviktor/phpstan-wordpress.git",
-                "reference": "979dcb81a01942b576b9fbf72dcb9515c57a4aa8"
+                "reference": "534f2666a169ee7389722460178764db976ea1c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/szepeviktor/phpstan-wordpress/zipball/979dcb81a01942b576b9fbf72dcb9515c57a4aa8",
-                "reference": "979dcb81a01942b576b9fbf72dcb9515c57a4aa8",
+                "url": "https://api.github.com/repos/szepeviktor/phpstan-wordpress/zipball/534f2666a169ee7389722460178764db976ea1c3",
+                "reference": "534f2666a169ee7389722460178764db976ea1c3",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
                 "php-stubs/wordpress-stubs": "^4.7 || ^5.0 || ^6.0",
-                "phpstan/phpstan": "^1.8.7",
+                "phpstan/phpstan": "^1.10.0",
                 "symfony/polyfill-php73": "^1.12.0"
             },
             "require-dev": {
@@ -2214,7 +2214,7 @@
             ],
             "support": {
                 "issues": "https://github.com/szepeviktor/phpstan-wordpress/issues",
-                "source": "https://github.com/szepeviktor/phpstan-wordpress/tree/v1.1.7"
+                "source": "https://github.com/szepeviktor/phpstan-wordpress/tree/v1.2.0"
             },
             "funding": [
                 {
@@ -2226,7 +2226,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-04T13:10:27+00:00"
+            "time": "2023-04-08T07:07:36+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
