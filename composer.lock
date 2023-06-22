@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a3110059827cfa002ee0fb93e1431d3",
+    "content-hash": "6a5a2ed237e6a81dc897df22d2db339e",
     "packages": [],
     "packages-dev": [
         {
@@ -568,16 +568,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.19",
+            "version": "1.10.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "af5a296ff02610c1bfb4ddfac9fd4a08657b9046"
+                "reference": "b2a30186be2e4d97dce754ae4e65eb0ec2f04eb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/af5a296ff02610c1bfb4ddfac9fd4a08657b9046",
-                "reference": "af5a296ff02610c1bfb4ddfac9fd4a08657b9046",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b2a30186be2e4d97dce754ae4e65eb0ec2f04eb5",
+                "reference": "b2a30186be2e4d97dce754ae4e65eb0ec2f04eb5",
                 "shasum": ""
             },
             "require": {
@@ -626,7 +626,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-14T15:26:58+00:00"
+            "time": "2023-06-21T20:07:58+00:00"
         },
         {
             "name": "psr/container",
