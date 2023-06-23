@@ -2355,10 +2355,10 @@
   // of the `<html>` and `<body>` rect bounds if horizontally scrollable
 
   function getDocumentRect(element) {
-    var _element$ownerDocumen;
+    var _element$ownerDocument;
     var html = getDocumentElement(element);
     var winScroll = getWindowScroll(element);
-    var body = (_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body;
+    var body = (_element$ownerDocument = element.ownerDocument) == null ? void 0 : _element$ownerDocument.body;
     var width = max(html.scrollWidth, html.clientWidth, body ? body.scrollWidth : 0, body ? body.clientWidth : 0);
     var height = max(html.scrollHeight, html.clientHeight, body ? body.scrollHeight : 0, body ? body.clientHeight : 0);
     var x = -winScroll.scrollLeft + getWindowScrollBarX(element);
@@ -2402,12 +2402,12 @@
   */
 
   function listScrollParents(element, list) {
-    var _element$ownerDocumen;
+    var _element$ownerDocument;
     if (list === void 0) {
       list = [];
     }
     var scrollParent = getScrollParent(element);
-    var isBody = scrollParent === ((_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body);
+    var isBody = scrollParent === ((_element$ownerDocument = element.ownerDocument) == null ? void 0 : _element$ownerDocument.body);
     var win = getWindow(scrollParent);
     var target = isBody ? [win].concat(win.visualViewport || [], isScrollParent(scrollParent) ? scrollParent : []) : scrollParent;
     var updatedList = list.concat(target);

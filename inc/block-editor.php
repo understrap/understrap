@@ -63,7 +63,7 @@ if ( ! function_exists( 'understrap_generate_color_palette' ) ) {
 		}
 
 		/**
-		 * Filters the default bootstrap color palette so it can be overriden by child themes or plugins when we add theme support for editor-color-palette.
+		 * Filters the default bootstrap color palette so it can be overridden by child themes or plugins when we add theme support for editor-color-palette.
 		 *
 		 * @since 1.0.0
 		 *
