@@ -27,7 +27,7 @@
 !.github
 !.gitignore
 
-# Ignore all files with .lock extentions
+# Ignore all files with .lock extensions
 *.lock
 # but track
 !composer.lock
