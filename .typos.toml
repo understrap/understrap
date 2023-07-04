@@ -10,6 +10,3 @@ extend-exclude = [
   "src/sass/assets/bootstrap5/",
   "src/sass/assets/fontawesome/"
 ]
-[default.extend-words]
-optin = "optin"
-adn = "adn"
