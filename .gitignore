@@ -16,6 +16,7 @@
 
 # Ignore all files and directories starting with . or ~ or ._ or ending with ~
 .*
+!.typos.toml
 ~*
 *~
 ._*

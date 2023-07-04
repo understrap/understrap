@@ -1,0 +1,15 @@
+[files]
+extend-exclude = [
+  "css/",
+  "fonts/",
+  "js/*.min.js",
+  "js/*.map",
+  "js/theme*.js",
+  "languages/",
+  "src/sass/assets/bootstrap4/",
+  "src/sass/assets/bootstrap5/",
+  "src/sass/assets/fontawesome/"
+]
+[default.extend-words]
+optin = "optin"
+adn = "adn"
