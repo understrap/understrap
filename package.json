@@ -73,7 +73,7 @@
     "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
-    "postcss": "^8.4.28",
+    "postcss": "^8.4.29",
     "postcss-cli": "^10.1.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
     "rollup": "^3.28.1",
