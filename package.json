@@ -55,7 +55,7 @@
   "homepage": "https://understrap.com",
   "devDependencies": {
     "@babel/core": "^7.22.15",
-    "@babel/preset-env": "^7.22.14",
+    "@babel/preset-env": "^7.22.15",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.4",
