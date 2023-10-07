@@ -34,7 +34,7 @@
 		"php-lint": "parallel-lint --exclude vendor --exclude node_modules --exclude dist --exclude .git --exclude .phpstan-cache .",
 		"phpcs": "phpcs -p",
 		"phpcs-ga": "phpcs -n --report=checkstyle",
-		"phpcs-fix": "@phpcbf",
+		"phpcs-fix": "phpcbf",
 		"phpcs-config-set" : "@phpcs --config-set installed_paths ../../phpcompatibility/php-compatibility,../../phpcompatibility/phpcompatibility-paragonie,../../phpcompatibility/phpcompatibility-wp,../../wp-coding-standards/wpcs,../../wptrt/wpthemereview",
 		"phpmd": "phpmd . ansi phpmd.xml",
 		"phpmd-baseline": "@phpmd --generate-baseline",
