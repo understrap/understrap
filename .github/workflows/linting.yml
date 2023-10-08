@@ -26,6 +26,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -45,7 +47,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Fix coding standards with phpcbf
-          branch: ${{ github.head_ref }}
 
       - name: Check coding standards
         run: composer phpcs -- -q -n --report=checkstyle | cs2pr
@@ -82,6 +83,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -104,7 +107,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update PHPStan basefile
-          branch: ${{ github.head_ref }}
 
   phpmd:
 
@@ -115,6 +117,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -136,4 +140,3 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update PHPMD basefile
-          branch: ${{ github.head_ref }}
