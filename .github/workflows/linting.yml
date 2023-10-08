@@ -34,18 +34,8 @@ jobs:
           tools: composer, cs2pr
           coverage: none
 
-      - name: Get Composer cache  directory
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
-
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v2"
 
       - name: Auto fix coding standards
         run: composer phpcs-fix
@@ -77,18 +67,8 @@ jobs:
           tools: composer, cs2pr
           coverage: none
 
-      - name: Get Composer cache directory
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v2"
 
       - name: Check syntax
         run: composer php-lint
@@ -110,18 +90,8 @@ jobs:
           tools: composer, cs2pr
           coverage: none
 
-      - name: Get Composer cache directory
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v2"
 
       - name: Static Analysis
         id: phpstan
@@ -153,18 +123,8 @@ jobs:
           tools: composer, cs2pr
           coverage: none
 
-      - name: Get Composer cache directory
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v2"
 
       - name: Detect mess
         run: composer phpmd-ga
