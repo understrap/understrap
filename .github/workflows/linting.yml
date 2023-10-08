@@ -67,16 +67,13 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
+          tools: cs2pr, parallel-lint
           coverage: none
         env:
           fail-fast: true
 
-      - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v2"
-
       - name: Check syntax
-        run: composer php-lint
+        run: parallel-lint --checkstyle . | cs2pr
 
   phpstan:
 
