@@ -39,10 +39,16 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
+          tools: cs2pr
           coverage: none
         env:
           fail-fast: true
+
+      - name: Cache PHPCS cache
+        uses: actions/cache@v3
+        with:
+          path: .phpcs-cache.json
+          key: ${{ runner.os }}-phpcs-cache-${{ hashFiles('**/composer.lock', 'phpcs.xml.dist') }}
 
       - name: Install Composer dependencies
         uses: "ramsey/composer-install@v2"
@@ -97,15 +103,20 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
           coverage: none
         env:
           fail-fast: true
 
+      - name: Cache PHPStan cache
+        uses: actions/cache@v3
+        with:
+          path: .phpstan-cache
+          key: ${{ runner.os }}-phpstan-cache-${{ hashFiles('**/composer.lock', 'phpstan.neon.dist') }}
+
       - name: Install Composer dependencies
         uses: "ramsey/composer-install@v2"
 
-      - name: Static Analysis
+      - name: Analyse
         id: phpstan
         run: composer phpstan -- --error-format=github
 
