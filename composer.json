@@ -20,6 +20,7 @@
 		"php": "^7.4 || ^8.0"
 	},
 	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
 		"php-parallel-lint/php-parallel-lint": "^1.3.2",
 		"phpcompatibility/phpcompatibility-wp": "^2.1.4",
 		"phpmd/phpmd": "^2.14.1",
@@ -35,17 +36,20 @@
 		"phpcs": "phpcs -p",
 		"phpcs-ga": "phpcs -n --report=checkstyle",
 		"phpcs-fix": "phpcbf",
-		"phpcs-config-set" : "@phpcs --config-set installed_paths ../../phpcompatibility/php-compatibility,../../phpcompatibility/phpcompatibility-paragonie,../../phpcompatibility/phpcompatibility-wp,../../wp-coding-standards/wpcs,../../wptrt/wpthemereview",
 		"phpmd": "phpmd . ansi phpmd.xml",
 		"phpmd-baseline": "@phpmd --generate-baseline",
 		"phpmd-ga": "phpmd . github phpmd.xml",
 		"phpstan": "phpstan analyse -a src/phpstan/autoload.php",
-		"phpstan-baseline": "@phpstan --generate-baseline",
-		"post-install-cmd": "@phpcs-config-set",
-		"post-update-cmd": "@phpcs-config-set"
+		"phpstan-baseline": "@phpstan --generate-baseline"
 	},
 	"support": {
 		"issues": "https://github.com/understrap/understrap/issues",
 		"source": "https://github.com/understrap/understrap"
+	},
+	"config": {
+		"allow-plugins": {
+		  "dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"sort-packages": true
 	}
 }
