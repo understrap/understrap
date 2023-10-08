@@ -15,6 +15,7 @@ on:
       - 'phpcs.xml.dist'
       - 'phpmd.xml'
       - 'phpstan.neon.dist'
+  pull_request_target:
   workflow_dispatch:
 
 env:
@@ -33,6 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
 
       - name: Setup PHP
@@ -97,6 +99,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
 
       - name: Setup PHP
@@ -138,6 +141,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
 
       - name: Setup PHP
