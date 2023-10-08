@@ -34,7 +34,6 @@
 	"scripts": {
 		"php-lint": "parallel-lint --exclude vendor --exclude node_modules --exclude dist --exclude .git --exclude .phpstan-cache .",
 		"phpcs": "phpcs -p",
-		"phpcs-ga": "phpcs -n --report=checkstyle",
 		"phpcs-fix": "phpcbf",
 		"phpmd": "phpmd . ansi phpmd.xml",
 		"phpmd-baseline": "@phpmd --generate-baseline",

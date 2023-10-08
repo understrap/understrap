@@ -58,7 +58,7 @@ jobs:
           branch: ${{ github.head_ref }}
 
       - name: Check coding standards
-        run: composer phpcs-ga | cs2pr
+        run: composer phpcs -- -q -n --report=checkstyle | cs2pr
 
   php-lint:
 
