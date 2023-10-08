@@ -35,6 +35,8 @@ jobs:
           php-version: ${{ env.php-version }}
           tools: composer, cs2pr
           coverage: none
+        env:
+          fail-fast: true
 
       - name: Install Composer dependencies
         uses: "ramsey/composer-install@v2"
@@ -67,6 +69,8 @@ jobs:
           php-version: ${{ env.php-version }}
           tools: composer, cs2pr
           coverage: none
+        env:
+          fail-fast: true
 
       - name: Install Composer dependencies
         uses: "ramsey/composer-install@v2"
@@ -92,6 +96,8 @@ jobs:
           php-version: ${{ env.php-version }}
           tools: composer, cs2pr
           coverage: none
+        env:
+          fail-fast: true
 
       - name: Install Composer dependencies
         uses: "ramsey/composer-install@v2"
@@ -126,6 +132,8 @@ jobs:
           php-version: ${{ env.php-version }}
           tools: composer, cs2pr
           coverage: none
+        env:
+          fail-fast: true
 
       - name: Install Composer dependencies
         uses: "ramsey/composer-install@v2"
