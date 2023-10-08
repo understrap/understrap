@@ -130,19 +130,16 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
+          tools: phpmd
           coverage: none
         env:
           fail-fast: true
 
-      - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v2"
-
       - name: Detect mess
-        run: composer phpmd-ga
+        run: phpmd . github phpmd.xml
 
       - name: Update basefile
-        run: composer phpmd-baseline
+        run: phpmd . ansi phpmd.xml --generate-baseline
 
       - name: Commit updated basefile
         uses: stefanzweifel/git-auto-commit-action@v5

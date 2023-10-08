@@ -37,7 +37,6 @@
 		"phpcs-fix": "phpcbf",
 		"phpmd": "phpmd . ansi phpmd.xml",
 		"phpmd-baseline": "@phpmd --generate-baseline",
-		"phpmd-ga": "phpmd . github phpmd.xml",
 		"phpstan": "phpstan analyse",
 		"phpstan-baseline": "@phpstan --generate-baseline"
 	},
