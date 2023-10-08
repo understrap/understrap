@@ -5,10 +5,16 @@ on:
     branches: [ develop ]
     paths:
       - '**.php'
+      - 'phpcs.xml.dist'
+      - 'phpmd.xml'
+      - 'phpstan.neon.dist'
   pull_request:
     branches: [ develop ]
     paths:
       - '**.php'
+      - 'phpcs.xml.dist'
+      - 'phpmd.xml'
+      - 'phpstan.neon.dist'
   workflow_dispatch:
 
 env:
