@@ -38,7 +38,7 @@
 		"phpmd": "phpmd . ansi phpmd.xml",
 		"phpmd-baseline": "@phpmd --generate-baseline",
 		"phpstan": "phpstan analyse",
-		"phpstan-baseline": "@phpstan --generate-baseline"
+		"phpstan-baseline": "@phpstan --generate-baseline --allow-empty-baseline"
 	},
 	"support": {
 		"issues": "https://github.com/understrap/understrap/issues",
