@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
 	/**
 	 * Add Bootstrap classes to WP's comment form default fields.
 	 *
-	 * @deprecated 1.2.0 Use understrap_comment_form_fields()
+	 * @deprecated 1.3.0 Use understrap_comment_form_fields()
 	 * @see understrap_comment_form_fields()
 	 *
 	 * @param array $fields {
@@ -26,7 +26,7 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
 	 * @return array
 	 */
 	function understrap_bootstrap_comment_form_fields( $fields ) {
-		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_comment_form_fields' );
+		_deprecated_function( __FUNCTION__, '1.3.0', 'understrap_comment_form_fields' );
 		return understrap_comment_form_fields( $fields );
 	}
 }
@@ -35,14 +35,14 @@ if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
 	/**
 	 * Adds Bootstrap classes to comment form submit button and comment field.
 	 *
-	 * @deprecated 1.2.0 Use understrap_comment_form()
+	 * @deprecated 1.3.0 Use understrap_comment_form()
 	 * @see understrap_comment_form()
 	 *
 	 * @param string[] $args Comment form arguments and fields.
 	 * @return string[]
 	 */
 	function understrap_bootstrap_comment_form( $args ) {
-		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_comment_form' );
+		_deprecated_function( __FUNCTION__, '1.3.0', 'understrap_comment_form' );
 		return understrap_comment_form( $args );
 	}
 }

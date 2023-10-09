@@ -15,7 +15,7 @@ if ( ! function_exists( 'understrap_comment_form_fields' ) ) {
 	/**
 	 * Add Bootstrap classes to WP's comment form default fields.
 	 *
-	 * @since 1.2.0
+	 * @since 1.3.0
 	 *
 	 * @param array $fields {
 	 *     Default comment fields.
@@ -66,7 +66,7 @@ if ( ! function_exists( 'understrap_comment_form' ) ) {
 	/**
 	 * Adds Bootstrap classes to comment form submit button and comment field.
 	 *
-	 * @since 1.2.0
+	 * @since 1.3.0
 	 *
 	 * @param string[] $args Comment form arguments and fields.
 	 * @return string[]
