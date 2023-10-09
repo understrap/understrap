@@ -8,27 +8,25 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+if ( ! is_active_sidebar( 'footerfull' ) ) {
+	return;
+}
 
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
+<!-- ******************* The Footer Full-width Widget Area ******************* -->
 
-	<!-- ******************* The Footer Full-width Widget Area ******************* -->
+<div class="wrapper" id="wrapper-footer-full" role="complementary">
 
-	<div class="wrapper" id="wrapper-footer-full" role="complementary">
+	<div class="<?php echo esc_attr( $container ); ?>" id="footer-full-content" tabindex="-1">
 
-		<div class="<?php echo esc_attr( $container ); ?>" id="footer-full-content" tabindex="-1">
+		<div class="row">
 
-			<div class="row">
-
-				<?php dynamic_sidebar( 'footerfull' ); ?>
-
-			</div>
+			<?php dynamic_sidebar( 'footerfull' ); ?>
 
 		</div>
 
-	</div><!-- #wrapper-footer-full -->
+	</div>
 
-	<?php
-endif;
+</div><!-- #wrapper-footer-full -->
