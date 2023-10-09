@@ -4,7 +4,7 @@
 	<description>Apply WordPress Coding Standards to Understrap</description>
 
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
-	<arg name="cache" value=".phpcs-cache"/>
+	<arg name="cache" value=".phpcs-cache.json"/>
 
 	<!-- Strip the filepaths down to the relevant bit. -->
 	<arg name="basepath" value="./"/>
