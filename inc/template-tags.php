@@ -311,7 +311,7 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 		$deprecated_args = apply_filters_deprecated(
 			'understrap_link_pages_args',
 			array( array() ),
-			'1.2.0',
+			'1.3.0',
 			'wp_link_pages_args'
 		);
 
