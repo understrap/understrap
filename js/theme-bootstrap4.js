@@ -4768,7 +4768,7 @@
       var elName = el.nodeName.toLowerCase();
       if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) === -1) {
         el.parentNode.removeChild(el);
-        return "continue";
+        return 1; // continue
       }
       var attributeList = [].slice.call(el.attributes);
       // eslint-disable-next-line unicorn/prefer-spread
@@ -4780,8 +4780,7 @@
       });
     };
     for (var i = 0, len = elements.length; i < len; i++) {
-      var _ret = _loop();
-      if (_ret === "continue") continue;
+      if (_loop()) continue;
     }
     return createdDocument.body.innerHTML;
   }
