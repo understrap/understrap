@@ -4,7 +4,7 @@
 	<description>Apply WordPress Coding Standards to Understrap</description>
 
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
-	<arg name="cache" value=".phpcs-cache"/>
+	<arg name="cache" value=".phpcs-cache.json"/>
 
 	<!-- Strip the filepaths down to the relevant bit. -->
 	<arg name="basepath" value="./"/>
@@ -76,6 +76,7 @@
 				<element value="get_the_archive_title"/>
 				<element value="get_the_archive_description"/>
 				<element value="understrap_get_list_item_separator"/>
+				<element value="understrap_get_screen_reader_class"/>
 			</property>
 		</properties>
 	</rule>
@@ -86,6 +87,11 @@
 	-->
 	<rule ref="Generic.Files.LineEndings">
 		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
+	</rule>
+
+	<!-- Ignore mixed line-endings warnings -->
+	<rule ref="Internal.LineEndings.Mixed">
+		<severity>0</severity>
 	</rule>
 
 	<!-- Use the WPThemeReview Ruleset -->
