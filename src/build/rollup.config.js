@@ -16,6 +16,7 @@ const terserOptions = require( './terser.config' );
  * Internal dependencies
  */
 const banner = require( './banner.js' );
+const babelConfig = require( './babel.config' );
 
 // Determine if we want to build for Bootstrap v4 or v5.
 const BS4 = process.argv[ process.argv.length - 1 ] === 'BS4';
@@ -38,6 +39,7 @@ if ( BS4 ) {
 
 const plugins = [
 	babel( {
+		presets: babelConfig.presets,
 		browserslistEnv: `bs${ bsVersion }`,
 		// Include the helpers in the bundle, at most one copy of each.
 		babelHelpers: 'bundled',
