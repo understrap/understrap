@@ -44,6 +44,9 @@ foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
 
-function trigger_cs_error( $string ) {
-	echo $string;
+function trigger_fixable_cs_error() {
+	$array = array(
+		'key1' => 'value1',
+		'key11111' => 'value11111'
+	);
 }
