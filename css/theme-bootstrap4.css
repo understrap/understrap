@@ -3363,11 +3363,9 @@ input[type=button].btn-block {
 .btn-group-toggle > .btn-group > .btn input[type=radio],
 .woocommerce-info .btn-group-toggle > .btn-group > a.button input[type=radio],
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-toggle > .btn-group > a.button input[type=radio],
-.wpcf7 .btn-group-toggle > .btn-group > input[type=submit] input[type=radio],
 .btn-group-toggle > .btn-group > .btn input[type=checkbox],
 .woocommerce-info .btn-group-toggle > .btn-group > a.button input[type=checkbox],
-.woocommerce-notices-wrapper .woocommerce-message .btn-group-toggle > .btn-group > a.button input[type=checkbox],
-.wpcf7 .btn-group-toggle > .btn-group > input[type=submit] input[type=checkbox] {
+.woocommerce-notices-wrapper .woocommerce-message .btn-group-toggle > .btn-group > a.button input[type=checkbox] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
