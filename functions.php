@@ -46,7 +46,7 @@ foreach ( $understrap_includes as $file ) {
 
 function trigger_fixable_cs_error() {
 	$array = array(
-		'key1' => 'value1',
-		'key11111' => 'value11111'
+		'key1'     => 'value1',
+		'key11111' => 'value11111',
 	);
 }
