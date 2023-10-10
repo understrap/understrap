@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Understrap\PHPStan\Types;
+namespace Understrap\PHPStan;
 
 use PHPStan\Analyser\NameScope;
 use PHPStan\PhpDoc\TypeNodeResolverExtension;

@@ -4,6 +4,6 @@ services:
     tags:
       - phpstan.broker.dynamicFunctionReturnTypeExtension
   -
-    class: Understrap\PHPStan\Types\WPCF7FormTagArrayTypeNodeResolver
+    class: Understrap\PHPStan\WPCF7FormTagArrayTypeNodeResolver
     tags:
       - phpstan.phpDoc.typeNodeResolverExtension
