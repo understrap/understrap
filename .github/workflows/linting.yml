@@ -15,7 +15,6 @@ on:
       - 'phpcs.xml.dist'
       - 'phpmd.xml'
       - 'phpstan.neon.dist'
-  pull_request_target:
   workflow_dispatch:
 
 env:
