@@ -21,7 +21,7 @@
 ._*
 # but track
 !.babelrc.js
-!.browserslist
+!.browserslistrc
 !.editorconfig
 !.gitattributes
 !.github
