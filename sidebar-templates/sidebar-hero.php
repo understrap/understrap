@@ -7,37 +7,36 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+if ( ! is_active_sidebar( 'hero' ) ) {
+	return;
+}
 ?>
 
-<?php if ( is_active_sidebar( 'hero' ) ) : ?>
+<!-- ******************* The Hero Widget Area ******************* -->
 
-	<!-- ******************* The Hero Widget Area ******************* -->
+<div id="carouselExampleControls" class="carousel slide" data-interval="false" data-bs-ride="false">
 
-	<div id="carouselExampleControls" class="carousel slide" data-interval="false" data-bs-ride="false">
+	<div class="carousel-inner">
 
-		<div class="carousel-inner">
+		<?php dynamic_sidebar( 'hero' ); ?>
 
-			<?php dynamic_sidebar( 'hero' ); ?>
+	</div>
 
-		</div>
+	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" data-bs-slide="prev">
 
-		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="screen-reader-text"><?php echo esc_html_x( 'Previous', 'carousel control', 'understrap' ); ?></span>
 
-			<span class="screen-reader-text"><?php echo esc_html_x( 'Previous', 'carousel control', 'understrap' ); ?></span>
+	</a>
 
-		</a>
+	<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" data-bs-slide="next">
 
-		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="screen-reader-text"><?php echo esc_html_x( 'Next', 'carousel control', 'understrap' ); ?></span>
 
-			<span class="screen-reader-text"><?php echo esc_html_x( 'Next', 'carousel control', 'understrap' ); ?></span>
+	</a>
 
-		</a>
-
-	</div><!-- .carousel -->
-
-	<?php
-endif;
+</div><!-- .carousel -->

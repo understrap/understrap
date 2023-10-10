@@ -204,7 +204,7 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		 * @param array $atts An associative array of attributes.
 		 */
 		$atts = array_unique( apply_filters( 'understrap_body_attributes', $atts = array() ) );
-		if ( ! is_array( $atts ) || empty( $atts ) ) {
+		if ( empty( $atts ) ) {
 			return;
 		}
 
