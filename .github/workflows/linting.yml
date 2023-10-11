@@ -162,3 +162,17 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update PHPMD basefile
+          branch: ${{ github.head_ref }}
+
+  typos-check:
+
+    name: 'Typos check'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Search for misspellings
+        uses: crate-ci/typos@master
