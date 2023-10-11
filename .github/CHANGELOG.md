@@ -81,7 +81,7 @@
 ** Fixes **
 
   - Updates WooCommerce templates to current versions.
-  - Corrects mis-applied version numbers in WooCommerce templates.
+  - Corrects misapplied version numbers in WooCommerce templates.
   - Reverts WooCommerce Translations to woocommerce language domain.
   - Updates understrap.pot file to include several translation strings that had not been added.
   - Fixes spelling and grammar errors in the CHANGELOG.md.
@@ -135,7 +135,7 @@ This is a maintenance release incorporating many commits including code formatti
 - Removes vendor from paths
 - Removes gulp-touch-fd
 - Removes jquery.slim.min.js
-- Removes undescores-for-npm
+- Removes underscores-for-npm
 - Removes Bower
 
 ---
@@ -384,7 +384,7 @@ Clean rebuild
 ## Release 0.8.5 July 26th 2018
   - Update to Bootstrap 4.1.3
 
-## Release 0.8.4 July 16th 2018  Maintenace Release:
+## Release 0.8.4 July 16th 2018  Maintenance Release:
   - Update to Bootstrap 4.1.2
   - fixing sidebar.php problem
   - Revert to Gulp 3.x support
@@ -413,7 +413,7 @@ Clean rebuild
 ## Release 0.8.2 April 11th 2018
   - Update to Bootstrap 4.1
   - Adding CONTRIBUTING.md and ISSUE_TEMPLATE.md - Thx @Thomas-A-Reinert
-  - Adding empty JavaScripot file into build process for adding own JS more easily - Thx @Thomas-A-Reinert
+  - Adding empty JavaScript file into build process for adding own JS more easily - Thx @Thomas-A-Reinert
   - WooCommerce update and cleanup - Thx @ZacharyElkins
   - Adding SASS source map functionality - Thx @axlright
   - Cleanup - Thx @axlright
@@ -450,7 +450,7 @@ Clean rebuild
 
 ## Release 0.7.0 December 29th 2017
   - Update to Bootstrap 4 Beta 3
-  - Create rigth-sidebar-check.php - Thx @Vishal-Deshpande
+  - Create right-sidebar-check.php - Thx @Vishal-Deshpande
   - Fixing container type customizer setting - Thx @0dp
   - Fixing comments.php - Thx @Vishal-Deshpande
 
@@ -518,7 +518,7 @@ Clean rebuild
    - WooCommerce 3.1 compatibility update - Thx @typeplus
    - WooCommerce Bootstrap buttons - Thx @yeszao
    - theme-settings.php update - Thx @oralunal
-   - Update responisve meta tags for Bootstrap 4 - Thx @chuckreynolds
+   - Update responsive meta tags for Bootstrap 4 - Thx @chuckreynolds
 
 
 ## Release 0.6.2 June 7h 2017
@@ -615,7 +615,7 @@ Clean rebuild
    - General bug fixing
    - Fixing live preview for customizer
    - Font Awesome update
-   - Udating all npm dependencies
+   - Updating all npm dependencies
    - ARIA roles update
    - Updating hamburger icon behavior
 
@@ -623,7 +623,7 @@ Clean rebuild
    - Update Owl Carousel to 2.2.0
    - Update Font Awesome to 4.7.0
    - Greek language file added - Thx @stef-k
-   - Portugese language file added - Thx @jfig
+   - Portuguese language file added - Thx @jfig
    - Adding vertical-one-page template for landingpages - Thx @stef-k
    - Making all theme functions pluggable to allow child themes to overwrite ´em
    - French language file added - Thx @tchama
@@ -633,7 +633,7 @@ Clean rebuild
    - Basic WooCommerce templates added
    - Fixing "Gulp dist" Task
    - Adding masonry layout option to optimizer - Thx @stef-k
-   - Adding fluid/fixed conatiner option to optimizer
+   - Adding fluid/fixed container option to optimizer
 
 
 ##  0.4.9 Oct. 25th 2016
@@ -646,7 +646,7 @@ Clean rebuild
 
 
 ##  0.4.8 Oct. 10th 2016
-   - Removing Bower and replace the dependency managment with npm
+   - Removing Bower and replace the dependency management with npm
    - Update to Bootstrap 4 Alpha 4
    - Optimizing WooCommerce loop -  Thx @typeplus
    - Updating all dependencies
@@ -732,7 +732,7 @@ Clean rebuild
 
 ##  0.2.9 Mar. 10th 2015
    - Adding a new theme customizer option. It lets you add a code snippet right before the closing </body> tag.
-	   For example for Google Analytics, Google Tag Mananger, Pingdom etc. Just copy and past your code to the input field and save the setting.
+	   For example for Google Analytics, Google Tag Manager, Pingdom etc. Just copy and past your code to the input field and save the setting.
 	   So you don´t have to edit the theme source file´s directly, and your theme stay´s updateable
 
 ##  0.2.8 Feb. 6th 2015
@@ -748,6 +748,6 @@ Clean rebuild
 
 ##  0.2 Dec. 22th 2014
    - Adding Jasny Off-Canvas nav and Owl.Carousel Slider script
-   - Enqueue scipts and styled dynamically
+   - Enqueue scripts and styled dynamically
 
 ##  0.1 Dec. 10th 2014 - First commit
