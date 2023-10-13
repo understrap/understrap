@@ -8,7 +8,7 @@ on:
       - 'phpcs.xml.dist'
       - 'phpmd.xml'
       - 'phpstan.neon.dist'
-  pull_request:
+  pull_request_target:
     branches: [ develop ]
     paths:
       - '**.php'
@@ -19,6 +19,10 @@ on:
 
 env:
   php-version: '7.4'
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
 
 jobs:
 
@@ -163,16 +167,3 @@ jobs:
         with:
           commit_message: Update PHPMD basefile
           branch: ${{ github.head_ref }}
-
-  typos-check:
-
-    name: 'Typos check'
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Search for misspellings
-        uses: crate-ci/typos@master

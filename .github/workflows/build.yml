@@ -7,7 +7,7 @@ on:
       - '**.scss'
       - '**.js'
       - 'package-lock.json'
-  pull_request:
+  pull_request_target:
     branches: [ develop ]
     paths:
       - '**.scss'
@@ -62,7 +62,7 @@ jobs:
       - name: Build Bootstrap 4 CSS
         run: npm run css-bs4
 
-      - name: Build Bootstrap 5 JS
+      - name: Build Bootstrap 4 JS
         run: npm run js-bs4
 
       - name: Commit CSS and JS files
