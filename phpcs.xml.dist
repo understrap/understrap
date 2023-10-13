@@ -99,7 +99,7 @@
 
 	<!--
 		Exclude checking for shortened URLs in Bootstrap's js. files.
-		Also exlude theme.js which includes bootstrap.js.
+		Also exclude theme.js which includes bootstrap.js.
 	-->
 	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
 		<exclude-pattern>/js/theme*\.js</exclude-pattern>
