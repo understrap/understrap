@@ -12,6 +12,11 @@ updates:
     rebase-strategy: auto
     schedule:
       interval: "monthly"
+    target-branch: "develop"
+    groups:
+      github-actions:
+        patterns:
+        - "*"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
@@ -24,6 +29,19 @@ updates:
       interval: "monthly"
     target-branch: "develop"
     versioning-strategy: increase
+    groups:
+      npm-assets:
+        patterns:
+        - "bootstrap*"
+        - "*popper*"
+        - "font-awesome"
+      npm-build:
+        patterns:
+        - "*"
+        exclude-patterns:
+        - "bootstrap*"
+        - "*popper*"
+        - "font-awesome"
 
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
@@ -39,3 +57,7 @@ updates:
       interval: "monthly"
     target-branch: "develop"
     versioning-strategy: increase
+    groups:
+      composer:
+        patterns:
+        - "*"
