@@ -8,6 +8,27 @@
 
   -
 
+## Release 1.2.3-beta.1 October 16th 2023
+
+** Enhancements **
+
+  - Add and update WooCommerce templates #2091
+  - Improves readability of the sidebar templates #2071
+  - Uses Babel to compile Bootstrap imports #2035
+  - Adds Bootstrap container classes and max-widths to editor styles #2121
+  - Add editor-color-palette-bootstrap4.json #2032
+
+** Fixes **
+
+  - Fixes typos in the repository #2113
+  - Fix typo in .gitignore to track .browserslistrc #2118
+  - Fixes TinyMCE editor margins #2073
+  - Bump Bootstrap from 5.2.2 to 5.2.3 & other dependencies #2010
+  - Deprecate understrap_link_pages_args filter hook #1967
+  - Add grouped version updates for dependabot #2130
+  - Reduce code duplication by declaring copyDir() once #2129
+  - Fix and update workflows #2127
+
 ## Release 1.2.2 January 16th 2023
 
 ** Fixes **
