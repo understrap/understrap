@@ -136,12 +136,12 @@ parameters:
 			path: inc/woocommerce.php
 
 		-
-			message: "#^Function understrap_quantity_input_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
+			message: "#^Function understrap_wc_quantity_input_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/woocommerce.php
 
 		-
-			message: "#^Function understrap_quantity_input_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Function understrap_wc_quantity_input_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/woocommerce.php
 

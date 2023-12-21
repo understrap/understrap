@@ -8,6 +8,22 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_quantity_input_classes' ) ) {
+	/**
+	 * Add Bootstrap class to quantity input field.
+	 *
+	 * @deprecated 1.2.0 Use understrap_wc_quantity_input_classes()
+	 * @see understrap_wc_quantity_input_classes()
+	 *
+	 * @param array $classes Array of quantity input classes.
+	 * @return array
+	 */
+	function understrap_quantity_input_classes( $classes ) {
+		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_wc_quantity_input_classes' );
+		return understrap_wc_quantity_input_classes( $classes );
+	}
+}
+
 if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
