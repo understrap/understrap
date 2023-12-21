@@ -201,7 +201,7 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 	 * If `$args['label']` is set a `<label>` tag is prepended to the radio
 	 * fields. `$args['label_class']` is used for the class attribute of this
 	 * tag and the class attribute of the actual input labels. Hence, we must
-	 * remove the first occurance of the label class added via
+	 * remove the first occurrence of the label class added via
 	 * `understrap_wc_form_field_args()` that is meant for input labels only.
 	 *
 	 * @param string              $field The field's HTML incl. the wrapper element.

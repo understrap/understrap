@@ -127,7 +127,7 @@ if ( ! function_exists( 'understrap_default_body_attributes' ) ) {
 }
 add_filter( 'understrap_body_attributes', 'understrap_default_body_attributes' );
 
-// Escapes all occurances of 'the_archive_description'.
+// Escapes all occurrences of 'the_archive_description'.
 add_filter( 'get_the_archive_description', 'understrap_escape_the_archive_description' );
 
 if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
@@ -150,10 +150,10 @@ if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
 	}
 } // End of if function_exists( 'understrap_escape_the_archive_description' ).
 
-// Escapes all occurances of 'the_title()' and 'get_the_title()'.
+// Escapes all occurrences of 'the_title()' and 'get_the_title()'.
 add_filter( 'the_title', 'understrap_kses_title' );
 
-// Escapes all occurances of 'the_archive_title' and 'get_the_archive_title()'.
+// Escapes all occurrences of 'the_archive_title' and 'get_the_archive_title()'.
 add_filter( 'get_the_archive_title', 'understrap_kses_title' );
 
 if ( ! function_exists( 'understrap_kses_title' ) ) {
