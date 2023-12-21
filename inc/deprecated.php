@@ -12,17 +12,18 @@ if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
 	 *
+	 * @deprecated 1.2.0 Use understrap_customize_sanitize_select()
+	 * @see understrap_customize_sanitize_select()
+	 *
+	 * @since 0.6.11
+	 *
 	 * @param string               $input   Slug to sanitize.
 	 * @param WP_Customize_Setting $setting Setting instance.
 	 * @return string|bool Sanitized slug if it is a valid choice; the setting default for
 	 *                     invalid choices and false in all other cases.
 	 */
 	function understrap_theme_slug_sanitize_select( $input, $setting ) {
-		_deprecated_function(
-			'understrap_theme_slug_sanitize_select',
-			'1.2.0',
-			'understrap_customize_sanitize_select'
-		);
+		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_customize_sanitize_select' );
 		return understrap_customize_sanitize_select( $input, $setting );
 	}
 }
@@ -38,6 +39,7 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	 */
 	function understrap_adjust_body_class( $classes ) {
 		_deprecated_function( 'understrap_adjust_body_class', '0.9.4' );
+		return $classes;
 	}
 }
 
@@ -82,25 +84,4 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 			return $widget_classes;
 		endif;
 	}
-}
-
-/**
- * This function has never existed in any of the templates. It serves to extract
- * strings for translations which have been removed or changed and may still be
- * be present in child themes. The corresponding translations are not maintained.
- */
-function deprecated_translations() {
-	array(
-		esc_html__( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ),
-		esc_html__( 'Previous', 'understrap' ),
-		esc_html__( 'Next', 'understrap' ),
-		esc_html__( 'About:', 'understrap' ),
-		esc_html__( 'Profile', 'understrap' ),
-		esc_html__( 'Posts by', 'understrap' ),
-		esc_html__( 'Permanent Link:', 'understrap' ),
-		esc_html__( 'in', 'understrap' ),
-		esc_html__( 'Edit', 'understrap' ),
-		esc_html__( '1 Comment', 'understrap' ),
-		esc_html__( '% Comments', 'understrap' ),
-	);
 }

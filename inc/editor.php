@@ -82,6 +82,18 @@ if ( ! function_exists( 'understrap_tiny_mce_before_init' ) ) {
 		}
 
 		$settings['style_formats'] = wp_json_encode( $style_formats );
+
+		/*
+		 * Fix TinyMCE editor body margin that is set to 0 by Bootstrap's
+		 * _reboot.scss (v4 & v5). `margin: 9px 10px` is the value used by WP's
+		 * TinyMCE skin (/wp-includes/js/tinymce/skins/wordpress/wp-content.css).
+		 */
+		if ( isset( $settings['content_style'] ) ) {
+			$settings['content_style'] .= ' body#tinymce { margin: 9px 10px; }';
+		} else {
+			$settings['content_style'] = 'body#tinymce { margin: 9px 10px; }';
+		}
+
 		return $settings;
 	}
 }
@@ -94,6 +106,8 @@ if ( ! function_exists( 'understrap_tiny_mce_blockquote_button' ) ) {
 	 *
 	 * We provide the blockquote via the style formats. Using the style formats
 	 * blockquote receives the proper Bootstrap classes.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @see understrap_tiny_mce_before_init()
 	 *

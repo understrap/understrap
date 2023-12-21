@@ -127,7 +127,7 @@ if ( ! function_exists( 'understrap_default_body_attributes' ) ) {
 }
 add_filter( 'understrap_body_attributes', 'understrap_default_body_attributes' );
 
-// Escapes all occurances of 'the_archive_description'.
+// Escapes all occurrences of 'the_archive_description'.
 add_filter( 'get_the_archive_description', 'understrap_escape_the_archive_description' );
 
 if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
@@ -150,10 +150,10 @@ if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
 	}
 } // End of if function_exists( 'understrap_escape_the_archive_description' ).
 
-// Escapes all occurances of 'the_title()' and 'get_the_title()'.
+// Escapes all occurrences of 'the_title()' and 'get_the_title()'.
 add_filter( 'the_title', 'understrap_kses_title' );
 
-// Escapes all occurances of 'the_archive_title' and 'get_the_archive_title()'.
+// Escapes all occurrences of 'the_archive_title' and 'get_the_archive_title()'.
 add_filter( 'get_the_archive_title', 'understrap_kses_title' );
 
 if ( ! function_exists( 'understrap_kses_title' ) ) {
@@ -193,6 +193,8 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 if ( ! function_exists( 'understrap_hide_posted_by' ) ) {
 	/**
 	 * Hides the posted by markup in `understrap_posted_on()`.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @param string $byline Posted by HTML markup.
 	 * @return string Maybe filtered posted by HTML markup.

@@ -117,7 +117,22 @@ parameters:
 
 		-
 			message: "#^Cannot access an offset on mixed\\.$#"
-			count: 12
+			count: 10
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'aria\\-hidden' on mixed\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'data\\-allow\\-clear' on mixed\\.$#"
+			count: 2
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'data\\-plugin' on mixed\\.$#"
+			count: 2
 			path: inc/woocommerce.php
 
 		-
@@ -127,5 +142,10 @@ parameters:
 
 		-
 			message: "#^Function understrap_quantity_input_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Part \\$args\\['label'\\] \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
 			count: 1
 			path: inc/woocommerce.php

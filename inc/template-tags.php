@@ -80,6 +80,8 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 if ( ! function_exists( 'understrap_categories_tags_list' ) ) {
 	/**
 	 * Displays a list of categories and a list of tags.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_categories_tags_list() {
 		understrap_categories_list();
@@ -90,6 +92,8 @@ if ( ! function_exists( 'understrap_categories_tags_list' ) ) {
 if ( ! function_exists( 'understrap_categories_list' ) ) {
 	/**
 	 * Displays a list of categories.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_categories_list() {
 		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
@@ -103,6 +107,8 @@ if ( ! function_exists( 'understrap_categories_list' ) ) {
 if ( ! function_exists( 'understrap_tags_list' ) ) {
 	/**
 	 * Displays a list of tags.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_tags_list() {
 		$tags_list = get_the_tag_list( '', understrap_get_list_item_separator() );
@@ -116,6 +122,8 @@ if ( ! function_exists( 'understrap_tags_list' ) ) {
 if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 	/**
 	 * Displays the link to the comments for the current post.
+	 *
+	 * @since 1.2.0
 	 */
 	function understrap_comments_popup_link() {
 		if ( is_single() || post_password_required() || ( ! comments_open() && 0 === absint( get_comments_number() ) ) ) {
@@ -196,7 +204,7 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		 * @param array $atts An associative array of attributes.
 		 */
 		$atts = array_unique( apply_filters( 'understrap_body_attributes', $atts = array() ) );
-		if ( ! is_array( $atts ) || empty( $atts ) ) {
+		if ( empty( $atts ) ) {
 			return;
 		}
 
@@ -220,6 +228,8 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 	/**
 	 * Displays the comment navigation.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @param string $nav_id The ID of the comment navigation.
 	 */
 	function understrap_comment_navigation( $nav_id ) {
@@ -230,7 +240,7 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 		?>
 		<nav class="comment-navigation" id="<?php echo esc_attr( $nav_id ); ?>">
 
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Comments navigation', 'understrap' ); ?></h1>
 
 			<?php if ( get_previous_comments_link() ) { ?>
 				<div class="nav-previous">
@@ -252,6 +262,8 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 	/**
 	 * Displays the edit post link for post.
+	 *
+	 * @since 1.0.0
 	 */
 	function understrap_edit_post_link() {
 		edit_post_link(
@@ -308,16 +320,32 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 	 * `<!--nextpage-->` Quicktag one or more times). This tag must be
 	 * within The Loop. Default: echo.
 	 *
+	 * @since 1.0.0
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/wp_link_pages/
+	 *
 	 * @return void|string Formatted output in HTML.
 	 */
 	function understrap_link_pages() {
-		$args = apply_filters(
-			'understrap_link_pages_args',
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
+		$args = array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
+			'after'  => '</div>',
 		);
+
+		/**
+		 * Filters the arguments used in retrieving page links for paginated posts.
+		 *
+		 * Runs before the 'wp_link_pages_args' hook.
+		 *
+		 * @since 1.0.0
+		 */
+		$args = apply_filters_deprecated(
+			'understrap_link_pages_args',
+			array( $args ),
+			'1.2.3',
+			'wp_link_pages_args'
+		);
+
 		wp_link_pages( $args );
 	}
 }
@@ -381,6 +409,8 @@ if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
 	/**
 	 * Retrieves the Bootstrap CSS class for the select tag.
 	 *
+	 * @since 1.2.0
+	 *
 	 * @return string Bootstrap CSS class for the select tag.
 	 */
 	function understrap_get_select_control_class() {
@@ -398,6 +428,8 @@ if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
 	 * `wp_get_list_item_separator()` has been introduced in WP 6.0.0. For WP
 	 * versions lower than 6.0.0 we have to use a custom translation.
 	 *
+	 * @since 1.2.0
+	 *
 	 * @return string Localized list item separator.
 	 */
 	function understrap_get_list_item_separator() {
@@ -406,5 +438,22 @@ if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
 		}
 		/* translators: used between list items, there is a space after the comma */
 		return esc_html__( ', ', 'understrap' );
+	}
+}
+
+if ( ! function_exists( 'understrap_get_screen_reader_class' ) ) {
+	/**
+	 * Retrieves Bootstrap's screen reader text class.
+	 *
+	 * @param bool $focusable (Optional) Whether to make the screen reader text
+	 *                        visually focusable. Default: false.
+	 * @return string Bootstrap's screen reader text class.
+	 */
+	function understrap_get_screen_reader_class( $focusable = false ) {
+		$bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
+		if ( 'bootstrap4' === $bootstrap_version ) {
+			return $focusable ? 'sr-only sr-only-focusable' : 'sr-only';
+		}
+		return $focusable ? 'visually-hidden-focusable' : 'visually-hidden';
 	}
 }

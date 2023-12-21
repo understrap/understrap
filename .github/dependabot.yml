@@ -11,9 +11,12 @@ updates:
     open-pull-requests-limit: 10
     rebase-strategy: auto
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
+      interval: "monthly"
+    target-branch: "develop"
+    groups:
+      github-actions:
+        patterns:
+        - "*"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
@@ -23,11 +26,22 @@ updates:
     open-pull-requests-limit: 10
     rebase-strategy: auto
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
+      interval: "monthly"
     target-branch: "develop"
     versioning-strategy: increase
+    groups:
+      npm-assets:
+        patterns:
+        - "bootstrap*"
+        - "*popper*"
+        - "font-awesome"
+      npm-build:
+        patterns:
+        - "*"
+        exclude-patterns:
+        - "bootstrap*"
+        - "*popper*"
+        - "font-awesome"
 
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
@@ -40,8 +54,10 @@ updates:
     open-pull-requests-limit: 10
     rebase-strategy: auto
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:00"
+      interval: "monthly"
     target-branch: "develop"
     versioning-strategy: increase
+    groups:
+      composer:
+        patterns:
+        - "*"
