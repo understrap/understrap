@@ -11853,6 +11853,10 @@ a.skip-link:not(:focus):not(:focus-within) {
   margin-left: 0;
 }
 
+a[data-bs-toggle=tooltip] {
+  white-space: nowrap;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
