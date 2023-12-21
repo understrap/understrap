@@ -1,3 +1,9 @@
+/**
+ * Configuration file for rollup.js.
+ *
+ * @link https://rollupjs.org/
+ */
+
 'use strict';
 
 /**
@@ -23,7 +29,7 @@ const BS4 = process.argv[ process.argv.length - 1 ] === 'BS4';
 let bsVersion = 5;
 let bsSrcFile = 'bootstrap.js';
 let fileDest = 'theme';
-let globals = {
+const globals = {
 	jquery: 'jQuery', // Ensure we use jQuery which is always available even in noConflict mode
 	'@popperjs/core': 'Popper',
 };
@@ -54,22 +60,29 @@ const plugins = [
 	multi(),
 ];
 
+const understrapInput = [
+	path.resolve( __dirname, `../js/${ bsSrcFile }` ),
+	path.resolve( __dirname, '../js/skip-link-focus-fix.js' ),
+	path.resolve( __dirname, '../js/offcanvas-fix.js' ),
+];
+if ( BS4 ) {
+	understrapInput.pop();
+}
+
 module.exports = {
-	input: [
-		path.resolve( __dirname, `../js/${ bsSrcFile }` ),
-		path.resolve( __dirname, '../js/skip-link-focus-fix.js' ),
+	input: understrapInput.concat(
 		path.resolve( __dirname, '../js/custom-javascript.js' ),
-	],
+	),
 	output: [
 		{
-			banner: banner(''),
+			banner: banner( '' ),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.js` ),
 			format: 'umd',
 			globals,
 			name: 'understrap',
 		},
 		{
-			banner: banner(''),
+			banner: banner( '' ),
 			file: path.resolve( __dirname, `../../js/${ fileDest }.min.js` ),
 			format: 'umd',
 			globals,
