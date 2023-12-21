@@ -6137,6 +6137,7 @@
    * Utilities
    */
 
+
   /**
    * Selectors representing focusable elements if visible and not disabled.
    *
@@ -6188,6 +6189,7 @@
    * - Manually closing the icon sets the focus on the offcanvas toggle, the page
    *   scrolls to the toggler.
    */
+
 
   /**
    * Hides the offcanvas component when clicking an anchor link within the
