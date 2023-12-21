@@ -49,7 +49,7 @@ add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
 
 if ( ! function_exists( 'understrap_offcanvas_admin_bar_inline_styles' ) ) {
 	/**
-	 * Add inline styles for the offcanvas component if the admin bar is visibile.
+	 * Add inline styles for the offcanvas component if the admin bar is visible.
 	 *
 	 * Fixes that the offcanvas close icon is hidden behind the admin bar.
 	 *

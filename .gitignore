@@ -16,18 +16,19 @@
 
 # Ignore all files and directories starting with . or ~ or ._ or ending with ~
 .*
+!.typos.toml
 ~*
 *~
 ._*
 # but track
 !.babelrc.js
-!.browserslist
+!.browserslistrc
 !.editorconfig
 !.gitattributes
 !.github
 !.gitignore
 
-# Ignore all files with .lock extentions
+# Ignore all files with .lock extensions
 *.lock
 # but track
 !composer.lock
