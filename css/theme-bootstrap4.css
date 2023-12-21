@@ -481,16 +481,19 @@ mark,
   height: auto;
 }
 
-.figure, .wp-block-image > figure, figure.wp-block-image {
+.figure, figure.wp-block-image,
+.wp-block-image > figure {
   display: inline-block;
 }
 
-.figure-img, .wp-block-image > figure img, figure.wp-block-image img {
+.figure-img, figure.wp-block-image img,
+.wp-block-image > figure img {
   margin-bottom: 0.5rem;
   line-height: 1;
 }
 
-.figure-caption, .wp-block-image > figure figcaption, figure.wp-block-image figcaption {
+.figure-caption, figure.wp-block-image figcaption,
+.wp-block-image > figure figcaption {
   font-size: 90%;
   color: #6c757d;
 }
@@ -1974,8 +1977,7 @@ pre code {
 .wpcf7 input[type=file],
 .wpcf7 input[type=submit],
 .wpcf7 select,
-.wpcf7 textarea, .widget_categories select,
-.widget_archive select {
+.wpcf7 textarea {
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -1992,24 +1994,23 @@ pre code {
 }
 @media (prefers-reduced-motion: reduce) {
   .form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=text],
-.wpcf7 input[type=search],
-.wpcf7 input[type=url],
-.wpcf7 input[type=tel],
-.wpcf7 input[type=number],
-.wpcf7 input[type=range],
-.wpcf7 input[type=date],
-.wpcf7 input[type=month],
-.wpcf7 input[type=week],
-.wpcf7 input[type=time],
-.wpcf7 input[type=datetime],
-.wpcf7 input[type=datetime-local],
-.wpcf7 input[type=color],
-.wpcf7 input[type=email],
-.wpcf7 input[type=file],
-.wpcf7 input[type=submit],
-.wpcf7 select,
-.wpcf7 textarea, .widget_categories select,
-.widget_archive select {
+  .wpcf7 input[type=search],
+  .wpcf7 input[type=url],
+  .wpcf7 input[type=tel],
+  .wpcf7 input[type=number],
+  .wpcf7 input[type=range],
+  .wpcf7 input[type=date],
+  .wpcf7 input[type=month],
+  .wpcf7 input[type=week],
+  .wpcf7 input[type=time],
+  .wpcf7 input[type=datetime],
+  .wpcf7 input[type=datetime-local],
+  .wpcf7 input[type=color],
+  .wpcf7 input[type=email],
+  .wpcf7 input[type=file],
+  .wpcf7 input[type=submit],
+  .wpcf7 select,
+  .wpcf7 textarea {
     transition: none;
   }
 }
@@ -2030,8 +2031,7 @@ pre code {
 .wpcf7 input[type=file]::-ms-expand,
 .wpcf7 input[type=submit]::-ms-expand,
 .wpcf7 select::-ms-expand,
-.wpcf7 textarea::-ms-expand, .widget_categories select::-ms-expand,
-.widget_archive select::-ms-expand {
+.wpcf7 textarea::-ms-expand {
   background-color: transparent;
   border: 0;
 }
@@ -2052,27 +2052,26 @@ pre code {
 .wpcf7 input[type=file]:focus,
 .wpcf7 input[type=submit]:focus,
 .wpcf7 select:focus,
-.wpcf7 textarea:focus, .widget_categories select:focus,
-.widget_archive select:focus {
+.wpcf7 textarea:focus {
   color: #495057;
   background-color: #fff;
   border-color: #bfb3ff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(85, 51, 255, 0.25);
 }
-.form-control::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder, .wpcf7 input[type=search]::-webkit-input-placeholder, .wpcf7 input[type=url]::-webkit-input-placeholder, .wpcf7 input[type=tel]::-webkit-input-placeholder, .wpcf7 input[type=number]::-webkit-input-placeholder, .wpcf7 input[type=range]::-webkit-input-placeholder, .wpcf7 input[type=date]::-webkit-input-placeholder, .wpcf7 input[type=month]::-webkit-input-placeholder, .wpcf7 input[type=week]::-webkit-input-placeholder, .wpcf7 input[type=time]::-webkit-input-placeholder, .wpcf7 input[type=datetime]::-webkit-input-placeholder, .wpcf7 input[type=datetime-local]::-webkit-input-placeholder, .wpcf7 input[type=color]::-webkit-input-placeholder, .wpcf7 input[type=email]::-webkit-input-placeholder, .wpcf7 input[type=file]::-webkit-input-placeholder, .wpcf7 input[type=submit]::-webkit-input-placeholder, .wpcf7 select::-webkit-input-placeholder, .wpcf7 textarea::-webkit-input-placeholder, .widget_categories select::-webkit-input-placeholder, .widget_archive select::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder, .wpcf7 input[type=search]::-webkit-input-placeholder, .wpcf7 input[type=url]::-webkit-input-placeholder, .wpcf7 input[type=tel]::-webkit-input-placeholder, .wpcf7 input[type=number]::-webkit-input-placeholder, .wpcf7 input[type=range]::-webkit-input-placeholder, .wpcf7 input[type=date]::-webkit-input-placeholder, .wpcf7 input[type=month]::-webkit-input-placeholder, .wpcf7 input[type=week]::-webkit-input-placeholder, .wpcf7 input[type=time]::-webkit-input-placeholder, .wpcf7 input[type=datetime]::-webkit-input-placeholder, .wpcf7 input[type=datetime-local]::-webkit-input-placeholder, .wpcf7 input[type=color]::-webkit-input-placeholder, .wpcf7 input[type=email]::-webkit-input-placeholder, .wpcf7 input[type=file]::-webkit-input-placeholder, .wpcf7 input[type=submit]::-webkit-input-placeholder, .wpcf7 select::-webkit-input-placeholder, .wpcf7 textarea::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder, .wpcf7 input[type=search]::-moz-placeholder, .wpcf7 input[type=url]::-moz-placeholder, .wpcf7 input[type=tel]::-moz-placeholder, .wpcf7 input[type=number]::-moz-placeholder, .wpcf7 input[type=range]::-moz-placeholder, .wpcf7 input[type=date]::-moz-placeholder, .wpcf7 input[type=month]::-moz-placeholder, .wpcf7 input[type=week]::-moz-placeholder, .wpcf7 input[type=time]::-moz-placeholder, .wpcf7 input[type=datetime]::-moz-placeholder, .wpcf7 input[type=datetime-local]::-moz-placeholder, .wpcf7 input[type=color]::-moz-placeholder, .wpcf7 input[type=email]::-moz-placeholder, .wpcf7 input[type=file]::-moz-placeholder, .wpcf7 input[type=submit]::-moz-placeholder, .wpcf7 select::-moz-placeholder, .wpcf7 textarea::-moz-placeholder, .widget_categories select::-moz-placeholder, .widget_archive select::-moz-placeholder {
+.form-control::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder, .wpcf7 input[type=search]::-moz-placeholder, .wpcf7 input[type=url]::-moz-placeholder, .wpcf7 input[type=tel]::-moz-placeholder, .wpcf7 input[type=number]::-moz-placeholder, .wpcf7 input[type=range]::-moz-placeholder, .wpcf7 input[type=date]::-moz-placeholder, .wpcf7 input[type=month]::-moz-placeholder, .wpcf7 input[type=week]::-moz-placeholder, .wpcf7 input[type=time]::-moz-placeholder, .wpcf7 input[type=datetime]::-moz-placeholder, .wpcf7 input[type=datetime-local]::-moz-placeholder, .wpcf7 input[type=color]::-moz-placeholder, .wpcf7 input[type=email]::-moz-placeholder, .wpcf7 input[type=file]::-moz-placeholder, .wpcf7 input[type=submit]::-moz-placeholder, .wpcf7 select::-moz-placeholder, .wpcf7 textarea::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder, .wpcf7 input[type=search]:-ms-input-placeholder, .wpcf7 input[type=url]:-ms-input-placeholder, .wpcf7 input[type=tel]:-ms-input-placeholder, .wpcf7 input[type=number]:-ms-input-placeholder, .wpcf7 input[type=range]:-ms-input-placeholder, .wpcf7 input[type=date]:-ms-input-placeholder, .wpcf7 input[type=month]:-ms-input-placeholder, .wpcf7 input[type=week]:-ms-input-placeholder, .wpcf7 input[type=time]:-ms-input-placeholder, .wpcf7 input[type=datetime]:-ms-input-placeholder, .wpcf7 input[type=datetime-local]:-ms-input-placeholder, .wpcf7 input[type=color]:-ms-input-placeholder, .wpcf7 input[type=email]:-ms-input-placeholder, .wpcf7 input[type=file]:-ms-input-placeholder, .wpcf7 input[type=submit]:-ms-input-placeholder, .wpcf7 select:-ms-input-placeholder, .wpcf7 textarea:-ms-input-placeholder, .widget_categories select:-ms-input-placeholder, .widget_archive select:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder, .wpcf7 input[type=search]:-ms-input-placeholder, .wpcf7 input[type=url]:-ms-input-placeholder, .wpcf7 input[type=tel]:-ms-input-placeholder, .wpcf7 input[type=number]:-ms-input-placeholder, .wpcf7 input[type=range]:-ms-input-placeholder, .wpcf7 input[type=date]:-ms-input-placeholder, .wpcf7 input[type=month]:-ms-input-placeholder, .wpcf7 input[type=week]:-ms-input-placeholder, .wpcf7 input[type=time]:-ms-input-placeholder, .wpcf7 input[type=datetime]:-ms-input-placeholder, .wpcf7 input[type=datetime-local]:-ms-input-placeholder, .wpcf7 input[type=color]:-ms-input-placeholder, .wpcf7 input[type=email]:-ms-input-placeholder, .wpcf7 input[type=file]:-ms-input-placeholder, .wpcf7 input[type=submit]:-ms-input-placeholder, .wpcf7 select:-ms-input-placeholder, .wpcf7 textarea:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder, .wpcf7 input[type=search]::-ms-input-placeholder, .wpcf7 input[type=url]::-ms-input-placeholder, .wpcf7 input[type=tel]::-ms-input-placeholder, .wpcf7 input[type=number]::-ms-input-placeholder, .wpcf7 input[type=range]::-ms-input-placeholder, .wpcf7 input[type=date]::-ms-input-placeholder, .wpcf7 input[type=month]::-ms-input-placeholder, .wpcf7 input[type=week]::-ms-input-placeholder, .wpcf7 input[type=time]::-ms-input-placeholder, .wpcf7 input[type=datetime]::-ms-input-placeholder, .wpcf7 input[type=datetime-local]::-ms-input-placeholder, .wpcf7 input[type=color]::-ms-input-placeholder, .wpcf7 input[type=email]::-ms-input-placeholder, .wpcf7 input[type=file]::-ms-input-placeholder, .wpcf7 input[type=submit]::-ms-input-placeholder, .wpcf7 select::-ms-input-placeholder, .wpcf7 textarea::-ms-input-placeholder, .widget_categories select::-ms-input-placeholder, .widget_archive select::-ms-input-placeholder {
+.form-control::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder, .wpcf7 input[type=search]::-ms-input-placeholder, .wpcf7 input[type=url]::-ms-input-placeholder, .wpcf7 input[type=tel]::-ms-input-placeholder, .wpcf7 input[type=number]::-ms-input-placeholder, .wpcf7 input[type=range]::-ms-input-placeholder, .wpcf7 input[type=date]::-ms-input-placeholder, .wpcf7 input[type=month]::-ms-input-placeholder, .wpcf7 input[type=week]::-ms-input-placeholder, .wpcf7 input[type=time]::-ms-input-placeholder, .wpcf7 input[type=datetime]::-ms-input-placeholder, .wpcf7 input[type=datetime-local]::-ms-input-placeholder, .wpcf7 input[type=color]::-ms-input-placeholder, .wpcf7 input[type=email]::-ms-input-placeholder, .wpcf7 input[type=file]::-ms-input-placeholder, .wpcf7 input[type=submit]::-ms-input-placeholder, .wpcf7 select::-ms-input-placeholder, .wpcf7 textarea::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
@@ -2093,8 +2092,7 @@ pre code {
 .wpcf7 input[type=file]::placeholder,
 .wpcf7 input[type=submit]::placeholder,
 .wpcf7 select::placeholder,
-.wpcf7 textarea::placeholder, .widget_categories select::placeholder,
-.widget_archive select::placeholder {
+.wpcf7 textarea::placeholder {
   color: #6c757d;
   opacity: 1;
 }
@@ -2115,8 +2113,7 @@ pre code {
 .wpcf7 input[type=file]:disabled,
 .wpcf7 input[type=submit]:disabled,
 .wpcf7 select:disabled,
-.wpcf7 textarea:disabled, .widget_categories select:disabled,
-.widget_archive select:disabled, .form-control[readonly], .wpcf7 [readonly].wpcf7-validation-errors, .wpcf7 input[readonly][type=text],
+.wpcf7 textarea:disabled, .form-control[readonly], .wpcf7 [readonly].wpcf7-validation-errors, .wpcf7 input[readonly][type=text],
 .wpcf7 input[readonly][type=search],
 .wpcf7 input[readonly][type=url],
 .wpcf7 input[readonly][type=tel],
@@ -2133,8 +2130,7 @@ pre code {
 .wpcf7 input[readonly][type=file],
 .wpcf7 input[readonly][type=submit],
 .wpcf7 select[readonly],
-.wpcf7 textarea[readonly], .widget_categories select[readonly],
-.widget_archive select[readonly] {
+.wpcf7 textarea[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
@@ -2153,14 +2149,12 @@ input[type=month].form-control,
 }
 
 select.form-control:-moz-focusring,
-.wpcf7 select:-moz-focusring, .widget_categories select:-moz-focusring,
-.widget_archive select:-moz-focusring {
+.wpcf7 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #495057;
 }
 select.form-control:focus::-ms-value,
-.wpcf7 select:focus::-ms-value, .widget_categories select:focus::-ms-value,
-.widget_archive select:focus::-ms-value {
+.wpcf7 select:focus::-ms-value {
   color: #495057;
   background-color: #fff;
 }
@@ -2227,10 +2221,8 @@ select.form-control:focus::-ms-value,
 }
 
 select.form-control[size],
-.wpcf7 select[size], .widget_categories select[size],
-.widget_archive select[size], select.form-control[multiple],
-.wpcf7 select[multiple], .widget_categories select[multiple],
-.widget_archive select[multiple] {
+.wpcf7 select[size], select.form-control[multiple],
+.wpcf7 select[multiple] {
   height: auto;
 }
 
@@ -2364,9 +2356,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:valid,
 .wpcf7 .was-validated select:valid,
 .was-validated .wpcf7 textarea:valid,
-.wpcf7 .was-validated textarea:valid, .was-validated .widget_categories select:valid, .widget_categories .was-validated select:valid,
-.was-validated .widget_archive select:valid,
-.widget_archive .was-validated select:valid, .form-control.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, .wpcf7 input.is-valid[type=text],
+.wpcf7 .was-validated textarea:valid, .form-control.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, .wpcf7 input.is-valid[type=text],
 .wpcf7 input.is-valid[type=search],
 .wpcf7 input.is-valid[type=url],
 .wpcf7 input.is-valid[type=tel],
@@ -2383,8 +2373,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-valid[type=file],
 .wpcf7 input.is-valid[type=submit],
 .wpcf7 select.is-valid,
-.wpcf7 textarea.is-valid, .widget_categories select.is-valid,
-.widget_archive select.is-valid {
+.wpcf7 textarea.is-valid {
   border-color: #28a745;
   padding-right: calc(1.5em + 0.75rem) !important;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -2426,9 +2415,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:valid:focus,
 .wpcf7 .was-validated select:valid:focus,
 .was-validated .wpcf7 textarea:valid:focus,
-.wpcf7 .was-validated textarea:valid:focus, .was-validated .widget_categories select:valid:focus, .widget_categories .was-validated select:valid:focus,
-.was-validated .widget_archive select:valid:focus,
-.widget_archive .was-validated select:valid:focus, .form-control.is-valid:focus, .wpcf7 .is-valid.wpcf7-validation-errors:focus, .wpcf7 input.is-valid[type=text]:focus,
+.wpcf7 .was-validated textarea:valid:focus, .form-control.is-valid:focus, .wpcf7 .is-valid.wpcf7-validation-errors:focus, .wpcf7 input.is-valid[type=text]:focus,
 .wpcf7 input.is-valid[type=search]:focus,
 .wpcf7 input.is-valid[type=url]:focus,
 .wpcf7 input.is-valid[type=tel]:focus,
@@ -2445,19 +2432,15 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-valid[type=file]:focus,
 .wpcf7 input.is-valid[type=submit]:focus,
 .wpcf7 select.is-valid:focus,
-.wpcf7 textarea.is-valid:focus, .widget_categories select.is-valid:focus,
-.widget_archive select.is-valid:focus {
+.wpcf7 textarea.is-valid:focus {
   border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 .was-validated select.form-control:valid,
 .was-validated .wpcf7 select:valid,
-.wpcf7 .was-validated select:valid, .was-validated .widget_categories select:valid, .widget_categories .was-validated select:valid,
-.was-validated .widget_archive select:valid,
-.widget_archive .was-validated select:valid, select.form-control.is-valid,
-.wpcf7 select.is-valid, .widget_categories select.is-valid,
-.widget_archive select.is-valid {
+.wpcf7 .was-validated select:valid, select.form-control.is-valid,
+.wpcf7 select.is-valid {
   padding-right: 3rem !important;
   background-position: right 1.5rem center;
 }
@@ -2582,9 +2565,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:invalid,
 .wpcf7 .was-validated select:invalid,
 .was-validated .wpcf7 textarea:invalid,
-.wpcf7 .was-validated textarea:invalid, .was-validated .widget_categories select:invalid, .widget_categories .was-validated select:invalid,
-.was-validated .widget_archive select:invalid,
-.widget_archive .was-validated select:invalid, .form-control.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, .wpcf7 input.is-invalid[type=text],
+.wpcf7 .was-validated textarea:invalid, .form-control.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, .wpcf7 input.is-invalid[type=text],
 .wpcf7 input.is-invalid[type=search],
 .wpcf7 input.is-invalid[type=url],
 .wpcf7 input.is-invalid[type=tel],
@@ -2601,8 +2582,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-invalid[type=file],
 .wpcf7 input.is-invalid[type=submit],
 .wpcf7 select.is-invalid,
-.wpcf7 textarea.is-invalid, .widget_categories select.is-invalid,
-.widget_archive select.is-invalid {
+.wpcf7 textarea.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem) !important;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -2644,9 +2624,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .was-validated .wpcf7 select:invalid:focus,
 .wpcf7 .was-validated select:invalid:focus,
 .was-validated .wpcf7 textarea:invalid:focus,
-.wpcf7 .was-validated textarea:invalid:focus, .was-validated .widget_categories select:invalid:focus, .widget_categories .was-validated select:invalid:focus,
-.was-validated .widget_archive select:invalid:focus,
-.widget_archive .was-validated select:invalid:focus, .form-control.is-invalid:focus, .wpcf7 .is-invalid.wpcf7-validation-errors:focus, .wpcf7 input.is-invalid[type=text]:focus,
+.wpcf7 .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, .wpcf7 .is-invalid.wpcf7-validation-errors:focus, .wpcf7 input.is-invalid[type=text]:focus,
 .wpcf7 input.is-invalid[type=search]:focus,
 .wpcf7 input.is-invalid[type=url]:focus,
 .wpcf7 input.is-invalid[type=tel]:focus,
@@ -2663,19 +2641,15 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 input.is-invalid[type=file]:focus,
 .wpcf7 input.is-invalid[type=submit]:focus,
 .wpcf7 select.is-invalid:focus,
-.wpcf7 textarea.is-invalid:focus, .widget_categories select.is-invalid:focus,
-.widget_archive select.is-invalid:focus {
+.wpcf7 textarea.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 .was-validated select.form-control:invalid,
 .was-validated .wpcf7 select:invalid,
-.wpcf7 .was-validated select:invalid, .was-validated .widget_categories select:invalid, .widget_categories .was-validated select:invalid,
-.was-validated .widget_archive select:invalid,
-.widget_archive .was-validated select:invalid, select.form-control.is-invalid,
-.wpcf7 select.is-invalid, .widget_categories select.is-invalid,
-.widget_archive select.is-invalid {
+.wpcf7 .was-validated select:invalid, select.form-control.is-invalid,
+.wpcf7 select.is-invalid {
   padding-right: 3rem !important;
   background-position: right 1.5rem center;
 }
@@ -2765,42 +2739,40 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
     margin-bottom: 0;
   }
   .form-inline .form-control, .form-inline .wpcf7 .wpcf7-validation-errors, .wpcf7 .form-inline .wpcf7-validation-errors, .form-inline .wpcf7 input[type=text], .wpcf7 .form-inline input[type=text],
-.form-inline .wpcf7 input[type=search],
-.wpcf7 .form-inline input[type=search],
-.form-inline .wpcf7 input[type=url],
-.wpcf7 .form-inline input[type=url],
-.form-inline .wpcf7 input[type=tel],
-.wpcf7 .form-inline input[type=tel],
-.form-inline .wpcf7 input[type=number],
-.wpcf7 .form-inline input[type=number],
-.form-inline .wpcf7 input[type=range],
-.wpcf7 .form-inline input[type=range],
-.form-inline .wpcf7 input[type=date],
-.wpcf7 .form-inline input[type=date],
-.form-inline .wpcf7 input[type=month],
-.wpcf7 .form-inline input[type=month],
-.form-inline .wpcf7 input[type=week],
-.wpcf7 .form-inline input[type=week],
-.form-inline .wpcf7 input[type=time],
-.wpcf7 .form-inline input[type=time],
-.form-inline .wpcf7 input[type=datetime],
-.wpcf7 .form-inline input[type=datetime],
-.form-inline .wpcf7 input[type=datetime-local],
-.wpcf7 .form-inline input[type=datetime-local],
-.form-inline .wpcf7 input[type=color],
-.wpcf7 .form-inline input[type=color],
-.form-inline .wpcf7 input[type=email],
-.wpcf7 .form-inline input[type=email],
-.form-inline .wpcf7 input[type=file],
-.wpcf7 .form-inline input[type=file],
-.form-inline .wpcf7 input[type=submit],
-.wpcf7 .form-inline input[type=submit],
-.form-inline .wpcf7 select,
-.wpcf7 .form-inline select,
-.form-inline .wpcf7 textarea,
-.wpcf7 .form-inline textarea, .form-inline .widget_categories select, .widget_categories .form-inline select,
-.form-inline .widget_archive select,
-.widget_archive .form-inline select {
+  .form-inline .wpcf7 input[type=search],
+  .wpcf7 .form-inline input[type=search],
+  .form-inline .wpcf7 input[type=url],
+  .wpcf7 .form-inline input[type=url],
+  .form-inline .wpcf7 input[type=tel],
+  .wpcf7 .form-inline input[type=tel],
+  .form-inline .wpcf7 input[type=number],
+  .wpcf7 .form-inline input[type=number],
+  .form-inline .wpcf7 input[type=range],
+  .wpcf7 .form-inline input[type=range],
+  .form-inline .wpcf7 input[type=date],
+  .wpcf7 .form-inline input[type=date],
+  .form-inline .wpcf7 input[type=month],
+  .wpcf7 .form-inline input[type=month],
+  .form-inline .wpcf7 input[type=week],
+  .wpcf7 .form-inline input[type=week],
+  .form-inline .wpcf7 input[type=time],
+  .wpcf7 .form-inline input[type=time],
+  .form-inline .wpcf7 input[type=datetime],
+  .wpcf7 .form-inline input[type=datetime],
+  .form-inline .wpcf7 input[type=datetime-local],
+  .wpcf7 .form-inline input[type=datetime-local],
+  .form-inline .wpcf7 input[type=color],
+  .wpcf7 .form-inline input[type=color],
+  .form-inline .wpcf7 input[type=email],
+  .wpcf7 .form-inline input[type=email],
+  .form-inline .wpcf7 input[type=file],
+  .wpcf7 .form-inline input[type=file],
+  .form-inline .wpcf7 input[type=submit],
+  .wpcf7 .form-inline input[type=submit],
+  .form-inline .wpcf7 select,
+  .wpcf7 .form-inline select,
+  .form-inline .wpcf7 textarea,
+  .wpcf7 .form-inline textarea {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -2809,7 +2781,7 @@ textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
     display: inline-block;
   }
   .form-inline .input-group,
-.form-inline .custom-select {
+  .form-inline .custom-select {
     width: auto;
   }
   .form-inline .form-check {
@@ -3778,7 +3750,13 @@ input[type=button].btn-block {
 .woocommerce-notices-wrapper .woocommerce-message .btn-group-toggle > a.button input[type=checkbox],
 .wpcf7 .btn-group-toggle > input[type=submit] input[type=checkbox],
 .btn-group-toggle > .btn-group > .btn input[type=radio],
-.btn-group-toggle > .btn-group > .btn input[type=checkbox] {
+.woocommerce-info .btn-group-toggle > .btn-group > a.button input[type=radio],
+.woocommerce-notices-wrapper .woocommerce-message .btn-group-toggle > .btn-group > a.button input[type=radio],
+.wpcf7 .btn-group-toggle > .btn-group > input[type=submit] input[type=radio],
+.btn-group-toggle > .btn-group > .btn input[type=checkbox],
+.woocommerce-info .btn-group-toggle > .btn-group > a.button input[type=checkbox],
+.woocommerce-notices-wrapper .woocommerce-message .btn-group-toggle > .btn-group > a.button input[type=checkbox],
+.wpcf7 .btn-group-toggle > .btn-group > input[type=submit] input[type=checkbox] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3811,8 +3789,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group > input[type=file],
 .wpcf7 .input-group > input[type=submit],
 .wpcf7 .input-group > select,
-.wpcf7 .input-group > textarea, .widget_categories .input-group > select,
-.widget_archive .input-group > select,
+.wpcf7 .input-group > textarea,
 .input-group > .form-control-plaintext,
 .input-group > .custom-select,
 .input-group > .custom-file {
@@ -4214,154 +4191,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group > input[type=file] + textarea,
 .wpcf7 .input-group > input[type=submit] + textarea,
 .wpcf7 .input-group > select + textarea,
-.wpcf7 .input-group > textarea + textarea, .widget_categories .input-group > select + .form-control, .widget_categories .wpcf7 .input-group > select + .wpcf7-validation-errors, .wpcf7 .widget_categories .input-group > select + .wpcf7-validation-errors, .widget_categories .wpcf7 .input-group > select + input[type=text], .wpcf7 .widget_categories .input-group > select + input[type=text],
-.widget_categories .wpcf7 .input-group > select + input[type=search],
-.wpcf7 .widget_categories .input-group > select + input[type=search],
-.widget_categories .wpcf7 .input-group > select + input[type=url],
-.wpcf7 .widget_categories .input-group > select + input[type=url],
-.widget_categories .wpcf7 .input-group > select + input[type=tel],
-.wpcf7 .widget_categories .input-group > select + input[type=tel],
-.widget_categories .wpcf7 .input-group > select + input[type=number],
-.wpcf7 .widget_categories .input-group > select + input[type=number],
-.widget_categories .wpcf7 .input-group > select + input[type=range],
-.wpcf7 .widget_categories .input-group > select + input[type=range],
-.widget_categories .wpcf7 .input-group > select + input[type=date],
-.wpcf7 .widget_categories .input-group > select + input[type=date],
-.widget_categories .wpcf7 .input-group > select + input[type=month],
-.wpcf7 .widget_categories .input-group > select + input[type=month],
-.widget_categories .wpcf7 .input-group > select + input[type=week],
-.wpcf7 .widget_categories .input-group > select + input[type=week],
-.widget_categories .wpcf7 .input-group > select + input[type=time],
-.wpcf7 .widget_categories .input-group > select + input[type=time],
-.widget_categories .wpcf7 .input-group > select + input[type=datetime],
-.wpcf7 .widget_categories .input-group > select + input[type=datetime],
-.widget_categories .wpcf7 .input-group > select + input[type=datetime-local],
-.wpcf7 .widget_categories .input-group > select + input[type=datetime-local],
-.widget_categories .wpcf7 .input-group > select + input[type=color],
-.wpcf7 .widget_categories .input-group > select + input[type=color],
-.widget_categories .wpcf7 .input-group > select + input[type=email],
-.wpcf7 .widget_categories .input-group > select + input[type=email],
-.widget_categories .wpcf7 .input-group > select + input[type=file],
-.wpcf7 .widget_categories .input-group > select + input[type=file],
-.widget_categories .wpcf7 .input-group > select + input[type=submit],
-.wpcf7 .widget_categories .input-group > select + input[type=submit],
-.widget_categories .wpcf7 .input-group > select + select,
-.wpcf7 .widget_categories .input-group > select + select,
-.widget_categories .wpcf7 .input-group > select + textarea,
-.wpcf7 .widget_categories .input-group > select + textarea,
-.widget_archive .input-group > select + .form-control,
-.widget_archive .wpcf7 .input-group > select + .wpcf7-validation-errors,
-.wpcf7 .widget_archive .input-group > select + .wpcf7-validation-errors,
-.widget_archive .wpcf7 .input-group > select + input[type=text],
-.wpcf7 .widget_archive .input-group > select + input[type=text],
-.widget_archive .wpcf7 .input-group > select + input[type=search],
-.wpcf7 .widget_archive .input-group > select + input[type=search],
-.widget_archive .wpcf7 .input-group > select + input[type=url],
-.wpcf7 .widget_archive .input-group > select + input[type=url],
-.widget_archive .wpcf7 .input-group > select + input[type=tel],
-.wpcf7 .widget_archive .input-group > select + input[type=tel],
-.widget_archive .wpcf7 .input-group > select + input[type=number],
-.wpcf7 .widget_archive .input-group > select + input[type=number],
-.widget_archive .wpcf7 .input-group > select + input[type=range],
-.wpcf7 .widget_archive .input-group > select + input[type=range],
-.widget_archive .wpcf7 .input-group > select + input[type=date],
-.wpcf7 .widget_archive .input-group > select + input[type=date],
-.widget_archive .wpcf7 .input-group > select + input[type=month],
-.wpcf7 .widget_archive .input-group > select + input[type=month],
-.widget_archive .wpcf7 .input-group > select + input[type=week],
-.wpcf7 .widget_archive .input-group > select + input[type=week],
-.widget_archive .wpcf7 .input-group > select + input[type=time],
-.wpcf7 .widget_archive .input-group > select + input[type=time],
-.widget_archive .wpcf7 .input-group > select + input[type=datetime],
-.wpcf7 .widget_archive .input-group > select + input[type=datetime],
-.widget_archive .wpcf7 .input-group > select + input[type=datetime-local],
-.wpcf7 .widget_archive .input-group > select + input[type=datetime-local],
-.widget_archive .wpcf7 .input-group > select + input[type=color],
-.wpcf7 .widget_archive .input-group > select + input[type=color],
-.widget_archive .wpcf7 .input-group > select + input[type=email],
-.wpcf7 .widget_archive .input-group > select + input[type=email],
-.widget_archive .wpcf7 .input-group > select + input[type=file],
-.wpcf7 .widget_archive .input-group > select + input[type=file],
-.widget_archive .wpcf7 .input-group > select + input[type=submit],
-.wpcf7 .widget_archive .input-group > select + input[type=submit],
-.widget_archive .wpcf7 .input-group > select + select,
-.wpcf7 .widget_archive .input-group > select + select,
-.widget_archive .wpcf7 .input-group > select + textarea,
-.wpcf7 .widget_archive .input-group > select + textarea, .widget_categories .input-group > .form-control + select, .widget_categories .wpcf7 .input-group > .wpcf7-validation-errors + select, .wpcf7 .widget_categories .input-group > .wpcf7-validation-errors + select, .widget_categories .wpcf7 .input-group > input[type=text] + select, .wpcf7 .widget_categories .input-group > input[type=text] + select,
-.widget_categories .wpcf7 .input-group > input[type=search] + select,
-.wpcf7 .widget_categories .input-group > input[type=search] + select,
-.widget_categories .wpcf7 .input-group > input[type=url] + select,
-.wpcf7 .widget_categories .input-group > input[type=url] + select,
-.widget_categories .wpcf7 .input-group > input[type=tel] + select,
-.wpcf7 .widget_categories .input-group > input[type=tel] + select,
-.widget_categories .wpcf7 .input-group > input[type=number] + select,
-.wpcf7 .widget_categories .input-group > input[type=number] + select,
-.widget_categories .wpcf7 .input-group > input[type=range] + select,
-.wpcf7 .widget_categories .input-group > input[type=range] + select,
-.widget_categories .wpcf7 .input-group > input[type=date] + select,
-.wpcf7 .widget_categories .input-group > input[type=date] + select,
-.widget_categories .wpcf7 .input-group > input[type=month] + select,
-.wpcf7 .widget_categories .input-group > input[type=month] + select,
-.widget_categories .wpcf7 .input-group > input[type=week] + select,
-.wpcf7 .widget_categories .input-group > input[type=week] + select,
-.widget_categories .wpcf7 .input-group > input[type=time] + select,
-.wpcf7 .widget_categories .input-group > input[type=time] + select,
-.widget_categories .wpcf7 .input-group > input[type=datetime] + select,
-.wpcf7 .widget_categories .input-group > input[type=datetime] + select,
-.widget_categories .wpcf7 .input-group > input[type=datetime-local] + select,
-.wpcf7 .widget_categories .input-group > input[type=datetime-local] + select,
-.widget_categories .wpcf7 .input-group > input[type=color] + select,
-.wpcf7 .widget_categories .input-group > input[type=color] + select,
-.widget_categories .wpcf7 .input-group > input[type=email] + select,
-.wpcf7 .widget_categories .input-group > input[type=email] + select,
-.widget_categories .wpcf7 .input-group > input[type=file] + select,
-.wpcf7 .widget_categories .input-group > input[type=file] + select,
-.widget_categories .wpcf7 .input-group > input[type=submit] + select,
-.wpcf7 .widget_categories .input-group > input[type=submit] + select,
-.widget_categories .wpcf7 .input-group > select + select,
-.wpcf7 .widget_categories .input-group > select + select,
-.widget_categories .wpcf7 .input-group > textarea + select,
-.wpcf7 .widget_categories .input-group > textarea + select, .widget_categories .input-group > select + select,
-.widget_archive .input-group > .form-control + select,
-.widget_archive .wpcf7 .input-group > .wpcf7-validation-errors + select,
-.wpcf7 .widget_archive .input-group > .wpcf7-validation-errors + select,
-.widget_archive .wpcf7 .input-group > input[type=text] + select,
-.wpcf7 .widget_archive .input-group > input[type=text] + select,
-.widget_archive .wpcf7 .input-group > input[type=search] + select,
-.wpcf7 .widget_archive .input-group > input[type=search] + select,
-.widget_archive .wpcf7 .input-group > input[type=url] + select,
-.wpcf7 .widget_archive .input-group > input[type=url] + select,
-.widget_archive .wpcf7 .input-group > input[type=tel] + select,
-.wpcf7 .widget_archive .input-group > input[type=tel] + select,
-.widget_archive .wpcf7 .input-group > input[type=number] + select,
-.wpcf7 .widget_archive .input-group > input[type=number] + select,
-.widget_archive .wpcf7 .input-group > input[type=range] + select,
-.wpcf7 .widget_archive .input-group > input[type=range] + select,
-.widget_archive .wpcf7 .input-group > input[type=date] + select,
-.wpcf7 .widget_archive .input-group > input[type=date] + select,
-.widget_archive .wpcf7 .input-group > input[type=month] + select,
-.wpcf7 .widget_archive .input-group > input[type=month] + select,
-.widget_archive .wpcf7 .input-group > input[type=week] + select,
-.wpcf7 .widget_archive .input-group > input[type=week] + select,
-.widget_archive .wpcf7 .input-group > input[type=time] + select,
-.wpcf7 .widget_archive .input-group > input[type=time] + select,
-.widget_archive .wpcf7 .input-group > input[type=datetime] + select,
-.wpcf7 .widget_archive .input-group > input[type=datetime] + select,
-.widget_archive .wpcf7 .input-group > input[type=datetime-local] + select,
-.wpcf7 .widget_archive .input-group > input[type=datetime-local] + select,
-.widget_archive .wpcf7 .input-group > input[type=color] + select,
-.wpcf7 .widget_archive .input-group > input[type=color] + select,
-.widget_archive .wpcf7 .input-group > input[type=email] + select,
-.wpcf7 .widget_archive .input-group > input[type=email] + select,
-.widget_archive .wpcf7 .input-group > input[type=file] + select,
-.wpcf7 .widget_archive .input-group > input[type=file] + select,
-.widget_archive .wpcf7 .input-group > input[type=submit] + select,
-.wpcf7 .widget_archive .input-group > input[type=submit] + select,
-.widget_archive .wpcf7 .input-group > select + select,
-.wpcf7 .widget_archive .input-group > select + select,
-.widget_archive .wpcf7 .input-group > textarea + select,
-.wpcf7 .widget_archive .input-group > textarea + select,
-.widget_archive .input-group > select + select,
+.wpcf7 .input-group > textarea + textarea,
 .input-group > .form-control + .custom-select,
 .wpcf7 .input-group > .wpcf7-validation-errors + .custom-select,
 .wpcf7 .input-group > input[type=text] + .custom-select,
@@ -4382,8 +4212,6 @@ input[type=button].btn-block {
 .wpcf7 .input-group > input[type=submit] + .custom-select,
 .wpcf7 .input-group > select + .custom-select,
 .wpcf7 .input-group > textarea + .custom-select,
-.widget_categories .input-group > select + .custom-select,
-.widget_archive .input-group > select + .custom-select,
 .input-group > .form-control + .custom-file,
 .wpcf7 .input-group > .wpcf7-validation-errors + .custom-file,
 .wpcf7 .input-group > input[type=text] + .custom-file,
@@ -4404,8 +4232,6 @@ input[type=button].btn-block {
 .wpcf7 .input-group > input[type=submit] + .custom-file,
 .wpcf7 .input-group > select + .custom-file,
 .wpcf7 .input-group > textarea + .custom-file,
-.widget_categories .input-group > select + .custom-file,
-.widget_archive .input-group > select + .custom-file,
 .input-group > .form-control-plaintext + .form-control,
 .wpcf7 .input-group > .form-control-plaintext + .wpcf7-validation-errors,
 .wpcf7 .input-group > .form-control-plaintext + input[type=text],
@@ -4426,8 +4252,6 @@ input[type=button].btn-block {
 .wpcf7 .input-group > .form-control-plaintext + input[type=submit],
 .wpcf7 .input-group > .form-control-plaintext + select,
 .wpcf7 .input-group > .form-control-plaintext + textarea,
-.widget_categories .input-group > .form-control-plaintext + select,
-.widget_archive .input-group > .form-control-plaintext + select,
 .input-group > .form-control-plaintext + .custom-select,
 .input-group > .form-control-plaintext + .custom-file,
 .input-group > .custom-select + .form-control,
@@ -4450,8 +4274,6 @@ input[type=button].btn-block {
 .wpcf7 .input-group > .custom-select + input[type=submit],
 .wpcf7 .input-group > .custom-select + select,
 .wpcf7 .input-group > .custom-select + textarea,
-.widget_categories .input-group > .custom-select + select,
-.widget_archive .input-group > .custom-select + select,
 .input-group > .custom-select + .custom-select,
 .input-group > .custom-select + .custom-file,
 .input-group > .custom-file + .form-control,
@@ -4474,8 +4296,6 @@ input[type=button].btn-block {
 .wpcf7 .input-group > .custom-file + input[type=submit],
 .wpcf7 .input-group > .custom-file + select,
 .wpcf7 .input-group > .custom-file + textarea,
-.widget_categories .input-group > .custom-file + select,
-.widget_archive .input-group > .custom-file + select,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file {
   margin-left: -1px;
@@ -4497,8 +4317,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group > input[type=file]:focus,
 .wpcf7 .input-group > input[type=submit]:focus,
 .wpcf7 .input-group > select:focus,
-.wpcf7 .input-group > textarea:focus, .widget_categories .input-group > select:focus,
-.widget_archive .input-group > select:focus,
+.wpcf7 .input-group > textarea:focus,
 .input-group > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
   z-index: 3;
@@ -4523,8 +4342,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group > input[type=file]:not(:first-child),
 .wpcf7 .input-group > input[type=submit]:not(:first-child),
 .wpcf7 .input-group > select:not(:first-child),
-.wpcf7 .input-group > textarea:not(:first-child), .widget_categories .input-group > select:not(:first-child),
-.widget_archive .input-group > select:not(:first-child),
+.wpcf7 .input-group > textarea:not(:first-child),
 .input-group > .custom-select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -4560,8 +4378,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group:not(.has-validation) > input[type=file]:not(:last-child),
 .wpcf7 .input-group:not(.has-validation) > input[type=submit]:not(:last-child),
 .wpcf7 .input-group:not(.has-validation) > select:not(:last-child),
-.wpcf7 .input-group:not(.has-validation) > textarea:not(:last-child), .widget_categories .input-group:not(.has-validation) > select:not(:last-child),
-.widget_archive .input-group:not(.has-validation) > select:not(:last-child),
+.wpcf7 .input-group:not(.has-validation) > textarea:not(:last-child),
 .input-group:not(.has-validation) > .custom-select:not(:last-child),
 .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label,
 .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label::after {
@@ -4585,8 +4402,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group.has-validation > input[type=file]:nth-last-child(n+3),
 .wpcf7 .input-group.has-validation > input[type=submit]:nth-last-child(n+3),
 .wpcf7 .input-group.has-validation > select:nth-last-child(n+3),
-.wpcf7 .input-group.has-validation > textarea:nth-last-child(n+3), .widget_categories .input-group.has-validation > select:nth-last-child(n+3),
-.widget_archive .input-group.has-validation > select:nth-last-child(n+3),
+.wpcf7 .input-group.has-validation > textarea:nth-last-child(n+3),
 .input-group.has-validation > .custom-select:nth-last-child(n+3),
 .input-group.has-validation > .custom-file:nth-last-child(n+3) .custom-file-label,
 .input-group.has-validation > .custom-file:nth-last-child(n+3) .custom-file-label::after {
@@ -4744,8 +4560,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-lg > input[type=file]:not(textarea),
 .wpcf7 .input-group-lg > input[type=submit]:not(textarea),
 .wpcf7 .input-group-lg > select:not(textarea),
-.wpcf7 .input-group-lg > textarea:not(textarea), .widget_categories .input-group-lg > select:not(textarea),
-.widget_archive .input-group-lg > select:not(textarea),
+.wpcf7 .input-group-lg > textarea:not(textarea),
 .input-group-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px);
 }
@@ -4767,8 +4582,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-lg > input[type=file],
 .wpcf7 .input-group-lg > input[type=submit],
 .wpcf7 .input-group-lg > select,
-.wpcf7 .input-group-lg > textarea, .widget_categories .input-group-lg > select,
-.widget_archive .input-group-lg > select,
+.wpcf7 .input-group-lg > textarea,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
@@ -4803,8 +4617,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-sm > input[type=file]:not(textarea),
 .wpcf7 .input-group-sm > input[type=submit]:not(textarea),
 .wpcf7 .input-group-sm > select:not(textarea),
-.wpcf7 .input-group-sm > textarea:not(textarea), .widget_categories .input-group-sm > select:not(textarea),
-.widget_archive .input-group-sm > select:not(textarea),
+.wpcf7 .input-group-sm > textarea:not(textarea),
 .input-group-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px);
 }
@@ -4826,8 +4639,7 @@ input[type=button].btn-block {
 .wpcf7 .input-group-sm > input[type=file],
 .wpcf7 .input-group-sm > input[type=submit],
 .wpcf7 .input-group-sm > select,
-.wpcf7 .input-group-sm > textarea, .widget_categories .input-group-sm > select,
-.widget_archive .input-group-sm > select,
+.wpcf7 .input-group-sm > textarea,
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
@@ -5296,8 +5108,8 @@ input[type=button].btn-block {
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-control-label::before,
-.custom-file-label,
-.custom-select {
+  .custom-file-label,
+  .custom-select {
     transition: none;
   }
 }
@@ -5491,11 +5303,11 @@ input[type=button].btn-block {
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
-.navbar-expand-sm > .container-fluid,
-.navbar-expand-sm > .container-sm,
-.navbar-expand-sm > .container-md,
-.navbar-expand-sm > .container-lg,
-.navbar-expand-sm > .container-xl {
+  .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .container-sm,
+  .navbar-expand-sm > .container-md,
+  .navbar-expand-sm > .container-lg,
+  .navbar-expand-sm > .container-xl {
     padding-right: 0;
     padding-left: 0;
   }
@@ -5519,11 +5331,11 @@ input[type=button].btn-block {
     padding-left: 0.5rem;
   }
   .navbar-expand-sm > .container,
-.navbar-expand-sm > .container-fluid,
-.navbar-expand-sm > .container-sm,
-.navbar-expand-sm > .container-md,
-.navbar-expand-sm > .container-lg,
-.navbar-expand-sm > .container-xl {
+  .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .container-sm,
+  .navbar-expand-sm > .container-md,
+  .navbar-expand-sm > .container-lg,
+  .navbar-expand-sm > .container-xl {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
@@ -5542,11 +5354,11 @@ input[type=button].btn-block {
 }
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
-.navbar-expand-md > .container-fluid,
-.navbar-expand-md > .container-sm,
-.navbar-expand-md > .container-md,
-.navbar-expand-md > .container-lg,
-.navbar-expand-md > .container-xl {
+  .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .container-sm,
+  .navbar-expand-md > .container-md,
+  .navbar-expand-md > .container-lg,
+  .navbar-expand-md > .container-xl {
     padding-right: 0;
     padding-left: 0;
   }
@@ -5570,11 +5382,11 @@ input[type=button].btn-block {
     padding-left: 0.5rem;
   }
   .navbar-expand-md > .container,
-.navbar-expand-md > .container-fluid,
-.navbar-expand-md > .container-sm,
-.navbar-expand-md > .container-md,
-.navbar-expand-md > .container-lg,
-.navbar-expand-md > .container-xl {
+  .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .container-sm,
+  .navbar-expand-md > .container-md,
+  .navbar-expand-md > .container-lg,
+  .navbar-expand-md > .container-xl {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
@@ -5593,11 +5405,11 @@ input[type=button].btn-block {
 }
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
-.navbar-expand-lg > .container-fluid,
-.navbar-expand-lg > .container-sm,
-.navbar-expand-lg > .container-md,
-.navbar-expand-lg > .container-lg,
-.navbar-expand-lg > .container-xl {
+  .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .container-sm,
+  .navbar-expand-lg > .container-md,
+  .navbar-expand-lg > .container-lg,
+  .navbar-expand-lg > .container-xl {
     padding-right: 0;
     padding-left: 0;
   }
@@ -5621,11 +5433,11 @@ input[type=button].btn-block {
     padding-left: 0.5rem;
   }
   .navbar-expand-lg > .container,
-.navbar-expand-lg > .container-fluid,
-.navbar-expand-lg > .container-sm,
-.navbar-expand-lg > .container-md,
-.navbar-expand-lg > .container-lg,
-.navbar-expand-lg > .container-xl {
+  .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .container-sm,
+  .navbar-expand-lg > .container-md,
+  .navbar-expand-lg > .container-lg,
+  .navbar-expand-lg > .container-xl {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
@@ -5644,11 +5456,11 @@ input[type=button].btn-block {
 }
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
-.navbar-expand-xl > .container-fluid,
-.navbar-expand-xl > .container-sm,
-.navbar-expand-xl > .container-md,
-.navbar-expand-xl > .container-lg,
-.navbar-expand-xl > .container-xl {
+  .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .container-sm,
+  .navbar-expand-xl > .container-md,
+  .navbar-expand-xl > .container-lg,
+  .navbar-expand-xl > .container-xl {
     padding-right: 0;
     padding-left: 0;
   }
@@ -5672,11 +5484,11 @@ input[type=button].btn-block {
     padding-left: 0.5rem;
   }
   .navbar-expand-xl > .container,
-.navbar-expand-xl > .container-fluid,
-.navbar-expand-xl > .container-sm,
-.navbar-expand-xl > .container-md,
-.navbar-expand-xl > .container-lg,
-.navbar-expand-xl > .container-xl {
+  .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .container-sm,
+  .navbar-expand-xl > .container-md,
+  .navbar-expand-xl > .container-lg,
+  .navbar-expand-xl > .container-xl {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
@@ -5986,11 +5798,11 @@ input[type=button].btn-block {
     border-bottom-right-radius: 0;
   }
   .card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
   .card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
   .card-group > .card:not(:first-child) {
@@ -5998,11 +5810,11 @@ input[type=button].btn-block {
     border-bottom-left-radius: 0;
   }
   .card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
+  .card-group > .card:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
   .card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
+  .card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -7101,7 +6913,7 @@ a.close.disabled {
 }
 @media (min-width: 992px) {
   .modal-lg,
-.modal-xl {
+  .modal-xl {
     max-width: 800px;
   }
 }
@@ -7431,7 +7243,7 @@ a.close.disabled {
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-right {
+  .carousel-fade .active.carousel-item-right {
     transition: none;
   }
 }
@@ -7459,7 +7271,7 @@ a.close.disabled {
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
-.carousel-control-next {
+  .carousel-control-next {
     transition: none;
   }
 }
@@ -7622,7 +7434,7 @@ a.close.disabled {
 
 @media (prefers-reduced-motion: reduce) {
   .spinner-border,
-.spinner-grow {
+  .spinner-grow {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
   }
@@ -8951,7 +8763,7 @@ button.bg-dark:focus {
   }
 }
 
-.sr-only, a.skip-link {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -8963,7 +8775,7 @@ button.bg-dark:focus {
   border: 0;
 }
 
-.sr-only-focusable:active, a.skip-link:active, .sr-only-focusable:focus, a.skip-link:focus {
+.sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -9491,342 +9303,342 @@ button.bg-dark:focus {
     margin: 0 !important;
   }
   .mt-sm-0,
-.my-sm-0 {
+  .my-sm-0 {
     margin-top: 0 !important;
   }
   .mr-sm-0,
-.mx-sm-0 {
+  .mx-sm-0 {
     margin-right: 0 !important;
   }
   .mb-sm-0,
-.my-sm-0 {
+  .my-sm-0 {
     margin-bottom: 0 !important;
   }
   .ml-sm-0,
-.mx-sm-0 {
+  .mx-sm-0 {
     margin-left: 0 !important;
   }
   .m-sm-1 {
     margin: 0.25rem !important;
   }
   .mt-sm-1,
-.my-sm-1 {
+  .my-sm-1 {
     margin-top: 0.25rem !important;
   }
   .mr-sm-1,
-.mx-sm-1 {
+  .mx-sm-1 {
     margin-right: 0.25rem !important;
   }
   .mb-sm-1,
-.my-sm-1 {
+  .my-sm-1 {
     margin-bottom: 0.25rem !important;
   }
   .ml-sm-1,
-.mx-sm-1 {
+  .mx-sm-1 {
     margin-left: 0.25rem !important;
   }
   .m-sm-2 {
     margin: 0.5rem !important;
   }
   .mt-sm-2,
-.my-sm-2 {
+  .my-sm-2 {
     margin-top: 0.5rem !important;
   }
   .mr-sm-2,
-.mx-sm-2 {
+  .mx-sm-2 {
     margin-right: 0.5rem !important;
   }
   .mb-sm-2,
-.my-sm-2 {
+  .my-sm-2 {
     margin-bottom: 0.5rem !important;
   }
   .ml-sm-2,
-.mx-sm-2 {
+  .mx-sm-2 {
     margin-left: 0.5rem !important;
   }
   .m-sm-3 {
     margin: 1rem !important;
   }
   .mt-sm-3,
-.my-sm-3 {
+  .my-sm-3 {
     margin-top: 1rem !important;
   }
   .mr-sm-3,
-.mx-sm-3 {
+  .mx-sm-3 {
     margin-right: 1rem !important;
   }
   .mb-sm-3,
-.my-sm-3 {
+  .my-sm-3 {
     margin-bottom: 1rem !important;
   }
   .ml-sm-3,
-.mx-sm-3 {
+  .mx-sm-3 {
     margin-left: 1rem !important;
   }
   .m-sm-4 {
     margin: 1.5rem !important;
   }
   .mt-sm-4,
-.my-sm-4 {
+  .my-sm-4 {
     margin-top: 1.5rem !important;
   }
   .mr-sm-4,
-.mx-sm-4 {
+  .mx-sm-4 {
     margin-right: 1.5rem !important;
   }
   .mb-sm-4,
-.my-sm-4 {
+  .my-sm-4 {
     margin-bottom: 1.5rem !important;
   }
   .ml-sm-4,
-.mx-sm-4 {
+  .mx-sm-4 {
     margin-left: 1.5rem !important;
   }
   .m-sm-5 {
     margin: 3rem !important;
   }
   .mt-sm-5,
-.my-sm-5 {
+  .my-sm-5 {
     margin-top: 3rem !important;
   }
   .mr-sm-5,
-.mx-sm-5 {
+  .mx-sm-5 {
     margin-right: 3rem !important;
   }
   .mb-sm-5,
-.my-sm-5 {
+  .my-sm-5 {
     margin-bottom: 3rem !important;
   }
   .ml-sm-5,
-.mx-sm-5 {
+  .mx-sm-5 {
     margin-left: 3rem !important;
   }
   .p-sm-0 {
     padding: 0 !important;
   }
   .pt-sm-0,
-.py-sm-0 {
+  .py-sm-0 {
     padding-top: 0 !important;
   }
   .pr-sm-0,
-.px-sm-0 {
+  .px-sm-0 {
     padding-right: 0 !important;
   }
   .pb-sm-0,
-.py-sm-0 {
+  .py-sm-0 {
     padding-bottom: 0 !important;
   }
   .pl-sm-0,
-.px-sm-0 {
+  .px-sm-0 {
     padding-left: 0 !important;
   }
   .p-sm-1 {
     padding: 0.25rem !important;
   }
   .pt-sm-1,
-.py-sm-1 {
+  .py-sm-1 {
     padding-top: 0.25rem !important;
   }
   .pr-sm-1,
-.px-sm-1 {
+  .px-sm-1 {
     padding-right: 0.25rem !important;
   }
   .pb-sm-1,
-.py-sm-1 {
+  .py-sm-1 {
     padding-bottom: 0.25rem !important;
   }
   .pl-sm-1,
-.px-sm-1 {
+  .px-sm-1 {
     padding-left: 0.25rem !important;
   }
   .p-sm-2 {
     padding: 0.5rem !important;
   }
   .pt-sm-2,
-.py-sm-2 {
+  .py-sm-2 {
     padding-top: 0.5rem !important;
   }
   .pr-sm-2,
-.px-sm-2 {
+  .px-sm-2 {
     padding-right: 0.5rem !important;
   }
   .pb-sm-2,
-.py-sm-2 {
+  .py-sm-2 {
     padding-bottom: 0.5rem !important;
   }
   .pl-sm-2,
-.px-sm-2 {
+  .px-sm-2 {
     padding-left: 0.5rem !important;
   }
   .p-sm-3 {
     padding: 1rem !important;
   }
   .pt-sm-3,
-.py-sm-3 {
+  .py-sm-3 {
     padding-top: 1rem !important;
   }
   .pr-sm-3,
-.px-sm-3 {
+  .px-sm-3 {
     padding-right: 1rem !important;
   }
   .pb-sm-3,
-.py-sm-3 {
+  .py-sm-3 {
     padding-bottom: 1rem !important;
   }
   .pl-sm-3,
-.px-sm-3 {
+  .px-sm-3 {
     padding-left: 1rem !important;
   }
   .p-sm-4 {
     padding: 1.5rem !important;
   }
   .pt-sm-4,
-.py-sm-4 {
+  .py-sm-4 {
     padding-top: 1.5rem !important;
   }
   .pr-sm-4,
-.px-sm-4 {
+  .px-sm-4 {
     padding-right: 1.5rem !important;
   }
   .pb-sm-4,
-.py-sm-4 {
+  .py-sm-4 {
     padding-bottom: 1.5rem !important;
   }
   .pl-sm-4,
-.px-sm-4 {
+  .px-sm-4 {
     padding-left: 1.5rem !important;
   }
   .p-sm-5 {
     padding: 3rem !important;
   }
   .pt-sm-5,
-.py-sm-5 {
+  .py-sm-5 {
     padding-top: 3rem !important;
   }
   .pr-sm-5,
-.px-sm-5 {
+  .px-sm-5 {
     padding-right: 3rem !important;
   }
   .pb-sm-5,
-.py-sm-5 {
+  .py-sm-5 {
     padding-bottom: 3rem !important;
   }
   .pl-sm-5,
-.px-sm-5 {
+  .px-sm-5 {
     padding-left: 3rem !important;
   }
   .m-sm-n1 {
     margin: -0.25rem !important;
   }
   .mt-sm-n1,
-.my-sm-n1 {
+  .my-sm-n1 {
     margin-top: -0.25rem !important;
   }
   .mr-sm-n1,
-.mx-sm-n1 {
+  .mx-sm-n1 {
     margin-right: -0.25rem !important;
   }
   .mb-sm-n1,
-.my-sm-n1 {
+  .my-sm-n1 {
     margin-bottom: -0.25rem !important;
   }
   .ml-sm-n1,
-.mx-sm-n1 {
+  .mx-sm-n1 {
     margin-left: -0.25rem !important;
   }
   .m-sm-n2 {
     margin: -0.5rem !important;
   }
   .mt-sm-n2,
-.my-sm-n2 {
+  .my-sm-n2 {
     margin-top: -0.5rem !important;
   }
   .mr-sm-n2,
-.mx-sm-n2 {
+  .mx-sm-n2 {
     margin-right: -0.5rem !important;
   }
   .mb-sm-n2,
-.my-sm-n2 {
+  .my-sm-n2 {
     margin-bottom: -0.5rem !important;
   }
   .ml-sm-n2,
-.mx-sm-n2 {
+  .mx-sm-n2 {
     margin-left: -0.5rem !important;
   }
   .m-sm-n3 {
     margin: -1rem !important;
   }
   .mt-sm-n3,
-.my-sm-n3 {
+  .my-sm-n3 {
     margin-top: -1rem !important;
   }
   .mr-sm-n3,
-.mx-sm-n3 {
+  .mx-sm-n3 {
     margin-right: -1rem !important;
   }
   .mb-sm-n3,
-.my-sm-n3 {
+  .my-sm-n3 {
     margin-bottom: -1rem !important;
   }
   .ml-sm-n3,
-.mx-sm-n3 {
+  .mx-sm-n3 {
     margin-left: -1rem !important;
   }
   .m-sm-n4 {
     margin: -1.5rem !important;
   }
   .mt-sm-n4,
-.my-sm-n4 {
+  .my-sm-n4 {
     margin-top: -1.5rem !important;
   }
   .mr-sm-n4,
-.mx-sm-n4 {
+  .mx-sm-n4 {
     margin-right: -1.5rem !important;
   }
   .mb-sm-n4,
-.my-sm-n4 {
+  .my-sm-n4 {
     margin-bottom: -1.5rem !important;
   }
   .ml-sm-n4,
-.mx-sm-n4 {
+  .mx-sm-n4 {
     margin-left: -1.5rem !important;
   }
   .m-sm-n5 {
     margin: -3rem !important;
   }
   .mt-sm-n5,
-.my-sm-n5 {
+  .my-sm-n5 {
     margin-top: -3rem !important;
   }
   .mr-sm-n5,
-.mx-sm-n5 {
+  .mx-sm-n5 {
     margin-right: -3rem !important;
   }
   .mb-sm-n5,
-.my-sm-n5 {
+  .my-sm-n5 {
     margin-bottom: -3rem !important;
   }
   .ml-sm-n5,
-.mx-sm-n5 {
+  .mx-sm-n5 {
     margin-left: -3rem !important;
   }
   .m-sm-auto {
     margin: auto !important;
   }
   .mt-sm-auto,
-.my-sm-auto {
+  .my-sm-auto {
     margin-top: auto !important;
   }
   .mr-sm-auto,
-.mx-sm-auto {
+  .mx-sm-auto {
     margin-right: auto !important;
   }
   .mb-sm-auto,
-.my-sm-auto {
+  .my-sm-auto {
     margin-bottom: auto !important;
   }
   .ml-sm-auto,
-.mx-sm-auto {
+  .mx-sm-auto {
     margin-left: auto !important;
   }
 }
@@ -9835,342 +9647,342 @@ button.bg-dark:focus {
     margin: 0 !important;
   }
   .mt-md-0,
-.my-md-0 {
+  .my-md-0 {
     margin-top: 0 !important;
   }
   .mr-md-0,
-.mx-md-0 {
+  .mx-md-0 {
     margin-right: 0 !important;
   }
   .mb-md-0,
-.my-md-0 {
+  .my-md-0 {
     margin-bottom: 0 !important;
   }
   .ml-md-0,
-.mx-md-0 {
+  .mx-md-0 {
     margin-left: 0 !important;
   }
   .m-md-1 {
     margin: 0.25rem !important;
   }
   .mt-md-1,
-.my-md-1 {
+  .my-md-1 {
     margin-top: 0.25rem !important;
   }
   .mr-md-1,
-.mx-md-1 {
+  .mx-md-1 {
     margin-right: 0.25rem !important;
   }
   .mb-md-1,
-.my-md-1 {
+  .my-md-1 {
     margin-bottom: 0.25rem !important;
   }
   .ml-md-1,
-.mx-md-1 {
+  .mx-md-1 {
     margin-left: 0.25rem !important;
   }
   .m-md-2 {
     margin: 0.5rem !important;
   }
   .mt-md-2,
-.my-md-2 {
+  .my-md-2 {
     margin-top: 0.5rem !important;
   }
   .mr-md-2,
-.mx-md-2 {
+  .mx-md-2 {
     margin-right: 0.5rem !important;
   }
   .mb-md-2,
-.my-md-2 {
+  .my-md-2 {
     margin-bottom: 0.5rem !important;
   }
   .ml-md-2,
-.mx-md-2 {
+  .mx-md-2 {
     margin-left: 0.5rem !important;
   }
   .m-md-3 {
     margin: 1rem !important;
   }
   .mt-md-3,
-.my-md-3 {
+  .my-md-3 {
     margin-top: 1rem !important;
   }
   .mr-md-3,
-.mx-md-3 {
+  .mx-md-3 {
     margin-right: 1rem !important;
   }
   .mb-md-3,
-.my-md-3 {
+  .my-md-3 {
     margin-bottom: 1rem !important;
   }
   .ml-md-3,
-.mx-md-3 {
+  .mx-md-3 {
     margin-left: 1rem !important;
   }
   .m-md-4 {
     margin: 1.5rem !important;
   }
   .mt-md-4,
-.my-md-4 {
+  .my-md-4 {
     margin-top: 1.5rem !important;
   }
   .mr-md-4,
-.mx-md-4 {
+  .mx-md-4 {
     margin-right: 1.5rem !important;
   }
   .mb-md-4,
-.my-md-4 {
+  .my-md-4 {
     margin-bottom: 1.5rem !important;
   }
   .ml-md-4,
-.mx-md-4 {
+  .mx-md-4 {
     margin-left: 1.5rem !important;
   }
   .m-md-5 {
     margin: 3rem !important;
   }
   .mt-md-5,
-.my-md-5 {
+  .my-md-5 {
     margin-top: 3rem !important;
   }
   .mr-md-5,
-.mx-md-5 {
+  .mx-md-5 {
     margin-right: 3rem !important;
   }
   .mb-md-5,
-.my-md-5 {
+  .my-md-5 {
     margin-bottom: 3rem !important;
   }
   .ml-md-5,
-.mx-md-5 {
+  .mx-md-5 {
     margin-left: 3rem !important;
   }
   .p-md-0 {
     padding: 0 !important;
   }
   .pt-md-0,
-.py-md-0 {
+  .py-md-0 {
     padding-top: 0 !important;
   }
   .pr-md-0,
-.px-md-0 {
+  .px-md-0 {
     padding-right: 0 !important;
   }
   .pb-md-0,
-.py-md-0 {
+  .py-md-0 {
     padding-bottom: 0 !important;
   }
   .pl-md-0,
-.px-md-0 {
+  .px-md-0 {
     padding-left: 0 !important;
   }
   .p-md-1 {
     padding: 0.25rem !important;
   }
   .pt-md-1,
-.py-md-1 {
+  .py-md-1 {
     padding-top: 0.25rem !important;
   }
   .pr-md-1,
-.px-md-1 {
+  .px-md-1 {
     padding-right: 0.25rem !important;
   }
   .pb-md-1,
-.py-md-1 {
+  .py-md-1 {
     padding-bottom: 0.25rem !important;
   }
   .pl-md-1,
-.px-md-1 {
+  .px-md-1 {
     padding-left: 0.25rem !important;
   }
   .p-md-2 {
     padding: 0.5rem !important;
   }
   .pt-md-2,
-.py-md-2 {
+  .py-md-2 {
     padding-top: 0.5rem !important;
   }
   .pr-md-2,
-.px-md-2 {
+  .px-md-2 {
     padding-right: 0.5rem !important;
   }
   .pb-md-2,
-.py-md-2 {
+  .py-md-2 {
     padding-bottom: 0.5rem !important;
   }
   .pl-md-2,
-.px-md-2 {
+  .px-md-2 {
     padding-left: 0.5rem !important;
   }
   .p-md-3 {
     padding: 1rem !important;
   }
   .pt-md-3,
-.py-md-3 {
+  .py-md-3 {
     padding-top: 1rem !important;
   }
   .pr-md-3,
-.px-md-3 {
+  .px-md-3 {
     padding-right: 1rem !important;
   }
   .pb-md-3,
-.py-md-3 {
+  .py-md-3 {
     padding-bottom: 1rem !important;
   }
   .pl-md-3,
-.px-md-3 {
+  .px-md-3 {
     padding-left: 1rem !important;
   }
   .p-md-4 {
     padding: 1.5rem !important;
   }
   .pt-md-4,
-.py-md-4 {
+  .py-md-4 {
     padding-top: 1.5rem !important;
   }
   .pr-md-4,
-.px-md-4 {
+  .px-md-4 {
     padding-right: 1.5rem !important;
   }
   .pb-md-4,
-.py-md-4 {
+  .py-md-4 {
     padding-bottom: 1.5rem !important;
   }
   .pl-md-4,
-.px-md-4 {
+  .px-md-4 {
     padding-left: 1.5rem !important;
   }
   .p-md-5 {
     padding: 3rem !important;
   }
   .pt-md-5,
-.py-md-5 {
+  .py-md-5 {
     padding-top: 3rem !important;
   }
   .pr-md-5,
-.px-md-5 {
+  .px-md-5 {
     padding-right: 3rem !important;
   }
   .pb-md-5,
-.py-md-5 {
+  .py-md-5 {
     padding-bottom: 3rem !important;
   }
   .pl-md-5,
-.px-md-5 {
+  .px-md-5 {
     padding-left: 3rem !important;
   }
   .m-md-n1 {
     margin: -0.25rem !important;
   }
   .mt-md-n1,
-.my-md-n1 {
+  .my-md-n1 {
     margin-top: -0.25rem !important;
   }
   .mr-md-n1,
-.mx-md-n1 {
+  .mx-md-n1 {
     margin-right: -0.25rem !important;
   }
   .mb-md-n1,
-.my-md-n1 {
+  .my-md-n1 {
     margin-bottom: -0.25rem !important;
   }
   .ml-md-n1,
-.mx-md-n1 {
+  .mx-md-n1 {
     margin-left: -0.25rem !important;
   }
   .m-md-n2 {
     margin: -0.5rem !important;
   }
   .mt-md-n2,
-.my-md-n2 {
+  .my-md-n2 {
     margin-top: -0.5rem !important;
   }
   .mr-md-n2,
-.mx-md-n2 {
+  .mx-md-n2 {
     margin-right: -0.5rem !important;
   }
   .mb-md-n2,
-.my-md-n2 {
+  .my-md-n2 {
     margin-bottom: -0.5rem !important;
   }
   .ml-md-n2,
-.mx-md-n2 {
+  .mx-md-n2 {
     margin-left: -0.5rem !important;
   }
   .m-md-n3 {
     margin: -1rem !important;
   }
   .mt-md-n3,
-.my-md-n3 {
+  .my-md-n3 {
     margin-top: -1rem !important;
   }
   .mr-md-n3,
-.mx-md-n3 {
+  .mx-md-n3 {
     margin-right: -1rem !important;
   }
   .mb-md-n3,
-.my-md-n3 {
+  .my-md-n3 {
     margin-bottom: -1rem !important;
   }
   .ml-md-n3,
-.mx-md-n3 {
+  .mx-md-n3 {
     margin-left: -1rem !important;
   }
   .m-md-n4 {
     margin: -1.5rem !important;
   }
   .mt-md-n4,
-.my-md-n4 {
+  .my-md-n4 {
     margin-top: -1.5rem !important;
   }
   .mr-md-n4,
-.mx-md-n4 {
+  .mx-md-n4 {
     margin-right: -1.5rem !important;
   }
   .mb-md-n4,
-.my-md-n4 {
+  .my-md-n4 {
     margin-bottom: -1.5rem !important;
   }
   .ml-md-n4,
-.mx-md-n4 {
+  .mx-md-n4 {
     margin-left: -1.5rem !important;
   }
   .m-md-n5 {
     margin: -3rem !important;
   }
   .mt-md-n5,
-.my-md-n5 {
+  .my-md-n5 {
     margin-top: -3rem !important;
   }
   .mr-md-n5,
-.mx-md-n5 {
+  .mx-md-n5 {
     margin-right: -3rem !important;
   }
   .mb-md-n5,
-.my-md-n5 {
+  .my-md-n5 {
     margin-bottom: -3rem !important;
   }
   .ml-md-n5,
-.mx-md-n5 {
+  .mx-md-n5 {
     margin-left: -3rem !important;
   }
   .m-md-auto {
     margin: auto !important;
   }
   .mt-md-auto,
-.my-md-auto {
+  .my-md-auto {
     margin-top: auto !important;
   }
   .mr-md-auto,
-.mx-md-auto {
+  .mx-md-auto {
     margin-right: auto !important;
   }
   .mb-md-auto,
-.my-md-auto {
+  .my-md-auto {
     margin-bottom: auto !important;
   }
   .ml-md-auto,
-.mx-md-auto {
+  .mx-md-auto {
     margin-left: auto !important;
   }
 }
@@ -10179,342 +9991,342 @@ button.bg-dark:focus {
     margin: 0 !important;
   }
   .mt-lg-0,
-.my-lg-0 {
+  .my-lg-0 {
     margin-top: 0 !important;
   }
   .mr-lg-0,
-.mx-lg-0 {
+  .mx-lg-0 {
     margin-right: 0 !important;
   }
   .mb-lg-0,
-.my-lg-0 {
+  .my-lg-0 {
     margin-bottom: 0 !important;
   }
   .ml-lg-0,
-.mx-lg-0 {
+  .mx-lg-0 {
     margin-left: 0 !important;
   }
   .m-lg-1 {
     margin: 0.25rem !important;
   }
   .mt-lg-1,
-.my-lg-1 {
+  .my-lg-1 {
     margin-top: 0.25rem !important;
   }
   .mr-lg-1,
-.mx-lg-1 {
+  .mx-lg-1 {
     margin-right: 0.25rem !important;
   }
   .mb-lg-1,
-.my-lg-1 {
+  .my-lg-1 {
     margin-bottom: 0.25rem !important;
   }
   .ml-lg-1,
-.mx-lg-1 {
+  .mx-lg-1 {
     margin-left: 0.25rem !important;
   }
   .m-lg-2 {
     margin: 0.5rem !important;
   }
   .mt-lg-2,
-.my-lg-2 {
+  .my-lg-2 {
     margin-top: 0.5rem !important;
   }
   .mr-lg-2,
-.mx-lg-2 {
+  .mx-lg-2 {
     margin-right: 0.5rem !important;
   }
   .mb-lg-2,
-.my-lg-2 {
+  .my-lg-2 {
     margin-bottom: 0.5rem !important;
   }
   .ml-lg-2,
-.mx-lg-2 {
+  .mx-lg-2 {
     margin-left: 0.5rem !important;
   }
   .m-lg-3 {
     margin: 1rem !important;
   }
   .mt-lg-3,
-.my-lg-3 {
+  .my-lg-3 {
     margin-top: 1rem !important;
   }
   .mr-lg-3,
-.mx-lg-3 {
+  .mx-lg-3 {
     margin-right: 1rem !important;
   }
   .mb-lg-3,
-.my-lg-3 {
+  .my-lg-3 {
     margin-bottom: 1rem !important;
   }
   .ml-lg-3,
-.mx-lg-3 {
+  .mx-lg-3 {
     margin-left: 1rem !important;
   }
   .m-lg-4 {
     margin: 1.5rem !important;
   }
   .mt-lg-4,
-.my-lg-4 {
+  .my-lg-4 {
     margin-top: 1.5rem !important;
   }
   .mr-lg-4,
-.mx-lg-4 {
+  .mx-lg-4 {
     margin-right: 1.5rem !important;
   }
   .mb-lg-4,
-.my-lg-4 {
+  .my-lg-4 {
     margin-bottom: 1.5rem !important;
   }
   .ml-lg-4,
-.mx-lg-4 {
+  .mx-lg-4 {
     margin-left: 1.5rem !important;
   }
   .m-lg-5 {
     margin: 3rem !important;
   }
   .mt-lg-5,
-.my-lg-5 {
+  .my-lg-5 {
     margin-top: 3rem !important;
   }
   .mr-lg-5,
-.mx-lg-5 {
+  .mx-lg-5 {
     margin-right: 3rem !important;
   }
   .mb-lg-5,
-.my-lg-5 {
+  .my-lg-5 {
     margin-bottom: 3rem !important;
   }
   .ml-lg-5,
-.mx-lg-5 {
+  .mx-lg-5 {
     margin-left: 3rem !important;
   }
   .p-lg-0 {
     padding: 0 !important;
   }
   .pt-lg-0,
-.py-lg-0 {
+  .py-lg-0 {
     padding-top: 0 !important;
   }
   .pr-lg-0,
-.px-lg-0 {
+  .px-lg-0 {
     padding-right: 0 !important;
   }
   .pb-lg-0,
-.py-lg-0 {
+  .py-lg-0 {
     padding-bottom: 0 !important;
   }
   .pl-lg-0,
-.px-lg-0 {
+  .px-lg-0 {
     padding-left: 0 !important;
   }
   .p-lg-1 {
     padding: 0.25rem !important;
   }
   .pt-lg-1,
-.py-lg-1 {
+  .py-lg-1 {
     padding-top: 0.25rem !important;
   }
   .pr-lg-1,
-.px-lg-1 {
+  .px-lg-1 {
     padding-right: 0.25rem !important;
   }
   .pb-lg-1,
-.py-lg-1 {
+  .py-lg-1 {
     padding-bottom: 0.25rem !important;
   }
   .pl-lg-1,
-.px-lg-1 {
+  .px-lg-1 {
     padding-left: 0.25rem !important;
   }
   .p-lg-2 {
     padding: 0.5rem !important;
   }
   .pt-lg-2,
-.py-lg-2 {
+  .py-lg-2 {
     padding-top: 0.5rem !important;
   }
   .pr-lg-2,
-.px-lg-2 {
+  .px-lg-2 {
     padding-right: 0.5rem !important;
   }
   .pb-lg-2,
-.py-lg-2 {
+  .py-lg-2 {
     padding-bottom: 0.5rem !important;
   }
   .pl-lg-2,
-.px-lg-2 {
+  .px-lg-2 {
     padding-left: 0.5rem !important;
   }
   .p-lg-3 {
     padding: 1rem !important;
   }
   .pt-lg-3,
-.py-lg-3 {
+  .py-lg-3 {
     padding-top: 1rem !important;
   }
   .pr-lg-3,
-.px-lg-3 {
+  .px-lg-3 {
     padding-right: 1rem !important;
   }
   .pb-lg-3,
-.py-lg-3 {
+  .py-lg-3 {
     padding-bottom: 1rem !important;
   }
   .pl-lg-3,
-.px-lg-3 {
+  .px-lg-3 {
     padding-left: 1rem !important;
   }
   .p-lg-4 {
     padding: 1.5rem !important;
   }
   .pt-lg-4,
-.py-lg-4 {
+  .py-lg-4 {
     padding-top: 1.5rem !important;
   }
   .pr-lg-4,
-.px-lg-4 {
+  .px-lg-4 {
     padding-right: 1.5rem !important;
   }
   .pb-lg-4,
-.py-lg-4 {
+  .py-lg-4 {
     padding-bottom: 1.5rem !important;
   }
   .pl-lg-4,
-.px-lg-4 {
+  .px-lg-4 {
     padding-left: 1.5rem !important;
   }
   .p-lg-5 {
     padding: 3rem !important;
   }
   .pt-lg-5,
-.py-lg-5 {
+  .py-lg-5 {
     padding-top: 3rem !important;
   }
   .pr-lg-5,
-.px-lg-5 {
+  .px-lg-5 {
     padding-right: 3rem !important;
   }
   .pb-lg-5,
-.py-lg-5 {
+  .py-lg-5 {
     padding-bottom: 3rem !important;
   }
   .pl-lg-5,
-.px-lg-5 {
+  .px-lg-5 {
     padding-left: 3rem !important;
   }
   .m-lg-n1 {
     margin: -0.25rem !important;
   }
   .mt-lg-n1,
-.my-lg-n1 {
+  .my-lg-n1 {
     margin-top: -0.25rem !important;
   }
   .mr-lg-n1,
-.mx-lg-n1 {
+  .mx-lg-n1 {
     margin-right: -0.25rem !important;
   }
   .mb-lg-n1,
-.my-lg-n1 {
+  .my-lg-n1 {
     margin-bottom: -0.25rem !important;
   }
   .ml-lg-n1,
-.mx-lg-n1 {
+  .mx-lg-n1 {
     margin-left: -0.25rem !important;
   }
   .m-lg-n2 {
     margin: -0.5rem !important;
   }
   .mt-lg-n2,
-.my-lg-n2 {
+  .my-lg-n2 {
     margin-top: -0.5rem !important;
   }
   .mr-lg-n2,
-.mx-lg-n2 {
+  .mx-lg-n2 {
     margin-right: -0.5rem !important;
   }
   .mb-lg-n2,
-.my-lg-n2 {
+  .my-lg-n2 {
     margin-bottom: -0.5rem !important;
   }
   .ml-lg-n2,
-.mx-lg-n2 {
+  .mx-lg-n2 {
     margin-left: -0.5rem !important;
   }
   .m-lg-n3 {
     margin: -1rem !important;
   }
   .mt-lg-n3,
-.my-lg-n3 {
+  .my-lg-n3 {
     margin-top: -1rem !important;
   }
   .mr-lg-n3,
-.mx-lg-n3 {
+  .mx-lg-n3 {
     margin-right: -1rem !important;
   }
   .mb-lg-n3,
-.my-lg-n3 {
+  .my-lg-n3 {
     margin-bottom: -1rem !important;
   }
   .ml-lg-n3,
-.mx-lg-n3 {
+  .mx-lg-n3 {
     margin-left: -1rem !important;
   }
   .m-lg-n4 {
     margin: -1.5rem !important;
   }
   .mt-lg-n4,
-.my-lg-n4 {
+  .my-lg-n4 {
     margin-top: -1.5rem !important;
   }
   .mr-lg-n4,
-.mx-lg-n4 {
+  .mx-lg-n4 {
     margin-right: -1.5rem !important;
   }
   .mb-lg-n4,
-.my-lg-n4 {
+  .my-lg-n4 {
     margin-bottom: -1.5rem !important;
   }
   .ml-lg-n4,
-.mx-lg-n4 {
+  .mx-lg-n4 {
     margin-left: -1.5rem !important;
   }
   .m-lg-n5 {
     margin: -3rem !important;
   }
   .mt-lg-n5,
-.my-lg-n5 {
+  .my-lg-n5 {
     margin-top: -3rem !important;
   }
   .mr-lg-n5,
-.mx-lg-n5 {
+  .mx-lg-n5 {
     margin-right: -3rem !important;
   }
   .mb-lg-n5,
-.my-lg-n5 {
+  .my-lg-n5 {
     margin-bottom: -3rem !important;
   }
   .ml-lg-n5,
-.mx-lg-n5 {
+  .mx-lg-n5 {
     margin-left: -3rem !important;
   }
   .m-lg-auto {
     margin: auto !important;
   }
   .mt-lg-auto,
-.my-lg-auto {
+  .my-lg-auto {
     margin-top: auto !important;
   }
   .mr-lg-auto,
-.mx-lg-auto {
+  .mx-lg-auto {
     margin-right: auto !important;
   }
   .mb-lg-auto,
-.my-lg-auto {
+  .my-lg-auto {
     margin-bottom: auto !important;
   }
   .ml-lg-auto,
-.mx-lg-auto {
+  .mx-lg-auto {
     margin-left: auto !important;
   }
 }
@@ -10523,342 +10335,342 @@ button.bg-dark:focus {
     margin: 0 !important;
   }
   .mt-xl-0,
-.my-xl-0 {
+  .my-xl-0 {
     margin-top: 0 !important;
   }
   .mr-xl-0,
-.mx-xl-0 {
+  .mx-xl-0 {
     margin-right: 0 !important;
   }
   .mb-xl-0,
-.my-xl-0 {
+  .my-xl-0 {
     margin-bottom: 0 !important;
   }
   .ml-xl-0,
-.mx-xl-0 {
+  .mx-xl-0 {
     margin-left: 0 !important;
   }
   .m-xl-1 {
     margin: 0.25rem !important;
   }
   .mt-xl-1,
-.my-xl-1 {
+  .my-xl-1 {
     margin-top: 0.25rem !important;
   }
   .mr-xl-1,
-.mx-xl-1 {
+  .mx-xl-1 {
     margin-right: 0.25rem !important;
   }
   .mb-xl-1,
-.my-xl-1 {
+  .my-xl-1 {
     margin-bottom: 0.25rem !important;
   }
   .ml-xl-1,
-.mx-xl-1 {
+  .mx-xl-1 {
     margin-left: 0.25rem !important;
   }
   .m-xl-2 {
     margin: 0.5rem !important;
   }
   .mt-xl-2,
-.my-xl-2 {
+  .my-xl-2 {
     margin-top: 0.5rem !important;
   }
   .mr-xl-2,
-.mx-xl-2 {
+  .mx-xl-2 {
     margin-right: 0.5rem !important;
   }
   .mb-xl-2,
-.my-xl-2 {
+  .my-xl-2 {
     margin-bottom: 0.5rem !important;
   }
   .ml-xl-2,
-.mx-xl-2 {
+  .mx-xl-2 {
     margin-left: 0.5rem !important;
   }
   .m-xl-3 {
     margin: 1rem !important;
   }
   .mt-xl-3,
-.my-xl-3 {
+  .my-xl-3 {
     margin-top: 1rem !important;
   }
   .mr-xl-3,
-.mx-xl-3 {
+  .mx-xl-3 {
     margin-right: 1rem !important;
   }
   .mb-xl-3,
-.my-xl-3 {
+  .my-xl-3 {
     margin-bottom: 1rem !important;
   }
   .ml-xl-3,
-.mx-xl-3 {
+  .mx-xl-3 {
     margin-left: 1rem !important;
   }
   .m-xl-4 {
     margin: 1.5rem !important;
   }
   .mt-xl-4,
-.my-xl-4 {
+  .my-xl-4 {
     margin-top: 1.5rem !important;
   }
   .mr-xl-4,
-.mx-xl-4 {
+  .mx-xl-4 {
     margin-right: 1.5rem !important;
   }
   .mb-xl-4,
-.my-xl-4 {
+  .my-xl-4 {
     margin-bottom: 1.5rem !important;
   }
   .ml-xl-4,
-.mx-xl-4 {
+  .mx-xl-4 {
     margin-left: 1.5rem !important;
   }
   .m-xl-5 {
     margin: 3rem !important;
   }
   .mt-xl-5,
-.my-xl-5 {
+  .my-xl-5 {
     margin-top: 3rem !important;
   }
   .mr-xl-5,
-.mx-xl-5 {
+  .mx-xl-5 {
     margin-right: 3rem !important;
   }
   .mb-xl-5,
-.my-xl-5 {
+  .my-xl-5 {
     margin-bottom: 3rem !important;
   }
   .ml-xl-5,
-.mx-xl-5 {
+  .mx-xl-5 {
     margin-left: 3rem !important;
   }
   .p-xl-0 {
     padding: 0 !important;
   }
   .pt-xl-0,
-.py-xl-0 {
+  .py-xl-0 {
     padding-top: 0 !important;
   }
   .pr-xl-0,
-.px-xl-0 {
+  .px-xl-0 {
     padding-right: 0 !important;
   }
   .pb-xl-0,
-.py-xl-0 {
+  .py-xl-0 {
     padding-bottom: 0 !important;
   }
   .pl-xl-0,
-.px-xl-0 {
+  .px-xl-0 {
     padding-left: 0 !important;
   }
   .p-xl-1 {
     padding: 0.25rem !important;
   }
   .pt-xl-1,
-.py-xl-1 {
+  .py-xl-1 {
     padding-top: 0.25rem !important;
   }
   .pr-xl-1,
-.px-xl-1 {
+  .px-xl-1 {
     padding-right: 0.25rem !important;
   }
   .pb-xl-1,
-.py-xl-1 {
+  .py-xl-1 {
     padding-bottom: 0.25rem !important;
   }
   .pl-xl-1,
-.px-xl-1 {
+  .px-xl-1 {
     padding-left: 0.25rem !important;
   }
   .p-xl-2 {
     padding: 0.5rem !important;
   }
   .pt-xl-2,
-.py-xl-2 {
+  .py-xl-2 {
     padding-top: 0.5rem !important;
   }
   .pr-xl-2,
-.px-xl-2 {
+  .px-xl-2 {
     padding-right: 0.5rem !important;
   }
   .pb-xl-2,
-.py-xl-2 {
+  .py-xl-2 {
     padding-bottom: 0.5rem !important;
   }
   .pl-xl-2,
-.px-xl-2 {
+  .px-xl-2 {
     padding-left: 0.5rem !important;
   }
   .p-xl-3 {
     padding: 1rem !important;
   }
   .pt-xl-3,
-.py-xl-3 {
+  .py-xl-3 {
     padding-top: 1rem !important;
   }
   .pr-xl-3,
-.px-xl-3 {
+  .px-xl-3 {
     padding-right: 1rem !important;
   }
   .pb-xl-3,
-.py-xl-3 {
+  .py-xl-3 {
     padding-bottom: 1rem !important;
   }
   .pl-xl-3,
-.px-xl-3 {
+  .px-xl-3 {
     padding-left: 1rem !important;
   }
   .p-xl-4 {
     padding: 1.5rem !important;
   }
   .pt-xl-4,
-.py-xl-4 {
+  .py-xl-4 {
     padding-top: 1.5rem !important;
   }
   .pr-xl-4,
-.px-xl-4 {
+  .px-xl-4 {
     padding-right: 1.5rem !important;
   }
   .pb-xl-4,
-.py-xl-4 {
+  .py-xl-4 {
     padding-bottom: 1.5rem !important;
   }
   .pl-xl-4,
-.px-xl-4 {
+  .px-xl-4 {
     padding-left: 1.5rem !important;
   }
   .p-xl-5 {
     padding: 3rem !important;
   }
   .pt-xl-5,
-.py-xl-5 {
+  .py-xl-5 {
     padding-top: 3rem !important;
   }
   .pr-xl-5,
-.px-xl-5 {
+  .px-xl-5 {
     padding-right: 3rem !important;
   }
   .pb-xl-5,
-.py-xl-5 {
+  .py-xl-5 {
     padding-bottom: 3rem !important;
   }
   .pl-xl-5,
-.px-xl-5 {
+  .px-xl-5 {
     padding-left: 3rem !important;
   }
   .m-xl-n1 {
     margin: -0.25rem !important;
   }
   .mt-xl-n1,
-.my-xl-n1 {
+  .my-xl-n1 {
     margin-top: -0.25rem !important;
   }
   .mr-xl-n1,
-.mx-xl-n1 {
+  .mx-xl-n1 {
     margin-right: -0.25rem !important;
   }
   .mb-xl-n1,
-.my-xl-n1 {
+  .my-xl-n1 {
     margin-bottom: -0.25rem !important;
   }
   .ml-xl-n1,
-.mx-xl-n1 {
+  .mx-xl-n1 {
     margin-left: -0.25rem !important;
   }
   .m-xl-n2 {
     margin: -0.5rem !important;
   }
   .mt-xl-n2,
-.my-xl-n2 {
+  .my-xl-n2 {
     margin-top: -0.5rem !important;
   }
   .mr-xl-n2,
-.mx-xl-n2 {
+  .mx-xl-n2 {
     margin-right: -0.5rem !important;
   }
   .mb-xl-n2,
-.my-xl-n2 {
+  .my-xl-n2 {
     margin-bottom: -0.5rem !important;
   }
   .ml-xl-n2,
-.mx-xl-n2 {
+  .mx-xl-n2 {
     margin-left: -0.5rem !important;
   }
   .m-xl-n3 {
     margin: -1rem !important;
   }
   .mt-xl-n3,
-.my-xl-n3 {
+  .my-xl-n3 {
     margin-top: -1rem !important;
   }
   .mr-xl-n3,
-.mx-xl-n3 {
+  .mx-xl-n3 {
     margin-right: -1rem !important;
   }
   .mb-xl-n3,
-.my-xl-n3 {
+  .my-xl-n3 {
     margin-bottom: -1rem !important;
   }
   .ml-xl-n3,
-.mx-xl-n3 {
+  .mx-xl-n3 {
     margin-left: -1rem !important;
   }
   .m-xl-n4 {
     margin: -1.5rem !important;
   }
   .mt-xl-n4,
-.my-xl-n4 {
+  .my-xl-n4 {
     margin-top: -1.5rem !important;
   }
   .mr-xl-n4,
-.mx-xl-n4 {
+  .mx-xl-n4 {
     margin-right: -1.5rem !important;
   }
   .mb-xl-n4,
-.my-xl-n4 {
+  .my-xl-n4 {
     margin-bottom: -1.5rem !important;
   }
   .ml-xl-n4,
-.mx-xl-n4 {
+  .mx-xl-n4 {
     margin-left: -1.5rem !important;
   }
   .m-xl-n5 {
     margin: -3rem !important;
   }
   .mt-xl-n5,
-.my-xl-n5 {
+  .my-xl-n5 {
     margin-top: -3rem !important;
   }
   .mr-xl-n5,
-.mx-xl-n5 {
+  .mx-xl-n5 {
     margin-right: -3rem !important;
   }
   .mb-xl-n5,
-.my-xl-n5 {
+  .my-xl-n5 {
     margin-bottom: -3rem !important;
   }
   .ml-xl-n5,
-.mx-xl-n5 {
+  .mx-xl-n5 {
     margin-left: -3rem !important;
   }
   .m-xl-auto {
     margin: auto !important;
   }
   .mt-xl-auto,
-.my-xl-auto {
+  .my-xl-auto {
     margin-top: auto !important;
   }
   .mr-xl-auto,
-.mx-xl-auto {
+  .mx-xl-auto {
     margin-right: auto !important;
   }
   .mb-xl-auto,
-.my-xl-auto {
+  .my-xl-auto {
     margin-bottom: auto !important;
   }
   .ml-xl-auto,
-.mx-xl-auto {
+  .mx-xl-auto {
     margin-left: auto !important;
   }
 }
@@ -11103,8 +10915,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media print {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     text-shadow: none !important;
     box-shadow: none !important;
   }
@@ -11118,22 +10930,22 @@ a.text-dark:hover, a.text-dark:focus {
     white-space: pre-wrap !important;
   }
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #adb5bd;
     page-break-inside: avoid;
   }
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
   @page {
@@ -11155,22 +10967,22 @@ h3 {
     border-collapse: collapse !important;
   }
   .table td, .wp-block-table table td,
-.table th,
-.wp-block-table table th {
+  .table th,
+  .wp-block-table table th {
     background-color: #fff !important;
   }
   .table-bordered th, .wp-block-table table th,
-.table-bordered td,
-.wp-block-table table td {
+  .table-bordered td,
+  .wp-block-table table td {
     border: 1px solid #dee2e6 !important;
   }
   .table-dark {
     color: inherit;
   }
   .table-dark th,
-.table-dark td,
-.table-dark thead th,
-.table-dark tbody + tbody {
+  .table-dark td,
+  .table-dark thead th,
+  .table-dark tbody + tbody {
     border-color: #dee2e6;
   }
   .table .thead-dark th, .wp-block-table table .thead-dark th {
@@ -11235,6 +11047,38 @@ body {
   display: block;
 }
 
+.widget_archive select {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .widget_archive select {
+    transition: none;
+  }
+}
+.widget_archive select::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.widget_archive select:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #bfb3ff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(85, 51, 255, 0.25);
+}
+
 .entry-footer span {
   padding-right: 10px;
 }
@@ -11246,6 +11090,26 @@ article img,
 #secondary img {
   max-width: 100%;
   height: auto;
+}
+
+a.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+a.skip-link:active, a.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }
 
 .navbar-dark .navbar-nav .dropdown-menu .nav-link {
@@ -11348,11 +11212,6 @@ article img,
   margin-left: 0;
 }
 
-@media (max-width: 991.98px) {
-  body.admin-bar .offcanvas-end {
-    margin-top: 46px;
-  }
-}
 .jumbotron {
   margin-bottom: 0;
 }
@@ -11655,9 +11514,7 @@ article img,
   color: #343a40;
 }
 
-figure.wp-block-image {
-  display: block;
-}
+figure.wp-block-image,
 .wp-block-image > figure {
   display: block;
 }
@@ -11681,33 +11538,33 @@ body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-cont
 }
 @media (min-width: 576px) {
   body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+  body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
   body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+  body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
   body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+  body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   body.understrap-no-sidebar .alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
-body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
+  body.understrap-no-sidebar .alignfull .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignwide .wp-block-cover__inner-container,
+  body.understrap-no-sidebar .wp-block-cover.alignfull .wp-block-cover__inner-container {
     max-width: 1140px;
   }
 }
@@ -11719,7 +11576,7 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 }
 @media (max-width: 920px) {
   body.understrap-no-sidebar .alignwide,
-body.understrap-no-sidebar .wp-block-cover.alignwide {
+  body.understrap-no-sidebar .wp-block-cover.alignwide {
     margin: 0 calc(50% - 48vw);
     max-width: 96vw;
     width: 100vw;
@@ -11803,6 +11660,10 @@ figure.woocommerce-product-gallery__wrapper {
   color: #dc3545;
 }
 
+.woocommerce form .form-row label.custom-control-label {
+  line-height: inherit;
+}
+
 .woocommerce div.product p.price,
 .woocommerce div.product span.price,
 .woocommerce div.product .stock,
@@ -11811,6 +11672,10 @@ figure.woocommerce-product-gallery__wrapper {
 .woocommerce-cart .cart-collaterals .cart_totals .discount td,
 .woocommerce-checkout .cart-collaterals .cart_totals .discount td {
   color: #28a745;
+}
+
+.woocommerce-page form .show-password-input {
+  top: initial;
 }
 
 /*!
@@ -14830,7 +14695,7 @@ figure.woocommerce-product-gallery__wrapper {
   content: "\f2e0";
 }
 
-.sr-only, a.skip-link {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -14841,7 +14706,7 @@ figure.woocommerce-product-gallery__wrapper {
   border: 0;
 }
 
-.sr-only-focusable:active, a.skip-link:active, .sr-only-focusable:focus, a.skip-link:focus {
+.sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;

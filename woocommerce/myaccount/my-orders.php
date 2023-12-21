@@ -2,8 +2,8 @@
 /**
  * My Orders - Deprecated
  *
- * @package WooCommerce/Templates
  * @deprecated 2.6.0 this template file is no longer used. My Account shortcode uses orders.php.
+ * @package WooCommerce\Templates
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -49,7 +49,7 @@ if ( $customer_orders ) : ?>
 		<tbody>
 			<?php
 			foreach ( $customer_orders as $customer_order ) :
-				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Override
+				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 				$item_count = $order->get_item_count();
 				?>
 				<tr class="order">
@@ -77,11 +77,11 @@ if ( $customer_orders ) : ?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
-								$orders_actions = wc_get_account_orders_actions( $order );
+								$actions = wc_get_account_orders_actions( $order );
 
-								if ( ! empty( $orders_actions ) ) {
-									foreach ( $orders_actions as $key => $orders_action ) {
-										echo '<a href="' . esc_url( $orders_action['url'] ) . '" class="btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $orders_action['name'] ) . '</a>';
+								if ( ! empty( $actions ) ) {
+									foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+										echo '<a href="' . esc_url( $action['url'] ) . '" class=""btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 									}
 								}
 								?>

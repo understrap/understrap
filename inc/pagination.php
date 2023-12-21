@@ -50,8 +50,8 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'understrap' ),
-				'next_text'          => __( '&raquo;', 'understrap' ),
+				'prev_text'          => _x( '&laquo;', 'previous set of posts', 'understrap' ),
+				'next_text'          => _x( '&raquo;', 'next set of posts', 'understrap' ),
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 				'screen_reader_text' => __( 'Posts navigation', 'understrap' ),
 			)
@@ -69,9 +69,9 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 		if ( empty( $links ) ) {
 			return;
 		}
-
 		?>
 
+		<!-- The pagination component -->
 		<nav aria-labelledby="posts-nav-label">
 
 			<h2 id="posts-nav-label" class="screen-reader-text">
@@ -81,10 +81,14 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 			<ul class="<?php echo esc_attr( $class ); ?>">
 
 				<?php
-				foreach ( $links as $key => $link ) {
+				foreach ( $links as $link ) {
 					?>
 					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
-						<?php echo str_replace( 'page-numbers', 'page-link', $link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php
+						$search  = array( 'page-numbers', 'dots' );
+						$replace = array( 'page-link', 'disabled dots' );
+						echo str_replace( $search, $replace, $link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						?>
 					</li>
 					<?php
 				}

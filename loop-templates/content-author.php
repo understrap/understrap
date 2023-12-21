@@ -3,6 +3,7 @@
  * Template for displaying posts on the author archive
  *
  * @package Understrap
+ * @since 1.0.0
  */
 
 // Exit if accessed directly.
@@ -44,4 +45,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</footer><!-- .entry-footer -->
 
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->

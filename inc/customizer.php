@@ -10,21 +10,47 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists( 'understrap_customize_register' ) ) {
 	/**
-	 * Register basic support (site title, description, header text color) for the Theme Customizer.
+	 * Register basic support (site title, header text color) for the Theme Customizer.
 	 *
 	 * @param WP_Customize_Manager $wp_customize Customizer reference.
 	 */
 	function understrap_customize_register( $wp_customize ) {
-		$settings = array( 'blogname', 'blogdescription', 'header_textcolor' );
+		$settings = array( 'blogname', 'header_textcolor' );
 		foreach ( $settings as $setting ) {
 			$get_setting = $wp_customize->get_setting( $setting );
 			if ( $get_setting instanceof WP_Customize_Setting ) {
 				$get_setting->transport = 'postMessage';
 			}
 		}
+
+		// Override default partial for custom logo.
+		$wp_customize->selective_refresh->add_partial(
+			'custom_logo',
+			array(
+				'settings'            => array( 'custom_logo' ),
+				'selector'            => '.custom-logo-link',
+				'render_callback'     => 'understrap_customize_partial_custom_logo',
+				'container_inclusive' => false,
+			)
+		);
 	}
 }
 add_action( 'customize_register', 'understrap_customize_register' );
+
+if ( ! function_exists( 'understrap_customize_partial_custom_logo' ) ) {
+	/**
+	 * Callback for rendering the custom logo, used in the custom_logo partial.
+	 *
+	 * @return string The custom logo markup or the site title.
+	 */
+	function understrap_customize_partial_custom_logo() {
+		if ( has_custom_logo() ) {
+			return get_custom_logo();
+		} else {
+			return get_bloginfo( 'name' );
+		}
+	}
+}
 
 if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 	/**
@@ -106,7 +132,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			array(
 				'default'           => 'collapse',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'understrap_customize_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -116,19 +142,18 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_navbar_type',
 				array(
-					'label'             => __( 'Responsive Navigation Type', 'understrap' ),
-					'description'       => __(
+					'label'       => __( 'Responsive Navigation Type', 'understrap' ),
+					'description' => __(
 						'Choose between an expanding and collapsing navbar or an offcanvas drawer.',
 						'understrap'
 					),
-					'section'           => 'understrap_theme_layout_options',
-					'type'              => 'select',
-					'sanitize_callback' => 'understrap_customize_sanitize_select',
-					'choices'           => array(
+					'section'     => 'understrap_theme_layout_options',
+					'type'        => 'select',
+					'choices'     => array(
 						'collapse'  => __( 'Collapse', 'understrap' ),
 						'offcanvas' => __( 'Offcanvas', 'understrap' ),
 					),
-					'priority'          => apply_filters( 'understrap_navbar_type_priority', 20 ),
+					'priority'    => apply_filters( 'understrap_navbar_type_priority', 20 ),
 				)
 			)
 		);
@@ -138,7 +163,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			array(
 				'default'           => 'right',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'understrap_customize_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -148,21 +173,20 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_sidebar_position',
 				array(
-					'label'             => __( 'Sidebar Positioning', 'understrap' ),
-					'description'       => __(
+					'label'       => __( 'Sidebar Positioning', 'understrap' ),
+					'description' => __(
 						'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
 						'understrap'
 					),
-					'section'           => 'understrap_theme_layout_options',
-					'type'              => 'select',
-					'sanitize_callback' => 'understrap_customize_sanitize_select',
-					'choices'           => array(
+					'section'     => 'understrap_theme_layout_options',
+					'type'        => 'select',
+					'choices'     => array(
 						'right' => __( 'Right sidebar', 'understrap' ),
 						'left'  => __( 'Left sidebar', 'understrap' ),
 						'both'  => __( 'Left & Right sidebars', 'understrap' ),
 						'none'  => __( 'No sidebar', 'understrap' ),
 					),
-					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 20 ),
+					'priority'    => apply_filters( 'understrap_sidebar_position_priority', 20 ),
 				)
 			)
 		);
@@ -191,6 +215,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 
+		$understrap_site_info = $wp_customize->get_setting( 'understrap_site_info_override' );
+		if ( $understrap_site_info instanceof WP_Customize_Setting ) {
+			$understrap_site_info->transport = 'postMessage';
+		}
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
@@ -198,6 +226,8 @@ add_action( 'customize_register', 'understrap_theme_customize_register' );
 if ( ! function_exists( 'understrap_customize_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
+	 *
+	 * @since 1.2.0 Renamed from understrap_theme_slug_sanitize_select()
 	 *
 	 * @param string               $input   Slug to sanitize.
 	 * @param WP_Customize_Setting $setting Setting instance.
@@ -231,11 +261,17 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	 * Setup JS integration for live previewing.
 	 */
 	function understrap_customize_preview_js() {
+		$file    = '/js/customizer.js';
+		$version = filemtime( get_template_directory() . $file );
+		if ( false === $version ) {
+			$version = time();
+		}
+
 		wp_enqueue_script(
 			'understrap_customizer',
-			get_template_directory_uri() . '/js/customizer.js',
+			get_template_directory_uri() . $file,
 			array( 'customize-preview' ),
-			'20130508',
+			(string) $version,
 			true
 		);
 	}
@@ -248,13 +284,21 @@ add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
 if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
 	/**
 	 * Setup JS integration for live previewing.
+	 *
+	 * @since 1.1.0
 	 */
 	function understrap_customize_controls_js() {
+		$file    = '/js/customizer-controls.js';
+		$version = filemtime( get_template_directory() . $file );
+		if ( false === $version ) {
+			$version = time();
+		}
+
 		wp_enqueue_script(
 			'understrap_customizer',
-			get_template_directory_uri() . '/js/customizer-controls.js',
+			get_template_directory_uri() . $file,
 			array( 'customize-preview' ),
-			'20130508',
+			(string) $version,
 			true
 		);
 	}
@@ -265,8 +309,10 @@ if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
 	/**
 	 * Overrides the responsive navbar type for Bootstrap 4.
 	 *
+	 * @since 1.1.0
+	 *
 	 * @param string $current_mod Current navbar type.
-	 * @return string
+	 * @return string Maybe filtered navbar type.
 	 */
 	function understrap_default_navbar_type( $current_mod ) {
 

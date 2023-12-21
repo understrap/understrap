@@ -18,8 +18,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php
+			// Do the left sidebar check and open div#primary.
+			get_template_part( 'global-templates/left-sidebar-check' );
+			?>
 
 			<main class="site-main" id="main">
 
@@ -36,10 +38,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 				}
 				?>
 
-			</main><!-- #main -->
+			</main>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			<?php
+			// Do the right sidebar check and close div#primary.
+			get_template_part( 'global-templates/right-sidebar-check' );
+			?>
 
 		</div><!-- .row -->
 

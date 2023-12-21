@@ -46,11 +46,6 @@ parameters:
 			path: inc/editor.php
 
 		-
-			message: "#^Binary operation \"\\.\" between array\\|string\\|false and '\\.' results in an error\\.$#"
-			count: 2
-			path: inc/enqueue.php
-
-		-
 			message: "#^Function understrap_body_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/extras.php
@@ -66,19 +61,9 @@ parameters:
 			path: inc/extras.php
 
 		-
-			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\|string\\|false given\\.$#"
-			count: 2
-			path: inc/hooks.php
-
-		-
 			message: "#^Function understrap_pagination\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/pagination.php
-
-		-
-			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, string\\|void given\\.$#"
-			count: 1
-			path: inc/template-tags.php
 
 		-
 			message: "#^Function understrap_get_theme_default_settings\\(\\) return type has no value type specified in iterable type array\\.$#"
@@ -86,7 +71,27 @@ parameters:
 			path: inc/theme-settings.php
 
 		-
+			message: "#^Function understrap_add_block_widget_archives_classes\\(\\) has parameter \\$block with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_block_widget_categories_class\\(\\) has parameter \\$parsed_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
 			message: "#^Function understrap_add_block_widget_search_classes\\(\\) has parameter \\$block with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) has parameter \\$cat_args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/widgets.php
+
+		-
+			message: "#^Function understrap_add_widget_categories_class\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: inc/widgets.php
 
@@ -112,7 +117,22 @@ parameters:
 
 		-
 			message: "#^Cannot access an offset on mixed\\.$#"
-			count: 12
+			count: 10
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'aria\\-hidden' on mixed\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'data\\-allow\\-clear' on mixed\\.$#"
+			count: 2
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Cannot access offset 'data\\-plugin' on mixed\\.$#"
+			count: 2
 			path: inc/woocommerce.php
 
 		-
@@ -122,5 +142,10 @@ parameters:
 
 		-
 			message: "#^Function understrap_quantity_input_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: inc/woocommerce.php
+
+		-
+			message: "#^Part \\$args\\['label'\\] \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
 			count: 1
 			path: inc/woocommerce.php

@@ -11,8 +11,8 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.4.4
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -31,6 +31,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'woocommerce' ); ?></p>
 
 	<p class="form-row form-row-first">
+		<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label>
 		<input type="text" name="coupon_code" class="form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
 	</p>
 

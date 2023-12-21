@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "1.1.0",
+  "version": "1.2.3-beta.1",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,8 @@
     "extends": "./src/build/babel.config.js"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18",
+    "npm": ">=8.6.0"
   },
   "repository": {
     "type": "git",
@@ -45,37 +46,38 @@
     "bootstrap",
     "underscores"
   ],
-  "author": "The UnderStrap Authors (https://github.com/understrap/understrap/graphs/contributors)",
-  "license": "GPL-2.0",
+  "author": "The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)",
+  "license": "GPL-3.0",
+  "licenseUrl": "https://www.gnu.org/licenses/gpl-3.0.html",
   "bugs": {
     "url": "https://github.com/understrap/understrap/issues"
   },
   "homepage": "https://understrap.com",
   "devDependencies": {
-    "@babel/core": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@popperjs/core": "^2.11.5",
-    "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-commonjs": "^22.0.1",
-    "@rollup/plugin-multi-entry": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-replace": "^4.0.0",
-    "autoprefixer": "^10.4.7",
-    "bootstrap": "^5.2.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@popperjs/core": "^2.11.8",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-multi-entry": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.3",
+    "autoprefixer": "^10.4.16",
+    "bootstrap": "~5.2.3",
     "bootstrap4": "npm:bootstrap@^4.6.2",
-    "browser-sync": "^2.27.10",
-    "browserslist": "^4.21.2",
-    "caniuse-lite": "^1.0.30001367",
-    "clean-css-cli": "^5.6.1",
+    "browser-sync": "^2.29.3",
+    "browserslist": "^4.22.1",
+    "caniuse-lite": "^1.0.30001547",
+    "clean-css-cli": "^5.6.2",
     "font-awesome": "^4.7.0",
-    "nodemon": "^2.0.19",
+    "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^10.0.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^2.77.0",
-    "sass": "^1.53.0",
-    "terser": "^5.14.2"
+    "rollup": "^4.0.2",
+    "sass": "^1.69.3",
+    "terser": "^5.21.0"
   }
 }

@@ -64,6 +64,35 @@ figure.woocommerce-product-gallery__wrapper {
 	color: $danger;
 }
 
+.woocommerce form .form-row label {
+	// Override WooCommerce default styles.
+	@if variable-exists('bootstrap4') {
+		&.custom-control-label {
+			line-height: inherit;
+		}
+	} @else {
+		&.form-check-label {
+			line-height: inherit;
+		}
+	}
+}
+
+@if not variable-exists('bootstrap4') {
+	// Override WooCommerce default styles.
+	.woocommerce form .form-row .checkbox {
+		&.form-check {
+			display: block;
+			line-height: inherit;
+		}
+	}
+	.woocommerce form .form-row .input-checkbox {
+		&.form-check-input {
+			$top: ($line-height-base - $form-check-input-width) * .5;
+			$left: $form-check-padding-start * -1;
+			margin: $top 0 0 $left
+		}
+	}
+}
 
 // Accessibility requirement for color contrast
 .woocommerce div.product p.price,
@@ -74,4 +103,8 @@ figure.woocommerce-product-gallery__wrapper {
 .woocommerce-cart .cart-collaterals .cart_totals .discount td,
 .woocommerce-checkout .cart-collaterals .cart_totals .discount td {
 	color: $green;
+}
+
+.woocommerce-page form .show-password-input {
+	top: initial;
 }

@@ -13,8 +13,8 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 2.4.0
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  */
 
 // Exit if accessed directly.
