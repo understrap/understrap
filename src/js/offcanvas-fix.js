@@ -38,12 +38,12 @@ export const offcanvasFix = ( offcanvasEl ) => {
 				}
 
 				// Temporarily set tabindex=-1 if the destination anchor is not
-				// focusable yet.
+				// yet focusable.
 				if ( goto.dataset.focusable === '2' ) {
 					goto.tabIndex = '-1';
 				}
 
-				// Remove a temporarly added tabindex=-1 as soon as the
+				// Remove a temporarily added tabindex=-1 as soon as the
 				// destination anchor no longer has focus.
 				goto.addEventListener( 'focus', () => {
 					goto.addEventListener( 'blur', () => {
