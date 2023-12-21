@@ -9,6 +9,8 @@ parameters:
 	level: max
 	paths:
 		- inc/
+	scanDirectories:
+		- vendor/wp-plugins/contact-form-7
 	excludePaths:
 		- inc/deprecated.php
 		- inc/class-wp-bootstrap-navwalker.php

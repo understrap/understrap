@@ -39,6 +39,11 @@ if ( class_exists( 'Jetpack' ) ) {
 	$understrap_includes[] = '/jetpack.php';
 }
 
+// Load Contact Form 7 compatibility file if Contact Form 7 is activiated.
+if ( class_exists( 'WPCF7' ) ) {
+	$understrap_includes[] = '/contact-form-7.php';
+}
+
 // Include files.
 foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );

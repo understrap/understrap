@@ -20,7 +20,8 @@ use PHPStan\Type\TypeCombinator;
 /**
  * This class implements dynamic return types for Understrap specific theme mods.
  */
-class GetThemeModReturnType implements DynamicFunctionReturnTypeExtension {
+class GetThemeModReturnType implements DynamicFunctionReturnTypeExtension
+{
 
 	/**
 	 * Understrap specific theme modifications.
