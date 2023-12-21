@@ -4,7 +4,7 @@
 	<description>Apply WordPress Coding Standards to Understrap</description>
 
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
-	<arg name="cache" value=".phpcs-cache"/>
+	<arg name="cache" value=".phpcs-cache.json"/>
 
 	<!-- Strip the filepaths down to the relevant bit. -->
 	<arg name="basepath" value="./"/>
@@ -89,12 +89,17 @@
 		<exclude phpcs-only="true" name="Generic.Files.LineEndings"/>
 	</rule>
 
+	<!-- Ignore mixed line-endings warnings -->
+	<rule ref="Internal.LineEndings.Mixed">
+		<severity>0</severity>
+	</rule>
+
 	<!-- Use the WPThemeReview Ruleset -->
 	<rule ref="WPThemeReview" />
 
 	<!--
 		Exclude checking for shortened URLs in Bootstrap's js. files.
-		Also exlude theme.js which includes bootstrap.js.
+		Also exclude theme.js which includes bootstrap.js.
 	-->
 	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
 		<exclude-pattern>/js/theme*\.js</exclude-pattern>
