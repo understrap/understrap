@@ -242,7 +242,7 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 			$label_class     = 'form-check-label';
 		}
 
-		// Remove the first occurance of the label class if neccessary.
+		// Remove the first occurrence of the label class if necessary.
 		if ( '' !== $args['label'] && ! empty( $args['label_class'] ) ) {
 			$strpos = strpos( $field, $label_class );
 			if ( false !== $strpos ) {
