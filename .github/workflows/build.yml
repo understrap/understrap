@@ -1,0 +1,71 @@
+name: Build CSS & JS
+
+on:
+  push:
+    branches: [ develop ]
+    paths:
+      - '**.scss'
+      - '**.js'
+      - 'package-lock.json'
+  pull_request_target:
+    branches: [ develop ]
+    paths:
+      - '**.scss'
+      - '**.js'
+      - 'package-lock.json'
+  workflow_dispatch:
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+
+  build:
+
+    name: 'Build CSS & JS'
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Copy assets
+        run: npm run copy-assets
+
+      - name: Commit assets
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update assets
+
+      - name: Build Bootstrap 5 CSS
+        run: npm run css
+
+      - name: Build Bootstrap 5 JS
+        run: npm run js
+
+      - name: Build Bootstrap 4 CSS
+        run: npm run css-bs4
+
+      - name: Build Bootstrap 4 JS
+        run: npm run js-bs4
+
+      - name: Commit CSS and JS files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Rebuild CSS and JS files
