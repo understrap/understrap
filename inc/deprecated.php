@@ -8,6 +8,50 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_components_jetpack_setup' ) ) {
+	/**
+	 * Jetpack setup function.
+	 *
+	 * @deprecated 1.2.0 Use understrap_jetpack_setup()
+	 * @see understrap_jetpack_setup()
+	 *
+	 * @link https://jetpack.me/support/infinite-scroll/
+	 * @link https://jetpack.me/support/responsive-videos/
+	 * @link https://jetpack.me/support/social-menu/
+	 */
+	function understrap_components_jetpack_setup() {
+		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_jetpack_setup'	);
+		return understrap_jetpack_setup();
+	}
+}
+
+if ( ! function_exists( 'understrap_components_infinite_scroll_render' ) ) {
+	/**
+	 * Custom render function for Infinite Scroll.
+	 *
+	 * @deprecated 1.2.0 Use understrap_jetpack_infinite_scroll_render()
+	 * @see understrap_jetpack_infinite_scroll_render()
+	 */
+	function understrap_components_infinite_scroll_render() {
+		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_jetpack_infinite_scroll_render' );
+		return understrap_jetpack_infinite_scroll_render();
+	}
+}
+
+if ( ! function_exists( 'understrap_components_social_menu' ) ) {
+	/**
+	 * Display Jetpack's social menu if available.
+	 * Avoids fatal errors if Jetpack isn’t activated.
+	 *
+	 * @deprecated 1.2.0 Use understrap_jetpack_social_menu()
+	 * @see understrap_jetpack_social_menu()
+	 */
+	function understrap_components_social_menu() {
+		_deprecated_function( __FUNCTION__, '1.2.0', 'understrap_jetpack_social_menu' );
+		return understrap_jetpack_social_menu();
+	}
+}
+
 if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
