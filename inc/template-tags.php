@@ -204,7 +204,7 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		 * @param array $atts An associative array of attributes.
 		 */
 		$atts = array_unique( apply_filters( 'understrap_body_attributes', $atts = array() ) );
-		if ( ! is_array( $atts ) || empty( $atts ) ) {
+		if ( empty( $atts ) ) {
 			return;
 		}
 
@@ -322,16 +322,30 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 	 *
 	 * @since 1.0.0
 	 *
+	 * @link https://developer.wordpress.org/reference/functions/wp_link_pages/
+	 *
 	 * @return void|string Formatted output in HTML.
 	 */
 	function understrap_link_pages() {
-		$args = apply_filters(
-			'understrap_link_pages_args',
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
+		$args = array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'understrap' ),
+			'after'  => '</div>',
 		);
+
+		/**
+		 * Filters the arguments used in retrieving page links for paginated posts.
+		 *
+		 * Runs before the 'wp_link_pages_args' hook.
+		 *
+		 * @since 1.0.0
+		 */
+		$args = apply_filters_deprecated(
+			'understrap_link_pages_args',
+			array( $args ),
+			'1.2.3',
+			'wp_link_pages_args'
+		);
+
 		wp_link_pages( $args );
 	}
 }
