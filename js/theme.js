@@ -1,6 +1,6 @@
 /*!
  * Understrap v1.2.3-beta.1 (https://understrap.com)
- * Copyright 2013-2023 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+ * Copyright 2013-2024 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
  * Licensed under GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
  */
 (function (global, factory) {
@@ -181,7 +181,6 @@
   const reflow = element => {
     element.offsetHeight; // eslint-disable-line no-unused-expressions
   };
-
   const getjQuery = () => {
     if (window.jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
       return window.jQuery;
@@ -3836,7 +3835,6 @@
     // if false, we use the backdrop helper without adding any element to the dom
     rootElement: 'body' // give the choice to place backdrop under different elements
   };
-
   const DefaultType$8 = {
     className: 'string',
     clickCallback: '(function|null)',
@@ -3961,7 +3959,6 @@
     autofocus: true,
     trapElement: null // The element to trap focus inside of
   };
-
   const DefaultType$7 = {
     autofocus: 'boolean',
     trapElement: 'element'
