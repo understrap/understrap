@@ -1,6 +1,6 @@
 /*!
  * Understrap v1.2.3-beta.1 (https://understrap.com)
- * Copyright 2013-2023 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+ * Copyright 2013-2024 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
  * Licensed under GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
  */
 (function (global, factory) {
