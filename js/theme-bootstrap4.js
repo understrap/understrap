@@ -1,6 +1,6 @@
 /*!
- * Understrap v1.2.3-beta.1 (https://understrap.com)
- * Copyright 2013-2023 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+ * Understrap v1.2.3 (https://understrap.com)
+ * Copyright 2013-2024 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
  * Licensed under GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
  */
 (function (global, factory) {
@@ -15,7 +15,7 @@
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
       if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
+      Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
   function _createClass(Constructor, protoProps, staticProps) {
@@ -52,20 +52,6 @@
     };
     return _setPrototypeOf(o, p);
   }
-  function _toPrimitive(input, hint) {
-    if (typeof input !== "object" || input === null) return input;
-    var prim = input[Symbol.toPrimitive];
-    if (prim !== undefined) {
-      var res = prim.call(input, hint || "default");
-      if (typeof res !== "object") return res;
-      throw new TypeError("@@toPrimitive must return a primitive value.");
-    }
-    return (hint === "string" ? String : Number)(input);
-  }
-  function _toPropertyKey(arg) {
-    var key = _toPrimitive(arg, "string");
-    return typeof key === "symbol" ? key : String(key);
-  }
 
   /**
    * --------------------------------------------------------------------------
@@ -73,7 +59,6 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
-
 
   /**
    * Private TransitionEnd Helpers
@@ -4763,12 +4748,12 @@
     var createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
     var whitelistKeys = Object.keys(whiteList);
     var elements = [].slice.call(createdDocument.body.querySelectorAll('*'));
-    var _loop = function _loop() {
+    var _loop = function _loop(i, len) {
       var el = elements[i];
       var elName = el.nodeName.toLowerCase();
       if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) === -1) {
         el.parentNode.removeChild(el);
-        return 1; // continue
+        return "continue";
       }
       var attributeList = [].slice.call(el.attributes);
       // eslint-disable-next-line unicorn/prefer-spread
@@ -4780,7 +4765,8 @@
       });
     };
     for (var i = 0, len = elements.length; i < len; i++) {
-      if (_loop()) continue;
+      var _ret = _loop(i);
+      if (_ret === "continue") continue;
     }
     return createdDocument.body.innerHTML;
   }
