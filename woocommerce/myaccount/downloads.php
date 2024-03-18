@@ -12,7 +12,7 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://woo.com/document/template-structure/
  * @package WooCommerce\Templates
  * @version 7.8.0
  */
@@ -36,5 +36,5 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 
 <?php endif; ?>
 
-<?php 
-do_action( 'woocommerce_after_account_downloads', $has_downloads ); 
+<?php
+do_action( 'woocommerce_after_account_downloads', $has_downloads );

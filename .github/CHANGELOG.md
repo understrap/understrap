@@ -8,11 +8,11 @@
 
   -
 
-## Release 1.2.3-beta.1 October 16th 2023
+## Release 1.2.3 March 18th 2024
 
 ** Enhancements **
 
-  - Add and update WooCommerce templates #2091
+  - Add and update WooCommerce templates #2091 #2169
   - Improves readability of the sidebar templates #2071
   - Uses Babel to compile Bootstrap imports #2035
   - Adds Bootstrap container classes and max-widths to editor styles #2121
