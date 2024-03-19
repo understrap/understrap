@@ -12,7 +12,7 @@
  *
  * @see https://woo.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 7.0.1
+ * @version 8.7.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -44,6 +44,15 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text form-control" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" />
 	</p>
 
+	<?php
+		/**
+		 * Hook where additional fields should be rendered.
+		 *
+		 * @since 8.7.0
+		 */
+		do_action( 'woocommerce_edit_account_form_fields' );
+	?>
+
 	<fieldset>
 		<legend><?php esc_html_e( 'Password change', 'woocommerce' ); ?></legend>
 
@@ -62,16 +71,22 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	</fieldset>
 	<div class="clear"></div>
 
-	<?php do_action( 'woocommerce_edit_account_form' ); ?>
+	<?php
+		/**
+		 * My Account edit account form.
+		 *
+		 * @since 2.6.0
+		 */
+		do_action( 'woocommerce_edit_account_form' );
+	?>
 
 	<p>
 		<?php wp_nonce_field( 'save_account_details', 'save-account-details-nonce' ); ?>
-		<button type="submit" class="btn btn-outline-primary" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button>
+		<button type="submit" class="btn btn-outline-primary woocommerce-Button button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button>
 		<input type="hidden" name="action" value="save_account_details" />
 	</p>
 
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 </form>
 
-<?php
-do_action( 'woocommerce_after_edit_account_form' );
+<?php do_action( 'woocommerce_after_edit_account_form' ); ?>
