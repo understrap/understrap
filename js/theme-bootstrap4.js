@@ -9,13 +9,27 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.understrap = {}, global.jQuery));
 })(this, (function (exports, $) { 'use strict';
 
+  function _toPrimitive(t, r) {
+    if ("object" != typeof t || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+      var i = e.call(t, r || "default");
+      if ("object" != typeof i) return i;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return ("string" === r ? String : Number)(t);
+  }
+  function _toPropertyKey(t) {
+    var i = _toPrimitive(t, "string");
+    return "symbol" == typeof i ? i : i + "";
+  }
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
       var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
       if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
+      Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
     }
   }
   function _createClass(Constructor, protoProps, staticProps) {
@@ -60,6 +74,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Private TransitionEnd Helpers
    */
@@ -83,7 +98,6 @@
         if ($(event.target).is(this)) {
           return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
-
         return undefined;
       }
     };
@@ -316,13 +330,12 @@
         alertInstance.close(this);
       };
     };
-    _createClass(Alert, null, [{
+    return _createClass(Alert, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$a;
       }
     }]);
-    return Alert;
   }();
   /**
    * Data API implementation
@@ -436,13 +449,12 @@
         }
       });
     };
-    _createClass(Button, null, [{
+    return _createClass(Button, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$9;
       }
     }]);
-    return Button;
   }();
   /**
    * Data API implementation
@@ -962,7 +974,7 @@
       }
       event.preventDefault();
     };
-    _createClass(Carousel, null, [{
+    return _createClass(Carousel, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$8;
@@ -973,7 +985,6 @@
         return Default$7;
       }
     }]);
-    return Carousel;
   }();
   /**
    * Data API implementation
@@ -1237,7 +1248,7 @@
         }
       });
     };
-    _createClass(Collapse, null, [{
+    return _createClass(Collapse, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$7;
@@ -1248,7 +1259,6 @@
         return Default$6;
       }
     }]);
-    return Collapse;
   }();
   /**
    * Data API implementation
@@ -3709,7 +3719,6 @@
        * @memberof Popper
        */
     }]);
-
     return Popper;
   }();
 
@@ -3736,7 +3745,6 @@
   Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
   Popper.placements = placements;
   Popper.Defaults = Defaults;
-  var Popper$1 = Popper;
 
   /**
    * Constants
@@ -3845,7 +3853,7 @@
       // Totally disable Popper for Dropdowns in Navbar
       if (!this._inNavbar && usePopper) {
         // Check for Popper dependency
-        if (typeof Popper$1 === 'undefined') {
+        if (typeof Popper === 'undefined') {
           throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
         }
         var referenceElement = this._element;
@@ -3866,7 +3874,7 @@
         if (this._config.boundary !== 'scrollParent') {
           $(parent).addClass(CLASS_NAME_POSITION_STATIC);
         }
-        this._popper = new Popper$1(referenceElement, this._menu, this._getPopperConfig());
+        this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
       }
 
       // If this is a touch-enabled device we add extra
@@ -4116,7 +4124,7 @@
       }
       items[index].focus();
     };
-    _createClass(Dropdown, null, [{
+    return _createClass(Dropdown, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$6;
@@ -4132,7 +4140,6 @@
         return DefaultType$5;
       }
     }]);
-    return Dropdown;
   }();
   /**
    * Data API implementation
@@ -4609,7 +4616,7 @@
         }
       });
     };
-    _createClass(Modal, null, [{
+    return _createClass(Modal, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$5;
@@ -4620,7 +4627,6 @@
         return Default$4;
       }
     }]);
-    return Modal;
   }();
   /**
    * Data API implementation
@@ -4748,12 +4754,12 @@
     var createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
     var whitelistKeys = Object.keys(whiteList);
     var elements = [].slice.call(createdDocument.body.querySelectorAll('*'));
-    var _loop = function _loop(i, len) {
+    var _loop = function _loop() {
       var el = elements[i];
       var elName = el.nodeName.toLowerCase();
       if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) === -1) {
         el.parentNode.removeChild(el);
-        return "continue";
+        return 1; // continue
       }
       var attributeList = [].slice.call(el.attributes);
       // eslint-disable-next-line unicorn/prefer-spread
@@ -4765,8 +4771,7 @@
       });
     };
     for (var i = 0, len = elements.length; i < len; i++) {
-      var _ret = _loop(i);
-      if (_ret === "continue") continue;
+      if (_loop()) continue;
     }
     return createdDocument.body.innerHTML;
   }
@@ -4856,7 +4861,7 @@
    */
   var Tooltip = /*#__PURE__*/function () {
     function Tooltip(element, config) {
-      if (typeof Popper$1 === 'undefined') {
+      if (typeof Popper === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
       }
 
@@ -4961,7 +4966,7 @@
           $(tip).appendTo(container);
         }
         $(this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper$1(this.element, tip, this._getPopperConfig(attachment));
+        this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
         $(tip).addClass(CLASS_NAME_SHOW$3);
         $(tip).addClass(this.config.customClass);
 
@@ -5320,7 +5325,7 @@
         }
       });
     };
-    _createClass(Tooltip, null, [{
+    return _createClass(Tooltip, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$4;
@@ -5356,7 +5361,6 @@
         return DefaultType$3;
       }
     }]);
-    return Tooltip;
   }();
   /**
    * jQuery
@@ -5409,10 +5413,10 @@
    * Class definition
    */
   var Popover = /*#__PURE__*/function (_Tooltip) {
-    _inheritsLoose(Popover, _Tooltip);
     function Popover() {
       return _Tooltip.apply(this, arguments) || this;
     }
+    _inheritsLoose(Popover, _Tooltip);
     var _proto = Popover.prototype;
     // Overrides
     _proto.isWithContent = function isWithContent() {
@@ -5472,7 +5476,7 @@
         }
       });
     };
-    _createClass(Popover, null, [{
+    return _createClass(Popover, null, [{
       key: "VERSION",
       get:
       // Getters
@@ -5510,7 +5514,6 @@
         return DefaultType$2;
       }
     }]);
-    return Popover;
   }(Tooltip);
   /**
    * jQuery
@@ -5724,7 +5727,7 @@
         }
       });
     };
-    _createClass(ScrollSpy, null, [{
+    return _createClass(ScrollSpy, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$2;
@@ -5735,7 +5738,6 @@
         return Default$1;
       }
     }]);
-    return ScrollSpy;
   }();
   /**
    * Data API implementation
@@ -5922,13 +5924,12 @@
         }
       });
     };
-    _createClass(Tab, null, [{
+    return _createClass(Tab, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$1;
       }
     }]);
-    return Tab;
   }();
   /**
    * Data API implementation
@@ -6097,7 +6098,7 @@
         }
       });
     };
-    _createClass(Toast, null, [{
+    return _createClass(Toast, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION;
@@ -6113,7 +6114,6 @@
         return Default;
       }
     }]);
-    return Toast;
   }();
   /**
    * jQuery
