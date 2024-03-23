@@ -99,6 +99,6 @@
 		which are provided by WordPress.
 	-->
 	<rule ref="PHPCompatibilityWP">
-    	<include-pattern>*\.php$</include-pattern>
+		<include-pattern>*\.php$</include-pattern>
 	</rule>
 </ruleset>
