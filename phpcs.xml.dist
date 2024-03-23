@@ -15,6 +15,9 @@
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
 
+	<!-- Check for cross-version support for PHP 5.2 and higher. -->
+	<config name="testVersion" value="5.2-"/>
+
 	<!-- Scan these files -->
 	<file>.</file>
 
@@ -58,11 +61,6 @@
 		</properties>
 	</rule>
 
-	<!-- Assignments in while conditions are a valid method of looping over iterables. -->
-	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">
-		<exclude-pattern>*</exclude-pattern>
-	</rule>
-
 	<!-- Exclude incorrectly named files that won't be renamed. -->
 	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
 		<exclude-pattern>/inc/class-wp-bootstrap-navwalker\.php</exclude-pattern>
@@ -94,14 +92,13 @@
 		<severity>0</severity>
 	</rule>
 
-	<!-- Use the WPThemeReview Ruleset -->
-	<rule ref="WPThemeReview" />
-
 	<!--
-		Exclude checking for shortened URLs in Bootstrap's js. files.
-		Also exclude theme.js which includes bootstrap.js.
+		Check for PHP cross-version compatibility.
+		This WordPress specific ruleset prevents false positives from the
+		PHPCompatibility standard by excluding back-fills and poly-fills
+		which are provided by WordPress.
 	-->
-	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
-		<exclude-pattern>/js/theme*\.js</exclude-pattern>
+	<rule ref="PHPCompatibilityWP">
+    	<include-pattern>*\.php$</include-pattern>
 	</rule>
 </ruleset>
