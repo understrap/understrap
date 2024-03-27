@@ -50,13 +50,13 @@ jobs:
           fail-fast: true
 
       - name: Cache PHPCS cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .phpcs-cache.json
           key: ${{ runner.os }}-phpcs-cache-${{ hashFiles('**/composer.lock', 'phpcs.xml.dist') }}
 
       - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v2"
+        uses: "ramsey/composer-install@v3"
 
       - name: Auto fix coding standards
         run: composer phpcs-fix
@@ -114,13 +114,13 @@ jobs:
           fail-fast: true
 
       - name: Cache PHPStan cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .phpstan-cache
           key: ${{ runner.os }}-phpstan-cache-${{ hashFiles('**/composer.lock', 'phpstan.neon.dist') }}
 
       - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v2"
+        uses: "ramsey/composer-install@v3"
 
       - name: Analyse
         id: phpstan
