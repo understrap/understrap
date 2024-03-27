@@ -19,7 +19,11 @@ if ( ! is_active_sidebar( 'hero' ) ) {
 
 	<div class="carousel-inner">
 
-		<?php dynamic_sidebar( 'hero' ); ?>
+		<?php
+		ob_start();
+		dynamic_sidebar( 'hero' );
+		echo wp_kses_post( understrap_remove_hero_lazy_load( ob_get_clean() ) );
+		?>
 
 	</div>
 

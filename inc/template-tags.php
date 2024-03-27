@@ -350,6 +350,61 @@ if ( ! function_exists( 'understrap_link_pages' ) ) {
 	}
 }
 
+if ( ! function_exists( 'understrap_remove_hero_lazy_load' ) ) {
+
+	/**
+	 * Removes the loading attribute from all images used in the first carousel
+	 * item if it's value is "lazy".
+	 *
+	 * @param string $html Hero HTML markup.
+	 * @return string Hero HTML markup.
+	 */
+	function understrap_remove_hero_lazy_load( $html ) {
+
+		if ( ! version_compare( PHP_VERSION, '5.3', '>' ) ) {
+			/*
+			 * LIBXML_HTML_NODEFDTD and LIBXML_HTML_NOIMPLIED are not present in
+			 * PHP version 5.3 or earlier.
+			 */
+			return $html;
+		}
+
+		if ( false === strpos( $html, '<img' ) || false === strpos( $html, 'loading="lazy"' ) ) {
+			return $html;
+		}
+
+		$document = new DOMDocument();
+		libxml_use_internal_errors( true );
+		$loaded_html = $document->loadHTML(
+			'<html>' . mb_convert_encoding( $html, 'HTML-ENTITIES', 'UTF-8' ) . '</html>',
+			LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD // phpcs:ignore PHPCompatibility.Constants.NewConstants -- ok.
+		);
+		if ( false === $loaded_html ) {
+			return $html;
+		}
+
+		$first_item = $document->getElementsByTagName( 'div' )->item( 0 );
+		$xpath      = new DOMXPath( $document );
+
+		$images = $xpath->query( './/img', $first_item );
+		if ( empty( $images ) ) {
+			return $html;
+		}
+
+		foreach ( $images as $image ) {
+			if ( $image instanceof DOMElement && 'lazy' === $image->getAttribute( 'loading' ) ) {
+				$image->removeAttribute( 'loading' );
+			}
+		}
+
+		$saved_html = $document->saveHTML();
+		if ( false === $saved_html ) {
+			return $html;
+		}
+		return str_replace( array( '<html>', '</html>' ), '', $saved_html );
+	}
+}
+
 if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
 	/**
 	 * Retrieves the Bootstrap CSS class for the select tag.
