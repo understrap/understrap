@@ -247,7 +247,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 		return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . $permalink . '">' . __(
 			'Read More...',
 			'understrap'
-		) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
+		) . '<span class="screen-reader-text">' . esc_html_e( ' from ', 'understrap' ) . get_the_title( get_the_ID() ) . '</span></a></p>';
 
 	}
 }
