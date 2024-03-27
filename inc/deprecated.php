@@ -8,6 +8,45 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_bootstrap_comment_form_fields' ) ) {
+	/**
+	 * Add Bootstrap classes to WP's comment form default fields.
+	 *
+	 * @deprecated 1.3.0 Use understrap_comment_form_fields()
+	 * @see understrap_comment_form_fields()
+	 *
+	 * @param array $fields {
+	 *     Default comment fields.
+	 *
+	 *     @type string $author  Comment author field HTML.
+	 *     @type string $email   Comment author email field HTML.
+	 *     @type string $url     Comment author URL field HTML.
+	 *     @type string $cookies Comment cookie opt-in field HTML.
+	 * }
+	 * @return array
+	 */
+	function understrap_bootstrap_comment_form_fields( $fields ) {
+		_deprecated_function( __FUNCTION__, '1.3.0', 'understrap_comment_form_fields' );
+		return understrap_comment_form_fields( $fields );
+	}
+}
+
+if ( ! function_exists( 'understrap_bootstrap_comment_form' ) ) {
+	/**
+	 * Adds Bootstrap classes to comment form submit button and comment field.
+	 *
+	 * @deprecated 1.3.0 Use understrap_comment_form()
+	 * @see understrap_comment_form()
+	 *
+	 * @param string[] $args Comment form arguments and fields.
+	 * @return string[]
+	 */
+	function understrap_bootstrap_comment_form( $args ) {
+		_deprecated_function( __FUNCTION__, '1.3.0', 'understrap_comment_form' );
+		return understrap_comment_form( $args );
+	}
+}
+
 if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
@@ -38,7 +77,7 @@ if ( ! function_exists( 'understrap_adjust_body_class' ) ) {
 	 * @link https://github.com/twbs/bootstrap/issues/20939
 	 */
 	function understrap_adjust_body_class( $classes ) {
-		_deprecated_function( 'understrap_adjust_body_class', '0.9.4' );
+		_deprecated_function( __FUNCTION__, '0.9.4' );
 		return $classes;
 	}
 }
@@ -53,7 +92,7 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 	 */
 	function understrap_slbd_count_widgets( $sidebar_id ) {
 
-		_deprecated_function( 'understrap_slbd_count_widgets', '0.8.9', 'understrap_widget_classes' );
+		_deprecated_function( __FUNCTION__, '0.8.9', 'understrap_widget_classes' );
 
 		// If loading from front page, consult $_wp_sidebars_widgets rather than options
 		// to see if wp_convert_widget_settings() has made manipulations in memory.
