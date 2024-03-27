@@ -275,6 +275,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 	function understrap_widgets_init() {
 		register_sidebar(
 			array(
+				/* translators: Widget area title */
 				'name'          => __( 'Right Sidebar', 'understrap' ),
 				'id'            => 'right-sidebar',
 				'description'   => __( 'Right sidebar widget area', 'understrap' ),
@@ -287,6 +288,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
+				/* translators: Widget area title */
 				'name'          => __( 'Left Sidebar', 'understrap' ),
 				'id'            => 'left-sidebar',
 				'description'   => __( 'Left sidebar widget area', 'understrap' ),
@@ -299,6 +301,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
+				/* translators: Widget area title */
 				'name'          => __( 'Hero Slider', 'understrap' ),
 				'id'            => 'hero',
 				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'understrap' ),
@@ -311,6 +314,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
+				/* translators: Widget area title */
 				'name'          => __( 'Hero Canvas', 'understrap' ),
 				'id'            => 'herocanvas',
 				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'understrap' ),
@@ -323,6 +327,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
+				/* translators: Widget area title */
 				'name'          => __( 'Top Full', 'understrap' ),
 				'id'            => 'statichero',
 				'description'   => __( 'Full top widget with dynamic grid', 'understrap' ),
@@ -335,6 +340,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
+				/* translators: Widget area title */
 				'name'          => __( 'Footer Full', 'understrap' ),
 				'id'            => 'footerfull',
 				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
