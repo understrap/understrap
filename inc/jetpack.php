@@ -36,7 +36,6 @@ if ( ! function_exists( 'understrap_components_jetpack_setup' ) ) {
 
 		// Add theme support for Social Menus.
 		add_theme_support( 'jetpack-social-menu' );
-
 	}
 }
 

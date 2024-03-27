@@ -37,9 +37,9 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 	 *     @type string $after_page_number  A string to append after the page number. Default empty.
 	 *     @type string $screen_reader_text Screen reader text for the nav element. Default 'Posts navigation'.
 	 * }
-	 * @param string $class                 (Optional) Classes to be added to the <ul> element. Default 'pagination'.
+	 * @param string $classes               (Optional) Classes to be added to the <ul> element. Default 'pagination'.
 	 */
-	function understrap_pagination( $args = array(), $class = 'pagination' ) {
+	function understrap_pagination( $args = array(), $classes = 'pagination' ) {
 
 		if ( ! $GLOBALS['wp_query'] instanceof WP_Query || ( ! isset( $args['total'] ) && $GLOBALS['wp_query']->max_num_pages <= 1 ) ) {
 			return;
@@ -78,7 +78,7 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 				<?php echo esc_html( $args['screen_reader_text'] ); ?>
 			</h2>
 
-			<ul class="<?php echo esc_attr( $class ); ?>">
+			<ul class="<?php echo esc_attr( $classes ); ?>">
 
 				<?php
 				foreach ( $links as $link ) {

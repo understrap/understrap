@@ -109,7 +109,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 * @phpstan-param T $args
 	 * @phpstan-return T | array{'class': non-empty-list<string>}
 	 */
-	function understrap_wc_form_field_args( $args, $key, $value ) {
+	function understrap_wc_form_field_args( $args, $key, $value ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
 		$bootstrap4 = 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
 
 		// Add margin to each form field's html element wrapper (<p></p>).
@@ -232,7 +232,8 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 	 * }
 	 * @phpstan-param T $args
 	 */
-	function understrap_wc_form_field_radio( $field, $key, $args, $value ) {
+	function understrap_wc_form_field_radio( $field, $key, $args, $value ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
+
 		// Set up Bootstrap version specific variables.
 		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
 			$wrapper_classes = 'custom-control custom-radio';

@@ -177,7 +177,7 @@ function understrap_hero_active_carousel_item( $params ) {
 			$params[0]['before_widget']
 		);
 	}
-	$item_number++;
+	++$item_number;
 
 	return $params;
 }
@@ -262,7 +262,6 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 		}
 
 		return $params;
-
 	}
 } // End of if function_exists( 'understrap_widget_classes' ).
 
@@ -350,6 +349,5 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'after_title'   => '</h3>',
 			)
 		);
-
 	}
 } // End of function_exists( 'understrap_widgets_init' ).

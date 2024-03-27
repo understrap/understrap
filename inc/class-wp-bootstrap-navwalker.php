@@ -301,7 +301,6 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 * END appending the internal item contents to the output.
 			 */
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-
 		}
 
 		/**
