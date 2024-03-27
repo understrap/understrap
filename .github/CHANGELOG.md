@@ -8,6 +8,15 @@
 
   -
 
+## Release 1.2.4 April 1st 2024
+
+** Fixes **
+
+  - Woocommerce templates #2189
+  - Translations #2002
+  - WooCommerce input fields #2089
+  - Updates build process dependencies
+
 ## Release 1.2.3 March 18th 2024
 
 ** Enhancements **
