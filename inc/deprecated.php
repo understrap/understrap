@@ -8,6 +8,20 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
+	/**
+	 * Setup JS integration for live previewing.
+	 *
+	 * @since 1.1.0
+	 * @deprecated x.x.x
+	 */
+	function understrap_customize_controls_js() {
+		_deprecated_function( __FUNCTION__, 'x.x.x' );
+	}
+} else {
+	add_action( 'customize_preview_init', 'understrap_customize_controls_js' );
+}
+
 if ( ! function_exists( 'understrap_theme_slug_sanitize_select' ) ) {
 	/**
 	 * Sanitize select.
