@@ -251,3 +251,28 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 
 	}
 }
+
+add_filter( 'wp_link_pages_link', 'understrap_link_pages_link' );
+
+if ( ! function_exists( 'understrap_link_pages_link' ) ) {
+	/**
+	 * Prepares link to be displayed as item in a pagination.
+	 *
+	 * @param string $link HTML output of individual page number link.
+	 * @return string Filtered HTML output of individual page number link.
+	 */
+	function understrap_link_pages_link( $link ) {
+		$li_open = '<li class="page-item">';
+		if ( strpos( $link, 'aria-current' ) ) {
+			$li_open = '<li class="page-item active" aria-current="page">';
+		}
+
+		if ( strpos( $link, 'class="' ) ) {
+			$link = str_replace( 'class="', 'class="page-link ', $link );
+		} else {
+			$link = str_replace( '<a ', '<a class="page-link" ', $link );
+		}
+
+		return $li_open . $link . '</li>';
+	}
+}
