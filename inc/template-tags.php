@@ -72,6 +72,7 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 		if ( 'post' === get_post_type() ) {
 			understrap_categories_tags_list();
 		}
+
 		understrap_comments_popup_link();
 		understrap_edit_post_link();
 	}
@@ -96,11 +97,18 @@ if ( ! function_exists( 'understrap_categories_list' ) ) {
 	 * @since 1.2.0
 	 */
 	function understrap_categories_list() {
-		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
-		if ( $categories_list && understrap_categorized_blog() ) {
-			/* translators: %s: Categories of current post */
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		if ( ! understrap_categorized_blog() ) {
+			return;
 		}
+
+		$categories_list = get_the_category_list( understrap_get_list_item_separator() );
+
+		$posted_in = sprintf(
+			/* translators: %s: Categories of current post */
+			esc_html__( 'Posted in %s', 'understrap' ),
+			$categories_list
+		);
+		printf( '<span class="cat-links">%s</span>', $posted_in ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -130,11 +138,10 @@ if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 			return;
 		}
 
-		$post_title    = get_the_title();
 		$leave_comment = sprintf(
 			/* translators: %s post title */
 			__( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'understrap' ),
-			$post_title
+			get_the_title()
 		);
 		$leave_comment = wp_kses( $leave_comment, array( 'span' => array( 'class' => true ) ) );
 
@@ -146,15 +153,15 @@ if ( ! function_exists( 'understrap_comments_popup_link' ) ) {
 
 if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 	/**
-	 * Returns true if a blog has more than 1 category.
+	 * Determines whether a blog has more than 1 category.
 	 *
-	 * @return bool
+	 * @return bool True if a blog has more than 1 category.
 	 */
 	function understrap_categorized_blog() {
-		$all_the_cool_cats = get_transient( 'understrap_categories' );
-		if ( false === $all_the_cool_cats ) {
+		$category_count = get_transient( 'understrap_categories' );
+		if ( false === $category_count ) {
 			// Create an array of all the categories that are attached to posts.
-			$all_the_cool_cats = get_categories(
+			$categories = get_categories(
 				array(
 					'fields'     => 'ids',
 					'hide_empty' => 1,
@@ -162,16 +169,11 @@ if ( ! function_exists( 'understrap_categorized_blog' ) ) {
 					'number'     => 2,
 				)
 			);
-			// Count the number of categories that are attached to the posts.
-			$all_the_cool_cats = count( $all_the_cool_cats );
-			set_transient( 'understrap_categories', $all_the_cool_cats );
+
+			$category_count = count( $categories );
+			set_transient( 'understrap_categories', $category_count );
 		}
-		if ( $all_the_cool_cats > 1 ) {
-			// This blog has more than 1 category so understrap_categorized_blog should return true.
-			return true;
-		}
-		// This blog has only 1 category so understrap_categorized_blog should return false.
-		return false;
+		return $category_count > 1;
 	}
 }
 
@@ -182,13 +184,13 @@ add_action( 'deleted_post', 'understrap_category_transient_flusher' );
 
 if ( ! function_exists( 'understrap_category_transient_flusher' ) ) {
 	/**
-	 * Flush out the transients used in understrap_categorized_blog.
+	 * Flushes out the transients used in understrap_categorized_blog.
 	 */
 	function understrap_category_transient_flusher() {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;
 		}
-		// Like, beat it. Dig?
+
 		delete_transient( 'understrap_categories' );
 	}
 }
@@ -204,7 +206,7 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		 * @param array $atts An associative array of attributes.
 		 */
 		$atts = array_unique( apply_filters( 'understrap_body_attributes', $atts = array() ) );
-		if ( empty( $atts ) ) {
+		if ( 0 === count( $atts ) ) {
 			return;
 		}
 
@@ -214,6 +216,7 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 				if ( ! is_string( $value ) ) {
 					continue;
 				}
+
 				$attributes .= sanitize_key( $name ) . '="' . esc_attr( $value ) . '" ';
 			} else {
 				$attributes .= sanitize_key( $name ) . ' ';
@@ -240,19 +243,20 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 		?>
 		<nav class="comment-navigation" id="<?php echo esc_attr( $nav_id ); ?>">
 
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Comments navigation', 'understrap' ); ?></h1>
+			<?php
+			printf(
+				'<h1 class="screen-reader-text">%s</h1>',
+				esc_html__( 'Comments navigation', 'understrap' )
+			);
 
-			<?php if ( get_previous_comments_link() ) { ?>
-				<div class="nav-previous">
-					<?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) ); ?>
-				</div>
-			<?php } ?>
+			previous_comments_link(
+				esc_html( __( '&larr; Older Comments', 'understrap' ) )
+			);
 
-			<?php if ( get_next_comments_link() ) { ?>
-				<div class="nav-next">
-					<?php next_comments_link( __( 'Newer Comments &rarr;', 'understrap' ) ); ?>
-				</div>
-			<?php } ?>
+			next_comments_link(
+				esc_html( __( 'Newer Comments &rarr;', 'understrap' ) )
+			);
+			?>
 
 		</nav><!-- #<?php echo esc_attr( $nav_id ); ?> -->
 		<?php
@@ -280,7 +284,7 @@ if ( ! function_exists( 'understrap_edit_post_link' ) ) {
 
 if ( ! function_exists( 'understrap_post_nav' ) ) {
 	/**
-	 * Display navigation to next/previous post when applicable.
+	 * Displays the navigation to the next/previous post when applicable.
 	 *
 	 * @global WP_Post|null $post The current post.
 	 */
@@ -304,6 +308,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 				if ( get_previous_post_link() ) {
 					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
 				}
+
 				if ( get_next_post_link() ) {
 					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
 				}
@@ -362,6 +367,7 @@ if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
 		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
 			return 'form-control';
 		}
+
 		return 'form-select';
 	}
 }
@@ -381,6 +387,7 @@ if ( ! function_exists( 'understrap_get_list_item_separator' ) ) {
 		if ( function_exists( 'wp_get_list_item_separator' ) ) {
 			return esc_html( wp_get_list_item_separator() );
 		}
+
 		/* translators: used between list items, there is a space after the comma */
 		return esc_html__( ', ', 'understrap' );
 	}
@@ -399,6 +406,7 @@ if ( ! function_exists( 'understrap_get_screen_reader_class' ) ) {
 		if ( 'bootstrap4' === $bootstrap_version ) {
 			return $focusable ? 'sr-only sr-only-focusable' : 'sr-only';
 		}
+
 		return $focusable ? 'visually-hidden-focusable' : 'visually-hidden';
 	}
 }
