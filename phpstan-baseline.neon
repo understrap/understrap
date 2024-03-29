@@ -46,16 +46,6 @@ parameters:
 			path: inc/editor.php
 
 		-
-			message: "#^Function understrap_body_classes\\(\\) has parameter \\$classes with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: inc/extras.php
-
-		-
-			message: "#^Function understrap_body_classes\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: inc/extras.php
-
-		-
 			message: "#^Parameter \\#2 \\$callback of function add_filter expects callable\\(\\)\\: mixed, 'understrap_adjust…' given\\.$#"
 			count: 1
 			path: inc/extras.php

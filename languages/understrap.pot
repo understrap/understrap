@@ -1,17 +1,17 @@
-# Copyright (C) 2022 Howard Development &amp; Consulting
+# Copyright (C) 2024 Howard Development &amp; Consulting
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Understrap 1.2.1\n"
+"Project-Id-Version: Understrap 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
+"POT-Creation-Date: 2024-03-29T05:44:25+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: understrap\n"
 
 #. Theme Name of the theme
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Close menu"
 msgstr ""
 
-#: header.php:32
+#: header.php:33
 msgid "Skip to content"
 msgstr ""
 
@@ -230,7 +230,17 @@ msgstr ""
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:247
+#. translators: %s: title attribute of the site logo
+#: inc/extras.php:81
+msgid "Home"
+msgstr ""
+
+#. translators: alt attribute of the site logo
+#: inc/extras.php:84
+msgid "Logo"
+msgstr ""
+
+#: inc/extras.php:249
 msgid "Read More..."
 msgstr ""
 
@@ -337,7 +347,7 @@ msgid "Pages:"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:371
+#: inc/template-tags.php:385
 msgid ", "
 msgstr ""
 
@@ -445,28 +455,28 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:21
+#: searchform.php:20
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: searchform.php:23
+#: searchform.php:22
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: searchform.php:25
-#: searchform.php:28
+#: searchform.php:24
+#: searchform.php:27
 msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: sidebar-templates/sidebar-hero.php:28
+#: sidebar-templates/sidebar-hero.php:30
 msgctxt "carousel control"
 msgid "Previous"
 msgstr ""
 
-#: sidebar-templates/sidebar-hero.php:36
+#: sidebar-templates/sidebar-hero.php:38
 msgctxt "carousel control"
 msgid "Next"
 msgstr ""
