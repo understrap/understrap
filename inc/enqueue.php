@@ -14,15 +14,14 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	 */
 	function understrap_scripts() {
 		// Get the theme data.
-		$the_theme         = wp_get_theme();
-		$theme_version     = $the_theme->get( 'Version' );
-		$bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
-		$suffix            = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		$the_theme     = wp_get_theme();
+		$theme_version = $the_theme->get( 'Version' );
+		$suffix        = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		// Grab asset urls.
 		$theme_styles  = "/css/theme{$suffix}.css";
 		$theme_scripts = "/js/theme{$suffix}.js";
-		if ( 'bootstrap4' === $bootstrap_version ) {
+		if ( understrap_is_bootstrap_v4() ) {
 			$theme_styles  = "/css/theme-bootstrap4{$suffix}.css";
 			$theme_scripts = "/js/theme-bootstrap4{$suffix}.js";
 		}
@@ -31,7 +30,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . $theme_styles, array(), $css_version );
 
 		// Fix that the offcanvas close icon is hidden behind the admin bar.
-		if ( 'bootstrap4' !== $bootstrap_version && is_admin_bar_showing() ) {
+		if ( ! understrap_is_bootstrap_v4() && is_admin_bar_showing() ) {
 			understrap_offcanvas_admin_bar_inline_styles();
 		}
 

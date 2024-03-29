@@ -315,12 +315,7 @@ if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
 	 * @return string Maybe filtered navbar type.
 	 */
 	function understrap_default_navbar_type( $current_mod ) {
-
-		if ( 'bootstrap5' !== get_theme_mod( 'understrap_bootstrap_version' ) ) {
-			$current_mod = 'collapse';
-		}
-
-		return $current_mod;
+		return understrap_is_bootstrap_v4() ? 'collapse' : $current_mod;
 	}
 }
 add_filter( 'theme_mod_understrap_navbar_type', 'understrap_default_navbar_type', 20 );

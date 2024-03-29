@@ -113,7 +113,7 @@ if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
 			$search[]  = 'wp-block-search__inside-wrapper';
 			$replace[] = 'wp-block-search__inside-wrapper input-group';
 
-			if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+			if ( understrap_is_bootstrap_v4() ) {
 				$search[]  = '<button';
 				$search[]  = '</button>';
 				$replace[] = '<div class="input-group-append"><button';

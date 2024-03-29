@@ -110,7 +110,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 * @phpstan-return T | array{'class': non-empty-list<string>}
 	 */
 	function understrap_wc_form_field_args( $args, $key, $value ) {
-		$bootstrap4 = 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
+		$bootstrap4 = understrap_is_bootstrap_v4();
 
 		// Add margin to each form field's html element wrapper (<p></p>).
 		if ( $bootstrap4 ) {
@@ -234,7 +234,7 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 	 */
 	function understrap_wc_form_field_radio( $field, $key, $args, $value ) {
 		// Set up Bootstrap version specific variables.
-		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+		if ( understrap_is_bootstrap_v4() ) {
 			$wrapper_classes = 'custom-control custom-radio';
 			$label_class     = 'custom-control-label';
 		} else {
@@ -343,7 +343,7 @@ if ( ! function_exists( 'understrap_loop_add_to_cart_args' ) ) {
 			$args['class'] = 'btn btn-outline-primary';
 		}
 
-		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
+		if ( understrap_is_bootstrap_v4() ) {
 			$args['class'] .= ' btn-block';
 		}
 
