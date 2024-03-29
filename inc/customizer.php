@@ -87,7 +87,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'understrap_bootstrap_version',
 				array(
 					'label'       => __( 'Bootstrap Version', 'understrap' ),
-					'description' => __( 'Choose between Bootstrap 4 or Bootstrap 5', 'understrap' ),
+					'description' => __( 'Choose between Bootstrap 4 and Bootstrap 5', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'type'        => 'select',
 					'choices'     => array(

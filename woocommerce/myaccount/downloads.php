@@ -12,35 +12,28 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://woo.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.2.0
+ * @version 7.8.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 $downloads     = WC()->customer->get_downloadable_products();
 $has_downloads = (bool) $downloads;
-
 do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
-
 <?php if ( $has_downloads ) : ?>
-
 	<?php do_action( 'woocommerce_before_available_downloads' ); ?>
-
 	<?php do_action( 'woocommerce_available_downloads', $downloads ); ?>
-
 	<?php do_action( 'woocommerce_after_available_downloads' ); ?>
 
 <?php else : ?>
-	<div class="woocommerce-Message woocommerce-Message--info woocommerce-info">
-		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Browse products', 'woocommerce' ); ?>
-		</a>
-		<?php esc_html_e( 'No downloads available yet.', 'woocommerce' ); ?>
-	</div>
+
+	<?php
+	wc_print_notice( esc_html__( 'No downloads available yet.', 'woocommerce' ) . ' <a class="btn btn-outline-primary" href="' . esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ) . '">' . esc_html__( 'Browse products', 'woocommerce' ) . '</a>', 'notice' ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment
+	?>
+
 <?php endif; ?>
 
 <?php

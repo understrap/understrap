@@ -1,4 +1,4 @@
-$bootstrap4: true;                           // <--- Do not delete this variable. It is used in theme/_blocks.scss and theme/_understrap.scss.
+$bootstrap4: true; // <--- Do not delete this variable. It is used in theme/_blocks.scss and theme/_understrap.scss.
 
 // Add your own editor styles here or import additional files
 
@@ -13,6 +13,7 @@ $bootstrap4: true;                           // <--- Do not delete this variable
 @import "assets/bootstrap4/root";
 @import "assets/bootstrap4/tables";
 @import "assets/bootstrap4/images";
+@import "assets/bootstrap4/grid";
 
 // Set up basic typography
 @import "assets/bootstrap4/type";
@@ -24,15 +25,21 @@ $bootstrap4: true;                           // <--- Do not delete this variable
 @import "theme/colors";
 @import "theme/blocks";
 
-
-
 // Fixes Gutenberg's cover block color picker.
 .components-circular-option-picker__option {
 	border-radius: 50%;
 }
 
 // Matches the page title font weight.
-.editor-post-title .editor-post-title__input{
+.editor-post-title .editor-post-title__input {
 	font-size: $h1-font-size;
 	font-weight: $headings-font-weight;
+}
+
+@each $breakpoint, $container-max-width in $container-max-widths {
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		html :where(.wp-block) {
+			max-width: $container-max-width;
+		}
+	}
 }

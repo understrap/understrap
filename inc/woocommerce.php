@@ -81,11 +81,33 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 *
 	 * @see https://woocommerce.github.io/code-reference/namespaces/default.html#function_woocommerce_form_field
 	 *
-	 * @param array<string,mixed> $args  Form field arguments.
-	 * @param string              $key   Value of the fields name attribute.
-	 * @param string|null         $value Value of <select> option.
+	 * @param array       $args  Form field arguments.
+	 * @param string      $key   Value of the fields name attribute.
+	 * @param string|null $value Value of <select> option.
+	 * @return array Filtered form field arguments.
 	 *
-	 * @return array<string,mixed> Form field arguments.
+	 * @phpstan-template T of array{
+	 *     'type': string,
+	 *     'label': string,
+	 *     'description': string,
+	 *     'placeholder': string,
+	 *     'maxlength': false|int,
+	 *     'required': bool,
+	 *     'autocomplete': false|string,
+	 *     'id': string,
+	 *     'class': list<string>,
+	 *     'label_class': list<string>,
+	 *     'input_class': list<string>,
+	 *     'return': bool,
+	 *     'options': array<string,string>,
+	 *     'custom_attributes': array<string,int|string>,
+	 *     'validate': list<string>,
+	 *     'default': string,
+	 *     'autofocus': ?(string|bool),
+	 *     'priority': ?string,
+	 * }
+	 * @phpstan-param T $args
+	 * @phpstan-return T | array{'class': non-empty-list<string>}
 	 */
 	function understrap_wc_form_field_args( $args, $key, $value ) {
 		$bootstrap4 = 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
@@ -101,23 +123,25 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 			case 'country':
 				/*
 				 * WooCommerce will populate a <select> element of type 'country'
-				 * with the country names. $args defined for this specific input
-				 * type targets only the country <select> element.
+				 * with the country names.
 				 */
 
+				// Add class to the form field's html element wrapper.
 				$args['class'][] = 'single-country';
 				break;
 			case 'state':
 				/*
 				 * WooCommerce will populate a <select> element of type 'state'
-				 * with the state names. $args defined for this specific input
-				 * type targets only the state <select> element.
+				 * with the state names.
 				 */
 
 				// Add custom data attributes to the form input itself.
 				$args['custom_attributes']['data-plugin']      = 'select2';
 				$args['custom_attributes']['data-allow-clear'] = 'true';
 				$args['custom_attributes']['aria-hidden']      = 'true';
+
+				// If state is text input.
+				$args['input_class'][] = 'form-control';
 				break;
 			case 'checkbox':
 				/*
@@ -129,7 +153,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				// Get Bootstrap version specific CSS class base.
 				$base = $bootstrap4 ? 'custom-control' : 'form-check';
 
-				if ( isset( $args['label'] ) ) {
+				if ( '' !== $args['label'] || $bootstrap4 ) {
 					// Wrap the label in <span> tag.
 					$args['label'] = "<span class=\"{$base}-label\">{$args['label']}</span>";
 				}
@@ -144,10 +168,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				$args['input_class'][] = $base . '-input';
 				break;
 			case 'select':
-				/*
-				 * Targets all <select> elements, except the <select> elements
-				 * of type country or of type state.
-				 */
+				// Targets all <select> elements, except the country and state <select>.
 
 				// Add a class to the form input itself.
 				$args['input_class'][] = $bootstrap4 ? 'form-control' : 'form-select';
@@ -165,7 +186,6 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				break;
 			default:
 				$args['input_class'][] = 'form-control';
-				break;
 		} // End of switch ( $args ).
 		return $args;
 	}
@@ -181,17 +201,38 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 	 * If `$args['label']` is set a `<label>` tag is prepended to the radio
 	 * fields. `$args['label_class']` is used for the class attribute of this
 	 * tag and the class attribute of the actual input labels. Hence, we must
-	 * remove the first occurance of the label class added via
+	 * remove the first occurrence of the label class added via
 	 * `understrap_wc_form_field_args()` that is meant for input labels only.
 	 *
 	 * @param string              $field The field's HTML incl. the wrapper element.
 	 * @param string              $key   The wrapper element's id attribute value.
 	 * @param array<string|mixed> $args  An array of field arguments.
 	 * @param string|null         $value The field's value.
-	 * @return string
+	 * @return string The field's filtered HTML.
+	 *
+	 * @phpstan-template T of array{
+	 *     'type': string,
+	 *     'label': string,
+	 *     'description': string,
+	 *     'placeholder': string,
+	 *     'maxlength': false|int,
+	 *     'required': bool,
+	 *     'autocomplete': false|string,
+	 *     'id': string,
+	 *     'class': list<string>,
+	 *     'label_class': list<string>,
+	 *     'input_class': list<string>,
+	 *     'return': bool,
+	 *     'options': array<string,string>,
+	 *     'custom_attributes': array<string,int|string>,
+	 *     'validate': list<string>,
+	 *     'default': string,
+	 *     'autofocus': ?(string|bool),
+	 *     'priority': ?string,
+	 * }
+	 * @phpstan-param T $args
 	 */
 	function understrap_wc_form_field_radio( $field, $key, $args, $value ) {
-
 		// Set up Bootstrap version specific variables.
 		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
 			$wrapper_classes = 'custom-control custom-radio';
@@ -201,8 +242,8 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 			$label_class     = 'form-check-label';
 		}
 
-		// Remove the first occurance of the label class if neccessary.
-		if ( isset( $args['label'] ) && isset( $args['label_class'] ) ) {
+		// Remove the first occurrence of the label class if necessary.
+		if ( '' !== $args['label'] && ! empty( $args['label_class'] ) ) {
 			$strpos = strpos( $field, $label_class );
 			if ( false !== $strpos ) {
 				$field = substr_replace( $field, '', $strpos, strlen( $label_class ) );
@@ -218,7 +259,7 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 		// Wrap each radio in a <span.from-check>.
 		$field = str_replace( '<input', "<span class=\"{$wrapper_classes}\"><input", $field );
 		$field = str_replace( '</label>', '</label></span>', $field );
-		if ( isset( $args['label'] ) ) {
+		if ( '' !== $args['label'] ) {
 			// Remove the closing span tag from the first <label> element.
 			$strpos = strpos( $field, '</label>' ) + strlen( '</label>' );
 			$field  = substr_replace( $field, '', $strpos, strlen( '</span>' ) );
@@ -256,8 +297,8 @@ if ( ! function_exists( 'understrap_quantity_input_classes' ) ) {
 	/**
 	 * Add Bootstrap class to quantity input field.
 	 *
-	 * @param array $classes Array of quantity input classes.
-	 * @return array
+	 * @param array<int,string> $classes Array of quantity input classes.
+	 * @return array<int,string>
 	 */
 	function understrap_quantity_input_classes( $classes ) {
 		$classes[] = 'form-control';

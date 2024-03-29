@@ -5,14 +5,24 @@ on:
     branches: [ develop ]
     paths:
       - '**.php'
-  pull_request:
+      - 'phpcs.xml.dist'
+      - 'phpmd.xml'
+      - 'phpstan.neon.dist'
+  pull_request_target:
     branches: [ develop ]
     paths:
       - '**.php'
+      - 'phpcs.xml.dist'
+      - 'phpmd.xml'
+      - 'phpstan.neon.dist'
   workflow_dispatch:
 
 env:
   php-version: '7.4'
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
 
 jobs:
 
@@ -25,40 +35,40 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
+          tools: cs2pr
           coverage: none
+        env:
+          fail-fast: true
 
-      - name: Get Composer cache  directory
-        id: composer-cache
-        uses: actions/cache@v3
+      - name: Cache PHPCS cache
+        uses: actions/cache@v4
         with:
-          path: vendor
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
+          path: .phpcs-cache.json
+          key: ${{ runner.os }}-phpcs-cache-${{ hashFiles('**/composer.lock', 'phpcs.xml.dist') }}
 
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v3"
 
       - name: Auto fix coding standards
         run: composer phpcs-fix
         continue-on-error: true
 
       - name: Commit coding standards fixes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Fix coding standards with phpcbf
-          branch: ${{ github.head_ref }}
 
       - name: Check coding standards
-        run: composer phpcs-ga | cs2pr
+        run: composer phpcs -- -q -n --report=checkstyle | cs2pr
 
   php-lint:
 
@@ -68,30 +78,19 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
+          tools: cs2pr, parallel-lint
           coverage: none
-
-      - name: Get Composer cache directory
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+        env:
+          fail-fast: true
 
       - name: Check syntax
-        run: composer php-lint
+        run: parallel-lint --checkstyle . | cs2pr
 
   phpstan:
 
@@ -101,29 +100,29 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
           coverage: none
+        env:
+          fail-fast: true
 
-      - name: Get Composer cache directory
-        id: composer-cache
-        uses: actions/cache@v3
+      - name: Cache PHPStan cache
+        uses: actions/cache@v4
         with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
+          path: .phpstan-cache
+          key: ${{ runner.os }}-phpstan-cache-${{ hashFiles('**/composer.lock', 'phpstan.neon.dist') }}
 
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v3"
 
-      - name: Static Analysis
+      - name: Analyse
         id: phpstan
         run: composer phpstan -- --error-format=github
 
@@ -131,10 +130,9 @@ jobs:
         run: composer phpstan-baseline
 
       - name: Commit updated basefile
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update PHPStan basefile
-          branch: ${{ github.head_ref }}
 
   phpmd:
 
@@ -144,36 +142,28 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
-          tools: composer, cs2pr
+          tools: phpmd
           coverage: none
-
-      - name: Get Composer cache directory
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress
+        env:
+          fail-fast: true
 
       - name: Detect mess
-        run: composer phpmd-ga
+        run: phpmd . github phpmd.xml
 
       - name: Update basefile
-        run: composer phpmd-baseline
+        run: phpmd . ansi phpmd.xml --generate-baseline
 
       - name: Commit updated basefile
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update PHPMD basefile
           branch: ${{ github.head_ref }}

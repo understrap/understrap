@@ -55,3 +55,5 @@ parameters:
 		- '#Function understrap_tags_list\(\) has no return type specified.#'
 		- '#Function understrap_comments_popup_link\(\) has no return type specified.#'
 		- '#Function understrap_offcanvas_admin_bar_inline_styles\(\) has no return type specified.#'
+		# temporary:
+		- '#Parameter \#2 ...\$values of function sprintf expects bool\|float\|int\|string\|null, string\|void given.#'

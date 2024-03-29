@@ -20,6 +20,7 @@ const colors = [
 
 const BS4 = process.argv[ process.argv.length - 1 ] === 'BS4';
 const colorInfix = BS4 ? '' : 'bs-';
+const output = 'inc/editor-color-palette' + ( BS4 ? '-bootstrap4' : '' ) + '.json';
 
 module.exports = ( ctx ) => {
 	let plugins = {
