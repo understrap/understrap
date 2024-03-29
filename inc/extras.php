@@ -14,46 +14,44 @@ add_filter( 'body_class', 'understrap_body_classes' );
 
 if ( ! function_exists( 'understrap_body_classes' ) ) {
 	/**
-	 * Adds custom classes to the array of body classes.
+	 * Adds CSS classes to the array of body classes for the current post or page.
 	 *
-	 * @param array $classes Classes for the body element.
-	 *
-	 * @return array
+	 * @param string[] $classes An array of class names for the body element.
+	 * @return string[] An array of class names for the body element.
 	 */
 	function understrap_body_classes( $classes ) {
-		// Adds a class of group-blog to blogs with more than 1 published author.
+		// Adds 'group-blog' class for blogs with more than 1 published author.
 		if ( is_multi_author() ) {
 			$classes[] = 'group-blog';
 		}
-		// Adds a class of hfeed to non-singular pages.
+
+		// Adds 'hfeed' class to non-singular pages.
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
 
-		// Adds a body class based on the presence of a sidebar.
-		$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
-		if ( is_page_template(
-			array(
-				'page-templates/fullwidthpage.php',
-				'page-templates/no-title.php',
-			)
-		) ) {
-			$classes[] = 'understrap-no-sidebar';
-		} elseif (
-			is_page_template(
+		// Use the default sidebar position to determine the sidebar related body class ...
+		$has_sidebar = 'none' !== get_theme_mod( 'understrap_sidebar_position' );
+
+		// ... unless a page template overrides the default position.
+		if ( $has_sidebar ) {
+			$has_sidebar = ! is_page_template(
+				array(
+					'page-templates/fullwidthpage.php',
+					'page-templates/no-title.php',
+				)
+			);
+		} else {
+			$has_sidebar = is_page_template(
 				array(
 					'page-templates/both-sidebarspage.php',
 					'page-templates/left-sidebarpage.php',
 					'page-templates/right-sidebarpage.php',
 				)
-			)
-		) {
-			$classes[] = 'understrap-has-sidebar';
-		} elseif ( 'none' !== $sidebar_pos ) {
-			$classes[] = 'understrap-has-sidebar';
-		} else {
-			$classes[] = 'understrap-no-sidebar';
+			);
 		}
+
+		$classes[] = $has_sidebar ? 'understrap-has-sidebar' : 'understrap-no-sidebar';
 
 		return $classes;
 	}
@@ -72,30 +70,38 @@ add_filter( 'get_custom_logo', 'understrap_change_logo_class' );
 
 if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 	/**
-	 * Replaces logo CSS class.
+	 * Adds Bootstrap CSS classes to the custom logo.
 	 *
-	 * @param string $html Markup.
-	 *
-	 * @return string
+	 * @param string $html HTML markup of the custom logo, linked to home.
+	 * @return string HTML markup of the custom logo with Bootstrap CSS classes.
 	 */
 	function understrap_change_logo_class( $html ) {
 
-		$html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
-		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
-		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
+		/* translators: %s: title attribute of the site logo */
+		$title_attr = sprintf( 'title="%s"', esc_attr( __( 'Home', 'understrap' ) ) );
 
-		return $html;
+		/* translators: alt attribute of the site logo */
+		$alt_attr = sprintf( 'alt="%s"', esc_attr( __( 'Logo', 'understrap' ) ) );
+
+		$replacements = array(
+			'class="custom-logo"'      => 'class="img-fluid"',
+			'class="custom-logo-link"' => 'class="navbar-brand custom-logo-link"',
+			'alt=""'                   => sprintf( '%s %s', $title_attr, $alt_attr ),
+		);
+
+		return str_replace( array_keys( $replacements ), array_values( $replacements ), $html );
 	}
 }
 
 if ( ! function_exists( 'understrap_pingback' ) ) {
 	/**
-	 * Add a pingback url auto-discovery header for single posts of any post type.
+	 * Adds a pingback url auto-discovery header for single posts of any post type.
 	 */
 	function understrap_pingback() {
-		if ( is_singular() && pings_open() ) {
-			echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">' . "\n";
+		if ( ! is_singular() || ! pings_open() ) {
+			return;
 		}
+		echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">' . "\n";
 	}
 }
 add_action( 'wp_head', 'understrap_pingback' );
@@ -116,8 +122,8 @@ if ( ! function_exists( 'understrap_default_body_attributes' ) ) {
 	/**
 	 * Adds schema markup to the body element.
 	 *
-	 * @param array<string,string> $atts An associative array of attributes.
-	 * @return array<string,string>
+	 * @param array<string, string> $atts An associative array of attributes.
+	 * @return array<string, string>
 	 */
 	function understrap_default_body_attributes( $atts ) {
 		$atts['itemscope'] = '';
@@ -135,7 +141,7 @@ if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
 	 * Escapes the description for an author or post type archive.
 	 *
 	 * @param string $description Archive description.
-	 * @return string Maybe escaped $description.
+	 * @return string Maybe escaped `$description`.
 	 */
 	function understrap_escape_the_archive_description( $description ) {
 		if ( is_author() || is_post_type_archive() ) {
@@ -168,9 +174,11 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 		// Get allowed tags and protocols.
 		$allowed_tags      = wp_kses_allowed_html( 'post' );
 		$allowed_protocols = wp_allowed_protocols();
+
+		// Check for active Polylang plugins and add 'data' protocol if necessary.
 		if (
-			in_array( 'polylang/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true )
-			|| in_array( 'polylang-pro/polylang.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true )
+			is_plugin_active( 'polylang/polylang.php' )
+			|| is_plugin_active( 'polylang-pro/polylang.php' )
 		) {
 			if ( ! in_array( 'data', $allowed_protocols, true ) ) {
 				$allowed_protocols[] = 'data';
@@ -200,10 +208,7 @@ if ( ! function_exists( 'understrap_hide_posted_by' ) ) {
 	 * @return string Maybe filtered posted by HTML markup.
 	 */
 	function understrap_hide_posted_by( $byline ) {
-		if ( is_author() ) {
-			return '';
-		}
-		return $byline;
+		return is_author() ? '' : $byline;
 	}
 }
 add_filter( 'understrap_posted_by', 'understrap_hide_posted_by' );
@@ -220,10 +225,7 @@ if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 	 * @return string
 	 */
 	function understrap_custom_excerpt_more( $more ) {
-		if ( ! is_admin() ) {
-			$more = '';
-		}
-		return $more;
+		return is_admin() ? $more : '';
 	}
 }
 

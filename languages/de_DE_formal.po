@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
-"POT-Creation-Date: 2022-11-05T23:31:56+00:00\n"
-"PO-Revision-Date: 2022-11-19 16:47+0100\n"
+"POT-Creation-Date: 2024-03-29T05:44:25+00:00\n"
+"PO-Revision-Date: 2024-03-29 06:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-KeywordsList: __:1;_e:1;_n:1,2;_n_noop:1,2;_x:1,2c;_ex:1,2c;"
 "_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;"
 "esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;translate:1;"
@@ -119,7 +119,7 @@ msgstr "Menü öffnen"
 msgid "Close menu"
 msgstr "Menü schließen"
 
-#: header.php:32
+#: header.php:33
 msgid "Skip to content"
 msgstr "Direkt zum Inhalt wechseln"
 
@@ -254,7 +254,17 @@ msgstr "Zitat-Footer"
 msgid "Cite"
 msgstr ""
 
-#: inc/extras.php:247
+#. translators: %s: title attribute of the site logo
+#: inc/extras.php:81
+msgid "Home"
+msgstr "Startseite"
+
+#. translators: alt attribute of the site logo
+#: inc/extras.php:84
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/extras.php:249
 msgid "Read More..."
 msgstr "Weiterlesen..."
 
@@ -361,7 +371,7 @@ msgid "Pages:"
 msgstr "Seiten:"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:371
+#: inc/template-tags.php:385
 msgid ", "
 msgstr ", "
 
@@ -483,27 +493,27 @@ msgstr "Layout mit rechter Seitenleiste"
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: searchform.php:21
+#: searchform.php:20
 msgctxt "label"
 msgid "Search for:"
 msgstr "Suche nach:"
 
-#: searchform.php:23
+#: searchform.php:22
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Suche &hellip;"
 
-#: searchform.php:25 searchform.php:28
+#: searchform.php:24 searchform.php:27
 msgctxt "submit button"
 msgid "Search"
 msgstr "Suche"
 
-#: sidebar-templates/sidebar-hero.php:28
+#: sidebar-templates/sidebar-hero.php:30
 msgctxt "carousel control"
 msgid "Previous"
 msgstr "Zurück"
 
-#: sidebar-templates/sidebar-hero.php:36
+#: sidebar-templates/sidebar-hero.php:38
 msgctxt "carousel control"
 msgid "Next"
 msgstr "Weiter"
