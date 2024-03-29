@@ -49,27 +49,43 @@ add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
 
 if ( ! function_exists( 'understrap_offcanvas_admin_bar_inline_styles' ) ) {
 	/**
-	 * Add inline styles for the offcanvas component if the admin bar is visible.
+	 * Adds inline styles for the offcanvas component if the admin bar is visible.
 	 *
-	 * Fixes that the offcanvas close icon is hidden behind the admin bar.
+	 * This function adjusts the top margin of the offcanvas component to
+	 * prevent it from being obscured by the WordPress admin bar.
 	 *
 	 * @since 1.2.0
+	 *
+	 * @global string $wp_version The WordPress version.
 	 */
 	function understrap_offcanvas_admin_bar_inline_styles() {
+		global $wp_version;
+
 		$navbar_type = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 		if ( 'offcanvas' !== $navbar_type ) {
 			return;
 		}
 
-		$css = '
-		body.admin-bar .offcanvas.show  {
-			margin-top: 32px;
-		}
-		@media screen and ( max-width: 782px ) {
-			body.admin-bar .offcanvas.show {
-				margin-top: 46px;
+		if ( version_compare( $wp_version, '5.9', '>=' ) ) {
+			$css = '
+			body.admin-bar .offcanvas.show,
+			body.admin-bar .offcanvas.showing {
+				margin-top: var(--wp-admin--admin-bar--height);
+			}';
+		} else {
+			$css = '
+			body.admin-bar .offcanvas.show,
+			body.admin-bar .offcanvas.showing {
+				margin-top: 32px;
 			}
-		}';
+			@media screen and ( max-width: 782px ) {
+				body.admin-bar .offcanvas.show,
+				body.admin-bar .offcanvas.showing {
+					margin-top: 46px;
+				}
+			}';
+		}
+
 		wp_add_inline_style( 'understrap-styles', $css );
 	}
 }
