@@ -250,11 +250,11 @@ if ( ! function_exists( 'understrap_comment_navigation' ) ) {
 			);
 
 			previous_comments_link(
-				esc_html( __( '&larr; Older Comments', 'understrap' ) )
+				esc_html__( '&larr; Older Comments', 'understrap' )
 			);
 
 			next_comments_link(
-				esc_html( __( 'Newer Comments &rarr;', 'understrap' ) )
+				esc_html__( 'Newer Comments &rarr;', 'understrap' )
 			);
 			?>
 
