@@ -1,24 +1,59 @@
-# Set the default behavior, in case people don't have core.autocrlf set.
-* text=auto
+## GITATTRIBUTES FOR UNDERSTRAP
+#
+# This file defines attributes for handling file types in the Understrap theme.
+#
+#   text    These files should be normalized (i.e. convert CRLF to LF).
+#           Note: eol supersedes the OS-specific line endings.
+#   binary  These files are binary and should not be normalized or diffed.
+#           Note: 'binary' is equivalent to '-text -diff'.
+#
+###############################################################################
 
-# Explicitly declare text files that will always be normalized and converted
-# to native line endings on checkout.
-.browserslistrc text
-.editorconfig   text
-.gitattributes  text
-.gitignore      text
-*.css           text
-*.js            text
-*.json          text
-*.map           text -diff
-*.md            text
-*.txt           text
-*.xml           text
-*.yml           text
+# Auto detect
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+*                 text=auto
 
-# Declare files that will always have LF line endings on checkout.
-*.php text eol=lf
+# Source code
+*.css             text eol=lf diff=css
+*.js              text eol=lf
+*.map             text -diff
+*.php             text eol=lf diff=php
+*.scss            text eol=lf diff=css
 
-# Denote all files that are truly binary and should not be modified.
-*.jpg binary
-*.png binary
+# Documentation
+*.md              text diff=markdown
+*.txt             text
+LICENSE           text
+
+# Configs
+.editorconfig     text eol=lf
+.gitattributes    text eol=lf
+.gitconfig        text eol=lf
+.nvmrc            text eol=lf
+*.json            text eol=lf
+*.lock            text -diff
+*.neon            text eol=lf
+*.neon.dist       text eol=lf
+package-lock.json text eol=lf -diff
+*.toml            text eol=lf
+*.xml             text eol=lf
+*.xml.dist        text eol=lf
+*.yml             text eol=lf
+
+# Graphics
+*.png             binary
+
+# Fonts
+*.ttf             binary
+*.eot             binary
+*.woff            binary
+*.woff2           binary
+*.svg             text eol=lf
+
+# RC files (like .browserlistrc)
+*.*rc             text eol=lf
+
+# Ignore files (like .gitignore)
+*.*ignore         text eol=lf
