@@ -6,15 +6,13 @@
 [![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap/develop)](https://github.com/understrap/understrap/commits/develop)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-#### See: [Official Demo](https://understrap.com) | Read: [Official Docs Page](https://docs.understrap.com/)
+#### Read: [Official Docs Page](https://docs.understrap.com/)
 
 # Understrap WordPress Theme Framework
 
 Website: [understrap.com](https://understrap.com)
 
 Child Theme Project: [github.com/understrap/understrap-child](https://github.com/understrap/understrap-child)
-
-Premium Child Themes: [understrap.com/child-themes/](https://understrap.com/child-themes/)
 
 ## About
 
