@@ -46,9 +46,8 @@ if ( ! function_exists( 'understrap_customize_partial_custom_logo' ) ) {
 	function understrap_customize_partial_custom_logo() {
 		if ( has_custom_logo() ) {
 			return get_custom_logo();
-		} else {
-			return get_bloginfo( 'name' );
 		}
+		return get_bloginfo( 'name' );
 	}
 }
 
@@ -115,7 +114,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'understrap_container_type',
 				array(
 					'label'       => __( 'Container Width', 'understrap' ),
-					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'understrap' ),
+					'description' => __( "Choose between Bootstrap's container and container-fluid", 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'type'        => 'select',
 					'choices'     => array(
@@ -175,7 +174,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				array(
 					'label'       => __( 'Sidebar Positioning', 'understrap' ),
 					'description' => __(
-						'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
+						"Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
 						'understrap'
 					),
 					'section'     => 'understrap_theme_layout_options',
@@ -207,7 +206,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'understrap_site_info_override',
 				array(
 					'label'       => __( 'Footer Site Info', 'understrap' ),
-					'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'understrap' ),
+					'description' => __( "Override Understrap's site info located at the footer of the page.", 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'type'        => 'textarea',
 					'priority'    => 20,
