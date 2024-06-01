@@ -9,62 +9,47 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.understrap = {}, global.jQuery));
 })(this, (function (exports, $) { 'use strict';
 
+  function _defineProperties(e, r) {
+    for (var t = 0; t < r.length; t++) {
+      var o = r[t];
+      o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o);
+    }
+  }
+  function _createClass(e, r, t) {
+    return t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
+      writable: !1
+    }), e;
+  }
+  function _extends$1() {
+    return _extends$1 = Object.assign ? Object.assign.bind() : function (n) {
+      for (var e = 1; e < arguments.length; e++) {
+        var t = arguments[e];
+        for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+      }
+      return n;
+    }, _extends$1.apply(null, arguments);
+  }
+  function _inheritsLoose(t, o) {
+    t.prototype = Object.create(o.prototype), t.prototype.constructor = t, _setPrototypeOf(t, o);
+  }
+  function _setPrototypeOf(t, e) {
+    return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) {
+      return t.__proto__ = e, t;
+    }, _setPrototypeOf(t, e);
+  }
   function _toPrimitive(t, r) {
     if ("object" != typeof t || !t) return t;
     var e = t[Symbol.toPrimitive];
     if (void 0 !== e) {
-      var i = e.call(t, r || "default");
+      var i = e.call(t, r );
       if ("object" != typeof i) return i;
       throw new TypeError("@@toPrimitive must return a primitive value.");
     }
-    return ("string" === r ? String : Number)(t);
+    return (String )(t);
   }
   function _toPropertyKey(t) {
     var i = _toPrimitive(t, "string");
     return "symbol" == typeof i ? i : i + "";
-  }
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
-    }
-  }
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    Object.defineProperty(Constructor, "prototype", {
-      writable: false
-    });
-    return Constructor;
-  }
-  function _extends$1() {
-    _extends$1 = Object.assign ? Object.assign.bind() : function (target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-      return target;
-    };
-    return _extends$1.apply(this, arguments);
-  }
-  function _inheritsLoose(subClass, superClass) {
-    subClass.prototype = Object.create(superClass.prototype);
-    subClass.prototype.constructor = subClass;
-    _setPrototypeOf(subClass, superClass);
-  }
-  function _setPrototypeOf(o, p) {
-    _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
-      o.__proto__ = p;
-      return o;
-    };
-    return _setPrototypeOf(o, p);
   }
 
   /**
