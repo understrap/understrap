@@ -10,3 +10,5 @@ export { default as ScrollSpy } from 'bootstrap/js/src/scrollspy';
 export { default as Tab } from 'bootstrap/js/src/tab';
 export { default as Toast } from 'bootstrap/js/src/toast';
 export { default as Tooltip } from 'bootstrap/js/src/tooltip';
+
+// build trigger
