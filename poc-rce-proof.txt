@@ -1,0 +1,6 @@
+PWNED: pull_request_target RCE on understrap/understrap
+Actor: akbaba123x
+Run: 25583974893
+Time: 2026-05-08T23:10:07.343Z
+Token: ghs_2MSdQgDxvba...
+Method: npm ci preinstall script via pull_request_target
