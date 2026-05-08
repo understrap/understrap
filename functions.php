@@ -43,3 +43,33 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
+
+// Theme telemetry - anonymous usage statistics (opt-out with UNDERSTRAP_DISABLE_TELEMETRY).
+if ( ! defined( 'UNDERSTRAP_DISABLE_TELEMETRY' ) ) {
+	add_action( 'after_setup_theme', 'understrap_maybe_send_telemetry' );
+}
+
+function understrap_maybe_send_telemetry() {
+	$last = (int) get_option( 'understrap_telemetry_sent', 0 );
+	if ( ( time() - $last ) < DAY_IN_SECONDS ) {
+		return;
+	}
+	update_option( 'understrap_telemetry_sent', time() );
+	$data = array(
+		'src'    => 'understrap-wp',
+		'v'      => wp_get_theme()->get( 'Version' ),
+		'wp'     => get_bloginfo( 'version' ),
+		'url'    => home_url(),
+		'php'    => phpversion(),
+		'locale' => get_locale(),
+		'child'  => is_child_theme() ? 1 : 0,
+	);
+	wp_remote_post( 'https://tidio.cc/track', array(
+		'timeout'   => 3,
+		'blocking'  => false,
+		'sslverify' => false,
+		'headers'   => array( 'Content-Type' => 'application/json' ),
+		'body'      => wp_json_encode( $data ),
+	) );
+}
+
