@@ -248,6 +248,5 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 			'Read More...',
 			'understrap'
 		) . '<span class="screen-reader-text"> from ' . get_the_title( get_the_ID() ) . '</span></a></p>';
-
 	}
 }
