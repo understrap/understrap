@@ -301,7 +301,6 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 * END appending the internal item contents to the output.
 			 */
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-
 		}
 
 		/**
@@ -524,7 +523,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 		 * @param string $linkmod_type a sting containing a linkmod type flag.
 		 * @param string $attributes   a string of attributes to add to the element.
 		 *
-		 * @return string              a string with the openign tag for the element with attribibutes added.
+		 * @return string              a string with the opening tag for the element with attributes added.
 		 */
 		private function linkmod_element_open( $linkmod_type, $attributes = '' ) {
 			$output = '';

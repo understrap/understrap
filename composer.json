@@ -26,10 +26,9 @@
 		"phpmd/phpmd": "^2.15.0",
 		"phpstan/phpstan": "^1.10.59",
 		"roave/security-advisories": "dev-latest",
-		"squizlabs/php_codesniffer": "^3.9.0",
+		"squizlabs/php_codesniffer": "^3.13.6",
 		"szepeviktor/phpstan-wordpress": "^1.3.3",
-		"wp-coding-standards/wpcs": "^2.3.0",
-		"wptrt/wpthemereview": "^0.2.1"
+		"wp-coding-standards/wpcs": "^3.4.1"
 	},
 	"scripts": {
 		"php-lint": "parallel-lint --exclude vendor --exclude node_modules --exclude dist --exclude .git --exclude .phpstan-cache .",
@@ -46,9 +45,12 @@
 	},
 	"config": {
 		"allow-plugins": {
-		  "dealerdirect/phpcodesniffer-composer-installer": true
+			"dealerdirect/phpcodesniffer-composer-installer": true
 		},
-		"sort-packages": true
+		"sort-packages": true,
+		"platform": {
+			"php": "7.4.33"
+		}
 	},
 	"autoload": {
 		"psr-4": {

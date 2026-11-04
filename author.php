@@ -63,7 +63,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									printf(
 										/* translators: %s: author name */
 										esc_html__( 'About %s', 'understrap' ),
-										$curauth->display_name
+										esc_html( $curauth->display_name )
 									);
 									?>
 								</dt>
@@ -77,7 +77,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						printf(
 							/* translators: %s: author name */
 							'<h2>' . esc_html__( 'Posts by %s', 'understrap' ) . '</h2>',
-							$curauth->display_name
+							esc_html( $curauth->display_name )
 						);
 					}
 					?>

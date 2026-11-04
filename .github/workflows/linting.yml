@@ -8,6 +8,8 @@ on:
       - 'phpcs.xml.dist'
       - 'phpmd.xml'
       - 'phpstan.neon.dist'
+      - 'composer.lock'
+      - '.github/workflows/linting.yml'
   pull_request:
     branches: [ develop ]
     paths:
@@ -15,6 +17,8 @@ on:
       - 'phpcs.xml.dist'
       - 'phpmd.xml'
       - 'phpstan.neon.dist'
+      - 'composer.lock'
+      - '.github/workflows/linting.yml'
   workflow_dispatch:
 
 env:
@@ -33,9 +37,6 @@ jobs:
 
     name: 'Coding Standards with PHP CodeSniffer'
 
-    permissions:
-      contents: write
-
     runs-on: ubuntu-latest
 
     steps:
@@ -43,7 +44,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          persist-credentials: ${{ github.event_name != 'pull_request' }}
+          persist-credentials: false
 
       - name: Setup PHP
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
@@ -62,17 +63,6 @@ jobs:
 
       - name: Install Composer dependencies
         uses: ramsey/composer-install@a8d0d959dab41457692a5e2041bd9b757a119e3f # v3
-
-      - name: Auto fix coding standards
-        if: github.event_name != 'pull_request'
-        run: composer phpcs-fix
-        continue-on-error: true
-
-      - name: Commit coding standards fixes
-        if: github.event_name != 'pull_request'
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
-        with:
-          commit_message: Fix coding standards with phpcbf
 
       - name: Check coding standards
         run: composer phpcs -- -q -n --report=checkstyle | cs2pr
@@ -105,16 +95,13 @@ jobs:
 
     name: 'Static Analysis with PHPStan'
 
-    permissions:
-      contents: write
-
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          persist-credentials: ${{ github.event_name != 'pull_request' }}
+          persist-credentials: false
 
       - name: Setup PHP
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
@@ -137,22 +124,9 @@ jobs:
         id: phpstan
         run: composer phpstan -- --error-format=github
 
-      - name: Update basefile
-        if: github.event_name != 'pull_request'
-        run: composer phpstan-baseline
-
-      - name: Commit updated basefile
-        if: github.event_name != 'pull_request'
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
-        with:
-          commit_message: Update PHPStan basefile
-
   phpmd:
 
     name: 'Mess Detection with PHPMD'
-
-    permissions:
-      contents: write
 
     runs-on: ubuntu-latest
 
@@ -160,26 +134,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          persist-credentials: ${{ github.event_name != 'pull_request' }}
+          persist-credentials: false
 
       - name: Setup PHP
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
           php-version: ${{ env.php-version }}
-          tools: phpmd
           coverage: none
         env:
           fail-fast: true
 
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@a8d0d959dab41457692a5e2041bd9b757a119e3f # v3
+
       - name: Detect mess
-        run: phpmd . github phpmd.xml
-
-      - name: Update basefile
-        if: github.event_name != 'pull_request'
-        run: phpmd . ansi phpmd.xml --generate-baseline
-
-      - name: Commit updated basefile
-        if: github.event_name != 'pull_request'
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
-        with:
-          commit_message: Update PHPMD basefile
+        run: vendor/bin/phpmd . github phpmd.xml --exclude vendor/,node_modules/
