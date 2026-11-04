@@ -8,7 +8,7 @@ on:
       - 'phpcs.xml.dist'
       - 'phpmd.xml'
       - 'phpstan.neon.dist'
-  pull_request_target:
+  pull_request:
     branches: [ develop ]
     paths:
       - '**.php'
@@ -20,6 +20,9 @@ on:
 env:
   php-version: '7.4'
 
+permissions:
+  contents: read
+
 concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
   cancel-in-progress: true
@@ -30,18 +33,20 @@ jobs:
 
     name: 'Coding Standards with PHP CodeSniffer'
 
+    permissions:
+      contents: write
+
     runs-on: ubuntu-latest
 
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.head_ref }}
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
           php-version: ${{ env.php-version }}
           tools: cs2pr
@@ -50,20 +55,22 @@ jobs:
           fail-fast: true
 
       - name: Cache PHPCS cache
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .phpcs-cache.json
           key: ${{ runner.os }}-phpcs-cache-${{ hashFiles('**/composer.lock', 'phpcs.xml.dist') }}
 
       - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v3"
+        uses: ramsey/composer-install@a8d0d959dab41457692a5e2041bd9b757a119e3f # v3
 
       - name: Auto fix coding standards
+        if: github.event_name != 'pull_request'
         run: composer phpcs-fix
         continue-on-error: true
 
       - name: Commit coding standards fixes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.event_name != 'pull_request'
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: Fix coding standards with phpcbf
 
@@ -78,10 +85,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
           php-version: ${{ env.php-version }}
           tools: cs2pr, parallel-lint
@@ -96,17 +105,19 @@ jobs:
 
     name: 'Static Analysis with PHPStan'
 
+    permissions:
+      contents: write
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.head_ref }}
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
           php-version: ${{ env.php-version }}
           coverage: none
@@ -114,23 +125,25 @@ jobs:
           fail-fast: true
 
       - name: Cache PHPStan cache
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .phpstan-cache
           key: ${{ runner.os }}-phpstan-cache-${{ hashFiles('**/composer.lock', 'phpstan.neon.dist') }}
 
       - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v3"
+        uses: ramsey/composer-install@a8d0d959dab41457692a5e2041bd9b757a119e3f # v3
 
       - name: Analyse
         id: phpstan
         run: composer phpstan -- --error-format=github
 
       - name: Update basefile
+        if: github.event_name != 'pull_request'
         run: composer phpstan-baseline
 
       - name: Commit updated basefile
-        uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.event_name != 'pull_request'
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: Update PHPStan basefile
 
@@ -138,17 +151,19 @@ jobs:
 
     name: 'Mess Detection with PHPMD'
 
+    permissions:
+      contents: write
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.head_ref }}
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
           php-version: ${{ env.php-version }}
           tools: phpmd
@@ -160,10 +175,11 @@ jobs:
         run: phpmd . github phpmd.xml
 
       - name: Update basefile
+        if: github.event_name != 'pull_request'
         run: phpmd . ansi phpmd.xml --generate-baseline
 
       - name: Commit updated basefile
-        uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.event_name != 'pull_request'
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: Update PHPMD basefile
-          branch: ${{ github.head_ref }}
