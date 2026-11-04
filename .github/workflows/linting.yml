@@ -140,10 +140,12 @@ jobs:
         uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
           php-version: ${{ env.php-version }}
-          tools: phpmd
           coverage: none
         env:
           fail-fast: true
 
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@a8d0d959dab41457692a5e2041bd9b757a119e3f # v3
+
       - name: Detect mess
-        run: phpmd . github phpmd.xml
+        run: vendor/bin/phpmd . github phpmd.xml --exclude vendor/,node_modules/
