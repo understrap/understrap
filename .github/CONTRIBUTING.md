@@ -14,7 +14,7 @@ We use github to host code, to track issues and feature requests, as well as acc
 We actively welcome your pull requests.
 
 Pull requests are the best way to propose changes to the codebase.
-All pull requests should be sumitted to the `develop` branch.
+All pull requests should be submitted to the `develop` branch.
 This will allow us to grant permissions to key contributors to merge pull requests into the `develop` branch.
 
 1. Fork the repo and create your branch from `develop`.

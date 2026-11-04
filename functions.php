@@ -34,7 +34,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 	$understrap_includes[] = '/woocommerce.php';
 }
 
-// Load Jetpack compatibility file if Jetpack is activiated.
+// Load Jetpack compatibility file if Jetpack is activated.
 if ( class_exists( 'Jetpack' ) ) {
 	$understrap_includes[] = '/jetpack.php';
 }

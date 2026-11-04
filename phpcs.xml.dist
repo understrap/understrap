@@ -59,7 +59,7 @@
 	</rule>
 
 	<!-- Assignments in while conditions are a valid method of looping over iterables. -->
-	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">
+	<rule ref="Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">
 		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
@@ -92,16 +92,5 @@
 	<!-- Ignore mixed line-endings warnings -->
 	<rule ref="Internal.LineEndings.Mixed">
 		<severity>0</severity>
-	</rule>
-
-	<!-- Use the WPThemeReview Ruleset -->
-	<rule ref="WPThemeReview" />
-
-	<!--
-		Exclude checking for shortened URLs in Bootstrap's js. files.
-		Also exclude theme.js which includes bootstrap.js.
-	-->
-	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
-		<exclude-pattern>/js/theme*\.js</exclude-pattern>
 	</rule>
 </ruleset>

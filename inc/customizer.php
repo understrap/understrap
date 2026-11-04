@@ -249,7 +249,6 @@ if ( ! function_exists( 'understrap_customize_sanitize_select' ) ) {
 
 		// If the input is a valid key, return it; otherwise, return the default.
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-
 	}
 }
 
