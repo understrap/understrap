@@ -7,13 +7,16 @@ on:
       - '**.scss'
       - '**.js'
       - 'package-lock.json'
-  pull_request_target:
+  pull_request:
     branches: [ develop ]
     paths:
       - '**.scss'
       - '**.js'
       - 'package-lock.json'
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
@@ -25,31 +28,34 @@ jobs:
 
     name: 'Build CSS & JS'
 
+    permissions:
+      contents: write
+
     runs-on: ubuntu-latest
 
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.head_ref }}
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '18.x'
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Copy assets
         run: npm run copy-assets
 
       - name: Commit assets
-        uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.event_name != 'pull_request'
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: Update assets
 
@@ -66,6 +72,7 @@ jobs:
         run: npm run js-bs4
 
       - name: Commit CSS and JS files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.event_name != 'pull_request'
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: Rebuild CSS and JS files
