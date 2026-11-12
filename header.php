@@ -10,7 +10,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
+$bootstrap_version = understrap_get_bootstrap_version();
 $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 ?>
 <!DOCTYPE html>
@@ -33,6 +33,12 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 			<?php esc_html_e( 'Skip to content', 'understrap' ); ?>
 		</a>
 
-		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>
+		<?php
+		if ( 'bootstrap6' === $bootstrap_version ) {
+			get_template_part( 'global-templates/navbar', 'bootstrap6' );
+		} else {
+			get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version );
+		}
+		?>
 
 	</header><!-- #wrapper-navbar -->

@@ -110,12 +110,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	 * @phpstan-return T | array{'class': non-empty-list<string>}
 	 */
 	function understrap_wc_form_field_args( $args, $key, $value ) {
-		$bootstrap4 = 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
-
-		// Add margin to each form field's html element wrapper (<p></p>).
-		if ( $bootstrap4 ) {
-			$args['class'][] = 'form-group';
-		}
+		// Add margin to each form field's wrapper.
 		$args['class'][] = 'mb-3';
 
 		// Start field type switch case.
@@ -150,39 +145,30 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				 * checkbox look matches the Bootstrap checkbox look.
 				 */
 
-				// Get Bootstrap version specific CSS class base.
-				$base = $bootstrap4 ? 'custom-control' : 'form-check';
-
-				if ( '' !== $args['label'] || $bootstrap4 ) {
+				if ( '' !== $args['label'] ) {
 					// Wrap the label in <span> tag.
-					$args['label'] = "<span class=\"{$base}-label\">{$args['label']}</span>";
+					$args['label'] = "<span class=\"form-check-label\">{$args['label']}</span>";
 				}
 
 				// Add a class to the form input's <label> tag.
-				$args['label_class'][] = $base;
-				if ( $bootstrap4 ) {
-					$args['label_class'][] = 'custom-checkbox';
-				}
+				$args['label_class'][] = 'form-check';
 
 				// Add a class to the form input itself.
-				$args['input_class'][] = $base . '-input';
+				$args['input_class'][] = 'form-check-input';
 				break;
 			case 'select':
 				// Targets all <select> elements, except the country and state <select>.
 
 				// Add a class to the form input itself.
-				$args['input_class'][] = $bootstrap4 ? 'form-control' : 'form-select';
+				$args['input_class'][] = understrap_get_select_control_class();
 
 				// Add custom data attributes to the form input itself.
 				$args['custom_attributes']['data-plugin']      = 'select2';
 				$args['custom_attributes']['data-allow-clear'] = 'true';
 				break;
 			case 'radio':
-				// Get Bootstrap version specific CSS class base.
-				$base = $bootstrap4 ? 'custom-control' : 'form-check';
-
-				$args['label_class'][] = $base . '-label';
-				$args['input_class'][] = $base . '-input';
+				$args['label_class'][] = 'form-check-label';
+				$args['input_class'][] = 'form-check-input';
 				break;
 			default:
 				$args['input_class'][] = 'form-control';
@@ -233,14 +219,8 @@ if ( ! function_exists( 'understrap_wc_form_field_radio' ) ) {
 	 * @phpstan-param T $args
 	 */
 	function understrap_wc_form_field_radio( $field, $key, $args, $value ) {
-		// Set up Bootstrap version specific variables.
-		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-			$wrapper_classes = 'custom-control custom-radio';
-			$label_class     = 'custom-control-label';
-		} else {
-			$wrapper_classes = 'form-check';
-			$label_class     = 'form-check-label';
-		}
+		$wrapper_classes = 'form-check';
+		$label_class     = 'form-check-label';
 
 		// Remove the first occurrence of the label class if necessary.
 		if ( '' !== $args['label'] && ! empty( $args['label_class'] ) ) {
@@ -341,10 +321,6 @@ if ( ! function_exists( 'understrap_loop_add_to_cart_args' ) ) {
 			$args['class'] .= ' btn btn-outline-primary';
 		} else {
 			$args['class'] = 'btn btn-outline-primary';
-		}
-
-		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-			$args['class'] .= ' btn-block';
 		}
 
 		return $args;

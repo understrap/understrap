@@ -74,9 +74,9 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting(
 			'understrap_bootstrap_version',
 			array(
-				'default'           => 'bootstrap4',
+				'default'           => 'bootstrap5',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'understrap_customize_sanitize_select',
 				'capability'        => 'edit_theme_options',
 			)
 		);
@@ -87,12 +87,12 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'understrap_bootstrap_version',
 				array(
 					'label'       => __( 'Bootstrap Version', 'understrap' ),
-					'description' => __( 'Choose between Bootstrap 4 and Bootstrap 5', 'understrap' ),
+					'description' => __( 'Choose Bootstrap 5 or try Bootstrap 6 Alpha', 'understrap' ),
 					'section'     => 'understrap_theme_layout_options',
 					'type'        => 'select',
 					'choices'     => array(
-						'bootstrap4' => __( 'Bootstrap 4', 'understrap' ),
 						'bootstrap5' => __( 'Bootstrap 5', 'understrap' ),
+						'bootstrap6' => __( 'Bootstrap 6 (Alpha)', 'understrap' ),
 					),
 					'priority'    => apply_filters( 'understrap_bootstrap_version_priority', 10 ),
 				)
@@ -303,23 +303,3 @@ if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
 	}
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_customize_controls_js' );
-
-if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
-	/**
-	 * Overrides the responsive navbar type for Bootstrap 4.
-	 *
-	 * @since 1.1.0
-	 *
-	 * @param string $current_mod Current navbar type.
-	 * @return string Maybe filtered navbar type.
-	 */
-	function understrap_default_navbar_type( $current_mod ) {
-
-		if ( 'bootstrap5' !== get_theme_mod( 'understrap_bootstrap_version' ) ) {
-			$current_mod = 'collapse';
-		}
-
-		return $current_mod;
-	}
-}
-add_filter( 'theme_mod_understrap_navbar_type', 'understrap_default_navbar_type', 20 );

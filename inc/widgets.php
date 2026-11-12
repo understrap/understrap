@@ -112,13 +112,6 @@ if ( ! function_exists( 'understrap_add_block_widget_search_classes' ) ) {
 		if ( isset( $block['attrs']['buttonPosition'] ) && 'button-inside' === $block['attrs']['buttonPosition'] ) {
 			$search[]  = 'wp-block-search__inside-wrapper';
 			$replace[] = 'wp-block-search__inside-wrapper input-group';
-
-			if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-				$search[]  = '<button';
-				$search[]  = '</button>';
-				$replace[] = '<div class="input-group-append"><button';
-				$replace[] = '</button></div>';
-			}
 		}
 
 		return str_replace( $search, $replace, $block_content );

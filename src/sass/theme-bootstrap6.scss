@@ -1,0 +1,96 @@
+@use "theme/theme_variables" as theme;
+@use "bootstrap6/scss/bootstrap" with (
+	$colors: ("purple": theme.$primary),
+	$theme-colors: (
+		"primary": (
+			"base": var(--purple-500),
+			"fg": light-dark(var(--purple-600), var(--purple-400)),
+			"fg-emphasis": light-dark(var(--purple-800), var(--purple-200)),
+			"bg": var(--purple-500),
+			"bg-subtle": light-dark(var(--purple-100), var(--purple-900)),
+			"bg-muted": light-dark(var(--purple-200), var(--purple-800)),
+			"border": light-dark(var(--purple-300), var(--purple-600)),
+			"focus-ring": var(--purple-500),
+			"contrast": var(--white),
+		),
+	),
+);
+@use "assets/fontawesome/font-awesome";
+
+// Existing PHP templates use these classes in both Bootstrap modes.
+@each $breakpoint, $widths in (sm: (5, 7), md: (2, 3, 4, 6, 8, 12)) {
+	@each $width in $widths {
+		.col-#{$breakpoint}-#{$width} {
+			@extend .#{$breakpoint}\:col-#{$width};
+		}
+	}
+}
+
+.btn-primary {
+	@extend .btn-solid, .theme-primary;
+}
+
+.btn-outline-primary {
+	@extend .btn-outline, .theme-primary;
+}
+
+.btn-secondary {
+	@extend .btn-solid, .theme-secondary;
+}
+
+select.form-select,
+.widget_archive select,
+.wpcf7 select {
+	@extend .form-control;
+}
+
+.screen-reader-text {
+	@extend .visually-hidden;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 1rem;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1rem;
+}
+
+.aligncenter {
+	display: block;
+	margin-inline: auto;
+}
+
+.wrapper {
+	padding-block: var(--gutter-width, 1.5rem);
+}
+
+#wrapper-hero {
+	padding: 0;
+}
+
+.entry-content img,
+.wp-post-image,
+.custom-logo {
+	max-width: 100%;
+	height: auto;
+}
+
+.navbar-brand a {
+	color: inherit;
+}
+
+body.admin-bar #navbarNavDrawer[open] {
+	margin-block-start: var(--wp-admin--admin-bar--height, 32px);
+}
+
+// WordPress uses these class names for ordinary lists and list items.
+@layer components {
+	ul.menu,
+	ol.menu,
+	li.menu-item {
+		all: revert-layer;
+	}
+}

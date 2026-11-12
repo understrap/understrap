@@ -1,6 +1,6 @@
 /*!
  * Understrap v1.2.4 (https://understrap.com)
- * Copyright 2013-2024 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+ * Copyright 2013-2026 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
  * Licensed under GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
  */
 (function (global, factory) {
@@ -2567,7 +2567,6 @@
     var popperOffsets = computeOffsets({
       reference: referenceClientRect,
       element: popperRect,
-      strategy: 'absolute',
       placement: placement
     });
     var popperClientRect = rectToClientRect(Object.assign({}, popperRect, popperOffsets));
@@ -2860,7 +2859,6 @@
     state.modifiersData[name] = computeOffsets({
       reference: state.rects.reference,
       element: state.rects.popper,
-      strategy: 'absolute',
       placement: state.placement
     });
   } // eslint-disable-next-line import/no-unused-modules
@@ -3291,12 +3289,6 @@
       return instance;
     };
   }
-  var createPopper$2 = /*#__PURE__*/popperGenerator(); // eslint-disable-next-line import/no-unused-modules
-
-  var defaultModifiers$1 = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1];
-  var createPopper$1 = /*#__PURE__*/popperGenerator({
-    defaultModifiers: defaultModifiers$1
-  }); // eslint-disable-next-line import/no-unused-modules
 
   var defaultModifiers = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1, offset$1, flip$1, preventOverflow$1, arrow$1, hide$1];
   var createPopper = /*#__PURE__*/popperGenerator({
@@ -3319,8 +3311,6 @@
     clippingParents: clippingParents,
     computeStyles: computeStyles$1,
     createPopper: createPopper,
-    createPopperBase: createPopper$2,
-    createPopperLite: createPopper$1,
     detectOverflow: detectOverflow,
     end: end,
     eventListeners: eventListeners,

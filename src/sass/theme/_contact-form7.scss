@@ -1,5 +1,5 @@
 /*
-* Use existing Bootstrap 4/5 classes and
+* Use existing Bootstrap 5 classes and
 * variables to extend - override CF7 style
 *
 * Useful CF7 classes:
@@ -50,8 +50,7 @@
 
     // set paragraphs to behave like divs with class .form-group
     p {
-      @extend .form-group !optional;
-	  margin-bottom: $spacer; // Replicates the .form-group functionality in BS5.
+      margin-bottom: $spacer;
     }
 
     // let labels be 100%

@@ -22,6 +22,12 @@ Child Theme Project: [https://github.com/understrap/understrap-child](https://gi
 3. Click on the 'Activate' button to use your new theme right away.
 4. Do not edit the theme files directly. We recommend creating a child theme for custom development. Full developer documentation: [https://docs.understrap.com/](https://docs.understrap.com/)
 
+== Bootstrap versions ==
+
+Bootstrap 5 is the default, including on sites that previously selected Bootstrap 4. Child themes with Bootstrap 4 markup or Sass need to be updated before switching.
+
+Select Bootstrap 6 (Alpha) under Appearance → Customize → Theme Layout Settings to try the v6 frontend assets and responsive navigation. The alpha uses the Drawer navbar. The editor and plugin integrations still need to be verified in this mode.
+
 == Privacy ==
 
 Understrap does not collect any user data and does not use cookies.

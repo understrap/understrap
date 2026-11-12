@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
  * Class Name: WP_Bootstrap_Navwalker
  * Plugin Name: WP Bootstrap Navwalker
  * Plugin URI:  https://github.com/wp-bootstrap/wp-bootstrap-navwalker
- * Description: A custom WordPress nav walker class to implement the Bootstrap 4 navigation style in a custom theme using the WordPress built in menu manager.
+ * Description: A custom WordPress nav walker class to implement Bootstrap navigation in a custom theme using the WordPress built in menu manager.
  * Author: Edward McIntyre - @twittem, WP Bootstrap, William Patton - @pattonwebz
  * Version: 4.1.0
  * Author URI: https://github.com/wp-bootstrap
@@ -52,7 +52,8 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			}
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
-			$classes = array( 'dropdown-menu' );
+			$bootstrap6 = ! empty( $args->understrap_bootstrap6 );
+			$classes    = array( $bootstrap6 ? 'menu' : 'dropdown-menu' );
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -64,6 +65,11 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 */
 			$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+			if ( $bootstrap6 ) {
+				$output .= "{$n}{$indent}<div$class_names>{$n}";
+				return;
+			}
+
 			/**
 			 * The `.dropdown-menu` container needs to have a labelledby
 			 * attribute which points to it's trigger link.
@@ -80,6 +86,21 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				$labelledby = 'aria-labelledby="' . end( $matches[2] ) . '"';
 			}
 			$output .= "{$n}{$indent}<ul$class_names $labelledby >{$n}";
+		}
+
+		/**
+		 * Closes the submenu using the matching Bootstrap markup.
+		 *
+		 * @param string   $output Menu HTML.
+		 * @param int      $depth  Menu depth.
+		 * @param stdClass $args   Menu arguments.
+		 */
+		public function end_lvl( &$output, $depth = 0, $args = null ) {
+			if ( ! empty( $args->understrap_bootstrap6 ) ) {
+				$output .= '</div>';
+				return;
+			}
+			parent::end_lvl( $output, $depth, $args );
 		}
 
 		/**
@@ -104,7 +125,9 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				$t = "\t";
 				$n = "\n";
 			}
-			$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+			$indent     = ( $depth ) ? str_repeat( $t, $depth ) : '';
+			$bootstrap6 = ! empty( $args->understrap_bootstrap6 );
+			$flat_item  = $bootstrap6 && $depth > 0;
 
 			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
@@ -136,7 +159,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
 
 			// Add .dropdown or .active classes where they are needed.
-			if ( isset( $args->has_children ) && $args->has_children ) {
+			if ( ! $bootstrap6 && ! empty( $args->has_children ) ) {
 				$classes[] = 'dropdown';
 			}
 			if ( in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-parent', $classes, true ) ) {
@@ -165,10 +188,12 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 * @param stdClass $args    An object of wp_nav_menu() arguments.
 			 * @param int      $depth   Depth of menu item. Used for padding.
 			 */
-			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
-			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+			$menu_item_id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
+			$id           = $menu_item_id ? ' id="' . esc_attr( $menu_item_id ) . '"' : '';
 
-			$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+			if ( ! $flat_item ) {
+				$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+			}
 
 			// initialize array for holding the $atts for the link item.
 			$atts = array();
@@ -188,10 +213,15 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				$atts['rel'] = $item->xfn;
 			}
 
-			// If item has_children add atts to <a>.
-			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && 1 !== $args->depth ) {
+			$is_toggle = ! empty( $args->has_children ) && 0 === $depth && 1 !== $args->depth;
+			if ( $bootstrap6 && $is_toggle ) {
+				unset( $atts['target'], $atts['rel'] );
+				$atts['type']           = 'button';
+				$atts['data-bs-toggle'] = 'menu';
+				$atts['aria-expanded']  = 'false';
+				$atts['class']          = 'nav-link';
+			} elseif ( $is_toggle ) {
 				$atts['href']           = '#';
-				$atts['data-toggle']    = 'dropdown';
 				$atts['data-bs-toggle'] = 'dropdown';
 				$atts['aria-haspopup']  = 'true';
 				$atts['aria-expanded']  = 'false';
@@ -201,7 +231,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 				// Items in dropdowns use .dropdown-item instead of .nav-link.
 				if ( $depth > 0 ) {
-					$atts['class'] = 'dropdown-item';
+					$atts['class'] = $bootstrap6 ? 'menu-item' : 'dropdown-item';
 				} else {
 					$atts['class'] = 'nav-link';
 				}
@@ -211,6 +241,23 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 
 			// update atts of this item based on any custom linkmod classes.
 			$atts = self::update_atts_for_linkmod_type( $atts, $linkmod_classes );
+			if ( $flat_item ) {
+				$atts['class'] = trim( $atts['class'] . ' ' . join( ' ', $classes ) );
+				$atts['id']    = $menu_item_id;
+				if ( in_array( 'disabled', $linkmod_classes, true ) ) {
+					$atts['aria-disabled'] = 'true';
+					$atts['tabindex']      = '-1';
+					unset( $atts['href'] );
+				}
+				$atts['class'] = strtr(
+					$atts['class'],
+					array(
+						'menu-item dropdown-header'  => 'menu-header',
+						'menu-item dropdown-divider' => 'menu-divider',
+						'dropdown-item-text'         => 'disabled',
+					)
+				);
+			}
 			// Allow filtering of the $atts array before using it.
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
@@ -227,6 +274,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 * Set a typeflag to easily test if this is a linkmod or not.
 			 */
 			$linkmod_type = self::get_linkmod_type( $linkmod_classes );
+			$link_tag     = $bootstrap6 && $is_toggle ? 'button' : 'a';
 
 			/**
 			 * START appending the internal item contents to the output.
@@ -238,10 +286,10 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 */
 			if ( '' !== $linkmod_type ) {
 				// is linkmod, output the required element opener.
-				$item_output .= self::linkmod_element_open( $linkmod_type, $attributes );
+				$item_output .= self::linkmod_element_open( $linkmod_type, $attributes, $bootstrap6 );
 			} else {
 				// With no link mod type set this must be a standard <a> tag.
-				$item_output .= '<a' . $attributes . '>';
+				$item_output .= '<' . $link_tag . $attributes . '>';
 			}
 
 			/**
@@ -292,7 +340,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 				$item_output .= self::linkmod_element_close( $linkmod_type, $attributes );
 			} else {
 				// With no link mod type set this must be a standard <a> tag.
-				$item_output .= '</a>';
+				$item_output .= '</' . $link_tag . '>';
 			}
 
 			$item_output .= isset( $args->after ) ? $args->after : '';
@@ -301,6 +349,21 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			 * END appending the internal item contents to the output.
 			 */
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+		}
+
+		/**
+		 * Menu items within a Bootstrap 6 submenu use direct links.
+		 *
+		 * @param string   $output Menu HTML.
+		 * @param WP_Post  $item   Menu item.
+		 * @param int      $depth  Menu depth.
+		 * @param stdClass $args   Menu arguments.
+		 */
+		public function end_el( &$output, $item, $depth = 0, $args = null ) {
+			if ( $depth > 0 && ! empty( $args->understrap_bootstrap6 ) ) {
+				return;
+			}
+			parent::end_el( $output, $item, $depth, $args );
 		}
 
 		/**
@@ -522,10 +585,14 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 		 *
 		 * @param string $linkmod_type a sting containing a linkmod type flag.
 		 * @param string $attributes   a string of attributes to add to the element.
+		 * @param bool   $bootstrap6   Whether to use Bootstrap 6 markup.
 		 *
 		 * @return string              a string with the opening tag for the element with attributes added.
 		 */
-		private function linkmod_element_open( $linkmod_type, $attributes = '' ) {
+		private function linkmod_element_open( $linkmod_type, $attributes = '', $bootstrap6 = false ) {
+			if ( $bootstrap6 ) {
+				return 'dropdown-divider' === $linkmod_type ? '<div' . $attributes . '>' : '<span' . $attributes . '>';
+			}
 			$output = '';
 			if ( 'dropdown-item-text' === $linkmod_type ) {
 				$output .= '<span class="dropdown-item-text"' . $attributes . '>';

@@ -20,9 +20,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$label_class = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' )
-	? ''
-	: ' class="form-label"';
 ?>
 <form name="checkout" method="post" class="woocommerce-form woocommerce-verify-email" action="<?php echo esc_url( $verify_url ); ?>" enctype="multipart/form-data">
 
@@ -45,7 +42,7 @@ $label_class = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' )
 	</p>
 
 	<p class="form-row">
-		<label for="email"<?php echo $label_class; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok ?>>
+		<label for="email" class="form-label">
 			<?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span>
 		</label>
 		<input type="email" class="input-text form-control" name="email" id="email" autocomplete="email" />

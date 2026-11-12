@@ -45,3 +45,27 @@ if ( ! function_exists( 'understrap_get_theme_default_settings' ) ) {
 		return apply_filters( 'understrap_theme_default_settings', $defaults );
 	}
 }
+
+if ( ! function_exists( 'understrap_get_bootstrap_version' ) ) {
+	/**
+	 * Retrieve the selected Bootstrap version, defaulting to Bootstrap 5.
+	 *
+	 * @return string
+	 */
+	function understrap_get_bootstrap_version() {
+		return understrap_normalize_bootstrap_version( get_theme_mod( 'understrap_bootstrap_version', 'bootstrap5' ) );
+	}
+}
+
+if ( ! function_exists( 'understrap_normalize_bootstrap_version' ) ) {
+	/**
+	 * Map retired or unrecognized Bootstrap settings to Bootstrap 5.
+	 *
+	 * @param string $version Stored Bootstrap version.
+	 * @return string
+	 */
+	function understrap_normalize_bootstrap_version( $version ) {
+		return 'bootstrap6' === $version ? 'bootstrap6' : 'bootstrap5';
+	}
+}
+add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_normalize_bootstrap_version' );

@@ -52,14 +52,5 @@ jobs:
       - name: Copy assets
         run: npm run copy-assets
 
-      - name: Build Bootstrap 5 CSS
-        run: npm run css
-
-      - name: Build Bootstrap 5 JS
-        run: npm run js
-
-      - name: Build Bootstrap 4 CSS
-        run: npm run css-bs4
-
-      - name: Build Bootstrap 4 JS
-        run: npm run js-bs4
+      - name: Build Bootstrap 5 and 6 assets
+        run: npm run dist

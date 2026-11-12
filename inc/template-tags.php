@@ -359,9 +359,6 @@ if ( ! function_exists( 'understrap_get_select_control_class' ) ) {
 	 * @return string Bootstrap CSS class for the select tag.
 	 */
 	function understrap_get_select_control_class() {
-		if ( 'bootstrap4' === get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' ) ) {
-			return 'form-control';
-		}
 		return 'form-select';
 	}
 }
@@ -395,10 +392,6 @@ if ( ! function_exists( 'understrap_get_screen_reader_class' ) ) {
 	 * @return string Bootstrap's screen reader text class.
 	 */
 	function understrap_get_screen_reader_class( $focusable = false ) {
-		$bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
-		if ( 'bootstrap4' === $bootstrap_version ) {
-			return $focusable ? 'sr-only sr-only-focusable' : 'sr-only';
-		}
 		return $focusable ? 'visually-hidden-focusable' : 'visually-hidden';
 	}
 }

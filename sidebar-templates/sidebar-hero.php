@@ -15,7 +15,7 @@ if ( ! is_active_sidebar( 'hero' ) ) {
 
 <!-- ******************* The Hero Widget Area ******************* -->
 
-<div id="carouselExampleControls" class="carousel slide" data-interval="false" data-bs-ride="false">
+<div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
 
 	<div class="carousel-inner">
 
@@ -23,7 +23,7 @@ if ( ! is_active_sidebar( 'hero' ) ) {
 
 	</div>
 
-	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" data-bs-slide="prev">
+	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
 
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
@@ -31,7 +31,7 @@ if ( ! is_active_sidebar( 'hero' ) ) {
 
 	</a>
 
-	<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" data-bs-slide="next">
+	<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
 
 		<span class="carousel-control-next-icon" aria-hidden="true"></span>
 

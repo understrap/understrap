@@ -6,7 +6,6 @@ extend-exclude = [
   "js/*.map",
   "js/theme*.js",
   "languages/",
-  "src/sass/assets/bootstrap4/",
   "src/sass/assets/bootstrap5/",
   "src/sass/assets/fontawesome/"
 ]
